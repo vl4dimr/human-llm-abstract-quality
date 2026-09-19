@@ -312,10 +312,8 @@ invierte, pero solo debe activarse con permiso explícito.
 
 ## Pendiente
 
-- Terminar las corridas LLM (3 modelos × 3 corridas × 160) y correr
-  `03_agreement.py` **sin `--quick`** (2000 remuestreos) para las cifras finales.
-- Rellenar `release.citation` y el DOI de Zenodo antes del depósito.
-- Decidir si se corrige la descripción del corpus: 8 tesis doctorales de 300.
+- Sustituir el DOI de Zenodo en `CITATION.cff` y en `release.citation` de
+  `config.yaml` cuando el depósito esté publicado.
 
 ## Licencia
 
