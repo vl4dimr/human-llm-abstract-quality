@@ -4,10 +4,10 @@ Pipeline reproducible para un estudio de concordancia entre anotadores humanos y
 modelos de lenguaje sobre un esquema de calidad estructural de resúmenes de tesis
 (protocolo IMRyD, 12 variables: 10 binarias y 2 ordinales 1–5).
 
-**Estado (2026-09-18): pipeline completo (fases 1–6). A2 independiente recibida y
-validada, así que el contraste Δκ ya se calcula.** Pendiente: terminar las corridas
-de LLM y ejecutar la Fase 3 con los 2000 remuestreos. Ver
-[`outputs/audit_report.md`](outputs/audit_report.md), sección 10.
+**Estado: análisis completo.** Las seis fases están ejecutadas sobre los 160
+documentos, con las tres corridas de cada modelo y 2 000 remuestreos a nivel de
+documento (semilla 42). Informes en [`outputs/audit_report.md`](outputs/audit_report.md)
+y [`outputs/agreement_report.md`](outputs/agreement_report.md).
 
 ## Qué contiene y qué no este repositorio público
 
@@ -26,9 +26,6 @@ Por la misma razón, `data/raw/` está vacío aquí. Para reconstruirlo hacen fa
 cuadernillos de anotación originales; `src/00_stage_raw.py` documenta las rutas y deja
 un manifiesto con SHA-256 de cada archivo, de modo que cualquiera puede verificar que
 analiza exactamente los mismos bytes.
-
-Licencias: el código bajo MIT, los datos de anotación y el manual de codificación bajo
-CC BY 4.0. Ver `LICENSE`.
 
 
 ## Pregunta de investigación
@@ -117,22 +114,26 @@ fácil de auditar; con 160–300 documentos la diferencia es pequeña y, si acas
 el percentil es ligeramente más conservador en los extremos. BCa queda como
 opción configurable.
 
-## Resultado de la Fase 1 (resumen)
+## Qué encontró la auditoría (Fase 1)
 
-Ver el informe completo en `outputs/audit_report.md`. Los hallazgos que bloquean
-la Fase 2:
+Informe completo en [`outputs/audit_report.md`](outputs/audit_report.md).
 
-1. **A2 es una copia exacta de A1** (0 de 1 920 celdas distintas, 159/160
-   observaciones libres idénticas; lo mismo en calibración). A3 está vacío.
-   **No existe segunda anotación humana independiente.**
-2. **Cobertura 160/300** (53 %) en la fase principal.
-3. **8 tesis doctorales de 300**; el 86 % son de pregrado.
-4. Tres versiones de A1 que difieren en 22 celdas de `D4_consistencia`.
-5. El cuadernillo LLM previo tiene los valores **corridos una fila** (κ medio
-   0.01 tal cual, 0.59 realineado). Aun corregido no es admisible como Fase 2:
-   se hizo por chat, sin temperature, semilla ni repeticiones.
-6. `D1_imryd_objetivo` tiene prevalencia 0.994 en humanos y 1.000 en el LLM:
-   κ degenerado por construcción; AC1/PABAK obligatorios.
+1. **La primera entrega de A2 era una copia byte a byte de A1**: 0 de 1 920 celdas
+   distintas y 159 de 160 observaciones libres idénticas. Se detuvo el estudio y se
+   rehízo la anotación con un cuadernillo ciego. La segunda entrega, la que se analiza
+   aquí, **sí es independiente**: A1 y A2 difieren en 147 de 1 898 celdas (7.7 %).
+   De ese episodio salió `src/00c_receive_a2.py`, que comprueba la independencia de
+   cualquier cuadernillo antes de aceptarlo.
+2. **Cobertura 160 de 300** (53 %) en la fase principal; el análisis usa esos 160.
+3. **8 tesis doctorales de 300**: el 86 % del corpus es de pregrado.
+4. Tres versiones del archivo de A1 que difieren en 22 celdas de `D4_consistencia`;
+   `config.yaml` fija cuál se usa.
+5. El cuadernillo LLM previo tenía los valores **corridos una fila** (κ medio 0.01 tal
+   cual, 0.59 realineado). Aun corregido no es admisible como corrida de Fase 2: se
+   hizo por chat, sin temperature fija, sin semilla y sin repeticiones. Entra en las
+   tablas solo como anotador exploratorio.
+6. `D1_imryd_objetivo` tiene prevalencia 0.994 en humanos y 1.000 en los modelos: κ
+   degenerado por construcción, de ahí que se reporten también AC1 y PABAK.
 
 ## Tiempo y coste por fase
 
