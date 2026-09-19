@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-080",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Se utiliza t‑Student para equivalencia y diferencia; no se indica número exacto de puntos fotográficos, pero se describen procedimientos suficientes. Se considera coherente."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Se utiliza t‑Student para equivalencia y diferencia; no se indica número exacto de puntos fotográficos, pero se describen procedimientos suficientes. Se considera coherente.\"}",
+ "usage": {
+  "input_tokens": 10024,
+  "output_tokens": 1988
+ },
+ "latency_s": 3.4259939193725586,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:54:48.454837+00:00",
+ "raw": {
+  "id": "chatcmpl-80ab3cf9-1757-42fa-8ab3-b2fccdef09ab",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Se utiliza t‑Student para equivalencia y diferencia; no se indica número exacto de puntos fotográficos, pero se describen procedimientos suficientes. Se considera coherente.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones. All required.\n\nWe need to annotate the provided summary according to the protocol. Let's analyze.\n\nTitle: Plano base catastral urbano a partir de fotogrametría con dron comprobado con estación total - barrio Santiago de Chejoña, Puno.\n\nResumen: It's a typical engineering/technology summary, descriptive of methodology and results.\n\nLet's parse the summary:\n\n\"El objetivo general es generar el plano base catastral urbano a partir de fotogrametría con Dron y su comprobación con Estación Total.\"\n\nSo objective: yes, 1.\n\nMetodología: \"La investigación se desarrolló primeramente estableciendo dos puntos de control geodésicos de orden “C” debidamente enlazados a la Red Geodésica Nacional del Perú, posteriormente se han ubicado puntos de fotocontrol en todo el área de estudio a partir del punto geodésico PCG1, seguidamente se realizó el plan de vuelo ... con las fotografías capturadas se efectuó el post proceso obteniendo una ortofoto y ... plano base catastral ... Finalmente se realizó la poligonal de apoyo georreferenciada ... la corroboración del plano base catastral urbano con una Estación Total.\"\n\nThat is quite detailed: design (point control, plan of flight, post-processing), instrumentation, etc. So yes, 1.\n\nResults: \"Los resultados de ambas metodologías fueron procesados, evaluados y validados mediante la prueba estadística T – Student. Se obtuvieron resultados estadísticamente con un intervalo de confianza del 95 % en el que se determinó que las coordenadas planas, distancias, áreas y perímetros son iguales estadísticamente y cumplen con las tolerancias catastrales afirmando así la hipótesis general planteada; en cambio las altitudes son estadísticamente diferentes.\"\n\nSo results: yes, 1. Contains specific results: equivalence and difference with t-test, 95% CI. So yes.\n\nConclusions: \"En conclusión, las mediciones realizadas con Dron a una altura de 100 metros son aceptables para la elaboración de planos bases catastrales; sin embargo, las altitudes obtenidas con Dron tienen variaciones.\" So yes, 1.\n\nOrder: We need to check if components are in logical order: objective, methodology, results, conclusion. The summary begins with objective, then methodology, then results, then conclusion. So order is correct. So D1_orden_logico = 1.\n\nD2 coherence: Evaluate flow. The summary flows logically; some sentences may be a bit long but coherent. Let's rate from 1 to 5. Likely 4. Because some sentences may have abrupt transitions? Let's read:\n\n\"La tesis titulada “Plano Base Catastral Urbano ... se ha realizado en el distrito y provincia de Puno.\" That's context introduction, then \"El objetivo general es generar el plano base...\" Then \"La investigación se desarrolló primeramente estableciendo dos puntos de control ... posteriormente se han ubicado puntos de fotocontrol ... seguidamente se realizó el plan de vuelo ... con las fotografías capturadas se efectuó el post proceso ... y ... plano base ... Finalmente se realizó la poligonal de apoyo georreferenciada ... los resultados ... Se obtuvieron resultados estadísticamente ... en que se determinó ... y cumplen ... en cambio ... . En conclusión, ...\"\n\nThis is coherent; some adjectives like \"primero, posteriormente, seguidamente, finalmente\" provide progression. The last part might be a bit abrupt, but still coherent. So I'd give 4.\n\nD3 contextualización: \"La tesis titulada ... se ha realizado en el distrito y provincia de Puno.\" That indicates context: location. But does it mention why it is important? It doesn't explicitly state the problem significance. It does mention generating the base map. The summary does not explain why the study is important or the problem significance beyond the location. So contextualization: probably 0. But the context is there: location. The definition: \"sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco se contrasta.\" We have location, but no mention of why it's important. So 0.\n\nD3 metodo detallado: Need at least 2 precisions: design, type of study, sample size, sampling technique, instrument, statistical test, etc.\n\nThe summary mentions: establishing two geodetic control points, located photobackup points across area, plan of flight, post-process, orthophoto, base map, poligonal, statistical test t-test. So we have many details: number of control points: 2, design: geodetic control, flight plan, orthophoto, etc. So yes, 1.\n\nD3 resultados concretos: Provide concrete numbers: 95% CI, t-test, equivalence of coordinates, distances, areas, perimeters, altitudes difference. So yes, 1.\n\nD3 conclusion responde: The conclusion addresses the objective: It says measurements from drone at 100 m are acceptable; altitudes have variations. That addresses objective of generating base map. So yes, 1.\n\nD4 consistencia: Evaluate consistency between declared methodology and presented results. Are there contradictions? The methodology says they validated via t-test, they mention statistical test; results mention t-test results. The conclusion states acceptability for plan base, but altitudes vary. That is consistent. No contradictions. The only potential is that they used t-test for equivalence, but t-test is for difference. They say \"se obtuvieron resultados estadísticamente con un intervalo de confianza del 95 % en el que se determinó que las coordenadas planas, distancias, áreas y perímetros son iguales estadísticamente y cumplen con las tolerancias catastrales afirmando así la hipótesis general planteada; en cambio las altitudes son estadísticamente diferentes.\" That is coherent.\n\nHence D4 = 5. No contradictions. The only potential slight issue: they talk about \"técnica estadística T – Student\" but t-test is difference test; but they claim equivalence. That is somewhat a methodological inconsistency? But they mention equivalence within tolerance. It's not contradictory: they tested for difference and found none for flatness and difference for altitudes. So no contradiction. So D4 5.\n\nno_evaluable: The text is a summary, so not \"no_evaluable\". So 0.\n\nObservaciones: maybe mention anything ambiguous: the summary uses t-test for equivalence, but that's okay. The summary uses \"t – Student\" with hyphen maybe punctuation, but not needed. I'd write observation: \"Se usa t‑Student para probar equivalencia; no se menciona el número de muestras; se asume que se compararon medidas de drone vs estación total. Se considera coherente.\" Might note that there is no explicit mention of sample size of points. But we still count as method detailed due to presence of 2 control points, but no sample size for photometric points. Might note that no explicit sample size for photometric points; but still method detailed. Let's keep observation.\n\nBut observation field is required string. Provide some explanation: \"Métricas de equivalencia sin número de muestras explícito, pero se describen métodos suficientes.\" Ok.\n\nNow produce JSON with all fields.\n\nCheck schema: each field type integer or null. Observations string.\n\nAll required. Provide numeric values.\n\nLet's fill:\n\nD1_imryd_objetivo: 1\nD1_imryd_metodologia: 1\nD1_imryd_resultados: 1\nD1_imryd_conclusiones: 1\nD1_orden_logico: 1\nD2_coherencia: 4\nD3_contextualizacion: 0\nD3_metodo_detallado: 1\nD3_resultados_concretos: 1\nD3_conclusion_responde: 1\nD4_consistencia: 5\nno_evaluable: 0\nobservaciones: \"Se utiliza t‑Student para equivalencia y diferencia; no se indica número exacto de puntos fotográficos, pero se describen procedimientos suficientes. Se considera coherente.\"  \n\nMake sure JSON is compact: no spaces? It can be typical JSON. We'll produce compact but readable.\n\nDouble-check each field: numeric 0-5 inclusive. Good.\n\nReturn JSON object.\n\n"
+    }
+   }
+  ],
+  "created": 1789775688,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_334cc21c60",
+  "usage": {
+   "completion_tokens": 1988,
+   "prompt_tokens": 10024,
+   "total_tokens": 12012,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1829,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.14953474,
+   "prompt_time": 0.561391937,
+   "completion_time": 2.046747287,
+   "total_time": 2.608139224
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vf39kqe5yr6a80a41ztsr8",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:54:48.454880+00:00"
+}

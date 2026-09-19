@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-123",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 10005,
+  "output_tokens": 1662
+ },
+ "latency_s": 3.6123251914978027,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:10:12.847545+00:00",
+ "raw": {
+  "id": "chatcmpl-fdd913a1-dd56-474e-8c49-e98bbb69145a",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with fields as per schema. Let's annotate.\n\nWe need to evaluate each dimension.\n\nFirst, D1_imryd_objetivo: Is objective present? The summary says: \"El objetivo del estudio es determinar la relación entre el contexto académico y la intención emprendedora de los estudiantes del Instituto Superior Tecnológico Privado Novatech, en Puno.\" That's explicit. So 1.\n\nD1_imryd_metodologia: Is methodology present? It says: \"Se empleo un enfoque cuantitativo, de alcance descriptivo-correlacional y diseño no experimental de corte transversal. La muestra estuvo compuesta por 177 estudiantes seleccionados mediante muestreo aleatorio estratificado. Se aplicaron cuestionarios con escala de Likert, los datos fueron analizados con SPSS y el contraste de la hipótesis se realizó mediante el coeficiente Rho de Spearman.\" That's concrete. So 1.\n\nD1_imryd_resultados: Are results present? It says: \"Los resultados revelaron: p = .000 < α =.05 y Rs = .442**, por ende, se aceptó la hipótesis general de la investigación, así mismo el 54.8% de los estudiantes consideran adecuado su contexto académico y el 76.3% mostró una alta intención emprendedora, evidenciando un interés significativo por emprender.\" That's results. So 1.\n\nD1_imryd_conclusiones: Are conclusions present? It says: \"Se concluye que existe una relación directa y significativa entre el contexto académico y la intención emprendedora de los estudiantes y que un entorno académico enriquecedor potencia la intención emprendedora.\" That's a conclusion that interprets results and responds to objective. So 1.\n\nD1_orden_logico: Are components in order? The summary: starts with context, then objective, then methodology, then results, then conclusion. The order: context (not a component), objective, methodology, results, conclusion. That's correct order. So 1.\n\nD2_coherencia: Evaluate flow. Let's read: \"El entorno académico constituye un factor determinante en la formación de la intención emprendedora de los estudiantes, ya que influye en sus actitudes, habilidades y motivaciones hacia la creación de nuevos negocios. No obstante, existe una brecha en la comprensión de cómo este contexto académico afecta específicamente la intención emprendedora en estudiantes de administración de empresas, lo que resulta en la necesidad de analizar esta relación de manera profunda. El objetivo del estudio es determinar la relación entre el contexto académico y la intención emprendedora de los estudiantes del Instituto Superior Tecnológico Privado Novatech, en Puno. Para proteger la confidencialidad de la institución y cumplir con los principios éticos establecidos para investigaciones científicas, se ha utilizado un nombre ficticio para referirse a esta institución educativa. Se empleo un enfoque cuantitativo, de alcance descriptivo-correlacional y diseño no experimental de corte transversal. La muestra estuvo compuesta por 177 estudiantes seleccionados mediante muestreo aleatorio estratificado. Se aplicaron cuestionarios con escala de Likert, los datos fueron analizados con SPSS y el contraste de la hipótesis se realizó mediante el coeficiente Rho de Spearman. Los resultados revelaron: p = .000 < α =.05 y Rs = .442**, por ende, se aceptó la hipótesis general de la investigación, así mismo el 54.8% de los estudiantes consideran adecuado su contexto académico y el 76.3% mostró una alta intención emprendedora, evidenciando un interés significativo por emprender. Se concluye que existe una relación directa y significativa entre el contexto académico y la intención emprendedora de los estudiantes y que un entorno académico enriquecedor potencia la intención emprendedora.\"\n\nFlow: It starts with context, then identifies gap, then objective, then ethical note, then methodology, then results, then conclusion. The flow is logical. There's no abrupt jumps. The only potential issue: the ethical note inserted between objective and methodology might be a slight detour but still coherent. I'd rate 5. But check guidelines: D2 5 is \"Progresión impecable. Cada oración prepara la siguiente. Se lee de un tirón\". The ethical note is a side note but still flows. I'd give 5.\n\nD3_contextualizacion: Does summary situate the problem? It says: \"El entorno académico constituye un factor determinante en la formación de la intención emprendedora de los estudiantes, ya que influye en sus actitudes, habilidades y motivaciones hacia la creación de nuevos negocios.\" That situates the problem: context academic influences intention. It also says \"No obstante, existe una brecha en la comprensión de cómo este contexto académico afecta específicamente la intención emprendedora en estudiantes de administración de empresas\". So yes, contextualization present. So 1.\n\nD3_metodo_detallado: Need at least two precisions. It gives: \"Se empleo un enfoque cuantitativo, de alcance descriptivo-correlacional y diseño no experimental de corte transversal. La muestra estuvo compuesta por 177 estudiantes seleccionados mediante muestreo aleatorio estratificado. Se aplicaron cuestionarios con escala de Likert, los datos fueron analizados con SPSS y el contraste de la hipótesis se realizó mediante el coeficiente Rho de Spearman.\" That's many precisions: design, sample size, sampling method, instrument, software, test. So 1.\n\nD3_resultados_concretos: Are results concrete? It gives p = .000 < α = .05, Rs = .442**, 54.8% and 76.3%. That's concrete. So 1.\n\nD3_conclusion_responde: Does conclusion respond to objective? Objective: determine relationship between context and entrepreneurial intention. Conclusion: \"Se concluye que existe una relación directa y significativa entre el contexto académico y la intención emprendedora de los estudiantes y que un entorno académico enriquecedor potencia la intención emprendedora.\" Yes, responds. So 1.\n\nD4_consistencia: Consistency between what is said and what is presented. Let's check: They say \"Se empleo un enfoque cuantitativo, de alcance descriptivo-correlacional y diseño no experimental de corte transversal.\" They used Spearman correlation. They report Rs = .442**. They say \"p = .000 < α = .05\". That is consistent. No contradictions. So D4_consistencia = 5.\n\nno_evaluable: The text is a summary, has methodology, so not no_evaluable. So 0.\n\nobservaciones: any notes? We can leave empty string. But we need to provide a string. We can put empty string \"\".\n\nCheck schema: all fields required. Provide integer or null. We have all.\n\nReturn JSON compact.\n\nLet's produce:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"\"\n}\n\nCheck that all fields present. Yes.\n\nReturn."
+    }
+   }
+  ],
+  "created": 1789701012,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_66f3850a1a",
+  "usage": {
+   "completion_tokens": 1662,
+   "prompt_tokens": 10005,
+   "total_tokens": 11667,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1536,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.216355803,
+   "prompt_time": 0.506329737,
+   "completion_time": 1.8373491469999998,
+   "total_time": 2.343678884
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7wck7ej6v9sbqk0d3cbrq",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:10:12.847629+00:00"
+}

@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-056",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": null,
+  "no_evaluable": 1,
+  "observaciones": "Resumen sin metodología, resultados ni conclusiones; objetivo claro; flujo coherente; no se puede evaluar consistencia metodológica."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":0,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"Resumen sin metodología, resultados ni conclusiones; objetivo claro; flujo coherente; no se puede evaluar consistencia metodológica.\"}",
+ "usage": {
+  "input_tokens": 9784,
+  "output_tokens": 1156,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.0796260833740234,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:02:12.681602+00:00",
+ "raw": {
+  "id": "chatcmpl-e0185537-fc27-4f76-bb82-f4303ed85789",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":0,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"Resumen sin metodología, resultados ni conclusiones; objetivo claro; flujo coherente; no se puede evaluar consistencia metodológica.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's analyze the summary.\n\nTitle: \"Los factores que se relacionan con el estudio de la lección de Escuela Sabática de adultos\"\n\nSummary: Spanish. Let's parse.\n\nSummary content:\n\n\"El presente estudio describe la relación que existe entre los factores personales que se relacionan con el estudio de la Escuela Sabática. La investigación primero resalta la importancia de la Escuela Sabática como un espacio de entrenamiento y enseñanza al interior de la Iglesia Adventista del Séptimo Día. Luego se hace una breve reseña histórica de la Escuela Sabática y se describe sus inicios y cómo ha alcanzado el lugar que tiene ahora. Después se hace una descripción de los factores personales que influyen en el estudio en general y cómo estos impactan en la comprensión lectora de los textos escritos. Finalmente, se ensaya una aplicación inicial de cómo estos factores condicionan el estudio de la lección de Escuela Sabática.\"\n\nWe need to evaluate each dimension.\n\nFirst, check if it's a valid summary: yes.\n\nNow, D1_imryd_objetivo: Does the summary state the objective? It says: \"El presente estudio describe la relación que existe entre los factores personales que se relacionan con el estudio de la Escuela Sabática.\" That is an objective: to describe the relationship. So yes, 1.\n\nD1_imryd_metodologia: Does it describe how they did it? The summary does not mention methodology: no mention of design, sample, instruments, etc. So 0.\n\nD1_imryd_resultados: Does it report results? It says: \"se ensaya una aplicación inicial de cómo estos factores condicionan el estudio de la lección de Escuela Sabática.\" That is more like a preliminary application, not actual results. It doesn't give numbers or findings. So 0.\n\nD1_imryd_conclusiones: Does it provide a conclusion? It says: \"Finalmente, se ensaya una aplicación inicial de cómo estos factores condicionan el estudio de la lección de Escuela Sabática.\" That's not a conclusion; it's a suggestion. So 0.\n\nD1_orden_logico: We have objective, then background, then description of factors, then application. The components present: objective, methodology (none), results (none), conclusions (none). So only objective present. According to rule: if 0 or 1 components present, order = 0. So D1_orden_logico = 0.\n\nD2_coherencia: Evaluate flow. The summary flows: introduction, background, description of factors, application. It's coherent. No abrupt jumps. So rating 5? Let's consider: 5 is \"Progresión impecable. Cada oración prepara la siguiente. Se lee de un tirón\". The summary is fairly coherent. There's no repetition or abruptness. So 5.\n\nD3_contextualizacion: Does it situate the problem? It says: \"La investigación primero resalta la importancia de la Escuela Sabática como un espacio de entrenamiento y enseñanza al interior de la Iglesia Adventista del Séptimo Día.\" That gives context: importance of the school. It also mentions \"breve reseña histórica\". So yes, it contextualizes. So 1.\n\nD3_metodo_detallado: Does it give at least two precisions about procedure? No methodology described. So 0.\n\nD3_resultados_concretos: No results. So 0.\n\nD3_conclusion_responde: No conclusion. So 0.\n\nD4_consistencia: Since no methodology, D4 is not evaluable. According to rule: if no methodology, mark no_evaluable = 1 and leave D4 blank. But the schema requires D4_consistencia field. It can be null? The schema says D4_consistencia enum [1,2,3,4,5,null]. So we can set null. And no_evaluable = 1.\n\nObservaciones: We should note that methodology missing, results missing, conclusion missing. Also note that the summary is coherent. Provide observations.\n\nThus JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":0,\n \"D1_imryd_resultados\":0,\n \"D1_imryd_conclusiones\":0,\n \"D1_orden_logico\":0,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":0,\n \"D3_resultados_concretos\":0,\n \"D3_conclusion_responde\":0,\n \"D4_consistencia\":null,\n \"no_evaluable\":1,\n \"observaciones\":\"Resumen sin metodología, resultados ni conclusiones; objetivo claro; flujo coherente; no se puede evaluar consistencia metodológica.\"\n}\n\nCheck schema: all required fields present. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789700532,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_9340e7d14d",
+  "usage": {
+   "completion_tokens": 1156,
+   "prompt_tokens": 9784,
+   "total_tokens": 10940,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1006,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.240660771,
+   "prompt_time": 0.169528448,
+   "completion_time": 1.240542745,
+   "total_time": 1.410071193
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7drh2enka09jhpyd8nkrx",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:02:12.681618+00:00"
+}

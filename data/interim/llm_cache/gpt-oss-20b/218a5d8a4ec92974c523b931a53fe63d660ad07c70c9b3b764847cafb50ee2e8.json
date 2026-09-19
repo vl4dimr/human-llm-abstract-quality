@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-060",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "No se proporcionan datos numéricos en resultados."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No se proporcionan datos numéricos en resultados.\"}",
+ "usage": {
+  "input_tokens": 9776,
+  "output_tokens": 2039,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.6148691177368164,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:52:38.894087+00:00",
+ "raw": {
+  "id": "chatcmpl-4889d7bc-43fc-4e32-8b20-0e890810f3f8",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No se proporcionan datos numéricos en resultados.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones. All required.\n\nWe must analyze the summary: \"El propósito de este trabajo fue realizar una revisión bibliográfica sobre el compromiso organizacional, donde se estudió los conceptos y teorías de diferentes autores, esto con la finalidad de determinar su influencia en la satisfacción en el sector Salud, El método utilizado es de revisión bibliográfica en artículos sobre el compromiso organizacional de diferentes bases de datos como Scielo, Redalyc, y también del libro Gestión del talento Humano de Chiavenato, fuentes en las que resaltan la importancia del compromiso organizacional y como ayuda en la satisfacción laboral; se concluyó que en una organización se debe mantener un ambiente armonioso y en constante coordinación, esto ayudará a una satisfacción laboral positiva y al logro de los objetivos organizacionales.\"\n\nWe need to evaluate each field:\n\nD1_imryd_objetivo: Is there a clear objective? Yes: \"El propósito de este trabajo fue realizar una revisión bibliográfica sobre el compromiso organizacional... esto con la finalidad de determinar su influencia en la satisfacción en el sector Salud.\" This qualifies: objective statement present. So value 1.\n\nD1_imryd_metodologia: Did it mention method? It says \"El método utilizado es de revisión bibliográfica en artículos ...\". That qualifies. So 1.\n\nD1_imryd_resultados: Did it provide results? It says \"se concluyó que en una organización se debe mantener un ambiente armonioso y en constante coordinación, esto ayudará a una satisfacción laboral positiva y al logro de los objetivos organizacionales.\" That's a conclusion, not results. There's no numeric data or specific findings. But maybe it's a result: the conclusion that environment leads to satisfaction. The D1_imryd_resultados is about communicating what was found. Here they provide a general conclusion but no results. So D1_imryd_resultados = 0.\n\nD1_imryd_conclusiones: There is a concluding statement: \"se concluyó que en una organización se debe mantener un ambiente armonioso y en constante coordinación, esto ayudará a una satisfacción laboral positiva y al logro de los objetivos organizacionales.\" That's a conclusion. So 1.\n\nD1_orden_logico: We have components present: objective, methodology, results? Actually results absent, but still we can evaluate order: The summary begins with objective, then methodology, then conclusion. The order is objective -> methodology -> conclusion. In the absence of results, the order of present components is correct. According to rule: If 0 or 1 components present, D1_orden_logico = 0. But we have 3 components (objective, methodology, conclusion). So we can evaluate order. Since they are in correct sequence: objective, methodology, conclusion. So 1.\n\nD2_coherencia: Evaluate flow. The text is somewhat choppy but mostly flows: starts with objective, method, then conclusion. Transitions maybe: \"El método utilizado es de revisión bibliográfica...\" then \"... se concluyó que...\". It's okay. I'd rate maybe 4. Let's analyze: The text: \"El propósito de este trabajo fue realizar una revisión bibliográfica sobre el compromiso organizacional, donde se estudió los conceptos y teorías de diferentes autores, esto con la finalidad de determinar su influencia en la satisfacción en el sector Salud, El método utilizado es de revisión bibliográfica en artículos sobre el compromiso organizacional de diferentes bases de datos como Scielo, Redalyc, y también del libro Gestión del talento Humano de Chiavenato, fuentes en las que resaltan la importancia del compromiso organizacional y como ayuda en la satisfacción laboral; se concluyó que en una organización se debe mantener un ambiente armonioso y en constante coordinación, esto ayudará a una satisfacción laboral positiva y al logro de los objetivos organizacionales.\" There's a comma after \"Salud,\" and then capitalized \"El método\". The sentence structure is somewhat awkward; but not terribly incoherent. So maybe 4. I will choose 4.\n\nD3_contextualizacion: Is there context? It explains that it's a literature review of commitment in the health sector. It doesn't explicitly explain why it's important or where it happens. The summary does say \"con la finalidad de determinar su influencia en la satisfacción en el sector Salud\". That's contextualization? The field demands: \"sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco se contrasta.\" It does mention sector Salud, but does not explain importance, why matters. But maybe it's okay: it situates problem: in health sector. Not fully contextualized. I'd lean 0. But maybe it's 1? Let's analyze: The summary states: \"El propósito de este trabajo fue realizar una revisión bibliográfica sobre el compromiso organizacional... esto con la finalidad de determinar su influencia en la satisfacción en el sector Salud\". That situates the problem: it's about health sector satisfaction. So there is some contextualization. But does it mention why it's important? It says \"la importancia del compromiso organizacional y como ayuda en la satisfacción laboral\". That is context: importance is highlighted. So maybe 1.\n\nBut D3_contextualizacion requires a problem context. I think yes: we have context. So 1.\n\nD3_metodo_detallado: Need at least two precisions concretas. They mention \"revisión bibliográfica en artículos sobre el compromiso organizacional de diferentes bases de datos como Scielo, Redalyc, y también del libro Gestión del talento Humano de Chiavenato\". That gives 2 precisions: sources and type of sources. It also says \"el método utilizado es de revisión bibliográfica\". That's a general. But we have at least 2 precise: databases and book. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: We have no quantitative results. Conclusion is generic. So 0.\n\nD3_conclusion_responde: The conclusion is \"se concluyó que en una organización se debe mantener un ambiente armonioso y en constante coordinación, esto ayudará a una satisfacción laboral positiva y al logro de los objetivos organizacionales.\" Does that respond to the objective? The objective was to review literature to determine influence on satisfaction. The conclusion states environment leads to satisfaction, which addresses that. Yes, it responds. So 1.\n\nD4_consistencia: Since we have objective, methodology, conclusion, and we lack results. But we can't evaluate consistency because we don't have results? Wait D4 requires evaluating coherence between what the summary says it did and what it presents. Since we have method and conclusion but no results, does that affect? The D4 still can be evaluated: Are there contradictions? There is no mention of contradictory claims. So consistency should be 5? But maybe we have a minimal result: the conclusion states environment leads to satisfaction. That is consistent with objective. No contradictions. So 5.\n\nBut check if we need at least methodology details? We have. So D4_consistencia = 5.\n\nno_evaluable: The summary appears to be a valid summary. So 0.\n\nObservaciones: We might add some note about ambiguous results lacking concrete data, but not a major issue.\n\nLet's produce JSON with these values.\n\nWe must ensure all fields present and in required order? JSON object doesn't need order but we will follow given order for consistency. Provide compact JSON, no whitespace? But it's okay to have newline? It's \"compact JSON formatting\" meaning no pretty printing, but we can output as one line. Let's produce a single line JSON with fields.\n\nValues:\n\nD1_imryd_objetivo: 1\nD1_imryd_metodologia: 1\nD1_imryd_resultados: 0\nD1_imryd_conclusiones: 1\nD1_orden_logico: 1\nD2_coherencia: 4\nD3_contextualizacion: 1\nD3_metodo_detallado: 1\nD3_resultados_concretos: 0\nD3_conclusion_responde: 1\nD4_consistencia: 5\nno_evaluable: 0\nobservaciones: maybe a short note: \"No resultados numéricos; conclusión general.\".\n\nLet's craft JSON: {\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No se proporcionan datos numéricos en resultados.\"}\n\nCheck schema: all fields exist, types are correct. Good."
+    }
+   }
+  ],
+  "created": 1789775558,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_587d0d67cc",
+  "usage": {
+   "completion_tokens": 2039,
+   "prompt_tokens": 9776,
+   "total_tokens": 11815,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1903,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.148828034,
+   "prompt_time": 0.052419572,
+   "completion_time": 2.132615137,
+   "total_time": 2.185034709
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vezbh8efas9yjgetvbqar6",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:52:38.894170+00:00"
+}

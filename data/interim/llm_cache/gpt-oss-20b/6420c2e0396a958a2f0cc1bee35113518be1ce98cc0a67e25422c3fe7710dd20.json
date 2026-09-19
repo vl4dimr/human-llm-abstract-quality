@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-118",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen no presenta conclusión ni contextualización; resultados indican asociación significativa sin magnitud ni estadístico concreto."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen no presenta conclusión ni contextualización; resultados indican asociación significativa sin magnitud ni estadístico concreto.\"}",
+ "usage": {
+  "input_tokens": 9879,
+  "output_tokens": 2345
+ },
+ "latency_s": 3.4835102558135986,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:59:26.105427+00:00",
+ "raw": {
+  "id": "chatcmpl-8d0a09e5-fb8c-46b7-afd1-808a1f2a924c",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen no presenta conclusión ni contextualización; resultados indican asociación significativa sin magnitud ni estadístico concreto.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones. All required.\n\nWe must annotate this summary accordingly.\n\nLet's analyze the summary content:\n\nTitle: Asertividad directiva y trabajo colaborativo en las Instituciones de Educación Superior de la Provincia de Acomayo - Cusco.  periodo 2018.\n\nSummary: \"El propósito de este estudio fue examinar la relación entre la agresividad directiva y el trabajo colaborativo en las instituciones de educación superior de la provincia de Acomayo-Cusco. Periodo 2018. En este estudio, debido al reducido tamaño de la población, se seleccionó como muestra representativa a 36 docentes de instituciones de educación superior de la provincia de Acomayo, zona Cusco, para el periodo 2018. La adquisición de los datos se realizó con un enfoque cuantitativo. De acuerdo a la metodología planteada para la investigación cuantitativa, se seleccionarán instrumentos de cuestionario. Como instrumento de evaluación de las variables, se utilizará un cuestionario con evaluación en escala Likert. En el avance de la investigación se determinó que el asertividad directivo está estrechamente asociada al trabajo colaborativo en las Instituciones de Educación Superior de Acomayo-Cusco. Periodo 2018. Dado que la probabilidad es.000 menor que el nivel de significación de 0.05, la prueba es estadísticamente significativa.\"\n\nWe need to evaluate each component.\n\n1. D1_imryd_objetivo: The summary states: \"El propósito de este estudio fue examinar la relación entre la agresividad directiva y el trabajo colaborativo...\". That's explicit objective. So 1.\n\n2. D1_imryd_metodologia: Summary gives methodology: \"en este estudio, debido al reducido tamaño de la población, se seleccionó como muestra representativa a 36 docentes... La adquisición de los datos se realizó con un enfoque cuantitativo. De acuerdo a la metodología planteada para la investigación cuantitativa, se seleccionarán instrumentos de cuestionario. Como instrumento... se utilizará un cuestionario con evaluación en escala Likert.\" That provides at least two precise details: sample size 36, instrument type and Likert scale, quantitative approach. So yes. 1.\n\n3. D1_imryd_resultados: summary includes \"En el avance de la investigación se determinó que el asertividad directivo está estrechamente asociada al trabajo colaborativo... Dado que la probabilidad es.000 menor que el nivel de significación de 0.05, la prueba es estadísticamente significativa.\" This gives a result: association between variables, significant p < 0.05. That is a result. So 1.\n\n4. D1_imryd_conclusiones: Do we have a conclusion section? The summary ends with results significance statement but no explicit conclusion beyond stating the association. In the \"D1_imryd_conclusiones\" we need a closure beyond repeating result: interpretation, implication, recommendation. The summary: \"En el avance de la investigación se determinó que el asertividad directivo está estrechamente asociada al trabajo colaborativo ... Dado que la probabilidad es.000 menor que el nivel de significación de 0.05, la prueba es estadísticamente significativa.\" That's still results, not a conclusion. There's no statement like \"se concluye que la asertividad directiva...\" or \"se recomienda...\". So likely D1_imryd_conclusiones = 0.\n\n5. D1_orden_logico: Components present: objective, methodology, results, conclusion? Only 3 present (objective, methodology, results). They appear in order: objective, methodology, results. So they are in sequence. According to rule: If 0 or 1 components present => 0. Here 3 components present => we can evaluate order: they appear in order: objective then methodology then results. So order is coherent. So 1.\n\n6. D2_coherencia: Coherence of flow. Let's analyze the summary text:\n\n\"El propósito de este estudio fue examinar la relación entre la agresividad directiva y el trabajo colaborativo en las instituciones de educación superior de la provincia de Acomayo-Cusco. Periodo 2018. En este estudio, debido al reducido tamaño de la población, se seleccionó como muestra representativa a 36 docentes ... La adquisición de los datos se realizó con un enfoque cuantitativo. De acuerdo a la metodología planteada para la investigación cuantitativa, se seleccionarán instrumentos de cuestionario. Como instrumento de evaluación ... se utilizará un cuestionario con evaluación en escala Likert. En el avance de la investigación se determinó que el asertividad directivo está estrechamente asociada al trabajo colaborativo... Dado que la probabilidad es.000 menor que el nivel de significación de 0.05, la prueba es estadísticamente significativa.\"\n\nFlow: starts with objective, then method, then results. But there is some redundancy: \"En este estudio\" appears twice: first after objective, and again at start of method. That could be considered repetition. There's a \"Period 2018\" inserted after objective, maybe a bit abrupt. The summary is fairly straightforward. Might be slightly choppy but not too bad. I'd rate coherence 4? Let's see scale: 5 is perfect; 4 is good but some small aspersities; 3 is some jumps; 2 is disordered; 1 is incoherent.\n\nObservations: There is an abrupt \"Periodo 2018\" after objective, but it's just a time reference. Could be considered a break. There is also \"En este estudio, debido al reducido tamaño...\" and then again \"En este estudio\". Slight redundancy. But overall it's understandable.\n\nSo I'd assign 4 (some minor aspersity due to repetition and stray period statement). If we think it's fine maybe 5. But to be safe 4.\n\n7. D3_contextualizacion: Does the summary provide context? It does not mention why it's important, where the problem occurs, why it's relevant, etc. It only states the purpose. There's no context. So D3_contextualizacion = 0.\n\n8. D3_metodo_detallado: Need at least two precise details. Provided: sample size 36 (yes). Instrument: questionnaire Likert scale. Also \"enfoque cuantitativo\" (general). We have at least two: sample size + instrument. So 1.\n\n9. D3_resultados_concretos: Provided: association significant. But we do not have specific statistics: we have \"probabilidad es .000 menor que el nivel de significación de 0.05.\" That indicates p-value but not exact number; \"es .000\" maybe 0.000? Usually p=0.000 indicates < 0.001. But is that considered a concrete result? It's a statement that p < 0.05; but we don't have a statistic like correlation coefficient, or chi-square, or OR. It's a general statement that it's significant. The criteria for D3_resultados_concretos: \"Cuando los resultados aportan contenido específico: cifras, magnitudes, categorías nombradas, relaciones con dirección.\" So we only have p-value but not actual effect size. I'd say it's not concrete enough. But the result says \"está estrechamente asociada\" but no magnitude. So D3_resultados_concretos = 0.\n\n10. D3_conclusion_responde: Since there is no conclusion, 0.\n\n11. D4_consistencia: Consistency between what summary says it did and what it presents. Since there is no conclusion, but we evaluate the consistency between methodology and results. They are consistent: quantitative, questionnaire, 36 respondents. Result says association, significance. No contradictions. So D4_consistencia = 5? Or 4? Let's review the scoring: 5 is full coherence; 4 is coherence, with one minor imprecision terminologica; 3 is a visible discord, but not invalidating. 2 is multiple discordances, or conclusion exceeds data. 1 is contradiction open invalidating conclusion.\n\nWe have no contradictions. So likely 5. But check for potential issue: The result statement says \"En el avance de la investigación se determinó que el asertividad directivo está estrechamente asociada al trabajo colaborativo... Dado que la probabilidad es.000 menor que el nivel de significación de 0.05, la prueba es estadísticamente significativa.\" The statement uses \"asertividad directivo\" maybe typo \"directiva\". But not contradictory. So we can set 5.\n\n12. no_evaluable: It's evaluable, no missing methodology. So 0.\n\n13. observaciones: We can add notes: \"No conclusión; no contextualización; result no incluye magnitud\". But we may not need to be too verbose. Provide some observations.\n\nLet's craft JSON accordingly. Need to use compact JSON formatting. Ensure fields all present. Provide integer values or null. All fields required, none null except if we choose null? But we should fill with integer values. Use 0 or 1 for binary fields. Provide D2_coherencia as integer 4. D4_consistencia as 5. Observations string.\n\nLet's produce JSON:\n\n{\n \"D1_imryd_objetivo\": 1,\n \"D1_imryd_metodologia\": 1,\n \"D1_imryd_resultados\": 1,\n \"D1_imryd_conclusiones\": 0,\n \"D1_orden_logico\": 1,\n \"D2_coherencia\": 4,\n \"D3_contextualizacion\": 0,\n \"D3_metodo_detallado\": 1,\n \"D3_resultados_concretos\": 0,\n \"D3_conclusion_responde\": 0,\n \"D4_consistencia\": 5,\n \"no_evaluable\": 0,\n \"observaciones\": \"Resumen no presenta conclusión ni contextualización; resultados indican asociación significativa sin magnitud ni estadístico concreto.\"\n}\n\nMake sure no trailing spaces. Provide as single line? The instruction says \"compact JSON formatting\". So we can put it in one line. Let's produce."
+    }
+   }
+  ],
+  "created": 1789775965,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c9afb2bdb4",
+  "usage": {
+   "completion_tokens": 2345,
+   "prompt_tokens": 9879,
+   "total_tokens": 12224,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2200,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.190685802,
+   "prompt_time": 0.549922982,
+   "completion_time": 2.36059274,
+   "total_time": 2.910515722
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vfbreje0va6css0cp8nqsm",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:59:26.105496+00:00"
+}

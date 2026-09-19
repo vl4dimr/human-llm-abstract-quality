@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-068",
+ "model_name": "mistral-7b",
+ "provider": "ollama",
+ "model": "mistral:latest",
+ "model_reported": "mistral:latest",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Se puede pensar que el objeto de la investigación es el nivel de conocimiento sobre higiene de manos, pero no hay enunciado explícito de objetivo"
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 5,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"Se puede pensar que el objeto de la investigación es el nivel de conocimiento sobre higiene de manos, pero no hay enunciado explícito de objetivo\"\n}",
+ "usage": {
+  "input_tokens": 12820,
+  "output_tokens": 230,
+  "total_duration_s": 6.7673418
+ },
+ "latency_s": 6.785220146179199,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T00:58:26.295520+00:00",
+ "raw": {
+  "model": "mistral:latest",
+  "created_at": "2026-09-19T00:58:26.2944492Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 5,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"Se puede pensar que el objeto de la investigación es el nivel de conocimiento sobre higiene de manos, pero no hay enunciado explícito de objetivo\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 6767341800,
+  "load_duration": 3801800,
+  "prompt_eval_count": 12820,
+  "prompt_eval_cached_count": 12155,
+  "prompt_eval_duration": 493034000,
+  "eval_count": 230,
+  "eval_duration": 6174043000
+ },
+ "cached_at_utc": "2026-09-19T00:58:26.295535+00:00"
+}

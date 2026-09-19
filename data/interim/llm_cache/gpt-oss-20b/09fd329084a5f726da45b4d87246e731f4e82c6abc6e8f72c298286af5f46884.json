@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-128",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen sin contextualización; flujo coherente; conclusión responde al objetivo; consistencia alta."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin contextualización; flujo coherente; conclusión responde al objetivo; consistencia alta.\"}",
+ "usage": {
+  "input_tokens": 9996,
+  "output_tokens": 1824,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.508596420288086,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:10:46.512689+00:00",
+ "raw": {
+  "id": "chatcmpl-ffa23773-e117-4dfe-8504-f9d1a699064b",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin contextualización; flujo coherente; conclusión responde al objetivo; consistencia alta.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Norma ISO 27001 y el control de la seguridad de información en boticas de la ciudad de Juliaca año 2023\"\n\nResumen:\n\n\"Su objetivo fue determinar la relación significativa entre la Norma ISO 27001 y control de la seguridad de información en boticas de la ciudad de Juliaca año 2023. La metodología fue de enfoque cuantitativo, tipo básica, nivel descriptivo correlacional diseño no experimental, la muestra estuvo conformada por 15 boticas de la ciudad de Juliaca, se utilizó como técnica la observación e instrumento el cuestionario. Muestra como resultados según el coeficiente es de 0.789, lo que indica una correlación positiva alta además en un valor de p es de 0.001 es menor a 0.05, en cuanto a las dimensiones ejecución y adaptabilidad tiene un coeficiente de 0.957, lo que indica una correlación positiva muy alta además el valor de p es de 0.000 es menor a 0.05, y las dimensiones de verificación y accesibilidad muestran un coeficiente de 0.839, lo que indica una correlación positiva alta tiene un valor de p de 0.000 es menor a 0.05, las dimensiones de mejoramiento y resguardo su coeficiente es de 0.884, lo que indica una relación positiva alta, el valor de p es de 0.000 es menor a 0.05. Se concluye que si existe relación positiva moderada entre las variables de Norma ISO 27001 y control de la seguridad de información porque se observa un coeficiente de correlación de 0.460, presenta una correlación positiva moderada, porque valor de p es 0.004 menor a 0.05, se deduce que si mejora la variable ISO también se mejora la seguridad de información.\"\n\nWe need to evaluate each field.\n\nFirst, check if it's a valid summary: yes.\n\nNow, D1_imryd_objetivo: The summary explicitly states \"Su objetivo fue determinar la relación significativa entre la Norma ISO 27001 y control de la seguridad de información en boticas de la ciudad de Juliaca año 2023.\" That is a clear objective. So D1_imryd_objetivo = 1.\n\nD1_imryd_metodologia: The summary says \"La metodología fue de enfoque cuantitativo, tipo básica, nivel descriptivo correlacional diseño no experimental, la muestra estuvo conformada por 15 boticas de la ciudad de Juliaca, se utilizó como técnica la observación e instrumento el cuestionario.\" That includes design, sample, technique, instrument. So yes, D1_imryd_metodologia = 1.\n\nD1_imryd_resultados: The summary reports results: \"Muestra como resultados según el coeficiente es de 0.789, lo que indica una correlación positiva alta además en un valor de p es de 0.001 es menor a 0.05, en cuanto a las dimensiones ejecución y adaptabilidad tiene un coeficiente de 0.957, ... etc.\" So yes, D1_imryd_resultados = 1.\n\nD1_imryd_conclusiones: The summary says \"Se concluye que si existe relación positiva moderada entre las variables de Norma ISO 27001 y control de la seguridad de información porque se observa un coeficiente de correlación de 0.460, presenta una correlación positiva moderada, porque valor de p es 0.004 menor a 0.05, se deduce que si mejora la variable ISO también se mejora la seguridad de información.\" That is a conclusion that interprets results and responds to objective. So D1_imryd_conclusiones = 1.\n\nD1_orden_logico: The components appear in order: objective, methodology, results, conclusion. Yes. So D1_orden_logico = 1.\n\nD2_coherencia: We need to evaluate flow. The summary is fairly coherent. It starts with objective, then methodology, then results, then conclusion. The transitions are somewhat abrupt but still coherent. Let's rate 4 maybe. Let's analyze: The summary flows logically. There's no major jump. The only potential issue: The results section is long and includes many details, but still flows. So D2_coherencia = 4.\n\nD3_contextualizacion: This field requires that the summary situates the problem: why it matters, where it occurs, to whom it affects, against what norm or framework. The summary does not provide context beyond the objective. It doesn't explain why it's important, or the significance of the study. It just states the objective. So D3_contextualizacion = 0.\n\nD3_metodo_detallado: We need at least two precisions. The summary includes: \"enfoque cuantitativo, tipo básica, nivel descriptivo correlacional diseño no experimental, la muestra estuvo conformada por 15 boticas de la ciudad de Juliaca, se utilizó como técnica la observación e instrumento el cuestionario.\" That is more than two precisions: design, sample size, technique, instrument. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: The results include specific coefficients and p-values. So yes, D3_resultados_concretos = 1.\n\nD3_conclusion_responde: The conclusion addresses the objective: \"Se concluye que si existe relación positiva moderada entre las variables...\" So yes, D3_conclusion_responde = 1.\n\nD4_consistencia: We need to evaluate consistency between what the summary says it did and what it presents. The summary says it's a correlational study, no mention of statistical tests beyond p-values. It reports p-values and coefficients. The conclusion states a moderate positive relationship. That is consistent with the results. There's no contradiction. So D4_consistencia = 5. Wait, check if any contradictions: The summary says \"Se concluye que si existe relación positiva moderada entre las variables ... porque se observa un coeficiente de correlación de 0.460, presenta una correlación positiva moderada, porque valor de p es 0.004 menor a 0.05, se deduce que si mejora la variable ISO también se mejora la seguridad de información.\" That matches the results: they reported 0.789, 0.957, 0.839, 0.884, and 0.460. They also reported p-values. So consistency is good. So D4_consistencia = 5.\n\nno_evaluable: The summary is a valid summary. So no_evaluable = 0.\n\nobservaciones: We can add any notes. Maybe note that the summary lacks contextualization. Also note that the conclusion uses \"moderada\" but the results show high correlation for most dimensions, but the overall correlation is moderate. That is fine. We can mention that the summary is coherent but lacks context. So we can write: \"Resumen sin contextualización; flujo coherente; conclusión responde al objetivo; consistencia alta.\" Provide a short string.\n\nNow produce JSON with all fields. Ensure all required fields present. Use compact JSON. Let's produce.\n\nCheck schema: all fields required. Provide integer or null. We have all values.\n\nLet's produce JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Resumen sin contextualización; flujo coherente; conclusión responde al objetivo; consistencia alta.\"\n}\n\nCheck that no_evaluable is integer 0. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789701046,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_66891002f6",
+  "usage": {
+   "completion_tokens": 1824,
+   "prompt_tokens": 9996,
+   "total_tokens": 11820,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1681,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.19250954,
+   "prompt_time": 0.069126563,
+   "completion_time": 1.931259817,
+   "total_time": 2.00038638
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7xdvdedqvacybxmgjqnyd",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:10:46.512817+00:00"
+}

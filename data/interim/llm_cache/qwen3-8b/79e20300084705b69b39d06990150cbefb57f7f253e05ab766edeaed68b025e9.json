@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-096",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica y coherente, aunque la contextualización es cuestionable ya que comienza directamente con el objetivo. La metodología se describe con claridad, incluyendo el lugar y el periodo de investigación. Los resultados son concretos, mencionando hallazgos específicos. Las conclusiones responden al objetivo y se alinean con los resultados. La consistencia metodológica es moderada debido a que la discusión menciona principios constitucionales y doctrinarios sin una conexión directa con los resultados presentados."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica y coherente, aunque la contextualización es cuestionable ya que comienza directamente con el objetivo. La metodología se describe con claridad, incluyendo el lugar y el periodo de investigación. Los resultados son concretos, mencionando hallazgos específicos. Las conclusiones responden al objetivo y se alinean con los resultados. La consistencia metodológica es moderada debido a que la discusión menciona principios constitucionales y doctrinarios sin una conexión directa con los resultados presentados.\"\n}",
+ "usage": {
+  "input_tokens": 10969,
+  "output_tokens": 277,
+  "total_duration_s": 8.7533075
+ },
+ "latency_s": 8.75598669052124,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:38:28.414125+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:38:28.413054Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica y coherente, aunque la contextualización es cuestionable ya que comienza directamente con el objetivo. La metodología se describe con claridad, incluyendo el lugar y el periodo de investigación. Los resultados son concretos, mencionando hallazgos específicos. Las conclusiones responden al objetivo y se alinean con los resultados. La consistencia metodológica es moderada debido a que la discusión menciona principios constitucionales y doctrinarios sin una conexión directa con los resultados presentados.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8753307500,
+  "load_duration": 4581000,
+  "prompt_eval_count": 10969,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 418205000,
+  "eval_count": 277,
+  "eval_duration": 8248126000
+ },
+ "cached_at_utc": "2026-09-19T01:38:28.414136+00:00"
+}

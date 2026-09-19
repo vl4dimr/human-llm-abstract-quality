@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-039",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 10041,
+  "output_tokens": 1303,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.4825282096862793,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:50:00.848015+00:00",
+ "raw": {
+  "id": "chatcmpl-19ed9697-42f3-459c-808d-9183e48fbcbe",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields per schema. Evaluate summary.\n\nLet's analyze each dimension:\n\nD1_imryd_objetivo: Is there an explicit or implicit objective? The text says: \"la investigación se orienta por el siguiente objetivo general: Determinar el tipo y grado de correlación existente entre el aprendizaje organizacional y el servicio de tutoría en la gestión pedagógica en el Instituto Superior Público 'JAE' de Puno\". So yes, explicit objective. So D1_imryd_objetivo = 1.\n\nD1_imryd_metodologia: We need at least one procedural detail. It says: \"El tipo de investigación es descriptivo y el diseño es correlacional. Las técnicas e instrumentos son: la encuesta con su respectivo cuestionario...\". So yes, methodology present. So D1_imryd_metodologia = 1.\n\nD1_imryd_resultados: We have \"el coeficiente de correlación r = 0.64\". That's a concrete result. So 1.\n\nD1_imryd_conclusiones: Does it contain a conclusion that interprets results beyond repeating them? It says: \"Después de analizar e interpretar los resultados se concluye que la mayoría de los profesores no tienen adecuado aprendizaje organizacional ... esta afirmación se sustenta en el coeficiente de correlación que se obtiene que es de r = 0.64.\" So yes, a conclusion: summarizing that majority do not have adequate learning and also do not apply; correlation present. This goes beyond just repeating results, it's interpretative. So D1_imryd_conclusiones = 1.\n\nD1_orden_logico: We have components present: objective, methodology, results, conclusion. Check sequence: The text: problem statement, objective, hypothesis, type of research and design, techniques, data analysis, conclusion. The order is objective -> methodology (design and instruments) -> results -> conclusion. So yes, 1.\n\nD2_coherencia: Need to rate from 1 to 5. Let's examine flow:\n\nThe summary starts with problem statement: \"El problema que aborda ...\", then objective, hypothesis, type and design, techniques/instruments, analysis and conclusion. There's a bit of redundancy: The problem statement includes question. But overall, flow seems coherent: from problem to objective to method to results to conclusion. Might be a little abrupt but still understandable. I'd rate 4. Let's analyze: 5 would be impeccable, 4 minor aspere. It seems good.\n\nD3_contextualizacion: Does the summary situate problem? It starts with problem, but does it situate why it matters? It says: \"El problema que aborda...\". No explicit context about importance, but gives the institution and period. Could be considered contextualization? The field is specific but not clear why it's important. Usually contextualization includes why the problem matters, where occurs, etc. This summary starts with the problem but not mention why matters. I'd lean to 0. But maybe it counts as contextualization because it situates at institution and period. However the protocol: \"Vale 1 cuando el resumen sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma.\" Here we have: \"Estudio en ciudad de Puno, period 2009\", but doesn't explain why it matters or the impact. So I'd set 0.\n\nD3_metodo_detallado: Need at least two precisions. We have: \"tipo descriptivo y diseño correlacional\", \"encuesta con cuestionario para variable 'grado de aprendizaje organizacional'\", \"encuesta y análisis documental\". These are more than two precise details. So 1.\n\nD3_resultados_concretos: Has \"r = 0.64\". That's a concrete numeric result. So 1.\n\nD3_conclusion_responde: Does conclusion answer the objective? The objective was to determine type and degree of correlation between learning and tutoring service. Conclusion: majority of teachers don't have adequate learning and don't apply; correlation present; supported by r=0.64. That seems to answer objective: yes. So 1.\n\nD4_consistencia: Scale 1-5. We need to assess consistency between what was claimed and results. Let's examine: They claim objective to determine correlation. Method: descriptive, correlational design. They used survey and analysis documental. Results: r=0.64. Conclusion: majority don't have adequate learning and don't apply, correlation present. No contradictions. They didn't claim significance or something contradictory. So consistency high. Possibly 5. Let's verify: Do they use \"significant\" or \"coefficient of correlation\"? They don't state significance, just r = 0.64. So no mention of p-values. That's fine. Conclusion aligns with result. So D4_consistencia = 5.\n\nno_evaluable: The text is a proper summary, so 0.\n\nobservaciones: we may add a note if needed. We didn't have any issues. But we might comment: \"No falta de contextualización\" but we gave 0. Observations can be empty string.\n\nMake sure JSON includes all required fields: list given: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nWe need to set each as integer or null. We have values. Observaciones: maybe an empty string \"\".\n\nReturn compact JSON. Ensure no extra spaces. Provide only JSON."
+    }
+   }
+  ],
+  "created": 1789775400,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_92d51d08e5",
+  "usage": {
+   "completion_tokens": 1303,
+   "prompt_tokens": 10041,
+   "total_tokens": 11344,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1177,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.149855979,
+   "prompt_time": 0.073143304,
+   "completion_time": 1.370538958,
+   "total_time": 1.443682262
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vethxme19rrj89wmq4nygb",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:50:00.848027+00:00"
+}

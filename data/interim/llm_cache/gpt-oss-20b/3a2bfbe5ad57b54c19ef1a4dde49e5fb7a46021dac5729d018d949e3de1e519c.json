@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-088",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen no contextualiza el problema; comienza directamente con el objetivo."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen no contextualiza el problema; comienza directamente con el objetivo.\"}",
+ "usage": {
+  "input_tokens": 9946,
+  "output_tokens": 2213
+ },
+ "latency_s": 3.8916993141174316,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:06:01.250717+00:00",
+ "raw": {
+  "id": "chatcmpl-a926f009-4050-4c5f-87c7-f68942f7df28",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen no contextualiza el problema; comienza directamente con el objetivo.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Efectividad de la sesión educativa en el conocimiento sobre primeros auxilios en accidentes más frecuentes en comuneros de Lluco, Coata - 2016\"\n\nResumen: \n\"La investigación se realizó con el objetivo de determinar la efectividad de la sesión educativa en el conocimiento sobre primeros auxilios en accidentes más frecuentes en los comuneros de Lluco, Coata-2016, fue de tipo pre- experimental con diseño pre test y post test con un solo grupo; la población estuvo constituida por 188 comuneros, la muestra de estudio estuvo conformada por 75 comuneros, la técnica que se utilizó fue la encuesta , el instrumento fue el cuestionario que se aplicó en dos momentos antes y después de la sesión educativa, validado a través de juicio de expertos, para la confiabilidad del instrumento se utilizó el método de Alfa de Cronbanch obteniéndose 80% de confiabilidad, los resultados del estudio demuestran que antes de la sesión educativa el 17% de comuneros tenían conocimiento deficiente y el 64% regular, después de realizar la sesión educativa el 97 % obtuvieron conocimiento bueno y el 3% regular. Por tanto la sesión educativa es efectiva para mejorar el conocimiento, desde un nivel deficiente a bueno entonces se confirma la hipótesis planteada, corroborada con el análisis estadístico al obtener la prueba Zc = -16.80 < Zt = -1.96 para un nivel de confianza del 95% y un nivel de significancia de α=0.05\"\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 1 if objective present. The summary explicitly states: \"con el objetivo de determinar la efectividad de la sesión educativa en el conocimiento sobre primeros auxilios en accidentes más frecuentes en los comuneros de Lluco, Coata-2016\". So yes, 1.\n\n- D1_imryd_metodologia: 1 if methodology present. The summary includes: \"fue de tipo pre- experimental con diseño pre test y post test con un solo grupo; la población estuvo constituida por 188 comuneros, la muestra de estudio estuvo conformada por 75 comuneros, la técnica que se utilizó fue la encuesta , el instrumento fue el cuestionario que se aplicó en dos momentos antes y después de la sesión educativa, validado a través de juicio de expertos, para la confiabilidad del instrumento se utilizó el método de Alfa de Cronbanch\". So yes, 1.\n\n- D1_imryd_resultados: 1 if results present. The summary states: \"los resultados del estudio demuestran que antes de la sesión educativa el 17% de comuneros tenían conocimiento deficiente y el 64% regular, después de realizar la sesión educativa el 97 % obtuvieron conocimiento bueno y el 3% regular.\" So yes, 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. The summary ends: \"Por tanto la sesión educativa es efectiva para mejorar el conocimiento, desde un nivel deficiente a bueno entonces se confirma la hipótesis planteada, corroborada con el análisis estadístico\". So yes, 1.\n\n- D1_orden_logico: 1 if components present in logical order. The summary: objective first, then methodology, then results, then conclusion. Yes, 1.\n\n- D2_coherencia: scale 1-5. We need to evaluate flow. Let's analyze: The summary is fairly coherent. It starts with objective, then methodology, then results, then conclusion. The transitions are somewhat abrupt but still understandable. There's no major jumps. The text is a single paragraph. The flow is fairly good. I'd rate 4 maybe. Let's think: 5 would be \"Progresión impecable. Cada oración prepara la siguiente. Se lee de un tirón\". 4: \"Fluye bien, con alguna aspereza menor que no estorba\". 3: \"Se entiende, pero cuesta\". 2: \"Hay que releer para reconstruir el hilo\". 1: \"Incoherente\". The summary flows logically, but there are some abrupt transitions: \"La investigación se realizó con el objetivo de determinar ... fue de tipo pre- experimental con diseño pre test y post test con un solo grupo; la población estuvo constituida por 188 comuneros, la muestra de estudio estuvo conformada por 75 comuneros, la técnica que se utilizó fue la encuesta , el instrumento fue el cuestionario que se aplicó en dos momentos antes y después de la sesión educativa, validado a través de juicio de expertos, para la confiabilidad del instrumento se utilizó el método de Alfa de Cronbanch obteniéndose 80% de confiabilidad, los resultados del estudio demuestran que antes de la sesión educativa el 17% de comuneros tenían conocimiento deficiente y el 64% regular, después de realizar la sesión educativa el 97 % obtuvieron conocimiento bueno y el 3% regular. Por tanto la sesión educativa es efectiva para mejorar el conocimiento, desde un nivel deficiente a bueno entonces se confirma la hipótesis planteada, corroborada con el análisis estadístico al obtener la prueba Zc = -16.80 < Zt = -1.96 para un nivel de confianza del 95% y un nivel de significancia de α=0.05\"\n\nIt is a single paragraph, but the flow is okay. I'd give 4. There's no major confusion. So D2_coherencia = 4.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where it occurs, to whom it affects, against what norm or framework. The summary does not explicitly mention why it's important, but it does mention the population: \"comuneros de Lluco, Coata\". It says \"la investigación se realizó con el objetivo de determinar la efectividad de la sesión educativa en el conocimiento sobre primeros auxilios en accidentes más frecuentes en los comuneros de Lluco, Coata-2016\". It doesn't explicitly state why it's important, but it does mention the context: \"comuneros de Lluco, Coata\". It doesn't mention a normative framework or why it's important. The summary starts directly with objective. According to D3_contextualizacion, it should situate the problem: why it matters, where it occurs, to whom it affects, against what norm or framework. The summary does not provide that. So D3_contextualizacion = 0.\n\n- D3_metodo_detallado: 1 if at least two precisions about procedure. The summary includes: \"tipo pre- experimental con diseño pre test y post test con un solo grupo; la población estuvo constituida por 188 comuneros, la muestra de estudio estuvo conformada por 75 comuneros, la técnica que se utilizó fue la encuesta , el instrumento fue el cuestionario que se aplicó en dos momentos antes y después de la sesión educativa, validado a través de juicio de expertos, para la confiabilidad del instrumento se utilizó el método de Alfa de Cronbanch\". So we have design, population, sample size, technique, instrument, validation, reliability method. That's more than two. So D3_metodo_detallado = 1.\n\n- D3_resultados_concretos: 1 if results provide specific content: percentages, magnitudes, categories, relationships. The summary gives percentages: 17% deficiente, 64% regular, 97% bueno, 3% regular. So yes, 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to the stated objective. The conclusion: \"Por tanto la sesión educativa es efectiva para mejorar el conocimiento, desde un nivel deficiente a bueno entonces se confirma la hipótesis planteada\". The objective was to determine the effectiveness of the educational session on knowledge about first aid. The conclusion states that the session is effective. So yes, 1.\n\n- D4_consistencia: scale 1-5. We need to evaluate consistency between what the summary says it did and what it presents. The summary says: pre-experimental design, pre-test/post-test, single group, 188 population, 75 sample, technique: survey, instrument: questionnaire, validated, reliability 80%. Results: percentages before and after. Conclusion: effective. Are there any contradictions? The summary uses \"pre- experimental\" but also \"pre test y post test con un solo grupo\". That is consistent. It reports percentages before and after. It uses \"Zc = -16.80 < Zt = -1.96\" to support significance. That is consistent. There's no contradictory statements. So D4_consistencia = 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: we can add any notes. We might note that the summary is a single paragraph, but no issues. We might note that the summary does not provide contextualization. So we can add: \"No contextualización del problema; comienza directamente con el objetivo.\" That is a note.\n\nNow produce JSON with all fields. Ensure all required fields present. Use compact JSON. Let's produce:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Resumen no contextualiza el problema; comienza directamente con el objetivo.\"\n}\n\nCheck schema: all fields present. Types: integers or null. Observations string. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789700760,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_1c0f5282a2",
+  "usage": {
+   "completion_tokens": 2213,
+   "prompt_tokens": 9946,
+   "total_tokens": 12159,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2075,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.149138434,
+   "prompt_time": 0.556426923,
+   "completion_time": 2.333786963,
+   "total_time": 2.8902138859999997
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7mpd4ertahsbjp9h7pg0p",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:06:01.250817+00:00"
+}

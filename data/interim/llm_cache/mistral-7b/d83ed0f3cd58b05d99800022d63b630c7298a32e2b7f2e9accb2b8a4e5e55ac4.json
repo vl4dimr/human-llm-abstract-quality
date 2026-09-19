@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-075",
+ "model_name": "mistral-7b",
+ "provider": "ollama",
+ "model": "mistral:latest",
+ "model_reported": "mistral:latest",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 0,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "No está presente el problema a resolver"
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 0,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"No está presente el problema a resolver\"\n}",
+ "usage": {
+  "input_tokens": 12667,
+  "output_tokens": 201,
+  "total_duration_s": 5.8492971
+ },
+ "latency_s": 5.8730690479278564,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:15:51.731942+00:00",
+ "raw": {
+  "model": "mistral:latest",
+  "created_at": "2026-09-19T01:15:51.7222125Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 0,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"No está presente el problema a resolver\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 5849297100,
+  "load_duration": 4496800,
+  "prompt_eval_count": 12667,
+  "prompt_eval_cached_count": 12155,
+  "prompt_eval_duration": 371037000,
+  "eval_count": 201,
+  "eval_duration": 5370010000
+ },
+ "cached_at_utc": "2026-09-19T01:15:51.731961+00:00"
+}

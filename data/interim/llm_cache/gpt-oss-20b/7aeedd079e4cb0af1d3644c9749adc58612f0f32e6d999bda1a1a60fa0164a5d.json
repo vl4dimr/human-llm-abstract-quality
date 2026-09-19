@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-007",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen presenta objetivo explícito y metodología con detalles suficientes. No incluye conclusión explícita. Se observa una etiqueta de estudio cualitativo que no coincide con el análisis cuantitativo de porcentajes, pero no genera contradicción ni falta de consistencia. Flujo lógico adecuado con puntuación 4."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta objetivo explícito y metodología con detalles suficientes. No incluye conclusión explícita. Se observa una etiqueta de estudio cualitativo que no coincide con el análisis cuantitativo de porcentajes, pero no genera contradicción ni falta de consistencia. Flujo lógico adecuado con puntuación 4.\"}",
+ "usage": {
+  "input_tokens": 10008,
+  "output_tokens": 1795,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.8236007690429688,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:15:28.572303+00:00",
+ "raw": {
+  "id": "chatcmpl-fa8f3e03-39b8-46b7-b334-c5c92752aa44",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta objetivo explícito y metodología con detalles suficientes. No incluye conclusión explícita. Se observa una etiqueta de estudio cualitativo que no coincide con el análisis cuantitativo de porcentajes, pero no genera contradicción ni falta de consistencia. Flujo lógico adecuado con puntuación 4.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. Need to fill all required fields.\n\nLet's parse.\n\nTitle: \"Gestión del talento humano y su incidencia en el desempeño laboral de la empresa Taypikala Hotel lago S.A.C. de la ciudad de Puno - Chucuito, 2021\"\n\nResumen: In Spanish. Let's summarize content:\n\n- Title repeated. Then: \"considerando que la gestión del talento humano es el elemento principal de una empresa, para el buen desempeño laboral de los trabajadores, por ende se buscan resultados positivos en la rentabilidad económica y financiera\". This is background context, but no objective. Then: \"esta investigación tuvo como objetivo general Analizar la gestión del talento humano y su incidencia en el desempeño laboral de la empresa Taypikala Hotel Lago S.A.C. de la ciudad de Chucuito Puno, periodo 2021,\". So objective is present.\n\n- \"el diseño de investigación que se utilizó fue un diseño no experimental, el cual se fundamenta que se describe los hechos y datos recogidos tal como son, sin ninguna modificación por parte del investigador, el método utilizado fue descriptivo-correlacional, una investigación cualitativa.\" So methodology described: design (no experimental), method (descriptivo-correlacional, cualitativa). It's a bit ambiguous: \"descriptivo-correlacional\" seems quantitative but they say \"una investigación cualitativa.\" Possibly contradictory, but still methodology present.\n\n- \"La investigación se realizó en las instalaciones de la empresa, objeto de estudio, la población se ha tomado a la totalidad de los trabajadores, el muestreo es no probabilístico, debido a que la cantidad de trabajadores es 16 personas, a los que se le ha aplicado el cuestionario de manera general, llegando a los resultados siguientes respecto a la variable independiente, del total de los trabajadores respondieron a las 20 preguntas realizadas, que solamente mencionaron que el 40.31 % es adecuada la gestión del talento humano, y respecto a la variable dependiente que solamente el 39.45 % de los trabajadores respondieron, están satisfechos casi siempre con el desempeño laboral.\"\n\nSo results: 40.31% adequate management, 39.45% satisfied. That's concrete results with percentages. Good.\n\nNow annotate.\n\nDimension 1: D1_imryd_objetivo: 1, since objective explicitly present: \"Analizar la gestión del talento humano y su incidencia en el desempeño laboral\".\n\nD1_imryd_metodologia: 1. There is method details: design no experimental, descriptive-correlational, non-probabilistic sampling of 16, questionnaire. Enough. It's at least one precise detail.\n\nD1_imryd_resultados: 1. Results presented with percentages.\n\nD1_imryd_conclusiones: There's no explicit conclusion beyond results. It states results. Does it contain a conclusion that goes beyond result, interprets or recommends? It doesn't say anything like \"Concluye que...\", no recommendations. So D1_conclusiones likely 0. But check if maybe the phrase \"en la rentabilidad económica y financiera\" earlier. That's background. No closure. So 0.\n\nD1_orden_logico: The order: objective, design/method, results. That is coherent. So 1.\n\nDimension 2: D2_coherencia: Evaluate flow. Let's read summary:\n\n\"El presente trabajo de investigación titulado... considerando que la gestión del talento humano es el elemento principal de una empresa, para el buen desempeño laboral de los trabajadores, por ende se buscan resultados positivos en la rentabilidad económica y financiera, esta investigación tuvo como objetivo general Analizar la gestión del talento humano y su incidencia en el desempeño laboral de la empresa Taypikala Hotel Lago S.A.C. de la ciudad de Chucuito Puno, periodo 2021, el diseño de investigación que se utilizó fue un diseño no experimental, el cual se fundamenta que se describe los hechos y datos recogidos tal como son, sin ninguna modificación por parte del investigador, el método utilizado fue descriptivo-correlacional, una investigación cualitativa. La investigación se realizó en las instalaciones de la empresa,  objeto de estudio, la población se ha tomado a la totalidad de los trabajadores, el muestreo es no probabilístico, debido a que la cantidad de trabajadores es 16 personas, a los que se le ha aplicado el cuestionario de manera general, llegando  a los resultados siguientes respecto a la variable independiente, del total de los trabajadores respondieron a las 20 preguntas realizadas, que solamente mencionaron que el 40.31 % es adecuada la gestión del talento humano, y respecto a la variable dependiente que solamente el 39.45 % de los trabajadores respondieron, están satisfechos casi siempre con el desempeño laboral.\"\n\nSeems fairly coherent, though somewhat long sentences and some punctuation issues, but not major. I'd rate 4. There are no contradictions or leaps. Maybe minor: \"una investigación cualitativa\" contradictory with \"descriptivo-correlacional\" which is quantitative. But no contradictory statements about results. So flow okay. I'd give 4.\n\nDimension 3: D3_contextualizacion: Does it situate the problem? The summary begins with background: \"considerando que la gestión del talento humano es el elemento principal de una empresa, para el buen desempeño laboral de los trabajadores, por ende se buscan resultados positivos en la rentabilidad económica y financiera\". That gives why it matters. So yes. 1.\n\nD3_metodo_detallado: Need at least two precisions. We have: design (no experimental), method descriptive-correlational, qualitative? Might count as one precision: design. Another: population: all workers 16, non-probabilistic sampling. That's at least two. So 1.\n\nD3_resultados_concretos: Yes, 40.31% and 39.45% percentages. 1.\n\nD3_conclusion_responde: There's no conclusion. So 0.\n\nDimension 4: D4_consistencia. We need to check consistency. Method: design no experimental, descriptive-correlational, qualitative. Results: percentages of adequacy and satisfaction. No statistical tests reported. There's no mention of significance. Consistency: The conclusion doesn't exist, so no contradiction. The result percentages are presented. No conflict. The only potential issue is method says \"una investigación cualitativa\" but results are quantitative percentages. That's a discordance but not a contradiction. In protocol, \"Declarar estudio cualitativo y reportar p-valores\" is disallowed, but no p-values. So likely consistent. So D4_consistencia likely 5. But maybe 4 if we penalize the mismatch of qualitative label with quantitative data. The rule: \"Declarar estudio cualitativo y reportar p-valores\" is disallowed. Here we have qualitative label but not p-values. So no penalty. So 5.\n\nCheck no_evaluable: It's a valid summary. So no_evaluable = 0.\n\nObservaciones: We may include observations about some issues. For example, the conclusion missing, contradictory label \"cualitativa\" but quantitative results. Also note no explicit conclusion. Let's write.\n\nWe need to output JSON object with required fields. Ensure types.\n\nLet's fill:\n\nD1_imryd_objetivo:1\nD1_imryd_metodologia:1\nD1_imryd_resultados:1\nD1_imryd_conclusiones:0\nD1_orden_logico:1\n\nD2_coherencia:4\n\nD3_contextualizacion:1\nD3_metodo_detallado:1\nD3_resultados_concretos:1\nD3_conclusion_responde:0\n\nD4_consistencia:5\n\nno_evaluable:0\n\nobservaciones: string describing.\n\nLet's compose JSON compact.\n\n"
+    }
+   }
+  ],
+  "created": 1789701328,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_84bb35977d",
+  "usage": {
+   "completion_tokens": 1795,
+   "prompt_tokens": 10008,
+   "total_tokens": 11803,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1610,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.219378402,
+   "prompt_time": 0.068644557,
+   "completion_time": 1.888086827,
+   "total_time": 1.956731384
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s861c0eg4aggp6bp7xy0nm",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:15:28.572324+00:00"
+}

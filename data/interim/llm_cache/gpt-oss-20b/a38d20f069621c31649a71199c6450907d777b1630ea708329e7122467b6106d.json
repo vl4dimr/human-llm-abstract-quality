@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-080",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "El resumen no brinda contexto sobre la importancia del proyecto ni su marco regulatorio, por lo que D3_contextualizacion se calificó 0. Los demás campos se calificaron como 1. No se detectaron incoherencias entre metodología, resultados y conclusión, por lo que D4_consistencia = 5."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen no brinda contexto sobre la importancia del proyecto ni su marco regulatorio, por lo que D3_contextualizacion se calificó 0. Los demás campos se calificaron como 1. No se detectaron incoherencias entre metodología, resultados y conclusión, por lo que D4_consistencia = 5.\"}",
+ "usage": {
+  "input_tokens": 10024,
+  "output_tokens": 2249,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.8265187740325928,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:25:37.661381+00:00",
+ "raw": {
+  "id": "chatcmpl-ba17db55-5da2-4e3d-bbff-86bda0339a4b",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen no brinda contexto sobre la importancia del proyecto ni su marco regulatorio, por lo que D3_contextualizacion se calificó 0. Los demás campos se calificaron como 1. No se detectaron incoherencias entre metodología, resultados y conclusión, por lo que D4_consistencia = 5.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. We need to produce JSON with required fields. Must ensure all fields are present. Observations string. Evaluate each dimension.\n\nLet's parse the summary:\n\nTitle: Plano base catastral urbano a partir de fotogrametría con dron comprobado con estación total - barrio Santiago de Chejoña, Puno.\n\nResumen:\n\n\"La tesis titulada “Plano Base Catastral Urbano a Partir de Fotogrametría con Dron Comprobado con Estación Total - Barrio Santiago de Chejoña, Puno” se ha realizado en el distrito y provincia de Puno. El objetivo general es generar el plano base catastral urbano a partir de fotogrametría con Dron y su comprobación con Estación Total. La investigación se desarrolló primeramente estableciendo dos puntos de control geodésicos de orden “C” debidamente enlazados a la Red Geodésica Nacional del Perú, posteriormente se han ubicado puntos de fotocontrol en todo el área de estudio a partir del punto geodésico PCG1, seguidamente se realizó el plan de vuelo de tal manera que se abarque todo el área de interés, con las fotografías capturadas se efectuó el post proceso obteniendo una ortofoto y posteriormente el plano base catastral del barrio. Finalmente se realizó la poligonal de apoyo georreferenciada para la corroboración del plano base catastral urbano con una Estación Total. Los resultados de ambas metodologías fueron procesados, evaluados y validados mediante la prueba estadística T – Student. Se obtuvieron resultados estadísticamente con un intervalo de confianza del 95 % en el que se determinó que las coordenadas planas, distancias, áreas y perímetros son iguales estadísticamente y cumplen con las tolerancias catastrales afirmando así la hipótesis general planteada; en cambio las altitudes son estadísticamente diferentes. En conclusión, las mediciones realizadas con Dron a una altura de 100 metros son aceptables para la elaboración de planos bases catastrales; sin embargo, las altitudes obtenidas con Dron tienen variaciones.\"\n\nWe need to evaluate each field.\n\n### D1_imryd_objetivo\nWe need to see if we can answer \"qué se propuso averiguar\" reading only the summary. The summary has: \"El objetivo general es generar el plano base catastral urbano a partir de fotogrametría con Dron y su comprobación con Estación Total.\" So yes, objective is explicit. So D1_imryd_objetivo = 1.\n\n### D1_imryd_metodologia\nCheck if \"se indica de algún modo cómo se obtuvo el conocimiento.\" It describes establishing control points, location of photobase, flight plan, post process, orthophoto, etc. Yes methodology described. So 1.\n\n### D1_imryd_resultados\n\"Los resultados de ambas metodologías fueron procesados, evaluados y validados mediante la prueba estadística T – Student. Se obtuvieron resultados estadísticamente con un intervalo de confianza del 95 % en el que se determinó que las coordenadas planas, distancias, áreas y perímetros son iguales estadísticamente y cumplen con las tolerancias catastrales afirmando así la hipótesis general planteada; en cambio las altitudes son estadísticamente diferentes.\" So yes results included. So 1.\n\n### D1_imryd_conclusiones\n\"En conclusión, las mediciones realizadas con Dron a una altura de 100 metros son aceptables para la elaboración de planos bases catastrales; sin embargo, las altitudes obtenidas con Dron tienen variaciones.\" This is a conclusion that interprets results and suggests applicability and limitation. This is beyond repeating results. So 1.\n\n### D1_orden_logico\nWe need to check if components present appear in sequence objective → method → results → conclusion. The summary appears to start with objective, then method, results, conclusion. So order is correct. So 1.\n\n### D2_coherencia\nWe need to evaluate the coherence flow. Let's examine: The summary flows logically: introduction, objective, method steps, results, conclusion. There is some technical detail but overall coherent. I'd assign 5 maybe. However there might be some abrupt jumps: \"Los resultados de ambas metodologías...\" after method description. But it's fine. No major incoherence. I'd assign 5.\n\n### D3_contextualizacion\nDefinition: sits the problem: why it matters, where occurs, to whom, against what norm. The summary starts with objective, but not mention why it matters or any context beyond \"generar el plano base catastral urbano a partir de fotogrametría con Dron y su comprobación con Estación Total.\" That is somewhat contextualizing the need: generating a base map. But the summary does not explicitly mention the importance of the problem, why this matters, or what it compares against. So likely D3_contextualizacion = 0. According to examples, starting directly by objective counts as 0. So 0.\n\n### D3_metodo_detallado\nNeed at least two precisions concretas about procedure. The summary has: establishing two control points, located photobase points, plan of flight, post process obtaining orthophoto, final plan base catastral, poligonal support, validation with T-test, CI 95%. That's multiple precisions: design, instrument, sample? It's a geospatial mapping methodology; we have at least 2. So 1.\n\n### D3_resultados_concretos\nResults: coordinates, distances, areas, perimeters equal, altitudes different. Provide interval 95%, etc. So yes. 1.\n\n### D3_conclusion_responde\nConclusion: \"las mediciones realizadas con Dron a una altura de 100 metros son aceptables para la elaboración de planos bases catastrales; sin embargo, las altitudes obtenidas con Dron tienen variaciones.\" The objective was \"generar el plano base catastral urbano a partir de fotogrametría con Dron y su comprobación con Estación Total.\" The conclusion says the measurements at 100m are acceptable for base map, but altitudes vary. This addresses the objective: whether it's acceptable for base map. It also adds nuance. So yes, conclusion responds. So 1.\n\n### D4_consistencia\nWe need consistency between methodology and results and conclusion. We need to examine if any discordances. Methodology described: they used photogrammetry, post process, orthophoto, T-test. Results: coordinates, distances, etc equal, altitudes different. Conclusion: measurements at 100m acceptable for base maps, altitudes vary. There's no contradiction. The methodology included T-test validation. The conclusion uses results to answer objective. No contradictions. So D4_consistencia = 5. There might be mild issue: they validated with T-test but did they actually present statistical test values? They mention T-test but not p-values or test statistic, but that doesn't necessarily break consistency. They said \"Se obtuvieron resultados estadísticamente con un intervalo de confianza del 95 %...\" which is result. They didn't present T-statistic or p, but it's not contradictory. So 5.\n\n### no_evaluable\nThis is 0 because it is a summary. So no_evaluable = 0.\n\n### Observaciones\nWe can include observations if we had doubts. But we think everything is clear. But we might note that D3_contextualizacion=0 due to lacking context. Observaciones can note this. Also mention that D4_consistencia 5. Provide a short comment: \"Objetivo claro, método detallado, resultados concretos, conclusión responde; falta contextualización inicial.\" Provide. Also mention no contradictory results. Let's craft.\n\nObservaciones: \"El resumen no brinda contexto sobre la importancia del proyecto ni su marco regulatorio, por lo que D3_contextualizacion se calificó 0. Los demás campos se calificaron como 1. No se detectaron incoherencias entre metodología, resultados y conclusión, por lo que D4_consistencia = 5.\"\n\nMake sure string.\n\nNow produce JSON. Ensure all fields present: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nCheck that no_evaluable must be integer 0 or 1. Provide 0.\n\nNow produce JSON with compact format (no pretty print). Ensure correct types. Provide 1 for booleans. Observaciones string.\n\nLet's craft JSON:\n\n{\n  \"D1_imryd_objetivo\":1,\n  \"D1_imryd_metodologia\":1,\n  \"D1_imryd_resultados\":1,\n  \"D1_imryd_conclusiones\":1,\n  \"D1_orden_logico\":1,\n  \"D2_coherencia\":5,\n  \"D3_contextualizacion\":0,\n  \"D3_metodo_detallado\":1,\n  \"D3_resultados_concretos\":1,\n  \"D3_conclusion_responde\":1,\n  \"D4_consistencia\":5,\n  \"no_evaluable\":0,\n  \"observaciones\":\"El resumen no brinda contexto sobre la importancia del proyecto ni su marco regulatorio, por lo que D3_contextualizacion se calificó 0. Los demás campos se calificaron como 1. No se detectaron incoherencias entre metodología, resultados y conclusión, por lo que D4_consistencia = 5.\"\n}\n\nCheck JSON syntax: no trailing commas. All fields present. Yes. Provide final."
+    }
+   }
+  ],
+  "created": 1789701937,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4a35f7bd1b",
+  "usage": {
+   "completion_tokens": 2249,
+   "prompt_tokens": 10024,
+   "total_tokens": 12273,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2059,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.192581989,
+   "prompt_time": 0.063221064,
+   "completion_time": 2.311623526,
+   "total_time": 2.37484459
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8rkt5eqma1c3wcvzctk5m",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:25:37.661397+00:00"
+}

@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-069",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD correctamente. Sin embargo, la contextualización es cero porque el resumen comienza directamente con los objetivos sin explicar por qué es importante estudiar la uniformidad del diámetro de fibra en alpacas Suri. La consistencia metodológica es 3 porque las conclusiones mencionan que la selección individual resultará en un progreso genético aceptable, lo cual está alineado con los resultados, pero la correlación genética de IC es baja, lo cual podría ser considerado una discordancia menor."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. Sin embargo, la contextualización es cero porque el resumen comienza directamente con los objetivos sin explicar por qué es importante estudiar la uniformidad del diámetro de fibra en alpacas Suri. La consistencia metodológica es 3 porque las conclusiones mencionan que la selección individual resultará en un progreso genético aceptable, lo cual está alineado con los resultados, pero la correlación genética de IC es baja, lo cual podría ser considerado una discordancia menor.\"\n}",
+ "usage": {
+  "input_tokens": 10990,
+  "output_tokens": 277,
+  "total_duration_s": 9.358141
+ },
+ "latency_s": 9.37786340713501,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:27:39.680793+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:27:39.6731558Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. Sin embargo, la contextualización es cero porque el resumen comienza directamente con los objetivos sin explicar por qué es importante estudiar la uniformidad del diámetro de fibra en alpacas Suri. La consistencia metodológica es 3 porque las conclusiones mencionan que la selección individual resultará en un progreso genético aceptable, lo cual está alineado con los resultados, pero la correlación genética de IC es baja, lo cual podría ser considerado una discordancia menor.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9358141000,
+  "load_duration": 3510600,
+  "prompt_eval_count": 10990,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 451352000,
+  "eval_count": 277,
+  "eval_duration": 8799781000
+ },
+ "cached_at_utc": "2026-09-19T02:27:39.680812+00:00"
+}

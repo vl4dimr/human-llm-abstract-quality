@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-134",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, aunque podría mejorar en la transición entre la metodología y los resultados. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante la infraestructura bioclimática. El método detallado incluye el enfoque, tipo de investigación, y el uso del programa Design Builder. Los resultados son concretos al mencionar el garantizado confort térmico. La conclusión responde al objetivo al garantizar el confort térmico. La consistencia es 4 porque la conclusión no contradice los resultados, pero podría mejorar al mencionar más específicamente cómo se logró el confort térmico."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, aunque podría mejorar en la transición entre la metodología y los resultados. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante la infraestructura bioclimática. El método detallado incluye el enfoque, tipo de investigación, y el uso del programa Design Builder. Los resultados son concretos al mencionar el garantizado confort térmico. La conclusión responde al objetivo al garantizar el confort térmico. La consistencia es 4 porque la conclusión no contradice los resultados, pero podría mejorar al mencionar más específicamente cómo se logró el confort térmico.\"\n}",
+ "usage": {
+  "input_tokens": 10823,
+  "output_tokens": 317,
+  "total_duration_s": 9.6477113
+ },
+ "latency_s": 9.677882194519043,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:43:51.307516+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:43:51.2990563Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, aunque podría mejorar en la transición entre la metodología y los resultados. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante la infraestructura bioclimática. El método detallado incluye el enfoque, tipo de investigación, y el uso del programa Design Builder. Los resultados son concretos al mencionar el garantizado confort térmico. La conclusión responde al objetivo al garantizar el confort térmico. La consistencia es 4 porque la conclusión no contradice los resultados, pero podría mejorar al mencionar más específicamente cómo se logró el confort térmico.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9647711300,
+  "load_duration": 4723300,
+  "prompt_eval_count": 10823,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 304439000,
+  "eval_count": 317,
+  "eval_duration": 9274772000
+ },
+ "cached_at_utc": "2026-09-19T01:43:51.307529+00:00"
+}

@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-154",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "No se incluye conclusión explícita; se presenta objetivo, metodología y resultados con cifras concretas. Flujo coherente, sin contradicciones."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No se incluye conclusión explícita; se presenta objetivo, metodología y resultados con cifras concretas. Flujo coherente, sin contradicciones.\"}",
+ "usage": {
+  "input_tokens": 9938,
+  "output_tokens": 1502,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.3532166481018066,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:14:06.743946+00:00",
+ "raw": {
+  "id": "chatcmpl-f26534c0-1f97-4c31-ad19-519c9f857f04",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No se incluye conclusión explícita; se presenta objetivo, metodología y resultados con cifras concretas. Flujo coherente, sin contradicciones.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Eficacia del programa “Me divierto mirando lo que hacen mis manitas” en el desarrollo de la coordinación viso manual, en niños y niñas de 4 años, del nivel inicial del colegio adventista “El Buen Maestro” de Quillabamba-cusco - 2014\"\n\nSummary:\n\n\"El propósito de la investigación fue determinar la eficacia del programa “me divierto mirando lo que hacen mis manitas” en el desarrollo de la coordinación viso manual, en niños y niñas de 4 años, del nivel Inicial del Colegio Adventista “El Buen Maestro” de Quillabamba-Cusco. Para el recojo de la información concerniente a la desarrollo de la coordinación viso manual se utilizó el instrumento “Guía de observación” para medir el nivel de logro en que se encontraban los niños y niñas de 4 años, y así poder aplicar el programa. Para el proceso de análisis estadístico se utilizó el programa Statistical Package of Social Science (SPSS) 20.0 que nos permitió obtener los resultados confiables de la investigación, mostrando estadísticamente la eficacia de la aplicación del programa “Me divierto mirando lo que hacen mis manitas”; lo cual evidenció mejoras, resultando que el 50% de los niños y niñas que se encontraba en el nivel de proceso en el desarrollo de la coordinación viso manual en el pre test, luego en el post tes los resultados pasaron al nivel de logro con un 50% en el desarrollo de la coordinación viso manual de los niños y niñas de 4 años.\"\n\nWe need to evaluate each dimension.\n\nD1_imryd_objetivo: 1 if objective present. The summary says: \"El propósito de la investigación fue determinar la eficacia del programa ...\". That's explicit objective. So 1.\n\nD1_imryd_metodologia: 1 if methodology indicated. The summary says: \"Para el recojo de la información ... se utilizó el instrumento “Guía de observación” para medir el nivel de logro ... y así poder aplicar el programa. Para el proceso de análisis estadístico se utilizó el programa Statistical Package of Social Science (SPSS) 20.0\". So yes, methodology present. 1.\n\nD1_imryd_resultados: 1 if results present. The summary says: \"mostrando estadísticamente la eficacia ... evidenció mejoras, resultando que el 50% ... en el pre test, luego en el post tes los resultados pasaron al nivel de logro con un 50%\". So yes, results present. 1.\n\nD1_imryd_conclusiones: 1 if conclusion present. The summary ends with \"lo cual evidenció mejoras, resultando que el 50% ...\". That is a result, not a conclusion. There's no explicit conclusion that interprets or responds to objective. It just states results. So D1_conclusiones = 0.\n\nD1_orden_logico: 1 if components present appear in logical order. We have objective, methodology, results. No conclusion. So we have 3 components present. They appear in order: objective -> methodology -> results. So yes, 1.\n\nD2_coherencia: 1-5 scale. Evaluate flow. Let's read: \"El propósito de la investigación fue determinar la eficacia del programa ... Para el recojo de la información ... se utilizó el instrumento ... y así poder aplicar el programa. Para el proceso de análisis estadístico se utilizó el programa SPSS 20.0 que nos permitió obtener los resultados confiables de la investigación, mostrando estadísticamente la eficacia de la aplicación del programa ... lo cual evidenció mejoras, resultando que el 50% ...\". Flow: It's fairly coherent. There's a slight jump from methodology to results, but it's fine. No abrupt transitions. I'd rate 4. Because there's some adverbial \"lo cual evidenció mejoras\" but overall coherent. Maybe 4.\n\nD3_contextualizacion: 1 if summary situates problem: why important, where, who affected, etc. The summary starts with objective but does not provide context. It doesn't explain why coordination viso manual is important, or why program needed. So 0.\n\nD3_metodo_detallado: 1 if at least two precisions. We have instrument \"Guía de observación\" and statistical software SPSS 20.0. That's two precisions. Also mention \"para medir el nivel de logro\". So yes, 1.\n\nD3_resultados_concretos: 1 if results provide specific content: percentages, magnitudes, categories. We have \"50%\" and \"50%\" again. So yes, 1.\n\nD3_conclusion_responde: 1 if conclusion responds to objective. Since no conclusion, 0.\n\nD4_consistencia: 1-5 scale. Consistency between what summary says it did and what it presents. We have objective: efficacy of program. Methodology: observation guide, SPSS. Results: 50% improvement. Conclusion: none. There's no contradiction. So consistency high. I'd rate 5. Because no contradictions. There's no claim of significance or p-values. So 5.\n\nno_evaluable: 0 because it's a valid summary.\n\nobservaciones: any notes. We can note that no conclusion present. Also note that the summary uses \"lo cual evidenció mejoras\" but no conclusion. Also note that the summary uses \"post tes\" typo but not relevant. Provide a brief note.\n\nNow produce JSON with all fields. Ensure values are integers or null. All required fields present.\n\nLet's produce:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":0,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":0,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"No se incluye conclusión explícita; se presenta objetivo, metodología y resultados con cifras concretas. Flujo coherente, sin contradicciones.\"\n}\n\nCheck schema: all fields present. Observaciones string. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789701246,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e99e93f2ac",
+  "usage": {
+   "completion_tokens": 1502,
+   "prompt_tokens": 9938,
+   "total_tokens": 11440,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1349,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.29022047,
+   "prompt_time": 0.07191392,
+   "completion_time": 1.712574671,
+   "total_time": 1.7844885910000001
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s83hhsef38qymzb8vk3xtq",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:14:06.743964+00:00"
+}

@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-116",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "Resumen sin contextualización; resultados muy detallados con porcentajes; conclusión breve; flujo coherente; falta de detalle de pruebas estadísticas."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":4,\"no_evaluable\":0,\"observaciones\":\"Resumen sin contextualización; resultados muy detallados con porcentajes; conclusión breve; flujo coherente; falta de detalle de pruebas estadísticas.\"}",
+ "usage": {
+  "input_tokens": 10033,
+  "output_tokens": 2178,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 3.3286921977996826,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:09:12.725768+00:00",
+ "raw": {
+  "id": "chatcmpl-d5c84151-ea0b-43d2-bdc7-f159770a6852",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":4,\"no_evaluable\":0,\"observaciones\":\"Resumen sin contextualización; resultados muy detallados con porcentajes; conclusión breve; flujo coherente; falta de detalle de pruebas estadísticas.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nWe must decide each field.\n\nLet's analyze the summary.\n\nTitle: \"Procedimiento del lavado de manos social asociado a las enfermedades diarreicas agudas en niños mayores a 10 años del Centro de Salud Pueblo Libre - Juli, 2021\"\n\nResumen:\n\nObjetivo: Determinar los procedimientos del lavado de manos social asociado a las enfermedades diarreicas agudas en niños mayores a 10 años del Centro De Salud Pueblo Libre - Juli, 2021.\n\nMétodo: De diseño no experimental, de tipo descriptivo, analítico y trasversal, con una muestra de 127 niños mayores a 10 años.\n\nResultado: El procedimiento del lavado de manos social asociado a las enfermedades diarreicas agudas en niños mayores a 10 de años, son: Un 86,61% usa el jabón tipo barra, un 80,31% utiliza agua de cañería, el 50,39% utiliza toalla compartida, un 70,08% siempre libera objetos de la mano, un 73,23% se frota las manos siempre con abundante jabón, un 84,25% se enjuaga la mano siempre con abundante agua, un 78,74% se lava las manos antes y después de consumir alimentos, un 79,53% refiere que siempre se lava después de salir del baño, un 81,89% manipula las bolsas clasificadas (orgánicas e inorgánicas), un 78,74% se lava las manos antes y después de tocar a personas enfermas, todas las variables son significativas con una p<0,05, Las enfermedades diarreicas agudas en niños mayores a 10 de años, un 58,27% presento enfermedades diarreicas alguna vez durante toda la infancia, un 29,92% presento enfermedades diarreicas este último año, un 11,81% presento enfermedades diarreicas una vez en los últimos 6 meses.\n\nConclusión: Los procedimientos del lavado de manos social están asociados a las enfermedades diarreicas agudas en niños mayores a 10 años.\n\nWe need to evaluate each dimension.\n\n### D1_imryd_objetivo\n\nThe objective is explicitly stated: \"Determinar los procedimientos del lavado de manos social asociado a las enfermedades diarreicas agudas en niños mayores a 10 años del Centro De Salud Pueblo Libre - Juli, 2021.\" That is a clear objective. So D1_imryd_objetivo = 1.\n\n### D1_imryd_metodologia\n\nMethod: \"De diseño no experimental, de tipo descriptivo, analítico y trasversal, con una muestra de 127 niños mayores a 10 años.\" That includes design, type, sample size. So D1_imryd_metodologia = 1.\n\n### D1_imryd_resultados\n\nResults: They list percentages for various behaviors, plus significance p<0.05, plus percentages for disease incidence. That is a result. So D1_imryd_resultados = 1.\n\n### D1_imryd_conclusiones\n\nConclusion: \"Los procedimientos del lavado de manos social están asociados a las enfermedades diarreicas agudas en niños mayores a 10 años.\" This is a conclusion that interprets the results and states association. It goes beyond repeating results. So D1_imryd_conclusiones = 1.\n\n### D1_orden_logico\n\nWe need to check if components present appear in logical order: objective → method → results → conclusion. The summary has objective first, method second, results third, conclusion last. So D1_orden_logico = 1.\n\n### D2_coherencia\n\nWe need to evaluate flow. Let's read the summary: It starts with objective, method, result, conclusion. The result section is long, but it's a list of percentages. The flow seems okay. There is no abrupt jump. The result section is a list of percentages, then significance, then disease incidence percentages. The conclusion is a single sentence. The flow is fairly coherent. Might be a bit repetitive but still coherent. I'd rate 4 or 5. Let's analyze: The result section is a list of percentages for each behavior, then \"todas las variables son significativas con una p<0,05,\" then disease incidence percentages. The conclusion is a single sentence. There's no major jump. The only potential issue: The result section is long but still flows. I'd give 5. But we need to consider if there is any abruptness: The result section starts with \"El procedimiento del lavado de manos social asociado a las enfermedades diarreicas agudas en niños mayores a 10 de años, son:\" then lists percentages. Then \"todas las variables son significativas con una p<0,05,\" then \"Las enfermedades diarreicas agudas en niños mayores a 10 de años, un 58,27% presento enfermedades diarreicas alguna vez durante toda la infancia, un 29,92% presento enfermedades diarreicas este último año, un 11,81% presento enfermedades diarreicas una vez en los últimos 6 meses.\" That is a bit of a jump from behaviors to disease incidence. But it's still within results. The conclusion is a single sentence. I'd rate 4. Because it's coherent but maybe a bit abrupt. Let's choose 4.\n\n### D3_contextualizacion\n\nContextualization: Does the summary situate the problem: why it matters, where it occurs, to whom it affects, against what norm? The summary starts with objective, but does not provide context. It does not explain why it's important, or the significance of the problem. It just states the objective. So D3_contextualizacion = 0.\n\n### D3_metodo_detallado\n\nMethod detailed: We need at least two precisions: design, type, sample size, instrument, technique, etc. The method says: \"De diseño no experimental, de tipo descriptivo, analítico y trasversal, con una muestra de 127 niños mayores a 10 años.\" That includes design, type, sample size. That's at least two precisions. So D3_metodo_detallado = 1.\n\n### D3_resultados_concretos\n\nResults concrete: They provide percentages for each behavior, significance p<0.05, disease incidence percentages. That is concrete. So D3_resultados_concretos = 1.\n\n### D3_conclusion_responde\n\nConclusion responds to objective? The objective: \"Determinar los procedimientos del lavado de manos social asociado a las enfermedades diarreicas agudas en niños mayores a 10 años.\" The conclusion: \"Los procedimientos del lavado de manos social están asociados a las enfermedades diarreicas agudas en niños mayores a 10 años.\" That is a statement about association. It does respond to the objective: it says that the procedures are associated with the disease. So yes, conclusion responds to objective. So D3_conclusion_responde = 1.\n\n### D4_consistencia\n\nConsistency: We need to check coherence between what the summary says it did and what it presents. The summary says it's a descriptive, analytical, cross-sectional study with 127 children. It presents percentages of behaviors and disease incidence. The conclusion says the procedures are associated with disease. But does it present any statistical test? It says \"todas las variables son significativas con una p<0,05.\" That indicates significance. But no test is specified. The conclusion states association. That is consistent with significance. There's no contradictory statement. So D4_consistencia = 5? Let's check the guidelines: D4 is 1-5. 5 means fully coherent. 4 means coherent with minor imprecision. 3 means one discordance visible. 2 means several discordances. 1 means open contradiction. Here, the summary says significance p<0.05, but no test. That might be a minor imprecision. But it's not a contradiction. So I'd give 4. Because the conclusion is consistent with the results. There's no contradictory statement. So D4_consistencia = 4.\n\n### no_evaluable\n\nThe summary is a valid summary. So no_evaluable = 0.\n\n### observaciones\n\nWe should add any notes. We might note that the summary is long and uses percentages but no significance test details. Also that the conclusion is a single sentence. We might note that the result section is long but coherent. Also that the summary does not provide context. We can mention that. Let's craft a concise observation: \"Resumen sin contextualización; resultados muy detallados con porcentajes; conclusión breve; flujo coherente; falta de detalle de pruebas estadísticas.\" That is fine.\n\nNow produce JSON with all fields. Ensure all required fields present. Use compact JSON. Ensure no trailing commas. Use null if needed but we have values for all. Let's produce.\n\nCheck field names: D1_imryd_conclusiones, D1_imryd_metodologia, D1_imryd_objetivo, D1_imryd_resultados, D1_orden_logico, D2_coherencia, D3_conclusion_responde, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D4_consistencia, no_evaluable, observaciones.\n\nAll values are integers or string. Provide as integers. Observaciones string.\n\nLet's produce JSON."
+    }
+   }
+  ],
+  "created": 1789700952,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e189667b30",
+  "usage": {
+   "completion_tokens": 2178,
+   "prompt_tokens": 10033,
+   "total_tokens": 12211,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2026,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.241565521,
+   "prompt_time": 0.065128616,
+   "completion_time": 2.270289474,
+   "total_time": 2.33541809
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7thxeejyax5vjr656581k",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:09:12.725867+00:00"
+}

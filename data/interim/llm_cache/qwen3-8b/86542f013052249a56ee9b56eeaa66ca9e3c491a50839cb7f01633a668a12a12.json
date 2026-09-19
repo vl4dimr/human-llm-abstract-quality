@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-031",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica (objetivo → metodología → resultados → conclusiones). La coherencia es buena, aunque hay algunos saltos de tema y terminología repetida. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante el diseño de la planta de tratamiento. El método detallado se cumple gracias a la precisión en el cálculo de la población futura y el diseño de los componentes. Los resultados son concretos, ya que se reportan valores numéricos. La conclusión responde al objetivo, ya que se menciona que la planta cumple con los LMP. La consistencia metodológica es 4, ya que el resumen describe el enfoque cuantitativo y la metodología, pero hay un uso coloquial del término 'significativo' que podría ser mejor especificado."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica (objetivo → metodología → resultados → conclusiones). La coherencia es buena, aunque hay algunos saltos de tema y terminología repetida. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante el diseño de la planta de tratamiento. El método detallado se cumple gracias a la precisión en el cálculo de la población futura y el diseño de los componentes. Los resultados son concretos, ya que se reportan valores numéricos. La conclusión responde al objetivo, ya que se menciona que la planta cumple con los LMP. La consistencia metodológica es 4, ya que el resumen describe el enfoque cuantitativo y la metodología, pero hay un uso coloquial del término 'significativo' que podría ser mejor especificado.\"\n}",
+ "usage": {
+  "input_tokens": 10981,
+  "output_tokens": 350,
+  "total_duration_s": 12.1852221
+ },
+ "latency_s": 12.187005043029785,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:52:36.256762+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:52:36.2554604Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica (objetivo → metodología → resultados → conclusiones). La coherencia es buena, aunque hay algunos saltos de tema y terminología repetida. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante el diseño de la planta de tratamiento. El método detallado se cumple gracias a la precisión en el cálculo de la población futura y el diseño de los componentes. Los resultados son concretos, ya que se reportan valores numéricos. La conclusión responde al objetivo, ya que se menciona que la planta cumple con los LMP. La consistencia metodológica es 4, ya que el resumen describe el enfoque cuantitativo y la metodología, pero hay un uso coloquial del término 'significativo' que podría ser mejor especificado.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 12185222100,
+  "load_duration": 9681900,
+  "prompt_eval_count": 10981,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 452540000,
+  "eval_count": 350,
+  "eval_duration": 11623515000
+ },
+ "cached_at_utc": "2026-09-19T01:52:36.256772+00:00"
+}

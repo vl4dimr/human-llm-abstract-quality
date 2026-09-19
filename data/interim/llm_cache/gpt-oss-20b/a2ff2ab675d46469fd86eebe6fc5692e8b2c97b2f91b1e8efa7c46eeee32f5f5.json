@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-052",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 9896,
+  "output_tokens": 698,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 1.2903132438659668,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:20:37.783289+00:00",
+ "raw": {
+  "id": "chatcmpl-faab465f-f059-494f-bda9-12314b2bdb20",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must produce JSON per schema. Evaluate the summary.\n\nFields:\n\nD1_imryd_objetivo: 1. Objective present. Yes.\n\nD1_imryd_metodologia: 1. Yes, method described.\n\nD1_imryd_resultados: 1. Yes, coefficient r=0.592.\n\nD1_imryd_conclusiones: 1. Concluding sentence that the children have better socioemotional development. It responds to objective? The conclusion says that the children have good family climate leading to better socioemotional development. Objective: determine relationship. Conclusion: relationship exists, so it answers. Good.\n\nD1_orden_logico: 1. Objective, Method, Results, Conclusion. Order correct.\n\nD2_coherencia: Evaluate flow. The summary reads fairly smoothly. Maybe some repeated wording but coherent. I'd give 5. Let's examine: The summary starts with \"La investigación titulada ... se desarrolló con el objetivo de determinar la relación del clima familiar con el desarrollo socioemocional en los niños y niñas.\" Then method, sample, analysis, results, conclusion. The flow is clear, no abrupt jumps. I'd assign 5.\n\nD3_contextualizacion: 1? The summary does not include context like why important or where occurs. It starts directly with objective. No context. So 0. The definition: situates problem: why important, where occurs, who it affects. Not present. So 0.\n\nD3_metodo_detallado: 1? Need at least two precisions. We have: \"enfoque cuantitativo, descriptivo correlacional, no experimental; técnica de encuesta; instrumentos: dos cuestionarios; población 28 alumnos; muestra no probabilística censal; datos procesados con SPSS 25; relación con Rho de Pearson.\" Many details. At least two, yes. So 1.\n\nD3_resultados_concretos: 1. Provides r=0.592, mentions positive and significant relationship. That's concrete. So 1.\n\nD3_conclusion_responde: 1. Conclusion responds to objective, states relationship. So 1.\n\nD4_consistencia: Evaluate consistency. Method: descriptive correlational; results: correlation r=0.592, significance. Conclusion: relationship exists, good family environment leads to better socioemotional. Consistent. No contradictory statements. So D4_consistencia = 5.\n\nno_evaluable: 0 (since it's a summary and has methodology). But schema requires 0 or 1. 0.\n\nobservaciones: include any notes. We can leave empty string \"\" or maybe some comment? The schema expects string, but can be empty.\n\nMake JSON with these values.\n\nCheck fields order not required but include all required.\n\nReturn compact JSON."
+    }
+   }
+  ],
+  "created": 1789701637,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_a4315eb300",
+  "usage": {
+   "completion_tokens": 698,
+   "prompt_tokens": 9896,
+   "total_tokens": 10594,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 570,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.242355897,
+   "prompt_time": 0.058845692,
+   "completion_time": 0.738547519,
+   "total_time": 0.797393211
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8fgewegbtcwk6ngc50728",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:20:37.783309+00:00"
+}

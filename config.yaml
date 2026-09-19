@@ -1,0 +1,300 @@
+# =============================================================================
+# Configuracion del estudio de concordancia humano-LLM
+# Cada decision metodologica discutible vive aqui, con su valor por defecto
+# documentado. Nada de esto esta escondido en el codigo.
+# =============================================================================
+
+seed: 42
+
+paths:
+  raw: data/raw
+  interim: data/interim
+  processed: data/processed
+  tables: outputs/tables
+  figures: outputs/figures
+  logs: outputs/logs
+
+# -----------------------------------------------------------------------------
+# Esquema de codificacion
+# Leido del manual: data/raw/scheme/PROTOCOLO_ANOTACION.md (v2.0, 2026-08-11).
+# NO son categorias nominales excluyentes: son 12 variables por documento,
+# 10 binarias y 2 ordinales de 1 a 5. Se anotan TODAS para cada resumen.
+# -----------------------------------------------------------------------------
+scheme:
+  # Nombre canonico -> como aparece la columna en los .xlsx de anotacion.
+  variables:
+    D1_imryd_objetivo:      {excel: "D1 Objetivo",           type: binary,  levels: [0, 1],          dimension: D1}
+    D1_imryd_metodologia:   {excel: "D1 Metodología",        type: binary,  levels: [0, 1],          dimension: D1}
+    D1_imryd_resultados:    {excel: "D1 Resultados",         type: binary,  levels: [0, 1],          dimension: D1}
+    D1_imryd_conclusiones:  {excel: "D1 Conclusiones",       type: binary,  levels: [0, 1],          dimension: D1}
+    D1_orden_logico:        {excel: "D1 Orden",              type: binary,  levels: [0, 1],          dimension: D1}
+    D2_coherencia:          {excel: "D2 Coherencia",         type: ordinal, levels: [1, 2, 3, 4, 5], dimension: D2}
+    D3_contextualizacion:   {excel: "D3 Contexto",           type: binary,  levels: [0, 1],          dimension: D3}
+    D3_metodo_detallado:    {excel: "D3 Método detallado",   type: binary,  levels: [0, 1],          dimension: D3}
+    D3_resultados_concretos: {excel: "D3 Result. concretos", type: binary,  levels: [0, 1],          dimension: D3}
+    D3_conclusion_responde: {excel: "D3 Concl. responde",    type: binary,  levels: [0, 1],          dimension: D3}
+    D4_consistencia:        {excel: "D4 Consistencia",       type: ordinal, levels: [1, 2, 3, 4, 5], dimension: D4}
+    no_evaluable:           {excel: "No evaluable",          type: binary,  levels: [0, 1],          dimension: control}
+  # Etiquetas en ingles para tablas y figuras del articulo.
+  labels_en:
+    D1_imryd_objetivo: "D1 Objective"
+    D1_imryd_metodologia: "D1 Method"
+    D1_imryd_resultados: "D1 Results"
+    D1_imryd_conclusiones: "D1 Conclusions"
+    D1_orden_logico: "D1 Logical order"
+    D2_coherencia: "D2 Coherence (1–5)"
+    D3_contextualizacion: "D3 Context"
+    D3_metodo_detallado: "D3 Method detail"
+    D3_resultados_concretos: "D3 Concrete results"
+    D3_conclusion_responde: "D3 Conclusion answers aim"
+    D4_consistencia: "D4 Consistency (1–5)"
+    no_evaluable: "Not assessable"
+  id_column: "id"
+  text_column: "Resumen"
+  title_column: "Título"
+  notes_column: "Observaciones"
+  sheet: "Anotación"
+
+# -----------------------------------------------------------------------------
+# Anotadores y archivos de origen
+# -----------------------------------------------------------------------------
+annotators:
+  # DECISION ABIERTA: existen tres versiones del cuadernillo de A1 que difieren
+  # SOLO en D4_consistencia (22 celdas entre la mas reciente y la '-REV').
+  # Por defecto se usa la de mtime mas reciente. Alternativas admitidas:
+  #   annotations/Anotacion_principal_A1_REV.xlsx
+  #   annotations/Anotacion_principal_A1_v0.xlsx  (parcial, 120 filas)
+  A1:
+    file: annotations/Anotacion_principal_A1.xlsx
+    kind: human
+    calibration_file: annotations/Anotacion_calibracion_A1.xlsx
+  A2:
+    # Anotacion independiente entregada el 2026-09-18 sobre el cuadernillo ciego de 160.
+    # Validada con src/00c_receive_a2.py: 147/1920 celdas distintas de A1 (acuerdo bruto
+    # 92.3 %), 0 observaciones literalmente identicas. El archivo antiguo
+    # (annotations/Anotacion_principal_A2.xlsx) era copia exacta de A1 y se conserva
+    # solo como evidencia de la auditoria.
+    file: annotations/Anotacion_principal_A2_independiente.xlsx
+    kind: human
+    independent: true
+    calibration_file: annotations/Anotacion_calibracion_A2_independiente.xlsx
+  # A3 nunca anoto: la plantilla esta vacia. Se deja declarado para que la
+  # auditoria lo constate en vez de silenciarlo.
+  A3:
+    file: annotations/Anotacion_principal_A3_template.csv
+    kind: human
+    expected_empty: true
+
+# Anotacion LLM preexistente. Se audita pero NO cuenta como corrida de la fase 2:
+# se hizo por la interfaz de chat, sin temperature fija, sin semilla y sin repeticiones.
+llm_prior:
+  file: llm_prior/Anotacion_IA_Claude.xlsx
+  model_declared: "claude-sonnet-5"
+  interface: "claude.ai (chat), no API"
+  date_declared: "2026-08-12"
+  admissible_as_phase2_run: false
+  # DESPLAZAMIENTO DE FILAS. La auditoria detecta empiricamente que los valores
+  # de este cuadernillo estan corridos una fila: la fila GT-k contiene el juicio
+  # del documento GT-(k+1) (kappa medio 0.01 sin corregir, 0.59 corregido).
+  #   0  -> se usa el archivo tal cual (por defecto hasta que el investigador lo confirme)
+  #  -1  -> se realinea: valor[k] := valor_crudo[k-1]
+  # La auditoria siempre imprime el barrido de desplazamientos, se aplique o no.
+  row_offset: -1              # Confirmado por el investigador el 2026-09-17
+
+corpus:
+  master_key: corpus/clave_maestra.csv
+  # La fase de calibracion (30 resumenes) se excluye del analisis principal:
+  # los anotadores discutieron esos casos entre si, asi que no son independientes.
+  analysis_phase: principal
+  exclude_phases: [calibracion]
+
+# -----------------------------------------------------------------------------
+# Reglas de datos faltantes
+# -----------------------------------------------------------------------------
+missing:
+  # El protocolo (seccion 9.3) ORDENA dejar D4 vacio cuando no_evaluable = 1.
+  # Ese vacio es estructural, no es un dato perdido: se excluye por pares.
+  structural_missing:
+    D4_consistencia: "no_evaluable == 1"
+  # Documentos que un anotador no llego a anotar: exclusion por pares (pairwise),
+  # nunca imputacion. Alternativa mas conservadora: 'listwise'.
+  policy: pairwise
+
+# -----------------------------------------------------------------------------
+# Estadistica de concordancia
+# -----------------------------------------------------------------------------
+agreement:
+  # Binarias -> kappa sin ponderar (no hay distancia entre 0 y 1).
+  # Ordinales 1-5 -> kappa ponderado cuadratico (protocolo, seccion 15.3).
+  weights_by_type:
+    binary: unweighted
+    ordinal: quadratic
+  # Krippendorff: metrica por tipo de variable. NO se agrega un alpha unico
+  # mezclando binarias y ordinales; se reporta un alpha por variable y, si se
+  # pide global, uno por dimension homogenea.
+  krippendorff_metric_by_type:
+    binary: nominal
+    ordinal: ordinal
+  # Kappa es indefinido cuando p_e = 1 (ambos anotadores usan un unico nivel).
+  # Se devuelve NaN y se marca la variable como degenerada. Nunca se sustituye por 0.
+  degenerate_policy: nan
+  bootstrap:
+    n_resamples: 2000
+    unit: document          # se remuestrean documentos, no anotaciones sueltas
+    method: percentile      # opcion conservadora y estandar; alternativa: bca
+    paired: true            # mismos documentos en ambos terminos de un contraste
+    # Fraccion maxima de remuestreos degenerados tolerada antes de marcar el IC
+    # como inestable en las tablas.
+    max_degenerate_fraction: 0.10
+  # Pares LLM-LLM entre modelos distintos: solo estas corridas (evita explosion combinatoria).
+  cross_model_runs: [r1]
+
+contrast:
+  # Contraste central: delta_kappa = kappa(A1, LLM) - kappa(A1, A2)
+  reference_human: A1
+  # DECISION ABIERTA: el contraste es asimetrico (ancla en A1, que es el propio
+  # investigador). Por defecto se calcula tambien anclado en A2 y se avisa si
+  # las dos anclas no coinciden en la conclusion.
+  also_anchor_on: [A2]
+  # DECISION ABIERTA: que corrida del LLM entra en el contraste.
+  #   'per_run'  -> una fila por corrida (conservador: no promedia ni vota)
+  #   'majority' -> voto mayoritario de las 3 corridas (es un ensemble; infla al LLM
+  #                 frente a un anotador humano unico y se reporta solo como secundario)
+  llm_run_aggregation: per_run
+  multiple_comparisons:
+    method: benjamini_hochberg
+    alpha: 0.05
+    # DECISION ABIERTA: familia sobre la que se corrige.
+    #   'variables_within_model' -> 12 pruebas por modelo
+    #   'all'                    -> variables x modelos (mas conservador)
+    family: all
+  # El LLM previo (claude.ai, realineado) entra en las tablas como anotador exploratorio.
+  include_llm_prior: true
+  # p-valor del contraste: bootstrap percentil bilateral, p = 2*min(P(delta*<=0), P(delta*>=0)).
+  # Es la inversion del IC percentil: coherente con la regla "el IC excluye 0".
+  bootstrap_p: percentile_two_sided
+  # "El IC incluye 0" no demuestra equivalencia. Si se fija un margen aqui,
+  # se anade un TOST con ese margen en escala kappa. null = no se ejecuta.
+  equivalence_margin: null
+
+# Nombres de anotador para figuras y tablas del articulo (ausente = nombre tal cual).
+display_names:
+  A1: "Human A1"
+  A2: "Human A2"
+  LLM_prior: "Claude Sonnet 5 (chat, prior)"
+  mistral-7b: "Mistral 7B"
+  qwen3-8b: "Qwen3 8B"
+  gpt-oss-20b: "gpt-oss-20B"
+
+llm:
+  # Cada entrada define un modelo. `provider` elige el adaptador (src/lib/llm/providers.py):
+  #   ollama            -> local, http://localhost:11434. Gratis; temperature y seed reales;
+  #                        la version queda fijada por el digest del modelo.
+  #   openai_compatible -> cualquier endpoint compatible: Groq, Together, OpenRouter, Mistral,
+  #                        DeepSeek, OpenAI... (base_url + api_key_env).
+  #   google            -> Gemini via google-genai (api_key_env).
+  #   anthropic         -> Claude via SDK oficial. OJO: Opus 5 rechaza temperature y no tiene seed.
+  # DECISION ABIERTA (2026-09-17): el investigador prefiere APIs de acceso abierto. Lista vacia
+  # hasta que elija; ejemplos abajo. La fase 2 no arranca con la lista vacia.
+  # Lista definitiva (investigador, 2026-09-18): tres familias distintas, todos de pesos abiertos.
+  models:
+    # base_url 11435, no el 11434 por defecto: el servidor de Ollama que arranca solo
+    # elige Vulkan sobre la grafica INTEGRADA Intel (declara 15 GiB de memoria compartida
+    # frente a los 8 GiB de la NVIDIA) y su driver pierde el dispositivo a mitad de
+    # generacion -> HTTP 500 "connection forcibly closed" y ~23 tokens/s. Se levanta un
+    # servidor aparte con OLLAMA_VULKAN=0, que usa CUDA en la RTX 2000 Ada. Ver README.
+    # num_ctx 16384: cabe el prompt mas largo observado (13 265 tokens) + 1024 de salida,
+    # y la cache KV entra en los 8 GB reales. El proveedor falla ruidosamente si un
+    # prompt no cupiese, porque Ollama truncaria el manual en silencio.
+    # num_gpu 99 fuerza TODAS las capas a la GPU. Ollama reserva un margen conservador
+    # y dejaba 2 de 33 capas en CPU, lo que cuadruplicaba el tiempo por llamada
+    # (8 -> 32 tokens/s al forzarlo). Requiere que el escritorio no ocupe VRAM.
+    - {name: mistral-7b,   provider: ollama, model: "mistral:latest",
+       base_url: "http://127.0.0.1:11435", options: {num_ctx: 16384, num_gpu: 99}}
+    - {name: qwen3-8b,     provider: ollama, model: "qwen3:8b",
+       base_url: "http://127.0.0.1:11435", options: {num_ctx: 16384, num_gpu: 99},
+       # DECISION: modo de razonamiento desactivado por coste de tiempo en GPU de 8 GB.
+       think: false}
+    - {name: gpt-oss-20b,  provider: openai_compatible, model: "openai/gpt-oss-20b",
+       base_url: "https://api.groq.com/openai/v1", api_key_env: GROQ_API_KEY,
+       json_mode: schema, max_output_tokens: 4096,
+       # 250k tokens/min en esta cuenta (cabecera x-ratelimit-limit-tokens, 2026-09-18) -> ~17 llamadas/min
+       min_interval_s: 3.5}
+  #
+  # Corridas independientes por modelo. Cada (modelo, prompt, doc, corrida) se cachea en disco.
+  # DECISION ABIERTA: con decodificacion determinista (temperature 0 + seed) las tres corridas
+  # seran identicas en local y la autoconsistencia valdra 1 por construccion. Alternativa:
+  # r1 a temperature 0 (analisis principal) y r2-r3 a la temperature por defecto del modelo
+  # con semillas distintas (autoconsistencia). Se deja la especificacion literal del disenio.
+  # CONFIRMADO EMPIRICAMENTE (2026-09-18, mistral:latest, GT-001): r1 = r2 = r3 en las 12 variables.
+  # DECIDIDO (2026-09-18): r1 determinista (analisis principal); r2 y r3 con la temperature
+  # por defecto de cada modelo (null) y semillas distintas, para medir autoconsistencia real.
+  runs:
+    - {name: r1, temperature: 0,    seed: 42}
+    - {name: r2, temperature: null, seed: 43}
+    - {name: r3, temperature: null, seed: 44}
+  max_output_tokens: 1024
+  max_parse_retries: 3
+  max_provider_retries: 5     # errores de red/cuota por llamada
+  max_retry_wait_s: 900       # retry-after mayor => se detiene el modelo (reanudable desde el cache)
+  include_notes: true         # el modelo devuelve 'observaciones' (breve) DESPUES de las etiquetas
+  cache_dir: data/interim/llm_cache
+  prompt:
+    protocol_file: scheme/PROTOCOLO_ANOTACION.md   # se inserta LITERALMENTE, sin reformular
+    # Secciones a suprimir del manual antes de insertarlo, por prefijo de encabezado.
+    # Vacio = manual completo, que es lo que vieron los humanos (incluye los 4 ejemplos
+    # resueltos de la seccion 12; verificado que NO pertenecen al corpus GT).
+    strip_sections: []
+  # Precio USD por millon de tokens, para el coste acumulado. Ausente = 0 (local).
+  pricing_usd_per_mtok:
+    claude-opus-5: {input: 5.0, output: 25.0, cache_read: 0.5, cache_write: 6.25}
+
+# -----------------------------------------------------------------------------
+# Auditoria
+# -----------------------------------------------------------------------------
+audit:
+  # Valor de acuerdo humano-humano reportado previamente por el investigador,
+  # para contrastarlo con el recalculado. null = no se ha proporcionado.
+  previously_reported_agreement: null
+  # Un texto se considera posiblemente truncado si no termina en puntuacion.
+  text_min_chars: 200
+  # Desviacion tolerada entre palabras del texto y las declaradas en la clave.
+  words_tolerance: 0.15
+
+# -----------------------------------------------------------------------------
+# Subconjunto de trabajo (fase 1b)
+# Se selecciona un subconjunto de documentos para (a) que un segundo anotador
+# humano real lo anote a ciegas y (b) anotarlo con los LLM. La seleccion
+# estratifica SOLO por metadatos del documento, nunca por las etiquetas de A1:
+# estratificar por la respuesta sesgaria la estimacion de fiabilidad.
+# -----------------------------------------------------------------------------
+subset:
+  # Universo: documentos de la fase principal ya anotados por A1 (160). Asi el
+  # par A1-A2 existe en cuanto A2 termine, sin trabajo adicional para A1.
+  pool: annotated_by_A1
+  n: 160                      # Decidido por el investigador el 2026-09-17 (ver subset_precision.csv)
+  strata: [estrato]           # tambien admite: [estrato, tipo]
+  min_per_stratum: 5
+  seed: 42
+  # Simulacion de precision: anchura esperada del IC 95 % de kappa por variable
+  # con la prevalencia observada en A1 y un kappa verdadero supuesto.
+  precision:
+    sizes: [30, 50, 80, 100, 120, 160]
+    true_kappa: [0.4, 0.6]
+    n_sims: 1000
+
+# -----------------------------------------------------------------------------
+# Fase 6 - Deposito del dataset
+# -----------------------------------------------------------------------------
+release:
+  version: "1.0.0"
+  # Los resumenes se cosecharon por OAI-PMH de repositorios institucionales publicos:
+  # su copyright es de los autores y sus instituciones, no del equipo del estudio, asi
+  # que NO se redistribuyen. Se publica el handle persistente para que cualquiera
+  # recupere el texto exacto en la fuente. Poner true solo con permiso explicito.
+  include_text: false
+  # El handle es un identificador publico y persistente del registro, no un dato
+  # personal; sin el, el dataset no es reproducible.
+  include_handle: true
+  llm_call_dates: "2026-09-18"
+  citation: "<AUTORES> (2026). Human-LLM agreement on the structural quality of thesis abstracts [Data set]. Zenodo. https://doi.org/<DOI>"

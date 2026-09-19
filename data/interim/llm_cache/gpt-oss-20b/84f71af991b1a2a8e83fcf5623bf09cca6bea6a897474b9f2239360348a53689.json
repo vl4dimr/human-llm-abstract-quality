@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-144",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 9906,
+  "output_tokens": 1754,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.8409223556518555,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:44:05.979081+00:00",
+ "raw": {
+  "id": "chatcmpl-eea71456-d962-4b52-9106-01492b8d868c",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. Need to fill all required fields.\n\nLet's analyze each dimension.\n\nWe need to produce JSON with fields:\n\n- D1_imryd_objetivo (0 or 1)\n- D1_imryd_metodologia\n- D1_imryd_resultados\n- D1_imryd_conclusiones\n- D1_orden_logico\n- D2_coherencia (1-5)\n- D3_contextualizacion\n- D3_metodo_detallado\n- D3_resultados_concretos\n- D3_conclusion_responde\n- D4_consistencia\n- no_evaluable (0 or 1)\n- observaciones (string)\n\nWe need to evaluate the summary.\n\nSummary: \"Reconocer la identidad de un individuo de forma automática es aún, una tarea que no logra alcanzar una tasa de éxito del 100%, por lo que el presente trabajo buscó mejorar la tasa de reconocimiento; dando énfasis a los métodos de extracción y clasificación de características. En este sentido, se propuso mejorar el ratio para el reconocimiento de rostros mediante la representación de las imágenes, utilizando la transformada Wavelets de Gabor sobre las imágenes en escala de grises obtenida luego de normalizar las imágenes originales, posteriormente a la nueva representación obtenida se le aplica la técnica de Análisis de Componentes Principales (PCA) para obtener y constituir luego el vector de características de las imágenes de rostros. A continuación se aplica un clasificador basado en Maquinas de Soporte Vectorial (SVM). El método fue probado sobre una base de datos de imágenes de rostros constituida entre los bancos de rostros FERET, ORL e imágenes obtenidas por los responsables de la investigación. Se concluye que la combinación de las técnicas Transformada Wavelet de Gabor y Análisis de Componentes Principales en el proceso de extracción de características y la clasificación de imágenes basada en Maquinas de Soporte Vectorial, logran una tasa de reconocimiento superior al 95%.\"\n\nLet's identify components.\n\n- Objective: \"el presente trabajo buscó mejorar la tasa de reconocimiento\" or \"se propuso mejorar el ratio para el reconocimiento de rostros\". So yes, objective present. So D1_imryd_objetivo = 1.\n\n- Methodology: Many details: transformada wavelet Gabor, normalización, PCA, SVM, dataset from FERET, ORL. So yes, D1_metodologia = 1.\n\n- Results: They report \"tasa de reconocimiento superior al 95%\". So yes, D1_resultados = 1.\n\n- Conclusion: They state \"Se concluye que la combinación de ... logran una tasa de reconocimiento superior al 95%.\" That is a conclusion. Does it go beyond repeating results? It says \"se concluye que ... logran ...\". They don't add implications, but they state conclusion that these techniques yield >95%. That's somewhat same as results, but maybe it's okay. They interpret that the combination yields >95%. They didn't interpret beyond that, but it is still a conclusion: they answer objective, interpret. So D1_conclusiones = 1.\n\n- Order: The components appear in order: objective -> methodology -> results -> conclusion. Yes. So D1_orden_logico = 1.\n\n- D2_coherencia: Need to assess flow.\n\nText: It's a paragraph, but flow? Let's read:\n\n\"Reconocer la identidad de un individuo de forma automática es aún, una tarea que no logra alcanzar una tasa de éxito del 100%, por lo que el presente trabajo buscó mejorar la tasa de reconocimiento; dando énfasis a los métodos de extracción y clasificación de características. En este sentido, se propuso mejorar el ratio para el reconocimiento de rostros mediante la representación de las imágenes, utilizando la transformada Wavelets de Gabor sobre las imágenes en escala de grises obtenida luego de normalizar las imágenes originales, posteriormente a la nueva representación obtenida se le aplica la técnica de Análisis de Componentes Principales (PCA) para obtener y constituir luego el vector de características de las imágenes de rostros. A continuación se aplica un clasificador basado en Maquinas de Soporte Vectorial (SVM). El método fue probado sobre una base de datos de imágenes de rostros constituida entre los bancos de rostros FERET, ORL e imágenes obtenidas por los responsables de la investigación. Se concluye que la combinación de las técnicas Transformada Wavelet de Gabor y Análisis de Componentes Principales en el proceso de extracción de características y la clasificación de imágenes basada en Maquinas de Soporte Vectorial, logran una tasa de reconocimiento superior al 95%.\"\n\nFlow: It's a single paragraph. It introduces problem, objective, methods, dataset, results, conclusion. The language is a bit choppy due to semicolons and commas but overall logical. No major jumps. I would give D2_coherencia maybe 4. It's coherent but a bit long sentences.\n\nWe need a number 1-5. I'd choose 4: flows well, but maybe some abruptness at \"En este sentido, se propuso ...\". It's okay.\n\n- D3_contextualizacion: Does it situate problem? It starts with \"Reconocer la identidad de un individuo de forma automática es aún, una tarea que no logra alcanzar una tasa de éxito del 100%\" which provides context: the challenge. It is context: explains why important. So yes, D3_contextualizacion = 1.\n\n- D3_metodo_detallado: Need at least two precise details. They provide details: transformada Wavelet de Gabor, normalización, PCA, SVM, dataset from FERET, ORL, images obtained. So at least many precisions: design? It is a computational study. They mention specific techniques. So yes, D3_metodo_detallado = 1.\n\n- D3_resultados_concretos: They give \"tasa de reconocimiento superior al 95%\" but no exact number maybe 95%. It's a concrete result. So yes, 1.\n\n- D3_conclusion_responde: The conclusion says \"Se concluye que la combinación ... logran una tasa de reconocimiento superior al 95%.\" This is answering the objective: improve recognition. Yes, conclusion responds. So 1.\n\n- D4_consistencia: We need to check for contradictions between methodology and results etc. They used PCA, Gabor, SVM. They report >95% accuracy. No contradictions. There's no claim of causality, just performance. So consistency good. D4_consistencia = 5.\n\nBut need to consider if they claim something that cannot be supported. They say \"logran una tasa de reconocimiento superior al 95%.\" That is supported by results. No contradictory statements. So D4_consistencia = 5.\n\n- no_evaluable: It's a valid summary. So 0.\n\nObservaciones: We may note something like: None. Maybe add short note about coherence. But can leave empty string. But we need a string. It can be empty string. Provide \"\".\n\nWe must ensure JSON includes all fields and is valid.\n\nLet's build JSON.\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"\"\n}\n\nCheck required fields: All present. Observations string is fine.\n\nReturn as compact JSON."
+    }
+   }
+  ],
+  "created": 1789775045,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_34cb00738d",
+  "usage": {
+   "completion_tokens": 1754,
+   "prompt_tokens": 9906,
+   "total_tokens": 11660,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1628,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.593652639,
+   "prompt_time": 0.069741171,
+   "completion_time": 1.9100796039999999,
+   "total_time": 1.9798207749999999
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vefpd9ejer97pnd9vmfd0y",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:44:05.979093+00:00"
+}

@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-026",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 9988,
+  "output_tokens": 1239,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.366548538208008,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:48:34.275690+00:00",
+ "raw": {
+  "id": "chatcmpl-1e3638d3-188a-435e-9d6d-984426823318",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields per schema. Evaluate summary.\n\nWe must decide each field.\n\nLet me analyze the summary.\n\nTitle: \"Marketing digital como factor clave en la sustentabilidad de Pymes turísticas, región Puno\" Summary: It's a typical research abstract.\n\nComponents:\n\nObjective: \"Esta investigación busca determinar la influencia del marketing digital en la sustentabilidad de estas empresas.\" So objective present. D1_imryd_objetivo = 1.\n\nMethodology: \"La metodología que se adoptó es de un enfoque cuantitativo, con un diseño descriptivo y correlacional. La población ... aplicando un muestreo por conveniencia. Se aplicó dos escalas validadas ...\". So method details present. D1_imryd_metodologia=1.\n\nResults: \"Los resultados revelan una relación positiva y significativa entre marketing digital y sustentabilidad (r = 0.564, p = 0.001). El modelo de regresión explica el 44% de la varianza en la sustentabilidad (R² ajustado = .44).\" So results present with concrete numbers. D1_imryd_resultados=1.\n\nConclusions: \"En conclusión, los hallazgos coinciden con estudios previos que demuestran cómo la transformación digital fortalece la competitividad y resiliencia empresarial. La adopción de herramientas digitales permite a las empresas optimizar sus recursos, ampliar su alcance en el mercado y mejorar la experiencia del cliente. Finalmente, el marketing digital no solo es un motor de crecimiento económico, sino también un elemento determinante para la sostenibilidad, favoreciendo la rentabilidad y la responsabilidad ambiental y social de las PYMEs turísticas.\" So conclusions: They give interpretation and implications, responding to objective? Objective: influence of marketing digital on sustainability. Conclusion: results coincide with studies, talk about transformation digital etc. It seems conclusion addresses implications but does it directly answer objective? It states that marketing digital improves sustainability. It doesn't explicitly say \"marketing digital improves sustainability\" but says \"los hallazgos coinciden con estudios previos que demuestran cómo la transformación digital fortalece la competitividad y resiliencia\". It implies sustainability improved. But they didn't directly state \"marketing digital improves sustainability\" though the conclusion states \"marketing digital ... favoreciendo la rentabilidad y la responsabilidad ambiental y social\". That addresses sustainability. So I'd say D1_imryd_conclusiones =1.\n\nOrder: components appear in order: objective, methodology, results, conclusion. So D1_orden_logico =1.\n\nD2_coherencia: Evaluate flow. Text: starts with marketing digital key factor, then context, objective, method, results, conclusion. It's coherent. There's smooth flow, no abrupt jumps. I'd rate 5 maybe. But check any issues: The summary starts with context: marketing digital emerged ... then objective. That's okay. Flow: \"El marketing digital ha emergido ... , especialmente en la región Puno. En un entorno donde ... esta investigación busca determinar...\". Good. Then \"La metodología que se adoptó...\" Good. Then \"Los resultados revelan...\" Good. Then \"En conclusión...\" Good. So I'd rate 5. D2_coherencia=5.\n\nD3_contextualizacion: Does summary provide context for why matters, where, who, framework? It starts \"El marketing digital ha emergido...\" explains context: digitalization fundamental for competitiveness. That situates problem: why matters. It mentions small and medium tourism companies in region Puno. That is context. So yes. D3_contextualizacion=1.\n\nD3_metodo_detallado: need at least two precisions: design, sample size? It gives design (descriptivo y correlacional), population (Pymes), sampling by convenience, two scales used. That's 3 or more. So 1.\n\nD3_resultados_concretos: yes, includes r=0.564, p=0.001, R^2=0.44. So 1.\n\nD3_conclusion_responde: does conclusion respond to objective? Objective: determine influence. Conclusion: \"los hallazgos coinciden con estudios previos que demuestran cómo la transformación digital fortalece la competitividad y resiliencia empresarial. ... El marketing digital no solo es un motor de crecimiento económico, sino también un elemento determinante para la sostenibilidad\". That is about influence and sustainability. It addresses objective indirectly. I think yes. So 1.\n\nD4_consistencia: check coherence between methodology and results and conclusion. They use correlational design, they present correlation and regression results, conclusion refers to transformation digital strengthening competitiveness, resilience, etc. It's consistent. No contradictions: they didn't claim causation incorrectly? They talk about influence but also mention correlation significance. It's okay. D4_consistencia=5. But check: They say \"El modelo de regresión explica el 44% de la varianza\" but didn't specify that they did regression; but it's implied. It's okay. So 5.\n\nno_evaluable: 0.\n\nobservaciones: maybe nothing, but we can add nothing. But must be string. So empty string \"\".\n\nNow confirm each field per schema: all required, integer or null. We'll use integers. All fields have values.\n\nThus produce JSON: { \"D1_imryd_objetivo\":1, ... }.\n\nCheck D4_consistencia: 5.\n\nReturn compact JSON. Ensure no trailing spaces.\n\nLet's produce."
+    }
+   }
+  ],
+  "created": 1789775313,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_66891002f6",
+  "usage": {
+   "completion_tokens": 1239,
+   "prompt_tokens": 9988,
+   "total_tokens": 11227,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1113,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.19144119,
+   "prompt_time": 0.065370341,
+   "completion_time": 1.318414832,
+   "total_time": 1.383785173
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2veqxb1e739x1m4z6s2kzd4",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:48:34.275714+00:00"
+}

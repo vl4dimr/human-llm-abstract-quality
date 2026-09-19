@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-137",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 2,
+  "no_evaluable": 0,
+  "observaciones": "El objetivo está implícito pero inequívoco: 'interrogante que se focaliza en el presente trabajo'. La metodología detallada incluye la observación de 10 plantas por parcela, 3 parcelas por sitio, 3 sitios, y toma de muestras. Los resultados presentan porcentajes de incidencia y severidad de daño concretos. Sin embargo, no hay una conclusión que responda directamente al objetivo, sino una descripción de los hallazgos. La coherencia organizacional es moderada debido a la extensión del texto y la necesidad de leer con atención para seguir el hilo. La consistencia metodológica es moderada debido a que los resultados se presentan sin una interpretación clara en el contexto del objetivo general."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 2,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El objetivo está implícito pero inequívoco: 'interrogante que se focaliza en el presente trabajo'. La metodología detallada incluye la observación de 10 plantas por parcela, 3 parcelas por sitio, 3 sitios, y toma de muestras. Los resultados presentan porcentajes de incidencia y severidad de daño concretos. Sin embargo, no hay una conclusión que responda directamente al objetivo, sino una descripción de los hallazgos. La coherencia organizacional es moderada debido a la extensión del texto y la necesidad de leer con atención para seguir el hilo. La consistencia metodológica es moderada debido a que los resultados se presentan sin una interpretación clara en el contexto del objetivo general.\"\n}",
+ "usage": {
+  "input_tokens": 11392,
+  "output_tokens": 326,
+  "total_duration_s": 16.1931652
+ },
+ "latency_s": 16.206775426864624,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:10:48.302675+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:10:48.2929177Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 2,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El objetivo está implícito pero inequívoco: 'interrogante que se focaliza en el presente trabajo'. La metodología detallada incluye la observación de 10 plantas por parcela, 3 parcelas por sitio, 3 sitios, y toma de muestras. Los resultados presentan porcentajes de incidencia y severidad de daño concretos. Sin embargo, no hay una conclusión que responda directamente al objetivo, sino una descripción de los hallazgos. La coherencia organizacional es moderada debido a la extensión del texto y la necesidad de leer con atención para seguir el hilo. La consistencia metodológica es moderada debido a que los resultados se presentan sin una interpretación clara en el contexto del objetivo general.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 16193165200,
+  "load_duration": 11452200,
+  "prompt_eval_count": 11392,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 852093000,
+  "eval_count": 326,
+  "eval_duration": 15183984000
+ },
+ "cached_at_utc": "2026-09-19T02:10:48.302695+00:00"
+}

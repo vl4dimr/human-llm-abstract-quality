@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-159",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen narrativo, sin encabezados. Cumple IMRyD, coherencia alta. Falta contextualización y resultados concretos."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen narrativo, sin encabezados. Cumple IMRyD, coherencia alta. Falta contextualización y resultados concretos.\"}",
+ "usage": {
+  "input_tokens": 9946,
+  "output_tokens": 1972,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.7480735778808594,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:14:38.251942+00:00",
+ "raw": {
+  "id": "chatcmpl-5f606047-5980-48e9-96e1-3132c23313f8",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen narrativo, sin encabezados. Cumple IMRyD, coherencia alta. Falta contextualización y resultados concretos.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nWe need to evaluate each field.\n\nLet's analyze the summary.\n\nTitle: \"Desarrollo histórico de la doctrina de la Trinidad en el adventismo desde 1980 hasta 2011\"\n\nSummary: It says: \"Esta investigación analiza el desarrollo doctrinal de la Trinidad en la Iglesia Adventista del Séptimo Día (IASD) durante el período especificado. Utilizando una metodología histórica documental, la investigación se centra en fuentes primarias y secundarias, incluyendo documentos oficiales de la IASD y estudios teológicos contemporáneos. La tesis se divide en dos partes principales: un análisis del desarrollo histórico de la doctrina de la Trinidad en la IASD desde sus inicios hasta 1980, y un estudio exhaustivo del período de 1980 a 2011. Durante el primer período, se examinan las declaraciones y publicaciones de los pioneros adventistas sobre la Trinidad, así como los eventos históricos y teológicos más relevantes que moldearon su comprensión. En la segunda parte, se realiza un análisis detallado de los debates y desarrollos doctrinales en torno a la Trinidad en la IASD, destacando la declaración de las 27 creencias fundamentales en 1980 y la intensificación de los estudios trinitarios en las décadas siguientes. Las conclusiones indican que la comprensión y aceptación de la doctrina de la Trinidad en la IASD han sido progresivas y complejas, reflejando un esfuerzo continuo por desarrollar una teología trinitaria coherente y basada en las Escrituras. La investigación destaca también los desafíos contemporáneos, incluyendo el resurgimiento del antitrinitarismo y las críticas internas, que subrayan la necesidad de un estudio continuo y sistemático de esta doctrina fundamental.\"\n\nWe need to evaluate each dimension.\n\nDimension 1: Adherencia a IMRyD.\n\nWe need to check presence of objective, methodology, results, conclusions, and order.\n\n- D1_imryd_objetivo: The summary states \"Esta investigación analiza el desarrollo doctrinal de la Trinidad...\" That is the objective. It's explicit. So 1.\n\n- D1_imryd_metodologia: It says \"Utilizando una metodología histórica documental, la investigación se centra en fuentes primarias y secundarias, incluyendo documentos oficiales de la IASD y estudios teológicos contemporáneos.\" That is a methodology. So 1.\n\n- D1_imryd_resultados: It says \"Las conclusiones indican que la comprensión y aceptación de la doctrina de la Trinidad en la IASD han sido progresivas y complejas, reflejando un esfuerzo continuo por desarrollar una teología trinitaria coherente y basada en las Escrituras. La investigación destaca también los desafíos contemporáneos, incluyendo el resurgimiento del antitrinitarismo y las críticas internas, que subrayan la necesidad de un estudio continuo y sistemático de esta doctrina fundamental.\" This is a conclusion, not a result. But does it contain results? It says \"Las conclusiones indican que la comprensión y aceptación... han sido progresivas y complejas\". That is a result? It's a conclusion. But the results section should communicate what was found. The summary does not provide specific findings like percentages or categories. It just says \"han sido progresivas y complejas\". That is a result? It's a statement of findings. It might count as a result because it communicates what was found: that the understanding has been progressive and complex. But it's not a concrete result. The protocol says: \"Vale 1 cuando se comunica qué se encontró, no solo qué se hizo.\" The statement \"han sido progresivas y complejas\" is a finding. So yes, it's a result. So D1_imryd_resultados = 1.\n\n- D1_imryd_conclusiones: The summary ends with \"Las conclusiones indican que la comprensión y aceptación... han sido progresivas y complejas... subrayan la necesidad de un estudio continuo y sistemático.\" That is a conclusion. It goes beyond repeating results? It interprets the results and suggests implications. So yes, 1.\n\n- D1_orden_logico: The order: objective, methodology, results, conclusions. The summary: objective first, methodology second, then description of the two parts, then conclusions. The order is correct. So 1.\n\nThus D1 fields all 1.\n\nDimension 2: Coherencia organizacional. We need to rate 1-5.\n\nWe need to evaluate flow. The summary is fairly coherent. It starts with objective, methodology, then describes the two parts, then conclusions. The transitions are smooth. There's no abrupt jumps. The only potential issue: the summary is a bit long but still flows. I'd rate 5. But let's consider if there is any repetition or lack of transitions. It says \"La tesis se divide en dos partes principales: ...\". Then it describes each part. Then it says \"Las conclusiones indican que...\". That is a logical flow. So 5.\n\nDimension 3: Completitud de componentes.\n\n- D3_contextualizacion: Does the summary situate the problem? It says \"Esta investigación analiza el desarrollo doctrinal de la Trinidad en la Iglesia Adventista del Séptimo Día (IASD) durante el período especificado.\" It does not explain why it's important, why it's relevant, or what problem it addresses. It just states the topic. So D3_contextualizacion = 0.\n\n- D3_metodo_detallado: It says \"Utilizando una metodología histórica documental, la investigación se centra en fuentes primarias y secundarias, incluyendo documentos oficiales de la IASD y estudios teológicos contemporáneos.\" That is a method. It gives at least two precisions: \"metodología histórica documental\" and \"fuentes primarias y secundarias, incluyendo documentos oficiales y estudios teológicos contemporáneos.\" That is at least two. So 1.\n\n- D3_resultados_concretos: The results are not concrete. It says \"Las conclusiones indican que la comprensión y aceptación... han sido progresivas y complejas\". No numbers, categories, or specific findings. So 0.\n\n- D3_conclusion_responde: The conclusion responds to the objective? The objective was to analyze the development of the doctrine. The conclusion says that the understanding has been progressive and complex, and that there is a need for continuous study. That does respond to the objective. So 1.\n\nDimension 4: Consistencia metodológica.\n\nWe need to check if the methodology and results are consistent. The methodology: historical documentary. The results: \"han sido progresivas y complejas\". That is consistent. There's no contradiction. So D4_consistencia = 5.\n\nBut we need to check if any contradictions: The summary says \"La investigación destaca también los desafíos contemporáneos, incluyendo el resurgimiento del antitrinitarismo y las críticas internas, que subrayan la necesidad de un estudio continuo y sistemático\". That is consistent with the methodology. No contradictions. So 5.\n\nno_evaluable: The text is a summary. So 0.\n\nObservaciones: We can add any notes. For example, we might note that the summary lacks contextualization and concrete results. Also note that the conclusion is not fully distinct from results but still qualifies. We can mention that the summary is coherent and follows IMRyD. Also note that the summary is a narrative, not structured. But we can mention that the summary is well-structured.\n\nLet's produce JSON.\n\nWe need to ensure all fields present. Use compact JSON. Provide integer values or null. Observations string.\n\nLet's produce:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":0,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Resumen narrativo, sin encabezados. Cumple IMRyD, coherencia alta. Falta contextualización y resultados concretos.\"\n}\n\nCheck schema: all fields present. Observations string. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789701278,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_a4315eb300",
+  "usage": {
+   "completion_tokens": 1972,
+   "prompt_tokens": 9946,
+   "total_tokens": 11918,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1822,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.245215288,
+   "prompt_time": 0.061698134,
+   "completion_time": 2.179089033,
+   "total_time": 2.240787167
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s84fy0eb1s6036t9d1rbvr",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:14:38.251954+00:00"
+}

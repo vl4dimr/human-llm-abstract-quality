@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-063",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen cumple con los componentes IMRyD en orden. La coherencia es buena, aunque podría mejorar en la conexión entre las partes. La contextualización es cero porque el resumen comienza directamente con el objetivo. El método detallado incluye la revisión organizada y semiorganizada. Los resultados son concretos al mencionar el impacto de los espacios planificados. La conclusión responde al objetivo al mencionar la mejora académica y la calidad educativa. La consistencia metodológica es 3 porque la conclusión menciona una mejora académica sin dar más detalles sobre los resultados."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen cumple con los componentes IMRyD en orden. La coherencia es buena, aunque podría mejorar en la conexión entre las partes. La contextualización es cero porque el resumen comienza directamente con el objetivo. El método detallado incluye la revisión organizada y semiorganizada. Los resultados son concretos al mencionar el impacto de los espacios planificados. La conclusión responde al objetivo al mencionar la mejora académica y la calidad educativa. La consistencia metodológica es 3 porque la conclusión menciona una mejora académica sin dar más detalles sobre los resultados.\"\n}",
+ "usage": {
+  "input_tokens": 10879,
+  "output_tokens": 294,
+  "total_duration_s": 9.016213
+ },
+ "latency_s": 9.025735855102539,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:33:52.469877+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:33:52.4610161Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen cumple con los componentes IMRyD en orden. La coherencia es buena, aunque podría mejorar en la conexión entre las partes. La contextualización es cero porque el resumen comienza directamente con el objetivo. El método detallado incluye la revisión organizada y semiorganizada. Los resultados son concretos al mencionar el impacto de los espacios planificados. La conclusión responde al objetivo al mencionar la mejora académica y la calidad educativa. La consistencia metodológica es 3 porque la conclusión menciona una mejora académica sin dar más detalles sobre los resultados.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9016213000,
+  "load_duration": 3218200,
+  "prompt_eval_count": 10879,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 344593000,
+  "eval_count": 294,
+  "eval_duration": 8605830000
+ },
+ "cached_at_utc": "2026-09-19T01:33:52.469890+00:00"
+}

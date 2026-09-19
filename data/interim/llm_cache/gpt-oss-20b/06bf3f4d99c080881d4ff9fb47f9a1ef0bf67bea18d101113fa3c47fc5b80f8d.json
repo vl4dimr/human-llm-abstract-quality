@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-023",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": null,
+  "no_evaluable": 1,
+  "observaciones": "Resumen es una propuesta de proyecto; no incluye metodología, resultados ni conclusión; objetivo presente; flujo relativamente bueno."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":0,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"Resumen es una propuesta de proyecto; no incluye metodología, resultados ni conclusión; objetivo presente; flujo relativamente bueno.\"}",
+ "usage": {
+  "input_tokens": 10279,
+  "output_tokens": 1183,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.282344102859497,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:48:15.943869+00:00",
+ "raw": {
+  "id": "chatcmpl-94a4fda2-ff7a-4779-850a-1334798244fe",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":0,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"Resumen es una propuesta de proyecto; no incluye metodología, resultados ni conclusión; objetivo presente; flujo relativamente bueno.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields. Must annotate summary accordingly.\n\nWe must parse the summary. Evaluate each field.\n\nGiven summary is a long paragraph.\n\nFirst, check if it's a valid summary. It seems to contain no explicit headings.\n\nNow, evaluate:\n\nD1_imryd_objetivo: Is the objective present? The summary says: \"el propósito de este proyecto el ayudar a la cohesión social mediante el diseño de un Centro Residencial Eco-Gerontológico...\" That is an objective. It is present. So 1.\n\nD1_imryd_metodologia: Does it indicate how it obtains the knowledge? The summary mentions: \"propuesta\" but does not mention method of study. It does not describe design, sample, instrument, etc. It just states project concept. So no methodology described. So 0.\n\nD1_imryd_resultados: Does it communicate what was found? Not results: no data. So 0.\n\nD1_imryd_conclusiones: Is there a closure? At end: \"el desarrollo sustentable tiene que responder ... logrando que esta experiencia sea plena y feliz.\" It seems to state a conclusion: that the project is needed and will result in a happy experience. But is it a conclusion? The summary basically ends with a statement of expectation. It's more of a statement of purpose rather than a conclusion. Might not be a conclusion. However, D1_conclusiones: \"Vale 1 cuando hay un cierre que va más allá de repetir el resultado: interpretaci… implicación, recomendación…\". Here there's no result to interpret. So not a conclusion. So 0.\n\nD1_orden_logico: With 0 or 1 components present. We have 1 component: objetivo. Since only 0 or 1 components present, D1_orden_logico = 0. Because rule says if 0 or 1 component present, order = 0.\n\nNow D2_coherencia: We need to evaluate flow. The summary is a single long paragraph. It flows? Let's read: It starts with background, then states the problem, then states the objective. It has multiple sentences. It flows somewhat. There's no abrupt jumps. However, there's a lot of repetition and somewhat choppy but still coherent. I'd rate 4? Let's analyze: It starts with a context, then problem, then objective, then elaborates on architecture, then concluding statement. It's coherent but some adverbial phrases may break flow. I would give 4.\n\nBut check criteria: 5 = impeccable, 4 = good with minor aspereza. I think 4 is good.\n\nD3_contextualizacion: Does the summary situate the problem: why it matters, where it occurs, to whom it affects, etc. The summary indeed begins by describing that older adults are marginalized. It gives context. So yes. So 1.\n\nD3_metodo_detallado: Need at least two precise details about procedure. Does summary mention methodology? Not. It mentions project design but not method. It doesn't describe how data collected. So 0.\n\nD3_resultados_concretos: Does it give specific results? No. So 0.\n\nD3_conclusion_responde: This requires objective responded in conclusion. Since no conclusion and no results, we set 0.\n\nD4_consistencia: Since no methodology, no result, we set no_evaluable = 1. But is that correct? The rule says: If the summary does not declare any methodology, the D4 cannot be evaluated; mark no_evaluable=1 and leave D4_consistencia empty. The output requires field D4_consistencia, but per schema it can be null. So we set null for D4_consistencia. And no_evaluable = 1.\n\nBut we have to confirm that D4_consistencia is null. Yes.\n\nObservaciones: Add notes.\n\nWe should also consider: Are we sure that no methodology present? It mentions \"propuesta\" and \"diseño\", but not methodology for study. It's a project proposal, not a study. So no methodology.\n\nThus, D4_consistencia null.\n\nNow produce JSON with all fields.\n\nEnsure JSON is compact. Provide all required fields. Let's compile:\n\n{\n \"D1_imryd_objetivo\": 1,\n \"D1_imryd_metodologia\": 0,\n \"D1_imryd_resultados\": 0,\n \"D1_imryd_conclusiones\": 0,\n \"D1_orden_logico\": 0,\n \"D2_coherencia\": 4,\n \"D3_contextualizacion\": 1,\n \"D3_metodo_detallado\": 0,\n \"D3_resultados_concretos\": 0,\n \"D3_conclusion_responde\": 0,\n \"D4_consistencia\": null,\n \"no_evaluable\": 1,\n \"observaciones\": \"Resumen es una propuesta de proyecto; no incluye metodología, resultados, ni conclusión; objetivo presente; flujo relativamente bueno.\"\n}\n\nMake sure no trailing spaces, correct JSON."
+    }
+   }
+  ],
+  "created": 1789775295,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e594c51153",
+  "usage": {
+   "completion_tokens": 1183,
+   "prompt_tokens": 10279,
+   "total_tokens": 11462,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1036,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.195361319,
+   "prompt_time": 0.071036591,
+   "completion_time": 1.201429365,
+   "total_time": 1.272465956
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2veqbhkerb8mz8wraa598dy",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:48:15.943894+00:00"
+}

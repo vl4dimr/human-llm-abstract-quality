@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-053",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 10113,
+  "output_tokens": 1679,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.366450786590576,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:20:43.651961+00:00",
+ "raw": {
+  "id": "chatcmpl-545a90c9-a05f-4e8c-ab5c-db69566a026b",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. We need to produce JSON with required fields. Must use compact JSON (no pretty printing). Must parse. Provide all fields.\n\nWe must read summary: \"Objetivo: Determinar la relación entre calidad de vida y desempeño laboral de las enfermeras en tiempos de Covid-19 de los servicios de hospitalización del Hospital Carlos Monge Medrano, Juliaca-2021.Métodos: La investigación tuvo un enfoque cuantitativo con un estudio transversal, de tipo descriptivo-correlacional, la muestra fue de 60 enfermeras. Se aplicó un cuestionario para la calidad de vida (SF-36) con una confiabilidad de α= .82, de igual manera para el desempeño laboral y tuvo una confiabilidad de α= .89. Se aplicó la prueba de correlación de Rho Spearman. Resultados: El 43.3% de enfermeras tuvieron un nivel regular de calidad de vida, de acuerdo a sus dimensiones el 51.67% estuvieron un nivel bueno en su funcionamiento físico, 60% de enfermeras tuvieron un nivel bueno en su rol físico, el 46.67% de enfermeras que tuvieron un nivel bueno en el dolor corporal ( tiene poca intensidad de dolor y eso no le dificultad en sus labores), el 61.67% tuvieron un nivel regular en su salud en general, 51.67% de enfermeras tuvieron un nivel regular en vitalidad, el 55% tuvieron un nivel regular en su funcionalidad social, el 68.33% de enfermeras tuvieron un nivel bueno en su rol emocional, el 60% de enfermeras tienen un regular nivel en su salud mental; en el desempeño laboral se puede afirmar que el 60% de enfermeras tienen un alto desempeño laboral. Según la correlación entre la calidad de vida y el desempeño laboral se afirma lo siguiente calidad de vida (rs=.681), funcionamiento físico (rs=.551), rol físico (rs=.501), dolor corporal (rs=.369), salud general (rs=.388), vitalidad (rs=.383), funcionalidad social (rs=.475), rol emocional (rs=.638), salud mental (rs=.469).Conclusiones: Existe relación directa entre el nivel de calidad de vida y desempeño laboral (rs=.681) de las enfermeras en tiempos de Covid-19 de los servicios de hospitalización del Hospital Carlos Monge Medrano, Juliaca-2021.\"\n\nWe need to fill D1 fields:\n\n- D1_imryd_objetivo: 1 because objective explicitly stated.\n\n- D1_imryd_metodologia: 1. They gave methodology: quantitative, transversal, descriptive-correlational, sample 60, questionnaire, reliability, correlation test. So yes.\n\n- D1_imryd_resultados: 1. They gave results with percentages and correlations. So yes.\n\n- D1_imryd_conclusiones: 1. They give conclusion: relation direct between quality of life and performance, rs=0.681. So yes.\n\n- D1_orden_logico: We need to check order: summary seems to have objective first, then methods, then results, then conclusions. That matches. So 1.\n\nNow D2_coherencia: We evaluate flow. The summary uses headings like \"Objetivo: ... Métodos: ... Resultados: ... Conclusiones:\" So it's structured headings but still prose. The flow: objective to methods to results to conclusions. The content is somewhat verbose but coherent. There's some redundancy but overall coherent. Let's assign 4 maybe? Let's evaluate: 5 is impeccable progression, 4 is good but some small aspereza. The summary has headings, but within results section it lists many percentages and correlations. The flow is clear. I think 5 or 4? Maybe 5: \"Progresión impecable. Cada oración prepara la siguiente.\" The summary has headings, but within results there's a list of percentages; transitions are direct; no major jumps. I'd give 5. But check if there's any abrupt transitions: the results section ends with \"Según la correlación ... se afirma lo siguiente ...\". Then conclusion: \"Existe relación directa entre ...\". That flows fine. So 5. But might be 4 if we consider some redundancy. I'll choose 5.\n\nNow D3 fields:\n\n- D3_contextualizacion: We need to see if summary situates the problem: \"Calidad de vida y desempeño laboral de las enfermeras en tiempos de Covid-19 en el Hospital Carlos Monge Medrano, Juliaca.\" It does mention the context: hospital, time, region. It explains the setting. It does not mention why it matters. But situates the problem: yes. So 1.\n\n- D3_metodo_detallado: We need at least two precisions. Provided: study design, sample size 60, questionnaire (SF-36), reliability values, correlation test. That's at least two. So 1.\n\n- D3_resultados_concretos: We need content: percentages and correlation coefficients. There are many percentages and correlation values. So 1.\n\n- D3_conclusion_responde: Conclusion: \"Existe relación directa entre el nivel de calidad de vida y desempeño laboral (rs=.681)...\" This directly responds to objective: relationship between quality of life and performance. So 1.\n\nNow D4_consistencia: We need consistency between methodology and results, conclusion. They used correlation, results include rs values. They concluded correlation. No contradictions. The conclusion is consistent with results. So 5. Let's check if any subtle discordance: They used correlation between quality of life and performance. They reported rs=0.681 in results and conclusion. They also mention other correlations. Conclusion: \"Existe relación directa entre el nivel de calidad de vida y desempeño laboral (rs=.681)\". That's consistent. So 5.\n\nNow no_evaluable: The summary is a summary, not invalid. So 0.\n\nObservaciones: We should note any special points: We can mention that the summary includes headings, but no extra commentary. Could note that it uses percentages and correlation values; it's structured. But we can leave observations blank or provide something minimal. The schema allows string. We can say \"None\".\n\nBut we should ensure to provide a string. So we can provide an empty string. Provide \"\".\n\nWe must check that all required fields are present: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nWe must ensure no extra fields. Provide all 13 fields.\n\nNow produce compact JSON: {\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}\n\nCheck that all fields are integer or string or null. Yes. Observaciones string empty. All good. Let's output."
+    }
+   }
+  ],
+  "created": 1789701643,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_a4315eb300",
+  "usage": {
+   "completion_tokens": 1679,
+   "prompt_tokens": 10113,
+   "total_tokens": 11792,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1553,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.243654327,
+   "prompt_time": 0.078007969,
+   "completion_time": 1.769950078,
+   "total_time": 1.847958047
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8fn58eam8rfkrpdsh0zbj",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:20:43.652123+00:00"
+}

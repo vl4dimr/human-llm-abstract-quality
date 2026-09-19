@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-002",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 2,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Metodología se menciona al final, lo que rompe el orden lógico; falta detalle metodológico y concreción en resultados."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":0,\"D2_coherencia\":2,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Metodología se menciona al final, lo que rompe el orden lógico; falta detalle metodológico y concreción en resultados.\"}",
+ "usage": {
+  "input_tokens": 9815,
+  "output_tokens": 1981,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.9455368518829346,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:45:58.466563+00:00",
+ "raw": {
+  "id": "chatcmpl-a8332eb7-c61f-4d84-a3f7-193da2e6e55e",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":0,\"D2_coherencia\":2,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Metodología se menciona al final, lo que rompe el orden lógico; falta detalle metodológico y concreción en resultados.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones. All required.\n\nWe must annotate based on the protocol.\n\nLet's analyze the summary:\n\nTitle: \"El neuromarketing como herramienta estratégica para el posicionamiento de marca\"\n\nResumen:\n\n\"La presente investigación tiene objetivo analizar si el neuromarketing es una herramienta para el posicionamiento de una marca. Se sabe que el neuromarketing se utiliza como recurso de investigación y apoyo estratégico por sus grandes aportes de predicción de la conducta de los clientes, es por ello que primeramente se investiga cual es la importancia que tiene el neuromarketing todo ello para poder conocer de una manera detallada y profunda el comportamiento que tienen los consumidores al momento de una decisión de compra. Dentro del ámbito empresarial esta herramienta es muy útil para el posicionamiento de marcas, en la segunda parte se analizará conceptos sobre el posicionamiento de marca para determinar cómo es el funcionamiento del cerebro y seguidamente conceptualizar el neuromarketing. Se puede afirmar que es una herramienta estratégica para posicionar una marca. El tipo de metodología que se aplicó es de revisión bibliográfica.\"\n\nWe need to identify components.\n\nD1_imryd_objetivo: The objective is present explicitly: \"tiene objetivo analizar si el neuromarketing es una herramienta para el posicionamiento de una marca.\" So yes -> 1.\n\nD1_imryd_metodologia: There is mention of methodology: \"El tipo de metodología que se aplicó es de revisión bibliográfica.\" So yes -> 1.\n\nD1_imryd_resultados: Are there results? The summary says \"Se puede afirmar que es una herramienta estratégica para posicionar una marca.\" That is a conclusion, not a result. It doesn't present data, but does present a result? They claim a result: \"Se puede afirmar que es una herramienta estratégica para posicionar una marca.\" That is a conclusion, but is it a result? In the D1 criteria, \"resultado\" must communicate what was found. The statement \"Se puede afirmar que es una herramienta estratégica para posicionar una marca\" is essentially a statement of a conclusion. There's no numeric data. But it is a result statement: they concluded that neuromarketing is strategic. That is an outcome. So yes -> 1. The policy: D1_imryd_resultados: 1 when it communicates what was found, not just what was done. \"Se puede afirmar que es una herramienta estratégica...\" does communicate a finding. So 1.\n\nD1_imryd_conclusiones: Is there a closing that interprets or responds? \"Se puede afirmar que es una herramienta estratégica para posicionar una marca.\" That's basically a conclusion. It also is the same as the result? The conclusion should go beyond repeating result; it should interpret. This statement is more like a conclusion: They claim it's a tool. The results and conclusions are overlapping. The summary includes a conclusion statement. So 1.\n\nD1_orden_logico: The components appear in order: objective, then methodology, then results/conclusions. The summary starts with objective, then methodology? Actually methodology is mentioned near end. The order: objective first. Then they talk about background, then they say \"En la segunda parte se analizará...\" then \"Se puede afirmar...\" then methodology at end: \"El tipo de metodología que se aplicó es de revisión bibliográfica.\" So methodology appears last. The order: objective → background → results/conclusions → methodology. That is not correct order (methodology should come before results/conclusions). So D1_orden_logico should be 0. The rule: If components are present, they should be in logical sequence. Since methodology appears after conclusions, order is wrong. So 0.\n\nD2_coherencia: Flow. Let's evaluate. Summary starts with objective, then background, then details, then conclusion, then methodology. The methodology appears at the end; that seems jarring. Flow may be slightly disjointed: after describing background and analysis, they mention conclusion then methodology. That breaks flow: methodology should come before results and conclusion. So coherence maybe 3? Let's consider signals: The summary is fairly linear but has a small jarring order. I'd assign 3. But maybe 2 because of misplacement of methodology. Let's analyze: D2 scale: 5 perfect; 4 good; 3 ok; 2 bad; 1 incoherent. The methodology at the end is a significant break. But still the content can be read. So I'd say 3. Might be 2. Let's consider typical \"coherencia\" evaluation: They note if there are jumps, repeated terms, etc. The summary flows: objective → background → analysis of neuromarketing, then conclusion → methodology. There's a jump: methodology last. That may be considered a jump in topic. I think 2: need to re-read to reconstruct. The reader has to go back to methodology after conclusion. That is a bit confusing. So D2_coherencia=2.\n\nD3_contextualizacion: Did summary situate the problem? The summary provides context: \"Se sabe que el neuromarketing se utiliza...\" but no explicit \"por qué es importante\" or \"en qué contexto\" beyond stating it's used as a strategic tool. They mention \"Dentro del ámbito empresarial esta herramienta es muy útil para el posicionamiento de marcas\". That's context. But do they state why it's important? They say \"Se sabe que...\" and then they talk about importance. The contextualization field requires: \"sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco se contrasta.\" They mention \"Dentro del ámbito empresarial\", \"para el posicionamiento de marcas\". This is some context. So D3_contextualizacion maybe 1. They did not give a deeper background but they mention that it's important in business. So I think 1.\n\nD3_metodo_detallado: Need at least two precisions. They only say \"El tipo de metodología que se aplicó es de revisión bibliográfica.\" That's one precision. No mention of sample, instrument. So D3_metodo_detallado = 0.\n\nD3_resultados_concretos: The result is \"Se puede afirmar que es una herramienta estratégica para posicionar una marca.\" That's a statement but no numerical or concrete magnitude. It's a conceptual statement, but qualifies as result? D3_resultados_concretos requires content such as figures, categories, etc. This is not concrete. So D3_resultados_concretos = 0.\n\nD3_conclusion_responde: Does conclusion respond to the objective? They said objective: \"analizar si el neuromarketing es una herramienta para el posicionamiento de una marca.\" The conclusion says \"Se puede afirmar que es una herramienta estratégica para posicionar una marca.\" That does respond. So D3_conclusion_responde = 1.\n\nD4_consistencia: Need to evaluate coherence between method and results. Since methodology is only \"revisión bibliográfica\", and results/conclusion are that it's strategic tool, that is consistent: a literature review can lead to that conclusion. There is no contradiction. But methodology appears last, but that doesn't affect consistency. So D4_consistencia = 5 maybe? Let's see: The summary has no discordance; only method is a bibliographic review, and they concluded it's strategic. That is fine. So 5.\n\nno_evaluable: 0 because it's a valid summary.\n\nobservaciones: we should add notes. Maybe note about methodology order and lack of details. Provide observations.\n\nLet's craft JSON accordingly.\n\nCheck required fields: all present.\n\nWe must use compact JSON formatting. Let's produce:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":0,\n \"D2_coherencia\":2,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":0,\n \"D3_resultados_concretos\":0,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Metodología se menciona al final, lo que rompe el orden lógico; falta detalle metodológico y concreción en resultados.\"\n}\n\nCheck types: integer or null. All values are integers. Observations string. Good.\n\nLet's produce JSON."
+    }
+   }
+  ],
+  "created": 1789775158,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_84bb35977d",
+  "usage": {
+   "completion_tokens": 1981,
+   "prompt_tokens": 9815,
+   "total_tokens": 11796,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1830,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.217389507,
+   "prompt_time": 0.047899503,
+   "completion_time": 2.054722833,
+   "total_time": 2.102622336
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vek4gdexz9e4h7acmnwr0j",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:45:58.466589+00:00"
+}

@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-091",
+ "model_name": "mistral-7b",
+ "provider": "ollama",
+ "model": "mistral:latest",
+ "model_reported": "mistral:latest",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "No se menciona el cuarto cuadrante de operación para el modo regenerativo"
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"No se menciona el cuarto cuadrante de operación para el modo regenerativo\"\n}",
+ "usage": {
+  "input_tokens": 12469,
+  "output_tokens": 210,
+  "total_duration_s": 5.9246686
+ },
+ "latency_s": 5.95180606842041,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T00:44:32.640512+00:00",
+ "raw": {
+  "model": "mistral:latest",
+  "created_at": "2026-09-19T00:44:32.6397181Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"No se menciona el cuarto cuadrante de operación para el modo regenerativo\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 5924668600,
+  "load_duration": 5513700,
+  "prompt_eval_count": 12469,
+  "prompt_eval_cached_count": 12155,
+  "prompt_eval_duration": 230758000,
+  "eval_count": 210,
+  "eval_duration": 5582508000
+ },
+ "cached_at_utc": "2026-09-19T00:44:32.640525+00:00"
+}

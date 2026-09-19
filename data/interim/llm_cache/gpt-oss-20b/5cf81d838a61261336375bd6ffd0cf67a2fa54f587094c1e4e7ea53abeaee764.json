@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-120",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen sin resultados ni conclusión, y sin contextualización del problema; sin embargo, la secuencia objetivo–metodología es coherente y la metodología se describe con suficientes precisiones."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin resultados ni conclusión, y sin contextualización del problema; sin embargo, la secuencia objetivo–metodología es coherente y la metodología se describe con suficientes precisiones.\"}",
+ "usage": {
+  "input_tokens": 9893,
+  "output_tokens": 1564,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.1214513778686523,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:41:12.504253+00:00",
+ "raw": {
+  "id": "chatcmpl-97516cb5-69c4-42df-a9e5-0576332e9f5d",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin resultados ni conclusión, y sin contextualización del problema; sin embargo, la secuencia objetivo–metodología es coherente y la metodología se describe con suficientes precisiones.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate according to protocol. Provide fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nNeed to determine each.\n\nRead summary. Determine:\n\nObjective: \"evaluar el control de riesgos disergonómicos para reducir las enfermedades ocupacionales...\". Yes objective present. So D1_imryd_objetivo=1.\n\nMetodología: \"estudio aplicado de diseño no experimental con enfoque correlacional. población de 70 trabajadores, muestra toda población. recopilación mediante observación directa, análisis documental y cuestionarios.\" That is a concrete methodology. So D1_imryd_metodologia=1.\n\nResultados: Are there results? The summary says \"Se cuantificará el impacto... se evaluará la efectividad... Los resultados esperados contribuirán...\" But actual results are not presented; it's future/predicted. So no result content. So D1_imryd_resultados=0.\n\nConclusiones: There is no conclusion, only \"Los resultados esperados contribuirán...\" No closure beyond repeating objective. So D1_imryd_conclusiones=0.\n\nOrden lógico: Since objective, methodology present, results absent, conclusions absent. With 3 components present: objective, methodology. Are they in order? Yes objective then methodology. So D1_orden_logico=1 because present components in correct sequence. The rule: if 0 or 1 components, 0. Here 2 components => 1.\n\nD2_coherencia: We assess flow. Text flows: starts objective, describes methodology, mentions results expected, and significance. It's coherent, not too many jumps. I'd give 4. Let's analyze: transitions are natural, but some repeated \"actual\" \"actualizada\". No major breaks. I'd assign 4. Possibly 5? The text is fairly straightforward. I'd go 4.\n\nD3_contextualizacion: Is problem situated? The summary mentions \"en la empresa Maquinaria Ingenieros en Arequipa\", but not explain why it's important? It says \"reducing occupational diseases in that company.\" But no background like prevalence or significance. It just states objective. So probably 0. But does it situate? The first sentence: \"Esta investigación tiene como objetivo evaluar el control de riesgos disergonómicos para reducir las enfermedades ocupacionales en la empresa Maquinaria Ingenieros en Arequipa durante el año 2023.\" It includes location and company but not why it's important. Contextualization requires why it matters, who affected. The summary does not mention significance, so I'd put 0.\n\nD3_metodo_detallado: Must have at least 2 precisions: design, sample size, data collection methods. It has: design no experimental, 70 workers, full population, methods: observation direct, analysis documental, questionnaires. That is at least two. So 1.\n\nD3_resultados_concretos: Are there concrete results? Not present. It says \"se cuantificará...\" but no actual numbers. So 0.\n\nD3_conclusion_responde: No conclusion, so 0.\n\nD4_consistencia: Since no results, no conclusion, but methodology matches results? Since no results, consistency cannot be evaluated. According to protocol: If no methodology declared, D4 not evaluable. But we have methodology. For consistency, we need compare methodology vs results vs conclusion. There is no result or conclusion, so cannot evaluate consistency. The protocol says: If the summary does not declare any methodology, D4 not evaluable. But we have methodology, but no results or conclusions. How to score? We can maybe still evaluate consistency: Since we only have methodology, and no results/conclusion, there's nothing to conflict. But we cannot check consistency. Perhaps set D4_consistencia to null? But schema requires integer 1-5 or null. The schema allows null. But what does null represent? Might be used for no evaluation? The protocol says: \"If the summary does not declare any methodology, the D4 is not evaluable: set no_evaluable=1 and leave D4 blank.\" But we have methodology, so it's evaluable. But there is no results or conclusion to compare, but maybe D4=5? Or maybe we should set to 5 because no contradictions. But guidelines: D4 measures coherence between what the summary says it did and what it presents. If there are no results or conclusions, there's nothing to contradict. So could be 5? But the scoring rules: 5: \"Enfoque, diseño, resultados y conclusiones encajan sin fisuras.\" If no results or conclusions, maybe cannot satisfy. But we might treat as 5 because no conflict. But I'm not entirely certain. Another possibility: 5 not appropriate because missing components. Maybe 4? Let's look at examples: In example C, all components present and D4=5. In example B, D4=2 because contradiction. In example D, D4=4 due to using \"significativo\" without test. So D4 scoring depends on contradictions. If we have no results or conclusion, there's no contradiction. But also not complete. The description: \"Consistencia metodológica\" – coherence between what the summary says it did and what it presents. The present includes methodology but no results, so no conflict. We could set 5 because no inconsistency.\n\nHowever, maybe we should set to 5? Let's decide. Since no result or conclusion, can't contradict. The rule: if no methodology, no evaluation. We have methodology, so evaluation possible. No contradictory content. So set 5.\n\nno_evaluable: 0 (since it is a valid summary with methodology).\n\nObservaciones: Provide notes: mention no results or conclusion, no contextualization. Might note that lack of results and conclusion may impact dimensions 1 and 3. Provide short explanation.\n\nThus final JSON:\n\n{\n\"no_evaluable\": 0,\n\"observaciones\": \"...\",\nfields.\n\nLet's fill fields.\n\nD1_imryd_objetivo:1\nD1_imryd_metodologia:1\nD1_imryd_resultados:0\nD1_imryd_conclusiones:0\nD1_orden_logico:1\nD2_coherencia:4\nD3_contextualizacion:0\nD3_metodo_detallado:1\nD3_resultados_concretos:0\nD3_conclusion_responde:0\nD4_consistencia:5\n\nLet's produce JSON. Ensure compact."
+    }
+   }
+  ],
+  "created": 1789774872,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4f7e7dc26e",
+  "usage": {
+   "completion_tokens": 1564,
+   "prompt_tokens": 9893,
+   "total_tokens": 11457,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1402,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.194276206,
+   "prompt_time": 0.061164117,
+   "completion_time": 1.5896536810000002,
+   "total_time": 1.6508177979999998
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2veadq1ea8beye1txkrhfjb",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:41:12.504265+00:00"
+}

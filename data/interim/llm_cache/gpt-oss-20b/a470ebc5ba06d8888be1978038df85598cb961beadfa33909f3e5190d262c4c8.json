@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-158",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Coherencia evaluada como 5; consistencia 5, sin discrepancias."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Coherencia evaluada como 5; consistencia 5, sin discrepancias.\"}",
+ "usage": {
+  "input_tokens": 9981,
+  "output_tokens": 2136
+ },
+ "latency_s": 4.072482109069824,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T00:04:17.229361+00:00",
+ "raw": {
+  "id": "chatcmpl-1e2b4b90-ac7d-41df-9860-73405b7a0fe6",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Coherencia evaluada como 5; consistencia 5, sin discrepancias.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate according to the protocol. The fields required are: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nWe must decide for each field.\n\nLet's read summary.\n\nTitle: \"Calidad de atención de enfermería y satisfacción en el paciente del servicio de medicina del Hospital Regional Manuel Núñez Butrón - Puno, 2025.\"\n\nSummary:\n\n\"La calidad de la atención de enfermería es  fundamental en la experiencia hospitalaria del paciente. El objetivo general de esta investigación fue determinar la relación entre la calidad de atención de enfermería y la satisfacción de los pacientes del servicio de medicina del Hospital Regional Manuel Núñez Butrón - Puno, 2025. Metodología: Se realizó un estudio de enfoque cuantitativo, con diseño no experimental, transversal y de nivel descriptivo-correlacional. La muestra fue de tipo censo, conformada por 58 pacientes que cumplieron los criterios de inclusión durante el mes de octubre de 2025. Para la recolección de datos se utilizaron los cuestionarios validados Cuestionario de Evaluación de la Calidad Donabedian Modificado (para Calidad) y el Cuestionario SERVQUAL Modificado (para Satisfacción). Resultados: Los resultados descriptivos identificaron que el nivel de calidad de atención de enfermería predominante fue 'Regular' (55.17%), mientras que el nivel de satisfacción fue mayoritariamente 'Satisfecho' (68.97%). El análisis inferencial, mediante la prueba Rho de Spearman, demostró una correlación positiva, muy alta y estadísticamente significativa entre ambas variables. Conclusión: Se concluye que la calidad de atención de enfermería está directa y significativamente relacionada con la satisfacción del paciente. El nivel 'Regular' de la calidad es un factor determinante del nivel 'Satisfecho', evidenciando la necesidad de implementar planes de mejora en el cuidado humanizado para elevar la experiencia del paciente en el servicio.\"\n\nWe need to evaluate:\n\nD1_imryd_objetivo: The summary states \"El objetivo general de esta investigación fue determinar la relación entre la calidad de atención de enfermería y la satisfacción de los pacientes\". That is explicit and clear. So D1_imryd_objetivo = 1.\n\nD1_imryd_metodologia: There is a paragraph describing methodology: \"Se realizó un estudio de enfoque cuantitativo, con diseño no experimental, transversal y de nivel descriptivo-correlacional. La muestra fue de tipo censo, conformada por 58 pacientes ... Para la recolección de datos se utilizaron los cuestionarios validados ...\". That is method. So D1_imryd_metodologia = 1.\n\nD1_imryd_resultados: The summary has \"Los resultados descriptivos identificaron que el nivel de calidad de atención de enfermería predominante fue 'Regular' (55.17%), mientras que el nivel de satisfacción fue mayoritariamente 'Satisfecho' (68.97%). El análisis inferencial ... demostró una correlación positiva, muy alta y estadísticamente significativa entre ambas variables.\" That is result. So D1_imryd_resultados = 1.\n\nD1_imryd_conclusiones: \"Se concluye que la calidad de atención de enfermería está directa y significativamente relacionada con la satisfacción del paciente. El nivel 'Regular' de la calidad es un factor determinante del nivel 'Satisfecho', evidenciando la necesidad de implementar planes de mejora en el cuidado humanizado para elevar la experiencia del paciente en el servicio.\" This is a conclusion that responds to objective. It's an interpretation. So D1_imryd_conclusiones = 1.\n\nD1_orden_logico: Components present: objective, methodology, results, conclusion. Are they in correct order? Yes: objective first, then methodology, then results, then conclusion. So D1_orden_logico = 1.\n\nD2_coherencia: We need to judge flow 1-5. The text flows: start with quality of care, then objective, then methodology, then results, then conclusion. There's some repeated mention of \"calidad de atención\" but it's consistent. There's a bit of repetition but flow is pretty good. I'd rate 4 or 5. There's no abrupt jumps, though there is a slight switch from describing methodology to results, but that is normal. I would assign D2_coherencia = 4. Might be 5 but we can be conservative. Let's examine: \"La calidad de la atención de enfermería es fundamental...\" introduction. Then objective. Then methodology. Then results. Then conclusion. That is clear progression. No redundancies. So maybe 5. But check for repeated \"La calidad de la atención...\" at start and again in conclusion? But no major issue. I'd put 5. But D2_coherencia is from 1-5, with 5 being \"Progresión impecable. Cada oración prepara la siguiente. Se lee de un tirón\". This seems quite close to that. There's no \"un salto\" or repeated term. So 5. Ok.\n\nD3_contextualizacion: This asks if the summary situates the problem: why it matters, where occurs, to whom it affects, contrast with a norm or framework. The summary starts with \"La calidad de la atención de enfermería es fundamental en la experiencia hospitalaria del paciente.\" That situates the problem (importance). It mentions the service of medicine of the hospital, the patients, and 2025. So yes, contextualization present. So D3_contextualizacion = 1.\n\nD3_metodo_detallado: Must have at least two precisions: design, type of study, sample size, sampling technique, instrument, test. The summary gives design (no experimental, transversal, descriptivo-correlacional), sample size (58 patients), sampling (censo, type of census). Instruments: Cuestionarios validados. That is at least two precisions. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: Should provide specific content: percentages, numbers, categories, relations. The summary provides percentages for 'Regular' 55.17% and 'Satisfecho' 68.97%, correlation (positive, very high, statistically significant). It also mentions correlation via Spearman rho. That qualifies. So D3_resultados_concretos = 1.\n\nD3_conclusion_responde: Should respond to the objective. The objective: determine the relationship between quality and satisfaction. The conclusion: \"Se concluye que la calidad de atención de enfermería está directa y significativamente relacionada con la satisfacción del paciente.\" Yes, responds. So D3_conclusion_responde = 1.\n\nD4_consistencia: Must check if what is declared is consistent with what is presented. The summary declares a correlational study with descriptive results, and the conclusion states a direct relationship, consistent. There's no contradictory claims. So D4_consistencia = 5? Let's see: The D4 consistency scale: 5 is perfect coherence. 4: a minor terminological inaccuracy. 3: one visible discord. 2: several discord, or conclusion exceeds data. 1: open contradiction. Here, all good. But let's verify: They used \"muy alta\" correlation. They don't mention correlation coefficient value; they just say \"muy alta y estadísticamente significativa.\" That's fine. No contradictions. So D4_consistencia = 5.\n\nno_evaluable: The text is a summary; we can evaluate. So no_evaluable = 0.\n\nobservaciones: We might note any borderline decisions. For instance, we could note that we considered D2_coherencia as 5, maybe borderline. Could mention. But it's optional. Let's add a brief note: \"Se consideró coherencia 5; la estructura se percibe como impecable.\" Could also note that D4_consistencia 5 because no contradictions.\n\nWe'll produce JSON with these values.\n\nDouble-check schema: required fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nAll integer or null. Provide them as integers. Provide \"observaciones\" as string. We must use compact JSON formatting. We'll output:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Coherencia evaluada como 5; consistencia 5, sin discrepancias.\"\n}\n\nWe should ensure no trailing spaces. Use compact. Let's produce."
+    }
+   }
+  ],
+  "created": 1789776256,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_565badff47",
+  "usage": {
+   "completion_tokens": 2136,
+   "prompt_tokens": 9981,
+   "total_tokens": 12117,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1993,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.391149118,
+   "prompt_time": 0.645053333,
+   "completion_time": 2.353443547,
+   "total_time": 2.9984968800000003
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vfmme7ekbs3pvjpt6kn1sn",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-19T00:04:17.229455+00:00"
+}

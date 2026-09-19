@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-058",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica de los componentes IMRyD. La coherencia organizacional se califica en 4 debido a que el texto fluye bien, aunque presenta algunas repeticiones y salto de tema. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante la huella de carbono. La metodología detallada incluye el diseño, el enfoque y los límites operacionales. Los resultados son concretos con valores numéricos. La conclusión responde al objetivo establecido. La consistencia metodológica se califica en 3 debido a que la conclusión menciona una huella de carbono elevada, lo cual se alinea con los resultados, pero no se menciona explícitamente la consideración del alcance III."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica de los componentes IMRyD. La coherencia organizacional se califica en 4 debido a que el texto fluye bien, aunque presenta algunas repeticiones y salto de tema. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante la huella de carbono. La metodología detallada incluye el diseño, el enfoque y los límites operacionales. Los resultados son concretos con valores numéricos. La conclusión responde al objetivo establecido. La consistencia metodológica se califica en 3 debido a que la conclusión menciona una huella de carbono elevada, lo cual se alinea con los resultados, pero no se menciona explícitamente la consideración del alcance III.\"\n}",
+ "usage": {
+  "input_tokens": 10907,
+  "output_tokens": 336,
+  "total_duration_s": 10.7694153
+ },
+ "latency_s": 10.802234411239624,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:26:01.103517+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:26:01.0955999Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica de los componentes IMRyD. La coherencia organizacional se califica en 4 debido a que el texto fluye bien, aunque presenta algunas repeticiones y salto de tema. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante la huella de carbono. La metodología detallada incluye el diseño, el enfoque y los límites operacionales. Los resultados son concretos con valores numéricos. La conclusión responde al objetivo establecido. La consistencia metodológica se califica en 3 debido a que la conclusión menciona una huella de carbono elevada, lo cual se alinea con los resultados, pero no se menciona explícitamente la consideración del alcance III.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10769415300,
+  "load_duration": 14184100,
+  "prompt_eval_count": 10907,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 387334000,
+  "eval_count": 336,
+  "eval_duration": 10261300000
+ },
+ "cached_at_utc": "2026-09-19T02:26:01.103531+00:00"
+}

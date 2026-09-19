@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-115",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": null,
+  "no_evaluable": 1,
+  "observaciones": "Resumen no incluye metodología ni resultados, por lo que la consistencia no puede evaluarse. La sección de coherencia es aceptable con un flujo lógico moderado."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":0,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"Resumen no incluye metodología ni resultados, por lo que la consistencia no puede evaluarse. La sección de coherencia es aceptable con un flujo lógico moderado.\"}",
+ "usage": {
+  "input_tokens": 9878,
+  "output_tokens": 1595
+ },
+ "latency_s": 2.6306586265563965,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:40:41.464593+00:00",
+ "raw": {
+  "id": "chatcmpl-7a8f179d-4e8e-4f33-8819-9e1771f3a85f",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":0,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"Resumen no incluye metodología ni resultados, por lo que la consistencia no puede evaluarse. La sección de coherencia es aceptable con un flujo lógico moderado.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. Need to fill all required fields.\n\nWe need to interpret the summary for each dimension.\n\nLet's parse the summary.\n\nTitle: \"El impacto evangelístico de Edén radio en el Distrito Misionero del Tambo, Perú 2019-2021\"\n\nResumen: \n\"La radio es uno de los medios de comunicación más antiguos y eficaces que hasta el día de hoy sigue vigente. El aporte que ha hecho desde sus inicios ha sido asombrosos e innumerables para la sociedad. Han sido utilizado para realizar diversos tipos de programas radiales: música, noticias, etc.  La razón por la que se hace este proyecto es por dos razones: Valor teórico y práctico. Por su valor teórico, porque proporcionará información respecto al avance del evangelismo en el distrito misionero de El Tambo Bambamarca. Por su valor práctico y social, porque con este estudio se beneficiará a Edén Radio y al distrito misionero El Tambo Bambamarca, ya que el resultado del proyecto mostrará en resultados de qué manera y cuánto puede rendir el evangelismo a través de la radio. Objetivo principal es resaltar la actividad evangelística a través de la radio en el distrito de El Tambo Bambamarca. Y clarificar la influencia social de la radio en el distrito El Tambo Bambamarca. Por último, determinar la ganancia de almas a través de la radio en el mismo distrito.\"\n\nWe need to assess:\n\nD1_imryd_objetivo: presence of objective.\n\nThe summary includes: \"Objetivo principal es resaltar la actividad evangelística a través de la radio en el distrito de El Tambo Bambamarca. Y clarificar la influencia social de la radio en el distrito El Tambo Bambamarca. Por último, determinar la ganancia de almas a través de la radio en el mismo distrito.\" That seems an objective. The phrasing is explicit: \"Objetivo principal es resaltar ...\". So yes, D1_imryd_objetivo = 1.\n\nD1_imryd_metodologia: Need at least one concrete procedural indication. Let's read: There's no mention of methodology, sample, data collection, analysis. The summary does not describe how they will do it. So D1_metodologia = 0.\n\nD1_imryd_resultados: They say \"ya que el resultado del proyecto mostrará en resultados de qué manera y cuánto puede rendir el evangelismo a través de la radio\". This is a claim of future results but not actually results. They didn't present any data. So D1_resultados = 0.\n\nD1_imryd_conclusiones: They didn't include a conclusion; they only mention \"El objetivo principal...\". No conclusion. So D1_conclusiones = 0.\n\nD1_orden_logico: With only objective present. They have only one component. Since only objective is present, but rule: If 0 or 1 component present, D1_orden_logico = 0. So 0.\n\nD2_coherencia: Need to grade 1-5 coherence. We need to examine flow. The text: starts with general statements about radio, then rationale, then objective. It's somewhat disjointed. The flow is not great, but still understandable. We need to decide a number.\n\nObservations: The summary starts with general statements: \"La radio es uno de los medios...\" etc. Then \"La razón por la que se hace este proyecto es por dos razones: Valor teórico y práctico.\" Then details. Then objective. So the flow is: introduction of radio, rationale, objective. It's coherent but not strongly progressive: the objective appears after explanation. It might be considered decent: 3? Let's analyze:\n\n- 5: Impeccable progression: Each sentence prepares the next. Not quite.\n- 4: Flows well, but minor awkwardness. There might be some abruptness: after general introduction, jumps to reasons, but not too bad.\n- 3: Understandable but some jumps.\n- 2: Must reread.\n- 1: Incoherent.\n\nIt seems fairly coherent: 4 perhaps? But maybe 3. I'd lean 3. Let's examine more. The introduction is generic, the rationale is given, but the objective is at the end, after explanation. That's logical: you first explain why it's important, then state objective. That is standard. The flow is okay. There's no big jumps. So I'd say 4.\n\nBut check guidelines: D2_coherencia: 5 if progression impeccable, 4 if flows well with minor aspereza. 3 if understandable but some jumps. The jump between \"La razón por la que se hace este proyecto es por dos razones: Valor teórico y práctico\" and \"Por su valor teórico...\" is a bit awkward but acceptable. So 4 seems safe.\n\nLet's pick 4.\n\nNow D3_contextualizacion: Does summary situate the problem? It starts by saying radio is important, but doesn't mention why the impact matters, only general. It then states the objective. But not much context about the significance or why it's important in that district. So D3_contextualizacion = 0.\n\nD3_metodo_detallado: They don't mention sample, design, instruments. So 0.\n\nD3_resultados_concretos: They don't present results. So 0.\n\nD3_conclusion_responde: Since no conclusion, 0.\n\nD4_consistencia: If no methodology, D4 is not evaluable. The rule: If no methodology, D4 no_evaluable = 1 and D4_consistencia blank or null. But the schema requires D4_consistencia field, but can be null. In the schema, D4_consistencia is required, but can be null. So set D4_consistencia = null, and no_evaluable = 1.\n\nBut wait: D4_consistencia field is required and can be null. So we set \"D4_consistencia\": null. Also no_evaluable = 1.\n\nObservations: we can add note: \"Resumen no incluye metodología, no hay consistencia evaluable.\" Provide string.\n\nLet's fill all required fields:\n\n- D1_imryd_objetivo: 1\n- D1_imryd_metodologia: 0\n- D1_imryd_resultados: 0\n- D1_imryd_conclusiones: 0\n- D1_orden_logico: 0\n- D2_coherencia: 4\n- D3_contextualizacion: 0\n- D3_metodo_detallado: 0\n- D3_resultados_concretos: 0\n- D3_conclusion_responde: 0\n- D4_consistencia: null\n- no_evaluable: 1\n- observaciones: \"No se proporciona metodología ni resultados; la sección de consistencia no evaluable.\"\n\nLet's ensure JSON is compact and valid.\n\nNow produce the JSON object."
+    }
+   }
+  ],
+  "created": 1789774841,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c9afb2bdb4",
+  "usage": {
+   "completion_tokens": 1595,
+   "prompt_tokens": 9878,
+   "total_tokens": 11473,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1437,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.193277993,
+   "prompt_time": 0.49406909,
+   "completion_time": 1.676209821,
+   "total_time": 2.170278911
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2ve9ewhepsb1wbdj3s8bjx1",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:40:41.464615+00:00"
+}

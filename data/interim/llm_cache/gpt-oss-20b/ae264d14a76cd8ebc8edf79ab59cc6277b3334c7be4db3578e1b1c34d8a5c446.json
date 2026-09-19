@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-150",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "El resumen incluye ubicación e institución, pero no explica la importancia del estudio. La metodología es detallada y consistente con los resultados. El flujo es coherente sin saltos abruptos."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen incluye ubicación e institución, pero no explica la importancia del estudio. La metodología es detallada y consistente con los resultados. El flujo es coherente sin saltos abruptos.\"}",
+ "usage": {
+  "input_tokens": 9955,
+  "output_tokens": 2040,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 3.0972442626953125,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T00:03:24.064659+00:00",
+ "raw": {
+  "id": "chatcmpl-6c313cce-631c-41d7-8eb0-a828bb3b1f5d",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen incluye ubicación e institución, pero no explica la importancia del estudio. La metodología es detallada y consistente con los resultados. El flujo es coherente sin saltos abruptos.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones. All required.\n\nWe must analyze the summary to fill.\n\nLet's parse.\n\nResumen: \"La presente investigación se desarrolló con el propósito de determinar la relación entre autoestima y relaciones interpersonales en estudiantes del tercero al quinto semestre de la Facultad de Enfermería de la Universidad Nacional del Altiplano – Puno 2018, el estudio fue de tipo descriptivo con diseño correlacional, la muestra estuvo constituida por 98 estudiantes, la técnica utilizada fue la encuesta, y los instrumentos: uno que mide el nivel de autoestima a través de la escala de Rosenberg y el otro que mide las relaciones interpersonales, para el análisis de datos se utilizó la estadística inferencial y se comprobó la relación de las variables mediante la prueba Chi Cuadrada, los resultados muestran que existe relación entre autoestima y relaciones interpersonales, lo cual se comprueba mediante la prueba estadística de la Ji-Cuadrada X2c (13.14) > X2t (9.488). En cuanto a los resultados del nivel de autoestima 51,02% presentan autoestima alta, el 30,61% autoestima media y 18.37% autoestima baja; respecto a los resultados de las relaciones interpersonales el 56,12% presentan nivel alto, el 37.76% nivel medio y el 6,12% presentan nivel bajo. Se concluye que los estudiantes que presentaron autoestima de nivel alto muestran relaciones interpersonales favorables, y aquellos estudiantes que presentaron autoestima de nivel medio y bajo muestran relaciones interpersonales adecuados.\"\n\nWe must evaluate each dimension.\n\nFirst D1_imryd_objetivo: Is objective present? Yes: \"con el propósito de determinar la relación entre autoestima y relaciones interpersonales en estudiantes ...\". So yes 1.\n\nD1_imryd_metodologia: Must indicate how they did it. They mention type descriptivo, diseño correlacional, sample of 98, technique of survey, instruments: Rosenberg scale and another for interpersonal relations, analysis: inferential statistics, Chi-squared. This is adequate. So 1.\n\nD1_imryd_resultados: They present results: \"existe relación ... X2c (13.14) > X2t (9.488). En cuanto a los resultados ... 51,02% ... 30,61% ... 18.37%. ... 56,12% ... 37.76% ... 6,12%.\" So yes 1.\n\nD1_imryd_conclusiones: They give a conclusion: \"Se concluye que los estudiantes que presentaron autoestima de nivel alto muestran relaciones interpersonales favorables, y aquellos estudiantes que presentaron autoestima de nivel medio y bajo muestran relaciones interpersonales adecuados.\" That is a conclusion: responds to objective and interprets results. Yes 1.\n\nD1_orden_logico: Must check if the components are in logical order: objective, methodology, results, conclusion. The text: starts with objective, then methodology, then results, then conclusion. So 1.\n\nD2_coherencia: Flow. Let's evaluate: The summary flows: starts with objective, methodology, then results, then conclusion. Some sentences may be somewhat choppy but overall coherent. No obvious contradictions or abrupt jumps. We should score between 3-5. Let's examine: \"La presente investigación se desarrolló con el propósito de determinar ... el estudio fue de tipo descriptivo con diseño correlacional, la muestra estuvo constituida por 98 estudiantes, la técnica utilizada fue la encuesta, y los instrumentos: uno que mide el nivel de autoestima a través de la escala de Rosenberg y el otro que mide las relaciones interpersonales, para el análisis de datos se utilizó la estadística inferencial y se comprobó la relación de las variables mediante la prueba Chi Cuadrada, los resultados muestran que existe relación entre autoestima y relaciones interpersonales, lo cual se comprueba mediante la prueba estadística de la Ji-Cuadrada X2c (13.14) > X2t (9.488). En cuanto a los resultados del nivel de autoestima 51,02% presentan autoestima alta, el 30,61% autoestima media y 18.37% autoestima baja; respecto a los resultados de las relaciones interpersonales el 56,12% presentan nivel alto, el 37.76% nivel medio y el 6,12% presentan nivel bajo. Se concluye que los estudiantes que presentaron autoestima de nivel alto muestran relaciones interpersonales favorables, y aquellos estudiantes que presentaron autoestima de nivel medio y bajo muestran relaciones interpersonales adecuados.\"\n\nIt is somewhat dense but still coherent. There are no abrupt jumps. So rating maybe 5. But check for repetitiveness or adjetivization? No. Might be 5. We'll choose 5.\n\nD3_contextualizacion: Does the summary situate the problem? It mentions \"estudiantes del tercero al quinto semestre de la Facultad de Enfermería de la Universidad Nacional del Altiplano – Puno 2018\". That gives context (location, institution, year). It states purpose to determine relation. That is a contextualization. The example says D3_contextualizacion is 1 if the summary situates the problem: why it matters, where occurs, to whom it affects, against what standard. Here, we have context: location, population, but not the why it's important. However the definition says \"sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco se contrasta.\" We have \"donde ocurre\" (facultad de enfermería, universidad). We have \"a quién afecta\" (estudiantes). We lack explicit why it matters (importance). But we have \"para determinar la relación ...\", but not explicitly why that relationship matters. But context may still count. But the field is \"Contextualización\". I'd lean 1 because we have some context. The presence of location and target is contextual. So 1.\n\nD3_metodo_detallado: Must give at least two precisions about procedure: design, type, n, instrument, technique, test. They have design (descriptivo correlacional), sample (98), instrument (Rosenberg scale, other instrument), technique (survey), test (Chi-square). That's 5 precisions. So 1.\n\nD3_resultados_concretos: Must have concrete content: percentages, magnitudes, categories, or direction. They present percentages for both constructs. Also present chi-square statistic X2c=13.14, X2t=9.488. That's concrete. So 1.\n\nD3_conclusion_responde: Does conclusion answer the objective? Yes: objective was to determine relationship; conclusion says students with high self-esteem have favorable interpersonal relationships; those with medium or low have adequate. That responds to objective. So 1.\n\nD4_consistencia: Consistency between declared methodology and presented results. Are there contradictions? They declared type descriptivo correlacional; results present chi-square. They used chi-square test for independence between self-esteem level and interpersonal relationships. The conclusion states \"students with high self-esteem have favorable interpersonal relationships, those with medium/lower have adequate.\" That is consistent with the data? They gave percentages. They didn't specify whether differences were significant. They said \"existe relación\", but didn't mention significance. They gave chi-square value > critical. That indicates significance. So conclusion consistent. There's no contradiction. So D4_consistencia = 5.\n\nno_evaluable: The text is a summary, so 0.\n\nObservaciones: Any notes? We might note that \"Ji-Cuadrada X2c (13.14) > X2t (9.488)\" is included. We might note that there is a typographic difference between Chi-square vs Ji-Cuadrada. But it's okay. We might note that they mention \"estadística inferencial\" and \"prueba Chi Cuadrada\" but \"prueba estadística de la Ji-Cuadrada\" might be same. But we can note a minor inconsistency in naming but no effect. We might note that there is no explicit mention of why it matters. But we can mention. Let's write a short observation: \"El resumen incluye ubicación e institución, pero no explica la importancia del estudio. La metodología es detallada y consistente con los resultados. El flujo es coherente sin saltos abruptos.\"\n\nWe need to output JSON. Use compact JSON formatting. Ensure all required fields present. Provide integer values 0/1/5 etc. Observations string. Let's produce.\n\nCheck if no_evaluable type: integer 0. Observations type string. Good.\n\nLet's output."
+    }
+   }
+  ],
+  "created": 1789776203,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4f7e7dc26e",
+  "usage": {
+   "completion_tokens": 2040,
+   "prompt_tokens": 9955,
+   "total_tokens": 11995,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1878,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.189799525,
+   "prompt_time": 0.067734726,
+   "completion_time": 2.205635742,
+   "total_time": 2.273370468
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vfk1ejewbbxfepv95zdyym",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-19T00:03:24.064687+00:00"
+}

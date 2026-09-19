@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-009",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Contextualización insuficiente (0); flujo coherente con puntuación 4; no contradicciones detectadas en la consistencia metodológica."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Contextualización insuficiente (0); flujo coherente con puntuación 4; no contradicciones detectadas en la consistencia metodológica.\"}",
+ "usage": {
+  "input_tokens": 10255,
+  "output_tokens": 1487,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.392873525619507,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:46:43.447760+00:00",
+ "raw": {
+  "id": "chatcmpl-09e4e3b0-15b0-4284-8362-03854b0a94fc",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Contextualización insuficiente (0); flujo coherente con puntuación 4; no contradicciones detectadas en la consistencia metodológica.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields. Evaluate the summary according to protocol.\n\nLet's analyze summary.\n\nWe need fields:\n\nD1_imryd_objetivo (0/1)\nD1_imryd_metodologia (0/1)\nD1_imryd_resultados (0/1)\nD1_imryd_conclusiones (0/1)\nD1_orden_logico (0/1)\nD2_coherencia (1-5)\nD3_contextualizacion (0/1)\nD3_metodo_detallado (0/1)\nD3_resultados_concretos (0/1)\nD3_conclusion_responde (0/1)\nD4_consistencia (1-5)\nno_evaluable (0/1)\nobservaciones string.\n\nWe must decide each field.\n\nFirst, is this a summary? Yes, it's a summary. So no_evaluable=0.\n\nWe need to check each.\n\nD1_imryd_objetivo: Does summary state what was proposed? The summary includes: \"El presente estudio se realizó... Con el propósito de evaluar la producción de forraje de trigo de invierno... los objetivos específicos fueron: a)... b)... c) ...\". That includes objective. So D1_imryd_objetivo=1.\n\nD1_imryd_metodologia: Does it indicate how obtained knowledge? It states: \"El experimento se instaló empleando diseño estadístico Bloque Completo al Azar, con 4 tratamientos y 3 repeticiones.\" So yes, methodology. So D1_imryd_metodologia=1.\n\nD1_imryd_resultados: Does it report results, not methods. It includes numbers: number of germinated plants, etc. So yes, D1_imryd_resultados=1.\n\nD1_imryd_conclusiones: Does it have a conclusion that goes beyond repeating results, interprets, gives implication? The summary ends: \"Bajo el manejo de la presente investigación, la aplicación de microorganismos eficaces aumenta la rentabilidad en cuanto a nutrientes y producción de forraje pero en varios cortes al año mayor será la rentabilidad.\" That's a conclusion statement, interpreting results: \"aumenta la rentabilidad ...\". Yes. So D1_imryd_conclusiones=1.\n\nD1_orden_logico: Are the components present in order: objective, methodology, results, conclusion. In the summary, it starts with objective, then methodology, then results, then conclusion at end. The conclusion appears at end. The order is correct. So D1_orden_logico=1.\n\nD2_coherencia: Evaluate flow. We need to judge. The summary has some transitions; but might have some jumps: It starts with context: location details, then objective, then methodology, then results, then costs, then conclusion. It seems coherent but may have some abrupt jumps. Let's read.\n\nParagraph: \"El presente estudio se realizó en el Centro... Ubicado en el distrito...\" => introduction context. Then objective. Then methodology. Then results: \"Los resultados de muestran que el número de plantas germinadas fue mejor en el T2...\" Then details about plant numbers, heights, etc. Then \"Con la aplicación de EM, para contenido de proteína ...\" then cost of production. Then conclusion.\n\nIt seems fairly cohesive. We can rate maybe 4 out of 5. There's no glaring incoherence. So D2_coherencia=4.\n\nD3_contextualizacion: Does summary situate the problem: why it matters, where it occurs, to whom it affects, etc. The summary starts with context of location and institution. But does it explain why important? It says \"con el propósito de evaluar la producción de forraje de trigo de invierno...\". It doesn't explicitly state why it's important: but it sets location, but not context significance. So D3_contextualizacion likely 0. But maybe the location context is considered situating? The definition says: \"sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco se contrasta.\" The summary gives location but not importance. So 0.\n\nD3_metodo_detallado: Requires at least two precisions: design, sample size, instrument, etc. It says \"El experimento se instaló empleando diseño estadístico Bloque Completo al Azar, con 4 tratamientos y 3 repeticiones.\" That's design and number of treatments and reps. Also \"Con el propósito de evaluar la producción de forraje de trigo de invierno\" - not instrument. So at least 2 precisions: design and n (number of treatments). So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: Need content: values. Yes, it has many numeric results: percentages, numbers of plants, heights, etc. So D3_resultados_concretos = 1.\n\nD3_conclusion_responde: Does conclusion respond to objective? The objective: evaluate effect of different doses of EM on morphological characteristics, productivity, cost analysis, protein content. The conclusion: \"aplicación de microorganismos eficaces aumenta la rentabilidad en cuanto a nutrientes y producción de forraje...\" This responds to objective partially: it says increased rentability; but does it directly address morphological or productivity? It mentions nutrients and production of forage. That is part of objective. So yes, it responds. So D3_conclusion_responde=1.\n\nD4_consistencia: Consistency between what is said they did and what they present. Let's analyze for contradictions: The methodology: design and treatments. The results: they provide results for each treatment. They also talk about cost of production, benefit/cost ratio. There's no contradiction: they didn't claim significance but just gave results. They didn't mention any significance testing. No contradictions. So D4_consistencia = 5 (fully coherent). But check: Did they say \"Los resultados de muestran que...\" okay. They gave percentages but no significance values. No conflict. So 5.\n\nObservaciones: Any notes? Could note that contextualization is lacking. Also note that the summary has some minor incoherence transitions, but overall coherent. So we can write a short observation: \"Contextualización insuficiente; flujo coherente con puntuación 4; no contradicciones detectadas.\" We can keep it concise. But need to include a string.\n\nLet's produce JSON accordingly.\n\nCheck required fields all included. Ensure null not used. All fields numeric.\n\nLet's produce compact JSON.\n\n"
+    }
+   }
+  ],
+  "created": 1789775203,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4a35f7bd1b",
+  "usage": {
+   "completion_tokens": 1487,
+   "prompt_tokens": 10255,
+   "total_tokens": 11742,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1333,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.193356204,
+   "prompt_time": 0.068386517,
+   "completion_time": 1.5026239860000001,
+   "total_time": 1.5710105030000001
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vemgzdeg58ry60mdrjy49m",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:46:43.447772+00:00"
+}

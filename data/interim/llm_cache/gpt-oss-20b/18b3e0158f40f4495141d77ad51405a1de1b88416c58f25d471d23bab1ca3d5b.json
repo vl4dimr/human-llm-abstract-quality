@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-082",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen sin conclusión explícita y sin contextualización; flujo coherente; consistencia alta."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin conclusión explícita y sin contextualización; flujo coherente; consistencia alta.\"}",
+ "usage": {
+  "input_tokens": 10047,
+  "output_tokens": 2400,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 3.7324817180633545,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:05:18.713664+00:00",
+ "raw": {
+  "id": "chatcmpl-dfba4ce6-a67b-42b1-b420-ab6236d4c748",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin conclusión explícita y sin contextualización; flujo coherente; consistencia alta.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nWe need to evaluate each field.\n\nFirst, read the summary:\n\nTitle: \"Organizacional en el personal de enfermería del Hospital II-I de Ilave, El Collao – 2025.\"\n\nSummary:\n\n\"El objetivo del estudio fue analizar el compromiso organizacional en el personal de enfermería del Hospital II-I de Ilave, El Collao – 2025. La metodología fue cuantitativa, descriptiva, no experimental-transversal e hipotético deductiva. La técnica y el instrumento fueron la encuesta y un cuestionario, respectivamente. La muestra estudiada correspondió a 41 enfermeras (os) del Hospital II-I de Ilave. En resultados, se encontró que; primero, el compromiso organizacional en el personal de enfermería es regular, debido a que la mayor concentración se ubica en este nivel, con 34 enfermeras (os) que representan el 82.93% del total, entendiendo que el personal cumple sus funciones y reconoce cierto vínculo con el hospital, pero sin una identificación plena; segundo, el nivel de compromiso afectivo en el personal de enfermería es regular, porque es el nivel predominante concentrando a 16 enfermeras (os), lo que equivale al 39.02%, es decir, que las (os) enfermeras (os) sienten cierta pertenencia y aprecio por el hospital, aunque persisten emociones ambivalentes; tercero, el nivel de compromiso de continuidad en el personal de enfermería es bueno, debido a que existe una ligera predominancia de este nivel, con 15 enfermeras (os), lo que representa el 36.59% del total, de esa forma, el personal de enfermería decide permanecer principalmente porque perciben que salir generaría pérdidas en estabilidad, ingresos o trayectoria; por último, el nivel de compromiso normativo en el personal de enfermería es regular, porque se encontró que a la mayoría de las enfermeras (os) en este nivel, agrupando a 21 enfermeras (os), lo que corresponde al 51.22% del total, lo que significa que existe cierto sentido de deber y lealtad hacia el hospital y hacia el equipo, aunque no totalmente consolidado.\"\n\nWe need to evaluate each dimension.\n\n### D1_imryd_objetivo\n\nDefinition: 1 if can answer \"what was proposed to investigate\" reading only the summary. The summary explicitly states: \"El objetivo del estudio fue analizar el compromiso organizacional en el personal de enfermería del Hospital II-I de Ilave, El Collao – 2025.\" So yes, 1.\n\n### D1_imryd_metodologia\n\nDefinition: 1 if indicates how knowledge was obtained. The summary says: \"La metodología fue cuantitativa, descriptiva, no experimental-transversal e hipotético deductiva. La técnica y el instrumento fueron la encuesta y un cuestionario, respectivamente. La muestra estudiada correspondió a 41 enfermeras (os) del Hospital II-I de Ilave.\" That includes design, type, sample size, instrument. So 1.\n\n### D1_imryd_resultados\n\nDefinition: 1 if communicates what was found, not just what was done. The summary lists results: \"El compromiso organizacional es regular, con 34 enfermeras (os) que representan el 82.93% del total\" etc. So yes, 1.\n\n### D1_imryd_conclusiones\n\nDefinition: 1 if there is a closure that goes beyond repeating the result: interpretation, implication, answer to objective, recommendation. The summary ends with a description of the results but does not provide a separate conclusion section. It ends with \"lo que significa que existe cierto sentido de deber y lealtad hacia el hospital y hacia el equipo, aunque no totalmente consolidado.\" That is still part of results. There's no explicit conclusion that interprets or recommends. So D1_imryd_conclusiones = 0.\n\nBut we need to check if the last sentence is a conclusion. It says \"lo que significa que existe cierto sentido de deber y lealtad...\" This is an interpretation of the normativ level. But it's still part of results. The protocol says: \"Vale 1 cuando hay un cierre que va más allá de repetir el resultado: interpretación, implicación, respuesta explícita al objetivo, recomendación.\" The summary does not have a separate conclusion. It just ends with a statement that is still part of results. So 0.\n\n### D1_orden_logico\n\nDefinition: 1 if components present appear in logical sequence (objective → method → results → conclusion). If 0 or 1 components present, 0. Here we have objective, method, results. No conclusion. So we have 3 components present. They appear in order: objective first, method second, results third. So 1.\n\n### D2_coherencia\n\nScale 1-5. Evaluate flow. The summary is fairly long, but let's analyze.\n\nParagraph: objective, methodology, sample, results enumerated in bullet-like style separated by semicolons. The flow: objective, method, sample, results. The results are enumerated in a list: first, second, third, last. The sentences are somewhat long but coherent. There is no abrupt jump. The summary uses semicolons to separate results. The flow is fairly coherent. I'd rate 4 or 5. Let's examine potential issues: The summary uses \"En resultados, se encontró que; primero, el compromiso organizacional ...; segundo, el nivel de compromiso afectivo ...; tercero, el nivel de compromiso de continuidad ...; por último, el nivel de compromiso normativo ...\". This is a clear enumeration. The sentences are long but still coherent. There's no contradictory statements. So I'd give 5. But we need to consider that the summary is a bit repetitive: \"el compromiso organizacional es regular, ... 82.93%\" etc. But still coherent. I'd give 5.\n\nBut we need to check if any issues: The summary uses \"en el personal de enfermería es regular, debido a que la mayor concentración se ubica en este nivel, con 34 enfermeras (os) que representan el 82.93% del total, entendiendo que el personal cumple sus funciones y reconoce cierto vínculo con el hospital, pero sin una identificación plena\". This is a long sentence but still coherent. The next sentences are similar. So I'd give 5.\n\n### D3_contextualizacion\n\nDefinition: 1 if the summary situates the problem: why it matters, where it occurs, to whom it affects, against what norm or framework. The summary starts with objective but does not provide context. It does not explain why the commitment matters, or what the problem is. So 0.\n\n### D3_metodo_detallado\n\nDefinition: 1 if at least two precisions about procedure: design, type of study, sample size, technique of sampling, instrument named, statistical test, corpus, number of observations, selection criteria. The summary includes: \"La metodología fue cuantitativa, descriptiva, no experimental-transversal e hipotético deductiva.\" That's design, type. \"La técnica y el instrumento fueron la encuesta y un cuestionario, respectivamente.\" That's instrument. \"La muestra estudiada correspondió a 41 enfermeras (os) del Hospital II-I de Ilave.\" That's sample size. So at least 3 precisions. So 1.\n\n### D3_resultados_concretos\n\nDefinition: 1 if results provide specific content: figures, magnitudes, categories named, relationships with direction. The summary provides percentages: 82.93%, 39.02%, 36.59%, 51.22%. Also categories: \"regular\", \"regular\", \"bueno\", \"regular\". So yes, 1.\n\n### D3_conclusion_responde\n\nDefinition: 1 if conclusion responds to the objective. Since there is no conclusion, 0.\n\n### D4_consistencia\n\nDefinition: 1-5 scale. We need to evaluate consistency between what the summary says it did and what it presents. The summary says: \"La metodología fue cuantitativa, descriptiva, no experimental-transversal e hipotético deductiva.\" It then presents results: percentages for each level of commitment. The conclusion is missing. But consistency: The summary says it's a quantitative descriptive study, no experimental, but it reports percentages. That is consistent. There's no contradictory statements. There's no mention of statistical tests. But that's not a contradiction. There's no claim of significance. So consistency is high. I'd give 5.\n\nBut we need to check if any contradictions: The summary says \"El compromiso organizacional es regular, ... 82.93%\" etc. There's no mention of significance. So no contradictions. So D4_consistencia = 5.\n\n### no_evaluable\n\nSet to 0 because it's a valid summary.\n\n### observaciones\n\nWe should add any notes. We might note that there is no conclusion, so D1_imryd_conclusiones = 0. Also note that the summary is long but coherent. Also note that the summary uses \"en resultados, se encontró que; primero, ...\" which is fine. We might mention that the summary lacks contextualization. Also mention that the summary uses \"en resultados\" but not \"conclusiones\". So we can add a short observation: \"No conclusión explícita; falta contextualización; flujo coherente; consistencia alta.\" But we need to keep it concise.\n\nLet's produce JSON.\n\nCheck schema: all fields required. Provide integer or null. Provide no_evaluable as integer 0. Observaciones string.\n\nLet's produce JSON:\n\n{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 5,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 5,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"Resumen sin conclusión explícita y sin contextualización; flujo coherente; consistencia alta.\"\n}\n\nCheck that all fields present. Yes.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789700718,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_d23c14756c",
+  "usage": {
+   "completion_tokens": 2400,
+   "prompt_tokens": 10047,
+   "total_tokens": 12447,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2257,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.212287784,
+   "prompt_time": 0.070488797,
+   "completion_time": 2.448487631,
+   "total_time": 2.518976428
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7kd82ests2z1kt1cz2dt7",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:05:18.713760+00:00"
+}

@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-039",
+ "model_name": "mistral-7b",
+ "provider": "ollama",
+ "model": "mistral:latest",
+ "model_reported": "mistral:latest",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "El resumen no proporciona información sobre el departamento o la ciudad a los que se refiere"
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 5,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen no proporciona información sobre el departamento o la ciudad a los que se refiere\"\n}",
+ "usage": {
+  "input_tokens": 12787,
+  "output_tokens": 214,
+  "total_duration_s": 6.5614947
+ },
+ "latency_s": 6.589097023010254,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:12:04.612799+00:00",
+ "raw": {
+  "model": "mistral:latest",
+  "created_at": "2026-09-19T01:12:04.6105889Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 5,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen no proporciona información sobre el departamento o la ciudad a los que se refiere\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 6561494700,
+  "load_duration": 7141800,
+  "prompt_eval_count": 12787,
+  "prompt_eval_cached_count": 12155,
+  "prompt_eval_duration": 437807000,
+  "eval_count": 214,
+  "eval_duration": 6008755000
+ },
+ "cached_at_utc": "2026-09-19T01:12:04.612824+00:00"
+}

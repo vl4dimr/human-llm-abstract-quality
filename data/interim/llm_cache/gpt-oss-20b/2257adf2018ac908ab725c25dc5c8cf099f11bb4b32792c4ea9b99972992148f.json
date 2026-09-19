@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-130",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 10161,
+  "output_tokens": 1514
+ },
+ "latency_s": 3.0140089988708496,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:42:21.345073+00:00",
+ "raw": {
+  "id": "chatcmpl-fbdd4825-f43f-4651-84dc-22ab68eba06b",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate according to protocol. We must produce JSON with fields as specified. Need to evaluate each field.\n\nWe analyze the summary:\n\nTitle: \"Conocimiento nutricional, actividad física, estado de ánimo, satisfacción corporal y satisfacción con la vida en vegetarianos y no-vegetarianos\"\n\nSummary: Provided.\n\nWe must identify:\n\n- D1_imryd_objetivo: 1? The objective is stated: \"Determinar la relación entre conocimientos nutricionales, patrón dietario, actividad física, estado de ánimo, satisfacción corporal y satisfacción con la vida en adultos colombianos vegetarianos y no vegetarianos.\" This is an explicit objective. So 1.\n\n- D1_imryd_metodologia: We must check if there is an indication of how they obtained knowledge. The summary says \"Materiales y métodos: Estudio con enfoque cuantitativo, observacional, de tipo correlacional multivariado, y de corte trasversal. Se analizaron las variables ... La muestra (N=478) ... la selección de la muestra se realizó por muestreo no probabilístico de tipo accidental. Los datos fueron recolectados a través de un cuestionario On-line, procesados a través del programa SPSS 24 y analizados mediante estadística descriptiva, y la prueba de correlación Rho de Spearman, considerándose un nivel de significancia de 0.05.\" This is definitely methodology. So D1_imryd_metodologia = 1.\n\n- D1_imryd_resultados: Are results present? The summary provides correlations, p-values, etc. Yes. So 1.\n\n- D1_imryd_conclusiones: The conclusion says: \"Estos resultados sugieren la importancia de la educación nutricional y como esta debería adoptar un enfoque integral que incluya no solo aspectos nutricionales, sino que considere la relación entre la alimentación, la actividad física y el bienestar emocional para promover hábitos saludables y una mejor calidad de vida.\" That's a conclusion, yes. So 1.\n\n- D1_orden_logico: Check if present components are in logical sequence: objective, method, results, conclusion. They are. So 1.\n\n- D2_coherencia: Evaluate coherence flow. Let's analyze. The summary flows: Objective, Materiales y métodos (methodology), Resultado (results) with specific correlations, and Conclusion. It appears coherent. Might be slightly heavy on correlations, but overall good. So score 5 maybe? But we need to consider any possible jumps or terminological issues. The summary uses same terms: \"Satisfacción corporal\", \"Satisfacción con la vida\", etc. Terminology is consistent. There are no abrupt shifts. The flow is from objective, methods, results, conclusion. So likely 5. But we might consider that the conclusion is long but still coherent. So D2_coherencia = 5.\n\n- D3_contextualizacion: This field requires the summary to situate the problem: why important, where, to whom, etc. The summary does not start with context; it jumps directly to objective. There is no background about importance of these variables. It doesn't mention why study is important or where it happens; though it does mention adult Colombian, but not the significance. So D3_contextualizacion = 0.\n\n- D3_metodo_detallado: At least two precisions: design, n, sampling method, instrument, software, test, etc. We have: quantitative observational correlational multivariate, cross-sectional; sample 478, vegetarian 157, non-vegetarian 321; non-probabilistic accidental sampling; online questionnaire; SPSS 24; Spearman rho; significance 0.05. That's many precisions: definitely >=2. So D3_metodo_detallado = 1.\n\n- D3_resultados_concretos: Are results concrete? Yes: correlation coefficients with p-values, etc. So 1.\n\n- D3_conclusion_responde: Conclusion responds to the objective? The objective was to determine relationship between variables. The conclusion suggests importance of education, integral approach. Does it respond to objective? The objective is about relationship between variables; the conclusion basically says results suggest importance of education and integrative approach. This is derived from correlations. It does answer the objective: it states that results suggest importance of education to integrate these variables. Yes, it responds. So D3_conclusion_responde = 1.\n\n- D4_consistencia: Consistency between what was said to have been done and what is presented. Evaluate: Method says it's correlational cross-sectional, using questionnaire, Spearman correlation. Results present correlations. Conclusion interprets that results suggest importance of education. Does any contradiction? Not really. No mention of causal claims. So consistency is good. Score 5.\n\nBut check for any issue: The conclusion might be slightly broad: \"como esta debería adoptar un enfoque integral que incluya no solo aspectos nutricionales, sino que considere la relación entre la alimentación, la actividad física y el bienestar emocional para promover hábitos saludables y una mejor calidad de vida.\" It does not overextend; it's consistent with correlational results. So D4_consistencia = 5.\n\n- no_evaluable: This is not a non-summary; it's a valid summary. So no_evaluable = 0.\n\n- observaciones: We might add a note about something. But optional. We can leave empty string or maybe a note about conclusion responds. The schema says string type. We can include an observation or leave empty string. Probably leave empty string.\n\nWe need to produce JSON with all required fields.\n\nDouble-check field names: from schema: D1_imryd_conclusiones, D1_imryd_metodologia, D1_imryd_objetivo, D1_imryd_resultados, D1_orden_logico, D2_coherencia, D3_conclusion_responde, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D4_consistencia, no_evaluable, observaciones.\n\nWe should output compact JSON. All integer values 0 or 1, no null. So produce:\n\n{\n\"D1_imryd_objetivo\":1,\n\"D1_imryd_metodologia\":1,\n\"D1_imryd_resultados\":1,\n\"D1_imryd_conclusiones\":1,\n\"D1_orden_logico\":1,\n\"D2_coherencia\":5,\n\"D3_contextualizacion\":0,\n\"D3_metodo_detallado\":1,\n\"D3_resultados_concretos\":1,\n\"D3_conclusion_responde\":1,\n\"D4_consistencia\":5,\n\"no_evaluable\":0,\n\"observaciones\":\"\"\n}\n\nCheck for field order: not required. Ensure JSON parses. Good.\n\nReturn only the JSON."
+    }
+   }
+  ],
+  "created": 1789774940,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_9b8528b477",
+  "usage": {
+   "completion_tokens": 1514,
+   "prompt_tokens": 10161,
+   "total_tokens": 11675,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1388,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.238781169,
+   "prompt_time": 0.592634872,
+   "completion_time": 1.561130747,
+   "total_time": 2.153765619
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vecgczeyf863zb2gdnrzyn",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:42:21.345097+00:00"
+}

@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-110",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen sin conclusión; falta contextualización; coherencia aceptable"
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin conclusión; falta contextualización; coherencia aceptable\"}",
+ "usage": {
+  "input_tokens": 10057,
+  "output_tokens": 1328
+ },
+ "latency_s": 2.3151662349700928,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:40:10.180923+00:00",
+ "raw": {
+  "id": "chatcmpl-314a02fc-adac-4ff7-9e7c-25f8b1af29b7",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin conclusión; falta contextualización; coherencia aceptable\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. We need to fill all required fields. Let's examine the summary.\n\nWe need to decide each field.\n\nSummary content:\n\n\"El presente trabajo de investigación se realizó en el laboratorio de Anatomía Animal de la Facultad de Medicina Veterinaria y Zootecnia de la UNA-Puno, con el objetivo de realizar la descripción morfológica de la anatomía del cuy silvestre (Cavia tschudii); ...\"\n\nLet's break down.\n\nFirst, determine D1_imryd_objetivo: Objective present? The summary states: \"con el objetivo de realizar la descripción morfológica de la anatomía del cuy silvestre.\" That is a clear objective. So D1_imryd_objetivo = 1.\n\nD1_imryd_metodologia: The summary indicates methodology: \"se utilizó diez muestras de cuyes silvestres adultos: cinco hembras y cinco machos. Iniciando primeramente con la autorización ... luego con la colecta correspondiente ... se anestesio y se procedió con la eutanasia, para realizar la descripción de las características anatómicas ...\". It gives sample size, procedure: anesthesia, euthanasia, descriptive analysis. That is a methodology. So D1_imryd_metodologia = 1.\n\nD1_imryd_resultados: Does it report results? It says: \"obteniendo los siguientes resultados: la cabeza del cuy silvestre es muy pequeña a diferencia del cuy doméstico y forma cónica y longitud variable ,los bordes de las orejas son convexas; dirigidas hacia adelante, desprovistas de pelo, de forma cónica y  el diente incisivo es alargado con una curvatura hacia adentro, el cuello es corto y cilíndrico, pulmones pequeños y divididos en lóbulos y cisuras, corazón pequeño en proporción a su cuerpo, el pene; es pequeño y cilíndrico ...\". So it lists descriptive morphological features. These are results? In descriptive studies, describing morphology is indeed a result. So D1_imryd_resultados = 1.\n\nD1_imryd_conclusiones: Does it provide a conclusion? The summary ends with description, no explicit concluding sentence summarizing or interpreting. No closing that interprets the significance. So D1_imryd_conclusiones = 0. The summary ends with \"de la cobaya silvestre los ovarios son de forma ovalada y ligeramente alargada.\" It doesn't interpret or answer objective. So 0.\n\nD1_orden_logico: Are components in order? Objective appears, then methodology, then results. Conclusion missing. Order of those present (objective, methodology, results) is correct. So D1_orden_logico = 1.\n\nD2_coherencia: We need to assess flow 1-5.\n\nLet's examine text flow. The summary starts: \"El presente trabajo de investigación se realizó en el laboratorio ... con el objetivo de realizar la descripción morfológica de la anatomía del cuy silvestre ...; ... se utilizó diez muestras ... . Iniciando primeramente con la autorización ... luego con la colecta correspondiente ... en la Península ... Posteriormente se anestesio y se procedió con la eutanasia, para realizar la descripción de las características anatómicas de los diferentes órganos, para luego compararlos con los cuyes domésticos, obteniendo los siguientes resultados: ...\". So flow: objective, then methodology details, then results. The text is fairly coherent. Some repetition: \"se utilizó diez muestras ...; Iniciando primeramente con la autorización ...\". Slightly abrupt but understandable. I would give coherence score 4. There's no major jump. So D2_coherencia = 4.\n\nD3_contextualizacion: Does summary situate problem? It says research done in lab, but doesn't explain why important, why morphological description needed. No context beyond location of study. So D3_contextualizacion = 0.\n\nD3_metodo_detallado: Need at least two precisions. The summary gives: sample size (10), sex breakdown, location of collection, anesthesia, euthanasia. That is more than 2 precisions. So 1.\n\nD3_resultados_concretos: The summary lists specific morphological characteristics but not quantitative values except maybe head small, etc. But morphological description qualifies as concrete result. The summary says \"la cabeza del cuy silvestre es muy pequeña a diferencia del cuy doméstico\" etc. That's a concrete description. So 1.\n\nD3_conclusion_responde: Since no conclusion, 0.\n\nD4_consistencia: This dimension 1-5 consistency between what was said was done and what was presented. No contradictions. The summary describes methodology and presents results that are derived from the methodology. No contradictions. So consistency = 5.\n\nno_evaluable: This is not a non-summary. So 0.\n\nobservaciones: any notes. Could note lack of conclusion. Also maybe note that it didn't provide context, etc. Provide a short string.\n\nLet's produce JSON. Must be compact. Let's check schema: all fields required.\n\nFields list: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nAll must be present. Provide values 0 or 1, etc.\n\nObservations string: \"Resumen sin conclusión; falta contextualización; coherencia aceptable\". Keep simple.\n\nNow produce JSON:"
+    }
+   }
+  ],
+  "created": 1789774809,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_996f667773",
+  "usage": {
+   "completion_tokens": 1328,
+   "prompt_tokens": 10057,
+   "total_tokens": 11385,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1191,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.148292582,
+   "prompt_time": 0.5394195,
+   "completion_time": 1.363563469,
+   "total_time": 1.902982969
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2ve8gmret9r85fzbe4d9q2a",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:40:10.180937+00:00"
+}

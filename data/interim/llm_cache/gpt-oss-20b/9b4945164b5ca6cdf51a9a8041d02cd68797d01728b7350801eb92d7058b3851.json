@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-109",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 10043,
+  "output_tokens": 1878,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.6076323986053467,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:58:29.803704+00:00",
+ "raw": {
+  "id": "chatcmpl-6424c33c-512c-427b-896e-0b62c100436a",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields per schema. Must read the summary, annotate per protocol.\n\nSummary details: Title irrelevant. Let's parse content.\n\nParagraphs: The summary:\n\n1. \"El presente trabajo de investigación tiene como objetivo: Analizar los factores socioeconómicos que inciden en la generación de per cápita de residuos sólidos domiciliarios en el distrito de Puno.\"\n\nSo objective present.\n\n2. \"Para lo cual se ha realizado a través del modelo de regresión lineal, un análisis de correlación con datos de corte transversal obtenido mediante encuestas realizadas a 95 viviendas del distrito de Puno, posteriormente se ha recolectado los residuos sólidos domiciliarios durante ocho días en las viviendas encuestados.\"\n\nMethodology: includes model of regression lineal, analysis of correlation, data cross-sectional, surveys of 95 homes, collection of solid waste for 8 days. That's methodological details; includes n=95. So methodology present, with precision.\n\n3. \"Los resultados muestran que la situación actual de la generación per cápita de residuos sólidos domiciliarios en las viviendas encuestados es de 0.91 kg/hab/día, de los cuales el 40.05% es materia orgánica y el 27.35% son plásticos y el 12.88% es papel y en otros elementos como, madera, cartón, vidrio, etc. no tienen mayor significancia.\"\n\nResults present with concrete numbers: 0.91 kg/hab/día; 40.05% organic, 27.35% plastic, 12.88% paper; also mention no significance for others.\n\nAlso later: \"Asimismo, se obtuvo una densidad promedio de 2402.17 Kg./m3.\" Another result: density.\n\n4. \"Por otro lado se determinó que los factores socioeconómicos que inciden positivamente en la generación per cápita de residuos sólidos domésticos son ingreso familiar (INGF) y numero de miembro de la vivienda (NMV) en tanto que la variable de nivel de educación del jefe del hogar (NEDU) incide negativamente en la generación de residuos sólidos domiciliarios per cápita, y finalmente se ha propuesto el plan de minimización de residuos sólidos domiciliarios, a través del potencial reaprovechamiento de residuos recuperables donde es posible reducir hasta 59.95% de residuos sólidos domiciliarios donde se cuentan con un mercado de comercialización que asciende a un total de 11718.39 kg/mes de residuos reciclables y aprovechables totales, lo que generaría beneficios económicos de 5925.66 soles al mes.\"\n\nSo more results: socioecon variables effect; plan of minimization proposed (intervention). This could be considered a conclusion? It's more like interpretation: \"plan de minimización\" - that might be a recommendation. So conclusion present: yes, interprets results and proposes plan.\n\nCheck if any conclusion separate? There's no explicit concluding sentence but the last clause \"se ha propuesto el plan de minimización\" can be considered conclusion. Also \"generaría beneficios económicos...\" is implication.\n\nThus we have objective, methodology, results, conclusions. All four present.\n\nNow check for each D1 fields:\n\nD1_imryd_objetivo: 1 (objective present).\n\nD1_imryd_metodologia: 1 (methodology present with concrete details).\n\nD1_imryd_resultados: 1 (results present with concrete data).\n\nD1_imryd_conclusiones: 1 (conclusion present as plan and implication).\n\nD1_orden_logico: we need to evaluate order: components present appear in order: objective -> method -> results -> conclusion. Yes. So D1_orden_logico = 1.\n\nNow D2_coherencia: Flow of text. Let's assess coherence:\n\nParagraph 1: objective. Paragraph 2: method. Paragraph 3: results. Paragraph 4: further results + plan.\n\nCheck for flow: The summary flows logically from objective to method to results to conclusion. No major jumps. Some might note that the sentence \"Por otro lado se determinó que los factores socioeconómicos...\" is part of results. The plan is at end. It's fine. No abrupt transitions. So high coherence: maybe 5. Let's examine for issues: It uses \"Para lo cual se ha realizó a través del modelo de regresión lineal, un análisis de correlación con datos de corte transversal obtenido mediante encuestas realizadas a 95 viviendas del distrito de Puno, posteriormente se ha recolectado...\" The wording \"se ha realizado a través del modelo...\" is not perfect grammar but acceptable. The flow is okay.\n\nThus D2_coherencia likely 5.\n\nD3 fields:\n\n- D3_contextualizacion: context of problem. Does summary set context? It says \"generación per cápita de residuos sólidos domiciliarios en el distrito de Puno\". It explains the situation: but does it explain why it's important? The objective is to analyze factors. It doesn't explain significance of problem or why important. So D3_contextualizacion = 0.\n\n- D3_metodo_detallado: must have at least two precisions. The summary gives: \"modelo de regresión lineal\", \"análisis de correlación\", \"datos de corte transversal\", \"encuestas realizadas a 95 viviendas\", \"recolección de residuos durante ocho días\". That's more than 2. So D3_metodo_detallado = 1.\n\n- D3_resultados_concretos: must give specific numbers. It includes 0.91 kg/hab/día, percentages, density 2402.17 Kg/m3. Also mentions 59.95% reduction, 11718.39 kg/mes, 5925.66 soles. So yes. So D3_resultados_concretos = 1.\n\n- D3_conclusion_responde: conclusion must answer the objective. The conclusion includes plan to reduce 59.95% etc. That addresses the objective: analyzing factors and propose plan. The conclusion interprets results and proposes action. It does respond to objective? The objective was to analyze factors. The conclusion says plan to minimize. It uses the results to propose plan, yes. So D3_conclusion_responde = 1.\n\nD4_consistencia: Must evaluate consistency between what was declared and what is presented. Check for contradictions.\n\nCheck method vs results: They say regression lineal and correlation analysis. The results include correlation results? They didn't mention correlation coefficients but they mention percentages of composition of waste. That's fine. They mention variables inciden positively and negatively but don't provide numeric values or correlation coefficients; still they present results. No contradictions.\n\nPlan of minimization: They propose reduce 59.95% of waste; this is consistent with results? They didn't quantify that reduction based on any analysis, but it's plausible. No direct conflict with presented data.\n\nCheck for contradictions like \"no tienen mayor significancia\" but later mention plan to reduce; no contradiction. They didn't claim significance for plastic etc. So no contradictory conclusion. So D4_consistencia should be high, maybe 5? Let's check if any discordance: They used \"se ha propuesto el plan de minimización de residuos sólidos domiciliarios, a través del potencial reaprovechamiento de residuos recuperables donde es posible reducir hasta 59.95% de residuos sólidos domiciliarios donde se cuentan con un mercado de comercialización...\" No statistical test for plan; but not contradictory.\n\nThus D4_consistencia = 5.\n\nno_evaluable: Since it's a valid summary with methodology, not a non-summary, no_evaluable=0.\n\nobservaciones: We may include a note, maybe no special issues.\n\nSo produce JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"\"\n}\n\nMake sure JSON uses compact formatting. No trailing comma.\n\nCheck schema: each field exists, type matches. \"observaciones\" string; can be empty string. Good.\n\nLet's output."
+    }
+   }
+  ],
+  "created": 1789775909,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_80501ff3a1",
+  "usage": {
+   "completion_tokens": 1878,
+   "prompt_tokens": 10043,
+   "total_tokens": 11921,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1752,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.272848579,
+   "prompt_time": 0.066280266,
+   "completion_time": 1.998696241,
+   "total_time": 2.064976507
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vfa26seq5vse10df6ps1hq",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:58:29.803847+00:00"
+}

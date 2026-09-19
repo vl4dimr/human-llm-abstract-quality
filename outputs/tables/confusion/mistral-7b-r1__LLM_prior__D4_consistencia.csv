@@ -1,0 +1,6 @@
+,LLM_prior=1,LLM_prior=2,LLM_prior=3,LLM_prior=4,LLM_prior=5
+mistral-7b#r1=1,0.0,0.0,0.0,0.0,0.0
+mistral-7b#r1=2,0.0,0.0,0.0,0.0,0.0
+mistral-7b#r1=3,0.0,4.0,2.0,7.0,5.0
+mistral-7b#r1=4,2.0,6.0,11.0,17.0,15.0
+mistral-7b#r1=5,7.0,14.0,9.0,23.0,23.0

@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-157",
+ "model_name": "mistral-7b",
+ "provider": "ollama",
+ "model": "mistral:latest",
+ "model_reported": "mistral:latest",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "Se anota el método detallado como 1 a pesar de la falta de un número específico de preguntas, ya que se considera que la respuesta se refiere a una pregunta en particular."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"Se anota el método detallado como 1 a pesar de la falta de un número específico de preguntas, ya que se considera que la respuesta se refiere a una pregunta en particular.\"\n}",
+ "usage": {
+  "input_tokens": 12462,
+  "output_tokens": 241,
+  "total_duration_s": 6.7364902
+ },
+ "latency_s": 6.7646238803863525,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:24:33.776602+00:00",
+ "raw": {
+  "model": "mistral:latest",
+  "created_at": "2026-09-19T01:24:33.7669796Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"Se anota el método detallado como 1 a pesar de la falta de un número específico de preguntas, ya que se considera que la respuesta se refiere a una pregunta en particular.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 6736490200,
+  "load_duration": 4499600,
+  "prompt_eval_count": 12462,
+  "prompt_eval_cached_count": 12155,
+  "prompt_eval_duration": 224151000,
+  "eval_count": 241,
+  "eval_duration": 6408438000
+ },
+ "cached_at_utc": "2026-09-19T01:24:33.776631+00:00"
+}

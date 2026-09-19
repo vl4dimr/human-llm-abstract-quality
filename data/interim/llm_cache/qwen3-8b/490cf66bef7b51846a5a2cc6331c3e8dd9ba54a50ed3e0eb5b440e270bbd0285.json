@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-084",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica (objetivo → metodología → resultados → conclusiones), cumpliendo con la estructura IMRyD. La coherencia organizacional es buena, pero se podría mejorar con una mejor conexión entre los resultados y las conclusiones. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué el tema es importante. La metodología es detallada, ya que se menciona el diseño, la muestra y el instrumento utilizado. Los resultados son concretos, ya que se reportan porcentajes y valores numéricos. La conclusión responde al objetivo, ya que se menciona la relación entre el consumo de comida rápida y el estado nutricional. La consistencia metodológica es moderada, ya que las conclusiones se basan en los resultados, pero se podría mejorar al mencionar más claramente la relación entre las variables."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica (objetivo → metodología → resultados → conclusiones), cumpliendo con la estructura IMRyD. La coherencia organizacional es buena, pero se podría mejorar con una mejor conexión entre los resultados y las conclusiones. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué el tema es importante. La metodología es detallada, ya que se menciona el diseño, la muestra y el instrumento utilizado. Los resultados son concretos, ya que se reportan porcentajes y valores numéricos. La conclusión responde al objetivo, ya que se menciona la relación entre el consumo de comida rápida y el estado nutricional. La consistencia metodológica es moderada, ya que las conclusiones se basan en los resultados, pero se podría mejorar al mencionar más claramente la relación entre las variables.\"\n}",
+ "usage": {
+  "input_tokens": 10986,
+  "output_tokens": 352,
+  "total_duration_s": 12.2363309
+ },
+ "latency_s": 12.258218050003052,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:00:39.991711+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:00:39.9809625Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica (objetivo → metodología → resultados → conclusiones), cumpliendo con la estructura IMRyD. La coherencia organizacional es buena, pero se podría mejorar con una mejor conexión entre los resultados y las conclusiones. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué el tema es importante. La metodología es detallada, ya que se menciona el diseño, la muestra y el instrumento utilizado. Los resultados son concretos, ya que se reportan porcentajes y valores numéricos. La conclusión responde al objetivo, ya que se menciona la relación entre el consumo de comida rápida y el estado nutricional. La consistencia metodológica es moderada, ya que las conclusiones se basan en los resultados, pero se podría mejorar al mencionar más claramente la relación entre las variables.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 12236330900,
+  "load_duration": 3003100,
+  "prompt_eval_count": 10986,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 447730000,
+  "eval_count": 352,
+  "eval_duration": 11704598000
+ },
+ "cached_at_utc": "2026-09-19T02:00:39.991730+00:00"
+}

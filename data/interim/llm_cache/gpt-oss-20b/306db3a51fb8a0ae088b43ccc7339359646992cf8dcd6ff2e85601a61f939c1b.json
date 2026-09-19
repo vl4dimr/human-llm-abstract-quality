@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-014",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen narrativo sin encabezados, cumple con los componentes y presenta coherencia aceptable."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen narrativo sin encabezados, cumple con los componentes y presenta coherencia aceptable.\"}",
+ "usage": {
+  "input_tokens": 9879,
+  "output_tokens": 1903
+ },
+ "latency_s": 3.1645901203155518,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T02:56:29.567361+00:00",
+ "raw": {
+  "id": "chatcmpl-9c5a6f72-65b7-49b3-8911-ccc3376081fc",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen narrativo sin encabezados, cumple con los componentes y presenta coherencia aceptable.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Los hábitos de lectura de los niños y niñas del 6to grado de la Institución Educativa N°50961 Tupac Amaru de Quillabamba en el año 2017\"\n\nResumen:\n\n\"La presente investigación tuvo como propósito general identificar los hábitos de lectura en los niños y niñas del 6to grado de la Institución Educativa N°50961 Tupac Amaru de Quillabamba en el año 2017, la metodología empleada para este trabajo de investigación fue un diseño descriptivo simple en el que se investiga la acaecimiento de los niveles en una población, lo cual quiere decir de qué manera se muestra determinado fenómeno y así mismo indaga detallar las características más resaltantes de las personas, grupos o cualquier otro acontecimiento que sea sujeto a investigación y a su respectivo análisis; donde el  instrumento utilizado consta de un cuestionario, para su posterior procesamiento y emisión de los resultados por medio de las tablas , figuras y también su correspondiente interpretación; con la investigación realizada se concluyó los hábitos de lectura en los niños y niñas del sexto grado de la Institución Educativa N°50961 Tupac Amaru de Quillabamba es bueno, yaqué el 40% manifestaron que siempre leen a menudo libros en sus ratos libres.\"\n\nWe need to evaluate each dimension.\n\nFirst, check if it's a valid summary. It seems to be a summary. So no_evaluable = 0.\n\nNow D1 components:\n\n- D1_imryd_objetivo: Does the summary state what was proposed to investigate? It says: \"La presente investigación tuvo como propósito general identificar los hábitos de lectura en los niños y niñas del 6to grado...\" So yes, objective is explicit. So 1.\n\n- D1_imryd_metodologia: Does it indicate how knowledge was obtained? It says: \"la metodología empleada ... fue un diseño descriptivo simple ... el instrumento utilizado consta de un cuestionario, para su posterior procesamiento y emisión de los resultados por medio de las tablas, figuras y también su correspondiente interpretación\". So yes, methodology present. So 1.\n\n- D1_imryd_resultados: Does it communicate what was found? It says: \"con la investigación realizada se concluyó los hábitos de lectura en los niños y niñas del sexto grado ... es bueno, yaqué el 40% manifestaron que siempre leen a menudo libros en sus ratos libres.\" So yes, results: 40% read often. So 1.\n\n- D1_imryd_conclusiones: Does it have a closure that goes beyond repeating results? It says: \"con la investigación realizada se concluyó los hábitos de lectura ... es bueno\". That is a conclusion that interprets the result: \"es bueno\" meaning reading habits are good. That is a conclusion that interprets. So 1.\n\n- D1_orden_logico: Are the components present in logical order? The summary starts with objective, then methodology, then results, then conclusion. Yes. So 1.\n\nNow D2_coherencia: Evaluate flow. Let's read the summary: \"La presente investigación tuvo como propósito general identificar los hábitos de lectura en los niños y niñas del 6to grado ... la metodología empleada ... fue un diseño descriptivo simple en el que se investiga la acaecimiento de los niveles en una población, lo cual quiere decir de qué manera se muestra determinado fenómeno y así mismo indaga detallar las características más resaltantes de las personas, grupos o cualquier otro acontecimiento que sea sujeto a investigación y a su respectivo análisis; donde el instrumento utilizado consta de un cuestionario, para su posterior procesamiento y emisión de los resultados por medio de las tablas , figuras y también su correspondiente interpretación; con la investigación realizada se concluyó los hábitos de lectura en los niños y niñas del sexto grado ... es bueno, yaqué el 40% manifestaron que siempre leen a menudo libros en sus ratos libres.\"\n\nThe flow: It starts with objective, then methodology description, then instrument, then results, then conclusion. The sentences are somewhat long and maybe a bit disjointed. But overall, it's coherent. There are some issues: \"la metodología empleada ... fue un diseño descriptivo simple en el que se investiga la acaecimiento de los niveles en una población, lo cual quiere decir de qué manera se muestra determinado fenómeno y así mismo indaga detallar las características más resaltantes de las personas, grupos o cualquier otro acontecimiento que sea sujeto a investigación y a su respectivo análisis;\" This is a bit confusing but still flows. The next part: \"donde el instrumento utilizado consta de un cuestionario, para su posterior procesamiento y emisión de los resultados por medio de las tablas , figuras y también su correspondiente interpretación;\" Then: \"con la investigación realizada se concluyó los hábitos de lectura ... es bueno, yaqué el 40% manifestaron que siempre leen a menudo libros en sus ratos libres.\" The flow is okay. I'd give a 4 maybe. Let's evaluate: 5 would be impeccable, 4 would be good but some minor awkwardness. There's no major jump. So D2_coherencia = 4.\n\nNow D3 components:\n\n- D3_contextualizacion: Does the summary situate the problem? It says: \"identificar los hábitos de lectura en los niños y niñas del 6to grado de la Institución Educativa N°50961 Tupac Amaru de Quillabamba en el año 2017\". It doesn't explain why it's important, or what the context is beyond the location. It doesn't mention why reading habits matter, or what the broader context is. So likely 0. According to the example, if it starts directly by objective, it's 0. So 0.\n\n- D3_metodo_detallado: At least two precisions about procedure. It says: \"diseño descriptivo simple\", \"instrumento: cuestionario\", \"posterior procesamiento y emisión de resultados por medio de tablas, figuras y interpretación\". That's at least two: design and instrument. So 1.\n\n- D3_resultados_concretos: Does it provide specific content? It says: \"el 40% manifestaron que siempre leen a menudo libros en sus ratos libres.\" That's a specific percentage. So 1.\n\n- D3_conclusion_responde: Does the conclusion respond to the objective? The objective: identify reading habits. The conclusion: \"se concluyó los hábitos de lectura ... es bueno\". That is a response. So 1.\n\nNow D4_consistencia: Consistency between what is said and what is presented. Let's check for contradictions. The summary says: \"la metodología empleada ... fue un diseño descriptivo simple ... el instrumento utilizado consta de un cuestionario ... con la investigación realizada se concluyó los hábitos de lectura ... es bueno, yaqué el 40% manifestaron que siempre leen a menudo libros en sus ratos libres.\" There's no contradiction. The conclusion is consistent with the result. There's no mention of significance or other contradictory statements. So D4_consistencia = 5.\n\nNow no_evaluable = 0.\n\nObservaciones: We can add any notes. Maybe note that the summary uses \"yaqué\" which is a typo, but not relevant. Also note that the summary is somewhat long but coherent. We can mention that the summary is a narrative, not structured. But we can just add a short note: \"Resumen narrativo, sin encabezados, pero cumple con los componentes.\" Let's produce JSON.\n\nCheck schema: all required fields present. All values are integers or null. Observaciones string. no_evaluable integer 0 or 1. Provide all fields.\n\nLet's produce JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Resumen narrativo sin encabezados, cumple con los componentes y presenta coherencia aceptable.\"\n}\n\nCheck that all fields are present. Yes. Ensure JSON is compact. Provide only JSON."
+    }
+   }
+  ],
+  "created": 1789700189,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4a35f7bd1b",
+  "usage": {
+   "completion_tokens": 1903,
+   "prompt_tokens": 9879,
+   "total_tokens": 11782,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1760,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.191621885,
+   "prompt_time": 0.494964914,
+   "completion_time": 2.19031853,
+   "total_time": 2.685283444
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s738bxexyackf5hjnp6q17",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T02:56:29.567455+00:00"
+}

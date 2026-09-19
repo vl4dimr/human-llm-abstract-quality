@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-156",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": null,
+  "no_evaluable": 1,
+  "observaciones": "Resumen no detalla metodología ni presenta resultados; por lo tanto no es posible evaluar la consistencia metodológica. No se ofrece conclusión que responda al objetivo."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":0,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"Resumen no detalla metodología ni presenta resultados; por lo tanto no es posible evaluar la consistencia metodológica. No se ofrece conclusión que responda al objetivo.\"}",
+ "usage": {
+  "input_tokens": 9945,
+  "output_tokens": 1030
+ },
+ "latency_s": 2.4489314556121826,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T00:04:02.362516+00:00",
+ "raw": {
+  "id": "chatcmpl-1bbb9e9e-297d-479a-bfae-21714b62275f",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":0,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"Resumen no detalla metodología ni presenta resultados; por lo tanto no es posible evaluar la consistencia metodológica. No se ofrece conclusión que responda al objetivo.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones. All required.\n\nWe must analyze the summary: It's about determining incidence of internal control in public entities management in Abancay and Apurimac. It's a descriptive/analytic study? It's just a theoretical/explanatory summary, no mention of methodology (sample, design, instrument). No results. No conclusions aside from stating importance. Let's parse.\n\nSummary text: \"La investigación tiene la finalidad de determinar la incidencia del control interno en la gestión de las entidades públicas de la provincia de Abancay – Apurímac,  siendo el Control Interno un proceso integral ... el objetivo es de determinar la incidencia del control interno en la gestión de las entidades asentadas en Abancay y Apurímac y así prevenir irregularidades y actos de corrupción ... En razón a ello todo los trabajadores... En el poco tiempo de exigencia ... las entidades públicas como son los Ministerios, no han logrado implementar sus Sistemas de Control Interno. La investigación explica la importancia del variable control y la tendencia de un gobierno corporativo en las entidades públicas del país.\"\n\nNo method details: no mention of study design, sampling, instruments. No results: just stating importance and that no implementation. No explicit conclusions besides stating that it explains importance.\n\nSo: D1_imryd_objetivo: 1, because objective is stated.\n\nD1_imryd_metodologia: 0 because no method described.\n\nD1_imryd_resultados: 0 because no results.\n\nD1_imryd_conclusiones: 0 because no conclusion.\n\nD1_orden_logico: 0 because only objective present, or because no method, results, conclusion. According to rule: if 0 or 1 components present -> order = 0. Only objective present. So 0.\n\nD2_coherencia: need to rate coherence 1-5. Let's examine flow: The summary begins with objective, then explains what internal control is, then mentions staff role, then mentions Contraloría norms, then states that entities haven't implemented, then that research explains importance, etc. There's some coherence but also somewhat repetitive. Probably 3 or 4. Let's think: There is a logical sequence: objective -> importance of control -> context (staff involvement) -> lack of implementation -> research explains importance. The sentences seem to flow but some repeated mention of objective. There's no abrupt jumps, but some sentences are long and maybe some redundancy. I'd give 4? But maybe 3: It is understandable but a bit repetitive and not clear. According to scale: 4 = flows well with slight awkwardness. I'd choose 4.\n\nD3_contextualizacion: 1 because it situates problem: it mentions province, Abancay – Apurímac, the issue of implementation, etc. So 1.\n\nD3_metodo_detallado: 0 because no method details.\n\nD3_resultados_concretos: 0 because no results.\n\nD3_conclusion_responde: 0 because no conclusion.\n\nD4_consistencia: Since methodology not present, no_evaluable? The protocol says if no methodology, D4 no_evaluable = 1 and leave D4 empty (or null). The schema requires D4_consistencia value; but no_evaluable indicates D4_consistencia not evaluable. But D4_consistencia field still required. In such cases we must set null? The schema allows null for D4_consistencia. So set D4_consistencia = null. And no_evaluable = 1.\n\nObservations: note the missing methodology and results; mention that D4 cannot be evaluated due to missing methodology. Also mention that no conclusion. So something like: \"No se describen metodología ni resultados; por tanto D4 no evaluable.\" Add explanation.\n\nThus produce JSON.\n\nCheck that all fields included.\n\nLet's produce compact JSON."
+    }
+   }
+  ],
+  "created": 1789776241,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_228717f27c",
+  "usage": {
+   "completion_tokens": 1030,
+   "prompt_tokens": 9945,
+   "total_tokens": 10975,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 873,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.149440238,
+   "prompt_time": 0.54064672,
+   "completion_time": 1.122016237,
+   "total_time": 1.662662957
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vfm7fze45tqqbv41bkryzz",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-19T00:04:02.362532+00:00"
+}

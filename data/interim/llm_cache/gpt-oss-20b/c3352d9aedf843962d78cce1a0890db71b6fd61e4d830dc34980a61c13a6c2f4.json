@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-078",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen sin contextualización; conclusión breve."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin contextualización; conclusión breve.\"}",
+ "usage": {
+  "input_tokens": 9859,
+  "output_tokens": 1816
+ },
+ "latency_s": 3.4807615280151367,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:04:48.994277+00:00",
+ "raw": {
+  "id": "chatcmpl-7974220b-2670-4f27-9a5d-41895769a4a4",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin contextualización; conclusión breve.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's analyze the summary.\n\nTitle: \"Desarrollo de un sistema web para optimizar el proceso de pedidos en la Empresa Nora Delivery Puno 2024\"\n\nResumen: (Spanish)\n\n\"En esta investigación se implementó un sistema web de gestión de pedidos, compatible con dispositivos móviles, para optimizar el proceso de ventas en la empresa NORA DELIVERY. El sistema, desarrollado con software de código abierto, permite el acceso desde cualquier dispositivo móvil con conexión a internet, cumpliendo así con los objetivos planteados en este estudio.\nSe utilizó software libre para desarrollar un sistema con soporte para dispositivos móviles, con el fin de optimizar el proceso de distribución y ventas de la empresa. Esta solución tecnológica se implementó utilizando PHP como lenguaje de programación y MySQL como sistema de gestión de base de datos. El sistema está dividido en dos módulos principales: uno enfocado en la gestión de pedidos de los clientes y otro destinado a la administración interna.\nEl proceso de captura de pedidos fue optimizado mediante el uso de tecnología basada en software libre y dispositivos móviles. Esto se refleja en los resultados obtenidos al aplicar encuestas a los clientes, quienes son los usuarios finales del sistema, donde aproximadamente el 70% manifestó estar satisfecho con el nuevo sistema implementado.\"\n\nWe need to evaluate each dimension.\n\nFirst, check if it's a valid summary: yes, it's a summary. No missing methodology? It says \"Se utilizó software libre ... PHP, MySQL\" but no mention of sample size, survey details, etc. Let's go through each field.\n\nD1_imryd_objetivo: Does the summary state what was proposed to investigate? It says \"para optimizar el proceso de ventas en la empresa NORA DELIVERY\" and \"cumpliendo así con los objetivos planteados en este estudio.\" The objective is to implement a web system to optimize sales process. So yes, objective present. So D1_imryd_objetivo = 1.\n\nD1_imryd_metodologia: Does it indicate how knowledge was obtained? It says \"Se utilizó software libre ... PHP, MySQL\" and \"El proceso de captura de pedidos fue optimizado mediante ... encuestas a los clientes\". So yes, methodology present. But is it concrete? It says \"Se utilizó software libre ... PHP, MySQL\" and \"El proceso de captura de pedidos fue optimizado mediante ... encuestas a los clientes\". That is a method: using software, using surveys. So yes, D1_imryd_metodologia = 1.\n\nD1_imryd_resultados: Does it communicate what was found? It says \"los resultados obtenidos al aplicar encuestas a los clientes, donde aproximadamente el 70% manifestó estar satisfecho\". So yes, result present. So D1_imryd_resultados = 1.\n\nD1_imryd_conclusiones: Does it have a closure that goes beyond repeating results? It says \"cumpliendo así con los objetivos planteados en este estudio.\" That is a statement that the objectives were met. But is that a conclusion? It says \"cumpliendo así con los objetivos planteados en este estudio.\" That is a conclusion that the system achieved the objectives. It doesn't interpret beyond that. But it's a conclusion: \"cumpliendo así con los objetivos planteados\". That is a closure. So D1_imryd_conclusiones = 1.\n\nD1_orden_logico: Are the components present in logical order? The summary starts with objective, then methodology, then results, then conclusion. Yes. So D1_orden_logico = 1.\n\nD2_coherencia: Evaluate flow. Let's read: \"En esta investigación se implementó un sistema web de gestión de pedidos, compatible con dispositivos móviles, para optimizar el proceso de ventas en la empresa NORA DELIVERY. El sistema, desarrollado con software de código abierto, permite el acceso desde cualquier dispositivo móvil con conexión a internet, cumpliendo así con los objetivos planteados en este estudio. Se utilizó software libre para desarrollar un sistema con soporte para dispositivos móviles, con el fin de optimizar el proceso de distribución y ventas de la empresa. Esta solución tecnológica se implementó utilizando PHP como lenguaje de programación y MySQL como sistema de gestión de base de datos. El sistema está dividido en dos módulos principales: uno enfocado en la gestión de pedidos de los clientes y otro destinado a la administración interna. El proceso de captura de pedidos fue optimizado mediante el uso de tecnología basada en software libre y dispositivos móviles. Esto se refleja en los resultados obtenidos al aplicar encuestas a los clientes, quienes son los usuarios finales del sistema, donde aproximadamente el 70% manifestó estar satisfecho con el nuevo sistema implementado.\"\n\nFlow: It starts with objective, then describes system, then methodology, then modules, then results. It's fairly coherent. No major jumps. So I'd rate 4 or 5. Let's see: 5 would be \"Progresión impecable. Cada oración prepara la siguiente. Se lee de un tirón\". 4: \"Fluye bien, con alguna aspereza menor que no estorba\". There is some repetition: \"software libre\" repeated. But overall it's coherent. I'd give 4. So D2_coherencia = 4.\n\nD3_contextualizacion: Does it situate the problem? It says \"para optimizar el proceso de ventas en la empresa NORA DELIVERY\". It doesn't explain why it's important, but it does mention the company and the process. It doesn't mention broader context or why it's important. So D3_contextualizacion = 0.\n\nD3_metodo_detallado: Does it give at least two precisions? It says \"Se utilizó software libre ... PHP, MySQL\" and \"El proceso de captura de pedidos fue optimizado mediante ... encuestas a los clientes\". That's two precisions: software, programming language, database, and survey. So yes, D3_metodo_detallado = 1.\n\nD3_resultados_concretos: Does it provide concrete results? It says \"aproximadamente el 70% manifestó estar satisfecho\". That's a concrete figure. So D3_resultados_concretos = 1.\n\nD3_conclusion_responde: Does the conclusion respond to the objective? The conclusion is \"cumpliendo así con los objetivos planteados en este estudio.\" That is a response to the objective: the system achieved the objective. So yes, D3_conclusion_responde = 1.\n\nD4_consistencia: Consistency between what was said and what was presented. Let's check: The methodology says \"Se utilizó software libre ... PHP, MySQL\" and \"encuestas a los clientes\". The results say 70% satisfied. The conclusion says objectives met. No contradictions. So D4_consistencia = 5. No issues.\n\nno_evaluable: It's a valid summary, so 0.\n\nobservaciones: We can add any notes. Maybe note that the summary lacks contextualization. Also mention that the conclusion is minimal. But we can keep it short. Let's add: \"Falta contextualización del problema; conclusión mínima.\" But we can keep it simple: \"Resumen sin contextualización; conclusión breve.\" We'll include that.\n\nNow produce JSON with all fields. Ensure all required fields present. Use compact JSON. Let's produce.\n\nCheck schema: all fields must be present. They can be null but we have values. So produce:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Resumen sin contextualización; conclusión breve.\"\n}\n\nCheck that no_evaluable is integer 0. Good. Observaciones string. All good."
+    }
+   }
+  ],
+  "created": 1789700688,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_228717f27c",
+  "usage": {
+   "completion_tokens": 1816,
+   "prompt_tokens": 9859,
+   "total_tokens": 11675,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1683,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.148407122,
+   "prompt_time": 0.589865715,
+   "completion_time": 1.9699830390000002,
+   "total_time": 2.559848754
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7jg4yegkar9ppz5by7xwv",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:04:48.994364+00:00"
+}

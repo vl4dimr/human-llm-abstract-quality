@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-052",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "El resumen carece de contextualización del problema; no se indica la importancia del clima familiar en el entorno educativo ni el alcance del estudio."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen carece de contextualización del problema; no se indica la importancia del clima familiar en el entorno educativo ni el alcance del estudio.\"}",
+ "usage": {
+  "input_tokens": 9896,
+  "output_tokens": 1796,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.857166290283203,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:51:31.335332+00:00",
+ "raw": {
+  "id": "chatcmpl-15f23b48-1419-4ffc-99d5-7dedfde8654e",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen carece de contextualización del problema; no se indica la importancia del clima familiar en el entorno educativo ni el alcance del estudio.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones. All required.\n\nWe must annotate.\n\nLet's interpret the summary.\n\nTitle: Clima familiar y el desarrollo socioemocional en los niños y niñas de la I.E.I. N.º 293 Atuncolla, puno 2023.\n\nSummary content:\n\n\"La investigación titulada “Clima familiar y el desarrollo socioemocional en los niños y niñas de la I. E. I. N.º 293 Atuncolla, Puno 2024” se desarrolló con el objetivo de determinar la relación del clima familiar con el desarrollo socioemocional en los niños y niñas. La metodología de la investigación fue de enfoque cuantitativo, descriptivo correlacional, no experimental, para recolectar los datos se utilizó la técnica de la encuesta y sus instrumentos fueron dos cuestionarios. La población del estudio fue de 28 alumnos y se consideró una muestra no probabilística censal siendo la totalidad de la población. Los datos se procesaron con SPSS versión 25 y la relación de las variables con Rho de Pearson. Como resultado se evidencio un coeficiente de correlación Pearson r= 0,592, el cual mostro la existencia de una relación positiva y significativa entre el clima familiar y el desarrollo socioemocional. Concluyendo así que los niños niñas de la I.E.I. N.º 293 Atuncolla-Puno al tener un buen ambiente familiar potencian su desarrollo socioemocional mejorando así su rendimiento académico.\"\n\nWe need to evaluate each dimension.\n\n### D1_imryd_objetivo\n\nObjective present: \"se desarrolló con el objetivo de determinar la relación del clima familiar con el desarrollo socioemocional en los niños y niñas.\" Yes, it's explicit. So D1_imryd_objetivo = 1.\n\n### D1_imryd_metodologia\n\nMetodologia present: \"La metodología de la investigación fue de enfoque cuantitativo, descriptivo correlacional, no experimental, para recolectar los datos se utilizó la técnica de la encuesta y sus instrumentos fueron dos cuestionarios. La población del estudio fue de 28 alumnos y se consideró una muestra no probabilística censal siendo la totalidad de la población. Los datos se procesaron con SPSS versión 25 y la relación de las variables con Rho de Pearson.\"\n\nContains many precisions: type of study, sample size, instrument, processing software, test. So D1_imryd_metodologia = 1.\n\n### D1_imryd_resultados\n\nResults present: \"Como resultado se evidencio un coeficiente de correlación Pearson r= 0,592, el cual mostro la existencia de una relación positiva y significativa entre el clima familiar y el desarrollo socioemocional.\" That's a concrete result: r=0.592. So D1_imryd_resultados = 1.\n\n### D1_imryd_conclusiones\n\nConclusion: \"Concluyendo así que los niños niñas de la I.E.I. N.º 293 Atuncolla-Puno al tener un buen ambiente familiar potencian su desarrollo socioemocional mejorando así su rendimiento académico.\"\n\nDoes it respond to objective? Objective: determine relationship between climate and socioemotional development. Conclusion: says children have better development due to good environment. It states effect: \"al tener un buen ambiente familiar potencian su desarrollo socioemocional mejorando su rendimiento académico.\" The conclusion does interpret and imply; yes, it's an interpretative statement. So D1_imryd_conclusiones = 1.\n\n### D1_orden_logico\n\nCheck order: Objetivo, Metodología, Resultados, Conclusiones. Sequence: objective first, then methodology, then results, then conclusion. Yes. So D1_orden_logico = 1.\n\n### D2_coherencia\n\nWe need to evaluate flow: \"La investigación titulada ... se desarrolló con el objetivo ... La metodología ... para recolectar ... Los datos se procesaron ... Como resultado ... Concluyendo así ...\"\n\nThe text flows logically. Some abruptness? It's pretty coherent: start with title, objective, methodology, sample, analysis, result, conclusion. Not many transitions but fine. I'd say 4 or 5. Let's think. The \"Concluyendo así\" is a transition. Might be minor. So D2_coherencia = 4? Possibly 5 if it's impeccable. Evaluate: \"La investigación titulada... se desarrolló con el objetivo de determinar la relación ...\" That's okay. Then \"La metodología de la investigación fue...\" Good. \"para recolectar los datos se utilizó la técnica...\" Good. \"Los datos se procesaron con SPSS versión 25 y la relación de las variables con Rho de Pearson.\" Good. \"Como resultado se evidencio ...\". Good. \"Concluyendo así que los niños...\" Good. No contradictions, no jumps. So I lean 5. But the guidelines: 5 is \"Progresión impecable. Cada oración prepara la siguiente.\" The text is concise. I'd give 5.\n\n### D3_contextualizacion\n\nNeed to situate problem: why it's important, where, who. The summary: Title references \"Clima familiar y el desarrollo socioemocional en los niños y niñas de la I.E.I. N.º 293 Atuncolla, Puno\". But does it explain why it's important? It doesn't mention why important or the context. It just states objective and results. There's no context statement. So D3_contextualizacion = 0.\n\n### D3_metodo_detallado\n\nNeed at least two precisions: we have design, sample size, instrument, analysis method. So yes. D3_metodo_detallado = 1.\n\n### D3_resultados_concretos\n\nHas concrete result: r=0.592. Yes. So D3_resultados_concretos = 1.\n\n### D3_conclusion_responde\n\nConclusion responds to objective. Yes, it says children develop better due to good climate. That addresses relationship. So D3_conclusion_responde = 1.\n\n### D4_consistencia\n\nConsistencia metodológica: coherence between declared methodology and presented results. Here methodology: quantitative, descriptive correlational, non-experimental, survey instrument (two questionnaires), sample 28, processed with SPSS, Pearson correlation. The result: Pearson r=0.592, relationship positive and significant. The conclusion: that children have better development due to good environment. This aligns: the result shows correlation, conclusion says climate has effect. The conclusion is consistent: no contradictions. So D4_consistencia = 5.\n\nWe also need no_evaluable: 0 because it is a valid summary with methodology. Observaciones: maybe some note about the context missing or minor note. We can mention that contextualization is missing. So \"Observaciones: Falta contextualización del problema; el resumen no indica por qué el clima familiar es importante o su relevancia en el contexto educativo.\" Provide.\n\nDouble-check fields: all required included. All are integers or null; we have integers.\n\nEnsure no_evaluable is 0. Observations string.\n\nLet's produce JSON compact.\n\nAlso ensure all field names match exactly: D1_imryd_conclusiones, D1_imryd_metodologia, D1_imryd_objetivo, D1_imryd_resultados, D1_orden_logico, D2_coherencia, D3_conclusion_responde, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D4_consistencia, no_evaluable, observaciones.\n\nLet's produce."
+    }
+   }
+  ],
+  "created": 1789775490,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_5979a0e1b7",
+  "usage": {
+   "completion_tokens": 1796,
+   "prompt_tokens": 9896,
+   "total_tokens": 11692,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1643,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.209662887,
+   "prompt_time": 0.051124715,
+   "completion_time": 1.870758837,
+   "total_time": 1.9218835520000002
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vex9r9efvb29nkpwtv1n34",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:51:31.335350+00:00"
+}

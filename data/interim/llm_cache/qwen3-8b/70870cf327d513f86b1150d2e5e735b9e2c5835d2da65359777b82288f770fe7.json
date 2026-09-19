@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-128",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 2,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica y coherente, aunque la conclusión menciona una correlación positiva moderada (0.460) que no se alinea con los coeficientes más altos reportados en los resultados. Esto podría indicar una inconsistencia metodológica, ya que la conclusión se basa en un coeficiente diferente al de los resultados principales."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 2,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica y coherente, aunque la conclusión menciona una correlación positiva moderada (0.460) que no se alinea con los coeficientes más altos reportados en los resultados. Esto podría indicar una inconsistencia metodológica, ya que la conclusión se basa en un coeficiente diferente al de los resultados principales.\"\n}",
+ "usage": {
+  "input_tokens": 10896,
+  "output_tokens": 238,
+  "total_duration_s": 7.3305904
+ },
+ "latency_s": 7.340357780456543,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:43:00.353947+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:43:00.3448508Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 2,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica y coherente, aunque la conclusión menciona una correlación positiva moderada (0.460) que no se alinea con los coeficientes más altos reportados en los resultados. Esto podría indicar una inconsistencia metodológica, ya que la conclusión se basa en un coeficiente diferente al de los resultados principales.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7330590400,
+  "load_duration": 4070800,
+  "prompt_eval_count": 10896,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 312242000,
+  "eval_count": 238,
+  "eval_duration": 6951636000
+ },
+ "cached_at_utc": "2026-09-19T01:43:00.353960+00:00"
+}

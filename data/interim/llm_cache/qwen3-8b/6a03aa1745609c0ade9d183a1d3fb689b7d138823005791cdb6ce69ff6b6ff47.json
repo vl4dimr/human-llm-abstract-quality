@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-055",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen cumple con los componentes IMRyD en orden. La coherencia se califica en 4 debido a que hay una frase que menciona el uso de EM como sustituto de fertilizantes químicos, lo cual no se explica en detalle. La consistencia metodológica se califica en 3 porque la conclusión menciona la reducción de costos y mejoría de la salud de los productores y consumidores, lo cual no está respaldado por los resultados presentados."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen cumple con los componentes IMRyD en orden. La coherencia se califica en 4 debido a que hay una frase que menciona el uso de EM como sustituto de fertilizantes químicos, lo cual no se explica en detalle. La consistencia metodológica se califica en 3 porque la conclusión menciona la reducción de costos y mejoría de la salud de los productores y consumidores, lo cual no está respaldado por los resultados presentados.\"\n}",
+ "usage": {
+  "input_tokens": 10994,
+  "output_tokens": 265,
+  "total_duration_s": 8.9932739
+ },
+ "latency_s": 9.023976564407349,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:56:14.779209+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:56:14.7702539Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen cumple con los componentes IMRyD en orden. La coherencia se califica en 4 debido a que hay una frase que menciona el uso de EM como sustituto de fertilizantes químicos, lo cual no se explica en detalle. La consistencia metodológica se califica en 3 porque la conclusión menciona la reducción de costos y mejoría de la salud de los productores y consumidores, lo cual no está respaldado por los resultados presentados.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8993273900,
+  "load_duration": 14234200,
+  "prompt_eval_count": 10994,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 455582000,
+  "eval_count": 265,
+  "eval_duration": 8346085999
+ },
+ "cached_at_utc": "2026-09-19T01:56:14.779219+00:00"
+}

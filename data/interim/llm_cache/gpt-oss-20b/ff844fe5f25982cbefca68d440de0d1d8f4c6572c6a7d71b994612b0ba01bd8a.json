@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-132",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "El resumen carece de una sección de conclusiones explícita; los resultados están bien detallados pero no se interpreta ni se recomienda."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen carece de una sección de conclusiones explícita; los resultados están bien detallados pero no se interpreta ni se recomienda.\"}",
+ "usage": {
+  "input_tokens": 10184,
+  "output_tokens": 1027
+ },
+ "latency_s": 2.728550910949707,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T00:00:58.069899+00:00",
+ "raw": {
+  "id": "chatcmpl-d6570d01-caf6-4bd5-a3e0-03cec6eabd6e",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen carece de una sección de conclusiones explícita; los resultados están bien detallados pero no se interpreta ni se recomienda.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields. Evaluate each field. Let's analyze.\n\nTitle: not needed for scoring. We must annotate summary.\n\nSummary content:\n\nIt starts with objective statement: \"El altiplano puneño viene sufriendo...\" Then: \"por lo que el presente trabajo de investigación tiene como objetivos: a) Determinar la influencia... b)... c)...\"\n\nSo D1_imryd_objetivo: 1. It has explicit objectives.\n\nD1_imryd_metodologia: There's a sentence: \"Metodología: Para determinar la influencia ... se pesó la biomasa foliar verde y se midió la erosión del suelo. Para la eficiencia ... se hizo la diferencia del análisis inicial con el análisis final de suelo. Para el rendimiento ... se realizó al final de la cosecha. El diseño experimental, fue diseño de bloques completamente al azar (DBCA) con 4 tratamientos en 4 bloques, ...\". So yes, 1.\n\nD1_imryd_resultados: There is results section: \"Los resultados fueron: a)... b)... c)...\". Contains specific results: biomasa, soil loss, nutrient efficiency values, yield values. So 1.\n\nD1_imryd_conclusiones: The summary ends after presenting results? It doesn't explicitly have a concluding sentence summarizing or interpreting. Let's read last sentences: \"c) Influencia de cobertura vegetal en el rendimiento de quinua, se observó que el tratamiento T2 presenta un mayor rendimiento con 3102 kg ha-1, seguido de T3 con 3052 kg ha-1 y T4 con 2744 kg ha-1 en comparación al testigo T1 que tuvo un menor rendimiento con 2602 kg ha-1.\" There is no explicit conclusion or recommendation. So D1_imryd_conclusiones = 0.\n\nD1_orden_logico: Components present: Objective, Metodología, Resultados. They are in order: objective first, methodology second, results third. Conclusion missing. So order = 1.\n\nD2_coherencia: Evaluate flow. The summary seems somewhat coherent. Starts with context, then objectives, methodology, results. No major jumps. Might be 4. Let's check: It starts with context about soil erosion; then objective list; then methodology; then results. Flow seems fine. Possibly 4 or 5. There is some redundancy, but overall coherent. I think 4.\n\nD3_contextualizacion: This dimension requires that summary situates problem: why it's important, where, etc. The summary starts: \"El altiplano puneño viene sufriendo la pérdida de suelo, principalmente por erosión hídrica ... por lo que el presente trabajo ...\". This explains importance, location. So D3_contextualizacion = 1.\n\nD3_metodo_detallado: At least two precisions. We have: \"Diseño experimental, fue diseño de bloques completamente al azar (DBCA) con 4 tratamientos en 4 bloques, con 16 unidades experimentales\". That's design + number of units. Also \"se pesó la biomasa foliar verde y se midió la erosión del suelo\" - instrument. So at least two. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: Contains numeric values: 19850 kg ha-1, 1.31 t ha-1, 11.69 t ha-1, 0.030%, 3.01 ppm, 83.67 ppm, 3102 kg ha-1, etc. So 1.\n\nD3_conclusion_responde: Since no conclusion, 0.\n\nD4_consistencia: We need to check if there's inconsistency between methods and results. Methods: design DBCA; measures: biomass, soil erosion, nutrient efficiency. Results: present biomasses, soil loss, nutrient efficiencies, yield. No contradictory statements. All results align with methodology. No conclusion conflicting. So D4_consistencia = 5.\n\nno_evaluable: 0 (since it's a valid summary). Observaciones: any notes? Could note that conclusion missing. Provide brief observation.\n\nLet's produce JSON.\n\nNeed fields in order? Not required but must include all fields.\n\nReturn compact JSON.\n\nLet's create.\n\n"
+    }
+   }
+  ],
+  "created": 1789776057,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c5a89987dc",
+  "usage": {
+   "completion_tokens": 1027,
+   "prompt_tokens": 10184,
+   "total_tokens": 11211,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 875,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.272757801,
+   "prompt_time": 0.689051426,
+   "completion_time": 1.149785653,
+   "total_time": 1.8388370790000002
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vfek7jesf9mdtkbj6fpdak",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-19T00:00:58.069928+00:00"
+}

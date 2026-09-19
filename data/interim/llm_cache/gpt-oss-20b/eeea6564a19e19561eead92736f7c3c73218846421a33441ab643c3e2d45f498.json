@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-102",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "El resumen carece de contextualización, lo que provoca la puntuación 0 en D3_contextualizacion."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen carece de contextualización, lo que provoca la puntuación 0 en D3_contextualizacion.\"}",
+ "usage": {
+  "input_tokens": 10025,
+  "output_tokens": 1461
+ },
+ "latency_s": 2.6127774715423584,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:57:45.879301+00:00",
+ "raw": {
+  "id": "chatcmpl-09635b6f-3ef2-4a04-834c-c3efeb5731cb",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen carece de contextualización, lo que provoca la puntuación 0 en D3_contextualizacion.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones. All required.\n\nWe must analyze the summary to fill.\n\nLet's parse:\n\nSummary content:\n\n\"La presente investigación tuvo como objetivo relacionar el patrón queiloscópico con el tipo facial y la proporción áurea en estudiantes de la Universidad Nacional del Altiplano de Puno. Fue un estudio relacional, transversal y observacional; la muestra estuvo conformada por 157 estudiantes de ambos sexos de las etnias quechua y aimara a quienes se registraron las medidas faciales, grosor labial, disposición de comisuras e impresión de las huellas de ambos labios, estas últimas se obtuvieron con la técnica del lápiz labial y cinta adhesiva; el análisis de las huellas se realizó con la clasificación de Suzuki y Tsuchihashi, utilizando una lupa de aumento. Los datos fueron analizados con la prueba Chi- cuadrado de Pearson, y procesados con el software SPSS v. 24, con un nivel de significancia de 0.05 o 5%. Los resultados indican a los patrones labiales tipo I y II como los más frecuentes seguidos de los tipos III, V, I’; el tipo IV fue el menos frecuente; encontrándose relacion con el sexo y la etnia; las comisuras con disposición horizontal se relacionaron con mujeres leptoprosopas y mesoprosopas, mientras que en hombres leptoprosopos fueron más frecuentes las comisuras abatidas y en mesoprosopos las horizontales, los labios  gruesos se relacionaron con hombres leptoprosopos y los medianos con mujeres mesoprosopas, el cumplimiento de la proporción áurea fue muy reducida. Se concluye que se encontró relación entre el patrón queiloscópico y el tipo facial pero no con la proporción áurea facial de los estudiantes.\"\n\nWe must assess each field.\n\nD1_imryd_objetivo: 1 because objective is explicitly stated: \"relacionar el patrón queiloscópico con el tipo facial y la proporción áurea\".\n\nD1_imryd_metodologia: 1 because methodology described: study type, sample, measures, techniques, analysis, software.\n\nD1_imryd_resultados: 1 because results communicated: patterns frequencies and relationships.\n\nD1_imryd_conclusiones: 1 because conclusion states relationship found between pattern and facial type but not with proportion. It's not just repetition; it interprets results.\n\nD1_orden_logico: The sequence: objective, methodology, results, conclusion. Yes, it's in that order. So 1.\n\nD2_coherencia: We need to rate 1-5. Evaluate flow: The summary starts with objective, then methodology, then results, then conclusion. The description of methods includes many details; flow is relatively coherent. Maybe some slight abruptness between methods and results, but overall good. I'd say 4 maybe. Let's think: The summary is somewhat dense but still coherent. No abrupt jumps. So maybe 4.\n\nD3_contextualizacion: 0 because it doesn't provide context of why this study matters. It directly states objective. No explanation of significance, location details beyond institution. There's mention of \"Universidad Nacional del Altiplano de Puno\" but not why it's important. So 0.\n\nD3_metodo_detallado: Need at least two precisions: design, sample size, technique, instrument, statistical test. The summary includes: study relacional, transversal y observacional; sample 157; classification method; software; Chi-square test. That's more than two. So 1.\n\nD3_resultados_concretos: The results provide specific frequencies for patterns, relationships with sex, ethnicity, comisuras, etc. That's concrete. So 1.\n\nD3_conclusion_responde: The conclusion states \"se encontró relación entre el patrón queiloscópico y el tipo facial pero no con la proporción áurea\". That directly responds to objective (relating pattern to type facial and proportion). Yes. So 1.\n\nD4_consistencia: Consistency between stated methodology and results. They declared Chi-square; results describe relationships and frequencies; that is consistent. No contradiction. So 5.\n\nBut we should check if there is any potential discrepancy. The methodology mentions \"el análisis de las huellas se realizó con la clasificación de Suzuki y Tsuchihashi\", and \"Los datos fueron analizados con la prueba Chi-cuadrado de Pearson\". Then results mention relationships between patterns and sex and etnia, comisuras, etc. That's consistent. No contradictions. So 5.\n\nno_evaluable: 0 because it's a summary. Not invalid.\n\nobservaciones: we can note any concerns: maybe that no contextualization. But that's part of D3_contextualizacion. Could add comment about lack of context. But we can leave as empty string or note.\n\nWe must output JSON object. All fields present.\n\nMake sure to use integer or null. We'll set all numbers.\n\nAlso note that D4_consistencia must be 5. D4 field name in schema: \"D4_consistencia\" yes.\n\nLet's craft JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"No contextualización del estudio (pérdida de 0 en D3_contextualizacion).\"\n}\n\nCheck if any field missing: all required present.\n\nReturn JSON only."
+    }
+   }
+  ],
+  "created": 1789775865,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_99996fee8e",
+  "usage": {
+   "completion_tokens": 1461,
+   "prompt_tokens": 10025,
+   "total_tokens": 11486,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1313,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.284807994,
+   "prompt_time": 0.566896611,
+   "completion_time": 1.4972031399999999,
+   "total_time": 2.064099751
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vf8qa6e4dvwnnjswsp6mp4",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:57:45.879322+00:00"
+}

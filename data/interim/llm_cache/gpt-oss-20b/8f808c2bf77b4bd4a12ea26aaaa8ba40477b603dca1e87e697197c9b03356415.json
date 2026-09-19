@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-027",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": null,
+  "no_evaluable": 0,
+  "observaciones": "Resumen sin metodología ni resultados; solo objetivo presente."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":0,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":0,\"observaciones\":\"Resumen sin metodología ni resultados; solo objetivo presente.\"}",
+ "usage": {
+  "input_tokens": 9935,
+  "output_tokens": 1282
+ },
+ "latency_s": 2.888840913772583,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:48:40.665286+00:00",
+ "raw": {
+  "id": "chatcmpl-7f1f9d12-5405-4300-ad50-1f37464ef45b",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":0,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":0,\"observaciones\":\"Resumen sin metodología ni resultados; solo objetivo presente.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields per schema. Must apply annotation per protocol. Let's annotate.\n\nTitle irrelevant.\n\nSummary in Spanish, about Mercado de Abastos. Let's parse.\n\nFirst, check if it's a summary? It's a paragraph that includes introduction, problem, objective.\n\nWe need to evaluate each dimension.\n\nCheck if no_evaluable? It's a summary (not license). So no_evaluable=0.\n\nNow D1 fields: presence of objective, methodology, results, conclusions, order.\n\nWe need to examine summary:\n\n\"La presente investigación ayuda a comprender las problemáticas identificadas en el desarrollo del comercio ambulatorio, brindando un panorama directo de La Parada...\"\n\nThen \"...se mantiene aislado para las personas), y también la falta de una propuesta urbana que pueda organizar...\"\n\n\"...Para poder contrarrestar las problemáticas presentadas, la investigación busca sustentar la correcta aplicación de un mercado de abastos...\"\n\nSo we have objective: \"la investigación busca sustentar la correcta aplicación de un mercado de abastos\". That is an objective.\n\nMethodology: not present. No description of how they investigated. No design, sampling, etc. So methodology=0.\n\nResults: Not present. They don't report any results.\n\nConclusions: Not present. No closing, no interpretation.\n\nOrder: Because only objective present? The summary starts with general discussion, then objective. There is no methodology, results, conclusions. So we have 1 component. Since rule: if 0 or 1 component present, orden=0.\n\nSo D1_imryd_objetivo=1. D1_imryd_metodologia=0. D1_imryd_resultados=0. D1_imryd_conclusiones=0. D1_orden_logico=0.\n\nNow D2 coherencia: Evaluate flow 1-5. We need to read text.\n\nText: It's a bit dense, but it's somewhat coherent. It flows from problem description to objective. No abrupt jumps. Let's read:\n\n\"La presente investigación ayuda a comprender las problemáticas identificadas en el desarrollo del comercio ambulatorio, brindando un panorama directo de La Parada, sector del distrito de La Victoria donde se muestra de manera inmediata esta afectación. Esta problemática, que se desarrolla en distintos lugares del País, aparece como una de los principales oportunidades de desarrollo para sus habitantes, en mayor medida para los de bajos recursos, este factor permite que se mantenga un crecimiento constante, que se expande hacia las áreas públicas de la ciudad, ocasionando caos a nivel urbano, que lentamente produce la tugurización de estas áreas, afectando la calidad de vida de sus habitantes, a ello se suma el gran espacio público propuesto como solución (se mantiene aislado para las personas), y también la falta de una propuesta urbana que pueda organizar el comercio presentado en la zona y sus márgenes. No se identifican los patrones de desarrollo de actividades, ocasionando que ambos ejes (espacio público y comercio ), no puedan integrarse y menos aun brindar un aporte para la ciudad. Para poder contrarrestar las problemáticas presentadas, la investigación busca sustentar la correcta aplicación de un mercado de abastos que integre y libere el espacio público en gran parte de este sector y que funcione como eje comercial...\"\n\nSeems reasonably coherent. No big jumps. So maybe score 4 or 5. I'd assign 4: good flow but a bit dense, some repetition (\"se mantiene aislado para las personas\" unclear). So D2_coherencia=4.\n\nNow D3 fields: contextualizacion, metodo_detallado, resultados_concretos, conclusion_responde.\n\nContextualizacion: The summary situates problem: describes problem of urbanization, commerce, tugurization, effect on quality of life. Yes, it situates the problem in the sector. So D3_contextualizacion=1.\n\nMethodo_detallado: Not present. No design, sample, methods. So 0.\n\nResultados_concretos: no results. So 0.\n\nConclusion_responde: No conclusion, no closing. So 0.\n\nNow D4_consistencia: We need to see if there is a methodology declared and results vs conclusion. Since no methodology and no results, D4_consistencia should be set to \"no_evaluable\" flag? Actually D4 only applies if there is a methodology; if no methodology, mark no_evaluable=1? Wait, \"If the summary does not declare any methodology, the D4 cannot be evaluated: no_evaluable=1 and leave the D4 score empty.\" But in our annotation, we can set D4_consistencia to null. But schema says D4_consistencia can be integer 1-5 or null. So set null.\n\nAlso, no_evaluable=0 (because summary). So D4_consistencia null.\n\nObservaciones: include any notes. We can note that methodology missing; maybe note about objective.\n\nLet's produce JSON with fields: D1_imryd_objetivo (1), D1_imryd_metodologia (0), D1_imryd_resultados (0), D1_imryd_conclusiones (0), D1_orden_logico (0), D2_coherencia (4), D3_contextualizacion (1), D3_metodo_detallado (0), D3_resultados_concretos (0), D3_conclusion_responde (0), D4_consistencia null, no_evaluable 0, observaciones: \"Resumen sin metodología ni resultados; solo objetivo presente.\"\n\nCheck if any missing fields: all required present. Yes.\n\nEnsure JSON is compact. We'll output."
+    }
+   }
+  ],
+  "created": 1789775320,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_d23c14756c",
+  "usage": {
+   "completion_tokens": 1282,
+   "prompt_tokens": 9935,
+   "total_tokens": 11217,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1147,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.203828989,
+   "prompt_time": 0.578906003,
+   "completion_time": 1.362692051,
+   "total_time": 1.941598054
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2ver32geegbd9a66ka0g4kz",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:48:40.665318+00:00"
+}

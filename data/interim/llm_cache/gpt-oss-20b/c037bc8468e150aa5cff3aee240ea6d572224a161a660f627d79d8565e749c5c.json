@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-021",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 10264,
+  "output_tokens": 2406,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 3.5124595165252686,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:48:03.477986+00:00",
+ "raw": {
+  "id": "chatcmpl-5f39f003-b486-4636-9703-4db859e1049a",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields:\n\nD1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones\n\nAll required. All must be integers 0/1 or null; coherence 1-5.\n\nLet's annotate.\n\nFirst, read summary carefully. Identify components.\n\nTitle: \"Desarrollo folicular tras la aplicación de la PGF2α en vacas Brown Swiss sometidas a un protocolo de pre sincronización por dos vías de administración\"\n\nResumen: long paragraph.\n\nGoal: \"El objetivo del presente trabajo es evaluar la respuesta de la hormona prostaglandina (PGF2α) en dos vías de administración intramuscular y sub mucosa vulvar en el desarrollo del folículo preovulatorio (FPO), diámetro y consistencia del cuerno uterino, tasa de preñez\"\n\nThus objective explicit. So D1_imryd_objetivo = 1.\n\nMethodology: It says \"Durante el proceso de pre sincronizado y sincronizado se aplicó la hormona PGF2α vía intra muscular (IM) 0.5 mg Cloprostenol Sódico equivalente a 2 ml. y vía sub mucosa vulvar (SMV) 0.375 mg Cloprostenol Sódico equivalente a 1.5 ml; día 0, 2 ml IM y 1.5 SMV, día 11, 2 ml IM y 1.5 SMV, día 29, 2 ml IM y 1.5 SMV, día 32 se realizó la evaluación ecográfica de ovarios y cuernos uterinos antes de las 16 horas de realizar la IATF\". Also mentions 21 vacas Brown Swiss lactantes. So methodology details: design? It's a protocol with 21 animals, application of hormone. So yes, there's a clear methodology. D1_imryd_metodologia = 1.\n\nResults: It has quantitative results: FPO sizes, P-values, diameters, consistency percentages, preñez percentages, etc. So D1_imryd_resultados = 1.\n\nConclusions: \"Se concluye la administración de la hormona PGF2α por la vía sub mucosa vulvar afecta en el desarrollo del FPO y en los órganos de los anexos reproductivos, con diferencia % mínima en la tasa de preñez.\" That's a conclusion. It's summarizing findings, response to objective. So D1_imryd_conclusiones = 1.\n\nOrder logic: The summary starts with objective, then methodology, then results, then conclusion. That's the correct order. So D1_orden_logico = 1.\n\nNow D2_coherencia. Evaluate flow. Let's read the text: The paragraph seems dense but maybe coherent. There are some transitions: after objective, they describe protocols, then detailed methodology, then results. It seems fairly coherent, but some abrupt mentions? Let's analyze.\n\nParagraph 1: \"El objetivo del presente trabajo es evaluar la respuesta de la hormona prostaglandina (PGF2α) en dos vías de administración intramuscular y sub mucosa vulvar en el desarrollo del folículo preovulatorio (FPO), diámetro y consistencia del cuerno uterino, tasa de preñez; Todos sometidos a los protocolos sucesivos de Presynch® y Ovsynch®, desarrollada en 21 vacas Brown Swiss lactantes del Centro Poblado Collacachi (Cutimbo), perteneciente al Distrito y Provincia de Puno, ubicado en el altiplano peruano;\"\n\nIt merges objective and sample description. Slight abruptness but okay.\n\nParagraph 2: \"Durante el proceso de pre sincronizado y sincronizado se aplicó la hormona PGF2α vía intra muscular (IM) 0.5 mg Cloprostenol Sódico equivalente a 2 ml. y vía sub mucosa vulvar (SMV) 0.375 mg Cloprostenol Sódico equivalente a 1.5 ml; día 0, 2 ml IM y 1.5 SMV, día 11, 2 ml IM y 1.5 SMV, día 29, 2 ml IM y 1.5 SMV, día 32 se realizó la evaluación ecográfica de ovarios y cuernos uterinos antes de las 16 horas de realizar la IATF;\"\n\nMethodology described, but somewhat jumbled: includes the dosages, schedule, then evaluation. Acceptable.\n\nParagraph 3: \"como resultado se obtuvo el desarrollo del folículo preovulatorio (FPO) vía de administración sub mucosa vulvar x̄ 20.95 ± 6.85 mm., vía de administración intra muscular x̄ 13.27± 7.48) mm., (P= 0.024); Referente al desarrollo del diámetro del Cuerno Uterino, vía de administración sub mucosa vulvar (SMV) x̄ 32.14 ± 5.61 mm., vía de administración intra muscular (IM) x̄ 24.7± 8.85) mm., (P= 0.038). Por otra parte referente a la consistencia del Cuerno Uterino en el grupo de administración sub mucosa vulvar  se tiene (Turgente 45.5 %, Semi turgente 54.5 % y Blanda 0 %),  en el grupo de administración intra muscular  (Turgente 40 % Semi turgente 40 % y Blanda 20 %); Referente a la Tasa de Preñez  vía de administración sub mucosa vulvar 45.45 % de preñez, vía de administración intra muscular  30 % de preñez, no existe diferencia significativa (P= 0.466) (P < 0.05);\"\n\nResults are dense but still sequential.\n\nParagraph 4: Conclusion as above.\n\nFlow is acceptable. No major disconnects. I'd give 4 or 5. Check for any abruptness: The first sentence of paragraph 1: after the objective, \"Todos sometidos a los protocolos sucesivos...\" uses \"Todos\" with capital T, seems like a sentence fragment. But overall, flow is okay. I'd give 4 perhaps. But we need to pick.\n\nGiven typical evaluation, I'd choose D2_coherencia = 4. Might be 5 if perfect. I think it's slightly rough but not bad. I will go with 4.\n\nNow D3_contextualizacion. This component requires the summary to situate the problem: why matters, where occurs, to whom, against which standard etc. Does it mention why PGF2α, significance? It does not discuss why this matters, no broader context, just states the sample and location. There's no statement of problem importance. So D3_contextualizacion = 0.\n\nD3_metodo_detallado: needs at least two precisions. We have: number of animals (21), dosage amounts, schedule of days, method of evaluation (ecografía). That counts as more than two. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: has specific quantitative results: means, P-values, percentages. So yes. D3_resultados_concretos = 1.\n\nD3_conclusion_responde: Does conclusion answer objective? The objective was evaluating response of PGF2α in two routes on development of FPO, diameter, consistency, preñez. Conclusion says \"Se concluye la administración de la hormona PGF2α por la vía sub mucosa vulvar afecta en el desarrollo del FPO y en los órganos de los anexos reproductivos, con diferencia % mínima en la tasa de preñez.\" That indeed references objective. It states effect on FPO and organs, and minimal difference in preñez. So yes, it addresses objective. D3_conclusion_responde = 1.\n\nD4_consistencia: Check consistency between what was said methodology and results and conclusion. Methodology: two routes, dosages, evaluation. Results show difference for FPO, diameter, etc. Conclusion states that sub mucosa vulvar affects FPO development and organs, minimal difference in preñez. That aligns with results. No contradictions. The only potential is that conclusion says \"afecta en el desarrollo del FPO y en los órganos de los anexos reproductivos\" but results also mention diameter and consistency; okay. No contradictions. So D4_consistencia = 5.\n\nWe must check if any potential contradictions: The conclusion says \"afecta en el desarrollo del FPO y en los órganos de los anexos reproductivos, con diferencia % mínima en la tasa de preñez.\" But results: FPO size difference significant (p=0.024). Diameter difference significant (p=0.038). Consistency percentages maybe no p-value but difference? They didn't give significance. The conclusion says \"con diferencia % mínima en la tasa de preñez\" implying minimal difference; result shows no significant difference (p=0.466). That matches. So consistent.\n\nThus D4_consistencia = 5.\n\nno_evaluable: It's a valid summary, so 0.\n\nObservaciones: Might add notes about any ambiguous or potential issues. Maybe note that the conclusion does not mention consistency of uterus; but it's okay. Also note that the summary is dense but coherent. Observations can be empty string or some comment. According to schema, observaciones is string; we can put \"\" or provide a brief note. I think it's okay to put empty string or maybe a short note like \"Observación: El resumen es denso y utiliza un estilo narrativo, pero mantiene coherencia\". It's acceptable. But we could put an empty string if no observation. The schema doesn't require non-empty. It just says string type. I'd put an empty string to avoid any issues. Or maybe note that the summary uses some unusual punctuation (semicolons). But no need.\n\nThus final JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"\"\n}\n\nCheck JSON is compact, no extra spaces? It's okay. It will parse. Ensure fields names match exactly. They have underscores. All present. Good.\n\nLet's produce final."
+    }
+   }
+  ],
+  "created": 1789775283,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4a35f7bd1b",
+  "usage": {
+   "completion_tokens": 2406,
+   "prompt_tokens": 10264,
+   "total_tokens": 12670,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2280,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.193473684,
+   "prompt_time": 0.071050616,
+   "completion_time": 2.474112622,
+   "total_time": 2.5451632379999998
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vepy5ne4wtedq7mntf5fj3",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:48:03.478010+00:00"
+}

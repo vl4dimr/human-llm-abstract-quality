@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-061",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 2,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica con los componentes IMRyD. La coherencia organizacional se califica en 3 debido a que la redacción muestra algunos saltos en la progresión temática y uso de adjetivos valorativos innecesarios. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la dinámica familiar en el comportamiento estudiantil. Los resultados concretos son 0 porque el resumen menciona el valor de chi-cuadrado y los grados de libertad, pero no proporciona una magnitud específica o un coeficiente con dirección. La consistencia metodológica se califica en 2 debido a que la conclusión afirma una relación sustancial sin mencionar si los resultados respaldan esta afirmación."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 2,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica con los componentes IMRyD. La coherencia organizacional se califica en 3 debido a que la redacción muestra algunos saltos en la progresión temática y uso de adjetivos valorativos innecesarios. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la dinámica familiar en el comportamiento estudiantil. Los resultados concretos son 0 porque el resumen menciona el valor de chi-cuadrado y los grados de libertad, pero no proporciona una magnitud específica o un coeficiente con dirección. La consistencia metodológica se califica en 2 debido a que la conclusión afirma una relación sustancial sin mencionar si los resultados respaldan esta afirmación.\"\n}",
+ "usage": {
+  "input_tokens": 10890,
+  "output_tokens": 337,
+  "total_duration_s": 10.7628949
+ },
+ "latency_s": 10.782461643218994,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:26:29.371176+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:26:29.3624942Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 2,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica con los componentes IMRyD. La coherencia organizacional se califica en 3 debido a que la redacción muestra algunos saltos en la progresión temática y uso de adjetivos valorativos innecesarios. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la dinámica familiar en el comportamiento estudiantil. Los resultados concretos son 0 porque el resumen menciona el valor de chi-cuadrado y los grados de libertad, pero no proporciona una magnitud específica o un coeficiente con dirección. La consistencia metodológica se califica en 2 debido a que la conclusión afirma una relación sustancial sin mencionar si los resultados respaldan esta afirmación.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10762894900,
+  "load_duration": 3413000,
+  "prompt_eval_count": 10890,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 326239000,
+  "eval_count": 337,
+  "eval_duration": 10345837000
+ },
+ "cached_at_utc": "2026-09-19T02:26:29.371195+00:00"
+}

@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-078",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen cumple con la estructura IMRyD y presenta coherencia organizacional. La contextualización es cero porque el resumen comienza directamente con el objetivo. La metodología detallada incluye el lenguaje de programación y el sistema de base de datos. Los resultados son concretos al mencionar el porcentaje de satisfacción. La consistencia metodológica es 4 debido a que la conclusión no se basa en una prueba estadística, pero se refiere a los resultados obtenidos."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen cumple con la estructura IMRyD y presenta coherencia organizacional. La contextualización es cero porque el resumen comienza directamente con el objetivo. La metodología detallada incluye el lenguaje de programación y el sistema de base de datos. Los resultados son concretos al mencionar el porcentaje de satisfacción. La consistencia metodológica es 4 debido a que la conclusión no se basa en una prueba estadística, pero se refiere a los resultados obtenidos.\"\n}",
+ "usage": {
+  "input_tokens": 10736,
+  "output_tokens": 268,
+  "total_duration_s": 8.1100151
+ },
+ "latency_s": 8.111999988555908,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:35:59.593017+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:35:59.5917792Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen cumple con la estructura IMRyD y presenta coherencia organizacional. La contextualización es cero porque el resumen comienza directamente con el objetivo. La metodología detallada incluye el lenguaje de programación y el sistema de base de datos. Los resultados son concretos al mencionar el porcentaje de satisfacción. La consistencia metodológica es 4 debido a que la conclusión no se basa en una prueba estadística, pero se refiere a los resultados obtenidos.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8110015100,
+  "load_duration": 3258200,
+  "prompt_eval_count": 10736,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 230268000,
+  "eval_count": 268,
+  "eval_duration": 7816520000
+ },
+ "cached_at_utc": "2026-09-19T01:35:59.593030+00:00"
+}

@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-140",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen sin contextualización explícita; cumple IMRyD y coherencia alta."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin contextualización explícita; cumple IMRyD y coherencia alta.\"}",
+ "usage": {
+  "input_tokens": 9973,
+  "output_tokens": 1411
+ },
+ "latency_s": 2.679325819015503,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T00:02:14.284170+00:00",
+ "raw": {
+  "id": "chatcmpl-88cdfaf1-57da-4134-b80b-88d09c67a2ff",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin contextualización explícita; cumple IMRyD y coherencia alta.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones. All required.\n\nWe must annotate based on the protocol.\n\nLet's analyze the summary:\n\nTitle: Motivación laboral y desempeño docente en la Institución Educativa “María Auxiliadora”, Puno 2020.\n\nSummary: In the present investigation, the objective was to determine the relationship between labor motivation and teaching performance. The research approach was quantitative, basic or theoretical type, with design non-experimental cross-sectional descriptive and correlational, population 124 teachers and 240 students, sample 94 teachers and 148 students. Data collection technique: survey questionnaire. Results: For labor motivation variable: 74.47% high, 19.15% medium, 6.38% low. For teaching performance: 75% high, 24.32% medium, 0.68% low. Correlation positive very high rho Spearman 0.941 (94.1%) and p-value 0.000 < 0.05. Conclusion: motivation is directly and significantly related to teaching performance.\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 1 if the objective is stated. The summary has: \"determinar la relación entre la motivación laboral y el desempeño docente\". So yes: 1.\n\n- D1_imryd_metodologia: 1 if some concrete procedure indicated. They provide: quantitative, basic, theoretical, design non-experimental cross-sectional descriptive and correlational, population 124 teachers and 240 students, sample 94 teachers and 148 students, technique: survey questionnaire. So yes: 1.\n\n- D1_imryd_resultados: 1 if they communicate what was found, not just what was done. They have percentages for each variable, correlation coefficient, significance. So yes: 1.\n\n- D1_imryd_conclusiones: 1 if closure beyond repeating results, interpretation, implication, recommendation. They have: \"Concluyéndose que la motivación laboral se relaciona directa y significativamente con el desempeño docente\". That is conclusion. So yes: 1.\n\n- D1_orden_logico: 1 if the present components are in logical order: objective, methodology, results, conclusions. The summary seems to present objective first, methodology second, results third, conclusion last. Yes, so 1.\n\n- D2_coherencia: scale 1-5. We need to evaluate coherence. The summary flows: objective, methodology, results, correlation, conclusion. It's fairly coherent. Let's analyze. The paragraph structure: first objective and approach, then design details, then sample description, then results percentages, then correlation and significance, then conclusion. The flow is logical, though the paragraph is long and dense, but still coherent. I would rate 4 or 5. Might have some abrupt shift from result percentages to correlation, but still okay. I think 5: perfect progression. However, is there any abruptness? The correlation coefficient is inserted after the percentages; it's still part of results. The conclusion follows. So maybe 5. I'll set 5.\n\n- D3_contextualizacion: 1 if the summary situates the problem: why important, where, who, contrast with a norm or theory. The summary begins by stating the research objective, but does not mention why this topic is important, or the context beyond the institution and location. It says \"la presente investigación\". But doesn't give background or importance. So 0.\n\n- D3_metodo_detallado: 1 if at least two precise details of procedure: design, type, sample size, instrument, technique. They have: quantitative, basic or theoretical, non-experimental cross-sectional descriptive correlational, population 124 teachers and 240 students, sample 94 teachers and 148 students, technique: survey questionnaire. That is more than two. So 1.\n\n- D3_resultados_concretos: 1 if results provide specific content: figures, categories, relationships. They have percentages and correlation coefficient. So yes: 1.\n\n- D3_conclusion_responde: 1 if conclusion addresses the stated objective. The objective: relationship between motivation and performance. Conclusion: \"la motivación laboral se relaciona directa y significativamente con el desempeño docente\". Yes, that's a direct answer. So 1.\n\n- D4_consistencia: Scale 1-5. Coherence between what is said and what is presented. We need to see if there is consistency: The methodology: quantitative, correlational design. They present correlation coefficient and significance. This is consistent. No contradictions. So best: 5.\n\n- no_evaluable: 0 because it's a summary and has methodology.\n\n- observaciones: we can add any note about possible concerns: maybe mention that it's a narrative summary but no background context; or mention no conflict. Let's include: \"Resumen sin contextualización explícita; cumple IMRyD y coherencia alta.\" We'll keep short.\n\nNow produce JSON with these values. Must follow schema: all required fields present. Provide as compact JSON.\n\nLet's construct:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Resumen sin contextualización explícita; cumple IMRyD y coherencia alta.\"\n}\n\nCheck JSON validity. Yes.\n\nLet's output."
+    }
+   }
+  ],
+  "created": 1789776133,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e2cb7a84ec",
+  "usage": {
+   "completion_tokens": 1411,
+   "prompt_tokens": 9973,
+   "total_tokens": 11384,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1270,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.149758034,
+   "prompt_time": 0.748965238,
+   "completion_time": 1.522255544,
+   "total_time": 2.271220782
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vfgxbmes7rnm2ggyyr94vq",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-19T00:02:14.284189+00:00"
+}

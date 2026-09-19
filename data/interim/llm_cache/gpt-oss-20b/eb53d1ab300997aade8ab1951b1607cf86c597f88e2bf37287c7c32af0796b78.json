@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-010",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Objetivo aparece después de los resultados, lo que provoca orden=0. Flujo con saltos menores pero comprensible. Metodología detallada y resultados concretos. No contradicciones detectadas."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":0,\"D2_coherencia\":3,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Objetivo aparece después de los resultados, lo que provoca orden=0. Flujo con saltos menores pero comprensible. Metodología detallada y resultados concretos. No contradicciones detectadas.\"}",
+ "usage": {
+  "input_tokens": 9999,
+  "output_tokens": 1952
+ },
+ "latency_s": 3.1014885902404785,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T02:56:01.783727+00:00",
+ "raw": {
+  "id": "chatcmpl-98476956-197e-4393-ad6d-151ce00989b3",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":0,\"D2_coherencia\":3,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Objetivo aparece después de los resultados, lo que provoca orden=0. Flujo con saltos menores pero comprensible. Metodología detallada y resultados concretos. No contradicciones detectadas.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Uso de las tecnologías de información y comunicaciones en la competencia profesional de los egresados de la Escuela Profesional de Ciencias Contables de la Universidad Nacional del Altiplano de Puno en el periodo 2017\"\n\nResumen: (I'll rewrite for clarity)\n\n\"El estudio se refiere al “Uso de las tecnologías de información y comunicaciones en la competencia profesional de los egresados de la Escuela Profesional de Ciencias Contables de la Universidad Nacional del Altiplano de Puno en el periodo 2017”. La investigación es de tipo descriptivo, con un diseño ex post facto, utilizando el método científico. La muestra representativa estuvo constituida por 62 egresados del periodo 2017. La recolección de información fue realizada a través de un cuestionario como instrumento de investigación. Los principales resultados logrados evidencian que el uso de las tecnologías de información y comunicaciones influye directamente en la competencia profesional de los egresados de la Escuela Profesional de Ciencias Contables. Para el desarrollo del trabajo de investigación se trazó como objetivo general lo siguiente; Identificar el uso de las tecnologías de información y comunicaciones en la competencia profesional de los egresados de la Escuela Profesional de Ciencias Contables. Donde el 44% y 43% de los encuestados respondieron que es muy importante e importante, El uso de los conocimientos generales en tecnologías de información y comunicaciones el cual repercute en el mejor desempeño de la profesión contable también el 60% y 27% de los encuestados respondieron que es muy importante e importante uso de softwares de oficina que influye en la competencia profesional de los egresados de la Escuela Profesional de Ciencias Contables y el 69% y 23% de los encuestados respondieron que es muy importante e importante uso de los sistemas contables especializados en el sector público y privado el cual repercute en el mejor desempeño de la profesión contable.\"\n\nWe need to evaluate each dimension.\n\nFirst, D1_imryd_objetivo: Does the summary contain an explicit objective? It says: \"Para el desarrollo del trabajo de investigación se trazó como objetivo general lo siguiente; Identificar el uso de las tecnologías de información y comunicaciones en la competencia profesional de los egresados de la Escuela Profesional de Ciencias Contables.\" That is explicit. So D1_imryd_objetivo = 1.\n\nD1_imryd_metodologia: Does it indicate how knowledge was obtained? It says: \"La investigación es de tipo descriptivo, con un diseño ex post facto, utilizando el método científico. La muestra representativa estuvo constituida por 62 egresados del periodo 2017. La recolección de información fue realizada a través de un cuestionario como instrumento de investigación.\" That is a concrete method: design, sample size, instrument. So D1_imryd_metodologia = 1.\n\nD1_imryd_resultados: Does it communicate what was found? It says: \"Los principales resultados logrados evidencian que el uso de las tecnologías de información y comunicaciones influye directamente en la competencia profesional de los egresados...\" Then it gives percentages: 44% and 43% responded that it is very important and important; 60% and 27% responded that it is very important and important usage of office software; 69% and 23% responded that it is very important and important usage of specialized accounting systems. These are concrete results. So D1_imryd_resultados = 1.\n\nD1_imryd_conclusiones: Does it have a conclusion that goes beyond repeating results? The summary ends with the percentages and says \"el cual repercute en el mejor desempeño de la profesión contable.\" That is a conclusion: that the use of technologies influences performance. But is it more than repeating results? It says \"Los principales resultados logrados evidencian que el uso de las tecnologías de información y comunicaciones influye directamente en la competencia profesional...\" That is a conclusion. It also says \"el cual repercute en el mejor desempeño de la profesión contable.\" That is an implication. So yes, D1_imryd_conclusiones = 1.\n\nD1_orden_logico: Are the components present in logical order? The summary starts with title, then description of study, then methodology, then results, then objective, then percentages. Wait, the objective appears after methodology and results. The order is: introduction (study description), methodology, results, objective, percentages. The objective is usually first. But the objective appears after results. That breaks the canonical order. The rule: \"If there are 0 or 1 components present, order = 0. If there are more, check if present components appear in sequence.\" Here we have all four components present. The order is: introduction (not a component), methodology, results, objective, percentages. The objective appears after results. That is not the canonical order. So D1_orden_logico = 0.\n\nNow D2_coherencia: Evaluate flow. The summary is somewhat disjointed: It starts with a description, then methodology, then results, then objective, then percentages. The percentages are inserted after objective. The flow is not perfect. Let's rate. The summary has some jumps: after methodology, it goes to results, then objective, then percentages. That is a bit jarring. But overall, it's understandable. I'd give 3 maybe? Let's analyze: 5: impeccable; 4: good with minor aspereza; 3: understandable but some jumps; 2: need to reread; 1: incoherent. The summary is understandable but the objective appears after results, which is a bit odd. I'd rate 3.\n\nD3_contextualizacion: Does it situate the problem? It says: \"El estudio se refiere al ...\". It doesn't explain why it's important, where it occurs, or to whom it affects. It just states the study refers to the topic. So D3_contextualizacion = 0.\n\nD3_metodo_detallado: At least two precisions: design (descriptivo, ex post facto), sample size (62), instrument (questionnaire). That's at least 3 precisions. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: Are results concrete? Yes, percentages: 44% and 43%, 60% and 27%, 69% and 23%. So D3_resultados_concretos = 1.\n\nD3_conclusion_responde: Does the conclusion respond to the objective? The objective: \"Identificar el uso de las tecnologías de información y comunicaciones en la competencia profesional de los egresados\". The conclusion: \"Los principales resultados logrados evidencian que el uso de las tecnologías de información y comunicaciones influye directamente en la competencia profesional...\" That addresses the objective: it identifies the use and its influence. So yes, D3_conclusion_responde = 1.\n\nD4_consistencia: Consistency between what is said and what is presented. The summary says \"La investigación es de tipo descriptivo, con un diseño ex post facto, utilizando el método científico.\" Then it says \"Los principales resultados logrados evidencian que el uso de las tecnologías de información y comunicaciones influye directamente en la competencia profesional\". The percentages support that. There's no contradiction. So D4_consistencia = 5. Wait, check for any contradictions: It says \"El uso de las tecnologías de información y comunicaciones influye directamente en la competencia profesional\". Then percentages show importance. No contradictions. So 5.\n\nno_evaluable: The text is a summary, not a non-summary. So no_evaluable = 0.\n\nobservaciones: We can add any notes. For example, note that objective appears after results, which breaks order. Also note that the summary uses percentages but not exact values for each category? It gives percentages but not the exact numbers. But that's fine. Also note that the summary uses \"el método científico\" which is vague but still counts as methodology. We can mention that the objective appears after results, causing order=0. Also mention that the summary is somewhat disjointed but still coherent enough. Let's craft a concise observation.\n\nObservations: \"Objective stated after results, causing order=0. Flow has minor jumps but overall coherent. Methodology details sufficient. No contradictions.\"\n\nNow produce JSON with all fields. Ensure all required fields present. Use compact JSON. Let's produce.\n\nCheck schema: all fields must be present. Types: integers or null. We'll provide integers. Observations string.\n\nLet's produce final JSON."
+    }
+   }
+  ],
+  "created": 1789700161,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_63473661d7",
+  "usage": {
+   "completion_tokens": 1952,
+   "prompt_tokens": 9999,
+   "total_tokens": 11951,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1786,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.285378465,
+   "prompt_time": 0.502038265,
+   "completion_time": 2.029999608,
+   "total_time": 2.532037873
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s72d9beez8aphmxkj1gbrc",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T02:56:01.783812+00:00"
+}

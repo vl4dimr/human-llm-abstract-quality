@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-120",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen no presenta resultados concretos ni conclusiones; únicamente describe objetivo, metodología y expectativas. Contexto del problema está presente mediante la referencia a la empresa y ubicación."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen no presenta resultados concretos ni conclusiones; únicamente describe objetivo, metodología y expectativas. Contexto del problema está presente mediante la referencia a la empresa y ubicación.\"}",
+ "usage": {
+  "input_tokens": 9893,
+  "output_tokens": 1940,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.91412615776062,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:59:39.427398+00:00",
+ "raw": {
+  "id": "chatcmpl-ddfe5bf4-e3d7-47ef-aad9-c6005140da37",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen no presenta resultados concretos ni conclusiones; únicamente describe objetivo, metodología y expectativas. Contexto del problema está presente mediante la referencia a la empresa y ubicación.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones. All required.\n\nWe must evaluate based on the protocol.\n\nLet's analyze the summary:\n\nTitle: Control de riesgos disergonómicos para disminuir enfermedades ocupacionales de la Empresa Maquinaria Ingenieros Arequipa\n\nSummary content:\n\n\"This research has the objective to evaluate control of disergonomic risks to reduce occupational diseases in company Maquinaria Ingenieros in Arequipa during 2023. It is an applied study of non-experimental design with a correlational approach. The population of interest includes 70 workers, and the sample consists of the entire population. Data collection will be carried out via direct observation, documentary analysis and use of questionnaires. Disergonomic risks such as back pain and hand pain will be analyzed in different work activities. The impact of these risks on occupational health of workers will be quantified and the effectiveness of preventive measures implemented will be evaluated. This study seeks to provide comprehensive understanding of the relationship between disergonomic risks and occupational diseases in the specific workplace of Maquinaria Ingenieros. The updated methodology takes into account conditions and current advances in 2023 to guarantee relevance and applicability. Expected results will contribute to implementing more effective measures to improve health and safety at the company.\"\n\nWe need to determine:\n\nD1_imryd_objetivo: Does summary contain explicit objective? The first sentence states objective: \"Esta investigación tiene como objetivo evaluar el control de riesgos disergonómicos para reducir las enfermedades ocupacionales...\". That's explicit. So 1.\n\nD1_imryd_metodologia: Contains method description: \"estudio aplicado de diseño no experimental con enfoque correlacional... población 70 trabajadores... muestra total... recopilación de datos mediante observación directa, análisis documental y cuestionarios...\". That's enough. So 1.\n\nD1_imryd_resultados: Does it contain results? It says \"Los resultados esperados contribuirán a la implementación...\" But no actual results are reported. No concrete findings. So 0.\n\nD1_imryd_conclusiones: Contains a conclusion? It says \"Los resultados esperados contribuirán a la implementación ...\". This is more an expectation than a conclusion. It's not a closure, not interpreting. So 0.\n\nD1_orden_logico: We have objective, methodology, results, conclusions. But since results and conclusions missing, we need at least 2 components for order? The rule: If 0 or 1 component present, order = 0. Here we have 2 components present (objective, methodology). So we evaluate the order of the two present components: objective then methodology: yes, correct order. So D1_orden_logico = 1.\n\nBut the rule: \"Se juzga solo sobre los componentes presentes. Si faltan dos, se evalúa el orden de los otros dos.\" Wait: If only two present, you evaluate those. We have objective and methodology, they are in correct sequence. So order = 1. That seems correct.\n\nD2_coherencia: Evaluate flow. The summary flows logically: objective -> design -> population -> data collection -> analysis -> expected results. It's coherent. Maybe rating 5? Let's examine. The summary is fairly concise, no abrupt jumps, all in one paragraph, no contradictory. So 5.\n\nD3_contextualizacion: Contextualization: The summary gives context: the company Maquinaria Ingenieros in Arequipa during 2023. It gives location, type of workplace. It also says \"La investigación tiene como objetivo...\" but does it provide background why important? It says \"este estudio busca proporcionar comprensión integral...\" but no explicit statement of why is important. But \"Control de riesgos disergonómicos para reducir enfermedades ocupacionales\" implies importance. But the field expects to situate problem: why it matters, where it occurs, who it affects, etc. It states \"empresa Maquinaria Ingenieros in Arequipa\", and \"reduce diseases\" etc. I think it qualifies as contextualization? But the example: \"La escasez de agua potable...\" etc. Here we have: \"Este estudio busca proporcionar una comprensión integral de la relación...\" So it does mention the context of the workplace. I would say D3_contextualizacion = 1.\n\nLet's check definition: \"Vale 1 cuando el resumen sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco se contrasta.\" Here we have: problem: disergonomic risks causing occupational diseases. It's within company Maquinaria Ingenieros in Arequipa. It does not mention why it's important; but it's implied. But we might interpret it as contextualizing. I'd lean 1.\n\nD3_metodo_detallado: At least two precisions: design (non experimental correlational), sample size (70). Also data collection methods (observation direct, documentary, questionnaires). That's at least two. So 1.\n\nD3_resultados_concretos: Are there concrete results? No. It says expected results will contribute, but not actual results. So 0.\n\nD3_conclusion_responde: There is no conclusion. So 0. But the rule: If component not present, D3 field = 0. So 0.\n\nD4_consistencia: We need to evaluate consistency between what is said to be done and results presented. But since no results or conclusion, D4 cannot be evaluated? The rule says: \"If the summary does not declare any methodology, the D4 cannot be evaluated.\" But we have methodology. But if no results or conclusions, consistency? I think we still can evaluate: We can say no inconsistencies because there's no contradictory statements. But we might set D4_consistencia to 1? Wait, the rule: The scale 1-5 measures coherence between what summary says it did and what it presents. If there is no result or conclusion, can we evaluate? The text says: \"If the summary does not declare any methodology, the D4 cannot be evaluated.\" That's not the case. There's methodology. So we evaluate D4. There is no contradictory statement. The methodology is described. The results are missing but not contradictory. So I'd rate 5? But the rule says: 5: \"Enfoque, diseño, resultados y conclusiones encajan sin fisuras.\" Since there are no results or conclusions, they can't \"encajar\". But they also cannot \"not encajar\". Might rate 5? The scale is 1-5, with 5 best. If we can't evaluate because not all components present? But we can evaluate consistency: There is no contradiction: The methods and the expected outcomes match. I'd put 5.\n\nHowever, there is no results or conclusion; but consistency is still there (no contradictions). I think we can put 5.\n\nAlternatively, we could set 0? But 0 is not in the list; D4_consistencia is 1-5 or null. Null if not evaluable. It's evaluable. So set to 5.\n\nno_evaluable: 0 because it's a summary.\n\nobservaciones: Might mention that results are expected but not presented; maybe we note that summary lacks results and conclusions. Observations: \"Resumen no incluye resultados concretos ni conclusiones; solo describe objetivo, método y expectativas de resultados.\" Also mention that context is present, etc. Provide explanation. Ensure it's a string.\n\nLet's produce JSON.\n\nCheck schema: All fields present. All values are integers or null. Observaciones string.\n\nLet's craft:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":0,\n \"D1_imryd_conclusiones\":0,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":0,\n \"D3_conclusion_responde\":0,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Resumen no presenta resultados concretos ni conclusiones; únicamente describe objetivo, metodología y expectativas. Contexto del problema está presente mediante la referencia a la empresa y ubicación.\"\n}\n\nMake sure no trailing spaces. Output only JSON."
+    }
+   }
+  ],
+  "created": 1789775979,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_d23c14756c",
+  "usage": {
+   "completion_tokens": 1940,
+   "prompt_tokens": 9893,
+   "total_tokens": 11833,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1783,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.203097108,
+   "prompt_time": 0.052601023,
+   "completion_time": 2.036499958,
+   "total_time": 2.089100981
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vfc681epyr4ecetk2fcwb5",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:59:39.427486+00:00"
+}

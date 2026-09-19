@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-100",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Conclusión no explícita; se calificó 0 en componentes de cierre."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Conclusión no explícita; se calificó 0 en componentes de cierre.\"}",
+ "usage": {
+  "input_tokens": 10179,
+  "output_tokens": 1435,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.1972858905792236,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:57:33.888177+00:00",
+ "raw": {
+  "id": "chatcmpl-f83ab774-1a00-4c6c-9dae-1765d50f209f",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Conclusión no explícita; se calificó 0 en componentes de cierre.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields per schema. Evaluate summary.\n\nLet's analyze:\n\nTitle: \"Efecto de la aplicación de estiércol de cuy y microorganismos eficaces en la producción de plántulas de papaya andina...\"\n\nSummary content:\n\nIt says \"El presente trabajo permitirá...\" It's a narrative. It lists objectives, methodology, results, etc.\n\nLet's annotate.\n\nFields:\n\nD1_imryd_objetivo: 1 if objective stated. Yes: \"Siendo los objetivos: a) determinar el área foliar, altura de planta, numero de hojas por planta y diámetro de tallo de plántulas de papaya andina con la aplicación de abonos orgánicos en condiciones de vivero; b) estimar la longitud radicular al momento de transplante de plántulas de papaya andina y c) calcular los costos de producción de plántulas de papaya andina en vivero\". So objective present. => 1.\n\nD1_imryd_metodologia: 1 if procedure indicated. It mentions \"el diseño experimental bloque completamente al azar con 4 tratamientos y 3 repeticiones. La unidad experimental fue de 12 m2 con un área total de 209 m2.\" That is procedure. => 1.\n\nD1_imryd_resultados: 1 if findings communicated. Yes, detailed results for each variable with numbers. => 1.\n\nD1_imryd_conclusiones: 1 if closure beyond repeating result. There's no separate conclusion sentence; the summary ends with cost results. There is no explicit conclusion or interpretation that goes beyond repeating results. So D1_imryd_conclusiones likely 0. We could check: \"Los resultados fueron:\" then list results; no concluding statement. So 0.\n\nD1_orden_logico: We need to check if components present appear in logical sequence objective -> method -> results -> conclusion. Sequence: starts with objectives, then methodology, then results. Conclusion missing. So order: objective, methodology, results. That's correct order; no conclusion but still order of present components is correct. So 1.\n\nD2_coherencia: Scale 1-5. Evaluate flow. The summary starts with introduction statement \"El presente trabajo permitirá...\", then states objectives, then methodology, then results. The flow seems fairly coherent, but let's analyze.\n\nText: \"El presente trabajo permitirá...\" (intro). Then \"En vivero de producción de plántulas...\" (setting). Then objectives listing. Then \"donde se utilizó productos orgánicos y ecológicos, siendo el diseño experimental bloque...\" (method). Then results enumerated.\n\nSeems coherent, though there are some repetition: listing objectives separately, then methodology. Flow is ok, no abrupt jumps. No contradictory statements. So I'd rate 4. Perhaps 4 or 5. Check for transitions: The intro is vague, but it's fine. There's no major disconnection. I'd choose 5? 5 indicates impeccable progression with natural transitions, single terms per concept, no repetitions. There's some repetition of \"estiércol de cuy\" etc. But that's data. The introduction uses \"El presente trabajo permitirá tener opciones de abonamiento...\" and then \"En vivero...\" then \"Siendo los objetivos...\" There is a slight abruptness: \"En vivero\" might be missing \"del\". But overall flow is fine. I'll choose 5? But \"El presente trabajo permitirá...\" not strongly connected to objectives. There's a small jump: from introduction to objectives. That may be okay. I'd lean to 4. Let's set 4.\n\nD3_contextualizacion: 1 if problem is situated. The summary starts with \"El presente trabajo permitirá tener opciones de abonamiento...\" which implies importance of the study. It also mentions location Sandia-región Puno. That situates context: the need for options of fertilization in papaya in that region. So yes, 1.\n\nD3_metodo_detallado: 1 if at least two precisions. We have \"diseño experimental bloque completamente al azar con 4 tratamientos y 3 repeticiones\" (design, n? not a sample size but design details). Also \"La unidad experimental fue de 12 m2 con un área total de 209 m2.\" So at least two. Also \"se utilizó productos orgánicos y ecológicos\". So yes 1.\n\nD3_resultados_concretos: 1 if concrete results: yes numbers given for area, height, etc. So 1.\n\nD3_conclusion_responde: 1 if conclusion responds to objective. There's no conclusion section. So 0.\n\nD4_consistencia: Scale 1-5. Consistency between declared methodology and results. Are results aligned? Methodology: experimental block completely randomized with 4 treatments, 3 replications. Results: they present outcomes per treatment. That is consistent. No contradictions. They didn't overstate significance. No contradictory conclusions. So high consistency. I'd rate 5.\n\nno_evaluable: 0 (it is a valid summary, no missing methodology).\n\nobservaciones: any notes. We can include \"Objetivo presentado como lista de tres subobjetivos; metodología descrita con diseño y repeticiones; conclusión ausente, por lo que se puntuó 0 en D1_imryd_conclusiones y D3_conclusion_responde.\" But maybe concise: \"Conclusión no explícita; se calificó 0 en componentes de cierre.\" Good.\n\nNow produce JSON:\n\n{\n  \"D1_imryd_objetivo\":1,\n  \"D1_imryd_metodologia\":1,\n  \"D1_imryd_resultados\":1,\n  \"D1_imryd_conclusiones\":0,\n  \"D1_orden_logico\":1,\n  \"D2_coherencia\":4,\n  \"D3_contextualizacion\":1,\n  \"D3_metodo_detallado\":1,\n  \"D3_resultados_concretos\":1,\n  \"D3_conclusion_responde\":0,\n  \"D4_consistencia\":5,\n  \"no_evaluable\":0,\n  \"observaciones\":\"Conclusión no explícita; se calificó 0 en componentes de cierre.\"\n}\n\nNeed to ensure JSON valid, compact. Provide just that."
+    }
+   }
+  ],
+  "created": 1789775853,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_75c733514d",
+  "usage": {
+   "completion_tokens": 1435,
+   "prompt_tokens": 10179,
+   "total_tokens": 11614,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1294,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.312882987,
+   "prompt_time": 0.099254002,
+   "completion_time": 1.5176136470000001,
+   "total_time": 1.616867649
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vf8c0he5za9crpv8wpb59r",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:57:33.888211+00:00"
+}

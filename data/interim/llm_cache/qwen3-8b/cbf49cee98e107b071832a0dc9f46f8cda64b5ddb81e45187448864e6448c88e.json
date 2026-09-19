@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-033",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, aunque podría mejorar en la transición entre la metodología y los resultados. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la variabilidad hídrica. La metodología es detallada con el enfoque cuantitativo, nivel explicativo, diseño no experimental longitudinal, y la población incluye 30 estaciones meteorológicas. Los resultados son concretos con eficiencia del 81%, capacidades de reproducción superiores al 60%, y niveles de precisión entre 60% y 80%. La conclusión responde al objetivo al afirmar que los autómatas celulares son una metodología sólida, flexible e innovadora para modelar procesos hidrológicos complejos."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, aunque podría mejorar en la transición entre la metodología y los resultados. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la variabilidad hídrica. La metodología es detallada con el enfoque cuantitativo, nivel explicativo, diseño no experimental longitudinal, y la población incluye 30 estaciones meteorológicas. Los resultados son concretos con eficiencia del 81%, capacidades de reproducción superiores al 60%, y niveles de precisión entre 60% y 80%. La conclusión responde al objetivo al afirmar que los autómatas celulares son una metodología sólida, flexible e innovadora para modelar procesos hidrológicos complejos.\"\n}",
+ "usage": {
+  "input_tokens": 10948,
+  "output_tokens": 348,
+  "total_duration_s": 14.0965401
+ },
+ "latency_s": 14.127882719039917,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:29:44.692100+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:29:44.6827971Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, aunque podría mejorar en la transición entre la metodología y los resultados. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la variabilidad hídrica. La metodología es detallada con el enfoque cuantitativo, nivel explicativo, diseño no experimental longitudinal, y la población incluye 30 estaciones meteorológicas. Los resultados son concretos con eficiencia del 81%, capacidades de reproducción superiores al 60%, y niveles de precisión entre 60% y 80%. La conclusión responde al objetivo al afirmar que los autómatas celulares son una metodología sólida, flexible e innovadora para modelar procesos hidrológicos complejos.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 14096540100,
+  "load_duration": 7535200,
+  "prompt_eval_count": 10948,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 3636949000,
+  "eval_count": 348,
+  "eval_duration": 10384888000
+ },
+ "cached_at_utc": "2026-09-19T01:29:44.692123+00:00"
+}

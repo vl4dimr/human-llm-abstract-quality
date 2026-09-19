@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-096",
+ "model_name": "mistral-7b",
+ "provider": "ollama",
+ "model": "mistral:latest",
+ "model_reported": "mistral:latest",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"\"\n}",
+ "usage": {
+  "input_tokens": 12771,
+  "output_tokens": 190,
+  "total_duration_s": 6.1136613
+ },
+ "latency_s": 6.138921022415161,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:01:21.721385+00:00",
+ "raw": {
+  "model": "mistral:latest",
+  "created_at": "2026-09-19T01:01:21.7203091Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 6113661300,
+  "load_duration": 5053600,
+  "prompt_eval_count": 12771,
+  "prompt_eval_cached_count": 12155,
+  "prompt_eval_duration": 455932000,
+  "eval_count": 190,
+  "eval_duration": 5544611000
+ },
+ "cached_at_utc": "2026-09-19T01:01:21.721395+00:00"
+}

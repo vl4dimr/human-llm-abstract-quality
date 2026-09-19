@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-110",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 2,
+  "no_evaluable": 0,
+  "observaciones": "El resumen describe los resultados concretos, incluyendo dimensiones y formas específicas de los órganos del cuy silvestre. Sin embargo, no se menciona el contexto del estudio, por lo que D3_contextualizacion se puntuó en 0. La conclusión no responde al objetivo, por lo que D3_conclusion_responde se puntuó en 0. La coherencia es 3 debido a que hay saltos en la narrativa y adjetivación innecesaria."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 2,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen describe los resultados concretos, incluyendo dimensiones y formas específicas de los órganos del cuy silvestre. Sin embargo, no se menciona el contexto del estudio, por lo que D3_contextualizacion se puntuó en 0. La conclusión no responde al objetivo, por lo que D3_conclusion_responde se puntuó en 0. La coherencia es 3 debido a que hay saltos en la narrativa y adjetivación innecesaria.\"\n}",
+ "usage": {
+  "input_tokens": 10956,
+  "output_tokens": 267,
+  "total_duration_s": 8.6623434
+ },
+ "latency_s": 8.674603462219238,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:33:55.811361+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:33:55.7992746Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 2,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen describe los resultados concretos, incluyendo dimensiones y formas específicas de los órganos del cuy silvestre. Sin embargo, no se menciona el contexto del estudio, por lo que D3_contextualizacion se puntuó en 0. La conclusión no responde al objetivo, por lo que D3_conclusion_responde se puntuó en 0. La coherencia es 3 debido a que hay saltos en la narrativa y adjetivación innecesaria.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8662343400,
+  "load_duration": 9653600,
+  "prompt_eval_count": 10956,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 412681000,
+  "eval_count": 267,
+  "eval_duration": 8132552000
+ },
+ "cached_at_utc": "2026-09-19T02:33:55.811380+00:00"
+}

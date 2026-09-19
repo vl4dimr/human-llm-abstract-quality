@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-002",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Metodología ubicada al final del resumen; falta de detalles metodológicos y resultados concretos."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":3,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Metodología ubicada al final del resumen; falta de detalles metodológicos y resultados concretos.\"}",
+ "usage": {
+  "input_tokens": 9815,
+  "output_tokens": 1914
+ },
+ "latency_s": 7.14360499382019,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T02:55:08.340268+00:00",
+ "raw": {
+  "id": "chatcmpl-535f457b-9954-45df-9111-c06fbcb0c99d",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":3,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Metodología ubicada al final del resumen; falta de detalles metodológicos y resultados concretos.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's analyze the summary.\n\nTitle: \"El neuromarketing como herramienta estratégica para el posicionamiento de marca\"\n\nResumen:\n\n\"La presente investigación tiene objetivo analizar si el neuromarketing es una herramienta para el posicionamiento de una marca. Se sabe que el neuromarketing se utiliza como recurso de investigación y apoyo estratégico por sus grandes aportes de predicción de la conducta de los clientes, es por ello que primeramente se investiga cual es la importancia que tiene el neuromarketing todo ello para poder conocer de una manera detallada y profunda el comportamiento que tienen los consumidores al momento de una decisión de compra. Dentro del ámbito empresarial esta herramienta es muy útil para el posicionamiento de marcas, en la segunda parte se analizará conceptos sobre el posicionamiento de marca para determinar cómo es el funcionamiento del cerebro y seguidamente conceptualizar el neuromarketing. Se puede afirmar que es una herramienta estratégica para posicionar una marca. El tipo de metodología que se aplicó es de revisión bibliográfica.\"\n\nWe need to evaluate each dimension.\n\nFirst, D1_imryd_objetivo: Does the summary state the objective? Yes: \"La presente investigación tiene objetivo analizar si el neuromarketing es una herramienta para el posicionamiento de una marca.\" That's explicit. So 1.\n\nD1_imryd_metodologia: Does it state how it was done? It says \"El tipo de metodología que se aplicó es de revisión bibliográfica.\" That's a methodological statement. It's a single precision: \"revisión bibliográfica\". According to D1_metodologia, we need at least one concrete procedural indication. \"Revisión bibliográfica\" qualifies. So 1.\n\nD1_imryd_resultados: Does it state results? It says \"Se puede afirmar que es una herramienta estratégica para posicionar una marca.\" That's a conclusion, but also a result? It's a statement of finding. It says \"Se puede afirmar que es una herramienta estratégica para posicionar una marca.\" That is a result: the conclusion that neuromarketing is a strategic tool. So yes, 1.\n\nD1_imryd_conclusiones: Does it have a conclusion that goes beyond repeating results? It says \"Se puede afirmar que es una herramienta estratégica para posicionar una marca.\" That is a conclusion. It repeats the result? The result is the same statement. But the conclusion is basically the same as the result. The rule: \"Vale 1 cuando hay un cierre que va más allá de repetir el resultado: interpretación, implicación, respuesta explícita al objetivo, recomendación fundada.\" Here, the conclusion is basically the same as the result. There's no additional interpretation or implication. So maybe 0? But we need to decide. The result is \"Se puede afirmar que es una herramienta estratégica para posicionar una marca.\" The conclusion is the same. So it's a repetition. According to the table: \"Se concluye que el nivel es predominantemente regular\" is a conclusion. But \"Se concluye que el nivel es predominantemente regular\" is a conclusion that interprets the result. In our case, the result is \"Se puede afirmar que es una herramienta estratégica para posicionar una marca.\" The conclusion is the same. So it's a repetition. So D1_conclusiones = 0.\n\nBut let's double-check: The result is \"Se puede afirmar que es una herramienta estratégica para posicionar una marca.\" That is a statement of finding. The conclusion is the same. So it's repetition. So 0.\n\nD1_orden_logico: Are the components present in logical order? The summary: objective first, then methodology, then results, then conclusion. Yes. So 1.\n\nNow D2_coherencia: Evaluate flow. The summary: It starts with objective, then explains background, then methodology, then conclusion. The flow is somewhat okay but there are some jumps: \"Se sabe que el neuromarketing se utiliza...\" then \"es por ello que primeramente se investiga cual es la importancia...\" then \"Dentro del ámbito empresarial esta herramienta es muy útil...\" then \"en la segunda parte se analizará conceptos...\" then \"Se puede afirmar que es una herramienta estratégica...\" Then methodology. The flow is somewhat disjointed: The methodology is at the end. The conclusion is before methodology. That might break flow. But we need to assign a value 1-5. Let's analyze: The summary is not extremely disjointed but has some jumps. The order: objective, background, importance, application, second part analysis, conclusion, methodology. The methodology is at the end, which is a bit odd. That might reduce coherence. I'd assign 3 maybe. Let's think: 5 is perfect flow, 4 is good with minor issues, 3 is understandable but some jumps, 2 is hard to follow, 1 is incoherent. The summary is understandable but the methodology at the end is a bit odd. I'd give 3.\n\nNow D3_contextualizacion: Does it situate the problem? It says \"Se sabe que el neuromarketing se utiliza...\" but does it explain why it's important? It says \"es por ello que primeramente se investiga cual es la importancia que tiene el neuromarketing todo ello para poder conocer de una manera detallada y profunda el comportamiento que tienen los consumidores al momento de una decisión de compra.\" That is somewhat contextualizing: It explains the importance of neuromarketing for understanding consumer behavior. So yes, 1.\n\nBut the definition: \"sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco se contrasta.\" The summary does mention the importance of neuromarketing for understanding consumer behavior. It doesn't mention a specific location or population, but it does mention \"consumidores al momento de una decisión de compra.\" That is a context. So I'd say 1.\n\nD3_metodo_detallado: Does it give at least two precisions? It says \"El tipo de metodología que se aplicó es de revisión bibliográfica.\" That's one precision. No other details. So 0.\n\nD3_resultados_concretos: Does it give concrete results? It says \"Se puede afirmar que es una herramienta estratégica para posicionar una marca.\" That's a statement but not a concrete result with numbers or categories. It's a qualitative statement. According to the rule: \"Resultado concreto: cifras, magnitudes, categorías nombradas, relaciones con dirección.\" This is not concrete. So 0.\n\nD3_conclusion_responde: Does the conclusion respond to the objective? The conclusion is \"Se puede afirmar que es una herramienta estratégica para posicionar una marca.\" The objective was \"analizar si el neuromarketing es una herramienta para el posicionamiento de una marca.\" The conclusion says \"Se puede afirmar que es una herramienta estratégica para posicionar una marca.\" That does respond to the objective. So 1.\n\nD4_consistencia: We need to evaluate consistency between what is said and what is presented. The summary says methodology: \"revisión bibliográfica.\" The results: \"Se puede afirmar que es una herramienta estratégica para posicionar una marca.\" That is consistent with a literature review. There's no contradiction. So D4_consistencia = 5? But we need to check if any contradictions: The conclusion is consistent with the methodology. There's no mention of statistical significance or contradictory statements. So 5.\n\nBut we need to check if the conclusion is too strong given a literature review. But it's not contradictory. So 5.\n\nNow no_evaluable: The text is a summary, not a non-summary. So 0.\n\nObservaciones: We can add notes about the order of methodology at the end, or about the lack of details. But we can keep it minimal.\n\nNow produce JSON with all fields.\n\nLet's list fields:\n\nD1_imryd_objetivo: 1\nD1_imryd_metodologia: 1\nD1_imryd_resultados: 1\nD1_imryd_conclusiones: 0\nD1_orden_logico: 1\nD2_coherencia: 3\nD3_contextualizacion: 1\nD3_metodo_detallado: 0\nD3_resultados_concretos: 0\nD3_conclusion_responde: 1\nD4_consistencia: 5\nno_evaluable: 0\nobservaciones: maybe \"Metodología ubicada al final; falta de detalles metodológicos y resultados concretos.\"\n\nCheck that all fields are present. Yes.\n\nNow produce JSON."
+    }
+   }
+  ],
+  "created": 1789700108,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_996f667773",
+  "usage": {
+   "completion_tokens": 1914,
+   "prompt_tokens": 9815,
+   "total_tokens": 11729,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1771,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.150282085,
+   "prompt_time": 0.702622945,
+   "completion_time": 2.012808302,
+   "total_time": 2.715431247
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s70rxqee98qcqawygfxc71",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T02:55:08.340363+00:00"
+}

@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-070",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen cumple con los componentes IMRyD en orden. La coherencia se califica en 4 debido a la posible repetición de términos y la necesidad de mayor fluidez. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la degradación del ecosistema. La metodología es detallada con el diseño, la técnica de observación directa, la modelación hidrológica y el análisis de NDVI. Los resultados son concretos con porcentajes y datos numéricos. La conclusión responde al objetivo al mencionar la degradación del ecosistema y el impacto del túnel. La consistencia metodológica se califica en 3 debido a que la conclusión menciona afectaciones de grado alto, pero no se explica claramente cómo los resultados respaldan esa afirmación."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen cumple con los componentes IMRyD en orden. La coherencia se califica en 4 debido a la posible repetición de términos y la necesidad de mayor fluidez. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la degradación del ecosistema. La metodología es detallada con el diseño, la técnica de observación directa, la modelación hidrológica y el análisis de NDVI. Los resultados son concretos con porcentajes y datos numéricos. La conclusión responde al objetivo al mencionar la degradación del ecosistema y el impacto del túnel. La consistencia metodológica se califica en 3 debido a que la conclusión menciona afectaciones de grado alto, pero no se explica claramente cómo los resultados respaldan esa afirmación.\"\n}",
+ "usage": {
+  "input_tokens": 10940,
+  "output_tokens": 355,
+  "total_duration_s": 11.2701197
+ },
+ "latency_s": 11.286007642745972,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:58:24.763270+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:58:24.7606679Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen cumple con los componentes IMRyD en orden. La coherencia se califica en 4 debido a la posible repetición de términos y la necesidad de mayor fluidez. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la degradación del ecosistema. La metodología es detallada con el diseño, la técnica de observación directa, la modelación hidrológica y el análisis de NDVI. Los resultados son concretos con porcentajes y datos numéricos. La conclusión responde al objetivo al mencionar la degradación del ecosistema y el impacto del túnel. La consistencia metodológica se califica en 3 debido a que la conclusión menciona afectaciones de grado alto, pero no se explica claramente cómo los resultados respaldan esa afirmación.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 11270119700,
+  "load_duration": 19286400,
+  "prompt_eval_count": 10940,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 393067000,
+  "eval_count": 355,
+  "eval_duration": 10705578000
+ },
+ "cached_at_utc": "2026-09-19T01:58:24.763293+00:00"
+}

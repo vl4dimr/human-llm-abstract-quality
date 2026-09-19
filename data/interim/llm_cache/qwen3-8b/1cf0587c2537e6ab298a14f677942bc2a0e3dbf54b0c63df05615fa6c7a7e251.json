@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-111",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD correctamente. Sin embargo, la contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante mejorar la estabilidad de los suelos. La coherencia es 4 porque el texto fluye bien, aunque hay una ligera deriva terminológica al usar 'SUCS' sin definir. La consistencia es 4 debido al uso del término 'significativo' sin una prueba estadística explícita."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. Sin embargo, la contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante mejorar la estabilidad de los suelos. La coherencia es 4 porque el texto fluye bien, aunque hay una ligera deriva terminológica al usar 'SUCS' sin definir. La consistencia es 4 debido al uso del término 'significativo' sin una prueba estadística explícita.\"\n}",
+ "usage": {
+  "input_tokens": 10820,
+  "output_tokens": 264,
+  "total_duration_s": 8.4649408
+ },
+ "latency_s": 8.472512483596802,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:34:04.287420+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:34:04.2800142Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. Sin embargo, la contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante mejorar la estabilidad de los suelos. La coherencia es 4 porque el texto fluye bien, aunque hay una ligera deriva terminológica al usar 'SUCS' sin definir. La consistencia es 4 debido al uso del término 'significativo' sin una prueba estadística explícita.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8464940800,
+  "load_duration": 4269800,
+  "prompt_eval_count": 10820,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 329745000,
+  "eval_count": 264,
+  "eval_duration": 8014893000
+ },
+ "cached_at_utc": "2026-09-19T02:34:04.287431+00:00"
+}

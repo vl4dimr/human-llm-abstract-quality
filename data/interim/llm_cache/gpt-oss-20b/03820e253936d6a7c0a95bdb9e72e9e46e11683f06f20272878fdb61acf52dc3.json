@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-101",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 10067,
+  "output_tokens": 2039,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 3.01214861869812,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:27:50.636796+00:00",
+ "raw": {
+  "id": "chatcmpl-b392650d-b9bc-4ab3-baba-f5e64d2684e7",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. We need to produce JSON with required fields. Must ensure all fields are present. Observations string can be empty or explanatory.\n\nLet's annotate:\n\nTitle: not needed.\n\nSummary: The summary is given. Let's analyze each dimension.\n\nDimension 1: Adherencia a IMRyD.\n\n- D1_imryd_objetivo: The summary contains: \"La investigación se realizó con el objetivo de determinar la efectividad...\" That clearly states objective. So D1_imryd_objetivo = 1.\n\n- D1_imryd_metodologia: Summary states \"Fue de tipo cuasi-experimental de corte longitudinal... la muestra de estudio estuvo conformada por 40 mujeres... se utilizó la técnica de la encuesta, el instrumento fue el cuestionario que se aplicó en dos momentos después de la intervención. Se tomó la prueba T-student, con un valor de p<0.05 y un intervalo de confianza de 95%.\" That's concrete methodological details: design, sample size, data collection technique, instrument, analysis test. So D1_imryd_metodologia = 1.\n\n- D1_imryd_resultados: The summary contains results: \"antes de la intervención el 70% de mujeres tenían conocimiento deficiente y el 30% regular, después de realizar la intervención ... 100% obtuvieron conocimiento bueno ... 95% mantuvo su conocimiento bueno y 5% regular ... en el grupo control ... 75% ...\". Those are specific percentages. So D1_imryd_resultados = 1.\n\n- D1_imryd_conclusiones: Summary ends with: \"Por lo tanto, al comparar el nivel de conocimiento entre el grupo experimental y control se concluye que la intervención de enfermería con metodología participativa es efectiva para mejorar los conocimientos desde un nivel deficiente a bueno, entonces se confirma la hipótesis planteada\". Yes, that's a conclusion that responds to the objective and interprets results. So D1_imryd_conclusiones = 1.\n\n- D1_orden_logico: The components present are: objective, methodology, results, conclusion. Are they in logical order? The summary starts with objective, then methodology, then results, then conclusion. So yes, D1_orden_logico = 1.\n\nThus all five are 1.\n\nDimension 2: Coherencia organizacional (1 to 5). Evaluate flow. Let's read the summary.\n\n\"La investigación se realizó con el objetivo de determinar la efectividad de la Metodología Participativa de Enfermería en la Prevención Primaria del Cáncer de Cuello Uterino en mujeres del Asentamiento Humano Pueblo Libre-Ayaviri, 2014. Fue de tipo cuasi-experimental de corte longitudinal, la muestra de estudio estuvo conformada por 40 mujeres cuyas edades oscilaron de 20 a 49 años de edad, de las cuales 20 conformaron el grupo experimental y 20 el grupo control; para la recolección de datos se utilizó la técnica de la encuesta, el instrumento fue el cuestionario que se aplicó en dos momentos después de la intervención. Se tomó la prueba T-student, con un valor de p<0.05 y un intervalo de confianza de 95%. Los resultados del estudio demuestran que antes de la intervención el 70% de mujeres tenían conocimiento deficiente y el 30% regular, después de realizar la intervención con metodología participativa de enfermería el 100% obtuvieron conocimiento bueno en la primera medición; lo que fue significativo (p=0.00) con la prueba Tstudent, mientras que en la segunda medición el 95% mantuvo su conocimiento bueno y un 5% regular lo que demuestra que el conocimiento se mantiene, para el grupo control en el pre-test el 70% de mujeres tenían conocimiento deficiente y 30% regular y en el post-test los conocimientos deficientes se mantuvieron con un 75%. Por lo tanto, al comparar el nivel de conocimiento entre el grupo experimental y control se concluye que la intervención de enfermería con metodología participativa es efectiva para mejorar los conocimientos desde un nivel deficiente a bueno, entonces se confirma la hipótesis planteada, corroborada con el análisis estadístico al obtener la prueba Tc = 70.12 > Tt = 1.68 para un nivel de confianza del 95% y un nivel de significancia de α=0.05\"\n\nObservations: The summary flows fairly well: objective, methodology, results, conclusion. Are there any abrupt jumps? There is a sentence: \"lo que fue significativo (p=0.00) con la prueba Tstudent,\" maybe a small break, but overall fine. No major jumps. I'd rate 5 maybe. But need to consider if there's any adjetivation or terminological changes. They use \"cuasi-experimental\" then \"corte longitudinal\", \"T-student\", \"p<0.05\". They use \"intervención con metodología participativa de enfermería\" then \"la prueba Tstudent\". That seems consistent. No contradictions.\n\nThus D2_coherencia = 5. But we might consider that \"p=0.00\" is weird, but not flow issue.\n\nDimension 3: Completeness of components.\n\n- D3_contextualizacion: This requires the summary to situate the problem: why it matters, where, who affected, etc. The summary starts with objective and does not talk about context, importance, or background. It just says objective. So D3_contextualizacion = 0.\n\n- D3_metodo_detallado: Need at least two concrete precisions. The summary gives: design: \"cuasi-experimental de corte longitudinal\", sample size: 40, split into experimental/control, data collection method: \"técnica de la encuesta\", instrument: \"cuestionario\", measurement points: \"dos momentos después de la intervención\", test used: \"prueba T-student, p<0.05, IC 95%\". That's many. So D3_metodo_detallado = 1.\n\n- D3_resultados_concretos: Contains percentages and significance. So D3_resultados_concretos = 1.\n\n- D3_conclusion_responde: Conclusion addresses objective: \"la intervención es efectiva ...\". Yes, conclusion responds to objective. So D3_conclusion_responde = 1.\n\nDimension 4: Consistencia metodológica. Check for contradictions.\n\nWe need to check if conclusion or statements contradict results or methods.\n\nLet's evaluate: The conclusion states \"la intervención es efectiva...\". The results show that post-intervention, 100% had good knowledge. So conclusion matches results. They also mention test Tc = 70.12 > Tt = 1.68, etc. They used T-student. They used significance p<0.05. They also say p=0.00? That's odd. But not contradictory. The conclusion \"entonces se confirma la hipótesis planteada\". The hypothesis: effectiveness of intervention. They have results supporting it. So no contradictions. The only potential is \"p=0.00\" but it's not contradictory.\n\nThus D4_consistencia = 5? Let's think: The D4 uses scale 1-5. Highest is 5 for coherent alignment. We have no contradictions. So D4_consistencia = 5.\n\nBut check if there is any claim about significance when they didn't report test statistics? They reported test statistic \"Tc = 70.12 > Tt = 1.68\" which is fine. They also mention \"p<0.05\" and \"p=0.00\" which is weird but not contradictory. So I think 5.\n\nNo_evaluable: Since we have methodology and all components, not no_evaluable. So no_evaluable = 0.\n\nObservaciones: We might add something about \"p=0.00\" weird, but not necessary. We can leave empty or brief.\n\nNow produce JSON with all fields. The schema expects all required fields present. Fields:\n\nD1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nWe have values.\n\nLet's double-check each:\n\n- D1_imryd_objetivo: 1\n- D1_imryd_metodologia: 1\n- D1_imryd_resultados: 1\n- D1_imryd_conclusiones: 1\n- D1_orden_logico: 1\n- D2_coherencia: 5\n- D3_contextualizacion: 0\n- D3_metodo_detallado: 1\n- D3_resultados_concretos: 1\n- D3_conclusion_responde: 1\n- D4_consistencia: 5\n- no_evaluable: 0\n- observaciones: \"\" (empty string)\n\nAll values are integers (0-5 etc). Should be fine. Confirm no null.\n\nReturn compact JSON."
+    }
+   }
+  ],
+  "created": 1789702070,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_228717f27c",
+  "usage": {
+   "completion_tokens": 2039,
+   "prompt_tokens": 10067,
+   "total_tokens": 12106,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1914,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.149069461,
+   "prompt_time": 0.123210148,
+   "completion_time": 2.115318674,
+   "total_time": 2.238528822
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8wntyeyrv66rym06f4chk",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:27:50.636820+00:00"
+}

@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-042",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "Resultados concretos no incluyen magnitud (valor de correlación); consistencia baja por falta de detalle del estadístico."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":3,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":4,\"no_evaluable\":0,\"observaciones\":\"Resultados concretos no incluyen magnitud (valor de correlación); consistencia baja por falta de detalle del estadístico.\"}",
+ "usage": {
+  "input_tokens": 9935,
+  "output_tokens": 2033,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 3.176830768585205,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:19:38.232346+00:00",
+ "raw": {
+  "id": "chatcmpl-6d74121c-2577-4d16-9275-ca32b19774ea",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":3,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":4,\"no_evaluable\":0,\"observaciones\":\"Resultados concretos no incluyen magnitud (valor de correlación); consistencia baja por falta de detalle del estadístico.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate according to protocol. Fields required: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nLet's parse the summary.\n\nSummary content: \n\n\"La presente investigación se elabora debido a querer conocer si se relaciona las variables pues muchas de las empresas no cuentan con el financiamiento adecuado. Por ello se tuvo como objetivo general determinar cuál es el nivel de relación de las fuentes de financiamiento y el desarrollo empresarial en el Consorcio Aprocela servicios generales de la Provincia de Melgar - Puno, 2018. Se contó con 16 socios que forman parte del consorcio, Se tuvo como tipo de investigación: Descriptivo correlacional, el enfoque cuantitativo, con diseño no experimental por que no Se manipulo la variable y con corte transeccional porque la obtención de información se realizó en un solo momento mediante la encuesta, usando la recolección de datos como instrumento de medición teniendo un cuestionario de 19 preguntas tipo Likert, los resultados fueron procesados mediante el programa estadístico IBM SPSS Statistics 25. Aplicándose la prueba de correlación de Rho Spearman obteniendo como resultado que existe relación positiva significativa entre las fuentes de financiamiento y el desarrollo empresarial en el Consorcio Aprocela servicios generales de la Provincia de Melgar - Puno, 2018., permitiéndoles obtener una oportunidad de mejorar sus activos, gestionar de manera adecuada sus financiamientos y mejorar la economía a fin de propiciar la reducción de pobreza el distrito de Antauta.\"\n\nWe must assign each field.\n\nD1_imryd_objetivo: yes, the objective is present: \"determinar cuál es el nivel de relación de las fuentes de financiamiento y el desarrollo empresarial\" – explicit. So 1.\n\nD1_imryd_metodologia: yes, method described: \"tipo de investigación: Descriptivo correlacional, enfoque cuantitativo, diseño no experimental, corte transversal, encuesta, cuestionario de 19 preguntas tipo Likert, IBM SPSS Statistics 25, prueba de correlación de Rho Spearman\". That is at least one concrete detail, more than two. So 1.\n\nD1_imryd_resultados: yes, results: \"existe relación positiva significativa\". That's a result: yes, 1.\n\nD1_imryd_conclusiones: Conclusiones: final sentence: \"permitiéndoles obtener una oportunidad de mejorar sus activos, gestionar de manera adecuada sus financiamientos y mejorar la economía a fin de propiciar la reducción de pobreza\". This is an implication but not necessarily a clear conclusion. Does it answer the objective? It states implication. But conclusion must go beyond result, interpret, implication, respond to objective. It does provide implication. I'd say it qualifies: It's a conclusion that explains significance. So 1. It's not just a repetition.\n\nD1_orden_logico: order: objective -> methodology -> results -> conclusion. The text seems: objective after initial statement; then methodology; then results; then conclusion. So yes 1.\n\nD2_coherencia: flow. Let's examine.\n\nText: Starts with \"La presente investigación se elabora debido a querer conocer si se relaciona las variables pues muchas de las empresas no cuentan con el financiamiento adecuado.\" That's a bit messy: \"por querer conocer si se relaciona las variables\". Then \"Por ello se tuvo como objetivo general determinar ...\". Then \"Se contó con 16 socios...\" \"Se tuvo como tipo de investigación: Descriptivo correlacional...\" etc. Then \"los resultados fueron procesados ...\". Then \"Aplicándose la prueba de correlación de Rho Spearman obteniendo como resultado que existe relación positiva significativa...\" Then \"permitiéndoles ...\". There is some flow, but there are some grammar errors, but overall understandable. I'd rate 3? Let's evaluate: \n\n- Transition from objective to methodology: \"Por ello se tuvo como objetivo general... Se contó con 16 socios...\" then \"Se tuvo como tipo de investigación...\". Good. \n- Transition to results: \"los resultados fueron procesados mediante...\" \"Aplicándose la prueba...\" Good.\n- Conclusion: \"permitiéndoles...\" Good.\n\nBut there is some awkward phrase early: \"se elabora debido a querer conocer si se relaciona las variables\". Also \"por que no Se manipulo la variable y con corte transeccional porque la obtención de información se realizó en un solo momento\". Minor issues, but not major. So I'd give coherence 3: \"Se entiende, pero cuesta\". There might be a bit of repetition and awkwardness. I think 3.\n\nD3_contextualizacion: Does summary sit the problem? It says \"la presente investigación se elabora debido a querer conocer si se relaciona las variables pues muchas de las empresas no cuentan con el financiamiento adecuado.\" That provides context: many companies lack financing. It also mentions location. So yes 1. Actually it's present: they mention why it's needed. So 1.\n\nD3_metodo_detallado: We need at least two precisions: design (descriptivo correlacional, no experimental), sample size (16), instrument (cuestionario Likert 19), analysis (SPSS, Spearman). That's at least 4. So 1.\n\nD3_resultados_concretos: Contains \"existe relación positiva significativa\" but does it give magnitude? It says \"relación positiva significativa\". No specific correlation coefficient. It doesn't give the value, just significance. According to section 8.4, \"Significancia sin magnitud\" is a case limit: result present but no concrete magnitude. So D3_resultados_concretos = 0. Because they didn't give coefficient or r. So 0.\n\nD3_conclusion_responde: Conclusion: \"permitiéndoles obtener una oportunidad de mejorar sus activos, gestionar de manera adecuada sus financiamientos y mejorar la economía a fin de propiciar la reducción de pobreza\" - This is an implication that stems from the result. The conclusion responds to the objective: yes, it interprets significance. So 1.\n\nD4_consistencia: Need to assess coherence between methodology and results. Did they claim a correlation but did they report correlation coefficient? No. They did a Spearman test and found significance. They didn't provide p value or correlation coefficient. That's a minor lack of precision. According to 9.2, using \"significativo\" in sense colloquial without test is a problem. Here they say \"relación positiva significativa\". That indicates significance. Did they provide p? No. According to \"Afirmar diferencias tras reportar p > 0,05\" is serious. Here they don't report p value. So there's an issue: they did not provide magnitude. But does that constitute a discordance? It's a lack of detail but not a contradiction. The methodology states they used Spearman correlation; results: correlation positive significance. That's consistent. However, lacking magnitude doesn't break consistency, but maybe it is considered \"lack of precision\" but not a contradiction. According to D4 scoring: 5 = perfect; 4 = minor precision issue; 3 = visible discordance not invalid; 2 = multiple discordances; 1 = open contradiction. Here the only issue is missing magnitude. That is a small imprecision but not contradictory. So maybe score 4: \"coherente, con una imprecisión terminológica menor\". Yes.\n\nBut is \"relación positiva significativa\" a phrase that implies significance but not specifying p? It's okay. It's a statement of significance but no value. That is minor. So D4_consistencia = 4.\n\nno_evaluable: 0, since it's a valid summary.\n\nobservaciones: Note any clarifications. We should note that D3_resultados_concretos = 0 due to no magnitude; D4_consistencia 4 due to lack of magnitude.\n\nLet's craft JSON. Ensure all fields present.\n\nAlso ensure no spaces. Use compact JSON.\n\nLet's produce: \n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":3,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":0,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":4,\n \"no_evaluable\":0,\n \"observaciones\":\"Resultados concretos no incluyen magnitud (valor de correlación); consistencia baja por falta de detalle del estadístico. \"\n}\n\nCheck format: all integers or null? Should be integers. No null. Provide string for observaciones. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789701578,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_8d13edce1d",
+  "usage": {
+   "completion_tokens": 2033,
+   "prompt_tokens": 9935,
+   "total_tokens": 11968,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1884,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.241468869,
+   "prompt_time": 0.0590379,
+   "completion_time": 2.108365106,
+   "total_time": 2.167403006
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8dmyeejvb3mxhrk0j13eq",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:19:38.232444+00:00"
+}

@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-026",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 9988,
+  "output_tokens": 1531,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.4113757610321045,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:17:41.623642+00:00",
+ "raw": {
+  "id": "chatcmpl-7d28c16e-81bb-4cb4-97ec-8a18b9e7e6ee",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate according to protocol. Provide fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nCheck if not evaluable? It seems it's a valid summary. No missing methodology; we have it. So no_evaluable = 0.\n\nNow assign values.\n\nFirst, D1_imryd_objetivo: objective is present: \"determinar la influencia del marketing digital en la sustentabilidad de estas empresas.\" So objective 1.\n\nD1_imryd_metodologia: methodology present. Yes. 1.\n\nD1_imryd_resultados: results present: r=0.564, p=0.001, R²=0.44. So 1.\n\nD1_imryd_conclusiones: There is a conclusion section: \"En conclusión, los hallazgos coinciden con estudios previos...\" The conclusion is a sentence that summarizes. It responds to objective? It says findings coincide with previous studies, etc. It interprets. So 1.\n\nBut check: Does it respond to objective? The objective was to determine influence; conclusion: \"hallazgos coinciden con estudios previos que demuestran cómo la transformación digital fortalece la competitividad y resiliencia empresarial.\" That is more general but still addresses that marketing digital has positive effect. So 1.\n\nD1_orden_logico: components present in order: objective -> methodology -> results -> conclusions. Yes. So 1.\n\nD2_coherencia: need to evaluate flow 1-5.\n\nLet's read: \n\"El marketing digital ha emergido como un factor clave en la sustentabilidad de las pequeñas y medianas empresas (PYMEs) del sector turístico, especialmente en la región Puno. En un entorno donde la digitalización es fundamental para la competitividad empresarial, esta investigación busca determinar la influencia del marketing digital en la sustentabilidad de estas empresas. La metodología que se adoptó es de un enfoque cuantitativo, con un diseño descriptivo y correlacional. La población conformada por PYMEs turísticas (restaurantes, hoteles y agencias de viajes), aplicando un muestreo por conveniencia. Se aplicó dos escalas validadas: la de Mahmutović (2021) para medir el marketing digital y la de Vinodh & Joy (2012) para evaluar la sustentabilidad. Los resultados revelan una relación positiva y significativa entre marketing digital y sustentabilidad (r = 0.564, p = 0.001). El modelo de regresión explica el 44% de la varianza en la sustentabilidad (R² ajustado = .44), indicando que un aumento en la implementación de estrategias de marketing digital mejora la sostenibilidad de las PYMEs turísticas. En conclusión, los hallazgos coinciden con estudios previos que demuestran cómo la transformación digital fortalece la competitividad y resiliencia empresarial. La adopción de herramientas digitales permite a las empresas optimizar sus recursos, ampliar su alcance en el mercado y mejorar la experiencia del cliente. Finalmente, el marketing digital no solo es un motor de crecimiento económico, sino también un elemento determinante para la sostenibilidad, favoreciendo la rentabilidad y la responsabilidad ambiental y social de las PYMEs turísticas.\"\n\nFlow: starts with context? Actually first sentence is context: \"El marketing digital ha emergido...\" This is like contextualization. Then objective, methodology, results, conclusion. So the order is: context, objective, methodology, results, conclusion. Since D1_orden_logico only cares about the presence of objective, methodology, results, conclusion and their order. They appear in order. So 1.\n\nThus D1_orden_logico =1.\n\nD2_coherencia: Evaluate coherence. Sentences flow, no abrupt jumps. Some redundancy maybe but still coherent. I'd rate 5 perhaps? Let's analyze: \"El marketing digital ha emergido...\" context. Next: objective. Next: methodology. Next: results. Next: conclusion. It's all logical. There's no dissonant. So 5.\n\nD3_contextualizacion: The summary situates the problem: \"El marketing digital ha emergido como un factor clave en la sustentabilidad de las pequeñas y medianas empresas (PYMEs) del sector turístico, especialmente en la región Puno.\" This is contextualization: why important, where occurs (región Puno), etc. So 1.\n\nD3_metodo_detallado: At least two precisions: design descriptive and correlational, population of PYMEs, sampling convenience, two validated scales, mention of scales, statistical tests (correlation r, regression R²). So yes 1.\n\nD3_resultados_concretos: Results: r = 0.564, p=0.001, R² = .44. That's concrete. So 1.\n\nD3_conclusion_responde: The conclusion responds to objective: objective was to determine influence of marketing digital on sustainability; conclusion says findings confirm that marketing digital positively influences sustainability. So yes 1.\n\nD4_consistencia: Consistency between what was claimed and presented. Check if any contradictions: They claim descriptive correlational study, present r and regression. No contradictions. The conclusion is consistent. So 5.\n\nThus all 1 except D4=5, D2=5. no_evaluable 0. Observaciones: maybe mention that \"La conclusión se centra en la influencia positiva, no menciona limitaciones\" but no major issues. But we may add a comment: \"Ninguna observación\". But we must provide a string; maybe empty string allowed? Observaciones field type string, can be empty? It doesn't say can't be empty. But to be safe we can provide empty string or minimal comment. Provide empty string \"\".\n\nDouble-check: No_evaluable must be integer 0 or 1. Provide 0.\n\nAll fields included. Ensure JSON is valid.\n\nLet's produce:\n\n{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}\n\nCheck fields: All required present. Yes.\n\nReturn only JSON."
+    }
+   }
+  ],
+  "created": 1789701461,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c5a89987dc",
+  "usage": {
+   "completion_tokens": 1531,
+   "prompt_tokens": 9988,
+   "total_tokens": 11519,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1405,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.293903118,
+   "prompt_time": 0.060091408,
+   "completion_time": 1.7969003350000001,
+   "total_time": 1.856991743
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8a3awenkv0y0pyhqjy9k8",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:17:41.623670+00:00"
+}

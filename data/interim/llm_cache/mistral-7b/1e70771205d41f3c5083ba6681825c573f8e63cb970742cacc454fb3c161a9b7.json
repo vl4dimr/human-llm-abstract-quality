@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-132",
+ "model_name": "mistral-7b",
+ "provider": "ollama",
+ "model": "mistral:latest",
+ "model_reported": "mistral:latest",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "La última frase da un resultado concreto pero no se ajusta a la definición operativa de 'resultados' en el protocolo. Esta discrepancia fue discutida y aceptada en la reunión de calibración."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 1,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"La última frase da un resultado concreto pero no se ajusta a la definición operativa de 'resultados' en el protocolo. Esta discrepancia fue discutida y aceptada en la reunión de calibración.\"\n}",
+ "usage": {
+  "input_tokens": 12935,
+  "output_tokens": 245,
+  "total_duration_s": 7.2791715
+ },
+ "latency_s": 7.280835151672363,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:05:11.652366+00:00",
+ "raw": {
+  "model": "mistral:latest",
+  "created_at": "2026-09-19T01:05:11.6512968Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 1,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"La última frase da un resultado concreto pero no se ajusta a la definición operativa de 'resultados' en el protocolo. Esta discrepancia fue discutida y aceptada en la reunión de calibración.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7279171500,
+  "load_duration": 5767700,
+  "prompt_eval_count": 12935,
+  "prompt_eval_cached_count": 12155,
+  "prompt_eval_duration": 613136000,
+  "eval_count": 245,
+  "eval_duration": 6578850000
+ },
+ "cached_at_utc": "2026-09-19T01:05:11.652383+00:00"
+}

@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-018",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen cumple con la estructura IMRyD y presenta una coherencia adecuada. La contextualización es cero porque el resumen comienza directamente con el objetivo. La consistencia metodológica es 4 debido a que el resumen menciona el coeficiente de correlación de Pearson, pero no se especifica cómo se calculó."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen cumple con la estructura IMRyD y presenta una coherencia adecuada. La contextualización es cero porque el resumen comienza directamente con el objetivo. La consistencia metodológica es 4 debido a que el resumen menciona el coeficiente de correlación de Pearson, pero no se especifica cómo se calculó.\"\n}",
+ "usage": {
+  "input_tokens": 10842,
+  "output_tokens": 230,
+  "total_duration_s": 7.3158181
+ },
+ "latency_s": 7.341088533401489,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:50:24.598973+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:50:24.5962482Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen cumple con la estructura IMRyD y presenta una coherencia adecuada. La contextualización es cero porque el resumen comienza directamente con el objetivo. La consistencia metodológica es 4 debido a que el resumen menciona el coeficiente de correlación de Pearson, pero no se especifica cómo se calculó.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7315818100,
+  "load_duration": 15232600,
+  "prompt_eval_count": 10842,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 284931000,
+  "eval_count": 230,
+  "eval_duration": 6900118000
+ },
+ "cached_at_utc": "2026-09-19T01:50:24.598993+00:00"
+}

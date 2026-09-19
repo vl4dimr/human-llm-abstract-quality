@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-157",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen presenta objetivo y método claros, pero no reporta resultados numéricos ni conclusiones explícitas; la afirmación de optimización se presenta sin datos de respaldo."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta objetivo y método claros, pero no reporta resultados numéricos ni conclusiones explícitas; la afirmación de optimización se presenta sin datos de respaldo.\"}",
+ "usage": {
+  "input_tokens": 9833,
+  "output_tokens": 2291
+ },
+ "latency_s": 3.7879176139831543,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T00:04:09.652075+00:00",
+ "raw": {
+  "id": "chatcmpl-6a8a66f6-ac03-4b9c-b0aa-f7f9d7a650b8",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta objetivo y método claros, pero no reporta resultados numéricos ni conclusiones explícitas; la afirmación de optimización se presenta sin datos de respaldo.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones. All required.\n\nWe must annotate based on the protocol.\n\nLet's analyze the summary:\n\nTitle: \"Incidencia de las normas de control interno en el área de tesorería de la municipalidad distrital de Pilcuyo provincia de El Collao Región Puno periodo 2016 - 2017\"\n\nResumo (in Spanish):\n\n\"El presente trabajo de investigación tiene como objetivo determinar la incidencia de control interno en las actividades que se realizan en el área de Tesorería de la Municipalidad Distrital de Pilcuyo, para poder alcanzar este objetivo se aplicó un cuestionario referente a las normas de control interno para el área de tesorería, que consta de 30 preguntas y se tomó en cuenta las repuestas afirmativa a los encuestados, para luego aplicar una escala de valoración , la muestra es el personal que labora en el área de tesorería, y en donde se identifica como son los procesos de control interno y afirmar que el cumplimiento de normas de tesorería optimiza la gestión administrativa, este trabajo de investigación es de tipo no experimental y el nivel de investigación es Descriptivo – Explicativo; lo que permite establecer las conclusiones.\"\n\nWe need to assess components.\n\n**D1_imryd_objetivo**: Is there explicit statement of objective? It says: \"El presente trabajo de investigación tiene como objetivo determinar la incidencia de control interno en las actividades que se realizan en el área de Tesorería ...\". Yes, explicit. So 1.\n\n**D1_imryd_metodologia**: Must indicate how knowledge was obtained, at least one concrete indication. It says: \"se aplicó un cuestionario referente a las normas de control interno para el área de tesorería, que consta de 30 preguntas y se tomó en cuenta las repuestas afirmativa a los encuestados, para luego aplicar una escala de valoración , la muestra es el personal que labora en el área de tesorería\". That gives method: questionnaire, 30 questions, sample of personnel, a scale of evaluation. That counts. So 1.\n\n**D1_imryd_resultados**: Must communicate what was found, not just methodology. The summary: \"y en donde se identifica como son los procesos de control interno y afirmar que el cumplimiento de normas de tesorería optimiza la gestión administrativa\". This is a conclusion but not concrete results. There's no numbers or statistics. It just says \"identifica ... y afirmar que el cumplimiento ... optimiza la gestión administrativa.\" That's essentially a conclusion, but also may be considered a result? But the criteria: \"Cuando se comunica qué se encontró, no solo qué se hizo.\" This is not a concrete result; it's a claim about the effect of compliance. It's not a measured result. So D1_imryd_resultados = 0.\n\nBut we need to see if maybe the \"identifica...\" qualifies as result. In example B, they had \"no existen diferencias significativas\" and considered that a result. Here \"identifica como son los procesos de control interno\" is more like a description. But \"afirmar que el cumplimiento de normas de tesorería optimiza la gestión administrativa\" is an interpretative claim. That would be conclusion. So I think D1_imryd_resultados = 0.\n\n**D1_imryd_conclusiones**: Does the summary provide a conclusion beyond repeating results? The sentence: \"lo que permite establecer las conclusiones.\" This is meta. But they don't provide explicit conclusion. There's a claim: \"y afirmar que el cumplimiento de normas de tesorería optimiza la gestión administrativa\". That could be considered a conclusion? But it's not clearly a conclusion separate from results. They didn't state a conclusion. So D1_imryd_conclusiones = 0.\n\n**D1_orden_logico**: The order: objective, methodology, results, conclusion. But since we have objective, methodology, then statement \"identifica ... y afirmar ...\" but no separate conclusion. So the order is objective -> methodology -> statement (result?), but no conclusion. According to rules: If 0 or 1 components present, order=0 automatically. But we have 2 components: objective and methodology. They are in order. So D1_orden_logico could be 1, because the components present appear in coherent order. But if only objective and methodology present, order is 1? The rule: \"If there are 0 or 1 components present, value = 0 automatically.\" But we have 2 present. So we can evaluate order. Since the components present appear in correct order (objective then methodology). So D1_orden_logico = 1.\n\n**D2_coherencia**: Need to evaluate flow, 1-5. Let's analyze:\n\nParagraph: \"El presente trabajo de investigación tiene como objetivo determinar la incidencia de control interno en las actividades que se realizan en el área de Tesorería de la Municipalidad Distrital de Pilcuyo, para poder alcanzar este objetivo se aplicó un cuestionario referente a las normas de control interno para el área de tesorería, que consta de 30 preguntas y se tomó en cuenta las repuestas afirmativa a los encuestados, para luego aplicar una escala de valoración , la muestra es el personal que labora en el área de tesorería, y en donde se identifica como son los procesos de control interno y afirmar que el cumplimiento de normas de tesorería optimiza la gestión administrativa, este trabajo de investigación es de tipo no experimental y el nivel de investigación es Descriptivo – Explicativo; lo que permite establecer las conclusiones.\"\n\nThis is a single paragraph; it starts with objective, then method, then some description of results maybe, then mention of research type, level, and then \"lo que permite establecer las conclusiones\". The flow: objective -> method -> results -> research type. It's fairly coherent. But there is a jump: after method, it says \"y en donde se identifica como son los procesos de control interno y afirmar que el cumplimiento de normas de tesorería optimiza la gestión administrativa\". That could be considered result or conclusion. The sentence \"y en donde se identifica como son los procesos de control interno\" maybe incomplete. Also the phrase \"y afirmar que\" is a bit awkward. There's also a typographic error \"repuestas\" maybe not considered. The flow seems coherent but some awkwardness. I'd rate it 4? Let's decide: 4: flows well, minor aspérité.\n\n**D3_contextualizacion**: Does the summary sit the problem: why it matters? The summary begins by objective, no background. So D3_contextualizacion=0.\n\n**D3_metodo_detallado**: Need at least two precisions: design, sample size, instrument, etc. We have: \"cuestionario referente a las normas de control interno, que consta de 30 preguntas\", \"muestra es el personal que labora en el área de tesorería\". That is two precisions: instrument details and sample description. So D3_metodo_detallado = 1.\n\n**D3_resultados_concretos**: Need concrete results: numbers, categories, etc. There are no numbers beyond 30 questions. No results reported. So D3_resultados_concretos=0.\n\n**D3_conclusion_responde**: There is no explicit conclusion. So 0.\n\n**D4_consistencia**: Consistency between what the summary says it did and what it presents. Since no results, no conclusion, it's hard to judge. But we can evaluate: It says \"para poder alcanzar este objetivo se aplicó un cuestionario ... y en donde se identifica... y afirmar que el cumplimiento... optimiza la gestión administrativa\". The method is described, but the \"identifica... afirmar que ...\" seems like results but no data. There's no contradiction. It's consistent: they did a survey and then concluded something. But they didn't present data. Is that inconsistent? Not necessarily, it's an incomplete reporting but not contradictory. So D4_consistencia could be 5? But we have no conclusion to compare. The summary does not present a conclusion separate, but it does state a claim \"afirmar que el cumplimiento optimiza la gestión\". That could be considered a conclusion; it is derived from results (not shown). There's no contradiction. So I'd give 5? But the D4 scale is 1 to 5, 5 is perfect consistency. There's no discordance. So 5.\n\nHowever, the D4 rule: If the summary does not declare any methodology, the D4 is not evaluable. But there is a methodology. So we evaluate.\n\nThus D4_consistencia = 5.\n\n**no_evaluable**: The summary appears to be a valid summary. So 0.\n\n**observaciones**: We can add any relevant note. Maybe note that results and conclusion are not fully detailed. Observations: \"Resultado no reportado; conclusión no separada.\" Let's write.\n\nMake sure all fields present.\n\nNow produce JSON compact.\n\nLet's craft:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":0,\n \"D1_imryd_conclusiones\":0,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":0,\n \"D3_conclusion_responde\":0,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Resumen presenta objetivo y método claros, pero no reporta resultados numéricos ni conclusiones explícitas; la afirmación de optimización se presenta sin datos de respaldo.\"\n}\n\nCheck that all values are integers or null. Observations is string. All required. Yes.\n\nReturn only JSON."
+    }
+   }
+  ],
+  "created": 1789776249,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c9afb2bdb4",
+  "usage": {
+   "completion_tokens": 2291,
+   "prompt_tokens": 9833,
+   "total_tokens": 12124,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2132,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.192310545,
+   "prompt_time": 0.610726414,
+   "completion_time": 2.327192652,
+   "total_time": 2.937919066
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vfmd9zeeysarws23z8rj9a",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-19T00:04:09.652149+00:00"
+}

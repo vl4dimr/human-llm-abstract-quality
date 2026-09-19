@@ -1,0 +1,59 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.env
+
+# ---------------------------------------------------------------------------
+# Textos de los resumenes y titulos de las tesis: NO se redistribuyen.
+# Se cosecharon por OAI-PMH de repositorios institucionales publicos y su
+# copyright pertenece a sus autores e instituciones. El estudio no tiene
+# derecho a relicenciarlos, y el manuscrito asi lo declara.
+# Se reconstruyen con src/00_stage_raw.py; ver data/raw/README.md.
+# ---------------------------------------------------------------------------
+data/raw/annotations/
+data/raw/corpus/
+data/raw/llm_prior/
+data/interim/documents.csv
+# data/interim/llm_cache/ SI se publica: es la evidencia primaria de lo que devolvio
+# cada modelo y no lleva el texto de los resumenes, solo su prompt_fingerprint.
+# El de abajo no: se hizo en condiciones de computo mezcladas y se aparto.
+data/interim/_cache_condiciones_mezcladas/
+data/processed/llm_notes.csv
+outputs/for_annotation/
+outputs/prompts/example_user_prompt.txt
+outputs/tables/disagreements_for_review.csv
+outputs/tables/disagreements_for_review_PROVISIONAL_A1only.csv
+outputs/error_analysis_report.md
+outputs/error_analysis_report_PROVISIONAL_A1only.md
+/Anotacion_*.xlsx
+
+# Registros de ejecucion (pueden contener fragmentos de texto)
+outputs/logs/
+
+# Vistas previas del manuscrito (se regeneran)
+paper/_preview.pdf
+paper/_p_*.png
+paper/~$*
+
+# Temporales de Excel
+~$*.xlsx
+
+# ---------------------------------------------------------------------------
+# Fuera del paquete publico:
+# - paper/      manuscrito sin enviar, carta de presentacion, solicitud de
+#               exencion de APC (datos economicos privados), auditoria interna
+#               y la version para otra revista.
+# - docs/, outputs/literatura/  notas de la revision bibliografica y datos
+#               derivados de una exportacion de Scopus, cuya licencia no
+#               permite redistribuirlos.
+# ---------------------------------------------------------------------------
+paper/
+docs/
+outputs/literatura/
+
+# Herramientas del manuscrito y del cribado bibliografico: no forman parte de la
+# replicacion de los resultados y nombran la revista de destino.
+src/make_docx.py
+src/preview_docx.py
+src/07_screen_literature.py

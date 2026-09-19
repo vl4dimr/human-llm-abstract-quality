@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-044",
+ "model_name": "mistral-7b",
+ "provider": "ollama",
+ "model": "mistral:latest",
+ "model_reported": "mistral:latest",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "Este resumen contiene detalles de la caracterización geomecánica y del diseño de sostenimiento, que no son parte de la estructura IMRyD"
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"Este resumen contiene detalles de la caracterización geomecánica y del diseño de sostenimiento, que no son parte de la estructura IMRyD\"\n}",
+ "usage": {
+  "input_tokens": 12730,
+  "output_tokens": 231,
+  "total_duration_s": 6.6940402
+ },
+ "latency_s": 6.697076797485352,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T00:55:53.302735+00:00",
+ "raw": {
+  "model": "mistral:latest",
+  "created_at": "2026-09-19T00:55:53.3013418Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"Este resumen contiene detalles de la caracterización geomecánica y del diseño de sostenimiento, que no son parte de la estructura IMRyD\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 6694040200,
+  "load_duration": 6683300,
+  "prompt_eval_count": 12730,
+  "prompt_eval_cached_count": 12155,
+  "prompt_eval_duration": 410833000,
+  "eval_count": 231,
+  "eval_duration": 6172523000
+ },
+ "cached_at_utc": "2026-09-19T00:55:53.302753+00:00"
+}

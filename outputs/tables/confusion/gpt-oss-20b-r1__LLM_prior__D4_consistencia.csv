@@ -1,0 +1,6 @@
+,LLM_prior=1,LLM_prior=2,LLM_prior=3,LLM_prior=4,LLM_prior=5
+gpt-oss-20b#r1=1,3.0,2.0,0.0,1.0,1.0
+gpt-oss-20b#r1=2,1.0,0.0,0.0,1.0,0.0
+gpt-oss-20b#r1=3,0.0,3.0,1.0,1.0,0.0
+gpt-oss-20b#r1=4,0.0,1.0,1.0,0.0,0.0
+gpt-oss-20b#r1=5,5.0,18.0,20.0,44.0,42.0

@@ -1,0 +1,4 @@
+# Sin conversion de finales de linea: el paquete debe descargarse byte a byte
+# identico en cualquier plataforma, o los hashes de CHECKSUMS.sha256 no cuadran
+# al clonar en Windows.
+* -text

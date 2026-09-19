@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-066",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Objetivo, metodología y resultados claros. Falta conclusión interpretativa. Coherencia buena (4)."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Objetivo, metodología y resultados claros. Falta conclusión interpretativa. Coherencia buena (4).\"}",
+ "usage": {
+  "input_tokens": 10020,
+  "output_tokens": 2446,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 3.802755355834961,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:03:19.448059+00:00",
+ "raw": {
+  "id": "chatcmpl-67f374bf-11ec-4060-8e51-b8c7c0fb55a6",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Objetivo, metodología y resultados claros. Falta conclusión interpretativa. Coherencia buena (4).\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nWe need to evaluate each field.\n\nLet's parse the summary.\n\nTitle: \"Análisis técnico económico de reutilización de inyectores eui bosch instalados en camiones Volvo Fmx que operan en altitudes superiores a 3800 M.S.N.M.\"\n\nSummary:\n\n\"El presente trabajo partió de la necesidad de disminuir los costos de operatividad de los camiones VOLVO, el mayor porcentaje de gastos se lo lleva el consumo de combustible, este se incrementa cuando el sistema de inyección específicamente los inyectores de combustible del motor están en mal estado generando cuantiosas pérdidas, así como también mayor emisión de los gases de escape.\n\nObjetivos primordiales desarrollar una estrategia de evaluación para realizar el análisis técnico de los inyectores, con esto podremos optar por criterios de reparación más seguros con equipos de simulación, diagnóstico y comprobación, después de haber realizado todas estas pruebas podremos determinar el óptimo funcionamiento de los inyectores, así como también determinaremos la rentabilidad que se tiene al recuperar un periodo de vida adicional que se le están dando a los inyectores en vez de optar por la compra nueva de los inyectores.\n\nEn el marco tenemos una amplia información acerca del funcionamiento de los inyectores, adicionalmente tenemos los conceptos de todo el sistema de inyección que nos permitirá conocer el funcionamiento de los inyectores, veremos cómo los sensores, sistema eléctrico, entre otros son piezas fundamentales para el óptimo funcionamiento de los inyectores, a partir de todos estos conocimientos adquiridos encontraremos estrategias que nos accedan resolver problemas técnicos de los inyectores.\n\nEl trabajo de investigación nos dio resultados positivos a partir de la estrategia de evaluación técnica propuesta con equipos y herramientas hartridge, así como en el banco de pruebas AVM2-PC, a partir de estas pruebas realizadas se determinó que los inyectores trabajan óptimamente, en cuanto a la parte económica tenemos una rentabilidad del 64.5 % este resultado lo obtuvimos a partir de una comparación entre la compra de nuevos inyectores frente al mantenimiento realizado.\"\n\nWe need to evaluate each dimension.\n\nFirst, D1_imryd_objetivo: Does the summary contain an explicit objective? The summary says: \"Objetivos primordiales desarrollar una estrategia de evaluación para realizar el análisis técnico de los inyectores, con esto podremos optar por criterios de reparación más seguros con equipos de simulación, diagnóstico y comprobación, después de haber realizado todas estas pruebas podremos determinar el óptimo funcionamiento de los inyectores, así como también determinaremos la rentabilidad que se tiene al recuperar un periodo de vida adicional que se le están dando a los inyectores en vez de optar por la compra nueva de los inyectores.\"\n\nThis is an explicit objective: \"desarrollar una estrategia de evaluación para realizar el análisis técnico de los inyectores\" and also \"determinar el óptimo funcionamiento\" and \"determinar la rentabilidad\". So yes, objective present. So D1_imryd_objetivo = 1.\n\nD1_imryd_metodologia: Does the summary indicate how the knowledge was obtained? It says: \"El trabajo de investigación nos dio resultados positivos a partir de la estrategia de evaluación técnica propuesta con equipos y herramientas hartridge, así como en el banco de pruebas AVM2-PC, a partir de estas pruebas realizadas se determinó que los inyectores trabajan óptimamente\". It also mentions \"equipos y herramientas hartridge\" and \"banco de pruebas AVM2-PC\". It doesn't specify sample size, but it indicates that they used a strategy of evaluation with simulation, diagnosis, and testing. So yes, there is a method: \"estrategia de evaluación técnica con equipos y herramientas hartridge, banco de pruebas AVM2-PC\". So D1_imryd_metodologia = 1.\n\nD1_imryd_resultados: Does it communicate what was found? It says: \"se determinó que los inyectores trabajan óptimamente, en cuanto a la parte económica tenemos una rentabilidad del 64.5 %\". So yes, results present. So D1_imryd_resultados = 1.\n\nD1_imryd_conclusiones: Does it have a closure that goes beyond repeating results? It says: \"El trabajo de investigación nos dio resultados positivos a partir de la estrategia de evaluación técnica propuesta con equipos y herramientas hartridge, así como en el banco de pruebas AVM2-PC, a partir de estas pruebas realizadas se determinó que los inyectores trabajan óptimamente, en cuanto a la parte económica tenemos una rentabilidad del 64.5 %\". This is basically repeating results. It doesn't interpret or discuss implications. So conclusion is not beyond repeating results. So D1_imryd_conclusiones = 0.\n\nD1_orden_logico: Are the components present in logical order? The summary starts with background, then objective, then context, then results. The order: background (needs), objective, context, results. The order of components: objective appears after background, methodology appears after context, results appear after methodology. So the order is objective -> methodology -> results. Conclusion missing. So the present components are in correct order. So D1_orden_logico = 1.\n\nD2_coherencia: Evaluate flow. Let's read the summary: It starts with background, then objective, then context, then results. The flow seems okay but there are some abrupt transitions: \"En el marco tenemos una amplia información acerca del funcionamiento de los inyectores, adicionalmente tenemos los conceptos de todo el sistema de inyección que nos permitirá conocer el funcionamiento de los inyectores, veremos cómo los sensores, sistema eléctrico, entre otros son piezas fundamentales para el óptimo funcionamiento de los inyectores, a partir de todos estos conocimientos adquiridos encontraremos estrategias que nos accedan resolver problemas técnicos de los inyectores.\" This is a bit long but still coherent. Then \"El trabajo de investigación nos dio resultados positivos a partir de la estrategia de evaluación técnica propuesta con equipos y herramientas hartridge, así como en el banco de pruebas AVM2-PC, a partir de estas pruebas realizadas se determinó que los inyectores trabajan óptimamente, en cuanto a la parte económica tenemos una rentabilidad del 64.5 % este resultado lo obtuvimos a partir de una comparación entre la compra de nuevos inyectores frente al mantenimiento realizado.\" This is a bit dense but still flows. I'd rate coherence 4 maybe. Let's consider: 5 would be impeccable, 4 is good with minor aspereza. There is some repetition: \"trabajo de investigación nos dio resultados positivos a partir de la estrategia de evaluación técnica propuesta\" repeated. But overall flow is okay. So D2_coherencia = 4.\n\nD3_contextualizacion: Does the summary situate the problem? It says: \"El presente trabajo partió de la necesidad de disminuir los costos de operatividad de los camiones VOLVO, el mayor porcentaje de gastos se lo lleva el consumo de combustible, este se incrementa cuando el sistema de inyección específicamente los inyectores de combustible del motor están en mal estado generando cuantiosas pérdidas, así como también mayor emisión de los gases de escape.\" This is context: why it's important. So yes, contextualization present. So D3_contextualizacion = 1.\n\nD3_metodo_detallado: Does it give at least two precisions? It says: \"estrategia de evaluación técnica propuesta con equipos y herramientas hartridge, así como en el banco de pruebas AVM2-PC\". That's two precisions: equipment and test bench. Also \"equipos y herramientas hartridge\" maybe counts as one precision, \"banco de pruebas AVM2-PC\" second. So yes, D3_metodo_detallado = 1.\n\nD3_resultados_concretos: Does it provide concrete results? It says: \"trabajaron óptimamente\" (qualitative) and \"rentabilidad del 64.5 %\". So yes, concrete result: 64.5%. So D3_resultados_concretos = 1.\n\nD3_conclusion_responde: Since conclusion field is 0 (no conclusion), this field should be 0. Because if no conclusion, then D3_conclusion_responde = 0. So D3_conclusion_responde = 0.\n\nD4_consistencia: Consistency between what is said and what is presented. The summary says they used a strategy of evaluation with equipment and test bench, and results show optimum functioning and 64.5% rentability. There's no contradiction. The conclusion is missing, but consistency is about coherence between methodology and results. They mention \"estrategia de evaluación técnica propuesta con equipos y herramientas hartridge, así como en el banco de pruebas AVM2-PC\". They didn't mention sample size or statistical tests, but that's okay. There's no contradictory statements. So D4_consistencia = 5? Let's check: D4 scale 1-5. 5 means fully coherent. 4 means minor imprecision. 3 means visible discordance. 2 many discordances. 1 contradiction. There's no contradiction. There's no mention of statistical significance or contradictory statements. So I'd give 5. But we need to consider that they didn't mention any statistical test, but that's not a contradiction. So D4_consistencia = 5.\n\nno_evaluable: The summary is a valid summary. So no_evaluable = 0.\n\nobservaciones: We can add notes: maybe mention that conclusion missing, but that's part of annotation. We can note that the summary lacks a conclusion beyond repeating results. Also mention that the flow is good but some repetition. So we can write: \"Objetivo claro, metodología y resultados presentes. Falta conclusión interpretativa. Coherencia buena (4).\"\n\nNow produce JSON with all fields.\n\nCheck schema: all fields required. Provide integer or null. We have all values.\n\nLet's produce JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":0,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":0,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Objetivo, metodología y resultados claros. Falta conclusión interpretativa. Coherencia buena (4).\"\n}\n\nCheck that all values are integers or null. Observaciones string. Good.\n\nReturn only JSON."
+    }
+   }
+  ],
+  "created": 1789700599,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_d3e146e1a5",
+  "usage": {
+   "completion_tokens": 2446,
+   "prompt_tokens": 10020,
+   "total_tokens": 12466,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2300,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.237824799,
+   "prompt_time": 0.064327179,
+   "completion_time": 2.8414894630000003,
+   "total_time": 2.905816642
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7frbeeck8bzzgnt2h9ed2",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:03:19.448228+00:00"
+}

@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-035",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "No se presentan resultados ni conclusiones; la información metodológica es limitada a enfoques y fuentes, sin detalles cuantitativos."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No se presentan resultados ni conclusiones; la información metodológica es limitada a enfoques y fuentes, sin detalles cuantitativos.\"}",
+ "usage": {
+  "input_tokens": 10020,
+  "output_tokens": 1837,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.991055488586426,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:49:34.124786+00:00",
+ "raw": {
+  "id": "chatcmpl-2f358ed5-5544-4f80-8316-fc83af805758",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No se presentan resultados ni conclusiones; la información metodológica es limitada a enfoques y fuentes, sin detalles cuantitativos.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields per schema. Evaluate summary.\n\nLet's analyze summary:\n\nTitle: Diseño bioclimático del mercado de abastos minorista Unión y Dignidad en la ciudad de Puno.\n\nResumen:\n\nText is about markets, their role, etc. The research originates from demand of vendors, etc. They say: \"Por lo tanto, el objetivo de esta investigación es diseñar un mercado de abastos minorista integrando principios de la arquitectura bioclimática, brindando una infraestructura comercial acorde a las necesidades de los comerciantes y la población, logrando abastecer los productos de primera necesidad, respetando el entorno inmediato.\" Then: \"La presente investigación tiene un enfoque mixto, los cuales se utilizan para examinar el entorno inmediato enfocándose en la arquitectura bioclimática dentro de la propuesta arquitectónica. Además, se llevará a cabo la recopilación y análisis de datos con el fin de proponer parámetros bioclimáticos óptimos para el proyecto comercial. El enfoque de esta investigación es principalmente descriptivo, involucrando la revisión de literatura académica pertinente y la comparación de casos similares que siguen patrones bioclimáticos.\"\n\nWe need to check each field:\n\n- D1_imryd_objetivo: 1 if we can say what was proposed. Yes: \"el objetivo de esta investigación es diseñar un mercado de abastos minorista integrando principios de la arquitectura bioclimática...\". So 1.\n\n- D1_imryd_metodologia: 1 if there's some method described. They mention \"enfoque mixto\" and \"enfoque descriptivo\" and mention \"revisión de literatura\" and \"comparación de casos\". That qualifies as method. They didn't provide sample size etc, but at least a methodological statement. So 1.\n\n- D1_imryd_resultados: 1 if they provide results (findings). They talk about \"proponer parámetros bioclimáticos óptimos para el proyecto comercial\" but they don't give any results. They mention that they will propose parameters; no actual results. So 0.\n\n- D1_imryd_conclusiones: 1 if a closure beyond repeating the result, interpretation, implication, etc. They did not provide a conclusion. The text ends at describing the approach. No conclusion. So 0.\n\n- D1_orden_logico: 1 if the present components are in logical order. We have objective, methodology, no results, no conclusion. In order: they provide objective after intro, methodology after objective. So the present components (objective and methodology) are in order. There are 0 or 1 component? Actually there are two present: objective and methodology. With 2 present, we can evaluate order: yes they are objective then methodology. So 1.\n\n- D2_coherencia: Scale 1-5. We need to assess flow. Let's read summary:\n\n\"En las diversas ciudades Latinoamericanas, así como en Perú, los mercados de abastos juegan un papel significativo... ... ... ... ... Por lo tanto, el objetivo de esta investigación es diseñar un mercado de abastos minorista integrando principios de la arquitectura bioclimática, brindando una infraestructura comercial acorde a las necesidades de los comerciantes y la población, logrando abastecer los productos de primera necesidad, respetando el entorno inmediato. La presente investigación tiene un enfoque mixto, los cuales se utilizan para examinar el entorno inmediato enfocándose en la arquitectura bioclimática dentro de la propuesta arquitectónica. Además, se llevará a cabo la recopilación y análisis de datos con el fin de proponer parámetros bioclimáticos óptimos para el proyecto comercial. El enfoque de esta investigación es principalmente descriptivo, involucrando la revisión de literatura académica pertinente y la comparación de casos similares que siguen patrones bioclimáticos.\"\n\nLet's assess flow: The summary starts with general context, then identifies problem, then states objective, then states methodology (mixed, descriptive), then what will be done: data collection and analysis for parameters, literature review and case comparison. It's coherent. There's no big jumps. So maybe 4 or 5. There is some repetition: they mention \"enfoque mixto\" then \"enfoque descriptivo\". They also mention \"enfoque de esta investigación es principalmente descriptivo\". It's consistent. Not too many adverbial phrases. I think 4 or 5. I will choose 5 because the flow is good: context->problem->objective->methodology->data collection/analysis->literature review. All connected.\n\n- D3_contextualizacion: 1 if the summary situates the problem: why it matters, where, to whom. The summary does give context: markets significance, lack of infrastructure, need. That is a contextualization. Yes, they explain why the study is needed. So 1.\n\n- D3_metodo_detallado: 1 if at least two precise details. They mention \"enfoque mixto\", \"enfoque descriptivo\", \"revisión de literatura\", \"comparación de casos similares\". They don't mention sample size, instruments, etc. So does it have at least two precisiones? The precisions could be: design type (mixto, descriptivo) and type of data collection (literature review, case comparison). That counts as two. So 1.\n\n- D3_resultados_concretos: 1 if results provide specific content: figures, categories, etc. None. They mention \"proponer parámetros bioclimáticos óptimos\" but not actual parameters. So 0.\n\n- D3_conclusion_responde: 1 if conclusion responds to objective. No conclusion. So 0.\n\n- D4_consistencia: 1-5. Consistency between what they say they did and what they present. They say they have mixed approach, descriptive, review, etc. They don't present results. But consistency is fine. There's no contradictory claims. So rating 5? Let's consider: They state objective, methodology, but no results. There's no contradiction. So 5. However D4 is about consistency of methodology with results and conclusions. With no results or conclusions, there is no inconsistency. So we can rate high, maybe 5. According to protocol: If the summary doesn't declare any methodology, D4 cannot be evaluated. But we have methodology. So we can evaluate. There's no conflict. So 5.\n\nBut maybe we need to consider that they mention \"enfoque mixto\" but also \"enfoque descriptivo\". That is not a contradiction, but a description of mixed approach with a descriptive component. That's fine.\n\nAlso they propose \"parámetros bioclimáticos óptimos\" but don't report them. Not a contradiction. So 5.\n\n- no_evaluable: 0, because it's a valid summary with methodology.\n\n- observaciones: We can add a note: no results nor conclusions. Mention that.\n\nWe have to include all fields, as required.\n\nThus produce JSON:\n\n{\n\"no_evaluable\":0,\n\"D1_imryd_objetivo\":1,\n\"D1_imryd_metodologia\":1,\n\"D1_imryd_resultados\":0,\n\"D1_imryd_conclusiones\":0,\n\"D1_orden_logico\":1,\n\"D2_coherencia\":5,\n\"D3_contextualizacion\":1,\n\"D3_metodo_detallado\":1,\n\"D3_resultados_concretos\":0,\n\"D3_conclusion_responde\":0,\n\"D4_consistencia\":5,\n\"observaciones\":\"No se presentan resultados ni conclusiones; la información metodológica es limitada a enfoques y fuentes, sin detalles cuantitativos.\"\n}\n\nCheck field names: exactly those from schema: D1_imryd_conclusiones, D1_imryd_metodologia, D1_imryd_objetivo, D1_imryd_resultados, D1_orden_logico, D2_coherencia, D3_conclusion_responde, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D4_consistencia, no_evaluable, observaciones.\n\nMake sure to match order? Not necessary. Provide JSON compact.\n\nLet's produce."
+    }
+   }
+  ],
+  "created": 1789775373,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_84bb35977d",
+  "usage": {
+   "completion_tokens": 1837,
+   "prompt_tokens": 10020,
+   "total_tokens": 11857,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1686,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.216433569,
+   "prompt_time": 0.107192899,
+   "completion_time": 1.9061413040000001,
+   "total_time": 2.013334203
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vesq6eee6syb8t38yz4ztk",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:49:34.124808+00:00"
+}

@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-156",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": null,
+  "no_evaluable": 1,
+  "observaciones": "Resumen carece de descripción metodológica; no hay datos de resultados concretos ni de conclusión que responda al objetivo. Se aplica caso límite 11.8; no se evaluó la consistencia metodológica."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"Resumen carece de descripción metodológica; no hay datos de resultados concretos ni de conclusión que responda al objetivo. Se aplica caso límite 11.8; no se evaluó la consistencia metodológica.\"}",
+ "usage": {
+  "input_tokens": 9945,
+  "output_tokens": 1643
+ },
+ "latency_s": 2.6527249813079834,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:45:21.239439+00:00",
+ "raw": {
+  "id": "chatcmpl-90acd13f-1920-4e12-9ddf-6783071e1705",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"Resumen carece de descripción metodológica; no hay datos de resultados concretos ni de conclusión que responda al objetivo. Se aplica caso límite 11.8; no se evaluó la consistencia metodológica.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. Need to fill all required fields.\n\nWe need to determine each field. Let's analyze.\n\nSummary: Title: Determinar la incidencia del control interno en la gestión de las entidades públicas de la provincia de Abancay-Apurímac\n\nSummary text:\n\n\"La investigación tiene la finalidad de determinar la incidencia del control interno en la gestión de las entidades públicas  de la provincia de Abancay – Apurímac,  siendo el Control Interno un proceso integral y dinámico que se adapta constantemente a  los cambios que enfrenta la entidad pública ello implica a los funcionarios y servidores de todo los niveles que están involucrados en este proceso para prevenir riesgos, el objetivo es de determinar la incidencia del control interno en la gestión de las entidades asentadas en Abancay y Apurímac y así prevenir  irregularidades y actos de corrupción  para hacer que la gestión pública sea más  eficiente y transparente  y brindar mejores servicios a la ciudadanía. En razón a ello todo los trabajadores de la entidades públicas deben ejercer el control interno sobre las acciones que desarrollan y reportar las deficiencias, igualmente los funcionarios deben diseñar, implementar y supervisar constantemente las acciones de control interno en su institución; considerando como un aporte por ello  la Contraloría General  de la República ha emitido Normas  de Control Interno y Guías para la implantación del Sistema de Control Interno, estableciendo plazos que pasaron de efectivos a referenciales. En el poco tiempo de exigencia y hasta la fecha, las entidades públicas como son los Ministerios, no han logrado implementar sus Sistemas de Control Interno. La investigación explica la  importancia del variable control y la tendencia de un gobierno corporativo en las entidades públicas del país.\"\n\nWe need to determine each field:\n\nD1_imryd_objetivo: 1 if objective is explicit. It states \"La investigación tiene la finalidad de determinar la incidencia del control interno...\" also repeated \"el objetivo es de determinar la incidencia del control interno...\". So objective is explicitly stated. So 1.\n\nD1_imryd_metodologia: Must see if methodology is indicated. The summary does not describe methodology: no design, sample, instruments. It says \"todo los trabajadores ... deben ejercer... etc.\" It doesn't describe how they determined incidence, no study type. So 0.\n\nD1_imryd_resultados: Contains results? It says \"En el poco tiempo... no han logrado implementar sus Sistemas... La investigación explica la importancia del variable control...\" That is not a result. No numeric results. So 0.\n\nD1_imryd_conclusiones: Contains closure beyond repetition? It states \"La investigación explica la importancia del variable control y la tendencia de un gobierno corporativo...\" That is an interpretation? It is a concluding statement? It is more of a summary of implications. It may count as conclusion if it addresses implication. But it doesn't tie back to objective, but does say \"explains the importance\". This may be considered a conclusion. According to D1_imryd_conclusiones, must \"interpretation, implication, response to objective\". Does it respond? The objective: determine incidence of control internal. The conclusion: \"explains importance of variable control and trend of corporate governance.\" That might be considered a conclusion but not clearly responding. Could be considered 0. But maybe 1? The rule: \"interpretation, implication, response explicit to objective, recommendation\". It's not explicit response. I'd lean 0.\n\nD1_orden_logico: There are components present: objective present, methodology absent, results absent, conclusion present. So only two components. The rule: if 0 or 1 component present, order = 0. There are 2 components (objective and conclusion). So we can evaluate order of them. They are present in order: objective first, conclusion last. That is correct logical sequence (objective -> conclusion). But since missing others, we still check rule: \"If there are 0 or 1 components present, order = 0 automatically\". So we have 2 components, not 0 or 1, so we evaluate. They are in correct order, so 1.\n\nBut maybe if missing methodology, it's still fine? They are objective then conclusion. Should be fine. So D1_orden_logico = 1.\n\nD2_coherencia: Evaluate flow. The summary is somewhat repetitive and lacks transitions but still coherent? Let's read: It starts with objective, then describes the concept, then again objective, then elaborates responsibilities of workers, mentions norms, then mentions lack of implementation, then explains importance. The flow is somewhat repetitive but overall coherent. Might rate 4 or 3? There's a bit of redundancy: \"La investigación tiene la finalidad de determinar la incidencia...\" and later \"el objetivo es de determinar\". That is repetitive but not harming coherence. There's no abrupt shift. I'd rate 4. However, some redundancy might be considered minor glitch. I'd give 4.\n\nD3_contextualizacion: Does it provide context? It situates the research: \"en la provincia de Abancay – Apurímac\". That is context. So 1.\n\nD3_metodo_detallado: No methodology details, so 0.\n\nD3_resultados_concretos: No concrete results, 0.\n\nD3_conclusion_responde: Does conclusion respond to objective? It explains importance of control variable and trend of corporate governance. That is somewhat related but not explicitly answering \"determine incidence\". It's more about importance. I'd say 0.\n\nD4_consistencia: Since no methodology present, D4 is no_evaluable. According to section 9.3: \"If the summary does not declare any methodology, D4 cannot be evaluated: no_evaluable =1 and leave D4 empty.\" But D4 is required field but can be null? The schema says D4_consistencia can be null. In the required list, D4_consistencia is required, but it can be null. So we set D4_consistencia = null. no_evaluable = 1.\n\nObservaciones: we can include notes about lack of methodology. \"Sin descripción metodológica, D4 no evaluable.\"\n\nThus final JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":0,\n \"D1_imryd_resultados\":0,\n \"D1_imryd_conclusiones\":0,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":0,\n \"D3_resultados_concretos\":0,\n \"D3_conclusion_responde\":0,\n \"D4_consistencia\":null,\n \"no_evaluable\":1,\n \"observaciones\":\"Resumen carece de descripción metodológica; no hay datos de resultados concretos ni de conclusión que responda al objetivo. Se aplica caso límite 11.8; no se evaluó la consistencia metodológica.\"\n}\n\nMake sure compact JSON: no newlines. Ensure field order? Not required. Just produce JSON.\n\nCheck schema: all required fields present. Yes.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789775120,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_639a5351c8",
+  "usage": {
+   "completion_tokens": 1643,
+   "prompt_tokens": 9945,
+   "total_tokens": 11588,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1475,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.215090469,
+   "prompt_time": 0.498739071,
+   "completion_time": 1.67515181,
+   "total_time": 2.173890881
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vej02ters8eztg8af8v3a4",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:45:21.239523+00:00"
+}

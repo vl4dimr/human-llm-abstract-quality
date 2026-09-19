@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-047",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica (objetivo → metodología → resultados → conclusiones), con cada componente presente y en orden. La coherencia organizacional se valora en 4 debido a que el texto fluye bien, aunque hay un leve salto al mencionar la correlación entre atención y gestión del conocimiento. La contextualización es 0 porque el resumen no explica por qué es importante estudiar la relación entre work engagement y gestión del conocimiento. La metodología es detallada, ya que se menciona la muestra, los instrumentos y el software utilizado. Los resultados son concretos, ya que se reportan coeficientes y valores p. La conclusión responde al objetivo, ya que se menciona la relación significativa encontrada. La consistencia metodológica se valora en 3 debido a que los resultados muestran una relación significativa, pero no se menciona si esta relación se espera basándose en la teoría o si hay limitaciones."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica (objetivo → metodología → resultados → conclusiones), con cada componente presente y en orden. La coherencia organizacional se valora en 4 debido a que el texto fluye bien, aunque hay un leve salto al mencionar la correlación entre atención y gestión del conocimiento. La contextualización es 0 porque el resumen no explica por qué es importante estudiar la relación entre work engagement y gestión del conocimiento. La metodología es detallada, ya que se menciona la muestra, los instrumentos y el software utilizado. Los resultados son concretos, ya que se reportan coeficientes y valores p. La conclusión responde al objetivo, ya que se menciona la relación significativa encontrada. La consistencia metodológica se valora en 3 debido a que los resultados muestran una relación significativa, pero no se menciona si esta relación se espera basándose en la teoría o si hay limitaciones.\"\n}",
+ "usage": {
+  "input_tokens": 10807,
+  "output_tokens": 367,
+  "total_duration_s": 11.6823286
+ },
+ "latency_s": 11.691930532455444,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:24:19.487841+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:24:19.4809588Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica (objetivo → metodología → resultados → conclusiones), con cada componente presente y en orden. La coherencia organizacional se valora en 4 debido a que el texto fluye bien, aunque hay un leve salto al mencionar la correlación entre atención y gestión del conocimiento. La contextualización es 0 porque el resumen no explica por qué es importante estudiar la relación entre work engagement y gestión del conocimiento. La metodología es detallada, ya que se menciona la muestra, los instrumentos y el software utilizado. Los resultados son concretos, ya que se reportan coeficientes y valores p. La conclusión responde al objetivo, ya que se menciona la relación significativa encontrada. La consistencia metodológica se valora en 3 debido a que los resultados muestran una relación significativa, pero no se menciona si esta relación se espera basándose en la teoría o si hay limitaciones.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 11682328600,
+  "load_duration": 10585700,
+  "prompt_eval_count": 10807,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 340151000,
+  "eval_count": 367,
+  "eval_duration": 11235997000
+ },
+ "cached_at_utc": "2026-09-19T02:24:19.487859+00:00"
+}

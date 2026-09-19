@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-121",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "El resumen incluye mucha contextualización teórica y antecedentes, pero mantiene la secuencia lógica. No se reportan cifras concretas en resultados, solo la ausencia de significancia."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen incluye mucha contextualización teórica y antecedentes, pero mantiene la secuencia lógica. No se reportan cifras concretas en resultados, solo la ausencia de significancia.\"}",
+ "usage": {
+  "input_tokens": 10115,
+  "output_tokens": 2676
+ },
+ "latency_s": 4.163603067398071,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:41:20.168368+00:00",
+ "raw": {
+  "id": "chatcmpl-2ec2caa0-810d-4557-95a9-6e38c7fffc12",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen incluye mucha contextualización teórica y antecedentes, pero mantiene la secuencia lógica. No se reportan cifras concretas en resultados, solo la ausencia de significancia.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate according to protocol. Fields:\n\n- D1_imryd_objetivo\n- D1_imryd_metodologia\n- D1_imryd_resultados\n- D1_imryd_conclusiones\n- D1_orden_logico\n- D2_coherencia\n- D3_contextualizacion\n- D3_metodo_detallado\n- D3_resultados_concretos\n- D3_conclusion_responde\n- D4_consistencia\n- no_evaluable\n- observaciones\n\nWe must fill with values 0,1, or null for numeric fields and string for observaciones.\n\nWe need to evaluate.\n\nSummary:\n\nTitle: influence of teaching moral values practice on students' attitudes.\n\nWe must check each component.\n\nFirst, D1_imryd_objetivo: Does the summary explicitly state the objective? The text says: \"La investigación se ha formulado para evidenciar la influencia de la práctica de los valores morales de los docentes en las actitudes de los estudiantes de las Instituciones Educativas Secundarias del distrito de Platería.\" That is a clear objective statement: \"evidenciar la influencia de la práctica de los valores morales de los docentes en las actitudes de los estudiantes\". So yes objective present. So D1_imryd_objetivo = 1.\n\nD1_imryd_metodologia: Must indicate how knowledge was obtained. Summary states: \"se ha utilizado la técnica de observación indirecta con instrumentos confiables como son las encuestas y el test de actitudes, cada uno de ellos con indicadores precisos y preestablecidos para su cabal aplicación.\" That is method: observational indirect technique using surveys and attitude test. So yes. D1_imryd_metodologia = 1.\n\nD1_imryd_resultados: Must communicate what was found, not what was done. The summary states: \"la conclusión general a la que se arribó... se asume que no existe relación entre la práctica de valores morales de los docentes y las actitudes de los estudiantes ... porque el resultado no es significativo.\" That is a result: no significant relationship. So yes. D1_imryd_resultados = 1.\n\nD1_imryd_conclusiones: Must have a closing that interprets or responds to objective, goes beyond repetition. Summary's last paragraph: \"se concluye en que la práctica de valores de los docentes no influye directamente en las actitudes de los estudiantes.\" That's conclusion that addresses objective and interprets. So D1_imryd_conclusiones = 1.\n\nD1_orden_logico: Determine if present components are in objective -> methodology -> results -> conclusion order. Let's check order of content.\n\nSummary flow: first objective. Then some background, then methodology. Then results. Then conclusion. So yes order is correct. So D1_orden_logico = 1.\n\nNow D2_coherencia: Flow and coherence scale 1-5. We evaluate the whole text for flow and consistency.\n\nLet's read and analyze:\n\n\"La investigación se ha formulado para evidenciar la influencia de la práctica de los valores morales de los docentes en las actitudes de los estudiantes de las Instituciones Educativas Secundarias del distrito de Platería. Se realizó la investigación porque existe la necesidad de tratar de dar solución al problema, mejorar las actitudes y formas de comportamiento de los estudiantes por ser el futuro de nuestro País. Además, es necesario crear conciencia en los docentes para la práctica y la enseñanza de valores a través de los contenidos curriculares que son vínculo en el hogar y la escuela. Para ello se ha elaborado un sustento teórico coherente que afirma que el proceso educativo tiene la responsabilidad de presentar y hacer valer los valores universales como el respeto a los derechos humanos y la formación para la democracia que son las importantes vías de entrada a los procesos profundos de formación del juicio moral y de crecimiento en valores, si un docente toma conciencia de la labor que cumple en la transmisión de conocimientos y lo hace satisfactoriamente muchas veces se olvida de la formación integral de los educandos y que ello les servirá para afrontar en el futuro con éxito su vida, siendo ellos los que elaboren su propio proyecto de vida. Basado en ello es que los alumnos, siendo agentes directos del proceso educativo, juzgaron sobre la práctica de valores de sus docentes y también sobre sus propias actitudes. Para contrastar la hipótesis planteada que afirma que la práctica de valores morales de los docentes, influyen directamente en las actitudes de los estudiantes, se ha utilizado la técnica de observación indirecta con instrumentos confiables como son las encuestas y el test de actitudes, cada uno de ellos con indicadores precisos y preestablecidos para su cabal aplicación. La conclusión general a la que se arribó al concluir la investigación es que según la prueba estadística chi cuadrado, se asume que no existe relación entre la práctica de valores morales de los docentes y las actitudes de los estudiantes de las Instituciones Educativas Secundarias del distrito de Platería, porque el resultado no es significativo. Por lo tanto se concluye en que la práctica de valores de los docentes no influye directamente en las actitudes de los estudiantes.\"\n\nObservations: It starts with objective, then background, then theoretical foundation, then methodology, then results, then conclusion. Flow is fairly linear. There is a lot of background information and theoretical context, maybe somewhat long but still coherent. No major abrupt jumps. But some sentences are long and may cause readability issues. But overall coherence seems good. Let's score 4 maybe, maybe 5? Let's check for issues: The long explanatory paragraph about values and role of teacher may interrupt the flow. But still it's background. There's no contradictions. No missing transitions? There's no explicit transitions like \"A continuación\" but still flow.\n\nGiven guidelines: 5 = impeccable; 4 = some slight aspereza; 3 = some jumps; 2 = need to relearn; 1 = incoherent. I'd assign 4. Because there is some verbosity but still coherent. So D2_coherencia = 4.\n\nD3_contextualizacion: Must situate problem: why important, where occurs, to whom, against what standard or framework. Let's see: The summary does provide context: \"existe la necesidad de tratar de dar solución al problema, mejorar las actitudes y formas de comportamiento de los estudiantes por ser el futuro de nuestro País.\" That addresses importance. It also says \"para la práctica y la enseñanza de valores a través de los contenidos curriculares que son vínculo en el hogar y la escuela.\" But does it give location? It says \"Instituciones Educativas Secundarias del distrito de Platería\" - that's location. It addresses who: students and teachers. It also mentions that values are universal rights, democracy. So it does contextualize the problem. The summary includes that background. So D3_contextualizacion likely 1. But we must consider guidelines: Must situate the problem: \"por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco se contrasta.\" The summary does mention the problem of students' attitudes and the need to improve them, importance to future of country, but no explicit mention of normative benchmark or specific standard. But it mentions \"prueba estadística chi cuadrado\" as standard? Not exactly. But it says \"no existe relación\" as result. The contextualization includes need, location, target group. That should satisfy. So D3_contextualizacion = 1.\n\nD3_metodo_detallado: Must give at least two precisions on procedure: design, sample size, sampling method, instrument name, statistical test. The summary says: \"se ha utilizado la técnica de observación indirecta con instrumentos confiables como son las encuestas y el test de actitudes, cada uno de ellos con indicadores precisos y preestablecidos para su cabal aplicación.\" That includes method: observational indirect, instruments: surveys and attitude test. It doesn't mention sample size, or sampling technique, but still two precisions: technique and instruments. That counts as at least two. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: Must provide specific content: figures, magnitudes, categories, relationships with direction. The summary gives result: \"según la prueba estadística chi cuadrado, se asume que no existe relación ... porque el resultado no es significativo.\" But no p-value or chi-square value. So there's no concrete magnitude. It's just \"no es significativo.\" That is not considered concrete? In examples, \"Sig. > 0.05\" was considered result but not concrete; they considered \"resultado nulo\" but still \"concreto\" maybe? Let's see example B: They had \"no existen diferencias significativas\" and it counted as D1_resultados=1, but for D3_resultados_concretos, they gave 0 because no magnitude. They considered that \"no hay magnitud\" so D3_resultados_concretos = 0. So here same case: no magnitude; just \"no es significativo.\" So D3_resultados_concretos = 0.\n\nD3_conclusion_responde: Does conclusion answer the stated objective? The objective was \"evidenciar la influencia de la práctica de valores morales de los docentes en las actitudes de los estudiantes\". The conclusion: \"se concluye en que la práctica de valores de los docentes no influye directamente en las actitudes de los estudiantes.\" That does answer the objective. So D3_conclusion_responde = 1.\n\nD4_consistencia: We must evaluate consistency between what summary says it did (method) and what it presents (results, conclusion). The summary states method: observational indirect with surveys and attitude test. The results: no significant relationship. The conclusion: no influence. That seems consistent. However, check if they used statistical test but didn't report any numeric data. But consistency is about coherence: The summary doesn't say any contradictory claims. The method is consistent with result and conclusion. There is no mention of \"chi-square\" as a test. They said \"prueba estadística chi cuadrado\" and no significance. That seems consistent. There is no contradictory assertion. So D4_consistencia should be 5? Let's check scale: 5 = coherent, no issues. 4 = minor imprecise termin. 3 = one discord. 2 = many, etc. Here no discord. So D4_consistencia = 5.\n\nno_evaluable: The text is indeed a summary, not a license or index. It has methodology, results. So no_evaluable = 0.\n\nobservaciones: Provide any notes.\n\nWe should note that the summary includes a lot of background text, but that's not a problem. Might mention that it is narrative and includes some repetitive text. But we can keep minimal: maybe mention that the conclusion states no relationship but no p-value reported, but that's okay for D3. We can mention that the conclusion is consistent with methodology. Provide short notes: \"Background heavy but coherent; no concrete result metrics.\" That might suffice.\n\nThus final JSON: ensure all fields present. Provide string for observaciones. Use null? All fields have values, no null needed. But the schema expects all fields. We'll set all numeric fields, no_evaluable integer, observaciones string. All numeric values must be integer or null. We'll use integers.\n\nLet's produce:\n\n{\n\"D1_imryd_objetivo\":1,\n\"D1_imryd_metodologia\":1,\n\"D1_imryd_resultados\":1,\n\"D1_imryd_conclusiones\":1,\n\"D1_orden_logico\":1,\n\"D2_coherencia\":4,\n\"D3_contextualizacion\":1,\n\"D3_metodo_detallado\":1,\n\"D3_resultados_concretos\":0,\n\"D3_conclusion_responde\":1,\n\"D4_consistencia\":5,\n\"no_evaluable\":0,\n\"observaciones\":\"Resumen incluye mucha contextualización teórica y antecedentes, pero mantiene secuencia lógica. No se reportan cifras concretas en resultados, solo ausencia de significancia.\"\n}\n\nCheck validity. All keys present. Values are ints or string. Good."
+    }
+   }
+  ],
+  "created": 1789774879,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_37c9245f64",
+  "usage": {
+   "completion_tokens": 2676,
+   "prompt_tokens": 10115,
+   "total_tokens": 12791,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2516,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.193292468,
+   "prompt_time": 0.621859776,
+   "completion_time": 2.717957528,
+   "total_time": 3.339817304
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2veakhee0jt4zg2tav505p9",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:41:20.168384+00:00"
+}

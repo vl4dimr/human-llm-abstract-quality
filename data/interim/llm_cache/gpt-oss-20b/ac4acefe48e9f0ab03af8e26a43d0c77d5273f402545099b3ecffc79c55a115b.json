@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-056",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": null,
+  "no_evaluable": 1,
+  "observaciones": "Resumen sin descripción metodológica ni datos numéricos; conclusión implícita pero no explícita; imposibilidad de evaluar consistencia metodológica."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"Resumen sin descripción metodológica ni datos numéricos; conclusión implícita pero no explícita; imposibilidad de evaluar consistencia metodológica.\"}",
+ "usage": {
+  "input_tokens": 9784,
+  "output_tokens": 2691,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 3.2553625106811523,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:21:03.195861+00:00",
+ "raw": {
+  "id": "chatcmpl-5aee34d0-9a57-4860-a609-a6034825304c",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"Resumen sin descripción metodológica ni datos numéricos; conclusión implícita pero no explícita; imposibilidad de evaluar consistencia metodológica.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. Need to fill all required fields.\n\nWe need to analyze the summary content.\n\nTitle: \"Los factores que se relacionan con el estudio de la lección de Escuela Sabática de adultos\"\n\nSummary (Spanish):\n\n\"El presente estudio describe la relación que existe entre los factores personales que se relacionan con el estudio de la Escuela Sabática. La investigación primero resalta la importancia de la Escuela Sabática como un espacio de entrenamiento y enseñanza al interior de la Iglesia Adventista del Séptimo Día. Luego se hace una breve reseña histórica de la Escuela Sabática y se describe sus inicios y cómo ha alcanzado el lugar que tiene ahora. Después se hace una descripción de los factores personales que influyen en el estudio en general y cómo estos impactan en la comprensión lectora de los textos escritos. Finalmente, se ensaya una aplicación inicial de cómo estos factores condicionan el estudio de la lección de Escuela Sabática.\"\n\nWe need to annotate: D1_imryd_objetivo, metodologia, resultados, conclusiones, orden, D2_coherencia (1-5), D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia (1-5), no_evaluable, observaciones.\n\nWe need to interpret according to protocol.\n\nFirst, check if it is a valid summary (not a title, not other). It seems to be a narrative summary of a study.\n\nNow evaluate each dimension.\n\n### D1_imryd_objetivo\n\nDoes summary provide clear objective? It says \"El presente estudio describe la relación que existe entre los factores personales que se relacionan con el estudio de la Escuela Sabática.\" That is an objective: describe the relationship between personal factors and study. That's an objective.\n\nAlso \"se describe la relación ...\". That counts.\n\nThus D1_imryd_objetivo = 1.\n\n### D1_imryd_metodologia\n\nWe need to see if there is description of methodology. The summary says: \"la investigación primero resalta la importancia..., luego se hace una breve reseña histórica..., después se hace una descripción de los factores personales que influyen en el estudio en general y cómo estos impactan en la comprensión lectora, finalmente, se ensaya una aplicación inicial...\"\n\nThis does not specify what methodology was used to analyze the relationship. There's no mention of design, sample, instruments, data collection method. It just describes the study content.\n\nThus no methodology is indicated. So D1_imryd_metodologia = 0.\n\nBut we should confirm if \"descripción\" counts? According to D1_imryd_metodologia rule: at least one concrete procedural indication: \"Se aplicó una encuesta\" etc. No such mention. So 0.\n\n### D1_imryd_resultados\n\nResults: \"Después se hace una descripción de los factores personales que influyen en el estudio en general y cómo estos impactan en la comprensión lectora de los textos escritos.\" That describes findings? It's describing what factors influence. But are they actual results? They say \"se describen los factores personales que influyen en el estudio en general y cómo estos impactan en la comprensión lectora.\" That is indeed a result: the study found those factors influence comprehension. It says \"se describe la relación\". So there is a result: relationship between factors and study.\n\nBut the summary doesn't give specifics: no percentages, no categories. But still a result is communicated. According to D1_imryd_resultados: \"Vale 1 cuando se comunica qué se encontró, no solo qué se hizo.\" The summary indicates that the study found certain factors that influence. That qualifies. So D1_imryd_resultados = 1.\n\n### D1_imryd_conclusiones\n\n\"Finalmente, se ensaya una aplicación inicial de cómo estos factores condicionan el estudio de la lección de Escuela Sabática.\" That is more of an application, maybe not a conclusion. There is no statement of conclusion or implication. They describe an \"ensayo\" of initial application. Not a conclusion per se. According to D1_imryd_conclusiones: \"Vale 1 cuando hay un cierre que va más allá de repetir el resultado: interpretación, implicación, respuesta explícita al objetivo, recomendación\". Here, they just present an application, not a conclusion. Might be considered a conclusion? It doesn't explicitly interpret or propose. It says \"se ensaya una aplicación inicial de cómo estos factores condicionan el estudio\". That's somewhat concluding? But maybe not. There's no statement like \"por lo tanto\" or \"en conclusión\". It's just describing an application. I'd set it to 0.\n\nAlternatively, maybe they did provide a conclusion: \"se ensaya una aplicación inicial...\" could be considered as concluding the study, but it's more a suggestion than a conclusion. The rule says: \"cierre que va más allá de repetir el resultado: interpretación, implicación, respuesta explícita al objetivo, recomendación\". This seems like an implication: how the factors influence study. But it does not interpret or give recommendations beyond the application. But \"ensaya una aplicación inicial\" might be considered a recommendation. The summary ends with that. Might be considered as conclusion: \"finally, we explore an initial application of how these factors condition the study of the lesson.\" That is an implication. So maybe 1? But it's borderline. I'd lean 0 because it doesn't explicitly respond to objective, it just describes application. The objective was to describe the relationship. The conclusion would interpret that relationship or give recommendation. The summary simply states they \"ensaya una aplicación inicial\". That might not be a conclusion but a suggestion.\n\nThus D1_imryd_conclusiones = 0.\n\n### D1_orden_logico\n\nWe have objective, no methodology, results, conclusion maybe. The order: objective first, then historical background, then factors, then application. The order of components present: objective, results (the factors), conclusion (application). The order is objective, results, conclusion. That's coherent. So D1_orden_logico = 1.\n\n### D2_coherencia (1-5)\n\nWe need to assess flow.\n\nThe summary: starts with objective, then importance of Escuela Sabática, then brief history, then description of personal factors, then application. It's fairly cohesive: objective, importance, context, factors, application. There is a logical progression: first objective, then background, then findings, then application. There's no major jump. Slightly abrupt transition from history to factors but that's fine. No terminological confusion. No contradictions.\n\nThus I'd assign a high rating: 5? 4? The guidelines: 5: \"Progresión impecable. Cada oración prepara la siguiente. Se lee de un tirón.\" 4: \"Fluye bien, con alguna aspereza menor que no estorba.\" The summary flows well but maybe a small jump: importance -> history -> factors. It's still smooth. Might be 5.\n\nBut is there any redundancy or weird phrasing? Not much. So 5.\n\nThus D2_coherencia = 5.\n\n### D3_contextualizacion\n\nContextualization: does the summary situate the problem: why it matters, where occurs, etc. It says: \"La investigación primero resalta la importancia de la Escuela Sabática como un espacio de entrenamiento y enseñanza al interior de la Iglesia Adventista del Séptimo Día.\" That gives context: importance of the study space. It says: \"Luego se hace una breve reseña histórica de la Escuela Sabática y se describe sus inicios y cómo ha alcanzado el lugar que tiene ahora.\" That also contextualizes. So yes, the summary situates the problem: importance, history, context of the institution. That qualifies. So D3_contextualizacion = 1.\n\n### D3_metodo_detallado\n\nMethod detail: at least two precisions: design, n, instrument, etc. There is no mention of sample size, design, instrument. Just descriptive. So 0.\n\n### D3_resultados_concretos\n\nResults: description of personal factors that influence, but no specific categories or numbers. It's a general statement. So 0.\n\n### D3_conclusion_responde\n\nConclusion responds to objective? The summary ends with \"se ensaya una aplicación inicial de cómo estos factores condicionan el estudio de la lección de Escuela Sabática.\" That does respond to the objective: how factors affect study. It does not explicitly say \"conclusion\" but it addresses the objective. The D3_conclusion_responde requires a conclusion that responds to the objective. Since the summary does respond, we might set 1. But the objective was to describe relationship. The summary indeed does that. So yes, 1.\n\nBut we should be careful: D1_conclusions 0 indicates there is no explicit conclusion section. However D3_conclusion_responde deals with the conclusion's content; if there's no conclusion, the field is 0. But the summary does not explicitly present a conclusion section; it just ends with \"ensaya una aplicación\". That might be considered a conclusion? The difference: D1_conclusiones is a component presence; D3_conclusion_responde is whether the conclusion responds to objective. But if D1_conclusiones is 0 (no conclusion), then D3_conclusion_responde should be 0 because if no conclusion, it can't respond. However the summary might have a conclusion disguised as application. The protocol: \"Si el componente no está presente en la D1, su campo correspondiente de la D3 es 0.\" Indeed the D3_conclusion_responde says: \"Si el componente no está presente en la D1, su campo correspondiente de la D3 es 0.\" So since D1_conclusiones = 0, D3_conclusion_responde must be 0.\n\nThus set D3_conclusion_responde = 0.\n\n### D4_consistencia\n\nWe need to assess consistency between stated methodology and results, etc. The summary states no methodology. Since there's no methodology, D4_consistency is \"no_evaluable = 1\". Because D4_consistency cannot be evaluated.\n\nThus D4_consistency = null or we set no_evaluable=1 and leave D4_consistency null. The schema expects D4_consistencia value, but if no_evaluable=1, D4_consistencia should be null. So D4_consistencia = null.\n\n### no_evaluable\n\nBecause no methodology, we set no_evaluable = 1.\n\n### Observaciones\n\nWe may note that methodology not present, no detailed method, no result detail, no conclusion. Add a comment.\n\nAlso we might note that the objective is present, results present, but no methodology or conclusion, so D4 no evaluable.\n\nWe must produce compact JSON. Let's produce.\n\nWe must include all required fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nValues: integer 0 or 1 or null.\n\nThus:\n\n{\n\" D1_imryd_objetivo\": 1,\n\" D1_imryd_metodologia\": 0,\n\" D1_imryd_resultados\": 1,\n\" D1_imryd_conclusiones\": 0,\n\" D1_orden_logico\": 1,\n\" D2_coherencia\": 5,\n\" D3_contextualizacion\": 1,\n\" D3_metodo_detallado\": 0,\n\" D3_resultados_concretos\": 0,\n\" D3_conclusion_responde\": 0,\n\" D4_consistencia\": null,\n\" no_evaluable\": 1,\n\" observaciones\": \"Resumen no menciona metodología ni detalles numéricos; conclusión implícita pero no presente; no se puede evaluar coherencia metodológica.\"\n}\n\nCheck formatting: need no spaces after commas, but that's fine. Use compact JSON: no line breaks, just one line.\n\nAlso ensure field order may not matter.\n\nLet's produce final."
+    }
+   }
+  ],
+  "created": 1789701663,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_996f667773",
+  "usage": {
+   "completion_tokens": 2691,
+   "prompt_tokens": 9784,
+   "total_tokens": 12475,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2537,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.150363738,
+   "prompt_time": 0.043403319,
+   "completion_time": 2.794774348,
+   "total_time": 2.838177667
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8g7bnedc8e7cr4azk4ppb",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:21:03.195952+00:00"
+}

@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-004",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "No se incluyen cifras numéricas específicas en los resultados, solo categorías de riesgo."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No se incluyen cifras numéricas específicas en los resultados, solo categorías de riesgo.\"}",
+ "usage": {
+  "input_tokens": 9968,
+  "output_tokens": 1653
+ },
+ "latency_s": 3.0319695472717285,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:15:09.480691+00:00",
+ "raw": {
+  "id": "chatcmpl-d6dc91b0-5a24-4813-ac8d-692176d7218f",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No se incluyen cifras numéricas específicas en los resultados, solo categorías de riesgo.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must produce JSON according to schema. Provide all required fields. We need to evaluate each dimension based on the summary. Let's analyze.\n\nSummary:\n\nTitle: ... (irrelevant). Content:\n\nIntro: background, context. Then \"El estudio tuvo como objetivo determinar el nivel de riesgo de adicción a redes sociales en estudiantes\". That is objective explicitly. Good.\n\nMetodología: \"investigación adoptó un enfoque cuantitativo, de tipo descriptivo, con diseño no experimental y corte transversal.\" That counts. It also says \"para la recolección de datos se empleó el cuestionario de Adicción a Redes Sociales de Escurra y Salas\" -> instrument. That's at least two precisions? They have design, type, sample size, instrument. So D3_metodo_detallado should be 1.\n\nResultados: \"Los resultados evidenciaron que el nivel predominante fue el riesgo leve, ... seguido del riesgo moderado. Un grupo reducido no presentó riesgo y solo un porcentaje mínimo se ubicó en riesgo alto.\" They mention categories but no specific percentages or numbers, except \"grupo reducido\" and \"un porcentaje mínimo\" but not quantified. So D3_resultados_concretos: Since no concrete numbers, it's 0. But we should check if \"grupo reducido\" counts as a category? The rule: results need specific content: categories named, but also magnitude. In example, qualitative result like three categories qualifies. Here categories are risk levels: riesgo leve, moderado, alto. They are categories, but are they concrete? The rule: \"Emergieron tres categorías: X, Y y Z\" is considered concrete. This is similar. So \"nivel predominante fue el riesgo leve, ... seguido del riesgo moderado. Un grupo reducido no presentó riesgo y solo un porcentaje mínimo se ubicó en riesgo alto.\" There are categories (leve, moderado, alto) with some qualitative descriptors. But they don't quantify the proportions. According to earlier rule: D3_resultados_concretos requires \"cifras, magnitudes, categorías nombradas, relaciones con dirección.\" It says \"Categorías nombradas\" qualifies. So likely 1. But we need to check if categories alone count: The example: \"Emergieron tres categorías: adaptación, resistencia y negociación\" got 1. So categories named qualifies. Yes.\n\nThus D3_resultados_concretos = 1.\n\nD1_imryd_objetivo: 1.\n\nD1_imryd_metodologia: 1.\n\nD1_imryd_resultados: 1 (since it reports results, not method).\n\nD1_imryd_conclusiones: 1? Let's analyze: \"En conclusión, existe una alta exposición a factores de riesgo, lo que demanda implementar estrategias preventivas...\" That is conclusion. It interprets results, indicates implications. It's a response to objective? Objective was risk level, conclusion states high exposure, implies prevention. Does it respond? It goes beyond, yes. So 1.\n\nD1_orden_logico: We need to check if the components are in order: Objective → Method → Results → Conclusions. The summary goes: background, objective, method, results, conclusion. That is correct. So 1.\n\nD2_coherencia: 1-5. We need to evaluate flow. The summary is fairly coherent. Let's parse: Intro gives context, then objective, then methods, then results, then conclusion. No obvious jumps. Slightly some adjectives but not too many. I would give 4. But maybe 5? Let's evaluate: \"Las redes sociales se han consolidado...\" -> background. Then \"En este contexto, el estudio tuvo como objetivo...\" -> objective. Then \"La investigación adoptó...\" -> method. Then \"Para la recolección de datos...\" instrument. Then results: \"Los resultados evidenciaron que el nivel predominante...\" Then conclusion: \"En conclusión, existe una alta exposición...\". This flows. No repeated terms? Maybe \"redes sociales\" repeated a lot but that's fine. Not abrupt. I think 5. But if we want to be safe: 5. However, we need to watch for \"grupo reducido no presentó riesgo\" and \"solo un porcentaje mínimo...\" might cause slight confusion but not big. I'd give 5.\n\nD3_contextualizacion: Does summary situate problem? It says \"Las redes sociales se han consolidado...\" and then \"no obstante, su uso inadecuado puede afectar la salud mental, especialmente en adolescentes.\" That sets context: background importance. It does mention \"En este contexto\" but not a separate contextualization section. But the definition: \"sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco se contrasta.\" The summary includes context: usage can affect mental health, especially adolescents, and refers to specific institution. That counts. So D3_contextualizacion = 1.\n\nD3_metodo_detallado: 1 because they give design, sample size, instrument.\n\nD3_resultados_concretos: 1 because categories named.\n\nD3_conclusion_responde: The conclusion states \"En conclusión, existe una alta exposición a factores de riesgo, lo que demanda implementar estrategias preventivas...\". Does that respond to the objective? Objective: \"determinar el nivel de riesgo de adicción a redes sociales\". The conclusion states high exposure, need for strategies. It doesn't directly say the level of risk, but it infers from results that high exposure exists. It does respond, albeit indirectly. The rule: \"La conclusión contesta al objetivo enunciado\". The conclusion addresses the risk level, implies prevention. I'd say yes. So 1.\n\nD4_consistencia: We need to evaluate consistency between methodology and results. Check if there's any discordance. Methods: descriptive cross-sectional, design non-experimental. Results: risk categories. No contradictions. They didn't claim causal or statistical significance incorrectly. So D4_consistencia likely 5. However, need to check if they used term \"riesgo leve\" but no statistical test. No mention of p-values. So no contradiction. So 5.\n\nBut we must consider if \"grupo reducido\" and \"porcentaje mínimo\" ambiguous but not contradictory. So 5.\n\nno_evaluable: 0 because it's a valid summary.\n\nobservaciones: any comments. Maybe note about lack of quantitative percentages. Could mention \"No se proporcionan cifras exactas en resultados.\" But optional.\n\nBut we need to output JSON with fields in order? Schema defines required fields; order doesn't matter but we must include all.\n\nLet's fill:\n\n\"D1_imryd_objetivo\":1\n\"D1_imryd_metodologia\":1\n\"D1_imryd_resultados\":1\n\"D1_imryd_conclusiones\":1\n\"D1_orden_logico\":1\n\"D2_coherencia\":5\n\"D3_contextualizacion\":1\n\"D3_metodo_detallado\":1\n\"D3_resultados_concretos\":1\n\"D3_conclusion_responde\":1\n\"D4_consistencia\":5\n\"no_evaluable\":0\n\"observaciones\":\"No se incluyen cifras numéricas específicas en los resultados, solo categorías de riesgo.\"\n\nWe should ensure \"no_evaluable\" type integer, 0 or 1. Use 0. \"observaciones\" string.\n\nReturn compact JSON."
+    }
+   }
+  ],
+  "created": 1789701309,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_1074f9ce08",
+  "usage": {
+   "completion_tokens": 1653,
+   "prompt_tokens": 9968,
+   "total_tokens": 11621,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1512,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.220614951,
+   "prompt_time": 0.710711005,
+   "completion_time": 1.762127661,
+   "total_time": 2.472838666
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s85e5eekrs9y1wwssj0a58",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:15:09.480766+00:00"
+}

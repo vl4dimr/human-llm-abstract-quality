@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-140",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 9973,
+  "output_tokens": 1405,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.564034938812256,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:43:24.636561+00:00",
+ "raw": {
+  "id": "chatcmpl-0f06a557-a2da-4fbc-b231-107522759b70",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. Need to fill all required fields.\n\nLet's parse:\n\nTitle: \"Motivación laboral y desempeño docente en la Institución Educativa “María Auxiliadora”, Puno 2020\"\n\nResumo: Provided.\n\nWe need to evaluate dimensions:\n\nD1_imryd_objetivo: presence? The summary says \"se estableció por objetivo general de investigación determinar la relación entre la motivación laboral y el desempeño docente\". Yes explicit. So 1.\n\nD1_imryd_metodologia: presence of procedure. It says \"Enfoque cuantitativo... diseño de investigación no experimental de corte transversal de tipo descriptivo y correlacional, la población ... técnica de recolección de datos fue la encuesta y el instrumento cuestionario\". So at least one precise indication. Yes. So 1.\n\nD1_imryd_resultados: results? It says \"se halló por resultados para la variable motivación laboral el 74,47% se encuentran en el nivel alto, el 19,15% en el nivel medio y el 6,38% en el nivel bajo frente a la variable desempeño docente donde se muestra un 75% en el nivel alto, un 24,32% en el nivel medio y el 0,68% en el nivel bajo, predominando en ambas variables el nivel alto. Además, se obtuvo una correlación positiva muy alta de rho de spearman equivalente al 0,941 (94,1%) y una significancia bilateral de 0,000 que es menor a la significancia máxima 0,05 (5%).\" That's results. Yes 1.\n\nD1_imryd_conclusiones: conclusion: \"Concluyéndose que la motivación laboral se relaciona directa y significativamente con el desempeño docente en la institución educativa María Auxiliadora, Puno 2020.\" Yes it's a conclusion interpreting and answering objective. So 1.\n\nD1_orden_logico: components present and order: Objective first, methodology second, results third, conclusions last. Yes. So 1.\n\nNow D2_coherencia: rating 1-5. Let's examine flow. The summary is fairly cohesive. It begins with objective, then methodology, then results, then conclusion. But some transitions: \"En la presente investigación se estableció por objetivo general...\" Then methodology description. Then results. Then conclusion. It's coherent. No abrupt jumps. Some repeated information but overall flow is good. Might rate 4 or 5. The example says 5 is \"Progresión impecable. Cada oración prepara la siguiente. Se lee de un tirón\" with transitions natural, one term per concept, no repetitions. Our text has a bit of repetition but still cohesive. I'd give 4. Because some sentences could be improved but still flows. Let's check for abruptness: The summary goes from objective to design and sample to data collection to results. Then to conclusion. The transitions are clear, not abrupt. No contradictory or out-of-place content. So 4.\n\nD3_contextualizacion: Does summary situate problem? The summary mentions the institution and location and year. But does it mention why it matters or who is affected? It says \"en la institución educativa María Auxiliadora\" but not why it's important. It's a bit limited. But maybe it's considered contextualization if it says the setting and purpose. The field guidelines say: \"sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco se contrasta.\" The summary mentions the institution and location, but doesn't say why it's important. It doesn't mention policy or significance. So 0.\n\nD3_metodo_detallado: Must provide at least two precisions. It gives: \"Enfoque cuantitativo ... tipo de investigación ... diseño no experimental de corte transversal de tipo descriptivo y correlacional\", \"población lo conformaron 124 docentes y 240 estudiantes\", \"muestra: 94 docentes ... 148 estudiantes\", \"técnica de recolección: encuesta\" and \"instrumento cuestionario\". That's at least two precisions. So 1.\n\nD3_resultados_concretos: Must provide content-specific results. They report percentages, correlation coefficient, p-value. That's concrete. So 1.\n\nD3_conclusion_responde: Concluye que la motivación laboral se relaciona directa y significativamente con el desempeño docente. That directly responds to objective (relationship). So 1.\n\nD4_consistencia: Consistency between declared methods and presented results. No contradictions. They declare correlational design, present correlation coefficient, p-value. That matches. No claim of causation, just correlation. So high consistency. Probably 5. But check for any subtle issues: They say \"se obtuvo una correlación positiva muy alta de rho de spearman equivalente al 0,941 (94,1%) y una significancia bilateral de 0,000 que es menor a la significancia máxima 0,05 (5%).\" That is consistent with methodology. There's no contradictory statement like \"significant differences\" or something. So 5.\n\nno_evaluable: 0 because it's a valid summary.\n\nObservaciones: We can note anything? Maybe note that no contextualization. But maybe not necessary. Provide empty string? The schema requires string, but can be empty. We'll provide empty string.\n\nLet's compile JSON:\n\n{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 5,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"\"\n}\n\nCheck fields order doesn't matter. Ensure all required fields present. Yes. Output as compact JSON.\n\nLet's produce."
+    }
+   }
+  ],
+  "created": 1789775004,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_9b8528b477",
+  "usage": {
+   "completion_tokens": 1405,
+   "prompt_tokens": 9973,
+   "total_tokens": 11378,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1279,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.239956282,
+   "prompt_time": 0.054448246,
+   "completion_time": 1.498032058,
+   "total_time": 1.552480304
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2veeesve8ebbxmyk45x76e1",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:43:24.636589+00:00"
+}

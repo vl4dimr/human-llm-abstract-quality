@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-058",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una estructura coherente y sigue la secuencia IMRyD. La metodología se describe con detalle, incluyendo la norma ISO 14064-1, el enfoque cuantitativo, y los límites operacionales. Los resultados se presentan concretamente, incluyendo valores numéricos y unidades. La conclusión responde al objetivo enunciado y se alinea con los resultados. La consistencia metodológica es alta, ya que los resultados y la conclusión están alineados con la metodología descrita."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 5,\n  \"D3_contextualizacion\": 1,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 5,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una estructura coherente y sigue la secuencia IMRyD. La metodología se describe con detalle, incluyendo la norma ISO 14064-1, el enfoque cuantitativo, y los límites operacionales. Los resultados se presentan concretamente, incluyendo valores numéricos y unidades. La conclusión responde al objetivo enunciado y se alinea con los resultados. La consistencia metodológica es alta, ya que los resultados y la conclusión están alineados con la metodología descrita.\"\n}",
+ "usage": {
+  "input_tokens": 10907,
+  "output_tokens": 279,
+  "total_duration_s": 9.0075099
+ },
+ "latency_s": 9.0276939868927,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:56:40.589262+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:56:40.5798066Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 5,\n  \"D3_contextualizacion\": 1,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 5,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una estructura coherente y sigue la secuencia IMRyD. La metodología se describe con detalle, incluyendo la norma ISO 14064-1, el enfoque cuantitativo, y los límites operacionales. Los resultados se presentan concretamente, incluyendo valores numéricos y unidades. La conclusión responde al objetivo enunciado y se alinea con los resultados. La consistencia metodológica es alta, ya que los resultados y la conclusión están alineados con la metodología descrita.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9007509900,
+  "load_duration": 9385700,
+  "prompt_eval_count": 10907,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 385583000,
+  "eval_count": 279,
+  "eval_duration": 8479361000
+ },
+ "cached_at_utc": "2026-09-19T01:56:40.589278+00:00"
+}

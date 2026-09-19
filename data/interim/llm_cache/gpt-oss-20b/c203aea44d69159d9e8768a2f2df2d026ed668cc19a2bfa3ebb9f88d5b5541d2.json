@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-029",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen no incluye una conclusión interpretativa que responda al objetivo; flujo de la información es coherente pero con repeticiones y algo de dispersión textual."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":3,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen no incluye una conclusión interpretativa que responda al objetivo; flujo de la información es coherente pero con repeticiones y algo de dispersión textual.\"}",
+ "usage": {
+  "input_tokens": 10315,
+  "output_tokens": 1207,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.3871755599975586,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:48:52.909247+00:00",
+ "raw": {
+  "id": "chatcmpl-19f35ec8-3f75-40fc-a3ea-b2577578916b",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":3,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen no incluye una conclusión interpretativa que responda al objetivo; flujo de la información es coherente pero con repeticiones y algo de dispersión textual.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields:\n\nD1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones\n\nAll required. Use null or 0/1 values. Let's evaluate summary.\n\nTitle: Plan de desarrollo concertado del distrito de Cabanillas 2007-2017\n\nSummary:\n\nStarts with Plan of development... area of research etc.\n\nObjective: Determinar la Visión para el Distrito de Cabanillas. So objective present.\n\nMetodología: mentions \"Los métodos utilizados fueron; El Análisis FODA, el diagnóstico participativo mediante talleres concertados. Los instrumentos y técnicas aplicadas han sido las guías de planeamiento estratégico orientada por el MEF.\" That is method details, includes method, design? It's a mixed? It's qualitative? The method includes analysis FODA, participatory diagnosis via workshops. That qualifies as methodology with details.\n\nResultados: \"Los resultados obtenidos están contenidos en la formulación del plan propiamente dicho. Destacándose las soluciones teóricas planteadas...\" Also later: \"El PDC 2007-2017 demuestra su efectividad primero, porque desde entonces se han elaborado 82 PIPs...\" plus some percentages: \"alcançando el logro en 43% en la gestión de proyectos\". That is specific quantitative result: 82 PIPs, 17 approved, 8 executed, 43% accomplishment.\n\nConclusion: Not a separate conclusion section, but summary ends with \"por lo cual, es importante verificar resultados de la gestión gubernamental local ...\". It's not a typical conclusion that interprets results beyond repeating them. There is no explicit concluding statement that synthesizes or gives implications. Might be considered lacking conclusion? The summary ends with details on results and significance. The last sentence: \"alcanzando el logro en 43% en la gestión de proyectos.\" That might be considered a conclusion? It's a result, not a conclusion. No concluding statement referencing objective.\n\nThus D1_imryd_conclusiones likely 0.\n\nOrder: The summary appears to present objective first, then methods, then results, then some discussion of results, but not a clear conclusion. Sequence: objective -> method -> results (including PIPs) -> some evaluation of effectiveness. The conclusion missing. So order: there are 3 present components in order, so order should be 1 because they appear in correct logical sequence. D1_orden_logico 1.\n\nD1_imryd_objetivo 1.\n\nD1_imryd_metodologia 1.\n\nD1_imryd_resultados 1 (since includes results like 82 PIPs, 43%).\n\nD1_imryd_conclusiones 0.\n\nD2_coherencia: Evaluate flow. The summary seems somewhat long, but flows: area, objective, methods, results, evaluation. There is some repetition of terms: \"Plan de Desarrollo Concertado 2007-2017\" repeated, but transitions present. The flow is okay but not perfect. I'd assign 3 maybe? Let's evaluate. It's a bit disjointed: starting with area, then objective, then methods, then results. There's some redundancy but overall coherent. I'd give 3.\n\nD3_contextualizacion: The summary situates problem: \"La caracterización de la problemática socioeconómica...\" and \"es importante verificar resultados de la gestión gubernamental local ...\". It does situate problem: \"problematica planteada\" etc. So yes, contextualization present 1.\n\nD3_metodo_detallado: Methods: analysis FODA, participatory diagnosis, guides. That's at least two precise details: type of analysis and instrument. So 1.\n\nD3_resultados_concretos: Results: 82 PIPs, 17 approved, 8 executed, 43% accomplishment. These are concrete. So 1.\n\nD3_conclusion_responde: There is no conclusion that responds to objective. So 0.\n\nD4_consistencia: Check consistency between what the summary says and results. The methodology says analysis FODA, workshops, and the results show PIPs etc. No major contradictions. The conclusion statement is missing, so consistency likely high. No contradictions. So D4_consistencia maybe 5. But check for any contradiction: It claims \"demuestra su efectividad\" with 82 PIPs and 43% accomplishment. That is consistent. There's no claim of no differences etc. So 5.\n\nno_evaluable 0.\n\nobservaciones: Any notes? Could mention that conclusion missing. Also note that objective is stated but conclusion is not. Let's add observation: \"Conclusión ausente; resumen no presenta cierre interpretativo más allá de resultados.\" Also note that coherence maybe moderate.\n\nSo produce JSON.\n\nCheck required fields: all present.\n\nUse null? No, all numeric values.\n\nReturn compact JSON.\n\n"
+    }
+   }
+  ],
+  "created": 1789775332,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_d23c14756c",
+  "usage": {
+   "completion_tokens": 1207,
+   "prompt_tokens": 10315,
+   "total_tokens": 11522,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1051,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.20977524,
+   "prompt_time": 0.083050163,
+   "completion_time": 1.260097925,
+   "total_time": 1.343148088
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2verfh7epa8dtqebyh7rwqq",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:48:52.909259+00:00"
+}

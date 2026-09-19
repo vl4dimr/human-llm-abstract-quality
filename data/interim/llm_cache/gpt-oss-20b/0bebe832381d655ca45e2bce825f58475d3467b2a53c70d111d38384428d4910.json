@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-094",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen sin resultados ni conclusión; falta contextualización de problema; metodología descrita de forma genérica."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin resultados ni conclusión; falta contextualización de problema; metodología descrita de forma genérica.\"}",
+ "usage": {
+  "input_tokens": 9768,
+  "output_tokens": 1543,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.896131753921509,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:56:20.362796+00:00",
+ "raw": {
+  "id": "chatcmpl-b50aa9b0-6de0-4fdf-b6ff-a0caeeb8d743",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin resultados ni conclusión; falta contextualización de problema; metodología descrita de forma genérica.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the given summary according to protocol. We only have the summary. Let's read it: \"La función docente se caracteriza por ser una labor de carácter profesional que implica la realización directa de los procesos sistemáticos de enseñanza-aprendizaje. Estos procesos abarcan el diagnóstico, la planificación, la ejecución y la evaluación, así como otras actividades educativas. El objetivo principal de esta función es contribuir de manera efectiva en la formación integral de los estudiantes, atendiendo todas las dimensiones de su desarrollo humano. Para lograrlo, el docente debe desempeñarse con ética profesional, honestidad, justicia, responsabilidad y respeto hacia los derechos de las personas, así como mantener un compromiso social como agente fundamental de la educación.\"\n\nWe must assess the four components:\n\n- Objective: The summary includes a statement: \"El objetivo principal de esta función es contribuir de manera efectiva en la formación integral de los estudiantes, atendiendo todas las dimensiones de su desarrollo humano.\" That is an objective. So D1_imryd_objetivo = 1.\n\n- Methodology: Does it describe how knowledge is obtained? It describes processes of teaching: \"diagnóstico, planificación, ejecución, evaluación\" etc. So yes, it gives method: The \"función docente\" includes processes. That's a procedural description. So D1_imryd_metodologia = 1.\n\n- Results: Does it describe findings? It says \"contribuir de manera efectiva en la formación integral...\" That's more like a purpose. No results. No outcome data. So D1_imryd_resultados = 0.\n\n- Conclusion: Is there a closure that goes beyond repeating result? Not present. So 0.\n\n- Order: The components present are objective and methodology. Are they in correct order? They start with description of function then mention objective then methodology. Actually the summary begins with the function description, then objective, then methodology. That seems logical. So we can say order=1 because the components present (objective then methodology) are in correct sequence. The rule: if 0 or 1 components present then order=0. But we have 2 components, so evaluate order. The objective is before methodology; that is correct order. So D1_orden_logico = 1.\n\nNow D2 coherence: Evaluate flow. The summary is fairly coherent, flows from function description to objective to methods to ethical considerations. It's clear. We can score high. Let's assign 5 maybe. But check: \"La función docente se caracteriza...\" then \"El objetivo principal de esta función...\" then \"Para lograrlo, el docente debe...\" That is logical. No major jumps. So 5.\n\nD3 contextualizacion: Does the summary situate the problem? It says \"La función docente...\" and says objective to contribute to students' formation. It doesn't explain why it's important or context? It says \"contribuir de manera efectiva en la formación integral de los estudiantes\" but not why it's a problem. It's more an explanation. It might not explicitly explain the context or why important. The field? It's a professional function. It's somewhat context but maybe not explicit. The definition: \"sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco se contrasta.\" This summary doesn't specify the importance of the function or any gap. So I'd rate 0.\n\nD3_metodo_detallado: It lists processes but not specific details like sample, instrument, etc. It is a general description of teaching process. That might be considered a precision? It's describing a process: \"diagnóstico, planificación, ejecución, evaluación.\" That's 4 precise procedures. That might count as at least two precisions. The rule: \"Cuentan como precisión: diseño, tipo de estudio, tamaño de muestra, técnica de muestreo, instrumento nombrado, prueba estadística, corpus analizado, número de observaciones, criterio de selección.\" Those are more specific. For a qualitative? This is more educational process, but for our evaluation, do we consider these as methodological precisions? I think yes: \"diagnóstico, planificación, ejecución, evaluación\" are steps. They are concrete. But they don't specify instrument names. But still it's some precision. I'd set 1.\n\nD3_resultados_concretos: No results, so 0.\n\nD3_conclusion_responde: There's no conclusion, so 0.\n\nD4_consistencia: No methodology declared? It has methodology. But the results are missing; no inconsistency. However, we cannot evaluate because no results, but we can still evaluate consistency: We have objective and methodology; no results; no conclusion. The D4 is about consistency between what the summary says it did and the results and conclusions. Since there's no contradiction, but also no data, it may be considered not evaluable? The protocol says: If no methodology, D4 not evaluable. But methodology exists. But no results or conclusion, so can't see contradictions. But the rule says: Mark no_evaluable if the summary does not declare any methodology; but we have methodology. So we can evaluate consistency as 5? But we don't have results or conclusion to compare; it's fine, but no contradictions. Maybe we give 5? However, is that appropriate? The consistency metric: \"Enfoque, diseño, resultados y conclusiones encajan sin fisuras.\" Since we have no results or conclusions, it's vacuously true? But maybe we assign 5. Let's examine D4: \"coherencia entre lo que el resumen dice que hizo y lo que presenta.\" Since the methodology is there but results missing, consistency can't be broken. I'd assign 5.\n\nNow no_evaluable: 0 because it's a summary.\n\nObservaciones: We should note that there's no results, no conclusion. Also we can mention that no context is given. We can write a short comment.\n\nWe need to ensure fields are included: all required. Let's list them:\n\n- D1_imryd_objetivo: 1\n- D1_imryd_metodologia: 1\n- D1_imryd_resultados: 0\n- D1_imryd_conclusiones: 0\n- D1_orden_logico: 1\n- D2_coherencia: 5\n- D3_contextualizacion: 0\n- D3_metodo_detallado: 1\n- D3_resultados_concretos: 0\n- D3_conclusion_responde: 0\n- D4_consistencia: 5\n- no_evaluable: 0\n- observaciones: string.\n\nObservations: \"Resumen sin resultados ni conclusión; falta contextualización de problema; metodologías descritas de manera genérica.\"\n\nNow produce JSON. Ensure integer values. All fields present. No null unless not present. We have values.\n\nLet's output."
+    }
+   }
+  ],
+  "created": 1789775779,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_a8c584dda7",
+  "usage": {
+   "completion_tokens": 1543,
+   "prompt_tokens": 9768,
+   "total_tokens": 11311,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1398,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.309723184,
+   "prompt_time": 0.047106179,
+   "completion_time": 1.623658964,
+   "total_time": 1.6707651430000001
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vf645cegqv06rrz69fzby7",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:56:20.362835+00:00"
+}

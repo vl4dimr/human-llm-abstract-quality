@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-065",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, aunque podría mejorar en la transición entre los resultados y las conclusiones. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar el incremento de peso vivo en alpacas Suri. La consistencia metodológica es buena, aunque el uso del término 'ligeramente mejor' podría ser más específico."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, aunque podría mejorar en la transición entre los resultados y las conclusiones. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar el incremento de peso vivo en alpacas Suri. La consistencia metodológica es buena, aunque el uso del término 'ligeramente mejor' podría ser más específico.\"\n}",
+ "usage": {
+  "input_tokens": 10843,
+  "output_tokens": 253,
+  "total_duration_s": 7.7503135
+ },
+ "latency_s": 7.759966611862183,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:34:08.865003+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:34:08.8562658Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, aunque podría mejorar en la transición entre los resultados y las conclusiones. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar el incremento de peso vivo en alpacas Suri. La consistencia metodológica es buena, aunque el uso del término 'ligeramente mejor' podría ser más específico.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7750313500,
+  "load_duration": 4090000,
+  "prompt_eval_count": 10843,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 297629000,
+  "eval_count": 253,
+  "eval_duration": 7382201000
+ },
+ "cached_at_utc": "2026-09-19T01:34:08.865024+00:00"
+}

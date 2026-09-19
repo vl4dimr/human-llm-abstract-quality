@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-052",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Conclusion mentions academic performance, not directly reported in results."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Conclusion mentions academic performance, not directly reported in results.\"}",
+ "usage": {
+  "input_tokens": 9896,
+  "output_tokens": 1149
+ },
+ "latency_s": 2.4163131713867188,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:01:45.408928+00:00",
+ "raw": {
+  "id": "chatcmpl-e067dbb2-0d0f-4a25-8ae7-8ac3575d7c72",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Conclusion mentions academic performance, not directly reported in results.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with fields as per schema. Let's annotate.\n\nWe have summary. Let's evaluate each field.\n\nD1_imryd_objetivo: The summary states: \"se desarrolló con el objetivo de determinar la relación del clima familiar con el desarrollo socioemocional en los niños y niñas.\" That's explicit objective. So 1.\n\nD1_imryd_metodologia: \"La metodología de la investigación fue de enfoque cuantitativo, descriptivo correlacional, no experimental, para recolectar los datos se utilizó la técnica de la encuesta y sus instrumentos fueron dos cuestionarios. La población del estudio fue de 28 alumnos y se consideró una muestra no probabilística censal siendo la totalidad de la población. Los datos se procesaron con SPSS versión 25 y la relación de las variables con Rho de Pearson.\" This includes design, sample, instrument, software. So 1.\n\nD1_imryd_resultados: \"Como resultado se evidencio un coeficiente de correlación Pearson r= 0,592, el cual mostro la existencia de una relación positiva y significativa entre el clima familiar y el desarrollo socioemocional.\" That's a result. So 1.\n\nD1_imryd_conclusiones: \"Concluyendo así que los niños niñas de la I.E.I. N.º 293 Atuncolla-Puno al tener un buen ambiente familiar potencian su desarrollo socioemocional mejorando así su rendimiento académico.\" This is a conclusion that interprets result and gives implication. So 1.\n\nD1_orden_logico: The components present: objective, methodology, results, conclusion. They appear in that order. So 1.\n\nD2_coherencia: Evaluate flow. The summary flows logically: objective, methodology, results, conclusion. No major jumps. Some repetition: \"niños y niñas\" repeated. But overall coherent. I'd rate 5. But check for any abrupt transitions. The summary is fairly short. I'd give 5.\n\nD3_contextualizacion: Does the summary situate the problem? It says \"Clima familiar y el desarrollo socioemocional en los niños y niñas de la I.E.I. N.º 293 Atuncolla, Puno 2024\". That gives location and population. It doesn't explicitly say why it's important, but it gives context: \"clima familiar con el desarrollo socioemocional\". It situates the problem: the study is about relationship between family climate and socioemotional development. It mentions the school. That is contextualization. So 1.\n\nD3_metodo_detallado: At least two precisions: design (descriptivo correlacional, no experimental), sample size (28), instrument (two questionnaires), software (SPSS). So 1.\n\nD3_resultados_concretos: The result is r=0.592. That's a concrete magnitude. So 1.\n\nD3_conclusion_responde: The conclusion addresses the objective: \"Concluyendo así que los niños niñas de la I.E.I. N.º 293 Atuncolla-Puno al tener un buen ambiente familiar potencian su desarrollo socioemocional mejorando así su rendimiento académico.\" It responds to objective: yes. So 1.\n\nD4_consistencia: Check consistency between methodology and results. They used Pearson correlation, which is appropriate for correlational design. They report r=0.592, positive and significant. They conclude that good family environment enhances socioemotional development, improving academic performance. That is consistent with result. No contradictions. So 5.\n\nno_evaluable: 0 (it's a valid summary).\n\nobservaciones: any notes? Maybe note that the conclusion also mentions academic performance, which wasn't in results. But it's an implication. It's fine. Could note that the conclusion extends beyond data but still consistent. But we can leave empty or minimal. The schema requires string. We can provide empty string or a note. Provide a brief note: \"Conclusion extends to academic performance, not directly reported in results.\" But it's okay. Provide a short observation.\n\nLet's produce JSON.\n\nCheck schema: all required fields present. Use compact JSON. Ensure no trailing commas. Provide null values if needed but we have all values.\n\nLet's produce:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Conclusion mentions academic performance, not directly reported in results.\"\n}\n\nCheck that all fields are integers or null. Observations string. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789700505,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_7d448090ba",
+  "usage": {
+   "completion_tokens": 1149,
+   "prompt_tokens": 9896,
+   "total_tokens": 11045,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1013,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.453212202,
+   "prompt_time": 0.496719686,
+   "completion_time": 1.186877522,
+   "total_time": 1.6835972080000001
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7cxh6eem8sep28w29m1sk",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:01:45.409042+00:00"
+}

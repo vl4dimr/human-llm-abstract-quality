@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-109",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen carece de contextualización del problema; conclusión incluye plan sin datos de significancia."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen carece de contextualización del problema; conclusión incluye plan sin datos de significancia.\"}",
+ "usage": {
+  "input_tokens": 10043,
+  "output_tokens": 2495,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 3.8467061519622803,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:08:24.282337+00:00",
+ "raw": {
+  "id": "chatcmpl-272a1c23-aa8f-45ce-840d-1d986cdd375e",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen carece de contextualización del problema; conclusión incluye plan sin datos de significancia.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Análisis de los factores socioeconómicos que inciden en la generación per cápita de residuos sólidos domiciliarios en el distrito de Puno, 2018\"\n\nResumen: Provided.\n\nWe need to evaluate each field.\n\nFirst, check if it's a valid summary. It seems to be a summary. So no_evaluable = 0.\n\nNow evaluate each dimension.\n\n### D1_imryd_objetivo\n\nWe need to see if the summary contains an explicit objective. The summary says: \"El presente trabajo de investigación tiene como objetivo: Analizar los factores socioeconómicos que inciden en la generación de per cápita de residuos sólidos domiciliarios en el distrito de Puno.\" So yes, objective present. So D1_imryd_objetivo = 1.\n\n### D1_imryd_metodologia\n\nWe need to see if there is a concrete indication of how knowledge was obtained. The summary says: \"Para lo cual se ha realizado a través del modelo de regresión lineal, un análisis de correlación con datos de corte transversal obtenido mediante encuestas realizadas a 95 viviendas del distrito de Puno, posteriormente se ha recolectado los residuos sólidos domiciliarios durante ocho días en las viviendas encuestados.\" So yes, methodology present. So D1_imryd_metodologia = 1.\n\n### D1_imryd_resultados\n\nWe need to see if results are communicated. The summary says: \"Los resultados muestran que la situación actual de la generación per cápita de residuos sólidos domiciliarios en las viviendas encuestados es de 0.91 kg/hab/día, de los cuales el 40.05% es materia orgánica y el 27.35% son plásticos y el 12.88% es papel y en otros elementos como, madera, cartón, vidrio, etc. no tienen mayor significancia. Asimismo, se obtuvo una densidad promedio de 2402.17 Kg./m3.\" So yes, results present. So D1_imryd_resultados = 1.\n\n### D1_imryd_conclusiones\n\nWe need to see if there is a conclusion that goes beyond repeating results, interprets, or gives implications. The summary says: \"Por otro lado se determinó que los factores socioeconómicos que inciden positivamente en la generación per cápita de residuos sólidos domésticos son ingreso familiar (INGF) y numero de miembro de la vivienda (NMV) en tanto que la variable de nivel de educación del jefe del hogar (NEDU) incide negativamente en la generación de residuos sólidos domiciliarios per cápita, y finalmente se ha propuesto el plan de minimización de residuos sólidos domiciliarios, a través del potencial reaprovechamiento de residuos recuperables donde es posible reducir hasta 59.95% de residuos sólidos domiciliarios donde se cuentan con un mercado de comercialización que asciende a un total de 11718.39 kg/mes de residuos reciclables y aprovechables totales, lo que generaría beneficios económicos de 5925.66 soles al mes.\" This is a conclusion: it states findings and proposes a plan. It goes beyond repeating results. So D1_imryd_conclusiones = 1.\n\n### D1_orden_logico\n\nWe need to check if the components present appear in logical order: objective → methodology → results → conclusion. The summary: objective first, then methodology, then results, then conclusion. Yes. So D1_orden_logico = 1.\n\n### D2_coherencia\n\nWe need to rate coherence 1-5. Let's examine flow.\n\nThe summary: starts with objective, then methodology, then results, then conclusion. The flow seems coherent. There are some minor issues: \"para lo cual se ha realizado a través del modelo de regresión lineal, un análisis de correlación con datos de corte transversal obtenido mediante encuestas realizadas a 95 viviendas del distrito de Puno, posteriormente se ha recolectado los residuos sólidos domiciliarios durante ocho días en las viviendas encuestados.\" The phrase \"posteriormente se ha recolectado\" is a bit abrupt but still flows. The results section: \"Los resultados muestran que la situación actual de la generación per cápita de residuos sólidos domiciliarios en las viviendas encuestados es de 0.91 kg/hab/día, de los cuales el 40.05% es materia orgánica y el 27.35% son plásticos y el 12.88% es papel y en otros elementos como, madera, cartón, vidrio, etc. no tienen mayor significancia. Asimismo, se obtuvo una densidad promedio de 2402.17 Kg./m3.\" That is fine. Then conclusion: \"Por otro lado se determinó que los factores socioeconómicos que inciden positivamente en la generación per cápita de residuos sólidos domésticos son ingreso familiar (INGF) y numero de miembro de la vivienda (NMV) en tanto que la variable de nivel de educación del jefe del hogar (NEDU) incide negativamente en la generación de residuos sólidos domiciliarios per cápita, y finalmente se ha propuesto el plan de minimización de residuos sólidos domiciliarios, a través del potencial reaprovechamiento de residuos recuperables donde es posible reducir hasta 59.95% de residuos sólidos domiciliarios donde se cuentan con un mercado de comercialización que asciende a un total de 11718.39 kg/mes de residuos reciclables y aprovechables totales, lo que generaría beneficios económicos de 5925.66 soles al mes.\" This is a bit long but still coherent. No major jumps. So I'd rate 5? Let's see the scale: 5 is impeccable progression, 4 is good with minor aspereza. There is some repetition: \"residuos sólidos domiciliarios\" repeated many times. But still coherent. I'd give 4. Because there is some repetition and maybe a bit of abruptness. So D2_coherencia = 4.\n\n### D3_contextualizacion\n\nWe need to see if the summary situates the problem: why it matters, where it occurs, to whom it affects, against what norm or framework. The summary starts with objective but does not explain why it's important. It does not mention significance or context beyond the location. It does not mention why the study matters. So D3_contextualizacion = 0.\n\n### D3_metodo_detallado\n\nWe need at least two precisions: design, type of study, sample size, sampling technique, instrument, statistical test, corpus, number of observations, selection criteria. The summary says: \"modelo de regresión lineal, un análisis de correlación con datos de corte transversal obtenido mediante encuestas realizadas a 95 viviendas del distrito de Puno, posteriormente se ha recolectado los residuos sólidos domiciliarios durante ocho días en las viviendas encuestados.\" So we have: design: \"corte transversal\" (observational). Sample size: 95 viviendas. Instrument: \"encuestas\". Statistical test: regression lineal, correlation. So at least two precisions. So D3_metodo_detallado = 1.\n\n### D3_resultados_concretos\n\nWe need concrete results: numbers, categories, relationships. The summary gives: 0.91 kg/hab/día, 40.05% materia orgánica, 27.35% plásticos, 12.88% papel, others not significant, density 2402.17 Kg/m3. Also factors: INGF, NMV positively, NEDU negatively. Also plan: reduce 59.95% of waste, market 11718.39 kg/mes, benefits 5925.66 soles. So yes, concrete. So D3_resultados_concretos = 1.\n\n### D3_conclusion_responde\n\nWe need to see if conclusion responds to the objective. The objective: analyze socio-economic factors that influence per capita waste generation. The conclusion: identifies factors (INGF, NMV, NEDU) and proposes plan. So yes, it responds. So D3_conclusion_responde = 1.\n\n### D4_consistencia\n\nWe need to evaluate consistency between what the summary says it did and what it presents. The summary says: \"modelo de regresión lineal, análisis de correlación, encuestas a 95 viviendas, recolectado residuos durante ocho días.\" Then results: 0.91 kg/hab/día, percentages, density. Then conclusion: factors, plan. Are there contradictions? The summary says \"se ha propuesto el plan de minimización de residuos sólidos domiciliarios, a través del potencial reaprovechamiento de residuos recuperables donde es posible reducir hasta 59.95% de residuos sólidos domiciliarios donde se cuentan con un mercado de comercialización que asciende a un total de 11718.39 kg/mes de residuos reciclables y aprovechables totales, lo que generaría beneficios económicos de 5925.66 soles al mes.\" This is consistent with the data? The data didn't mention the market or the plan. But it's not contradictory. The summary didn't mention any statistical significance or p-values. It didn't claim significance. So no contradictions. The only potential issue: \"se ha propuesto el plan de minimización\" but no data to support that plan. But that's not a contradiction. So D4_consistencia = 5? Let's check the scale: 5 is no contradictions. 4 is minor imprecision. 3 is visible discordance. 2 many discordances. 1 open contradiction. There's no contradiction. So 5.\n\nBut we need to check if any part of the summary contradicts itself. The summary says \"se obtuvo una densidad promedio de 2402.17 Kg./m3.\" That is a result. Then \"se determinó que los factores socioeconómicos que inciden positivamente en la generación per cápita de residuos sólidos domésticos son ingreso familiar (INGF) y numero de miembro de la vivienda (NMV) en tanto que la variable de nivel de educación del jefe del hogar (NEDU) incide negativamente en la generación de residuos sólidos domiciliarios per cápita\". That is consistent. No contradictions. So D4_consistencia = 5.\n\n### no_evaluable\n\nSince it's a valid summary, no_evaluable = 0.\n\n### observaciones\n\nWe can add any notes. We might note that the summary lacks contextualization. Also mention that the conclusion includes a plan but no statistical significance. But we can keep it minimal. Let's add: \"No contextualización del problema; conclusión incluye plan sin datos de significancia.\" But we can keep it short. The field is string. We can include a note.\n\nNow produce JSON with all fields.\n\nCheck schema: required fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nAll are present.\n\nNow produce compact JSON."
+    }
+   }
+  ],
+  "created": 1789700904,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_976a85d17a",
+  "usage": {
+   "completion_tokens": 2495,
+   "prompt_tokens": 10043,
+   "total_tokens": 12538,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2352,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.148898591,
+   "prompt_time": 0.37219685,
+   "completion_time": 2.534799306,
+   "total_time": 2.906996156
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7s23we989m2hf3zfzt61r",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:08:24.282363+00:00"
+}

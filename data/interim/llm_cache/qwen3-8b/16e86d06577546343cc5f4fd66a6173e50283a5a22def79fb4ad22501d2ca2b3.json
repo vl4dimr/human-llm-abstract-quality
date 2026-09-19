@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-104",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen describe claramente el objetivo de estudiar el análisis costo-beneficio de las medidas de mitigación de los residuos sólidos de las islas flotantes de los Uros, lo que cumple con la función de objetivo. La metodología se describe mediante la utilización de una encuesta, el software Limdep, y el modelo econométrico Logit-Probit, lo que se considera una indicación concreta. Los resultados se comunican a través de la disponibilidad a pagar, educación, ingreso, edad, género y número de hijos, lo cual se considera información específica. Las conclusiones responden al objetivo al analizar la influencia de los factores socioeconómicos y ambientales. La coherencia organizacional es buena, aunque podría mejorar en algunos puntos de transición. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante el tema. La consistencia metodológica es moderada, ya que los resultados y conclusiones se alinean con la metodología, aunque podría haber más claridad en algunos puntos."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen describe claramente el objetivo de estudiar el análisis costo-beneficio de las medidas de mitigación de los residuos sólidos de las islas flotantes de los Uros, lo que cumple con la función de objetivo. La metodología se describe mediante la utilización de una encuesta, el software Limdep, y el modelo econométrico Logit-Probit, lo que se considera una indicación concreta. Los resultados se comunican a través de la disponibilidad a pagar, educación, ingreso, edad, género y número de hijos, lo cual se considera información específica. Las conclusiones responden al objetivo al analizar la influencia de los factores socioeconómicos y ambientales. La coherencia organizacional es buena, aunque podría mejorar en algunos puntos de transición. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante el tema. La consistencia metodológica es moderada, ya que los resultados y conclusiones se alinean con la metodología, aunque podría haber más claridad en algunos puntos.\"\n}",
+ "usage": {
+  "input_tokens": 11060,
+  "output_tokens": 392,
+  "total_duration_s": 16.0806668
+ },
+ "latency_s": 16.108149528503418,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:03:55.589383+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:03:55.580538Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen describe claramente el objetivo de estudiar el análisis costo-beneficio de las medidas de mitigación de los residuos sólidos de las islas flotantes de los Uros, lo que cumple con la función de objetivo. La metodología se describe mediante la utilización de una encuesta, el software Limdep, y el modelo econométrico Logit-Probit, lo que se considera una indicación concreta. Los resultados se comunican a través de la disponibilidad a pagar, educación, ingreso, edad, género y número de hijos, lo cual se considera información específica. Las conclusiones responden al objetivo al analizar la influencia de los factores socioeconómicos y ambientales. La coherencia organizacional es buena, aunque podría mejorar en algunos puntos de transición. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante el tema. La consistencia metodológica es moderada, ya que los resultados y conclusiones se alinean con la metodología, aunque podría haber más claridad en algunos puntos.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 16080666800,
+  "load_duration": 6761300,
+  "prompt_eval_count": 11060,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 586876000,
+  "eval_count": 392,
+  "eval_duration": 15411813000
+ },
+ "cached_at_utc": "2026-09-19T02:03:55.589397+00:00"
+}

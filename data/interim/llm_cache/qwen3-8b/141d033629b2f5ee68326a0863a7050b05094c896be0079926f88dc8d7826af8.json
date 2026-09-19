@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-042",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen cumple con los componentes IMRyD en orden. La coherencia se puntuó en 3 debido a que el texto presenta algunas repeticiones y salto de tema de la metodología a los resultados. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la relación entre fuentes de financiamiento y desarrollo empresarial. La consistencia metodológica se puntuó en 3 debido a que la conclusión menciona una oportunidad de mejora sin dar más detalles sobre cómo se obtuvo el resultado. El método detallado se puntuó en 1 porque se menciona el tipo de investigación, enfoque, diseño, corte transversal y el instrumento de medición. Los resultados concretos se puntuaron en 1 porque se mencionan la prueba de correlación de Rho Spearman y se obtuvo una relación positiva significativa."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen cumple con los componentes IMRyD en orden. La coherencia se puntuó en 3 debido a que el texto presenta algunas repeticiones y salto de tema de la metodología a los resultados. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la relación entre fuentes de financiamiento y desarrollo empresarial. La consistencia metodológica se puntuó en 3 debido a que la conclusión menciona una oportunidad de mejora sin dar más detalles sobre cómo se obtuvo el resultado. El método detallado se puntuó en 1 porque se menciona el tipo de investigación, enfoque, diseño, corte transversal y el instrumento de medición. Los resultados concretos se puntuaron en 1 porque se mencionan la prueba de correlación de Rho Spearman y se obtuvo una relación positiva significativa.\"\n}",
+ "usage": {
+  "input_tokens": 10830,
+  "output_tokens": 361,
+  "total_duration_s": 12.3180469
+ },
+ "latency_s": 12.327845811843872,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:54:21.632881+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:54:21.6237326Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen cumple con los componentes IMRyD en orden. La coherencia se puntuó en 3 debido a que el texto presenta algunas repeticiones y salto de tema de la metodología a los resultados. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la relación entre fuentes de financiamiento y desarrollo empresarial. La consistencia metodológica se puntuó en 3 debido a que la conclusión menciona una oportunidad de mejora sin dar más detalles sobre cómo se obtuvo el resultado. El método detallado se puntuó en 1 porque se menciona el tipo de investigación, enfoque, diseño, corte transversal y el instrumento de medición. Los resultados concretos se puntuaron en 1 porque se mencionan la prueba de correlación de Rho Spearman y se obtuvo una relación positiva significativa.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 12318046900,
+  "load_duration": 11450800,
+  "prompt_eval_count": 10830,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 338649000,
+  "eval_count": 361,
+  "eval_duration": 11864338000
+ },
+ "cached_at_utc": "2026-09-19T01:54:21.632891+00:00"
+}

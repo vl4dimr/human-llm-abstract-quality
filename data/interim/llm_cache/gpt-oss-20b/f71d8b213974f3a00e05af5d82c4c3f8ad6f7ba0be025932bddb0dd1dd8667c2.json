@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-019",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen presenta objetivo, metodología, resultados y conclusión en orden lógico y coherente. Falta contextualización del problema."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta objetivo, metodología, resultados y conclusión en orden lógico y coherente. Falta contextualización del problema.\"}",
+ "usage": {
+  "input_tokens": 10031,
+  "output_tokens": 1388
+ },
+ "latency_s": 3.1500940322875977,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T02:57:32.034725+00:00",
+ "raw": {
+  "id": "chatcmpl-9d466eed-a512-4209-8d11-5c24585cd5fc",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta objetivo, metodología, resultados y conclusión en orden lógico y coherente. Falta contextualización del problema.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Efectos de la orquiectomía sobre la citología gonadotrópica de la hipófisis en alpacas macho\"\n\nSummary: It says:\n\n- Objective: \"determinar los efectos de la orquiectomía sobre la citología gonadotrópica de la glándula hipófisis en alpacas macho.\" So objective present.\n\n- Methodology: \"Se utilizaron 12 muestras de hipófisis, a intervalos de 0, 1, 4, 6, 12 y 24 meses de orquiectomía. Las muestras fueron procesadas en la técnica de parafina para reacciones histoquímicas y analizadas con el estadístico de correlación de Pearson.\" So methodology present. Contains design? It's a longitudinal observational? It's a descriptive study with correlation analysis. Contains sample size, technique, statistical test. So at least two precisions: sample size (12), technique (parafina), statistical test (Pearson). So D3_metodo_detallado = 1.\n\n- Results: They present counts of cells at various times, correlation coefficients, etc. So results present. D1_imryd_resultados = 1.\n\n- Conclusions: \"Se concluye que existe modificaciones estructurales en los componentes celulares de la hipófisis por efecto de la castración.\" So conclusion present. D1_imryd_conclusiones = 1.\n\n- Order: The components appear in order: objective, methodology, results, conclusion. So D1_orden_logico = 1.\n\n- D2_coherencia: We need to evaluate flow. The summary flows: objective, methodology, results, conclusion. The text is fairly coherent. There are some repeated phrases but overall coherent. I'd rate 4 or 5. Let's examine: The summary starts with objective, then methodology, then results, then conclusion. The transitions are smooth. There's no abrupt jumps. So I'd give 5. But check for any issues: The summary uses \"El análisis de la pars distalis se determinó presencia de células acidófilas con promedio al inicio con 46 células, al mes 40, 4 meses 32, 6 meses 51, 12 meses 41 y a los dos años 35.\" Then \"Para células basófilas inició con 46, al mes 42, 4 meses 39, 6 meses 87, a los 12 meses 100 y a los 24 meses 99.\" Then \"Todas está células formaron acinis celulares, rodeadas de la microvascularización.\" Then \"En animales de mayor tiempo de castración hubo presencia de estructuras vesiculares con reacción PAS+.\" Then \"El análisis de la pars nervosa mostro presencia de cuerpos de Herring, que disminuye en número y aumenta en volumen según el tiempo de castración.\" Then \"Referente al coeficiente de correlación para células acidófilas y basófilas fue de r: -0.141 y r: 0.666 respectivamente, indicando que fue una correlación negativa (P>0.05) y una correlación moderada (p<0.05) tanto para acidófilas y basófilas.\" Then conclusion. The flow is okay. I'd give 5.\n\n- D3_contextualizacion: Does the summary situate the problem? It says \"El estudio tuvo como objetivo determinar los efectos de la orquiectomía sobre la citología gonadotrópica de la glándula hipófisis en alpacas macho.\" It doesn't explain why it's important, where it occurs, or who it affects. It doesn't mention significance. So D3_contextualizacion = 0.\n\n- D3_metodo_detallado: Already 1.\n\n- D3_resultados_concretos: They present specific numbers: cell counts at times, correlation coefficients. So yes, D3_resultados_concretos = 1.\n\n- D3_conclusion_responde: The conclusion states \"Se concluye que existe modificaciones estructurales en los componentes celulares de la hipófisis por efecto de la castración.\" The objective was to determine effects of orchiectomy on gonadotrophic cytology. The conclusion addresses that: yes, it responds. So D3_conclusion_responde = 1.\n\n- D4_consistencia: We need to check consistency between methodology and results and conclusion. The methodology: 12 samples, time points, paraffin, Pearson correlation. Results: cell counts, correlation coefficients. Conclusion: modifications structural. That seems consistent. No contradictions. So D4_consistencia = 5.\n\n- no_evaluable: The text is a summary, not a non-summary. So no_evaluable = 0.\n\n- Observaciones: We can add any notes. Maybe note that the summary is fairly coherent, but no contextualization. Also note that the conclusion is somewhat generic. But we can keep it minimal.\n\nNow produce JSON with all fields. Ensure values are integers or null. All required fields present.\n\nLet's produce:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Resumen presenta objetivo, metodología, resultados y conclusión en orden lógico y coherente. Falta contextualización del problema.\"\n}\n\nCheck schema: all fields present. Observaciones string. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789700251,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_976a85d17a",
+  "usage": {
+   "completion_tokens": 1388,
+   "prompt_tokens": 10031,
+   "total_tokens": 11419,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1240,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.148957762,
+   "prompt_time": 0.653799911,
+   "completion_time": 1.438214806,
+   "total_time": 2.092014717
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s75600em5a4q58f21dxxd3",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T02:57:32.034886+00:00"
+}

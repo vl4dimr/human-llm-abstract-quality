@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-090",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "Objetivo repetido, conclusión implica causalidad aunque diseño correlacional."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":3,\"no_evaluable\":0,\"observaciones\":\"Objetivo repetido, conclusión implica causalidad aunque diseño correlacional.\"}",
+ "usage": {
+  "input_tokens": 9987,
+  "output_tokens": 2786
+ },
+ "latency_s": 4.260363340377808,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:55:54.704754+00:00",
+ "raw": {
+  "id": "chatcmpl-ec7a909e-33aa-4b4e-85bb-e0334e57b694",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":3,\"no_evaluable\":0,\"observaciones\":\"Objetivo repetido, conclusión implica causalidad aunque diseño correlacional.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones. All required.\n\nWe must evaluate based on the protocol.\n\nLet's analyze the summary:\n\nTitle: \"El síndrome de burnout y su relación con el desempeño laboral en los trabajadores de la clínica Good Hope, año 2021\" (though summary says year 2022 but that's fine).\n\nSummary text:\n\n\"La presente investigación tuvo como objetivo determinar la relación que existe entre el síndrome de burnout con el desempeño laboral en los trabajadores de la clínica Good Hope, año 2022. El tipo de investigación fue de enfoque cuantitativo, descriptivo, correlacional, porque las variables fueron susceptibles de cuantificación; además, se buscaron los resultados mediante las mediciones estadísticas. El propósito de las investigaciones de enfoques cuantitativos y correlacional es evaluar la relación que existe entre dos variables, además, el análisis descriptivo se realizó para conocer el comportamiento de los datos, respecto al síndrome burnout y desempeño laboral. El diseño de la investigación fue no experimental, correlacional, los estudios no experimentales se realizan sin la manipulación deliberada de las variables, en las cuales solo se observan los fenómenos en su ambiente natural para después analizarlos. El objeto fue establecer relaciones conjuntas entre las variables que caracterizan el fenómeno de estudio, y de corte transversal con relación al tiempo, ya que se recolectó información aplicando el instrumento en un momento único, la muestra con la que se trabajó fue de 300 trabajadores, así mismo, se tuvo instrumentos de recolección tanto para el síndrome de burnout como para desempeño laboral, bajo un muestreo a conveniencia del autor. Se concluyó que existe correlación entre la variable síndrome de burnout y el desempeño laboral, la cual se muestra con una asociación aceptable, directa y significativa (Rho = 0.461), la que indica que mientras la institución mantenga niveles aceptables de burnout, el desempeño laboral será satisfactorio, pues al indicarse una relación significa que ambas variables tienen una variabilidad de acuerdo a cómo se comporten.\"\n\nWe need to annotate.\n\nFirst, check D1_imryd_objetivo. The text states: \"La presente investigación tuvo como objetivo determinar la relación que existe entre el síndrome de burnout con el desempeño laboral...\" So objective is explicitly stated. So D1_imryd_objetivo = 1.\n\nNext D1_imryd_metodologia. The summary says: \"El tipo de investigación fue de enfoque cuantitativo, descriptivo, correlacional, ... El diseño de la investigación fue no experimental, correlacional... la muestra con la que se trabajó fue de 300 trabajadores ... se tuvo instrumentos de recolección tanto para el síndrome de burnout como para desempeño laboral, bajo un muestreo a conveniencia del autor.\" This qualifies as at least one concrete procedural indication: design, sample size, instruments, sampling. So yes D1_metodologia = 1.\n\nD1_imryd_resultados. Summary states: \"Se concluyó que existe correlación entre la variable síndrome de burnout y el desempeño laboral, la cual se muestra con una asociación aceptable, directa y significativa (Rho = 0.461)\". So yes, results are presented. So D1_resultados = 1.\n\nD1_imryd_conclusiones. The conclusion says: \"Se concluyó que existe correlación entre la variable síndrome de burnout y el desempeño laboral, la cual se muestra con una asociación aceptable, directa y significativa (Rho = 0.461) ...\". This is a conclusion, but is it more than just repetition? It repeats result, but also says implication: \"la institución mantenga niveles aceptables de burnout, el desempeño laboral será satisfactorio\". That is an implication. The conclusion also states \"pues al indicarse una relación significa que ambas variables tienen una variabilidad de acuerdo a cómo se comporten.\" So it goes beyond results? It's basically interpretation, but the criteria: D1_imryd_conclusiones = 1 when there is a closure that goes beyond repeating result: interpretation, implication, response to objective. The text indeed has interpretation: \"la institución mantenga niveles aceptables de burnout, el desempeño laboral será satisfactorio.\" That seems to be an implication. So D1_conclusiones = 1.\n\nNow D1_orden_logico. We must check if the present components appear in logical order. Sequence: objective first. Then methodology (type, design, sample). Then results. Then conclusion. So yes, it appears in order. D1_orden_logico = 1.\n\nD2_coherencia. We need to evaluate flow. The text is somewhat verbose, but let's analyze.\n\nParagraph 1: objective, then type of research, etc. The summary flows: objective → type and rationale → design and description, sample, instruments, then conclusion. Some redundancy: objective appears twice. There is repetition of \"El tipo de investigación fue ...\". But overall, the flow is coherent: objective, methodology, results, conclusion. However, the \"El propósito de las investigaciones de enfoques cuantitativos y correlacional es evaluar la relación que existe entre dos variables\" repeats the same idea. There's also repetition of objective phrase again later: \"El objeto fue establecer relaciones conjuntas entre las variables\". That might cause slight redundancy but still coherent. The final sentence is conclusion.\n\nWe need to rate 1-5. Let's think: 5 = seamless progression. 4 = flows well with some minor roughness. 3 = can understand but some jumps. 2 = need to re-read. 1 = incoherent.\n\nGiven the text: \"La presente investigación tuvo como objetivo determinar la relación que existe entre el síndrome de burnout con el desempeño laboral en los trabajadores de la clínica Good Hope, año 2022. El tipo de investigación fue de enfoque cuantitativo, descriptivo, correlacional, porque las variables fueron susceptibles de cuantificación; además, se buscaron los resultados mediante las mediciones estadísticas.\" This seems fine. Then: \"El propósito de las investigaciones de enfoques cuantitativos y correlacional es evaluar la relación que existe entre dos variables, además, el análisis descriptivo se realizó para conocer el comportamiento de los datos, respecto al síndrome burnout y desempeño laboral.\" This repeats but adds that the purpose is evaluation. Then: \"El diseño de la investigación fue no experimental, correlacional, ...\". Then: \"El objeto fue establecer relaciones conjuntas entre las variables que caracterizan el fenómeno de estudio, y de corte transversal con relación al tiempo, ya que se recolectó información ...\". This repeats but adds \"corte transversal\". Then: \"la muestra con la que se trabajó fue de 300 trabajadores ...\". Then: \"se tuvo instrumentos de recolección tanto para el síndrome de burnout como para desempeño laboral, bajo un muestreo a conveniencia del autor.\" Then: \"Se concluyó que existe correlación ...\". So overall, yes, coherent, but some repetitive content. I'd assign 4. Because no big jumps, but some redundancy may break flow a bit. 4 seems appropriate.\n\nThus D2_coherencia = 4.\n\nNow D3_contextualizacion. The definition: \"¿El resumen sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco se contrasta.\" Does the summary situate the problem? Let's see: It mentions \"trabajadores de la clínica Good Hope\" but does not explain why it's important or why burnout matters. It doesn't provide context like \"Burnout es un problema de salud mental que afecta la productividad.\" It just states objective. So D3_contextualizacion = 0.\n\nD3_metodo_detallado. Must have at least two precisions: design, type, n, technique, instrument, test. The summary gives: design: \"no experimental, correlacional\"; sample: \"300 trabajadores\" -> n=300; instrument: \"instrumentos de recolección tanto para el síndrome de burnout como para desempeño laboral\" but not naming them, but that's fine; sampling: \"muestreo a conveniencia\" -> that's a precision. So we have at least two: sample size, design, sampling. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos. Must present specific content: figures, magnitudes, categories, direction. The summary says \"Rho = 0.461\". This is a concrete numeric result. So D3_resultados_concretos = 1.\n\nD3_conclusion_responde. We need to check if conclusion responds to the objective. The objective: determine relationship between burnout and performance. Conclusion: \"Se concluyó que existe correlación entre la variable síndrome de burnout y el desempeño laboral, ... la cual se muestra con una asociación aceptable, directa y significativa (Rho=0.461) ... la que indica que mientras la institución mantenga niveles aceptables de burnout, el desempeño laboral será satisfactorio.\" This addresses objective and gives interpretation. So yes. D3_conclusion_responde = 1.\n\nD4_consistencia. This measures coherence between what is claimed and what is presented. We need to check for contradictions or unrealistic conclusions.\n\nThe summary says: design: no experimental, correlational. Then results: correlation coefficient Rho = 0.461. Conclusion: \"la institución mantenga niveles aceptables de burnout, el desempeño laboral será satisfactorio.\" This is an implication. The data is correlational, not causal; but conclusion suggests a potential causal relationship: \"mientras la institución mantenga niveles aceptables de burnout, el desempeño laboral será satisfactorio\". This may be an overreach: a correlational design cannot guarantee that maintaining low burnout leads to better performance (though plausible). The protocol states: \"Declarar estudio cualitativo y reportar p-valores\" is not relevant. The case: \"Declarar enfoque mixto y presentar solo resultados cuantitativos\" no. \"Declarar diseño correlacional y concluir en términos causales\" is a discordancia: \"Declarar diseño correlacional y concluir en términos causales\" would be considered a 3. The conclusion says \"si la institución mantenga niveles aceptables de burnout, el desempeño laboral será satisfactorio\" which is a causal implication. So that is a moderate discordance. According to D4 scoring: 5 = fully coherent, 4 = coherent with minor imprecision, 3 = a discordance visible that does not invalidate the whole, 2 = multiple discordances, 1 = contradictory open that invalidates conclusion.\n\nThus we assign D4_consistencia = 3. Because the conclusion implies causality beyond the correlational design; but not outright contradictory? It might be considered a moderate discordance. According to the protocol, \"Declarar diseño correlacional y concluir en términos causales\" is 3. So D4_consistencia = 3.\n\nNow no_evaluable. The summary is a normal summary; not non-sum. So no_evaluable = 0.\n\nObservaciones: We should note any case-limit decisions or ambiguous aspects. We might note the repeated objective or the conclusion's causal implication. Provide a brief comment: \"Repetition of objective and some redundancy; conclusion implies causality from correlational design\".\n\nWe have to produce a JSON object with all fields. Use compact JSON: no line breaks? The instruction says \"Use compact JSON formatting\". So we should produce one line JSON object with no spaces maybe. But we can format minimal. But we must ensure it's valid JSON. The schema expects certain fields. We need to include all required fields. We can include empty string for observaciones? But we need to provide something; we can include a note. Provide \"observaciones\":\"Repetición de objetivo y conclusión causal implícita.\" That is fine.\n\nLet's construct JSON:\n\n{\n\"D1_imryd_objetivo\":1,\n\"D1_imryd_metodologia\":1,\n\"D1_imryd_resultados\":1,\n\"D1_imryd_conclusiones\":1,\n\"D1_orden_logico\":1,\n\"D2_coherencia\":4,\n\"D3_contextualizacion\":0,\n\"D3_metodo_detallado\":1,\n\"D3_resultados_concretos\":1,\n\"D3_conclusion_responde\":1,\n\"D4_consistencia\":3,\n\"no_evaluable\":0,\n\"observaciones\":\"Objetivo repetido, conclusión implica causalidad aunque diseño correlacional.\"\n}\n\nMake sure all fields present. That should be valid JSON. Ensure no trailing commas. Let's output."
+    }
+   }
+  ],
+  "created": 1789775754,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_24bfb4a850",
+  "usage": {
+   "completion_tokens": 2786,
+   "prompt_tokens": 9987,
+   "total_tokens": 12773,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2647,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.1922465,
+   "prompt_time": 0.564459748,
+   "completion_time": 2.863353431,
+   "total_time": 3.427813179
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vf59fwe0gtp0k6jzbhk40q",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:55:54.704785+00:00"
+}

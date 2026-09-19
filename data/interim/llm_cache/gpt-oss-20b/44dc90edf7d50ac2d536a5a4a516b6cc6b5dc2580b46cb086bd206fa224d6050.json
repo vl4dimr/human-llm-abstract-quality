@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-093",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "El apartado Discusión incluye resultados estadísticos, pero la progresión sigue la lógica IMRyD."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El apartado Discusión incluye resultados estadísticos, pero la progresión sigue la lógica IMRyD.\"}",
+ "usage": {
+  "input_tokens": 9975,
+  "output_tokens": 1007,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 1.9208974838256836,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:26:58.088154+00:00",
+ "raw": {
+  "id": "chatcmpl-2b3b573c-2bba-49ed-85e2-6c3167a0c930",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El apartado Discusión incluye resultados estadísticos, pero la progresión sigue la lógica IMRyD.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. We need to fill all required fields. Let's interpret each dimension.\n\nD1_imryd_objetivo: Objective present? Yes: \"Objetivo: determinar la relación entre factores sociodemográficos, nivel de conocimiento y cumplimiento sobre inmunizaciones en madres de menores de cinco años.\" So 1.\n\nD1_imryd_metodologia: Yes: \"Metodos: tipo de investigación de enfoque cuantitativo, de diseño no experimental, de corte transversal, y tipo correlacional. El muestreo fue no probabilístico por conveniencia. La muestra estuvo conformada por 500 madres...\" So 1.\n\nD1_imryd_resultados: Yes: \"Resultado: la identificación de una relación significativa y positiva (X2 = 0.830, p = 0.040) entre el nivel de conocimiento y el cumplimiento del esquema de vacunación.\" That's a result, yes. 1.\n\nD1_imryd_conclusiones: The summary has a \"Conclusión:\" paragraph. It's \"cuanto mayor nivel de conocimientos... mayor sería el cumplimiento\". This is a conclusion: yes. 1.\n\nD1_orden_logico: Check order: The order is: Objective, Methods, Result, Discussion, Conclusion. That is the standard IMRyD order. So 1.\n\nD2_coherencia: Evaluate flow. Let's read: \"La vacunación ... prioridad. Sin embargo, el bajo conocimiento ... índice mortalidad y morbilidad en la población infantil haya aumentado. Objetivo: ... Metodos: ... Resultado: ... Discusión: ... Y solo el lugar de procedencia... Conclusión: ...\"\n\nFlow seems okay. Some repetition: \"discusión\" and \"Conclusión\" are close. There's a minor redundancy: \"Discusión\" includes percentages, and conclusion restates that higher knowledge leads to higher compliance. That's okay. There's no abrupt jump. I'd rate 5. But let's examine: There's a slight inconsistency: They say \"Discusión\" but present results in it, which is actually results. But not too bad. I'd assign 4? But we need to decide.\n\nThe guidelines: D2 1-5. 5 is flawless progression. 4: flows well but minor aspereza. 3: Understandable but some jumps. 2: Hard to reconstruct. 1: incoherent. Here it's pretty coherent, just a bit of overlap between discussion and conclusion. I'd put 5.\n\nBut maybe they consider the discussion content as result, but still fine. I'll choose 5.\n\nD3_contextualizacion: Is problem situated? It says: \"La vacunación ... prioridad a nivel mundial\" gives background. So yes, 1.\n\nD3_metodo_detallado: At least two precisions: design, sampling, n=500. That's at least 3 precisions: type of research, design, sample size, non-probabilistic convenience. So 1.\n\nD3_resultados_concretos: They report chi-square statistic X2 = 0.830, p=0.040; they also give percentages for knowledge and compliance. That's concrete results. So 1.\n\nD3_conclusion_responde: Does conclusion answer the objective? Yes: It states that higher knowledge leads to higher compliance, which is the relationship they sought. So 1.\n\nD4_consistencia: Coherencia entre metodología y resultados. They declare correlational study, sample 500, chi-square p=0.040, no mention of test used but they give chi-square. They interpret that higher knowledge leads to higher compliance. This is consistent: correlation; they don't claim causality. They say \"cuanto mayor nivel de conocimientos... mayor sería el cumplimiento\". That's an implication but not causal inference beyond correlation. So D4 = 5.\n\nno_evaluable: 0 because it is a summary.\n\nobservaciones: We can add any remarks. Might mention that \"Discusión\" section contains results but it's okay. So add a short note: \"Discussion includes result statistics which is acceptable\".\n\nThus produce JSON.\n\nCheck field order: must include all required fields. Provide all integers or null. We set values.\n\nLet's output.\n\n"
+    }
+   }
+  ],
+  "created": 1789702017,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_24bfb4a850",
+  "usage": {
+   "completion_tokens": 1007,
+   "prompt_tokens": 9975,
+   "total_tokens": 10982,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 862,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.19136053,
+   "prompt_time": 0.055379405,
+   "completion_time": 1.045658965,
+   "total_time": 1.10103837
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8v3kfe57ade0atvjt4zn5",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:26:58.088175+00:00"
+}

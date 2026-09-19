@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-138",
+ "model_name": "mistral-7b",
+ "provider": "ollama",
+ "model": "mistral:latest",
+ "model_reported": "mistral:latest",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen no contiene explícitamente el objetivo, los resultados ni las conclusiones. También no hay metodología detallada. La coherencia es moderada. La consistencia es alta con algunas contradicciones."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen no contiene explícitamente el objetivo, los resultados ni las conclusiones. También no hay metodología detallada. La coherencia es moderada. La consistencia es alta con algunas contradicciones.\"\n}",
+ "usage": {
+  "input_tokens": 12724,
+  "output_tokens": 243,
+  "total_duration_s": 7.0161717
+ },
+ "latency_s": 7.048020124435425,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:05:47.336865+00:00",
+ "raw": {
+  "model": "mistral:latest",
+  "created_at": "2026-09-19T01:05:47.3279968Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen no contiene explícitamente el objetivo, los resultados ni las conclusiones. También no hay metodología detallada. La coherencia es moderada. La consistencia es alta con algunas contradicciones.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7016171700,
+  "load_duration": 4868500,
+  "prompt_eval_count": 12724,
+  "prompt_eval_cached_count": 12155,
+  "prompt_eval_duration": 412208000,
+  "eval_count": 243,
+  "eval_duration": 6503354000
+ },
+ "cached_at_utc": "2026-09-19T01:05:47.336882+00:00"
+}

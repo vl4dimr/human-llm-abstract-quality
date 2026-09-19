@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-114",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen afirma significancia pero no incluye el valor estadístico ni la estadística de chi-cuadrado. Se usa 'p<0:05' en vez de 'p<0.05'."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen afirma significancia pero no incluye el valor estadístico ni la estadística de chi-cuadrado. Se usa 'p<0:05' en vez de 'p<0.05'.\"}",
+ "usage": {
+  "input_tokens": 10096,
+  "output_tokens": 2303,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 3.3152332305908203,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:59:01.787262+00:00",
+ "raw": {
+  "id": "chatcmpl-aee19269-481a-43c0-a382-3fca707d864b",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen afirma significancia pero no incluye el valor estadístico ni la estadística de chi-cuadrado. Se usa 'p<0:05' en vez de 'p<0.05'.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields per schema. Must follow required fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nWe have to annotate the summary according to the protocol.\n\nLet's read summary.\n\nTitle: \"Influence of socio-familial factors on the degree of sexual information in students of ...\"\n\nSummary:\n\n\"El presente trabajo de investigación titulado \"Influencia de factores socio-familiares en el grado de información sexual en estudiantes de la lES N° 45 \"Emilio Romero Padilla, Puno 2013\", se realizó con el objetivo de establecer la influencia de los factores socio; familiares en el grado de información sexual. El estudio fue de tipo explicativo con diseño transversal. La poblacíón estüvo constituida por 1200 estudiantes y la muestra por 291 que cursan el 3ro, 4to y 5to de educación secundaria. Para la recolección de datos se aplicó la técnica de la encuesta y como instrumento un cuestionario. El análisis de los datos se realizó en forma porcentual y la contrastación de hipótesis con la prueba estadística Chi Cuadrado. Los resultados fueron: En el 61% de los estudiantes predomina grado de lnformación sexual regular. El 27% dé estudiantes con informacion regular tienen padres en edades de 41 a 50 años de edad, 35% madres en edades de 30 a 40 años, 38% padres casados, 36% y 34% padres con educación secundaria; 33% vive dentro de una familia nuclear; 30% tienen padres que mantienen relaciones regulares, 33% se comunican con sus padres dialogando, del 44% sus padres -son estables a la hora de hacer cumplir las reglas del hogar, del 30% sus padres son permisivos, el 37% tienen confianza con sus padres, ef 48% señalaron que sus padres algunas veces tienen problemas, y del 19% sus padres conversan con ellos en temas de enamoramiento. Por tanto se concluye que: En el factor social grado de instrucción de los padres y factores familiares, la estructura familiar, relación entre los padres, la forma de comunicación entre le padres y el hijo, cumplimiento de reglas en el hogar, confianza entre padres e hijos y frecuencia de problemas en los padres influyen significativamente (p<0:05) en -el grado de informacion sexual de los estudiantes.\"\n\nWe need to annotate.\n\nLet's evaluate each dimension.\n\n**D1_imryd_objetivo**: The summary explicitly states \"el objetivo de establecer la influencia de los factores socio-familiares en el grado de información sexual.\" That's an explicit objective. So D1_imryd_objetivo = 1.\n\n**D1_imryd_metodologia**: Summary states \"El estudio fue de tipo explicativo con diseño transversal. La población constituida por 1200 estudiantes y la muestra por 291. Para la recolección de datos se aplicó la técnica de la encuesta y como instrumento un cuestionario. El análisis de los datos se realizó en forma porcentual y la contrastación de hipótesis con la prueba estadística Chi Cuadrado.\" That gives at least two precisions: design, sample size, instrument, statistical test. So D1_imryd_metodologia = 1.\n\n**D1_imryd_resultados**: Summary states \"Los resultados fueron: En el 61% de los estudiantes predomina grado de información sexual regular. El 27% de estudiantes con información regular... etc.\" They provide percentages. That is a result: the percentages of student groups. So D1_imryd_resultados = 1.\n\n**D1_imryd_conclusiones**: Summary ends with \"Por tanto se concluye que: ... influyen significativamente (p<0:05) en el grado de información sexual de los estudiantes.\" That is a conclusion: it interprets results, gives implications, answer objective. So D1_imryd_conclusiones = 1.\n\n**D1_orden_logico**: The components present are objective (first sentence), methodology (next sentences), results (list of percentages), conclusion (last sentence). They are in correct sequence. So D1_orden_logico = 1.\n\n**D2_coherencia**: Let's evaluate flow. The summary begins with the title, objective, design, sample, data collection, analysis, results, conclusion. The flow is somewhat okay but there are some abrupt transitions: they present a lot of percentages about parents and families in the results part, which is more detailed and maybe not fully integrated. But overall still a coherent narrative, though maybe some jumps. The guidelines: 5: flawless; 4: flows well with minor awkwardness; 3: understood but some difficulty; 2: need to reread; 1: incoherent.\n\nGiven that the summary seems coherent but a bit verbose and perhaps jumps from general results to detailed percentages about parents. I'd rate 4.\n\n**D3_contextualizacion**: This asks: does the summary sit the problem: why important, where occurs, to whom it affects. The summary does not provide context beyond describing the population; it just says \"el presente trabajo...\" but doesn't explain why it's important. So D3_contextualizacion = 0.\n\n**D3_metodo_detallado**: At least two precisions: design (exploratory cross-sectional), sample size (1200 population, 291 sample), instrument (questionnaire), statistical test (Chi-square). So D3_metodo_detallado = 1.\n\n**D3_resultados_concretos**: The results include percentages. That's concrete. So D3_resultados_concretos = 1.\n\n**D3_conclusion_responde**: The conclusion addresses the objective: \"influyen significativamente en el grado de información sexual\". So yes. So D3_conclusion_responde = 1.\n\n**D4_consistencia**: Evaluate consistency between what is said to have been done and results. They say design transversal, sample, questionnaire, chi-square. Results are percentages. Conclusion claims significant influence (p<0.05). The statistical test used is chi-square. The results reported percentages but no chi-square statistic or p-values. Conclusion mentions significance, but no p-value provided in summary. That is a potential inconsistency: they claim significance but didn't report p. This may be considered a slight mismatch. But the summary says \"influyen significativamente (p<0:05)\". Actually they do provide \"p<0:05\" but in Spanish uses colon? It says (p<0:05) presumably meaning p < 0.05. That is a p-value, though they didn't provide actual p but claim significance. It's acceptable maybe? However, the result reported percentages but no chi-square statistic. The conclusion says significance. This might be considered an inconsistency: they claim significance but don't provide any statistical evidence. In D4, such a contradiction would be penalized. The guidelines: \"Declarar diferencias tras reportar p > 0,05\" would be 1, but here they didn't report p > 0.05; they reported significance. They didn't provide p-value or chi-square statistic. That might still be considered lacking. They didn't show that the results support significance; they just present descriptive percentages. The conclusion that there is significance might be questionable. According to D4, we penalize if conclusion more broad than data. Here they claim significance but did not provide any p-value or chi-square result. I'd rate D4_consistencia = 3 maybe? Let's examine guidelines: \"Declarar diferencias tras reportar p > 0,05\" is 1. \"Declarar diferencias y p>0.05\"? Not here. \"Afirmar diferencias tras reportar p > 0,05\"? Not relevant.\n\nWe need to consider \"encontrado\" significance but no evidence. Might be considered a minor inconsistency, but not a severe one. But guidelines: \"El resumen debe reportar la significancia para afirmar\". They did report (p<0:05). That's evidence. They didn't provide numeric value but they did provide significance statement. So maybe no inconsistency. The summary says \"influyen significativamente (p<0:05)\" which indicates significance. That is fine. So D4_consistencia maybe 5? But there is no p-value but just significance. But is that a mismatch? It says significance but no result? The results were percentages but no chi-square test result or p-value. But they did include significance statement. That might be enough to say consistency is fine. There's no contradiction. I'd give 5.\n\nCheck the rule: If summary does not declare methodology, D4 no_evaluable. But they did declare. So D4 can be scored. There is no contradiction. So D4_consistencia = 5.\n\n**no_evaluable**: It's a valid summary, so 0.\n\n**observaciones**: Provide any notes or issues. We can mention that the summary uses a colon incorrectly or missing p-value numeric. But we can just note \"Minor inconsistency: significance claimed but no chi-square value.\" We can note that.\n\nThus JSON:\n\n{\n\"D1_imryd_objetivo\":1,\n\"D1_imryd_metodologia\":1,\n\"D1_imryd_resultados\":1,\n\"D1_imryd_conclusiones\":1,\n\"D1_orden_logico\":1,\n\"D2_coherencia\":4,\n\"D3_contextualizacion\":0,\n\"D3_metodo_detallado\":1,\n\"D3_resultados_concretos\":1,\n\"D3_conclusion_responde\":1,\n\"D4_consistencia\":5,\n\"no_evaluable\":0,\n\"observaciones\":\"Summary claims significance but no chi-square statistic provided. Also uses 'p<0:05' instead of 'p<0.05'.\"\n}\n\nCheck required fields: all present. Types: integers or null; we used integer values. Observations string.\n\nReturn compact JSON."
+    }
+   }
+  ],
+  "created": 1789775941,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_d3e146e1a5",
+  "usage": {
+   "completion_tokens": 2303,
+   "prompt_tokens": 10096,
+   "total_tokens": 12399,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2137,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.246865991,
+   "prompt_time": 0.069159985,
+   "completion_time": 2.382295708,
+   "total_time": 2.4514556929999998
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vfb136epav8ahy665bsqkz",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:59:01.787287+00:00"
+}

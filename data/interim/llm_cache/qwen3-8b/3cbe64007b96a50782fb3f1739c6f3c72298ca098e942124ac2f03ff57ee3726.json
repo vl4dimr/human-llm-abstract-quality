@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-133",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD correctamente. En la D2_coherencia se deduce una puntuación de 4 debido a que hay una pequeña aspereza en el flujo, aunque el texto generalmente fluye bien. En la D3_contextualizacion se puntuó 0 porque el resumen comienza directamente con el objetivo sin situar el problema. En la D4_consistencia se puntuó 3 porque la conclusión afirma una prevalencia alta sin mencionar si esta se relaciona directamente con los factores de riesgo, lo cual podría considerarse una discordancia."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. En la D2_coherencia se deduce una puntuación de 4 debido a que hay una pequeña aspereza en el flujo, aunque el texto generalmente fluye bien. En la D3_contextualizacion se puntuó 0 porque el resumen comienza directamente con el objetivo sin situar el problema. En la D4_consistencia se puntuó 3 porque la conclusión afirma una prevalencia alta sin mencionar si esta se relaciona directamente con los factores de riesgo, lo cual podría considerarse una discordancia.\"\n}",
+ "usage": {
+  "input_tokens": 10925,
+  "output_tokens": 289,
+  "total_duration_s": 8.9938883
+ },
+ "latency_s": 9.003266334533691,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:37:22.328194+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:37:22.3186979Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. En la D2_coherencia se deduce una puntuación de 4 debido a que hay una pequeña aspereza en el flujo, aunque el texto generalmente fluye bien. En la D3_contextualizacion se puntuó 0 porque el resumen comienza directamente con el objetivo sin situar el problema. En la D4_consistencia se puntuó 3 porque la conclusión afirma una prevalencia alta sin mencionar si esta se relaciona directamente con los factores de riesgo, lo cual podría considerarse una discordancia.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8993888300,
+  "load_duration": 3324800,
+  "prompt_eval_count": 10925,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 341568000,
+  "eval_count": 289,
+  "eval_duration": 8586111000
+ },
+ "cached_at_utc": "2026-09-19T02:37:22.328209+00:00"
+}

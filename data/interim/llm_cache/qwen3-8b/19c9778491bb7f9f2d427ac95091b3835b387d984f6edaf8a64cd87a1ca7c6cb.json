@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-121",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 2,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD. La coherencia es 3 debido a que el texto presenta saltos de tema y repeticiones. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la influencia de los valores morales de los docentes. La consistencia metodológica es 2 porque la conclusión afirma que no existe relación significativa, pero el análisis estadístico no se describe con suficiente detalle."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 2,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD. La coherencia es 3 debido a que el texto presenta saltos de tema y repeticiones. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la influencia de los valores morales de los docentes. La consistencia metodológica es 2 porque la conclusión afirma que no existe relación significativa, pero el análisis estadístico no se describe con suficiente detalle.\"\n}",
+ "usage": {
+  "input_tokens": 11031,
+  "output_tokens": 262,
+  "total_duration_s": 13.3364277
+ },
+ "latency_s": 13.34972095489502,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:07:18.965736+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:07:18.9562453Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 2,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD. La coherencia es 3 debido a que el texto presenta saltos de tema y repeticiones. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la influencia de los valores morales de los docentes. La consistencia metodológica es 2 porque la conclusión afirma que no existe relación significativa, pero el análisis estadístico no se describe con suficiente detalle.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 13336427700,
+  "load_duration": 10444600,
+  "prompt_eval_count": 11031,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 606909000,
+  "eval_count": 262,
+  "eval_duration": 12609087000
+ },
+ "cached_at_utc": "2026-09-19T02:07:18.965784+00:00"
+}

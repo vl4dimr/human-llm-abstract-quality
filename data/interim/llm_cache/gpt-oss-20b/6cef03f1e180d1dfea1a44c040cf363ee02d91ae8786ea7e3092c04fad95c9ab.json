@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-121",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "No se reportan valores numéricos de chi-cuadrado ni p-value, por lo que D3_resultados_concretos = 0. Coherencia evaluada como 4."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No se reportan valores numéricos de chi-cuadrado ni p-value, por lo que D3_resultados_concretos = 0. Coherencia evaluada como 4.\"}",
+ "usage": {
+  "input_tokens": 10115,
+  "output_tokens": 1513,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.687899112701416,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:09:47.855590+00:00",
+ "raw": {
+  "id": "chatcmpl-d8c64dbb-1464-4e2d-b694-5a2225ca4433",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No se reportan valores numéricos de chi-cuadrado ni p-value, por lo que D3_resultados_concretos = 0. Coherencia evaluada como 4.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Influencia de la práctica de los valores morales de los docentes en las actitudes de los estudiantes de las instituciones educativas secundarias del distrito de Platería - Puno en el año 2009\"\n\nSummary: (long Spanish text). Let's analyze.\n\nWe need to fill:\n\n- D1_imryd_objetivo: 1 if objective present. The summary: \"La investigación se ha formulado para evidenciar la influencia de la práctica de los valores morales de los docentes en las actitudes de los estudiantes de las Instituciones Educativas Secundarias del distrito de Platería.\" That is explicit objective. So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. The summary: \"Para contrastar la hipótesis planteada ... se ha utilizado la técnica de observación indirecta con instrumentos confiables como son las encuestas y el test de actitudes, cada uno de ellos con indicadores precisos y preestablecidos para su cabal aplicación.\" That is a method description. So 1.\n\n- D1_imryd_resultados: 1 if results present. The summary: \"La conclusión general a la que se arribó ... es que según la prueba estadística chi cuadrado, se asume que no existe relación entre la práctica de valores morales de los docentes y las actitudes de los estudiantes ... porque el resultado no es significativo.\" That is a result: no significant relationship. So 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. The summary: \"Por lo tanto se concluye en que la práctica de valores de los docentes no influye directamente en las actitudes de los estudiantes.\" That is a conclusion. So 1.\n\n- D1_orden_logico: 1 if components present in logical order. The summary: objective first, then methodology, then results, then conclusion. Yes. So 1.\n\n- D2_coherencia: 1-5 scale. We need to evaluate coherence. Let's read the summary: It starts with objective, then background, then methodology, then results, then conclusion. The flow seems coherent. There is some repetition: \"se ha elaborado un sustento teórico coherente que afirma que el proceso educativo...\" etc. The text is somewhat long but coherent. I'd rate 4 maybe. Let's analyze: The summary flows: objective, background, theoretical basis, methodology, results, conclusion. There are no abrupt jumps. Some adjectives: \"coherente\", \"confiables\", \"precisos\". No major contradictions. So I'd give 4. 5 would be perfect flow with no repetition. 4 is good. So D2_coherencia = 4.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where it occurs, to whom it affects, etc. The summary: \"Se realizó la investigación porque existe la necesidad de tratar de dar solución al problema, mejorar las actitudes y formas de comportamiento de los estudiantes por ser el futuro de nuestro País. Además, es necesario crear conciencia en los docentes...\" This situates the problem: improving attitudes, future of the country. It also mentions the district of Platería. So yes, contextualization present. So 1.\n\n- D3_metodo_detallado: 1 if at least two precisions about procedure. The summary: \"se ha utilizado la técnica de observación indirecta con instrumentos confiables como son las encuestas y el test de actitudes, cada uno de ellos con indicadores precisos y preestablecidos para su cabal aplicación.\" That gives method: technique of indirect observation, instruments: surveys and attitude test. That's at least two precisions. So 1.\n\n- D3_resultados_concretos: 1 if results provide specific content: numbers, magnitudes, categories, relationships. The summary: \"según la prueba estadística chi cuadrado, se asume que no existe relación ... porque el resultado no es significativo.\" It doesn't give chi-square value, degrees of freedom, p-value. So no concrete numbers. So 0.\n\n- D3_conclusion_responde: 1 if conclusion responds to objective. The objective: influence of teacher values on student attitudes. Conclusion: \"la práctica de valores de los docentes no influye directamente en las actitudes de los estudiantes.\" That directly addresses the objective. So 1.\n\n- D4_consistencia: 1-5 scale. We need to evaluate consistency between what is said and what is presented. The summary says: \"se ha utilizado la técnica de observación indirecta con instrumentos confiables como son las encuestas y el test de actitudes.\" Then results: no significant relationship. Conclusion: no influence. That is consistent. No contradictions. So I'd give 5. But check if any contradictory statements: The summary says \"se asume que no existe relación ... porque el resultado no es significativo.\" That is consistent. So D4_consistencia = 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes. We can add a note: \"No se reportan valores numéricos de chi-cuadrado ni p-value, por lo que D3_resultados_concretos = 0.\" Also note that D2_coherencia = 4. Provide a brief observation.\n\nNow produce JSON with all fields. Ensure all required fields present. Use compact JSON. Let's produce.\n\nCheck schema: all fields must be present. Provide integer or null. We'll provide integers.\n\nLet's produce:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":0,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"No se reportan valores numéricos de chi-cuadrado ni p-value, por lo que D3_resultados_concretos = 0. Coherencia evaluada como 4.\"\n}\n\nCheck that all fields are present. Yes. Ensure JSON is compact. Provide only JSON."
+    }
+   }
+  ],
+  "created": 1789700987,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_851252edc2",
+  "usage": {
+   "completion_tokens": 1513,
+   "prompt_tokens": 10115,
+   "total_tokens": 11628,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1348,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.217948647,
+   "prompt_time": 0.086705222,
+   "completion_time": 1.581646484,
+   "total_time": 1.6683517060000002
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7vmxmergtrm456eb6bdk5",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:09:47.855679+00:00"
+}

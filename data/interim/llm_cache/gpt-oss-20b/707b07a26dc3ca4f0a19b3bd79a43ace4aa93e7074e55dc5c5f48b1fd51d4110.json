@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-126",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "Cumple IMRyD; carece de contextualización del problema; resultados concretos y conclusión responde al objetivo. Consistencia adecuada, pero falta p‑valor explícito."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":4,\"no_evaluable\":0,\"observaciones\":\"Cumple IMRyD; carece de contextualización del problema; resultados concretos y conclusión responde al objetivo. Consistencia adecuada, pero falta p‑valor explícito.\"}",
+ "usage": {
+  "input_tokens": 10092,
+  "output_tokens": 1207
+ },
+ "latency_s": 2.560706615447998,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:41:52.859444+00:00",
+ "raw": {
+  "id": "chatcmpl-402a87b4-035d-4d59-83e8-2a7b5380d161",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":4,\"no_evaluable\":0,\"observaciones\":\"Cumple IMRyD; carece de contextualización del problema; resultados concretos y conclusión responde al objetivo. Consistencia adecuada, pero falta p‑valor explícito.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. We need to produce JSON with required fields. Must use compact JSON (no pretty printing). Must parse. Provide all fields.\n\nWe must decide values for each field.\n\nLet's analyze the summary.\n\nTitle: Efecto de la intervención de enfermería en el conocimiento de los factores de riesgo del embarazo en la adolescencia en estudiantes de la Institución Educativa Secundaria Independencia Nacional – Puno 2017\n\nResumen content: Spanish. Let's break.\n\nWe need:\n\nD1_imryd_objetivo: 1 if objective present. The summary states \"La presente investigación se realizó con el objetivo de determinar el efecto de la Intervención de enfermería...\" So objective present. Value 1.\n\nD1_imryd_metodologia: 1 if method present. Summaries: \"El estudio es de tipo Pre-experimental, con diseño de Pre y Post Test con un grupo; la muestra estuvo conformada por 20 estudiantes... se utilizó la técnica de la encuesta; la comprobación de la hipótesis se realizó con la prueba estadística T Student.\" So method present. Value 1.\n\nD1_imryd_resultados: 1 if results present. They present results: knowledge percentages. So 1.\n\nD1_imryd_conclusiones: 1 if conclusion present beyond result. They conclude: \"Comprobándose estadísticamente el promedio del grupo Post Test es mayor al promedio del grupo Pre Test; aceptándose la H1, por lo que la intervención educativa de enfermería es efectiva en el conocimiento de los factores de riesgo del embarazo en la adolescencia.\" That is conclusion. So 1.\n\nD1_orden_logico: 1 if components present appear in order objective -> method -> results -> conclusion. They appear in that order: objective first, method after, results next, conclusion at end. Yes. So 1.\n\nD2_coherencia: 1-5. We need evaluate flow. The summary is somewhat repetitive, but flows. Let's rate. Let's consider:\n\n- Starts objective, then method details, then results with multiple variables (biological, psychological, socioeconomic), then conclusion. Flow is logical but somewhat repetitive, but still coherent. I'd rate 4: flows well with slight redundancy. So D2_coherencia=4.\n\nD3_contextualizacion: 1 if problem context present: where, why important. The summary does not mention why the knowledge matters, or broader context, only states \"en la Institución Educativa Secundaria Independencia Nacional - Puno 2017\". It doesn't explain significance. So 0.\n\nD3_metodo_detallado: 1 if at least two methodological precisions. They provide design (Pre-experimental, Pre/Post Test with one group), sample size (20), sampling method (probabilistic, random stratified with proportional assignment), data collection technique (survey), statistical test (t Student). That's more than two, so 1.\n\nD3_resultados_concretos: 1 if results with specific content. Yes, percentages. So 1.\n\nD3_conclusion_responde: 1 if conclusion responds to the objective. They conclude the intervention is effective. Yes. So 1.\n\nD4_consistencia: 1-5. Must evaluate consistency between methodology and results. They used t Student test, and they report significant differences (post vs pre). But they did not report actual test statistic or p-value. They say \"Comprobándose estadísticamente el promedio del grupo Post Test es mayor al promedio del grupo Pre Test; aceptándose la H1\". They didn't show p-value but they did mention significance. The lack of p-value may be minor, but does it break consistency? They claim significance but no p-value. That may be considered a small consistency issue. Also they mention \"t Student\" but don't report actual test statistic. That might be considered a slight inconsistency but not severe. So I'd give D4=4. According to guidelines: 5 perfect, 4 coherent with minor terminological issue. So D4=4.\n\nno_evaluable: 0 because it's a valid summary, contains methodology.\n\nobservaciones: any notes. Might mention that lack of explicit context (0). Also the lack of p-value. Also the repetition. Let's craft observations: \"Resumen cumple estructura IMRyD; falta contextualización; resultados concretos presentados; consistencia aceptable con ligera falta de p‑valor.\" Provide as string.\n\nAll fields must be present. The schema allows null; but we provide integer values. Provide \"observaciones\" string.\n\nLet's produce JSON.\n\nCheck fields order not required but all must be included: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nLet's craft final JSON."
+    }
+   }
+  ],
+  "created": 1789774912,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c9afb2bdb4",
+  "usage": {
+   "completion_tokens": 1207,
+   "prompt_tokens": 10092,
+   "total_tokens": 11299,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1048,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.192476861,
+   "prompt_time": 0.524059286,
+   "completion_time": 1.219308672,
+   "total_time": 1.7433679579999999
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vebn17emprpbn3akagj9qs",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:41:52.859474+00:00"
+}

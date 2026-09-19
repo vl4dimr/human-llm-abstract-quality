@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-157",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Objetivo y metodología claros; resultados sin cifras; conclusión ausente; falta de contextualización; coherencia buena (4)."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Objetivo y metodología claros; resultados sin cifras; conclusión ausente; falta de contextualización; coherencia buena (4).\"}",
+ "usage": {
+  "input_tokens": 9833,
+  "output_tokens": 2266
+ },
+ "latency_s": 3.5316097736358643,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:14:25.932315+00:00",
+ "raw": {
+  "id": "chatcmpl-5e366550-9c04-4c79-8d49-975bd5bf8748",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Objetivo y metodología claros; resultados sin cifras; conclusión ausente; falta de contextualización; coherencia buena (4).\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Incidencia de las normas de control interno en el área de tesorería de la municipalidad distrital de Pilcuyo provincia de El Collao Región Puno periodo 2016 - 2017\"\n\nResumen: \n\"El presente trabajo de investigación tiene como objetivo determinar  la incidencia de control interno en las actividades que se realizan en el área de Tesorería de la Municipalidad Distrital de Pilcuyo, para poder alcanzar este objetivo se aplicó un cuestionario referente a las normas de control interno para el área de tesorería, que consta de 30 preguntas y se tomó en cuenta las repuestas afirmativa a los encuestados, para luego aplicar una escala de valoración , la muestra es el personal que labora en el área de tesorería, y en donde se identifica como son los procesos de control interno y afirmar que el cumplimiento de normas de tesorería optimiza la gestión administrativa, este trabajo de investigación es de tipo no experimental y el nivel de investigación es Descriptivo – Explicativo; lo que permite establecer las conclusiones.\"\n\nWe need to evaluate each field.\n\nFirst, check if it's a valid summary. It seems to be a summary. So no no_evaluable.\n\nNow evaluate each dimension.\n\n### D1_imryd_objetivo\nWe need to see if the summary can answer \"what was proposed to investigate\". The summary explicitly states: \"El presente trabajo de investigación tiene como objetivo determinar la incidencia de control interno en las actividades que se realizan en el área de Tesorería de la Municipalidad Distrital de Pilcuyo\". So yes, objective present. So D1_imryd_objetivo = 1.\n\n### D1_imryd_metodologia\nWe need to see if there is a concrete indication of how knowledge was obtained. The summary says: \"para poder alcanzar este objetivo se aplicó un cuestionario referente a las normas de control interno para el área de tesorería, que consta de 30 preguntas y se tomó en cuenta las repuestas afirmativa a los encuestados, para luego aplicar una escala de valoración , la muestra es el personal que labora en el área de tesorería\". So yes, methodology: questionnaire, 30 questions, sample: personnel. So D1_imryd_metodologia = 1.\n\n### D1_imryd_resultados\nWe need to see if the summary communicates what was found. The summary says: \"y en donde se identifica como son los procesos de control interno y afirmar que el cumplimiento de normas de tesorería optimiza la gestión administrativa\". This is a statement of findings: \"el cumplimiento de normas de tesorería optimiza la gestión administrativa\". That is a result. So D1_imryd_resultados = 1.\n\n### D1_imryd_conclusiones\nWe need to see if there is a closure that goes beyond repeating the result, interpretation, implication, answer to objective, recommendation. The summary ends with: \"lo que permite establecer las conclusiones.\" That is not a conclusion itself. It says that the study allows establishing conclusions, but doesn't state them. So there is no conclusion. So D1_imryd_conclusiones = 0.\n\n### D1_orden_logico\nWe need to see if the components present appear in logical sequence: objective → method → results → conclusion. The summary: objective first, then method, then results, then conclusion? It ends with \"lo que permite establecer las conclusiones.\" That is a statement about conclusion but not the conclusion itself. So the conclusion component is missing. But the order of present components: objective, method, results. That is correct order. So D1_orden_logico = 1. The rule: if 0 or 1 components present, order = 0. But we have 3 components present (objective, method, results). So order = 1.\n\n### D2_coherencia\nWe need to rate coherence 1-5. Let's read the summary: \"El presente trabajo de investigación tiene como objetivo determinar la incidencia de control interno en las actividades que se realizan en el área de Tesorería de la Municipalidad Distrital de Pilcuyo, para poder alcanzar este objetivo se aplicó un cuestionario referente a las normas de control interno para el área de tesorería, que consta de 30 preguntas y se tomó en cuenta las repuestas afirmativa a los encuestados, para luego aplicar una escala de valoración , la muestra es el personal que labora en el área de tesorería, y en donde se identifica como son los procesos de control interno y afirmar que el cumplimiento de normas de tesorería optimiza la gestión administrativa, este trabajo de investigación es de tipo no experimental y el nivel de investigación es Descriptivo – Explicativo; lo que permite establecer las conclusiones.\"\n\nWe need to evaluate flow. The summary is somewhat long but seems to flow: objective, method, sample, results, type of study, conclusion statement. There is no abrupt jump. There is some repetition: \"para poder alcanzar este objetivo\" then \"para el área de tesorería\" repeated. But overall it's coherent. I'd rate 4 maybe. Let's analyze: The summary is a single paragraph, but it flows logically. There's no major jump. There's some redundancy: \"para el área de tesorería\" repeated. But not too bad. I'd give 4. So D2_coherencia = 4.\n\n### D3_contextualizacion\nWe need to see if the summary situates the problem: why it matters, where it occurs, to whom it affects, against what norm or framework. The summary starts with objective but does not explain why it's important or why it's relevant. It just says \"para poder alcanzar este objetivo se aplicó un cuestionario\". It doesn't mention why controlling internal matters, or the context beyond the location. So D3_contextualizacion = 0.\n\n### D3_metodo_detallado\nWe need at least two precisions: design, type of study, sample size, technique, instrument, etc. The summary says: \"se aplicó un cuestionario referente a las normas de control interno para el área de tesorería, que consta de 30 preguntas y se tomó en cuenta las repuestas afirmativa a los encuestados, para luego aplicar una escala de valoración , la muestra es el personal que labora en el área de tesorería\". So we have: instrument: questionnaire, 30 questions; sample: personnel. That's two precisions. So D3_metodo_detallado = 1.\n\n### D3_resultados_concretos\nWe need concrete results: numbers, categories, relationships. The summary says: \"y afirmar que el cumplimiento de normas de tesorería optimiza la gestión administrativa\". That's a statement but no numbers. So no concrete result. So D3_resultados_concretos = 0.\n\n### D3_conclusion_responde\nWe need to see if the conclusion responds to the objective. There is no conclusion. So D3_conclusion_responde = 0.\n\n### D4_consistencia\nWe need to evaluate consistency between what the summary says it did and what it presents. The summary says: \"tipo no experimental, nivel descriptivo-explicativo\". The results: \"el cumplimiento de normas de tesorería optimiza la gestión administrativa\". That is a conclusion. There's no contradiction. The methodology: questionnaire, sample. The conclusion: that compliance optimizes management. That is plausible. There's no contradictory statements. So D4_consistencia = 5? Let's check: The summary says \"lo que permite establecer las conclusiones.\" That is not a conclusion. But the statement \"el cumplimiento de normas de tesorería optimiza la gestión administrativa\" is a result. There's no contradiction. So consistency is high. I'd give 5.\n\nBut we need to check if there's any inconsistency: The summary says \"tipo no experimental\" and \"nivel descriptivo-explicativo\". The result is a statement of optimization. That is consistent. So D4_consistencia = 5.\n\n### no_evaluable\nThe summary is a valid summary. So no_evaluable = 0.\n\n### observaciones\nWe should include any notes. We might note that the conclusion is missing, and that the summary lacks contextualization. Also note that the summary is a single paragraph, but coherent. We can add: \"Objetivo explícito, metodología detallada, resultados sin cifras, conclusión ausente, falta de contextualización.\" But we need to keep it concise. Let's write: \"Objetivo y metodología claros; resultados sin cifras; conclusión ausente; falta de contextualización; coherencia buena (4).\"\n\nNow produce JSON with all fields.\n\nCheck schema: required fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nAll fields present. Use integer values or null. We have all values.\n\nLet's produce JSON:\n\n{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 5,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"Objetivo y metodología claros; resultados sin cifras; conclusión ausente; falta de contextualización; coherencia buena (4).\"\n}\n\nCheck JSON validity: all keys are strings, values are numbers or string. Good.\n\nReturn only JSON."
+    }
+   }
+  ],
+  "created": 1789701265,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_1074f9ce08",
+  "usage": {
+   "completion_tokens": 2266,
+   "prompt_tokens": 9833,
+   "total_tokens": 12099,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2116,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.215484287,
+   "prompt_time": 0.503847674,
+   "completion_time": 2.5056053069999997,
+   "total_time": 3.009452981
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s84358e358xff8ky31d2ne",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:14:25.932422+00:00"
+}

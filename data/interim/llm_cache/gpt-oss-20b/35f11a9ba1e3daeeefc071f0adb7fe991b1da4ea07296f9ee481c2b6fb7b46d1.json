@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-043",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Contextualización presente pero limitada al problema; metodología adecuadamente detallada; alta consistencia entre metodología y resultados."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Contextualización presente pero limitada al problema; metodología adecuadamente detallada; alta consistencia entre metodología y resultados.\"}",
+ "usage": {
+  "input_tokens": 9996,
+  "output_tokens": 2469,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 3.124336004257202,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:19:44.857191+00:00",
+ "raw": {
+  "id": "chatcmpl-03ce0cfa-9444-4c31-a28c-6b37d4306fa7",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Contextualización presente pero limitada al problema; metodología adecuadamente detallada; alta consistencia entre metodología y resultados.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. Need to fill all required fields.\n\nLet's analyze:\n\nSummary:\n\nTitle: Sistema Integrado Basado en Tecnologías Open Source Hibernate, Spring y Jsf 2.0 Aplicando Patrones Data Access Object y Business Object Para la Gestión de la Información de Coopain Cabana – Puno\n\nResumen: (I will copy the text)\n\n“El presente trabajo de investigación tuvo como objetivo principal mejorar la gestión de la información en la Cooperativa Agroindustrial (COOPAIN) Cabana - Puno. El Sistema Integrado Basado en Tecnologías Open Source aplicando Patrones Data Access Object y Business Object fue desarrollado para la Cooperativa referida, donde la gestión de la información conlleva manejar una considerable cantidad de información en sus diferentes áreas. La demora, inexactitud, redundancia y falta de información digitalizada precisa evidencias para contar con el apoyo de tecnologías de información, constituyendo una vía muy importante para el crecimiento empresarial, aumento de la productividad, reducción de costos, tiempo y mejora constante en la gestión de la Información. Para el desarrollo de la investigación se utilizó la metodología Programación Extrema XP. La selección de la muestra, no probabilística se obtuvo por la técnica de muestreo por conveniencia. Se concluyó que el Sistema mejora la Gestión de la Información ya que en su mayoría los usuarios califican como Excelente, con una ponderación de 23 en base a 25; lo que comprueba que el Sistema Integrado basado en Tecnologías Open Source mejora en un 92% en los procesos de gestión de información, permitiendo realizar los diferentes procesos con mayor control, reducción de costos y tiempo con un alto grado de productividad, en consecuencia se recomienda el uso de tecnologías Open Source ya que se ahorra en costos tales como licencia de sistema operativo entre otras ventajas y la aplicación de Patrones tales como Data Access Object y Business Object ya que facilitan la implementación de sistemas robustos que están sujetas a cambios futuros y reutilización de código”\n\nWe need to annotate all fields. Let's parse.\n\n**Dimension 1: Adherencia a IMRyD** (fields D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico)\n\nCheck for each:\n\n- Objetivo: \"El presente trabajo de investigación tuvo como objetivo principal mejorar la gestión de la información en la Cooperativa Agroindustrial (COOPAIN) Cabana - Puno.\" It's explicit. So D1_imryd_objetivo = 1.\n\n- Metodología: They say \"se utilizó la metodología Programación Extrema XP. La selección de la muestra, no probabilística se obtuvo por la técnica de muestreo por conveniencia.\" That's a methodology: XP programming (which is agile), plus sampling method. That is at least a concrete procedure. So D1_imryd_metodologia = 1.\n\n- Resultados: \"Se concluyó que el Sistema mejora la Gestión de la Información ya que en su mayoría los usuarios califican como Excelente, con una ponderación de 23 en base a 25; lo que comprueba que el Sistema Integrado basado en Tecnologías Open Source mejora en un 92% en los procesos de gestión de información, permitiendo realizar los diferentes procesos con mayor control, reducción de costos y tiempo con un alto grado de productividad\" This includes quantitative results: user rating 23/25, 92% improvement. So D1_imryd_resultados = 1.\n\n- Conclusiones: \"en consecuencia se recomienda el uso de tecnologías Open Source ya que se ahorra en costos tales como licencia de sistema operativo entre otras ventajas y la aplicación de Patrones tales como Data Access Object y Business Object ya que facilitan la implementación de sistemas robustos que están sujetas a cambios futuros y reutilización de código\" This is a recommendation and interpretation. It responds to objective. So D1_imryd_conclusiones = 1.\n\n- Orden lógico: The components appear in sequence: Objetivo first, then a description of system, then methodology, then results, then conclusion. The order appears consistent: objective -> method -> results -> conclusion. So D1_orden_logico = 1.\n\n**Dimension 2: Coherencia organizacional**: D2_coherencia from 1 to 5.\n\nWe need to evaluate flow. Let's analyze the summary:\n\n- Starts with objective.\n- Then describes system and issues (delay, inaccuracy, etc.), giving context (maybe contextualization but we will analyze later).\n- Then methodology: Programación Extrema XP, sampling technique.\n- Then results: user ratings etc.\n- Then conclusion/recommendation.\n\nWe need to see if the flow is coherent, no abrupt jumps, consistent terminology. Terms: \"Tecnologías Open Source\", \"Data Access Object\", \"Business Object\", \"Programación Extrema XP\", \"muestreo por conveniencia\". There is some shift from description to methodology. The text is somewhat dense but overall flows: first objective, then problem context (demora, inexactitud...), then methodology, then results, then recommendation.\n\nI think it's fairly coherent, maybe some jumps but not too abrupt. Let's assign 4 or 5? Let's examine categories:\n\n- 5: Progresión impecable, no repeats, natural transitions.\n- 4: Fluye bien, with minor awkwardness.\n\nThe text is fairly straightforward. There are some adjectives \"precisas\" etc. but not too many. There is a phrase \"precisas evidencias para contar con el apoyo...\" Might be a bit unnatural but not a big issue.\n\nTherefore I would assign D2_coherencia = 4.\n\n**Dimension 3: Completitud de componentes**: 4 fields D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde.\n\n- Contextualizacion: D3_contextualizacion is 1 if summary situates the problem: why it matters, where, etc. The summary starts with objective but doesn't explicitly explain why it's important or context beyond general issues: \"La demora, inexactitud, redundancia y falta de información digitalizada precisa evidencias...\" It states problem but not the context or importance. The problem is the inefficiency in information management; the importance is that it needs improvement for growth. It mentions \"constituyendo una vía muy importante para el crecimiento empresarial, aumento de la productividad, reducción de costos, tiempo y mejora constante en la gestión de la Información\". That does explain significance. So I think D3_contextualizacion = 1. Wait, but earlier we considered that many summaries don't include contextualization. Here, there is some context: they mention that the issues cause inefficiencies and that technologies can improve. So yes, it's present. So D3_contextualizacion = 1.\n\n- D3_metodo_detallado: at least two precisions about procedure: they mention \"se utilizó la metodología Programación Extrema XP.\" and \"La selección de la muestra, no probabilística se obtuvo por la técnica de muestreo por conveniencia.\" That's two: methodology type, sampling technique. Also \"Programación Extrema XP\" is a methodology; we also could mention sample size? Not given. But two precisions present. So D3_metodo_detallado = 1.\n\n- D3_resultados_concretos: at least concrete results: user rating 23/25 and 92% improvement. Those are specific. So D3_resultados_concretos = 1.\n\n- D3_conclusion_responde: conclusion should answer the stated objective. The objective: improve management of information. The conclusion: recommends use of Open Source tech to reduce costs, etc. Yes, it responds to objective. So D3_conclusion_responde = 1.\n\n**Dimension 4: Consistencia metodológica**: D4_consistencia: scale 1-5.\n\nWe need to assess consistency between methodology and results. They used Programación Extrema XP and convenience sampling; results are user ratings. Is there any mismatch? The methodology is XP; sample selection is convenience. The results are user ratings: presumably from evaluation of system. The conclusion is recommending usage. No contradictions. There is no mention of statistical tests or p-values. They didn't claim significance except 92% improvement. It's not a statistical significance claim, just a percentage. There's no contradictory conclusion.\n\nThus consistency is good. Possibly slight issue: they used a convenience sample but results are generalized to \"Sistema mejora la Gestión de la Información\" - not necessarily a problem. But that's acceptable. So I'd assign D4_consistencia = 5.\n\nBut let's see if any rule says \"conclusion more wide than sample\" or \"lack of statistical test\" could lower. They didn't provide any significance tests; but conclusion is about improvement. There's no mismatch. I'd set 5.\n\n**no_evaluable**: Since it's a summary, not an index or license. So no_evaluable = 0.\n\n**observaciones**: We can add explanation about decisions. Maybe \"No contextualización completa, but some context present; D3_contextualizacion = 1.\" But we already set that. Let's include an observation note: \"Contextualizacion presente but limited to problem statement; no explicit importance or background.\" Or \"Methodology: used XP and convenience sampling, considered enough for detail.\" And \"Consistency high because no contradictions.\" But we can keep it short.\n\nThe JSON must include all required fields. Provide integers or null. All fields must be present. Provide string for observaciones, maybe empty string if no obs. But we can add a note.\n\nWe have to use compact JSON.\n\nCheck required fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nAll must be present. No additional properties allowed due to \"additionalProperties: false\". So we must not add any extra fields.\n\nWe must use values 0 or 1 etc. So final JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Contextualization present but limited; methodology adequately detailed; consistency high.\"\n}\n\nCheck that values are integers. D2_coherencia must be 1-5. D4_consistencia must be 1-5. All fine.\n\nReturn as compact JSON.\n\nCheck any field types: all ints or null. Observaciones string. Good.\n\nReturn only JSON."
+    }
+   }
+  ],
+  "created": 1789701584,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_d3e146e1a5",
+  "usage": {
+   "completion_tokens": 2469,
+   "prompt_tokens": 9996,
+   "total_tokens": 12465,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2321,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.241447818,
+   "prompt_time": 0.075172313,
+   "completion_time": 2.546275529,
+   "total_time": 2.6214478420000003
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8dtzye5qbp1bc817cyc0f",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:19:44.857217+00:00"
+}

@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-159",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "no_evaluable": 0,
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "observaciones": "El resumen presenta una estructura IMRyD completa con buena coherencia, aunque no contextualiza el problema más allá de la descripción interna del desarrollo doctrinal. La metodología y resultados son coherentes."
+ },
+ "text": "{\"no_evaluable\":0,\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"observaciones\":\"El resumen presenta una estructura IMRyD completa con buena coherencia, aunque no contextualiza el problema más allá de la descripción interna del desarrollo doctrinal. La metodología y resultados son coherentes.\"}",
+ "usage": {
+  "input_tokens": 9946,
+  "output_tokens": 1677
+ },
+ "latency_s": 3.1970651149749756,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:45:39.605234+00:00",
+ "raw": {
+  "id": "chatcmpl-db1f7425-484d-43a1-ae6e-1d34513b5a2b",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"no_evaluable\":0,\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"observaciones\":\"El resumen presenta una estructura IMRyD completa con buena coherencia, aunque no contextualiza el problema más allá de la descripción interna del desarrollo doctrinal. La metodología y resultados son coherentes.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. Need to fill all required fields.\n\nWe need to analyze the summary content.\n\nSummary in Spanish. It's about doctrinal development of Trinity in Adventist Church, historical documentary methodology, etc.\n\nWe need to assess each dimension:\n\nD1_imryd_objetivo: 1? It says \"esta investigación analiza el desarrollo doctrinal ...\". That's the objective. Yes.\n\nD1_imryd_metodologia: It says \"utilizando una metodología histórica documental, se centra en fuentes primarias y secundarias, ...\". That's a methodology description. Yes.\n\nD1_imryd_resultados: It says \"Las conclusiones indican que la comprensión y aceptación...\". That indicates a result: \"comprehension and acceptance progressed\". That's a result. Yes, a result. 1.\n\nD1_imryd_conclusiones: The last sentence: \"Las conclusiones indican que la comprensión...\". That is a conclusion that addresses objective. Yes.\n\nD1_orden_logico: The components present: Objective -> Methodology -> Results -> Conclusion. Yes, logical order. 1.\n\nD2_coherencia: Need to evaluate flow. Let's read.\n\nText:\n\n\"Esta investigación analiza el desarrollo doctrinal de la Trinidad en la Iglesia Adventista del Séptimo Día (IASD) durante el período especificado. Utilizando una metodología histórica documental, la investigación se centra en fuentes primarias y secundarias, incluyendo documentos oficiales de la IASD y estudios teológicos contemporáneos. La tesis se divide en dos partes principales: un análisis del desarrollo histórico de la doctrina de la Trinidad en la IASD desde sus inicios hasta 1980, y un estudio exhaustivo del período de 1980 a 2011. Durante el primer período, se examinan las declaraciones y publicaciones de los pioneros adventistas sobre la Trinidad, así como los eventos históricos y teológicos más relevantes que moldearon su comprensión. En la segunda parte, se realiza un análisis detallado de los debates y desarrollos doctrinales en torno a la Trinidad en la IASD, destacando la declaración de las 27 creencias fundamentales en 1980 y la intensificación de los estudios trinitarios en las décadas siguientes. Las conclusiones indican que la comprensión y aceptación de la doctrina de la Trinidad en la IASD han sido progresivas y complejas, reflejando un esfuerzo continuo por desarrollar una teología trinitaria coherente y basada en las Escrituras. La investigación destaca también los desafíos contemporáneos, incluyendo el resurgimiento del antitrinitarismo y las críticas internas, que subrayan la necesidad de un estudio continuo y sistemático de esta doctrina fundamental.\"\n\nIt seems pretty coherent; flow from objective, methodology, structure, details, conclusions. No major jumps. I would rate 5.\n\nBut let's check criteria: 5 = impeccable progression; each sentence leads to next; no repetitions; transitions natural; no term variation. Here there are transitions like \"Durante el primer período...\", \"En la segunda parte...\". Terms: \"doctrinal\", \"doctrinales\" etc consistent. No contradictions. I think 5.\n\nD3_contextualizacion: Does the summary situate the problem: why important, where, who? The summary mentions \"desarrollo doctrinal de la Trinidad en la IASD\" but does not explain why important, what implications, etc. It starts with analyzing development; no context of broader significance. So 0.\n\nD3_metodo_detallado: At least two precisions: \"metodología histórica documental\", \"fuentes primarias y secundarias, documentos oficiales de la IASD, estudios teológicos contemporáneos\". That's more than two: \"metodología histórica documental\" (design), \"fuentes primarias y secundarias\" (materials), \"documentos oficiales\" (instrument?), \"estudios teológicos contemporáneos\" (source). So 1.\n\nD3_resultados_concretos: Do we have concrete results? It states \"Las conclusiones indican que la comprensión y aceptación... han sido progresivas y complejas\". This is a result but not concrete numbers or categories, but it's a qualitative statement. It's a result: yes, it's concrete content? It says \"han sido progresivas y complejas\". That's a qualitative description, not a quantitative figure. Are we supposed to consider that concrete? In D3_resultados_concretos, the examples include categories, magnitudes. Qualitative categories like \"tres categorías\" are considered concrete. So \"completitud de resultados concretos\" includes qualitative categories. So yes, 1.\n\nBut check: \"Las conclusiones indican que la comprensión y aceptación...\". That's a result. It also says \"reflejando un esfuerzo continuo por desarrollar una teología trinitaria coherente y basada en las Escrituras\" - also a result. There's no numbers but categories. It's still concrete.\n\nSo D3_resultados_concretos = 1.\n\nD3_conclusion_responde: The conclusion addresses the objective. Objective: to analyze development of the doctrine. Conclusion: that understanding progressed, etc. That is a response. 1.\n\nD4_consistencia: We need to evaluate consistency between methodology and results. Let's check.\n\nMethodology: historical documentary, sources primary and secondary. Results: the understanding progressed. There's no contradiction. No claims of statistical significance. It's a qualitative historical study. No conflict. So D4_consistencia = 5.\n\nEdge: If no methodology declared, D4 would be no_evaluable. But we have methodology. So consistent.\n\nno_evaluable: 0 (it's a summary, has methodology). So 0.\n\nobservaciones: Provide any comments.\n\nWe need to produce JSON with all fields.\n\nCheck field order? Not required but JSON object must have all keys.\n\nLet's assemble:\n\n{\n\"no_evaluable\":0,\n\"D1_imryd_objetivo\":1,\n\"D1_imryd_metodologia\":1,\n\"D1_imryd_resultados\":1,\n\"D1_imryd_conclusiones\":1,\n\"D1_orden_logico\":1,\n\"D2_coherencia\":5,\n\"D3_contextualizacion\":0,\n\"D3_metodo_detallado\":1,\n\"D3_resultados_concretos\":1,\n\"D3_conclusion_responde\":1,\n\"D4_consistencia\":5,\n\"observaciones\":\"El resumen presenta una estructura IMRyD completa con buena coherencia, aunque no contextualiza el problema más allá de la descripción interna del desarrollo doctrinal. La metodología y resultados son coherentes.\"\n}\n\nEnsure field names exactly as defined. Need to match names: D4_consistencia, not D4_consistencia? Actually the schema has \"D4_consistencia\": enum [1,2,3,4,5,null]. So use D4_consistencia. Good.\n\nCheck all fields: D1_imryd_conclusiones, D1_imryd_metodologia, D1_imryd_objetivo, D1_imryd_resultados, D1_orden_logico, D2_coherencia, D3_conclusion_responde, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D4_consistencia, no_evaluable, observaciones. Good.\n\nMake sure no missing. All present.\n\nAlso confirm values are integers or null. All integers.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789775139,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_84bb35977d",
+  "usage": {
+   "completion_tokens": 1677,
+   "prompt_tokens": 9946,
+   "total_tokens": 11623,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1515,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.21599021,
+   "prompt_time": 0.549169266,
+   "completion_time": 1.7949897689999998,
+   "total_time": 2.344159035
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vejhvbe5fb2dg279rn8vst",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:45:39.605260+00:00"
+}

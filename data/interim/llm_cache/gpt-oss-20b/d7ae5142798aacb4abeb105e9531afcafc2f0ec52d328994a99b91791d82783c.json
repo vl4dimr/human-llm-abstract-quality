@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-005",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta los resultados y la metodología, pero no incluye una conclusión explícita que responda al objetivo. Se mantiene la coherencia entre método y resultados. "
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen presenta los resultados y la metodología, pero no incluye una conclusión explícita que responda al objetivo. Se mantiene la coherencia entre método y resultados. \"}",
+ "usage": {
+  "input_tokens": 10080,
+  "output_tokens": 1317,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.358104705810547,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:46:16.345125+00:00",
+ "raw": {
+  "id": "chatcmpl-0b5a6b8a-f9ef-4a75-8a8a-bbdefcd4542a",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen presenta los resultados y la metodología, pero no incluye una conclusión explícita que responda al objetivo. Se mantiene la coherencia entre método y resultados. \"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields per schema. Must read the summary, annotate per protocol.\n\nFirst, determine each field.\n\nD1_imryd_objetivo: Does summary include objective? Yes: \"con el objetivo general de: Evaluar el efecto antifúngico in vitro...\" So objective present -> 1.\n\nD1_imryd_metodologia: Must indicate how it was obtained. Yes: describes phases, lab methods, experimental design, etc. At least one concrete procedure. So 1.\n\nD1_imryd_resultados: Must communicate what was found, not method. The summary has \"Los resultados obtenidos fueron: A los diez días de evaluación, ... registraron ... 1.96 mm ... 2.63 mm ... romero 2.87 mm\". That is concrete results. So 1.\n\nD1_imryd_conclusiones: Must have a closing that interprets results, implications, answer to objective. The summary ends with \"sino romero al 50% ... 2.87 mm de crecimiento radial\" but doesn't explicitly say conclusion or implication, just states results. Does it have a conclusion? It says \"sólo llegaron a registrar en las placas petri 1.96 mm y 2.63 mm respectivamente; siendo el romero al 50% que no registró inhibición significativa...\". That is still results. No conclusion. So D1_conclusiones=0.\n\nD1_orden_logico: Evaluate if components present in correct sequence (objective, method, results, conclusion). They present objective, then methodology, then results, and no conclusion. So present 3 components in order: objective -> method -> results. Conclusión missing, but order of those 3 is correct. D1_orden_logico: 1 because there are at least 2 components present, order correct.\n\nCheck rule: If there are 0 or 1 components present, order=0. Here we have 3, so okay. So 1.\n\nD2_coherencia: Evaluate flow 1-5. Let's read. The summary starts with context of Fusarium diseases. Then objective. Then methodology with phases. Then results. It seems reasonably coherent. There's no abrupt jump; the description flows from context to objective to methods to results. Some technical terms but consistent. I'd give 4? Let's see criteria:\n\n- 5: flawless progression, no repetitions. There are some repeated terms like \"en el laboratorio\", but not problematic.\n\n- 4: flows well, with some minor awkwardness. There is a bit of long sentence but coherent. I'd give 4.\n\nD3_contextualizacion: Should place problem, why important, where, who, what standard. The summary gives context: \"Las especies de Fusarium causan una variedad de enfermedades en diversidad de cultivos y provocan significativas pérdidas económicas\". That gives importance. So 1.\n\nD3_metodo_detallado: At least two precisions. They provide: \"fase de laboratorio: preparación del medio de cultivo Papa Dextrosa y Agar, más Oxitretraciclina (PDAO), siembra del fitopatógeno, purificación de la colonia e identificación del hongo. Otra fase: experimental ... método de destilación por arrastre con vapor\". Also \"Diseño Completamente al Azar con nueve tratamientos, tres repeticiones, 27 unidades experimentales.\" That's multiple precisions: design, sample size, technique. So 1.\n\nD3_resultados_concretos: Provide specific numbers: yes, mm distances, percent concentrations. So 1.\n\nD3_conclusion_responde: There is no conclusion that responds to objective. So 0.\n\nD4_consistencia: Consistency between what was stated as method and what presented results and conclusion. Method states design, phases, etc. Results show data. Conclusion missing. But consistency check: The summary states \"la hipótesis que los extractos vegetales son capaces de controlar e inhibir el crecimiento\" but results show some inhibition, but romero had no significant inhibition. There's no explicit contradiction. The results are consistent with method: they tested inhibition. Conclusion missing, but D4 is about consistency, not needing conclusion. But if conclusion missing, maybe consistency still fine: no contradiction. However, D4_consistencia expects 1-5; 5 if fully consistent, 1 if contradictory. There's no explicit contradiction. So 5.\n\nBut let's read D4: \"Coherencia entre lo que el resumen dice que hizo y lo que presenta.\" Here method and results align. So 5. But wait, if conclusion missing, does that affect consistency? No, consistency deals with method and results. So 5.\n\nNo_evaluable: Not applicable; summary is a summary. So 0.\n\nObservaciones: We can note that no conclusion was provided, but we can mention that. Observaciones string: maybe \"No conclusión explícita; se presentan resultados pero falta cierre interpretativo.\" Provide some note.\n\nNow produce JSON with fields in required order? Schema requires all fields present: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nEnsure integer or null. Provide as compact JSON (no line breaks). All fields present. Provide null if missing? All present.\n\nLet's produce JSON."
+    }
+   }
+  ],
+  "created": 1789775175,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_63473661d7",
+  "usage": {
+   "completion_tokens": 1317,
+   "prompt_tokens": 10080,
+   "total_tokens": 11397,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1160,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.28483201,
+   "prompt_time": 0.072010445,
+   "completion_time": 1.344130471,
+   "total_time": 1.416140916
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vekphjev6btn29qjbbb5aa",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:46:16.345146+00:00"
+}

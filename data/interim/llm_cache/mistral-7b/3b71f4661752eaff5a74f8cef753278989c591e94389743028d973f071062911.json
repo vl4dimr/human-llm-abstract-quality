@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-130",
+ "model_name": "mistral-7b",
+ "provider": "ollama",
+ "model": "mistral:latest",
+ "model_reported": "mistral:latest",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen no presenta una metodología detallada, no hay información sobre el diseño, el instrumento, el tamaño de la muestra o el tipo de estudio. A pesar de esto, el resumen puede considerarse coherente internamente."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen no presenta una metodología detallada, no hay información sobre el diseño, el instrumento, el tamaño de la muestra o el tipo de estudio. A pesar de esto, el resumen puede considerarse coherente internamente.\"\n}",
+ "usage": {
+  "input_tokens": 12935,
+  "output_tokens": 251,
+  "total_duration_s": 7.4724531
+ },
+ "latency_s": 7.506763458251953,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:04:58.888839+00:00",
+ "raw": {
+  "model": "mistral:latest",
+  "created_at": "2026-09-19T01:04:58.8795898Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen no presenta una metodología detallada, no hay información sobre el diseño, el instrumento, el tamaño de la muestra o el tipo de estudio. A pesar de esto, el resumen puede considerarse coherente internamente.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7472453100,
+  "load_duration": 5119400,
+  "prompt_eval_count": 12935,
+  "prompt_eval_cached_count": 12155,
+  "prompt_eval_duration": 604011000,
+  "eval_count": 251,
+  "eval_duration": 6760178000
+ },
+ "cached_at_utc": "2026-09-19T01:04:58.888858+00:00"
+}

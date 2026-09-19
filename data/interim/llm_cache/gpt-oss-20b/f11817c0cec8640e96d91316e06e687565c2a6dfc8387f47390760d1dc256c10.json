@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-135",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 1,
+  "no_evaluable": 0,
+  "observaciones": "Conclusión contradice resultados (22% alto > 20%) y no responde directamente al objetivo de determinar nivel de estrés."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":1,\"no_evaluable\":0,\"observaciones\":\"Conclusión contradice resultados (22% alto > 20%) y no responde directamente al objetivo de determinar nivel de estrés.\"}",
+ "usage": {
+  "input_tokens": 9929,
+  "output_tokens": 1722,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.3069419860839844,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:11:46.094885+00:00",
+ "raw": {
+  "id": "chatcmpl-db8d1f6f-69f9-431a-9900-ab281ce1394f",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":1,\"no_evaluable\":0,\"observaciones\":\"Conclusión contradice resultados (22% alto > 20%) y no responde directamente al objetivo de determinar nivel de estrés.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's analyze the summary.\n\nTitle: \"Nivel de estrés laboral de los colaboradores de la empresa de transportes Express San Pedro S.C.R.L. Juliaca, 2016\"\n\nResumen:\n\n\"La presente investigación titulada Nivel de Estrés laboral en los colaboradores de la empresa Transportes Express San Pedro S.C.R.L. Juliaca, 2016 tuvo como propósito determinar el nivel de estrés laboral de los colaboradores de la empresa. El diseño utilizado para la investigacion fue no experimental transaccional, descriptivo de tipo cuantitativo. Para la recolección de datos se usó el instrumento de tipo encuesta que fue validada por juicio de expertos, estos instrumentos fueron evaluados obteniendo una validez y confiabilidad aceptable, además se utilizó la prueba chi – cuadrada para comprobar la hipótesis de investigación. Este instrumento consta de 15 ítems distribuidos en tres dimensiones (Factores ambientales, factores organizacionales y factores individuales). Como resultado principal se determinó que el 22% de los colaboradores tienen un nivel de estrés laboral alto, el 60% de los colaboradores tienen un nivel de estrés laboral medio y que solo el 18% de los colaboradores tienen un nivel de estrés laboral bajo; influenciados por los factores intervinientes como lo son el factor ambiental, organizacional e individual, teniéndose en cuenta que los problemas económicos afectan considerablemente en el estrés laboral de los colaboradores. En consecuencia, se acepta la Hipótesis nula donde indica que el estrés laboral de los colaboradores de la empresa es alto en menos o igual al 20%.\"\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 1 if objective present. The summary says: \"tuvo como propósito determinar el nivel de estrés laboral de los colaboradores de la empresa.\" That's explicit objective. So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. It says: \"El diseño utilizado para la investigacion fue no experimental transaccional, descriptivo de tipo cuantitativo. Para la recolección de datos se usó el instrumento de tipo encuesta que fue validada por juicio de expertos, ... además se utilizó la prueba chi – cuadrada para comprobar la hipótesis de investigación.\" So yes, methodology present. 1.\n\n- D1_imryd_resultados: 1 if results present. It says: \"Como resultado principal se determinó que el 22% de los colaboradores tienen un nivel de estrés laboral alto, el 60% de los colaboradores tienen un nivel de estrés laboral medio y que solo el 18% de los colaboradores tienen un nivel de estrés laboral bajo; influenciados por los factores intervinientes...\" So yes, results present. 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. It says: \"En consecuencia, se acepta la Hipótesis nula donde indica que el estrés laboral de los colaboradores de la empresa es alto en menos o igual al 20%.\" That is a conclusion. So 1.\n\n- D1_orden_logico: 1 if components present appear in logical order. The order: objective, methodology, results, conclusion. Yes. So 1.\n\n- D2_coherencia: 1-5. We need to evaluate coherence. Let's read: The summary flows: objective, design, instrument, results, conclusion. There's some repetition: \"El diseño utilizado para la investigacion fue no experimental transaccional, descriptivo de tipo cuantitativo.\" Then instrument details. Then results. Then conclusion. The flow seems coherent. There's no abrupt jumps. Some adverbial \"En consecuencia\" is fine. I'd rate 5 maybe. But check for any issues: \"El instrumento consta de 15 ítems distribuidos en tres dimensiones (Factores ambientales, factores organizacionales y factores individuales).\" That is fine. The conclusion: \"se acepta la Hipótesis nula donde indica que el estrés laboral de los colaboradores de la empresa es alto en menos o igual al 20%.\" That conclusion seems contradictory: Accepting null that stress is high <=20%? Wait, the null says stress is high <=20%. But results show 22% high, 60% medium, 18% low. So the conclusion says accept null that stress is high <=20%. That is contradictory. But for coherence, we consider if the conclusion logically follows from results. It doesn't. That might be a consistency issue. But coherence is about flow, not consistency. The flow is fine. I'd give 5.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where, to whom, etc. The summary does not mention why it's important, or context beyond the company. It just says \"tiene como propósito determinar el nivel de estrés laboral de los colaboradores de la empresa.\" It doesn't mention why it's important, or broader context. So 0.\n\n- D3_metodo_detallado: 1 if at least two precisions about procedure. We have: design (no experimental transaccional, descriptivo cuantitativo), instrument (encuesta, 15 ítems, validated by experts), sample? Not mentioned. But we have design, instrument, and test chi-square. That's at least two. So 1.\n\n- D3_resultados_concretos: 1 if results provide specific content: yes, percentages 22%, 60%, 18%. So 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to objective. The objective: determine level of stress. The conclusion: accept null that stress is high <=20%. That is not a direct answer to objective. The objective is to determine level; the conclusion is about hypothesis. It doesn't directly answer the objective. So 0.\n\n- D4_consistencia: 1-5. We need to evaluate consistency between what summary says it did and what it presents. The summary says: design, instrument, chi-square test. Results: percentages. Conclusion: accept null that stress high <=20%. But results show 22% high, which is >20%. So conclusion contradicts results. That is a consistency issue. According to the protocol, a contradiction like that is a severe discordance. In D4, 1 is \"Contradicción abierta que invalida la conclusión\". So D4_consistencia = 1.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: we can add notes about the contradiction and maybe mention that the conclusion contradicts results. Also mention that the conclusion is not directly answering objective. Also mention that the conclusion is contradictory. Provide a brief note.\n\nWe must produce JSON with all fields. Ensure values are integers or null. Observations string.\n\nLet's produce:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":0,\n \"D4_consistencia\":1,\n \"no_evaluable\":0,\n \"observaciones\":\"Conclusión contradice resultados (22% alto > 20%) y no responde directamente al objetivo de determinar nivel de estrés.\"\n}\n\nCheck schema: all required fields present. Observations string. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789701105,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_d3e146e1a5",
+  "usage": {
+   "completion_tokens": 1722,
+   "prompt_tokens": 9929,
+   "total_tokens": 11651,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1572,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.239805369,
+   "prompt_time": 0.056133509,
+   "completion_time": 1.751939635,
+   "total_time": 1.808073144
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7z87zeb9vz4byfm1g1gwg",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:11:46.094898+00:00"
+}

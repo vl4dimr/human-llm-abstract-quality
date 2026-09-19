@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-059",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 1,
+  "no_evaluable": 0,
+  "observaciones": "El resumen concluye que no existe relación entre ambas variables, pero los resultados indican una relación significativa entre la dimensión social y las conductas de riesgo, lo que crea una contradicción."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":1,\"no_evaluable\":0,\"observaciones\":\"El resumen concluye que no existe relación entre ambas variables, pero los resultados indican una relación significativa entre la dimensión social y las conductas de riesgo, lo que crea una contradicción.\"}",
+ "usage": {
+  "input_tokens": 9859,
+  "output_tokens": 1717,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.7196195125579834,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:21:22.403647+00:00",
+ "raw": {
+  "id": "chatcmpl-6d94bab1-d704-4d0f-a617-75f9d2eada9f",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":1,\"no_evaluable\":0,\"observaciones\":\"El resumen concluye que no existe relación entre ambas variables, pero los resultados indican una relación significativa entre la dimensión social y las conductas de riesgo, lo que crea una contradicción.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate according to protocol. Fields required: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nLet's parse the summary.\n\nSummary content: \"El objetivo de la investigación fue determinar la relación entre el nivel de autoestima y las conductas sexuales de riesgo en los estudiantes de 4to y 5to grado de secundaria de una institución educativa.\" -> objective present.\n\nThen \"El estudio fue correlacional y de corte transversal.\" -> methodology.\n\n\"la muestra fue probabilístico y estuvo conformada por 164 estudiantes.\" -> methodology detail.\n\n\"Los instrumentos empleados en la recolección de datos fueron: el cuestionario de autoestima de Coopersmith (1967) y de conductas Sexuales de Rivera y Zavaleta (2015).\" -> methodology detail.\n\n\"Los resultados se obtuvieron a través del estadístico Chi-cuadrado donde se evidencia que no existe relación entre el nivel de autoestima y la conducta sexual de riesgo con un p-valor de 0,119. Sin embargo, se encontró relación entre la dimensión social y las conductas sexuales de riesgos con un p-valor de 0.013.\" -> results: two statements: no relation overall, and relation between dimension social and risk behaviors. They provide p-values but no actual effect sizes or counts. So results concretos? It includes p-values but not magnitude. According to D3_resultados_concretos: requires specific content: magnitudes, categories, etc. p-values are not considered magnitude. But p-values may count as evidence? The earlier rule: \"Se valoran los resultados concretos: cifras, magnitudes, categorías nombradas, relaciones con dirección.\" p-values are not magnitude but indicate significance. It may be considered concrete if they provide effect? The example 11.4 indicates that \"Sig. > 0.05\" is a result but not concrete. In this case we have p-valor 0.119, 0.013. Those are numbers, but no magnitude of effect. Possibly qualifies as concrete? Might be considered a numeric result but still not magnitude? The protocol says: \"Resultado concreto: cifras, magnitudes, categorías nombradas, relaciones con dirección.\" p-values are numeric but not magnitude of effect. The example 11.4 shows that p-values are considered concrete? Example 11.4: \"Sig. > 0,05 in all dimensions\" counts as a result but D3_resultados_concretos=0. So p-values alone don't count as concrete. So we set D3_resultados_concretos=0.\n\nBut D1_imryd_resultados=1 because it contains a result.\n\nConclusion: \"En las conclusiones, se evidenció que no existe relación entre ambas variables.\" -> conclusion: no relation, but fails to interpret or respond beyond repeating result. The conclusion doesn't mention implications or broader meaning, just restates result. According to D1_imryd_conclusiones: requires closure that goes beyond repeating result. The conclusion here is just repeating result. So D1_imryd_conclusiones=0. Also D3_conclusion_responde: needs to respond to objective. The conclusion does not respond because it just restates. So D3_conclusion_responde=0.\n\nD1_orden_logico: components present: objective, methodology, results, conclusions. They appear in correct order. So D1_orden_logico=1.\n\nD2_coherencia: evaluate flow. Let's assess coherence. The text is fairly coherent: objective, methodology, results, conclusion. No big jumps. Might be 4? Let's examine: \"El objetivo...\". Then \"El estudio fue correlacional y de corte transversal.\" (methodology). \"La muestra fue probabilístico y estuvo conformada por 164 estudiantes.\" (more detail). \"Los instrumentos empleados...\" (detail). Then results: \"Los resultados se obtuvieron a través del estadístico Chi-cuadrado donde se evidencia que no existe relación...\". Then \"Sin embargo, se encontró relación entre la dimensión social y las conductas sexuales de riesgos con un p-valor de 0.013.\" Then conclusion: \"se evidenció que no existe relación entre ambas variables.\" The conclusion restates the earlier 'no existe relación', ignoring the second relation. So there's a small inconsistency. But flow is still coherent. I'd give 4 perhaps because of slight jump? Might be 5. Let's decide 4. Because there's a slight inconsistency that might break flow? The conclusion contradicts earlier second result: they ignore it. That could be a minor incoherence. So 4.\n\nD3_contextualizacion: does the summary situate the problem? The objective mentions \"en los estudiantes de 4to y 5to grado de secundaria de una institución educativa.\" That indicates the context: a school in a certain region, but no broader context. But they don't say why it's important, or where it occurs? The title gives location but summary itself doesn't mention significance. So D3_contextualizacion=0.\n\nD3_metodo_detallado: need at least two precisions: design, sample size, instrument, etc. They have: study was correlational, cross-sectional, sample 164, instruments. That's at least 3 precisions. So D3_metodo_detallado=1.\n\nD4_consistencia: consistency between what was declared and presented. Here the conclusion contradicts the second result: they say no relation overall but earlier results found a relation in dimension social. That is inconsistency. The D4_consistencia scale 1-5: 1 indicates contradiction open invalidating conclusion. This is a contradiction: conclusion says no relation, but results show some relation. So it's a serious inconsistency. According to rule: \"Afirmar diferencias tras reportar p > 0,05\" would be 1. Here it's \"conclusion says no relation\" but results show partial relation. That is contradiction. So D4_consistencia=1. But let's confirm: D4_consistencia is 1 to 5 where 5 is fully coherent, 1 is contradictory. Yes.\n\nno_evaluable: Is it a valid summary? Yes, it's a proper summary. So no_evaluable=0.\n\nObservaciones: Provide any remarks, e.g., about conclusion contradictory, or missing contextualization.\n\nLet's fill fields.\n\n- D1_imryd_objetivo: 1\n- D1_imryd_metodologia: 1\n- D1_imryd_resultados: 1\n- D1_imryd_conclusiones: 0\n- D1_orden_logico: 1\n- D2_coherencia: 4\n- D3_contextualizacion: 0\n- D3_metodo_detallado: 1\n- D3_resultados_concretos: 0\n- D3_conclusion_responde: 0\n- D4_consistencia: 1\n- no_evaluable: 0\n- observaciones: \"El resumen concluye que no existe relación entre ambas variables, pero los resultados indican una relación significativa entre la dimensión social y las conductas de riesgo, lo que crea una contradicción.\"\n\nWe need to output compact JSON with all required fields. Ensure JSON parses. Let's construct.\n\n"
+    }
+   }
+  ],
+  "created": 1789701682,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_ef00694abe",
+  "usage": {
+   "completion_tokens": 1717,
+   "prompt_tokens": 9859,
+   "total_tokens": 11576,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1555,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.23782988,
+   "prompt_time": 0.050626218,
+   "completion_time": 1.7763644200000002,
+   "total_time": 1.8269906379999998
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8gv1bexy9q6sscm8c93za",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:21:22.403677+00:00"
+}

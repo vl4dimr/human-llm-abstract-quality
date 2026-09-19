@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-123",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Incluye nota ética sin relevancia estructural; no afecta puntuaciones."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Incluye nota ética sin relevancia estructural; no afecta puntuaciones.\"}",
+ "usage": {
+  "input_tokens": 10005,
+  "output_tokens": 1129
+ },
+ "latency_s": 2.6534273624420166,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:59:58.367696+00:00",
+ "raw": {
+  "id": "chatcmpl-6fa1b156-8df0-4bf4-9bda-01fdda927c32",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Incluye nota ética sin relevancia estructural; no afecta puntuaciones.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate according to fields. Let's evaluate.\n\nD1_imryd_objetivo: The summary has \"El objetivo del estudio es determinar la relación...\" Yes objective present. => 1.\n\nD1_imryd_metodologia: Summary includes \"se empleo un enfoque cuantitativo, de alcance descriptivo-correlacional y diseño no experimental de corte transversal. La muestra estuvo compuesta por 177 estudiantes seleccionados mediante muestreo aleatorio estratificado. Se aplicaron cuestionarios con escala de Likert, los datos fueron analizados con SPSS y el contraste de la hipótesis se realizó mediante el coeficiente Rho de Spearman.\" That's definitely methodology detailed. => 1.\n\nD1_imryd_resultados: Summary has \"Los resultados revelaron: p = .000 < α =.05 y Rs = .442**, por ende, se aceptó la hipótesis general ... el 54.8% de los estudiantes consideran adecuado su contexto académico y el 76.3% mostró una alta intención emprendedora, evidenciando un interés significativo por emprender.\" Yes results present with concrete data. => 1.\n\nD1_imryd_conclusiones: Summary says \"Se concluye que existe una relación directa y significativa entre el contexto académico y la intención emprendedora de los estudiantes y que un entorno académico enriquecedor potencia la intención emprendedora.\" This is a conclusion that responds to objective. Yes conclusion present. => 1.\n\nD1_orden_logico: We check if the components present appear in logical sequence: objective → methodology → results → conclusion. In summary, after objective they present methodology, results, then conclusion. Yes. => 1.\n\nD2_coherencia: We need to score from 1 to 5. Evaluate flow. The summary is fairly coherent. Starts with context, problem, objective, then methodology, results, conclusion. Transition from objective to methodology is smooth. Transition from methodology to results is fine. The conclusion follows results. The text is fairly coherent; maybe some abruptness when jumping from methodology to results, but overall good. I'd give 4. Because there are no major abrupt jumps. Let's look: The sentence \"Para proteger la confidencialidad de la institución y cumplir con los principios éticos establecidos para investigaciones científicas, se ha utilizado un nombre ficticio...\" seems a bit out of the flow. But overall it still flows. So 4.\n\nD3_contextualizacion: Does the summary provide context? The opening sentences mention that \"El entorno académico constituye un factor determinante...\" and mention \"existe una brecha en la comprensión ...\". That situates the problem. Yes contextualization present. => 1.\n\nD3_metodo_detallado: Already we have methodology. At least two precisions: design, sampling method, questionnaire, analysis method. => 1.\n\nD3_resultados_concretos: There are concrete results: p, Rs, percentages 54.8% and 76.3%. => 1.\n\nD3_conclusion_responde: The conclusion addresses the objective: yes. => 1.\n\nD4_consistencia: Consistency between declared method and results. Methodology declared: descriptive-correlational, design no experimental, used Spearman coefficient, which is appropriate for correlational analysis. Results reported Spearman Rho = .442**. Conclusion states direct significant relationship, consistent. No contradictions. So consistency high. Score 5.\n\nno_evaluable: Not a non-summary; it's a summary. So 0.\n\nobservaciones: Any observations? Maybe note that the summary includes an ethics note which is extraneous but does not affect evaluation. We'll note that the ethical note is extraneous but doesn't affect evaluation. Let's produce an observation string. Eg: \"Incluye nota ética sin relevancia estructural; no afecta puntuaciones\". Should be a string.\n\nMake sure JSON is compact, includes all required fields. Values as integers or null. Provide integers. Provide observation as string. Ensure all fields present.\n\nLet's compile:\n\n{\n\"D1_imryd_objetivo\":1,\n\"D1_imryd_metodologia\":1,\n\"D1_imryd_resultados\":1,\n\"D1_imryd_conclusiones\":1,\n\"D1_orden_logico\":1,\n\"D2_coherencia\":4,\n\"D3_contextualizacion\":1,\n\"D3_metodo_detallado\":1,\n\"D3_resultados_concretos\":1,\n\"D3_conclusion_responde\":1,\n\"D4_consistencia\":5,\n\"no_evaluable\":0,\n\"observaciones\":\"Incluye nota ética sin relevancia estructural; no afecta puntuaciones.\"\n}\n\nCheck schema: D4_consistencia enum includes 1-5 null. 5 is allowed. D2_coherencia enum 1-5 null. 4 allowed. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789775997,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_9340e7d14d",
+  "usage": {
+   "completion_tokens": 1129,
+   "prompt_tokens": 10005,
+   "total_tokens": 11134,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 991,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.23926044,
+   "prompt_time": 0.606779591,
+   "completion_time": 1.193941847,
+   "total_time": 1.800721438
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vfcs05ebxt19dxfmycb2w4",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:59:58.367720+00:00"
+}

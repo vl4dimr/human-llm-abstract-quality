@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-131",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen describe la metodología con detalle, incluyendo el enfoque mixto, la muestra y el análisis estadístico. Sin embargo, no se presentan resultados concretos ni conclusiones que respondan al objetivo. La coherencia es buena, pero se podría mejorar con una mejor conexión entre las secciones. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la cultura tributaria en la educación financiera de los estudiantes de mecánica eléctrica."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen describe la metodología con detalle, incluyendo el enfoque mixto, la muestra y el análisis estadístico. Sin embargo, no se presentan resultados concretos ni conclusiones que respondan al objetivo. La coherencia es buena, pero se podría mejorar con una mejor conexión entre las secciones. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la cultura tributaria en la educación financiera de los estudiantes de mecánica eléctrica.\"\n}",
+ "usage": {
+  "input_tokens": 10760,
+  "output_tokens": 270,
+  "total_duration_s": 12.6315541
+ },
+ "latency_s": 12.644436120986938,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:09:29.608227+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:09:29.5975922Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen describe la metodología con detalle, incluyendo el enfoque mixto, la muestra y el análisis estadístico. Sin embargo, no se presentan resultados concretos ni conclusiones que respondan al objetivo. La coherencia es buena, pero se podría mejorar con una mejor conexión entre las secciones. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la cultura tributaria en la educación financiera de los estudiantes de mecánica eléctrica.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 12631554100,
+  "load_duration": 14967900,
+  "prompt_eval_count": 10760,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 300343000,
+  "eval_count": 270,
+  "eval_duration": 12200200000
+ },
+ "cached_at_utc": "2026-09-19T02:09:29.608257+00:00"
+}

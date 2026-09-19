@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-061",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "Chi‑cuadrado reportado 0.012 con 6 df y p = 0.016 es incoherente; la referencia a “probabilística aleatorio simple por conveniencia” combina conceptos contradictorios; objetivo repetido en conclusión. No hay contexto del problema."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":3,\"no_evaluable\":0,\"observaciones\":\"Chi‑cuadrado reportado 0.012 con 6 df y p = 0.016 es incoherente; la referencia a “probabilística aleatorio simple por conveniencia” combina conceptos contradictorios; objetivo repetido en conclusión. No hay contexto del problema.\"}",
+ "usage": {
+  "input_tokens": 9984,
+  "output_tokens": 2699,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 3.346235752105713,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:52:45.740872+00:00",
+ "raw": {
+  "id": "chatcmpl-c2f3b0f7-a8ca-4033-bbeb-57006a085228",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":3,\"no_evaluable\":0,\"observaciones\":\"Chi‑cuadrado reportado 0.012 con 6 df y p = 0.016 es incoherente; la referencia a “probabilística aleatorio simple por conveniencia” combina conceptos contradictorios; objetivo repetido en conclusión. No hay contexto del problema.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones. All required.\n\nWe must analyze the summary to fill fields.\n\nLet's read:\n\nResumen:\n\n\"La investigación denominada la dinámica familiar en el comportamiento de los estudiantes de la Institución Educativa Secundaria Glorioso San Carlos de Puno – 2021; tuvo como objetivo general determinar la relación entre la dinámica familiar con el comportamiento de los estudiantes de la Institución Educativa Secundaria. La hipótesis plateada fue que existe relación significativa entre la dinámica familiar con el comportamiento de los estudiantes de la Institución Educativa Secundaria. El estudio corresponde al tipo de investigación básica teórica y el alcance correlacional, el método es hipotético deductivo bajo el enfoque cuantitativo, el diseño de estudio es no experimental de corte transversal. Utilizando una muestra probabilística aleatorio simple por conveniencia representado por 221 estudiantes del tercero, cuarto y quinto año de secundaria, la información se recolecto mediante un cuestionario. Concluyendo que existe relación significativa entre la dinámica familiar y el comportamiento de los estudiantes de la I.E.S. Glorioso Nacional San Carlos de Puno. Revelando resultados significativos que tienen importantes implicaciones para comprender la interacción entre el entorno familiar y las conductas estudiantiles, el valor de chi-cuadrado obtenido 0.012 con 6 grados de libertad y un nivel de significancia bilateral de 0,016, lo que evidencia estadísticamente y refuerza la validez de la hipótesis alterna. Se respalda que la dinámica familiar tiene relación sustancial en el comportamiento de los estudiantes, la cual está relacionada con la estructura de la familia, la comunicación y el cumplimiento de la función educadora los cuales determinan la práctica de un comportamiento asertivo.\"\n\nWe need to evaluate each field.\n\nLet's examine:\n\n**D1_imryd_objetivo**: The summary includes explicit statement: \"tuvo como objetivo general determinar la relación entre la dinámica familiar con el comportamiento de los estudiantes de la Institución Educativa Secundaria.\" That is explicit objective, so 1.\n\n**D1_imryd_metodologia**: Contains: \"El estudio corresponde al tipo de investigación básica teórica y el alcance correlacional, el método es hipotético deductivo bajo el enfoque cuantitativo, el diseño de estudio es no experimental de corte transversal. Utilizando una muestra probabilística aleatorio simple por conveniencia representado por 221 estudiantes ... la información se recolecto mediante un cuestionario.\" That includes design, sampling, instrument. That is more than one precision, at least 2. So 1.\n\n**D1_imryd_resultados**: Contains: \"Concluyendo que existe relación significativa entre la dinámica familiar y el comportamiento de los estudiantes... Revelando resultados significativos... el valor de chi-cuadrado obtenido 0.012 con 6 grados de libertad y un nivel de significancia bilateral de 0,016...\" So yes, results are presented; they mention chi-square and p-value. So 1.\n\n**D1_imryd_conclusiones**: Contains: \"Concluyendo que existe relación significativa... Se respalda que la dinámica familiar tiene relación sustancial... determinan la práctica de un comportamiento asertivo.\" That's a conclusion, beyond repeating results, includes interpretation and implication. So 1.\n\n**D1_orden_logico**: Determine order of components: objective present first, methodology after that, results after that, conclusion at end. Let's confirm: The summary starts with objective, then hypothesis, then methods, then results and conclusion. The objective is first, methodology third, results after methods, conclusion at end. That is correct order: objective → methodology → results → conclusion. So 1.\n\n**D2_coherencia**: Coherence of text. Let's evaluate. The summary is a single paragraph, but we can check for flow. It has some redundancy but still coherent. We can rate maybe 4: it flows well but has some adverbial and redundant phrases. Let's analyze.\n\nParagraph: \"La investigación denominada la dinámica familiar en el comportamiento de los estudiantes de la Institución Educativa Secundaria Glorioso San Carlos de Puno – 2021; tuvo como objetivo general determinar la relación entre la dinámica familiar con el comportamiento de los estudiantes de la Institución Educativa Secundaria. La hipótesis plateada fue que existe relación significativa entre la dinámica familiar con el comportamiento de los estudiantes de la Institución Educativa Secundaria. El estudio corresponde al tipo de investigación básica teórica y el alcance correlacional, el método es hipotético deductivo bajo el enfoque cuantitativo, el diseño de estudio es no experimental de corte transversal. Utilizando una muestra probabilística aleatorio simple por conveniencia representado por 221 estudiantes del tercero, cuarto y quinto año de secundaria, la información se recolecto mediante un cuestionario. Concluyendo que existe relación significativa entre la dinámica familiar y el comportamiento de los estudiantes de la I.E.S. Glorioso Nacional San Carlos de Puno. Revelando resultados significativos que tienen importantes implicaciones para comprender la interacción entre el entorno familiar y las conductas estudiantiles, el valor de chi-cuadrado obtenido 0.012 con 6 grados de libertad y un nivel de significancia bilateral de 0,016, lo que evidencia estadísticamente y refuerza la validez de la hipótesis alterna. Se respalda que la dinámica familiar tiene relación sustancial en el comportamiento de los estudiantes, la cual está relacionada con la estructura de la familia, la comunicación y el cumplimiento de la función educadora los cuales determinan la práctica de un comportamiento asertivo.\"\n\nIt appears fairly coherent, but there are some issues: \"por conveniencia\" contradicts \"probabilística aleatorio simple por conveniencia\" - maybe \"aleatoria simple\" but by convenience? Not sure. But still coherent. Also some repeated phrases \"con relación significativa\". Slight redundancy. I'd rate 4.\n\n**D3_contextualizacion**: Whether it situates the problem: It does not provide background or why this matters. It begins with objective. There's no context or significance. So 0.\n\n**D3_metodo_detallado**: At least two precise methodological details? It includes: \"tipo de investigación básica teórica y el alcance correlacional, el método es hipotético deductivo bajo el enfoque cuantitativo, el diseño de estudio es no experimental de corte transversal. Utilizando una muestra probabilística aleatorio simple por conveniencia representado por 221 estudiantes, la información se recolecto mediante un cuestionario.\" That seems more than two, yes. So 1.\n\n**D3_resultados_concretos**: Provide content specific: They report chi-square value and p-value, also mention significance. That is concrete. So 1.\n\n**D3_conclusion_responde**: Conclusion addresses objective? It says: \"Concluyendo que existe relación significativa entre la dinámica familiar y el comportamiento de los estudiantes... Se respalda que la dinámica familiar tiene relación sustancial en el comportamiento de los estudiantes.\" That responds to objective: relationship between dynamic family and behavior. So 1.\n\n**D4_consistencia**: Consistency between what is claimed and what presented. Need to evaluate if there are contradictions. They mention \"hypothesis: existe relación significativa...\" and results: chi-square 0.012, p=0.016, which indicates significance. That's consistent. They also mention \"valor de chi-cuadrado obtenido 0.012\" but note that chi-square of 0.012 with 6 df and p=0.016 is weird: chi-square of 0.012 with 6 df would produce a high p-value ~0.99. But they claim p=0.016. This is inconsistent. The result 0.012 likely misreport of chi-square. Actually chi-square 0.012 leads to p ~0.999, not 0.016. So there's a mismatch: they report contradictory values. However we might interpret as \"value of chi-square obtained 0.012 with 6 degrees of freedom\" and \"p=0.016\" - that is contradictory. The D4 consistency is about coherence of methodology and results. The mismatch suggests inconsistency. So D4_consistencia should be penalized. The guidelines: \"Afirmar diferencias tras reportar p > 0,05\" is 1. In this case it's p=0.016 (<0.05) but the chi-square value is inconsistent. That's a discordance. According to guidelines, if the conclusion or result contradicts data, or if there's contradictory numbers. It's an inconsistency. The guidelines mention that \"Declarar diferencias tras reportar p > 0,05\" is the worst case 1. Here it's not that, but there's a mismatch: chi-square 0.012 but p=0.016. That could be considered an error or inconsistency. We can mark D4_consistencia 2 or 3? Let's look at the table:\n\n- \"Usar 'significativo' en sentido coloquial, sin prueba estadística\" - not this.\n- \"Declarar enfoque mixto y presentar solo resultados cuantitativos\" - no.\n- \"Declarar diseño correlacional y concluir en términos causales\" - no.\n- \"Conclusión más amplia que la muestra permite\" - no.\n- \"Afirmar diferencias tras reportar p > 0,05\" - no.\n- \"Declarar estudio cualitativo y reportar p-valores\" - no.\n\nThe mismatch is not exactly covered, but it's an inconsistency. We can think it's maybe a moderate discordance: maybe 3 or 2. Let's assign 3. But let's review guidelines: They categorize 4: \"Varias discordancias, o la conclusión excede lo que los datos sostienen.\" That's 3. 2: \"Varias discordancias\" as well? They said 3: \"Varias discordancias, o la conclusión excede lo que los datos sostienen\". 2: \"Varias discordancias, o la conclusión excede lo que los datos sostienen\" but they differentiate 2-3. The difference is maybe severity: 2 is more moderate, 3 is more severe. The mismatch between chi-square and p-value is a technical inconsistency that might be moderate. I'll assign 3.\n\n**no_evaluable**: 0, because it's a summary.\n\n**observaciones**: Provide comments: e.g., note that chi-square and p-value mismatch, mention repeated objective. Also mention the word \"por conveniencia\" contradictory to random sample. Provide note that there is a minor inconsistency. Also mention that objective repeated in conclusion etc.\n\nWe need to produce JSON. Ensure all fields present. Use compact JSON. No extra fields.\n\nLet's craft JSON:\n\n{\n\"D1_imryd_objetivo\":1,\n\"D1_imryd_metodologia\":1,\n\"D1_imryd_resultados\":1,\n\"D1_imryd_conclusiones\":1,\n\"D1_orden_logico\":1,\n\"D2_coherencia\":4,\n\"D3_contextualizacion\":0,\n\"D3_metodo_detallado\":1,\n\"D3_resultados_concretos\":1,\n\"D3_conclusion_responde\":1,\n\"D4_consistencia\":3,\n\"no_evaluable\":0,\n\"observaciones\":\"Chi‑cuadrado reportado 0.012 con 6 df y p = 0.016 es incoherente; la referencia a “probabilística aleatorio simple por conveniencia” combina conceptos contradictorios; objetivo repetido en conclusión. No hay contexto del problema.\"\n}\n\nCheck that all fields are present. Yes.\n\nLet's ensure JSON is valid. Use compact format. Let's produce final."
+    }
+   }
+  ],
+  "created": 1789775565,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_9b8528b477",
+  "usage": {
+   "completion_tokens": 2699,
+   "prompt_tokens": 9984,
+   "total_tokens": 12683,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2513,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.240421326,
+   "prompt_time": 0.059661672,
+   "completion_time": 2.787121569,
+   "total_time": 2.846783241
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vezhfresdre6gpr9z1vz4m",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:52:45.740891+00:00"
+}

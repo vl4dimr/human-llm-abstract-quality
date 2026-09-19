@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-086",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 2,
+  "no_evaluable": 0,
+  "observaciones": "El resumen menciona el objetivo de identificar los criterios usados por los jueces penales para establecer el monto indemnizatorio, lo cual cumple con el objetivo. La metodología se describe como un enfoque mixto con métodos cualitativos y cuantitativos, lo cual se considera suficiente para el campo D1_imryd_metodologia. Los resultados no se comunican de manera concreta, por lo que D1_imryd_resultados y D3_resultados_concretos son 0. Las conclusiones no son claras ni responden al objetivo, por lo que D1_imryd_conclusiones y D3_conclusion_responde son 0. La coherencia es 3 debido a que el texto fluye pero hay saltos y redundancias. La consistencia metodológica es 2 debido a que las conclusiones no reflejan adecuadamente los resultados."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 2,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen menciona el objetivo de identificar los criterios usados por los jueces penales para establecer el monto indemnizatorio, lo cual cumple con el objetivo. La metodología se describe como un enfoque mixto con métodos cualitativos y cuantitativos, lo cual se considera suficiente para el campo D1_imryd_metodologia. Los resultados no se comunican de manera concreta, por lo que D1_imryd_resultados y D3_resultados_concretos son 0. Las conclusiones no son claras ni responden al objetivo, por lo que D1_imryd_conclusiones y D3_conclusion_responde son 0. La coherencia es 3 debido a que el texto fluye pero hay saltos y redundancias. La consistencia metodológica es 2 debido a que las conclusiones no reflejan adecuadamente los resultados.\"\n}",
+ "usage": {
+  "input_tokens": 10721,
+  "output_tokens": 352,
+  "total_duration_s": 10.9802875
+ },
+ "latency_s": 10.99692440032959,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:30:19.814808+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:30:19.813039Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 2,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen menciona el objetivo de identificar los criterios usados por los jueces penales para establecer el monto indemnizatorio, lo cual cumple con el objetivo. La metodología se describe como un enfoque mixto con métodos cualitativos y cuantitativos, lo cual se considera suficiente para el campo D1_imryd_metodologia. Los resultados no se comunican de manera concreta, por lo que D1_imryd_resultados y D3_resultados_concretos son 0. Las conclusiones no son claras ni responden al objetivo, por lo que D1_imryd_conclusiones y D3_conclusion_responde son 0. La coherencia es 3 debido a que el texto fluye pero hay saltos y redundancias. La consistencia metodológica es 2 debido a que las conclusiones no reflejan adecuadamente los resultados.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10980287500,
+  "load_duration": 3603900,
+  "prompt_eval_count": 10721,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 257302000,
+  "eval_count": 352,
+  "eval_duration": 10612141000
+ },
+ "cached_at_utc": "2026-09-19T02:30:19.814822+00:00"
+}

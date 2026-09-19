@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-120",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen cumple con la estructura IMRyD y presenta una coherencia organizacional aceptable. La contextualización es nula ya que el resumen comienza directamente con el objetivo. La metodología es detallada con enfoque, diseño y técnicas de recolección de datos. Los resultados son concretos al mencionar el impacto de los riesgos disergonómicos. La conclusión responde al objetivo al proporcionar una comprensión integral de la relación entre los riesgos y las enfermedades ocupacionales. La consistencia metodológica es moderada debido a que no se menciona explícitamente la evaluación de la efectividad de las medidas preventivas."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen cumple con la estructura IMRyD y presenta una coherencia organizacional aceptable. La contextualización es nula ya que el resumen comienza directamente con el objetivo. La metodología es detallada con enfoque, diseño y técnicas de recolección de datos. Los resultados son concretos al mencionar el impacto de los riesgos disergonómicos. La conclusión responde al objetivo al proporcionar una comprensión integral de la relación entre los riesgos y las enfermedades ocupacionales. La consistencia metodológica es moderada debido a que no se menciona explícitamente la evaluación de la efectividad de las medidas preventivas.\"\n}",
+ "usage": {
+  "input_tokens": 10781,
+  "output_tokens": 305,
+  "total_duration_s": 19.0685696
+ },
+ "latency_s": 19.07283592224121,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:07:05.610020+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:07:05.6079694Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen cumple con la estructura IMRyD y presenta una coherencia organizacional aceptable. La contextualización es nula ya que el resumen comienza directamente con el objetivo. La metodología es detallada con enfoque, diseño y técnicas de recolección de datos. Los resultados son concretos al mencionar el impacto de los riesgos disergonómicos. La conclusión responde al objetivo al proporcionar una comprensión integral de la relación entre los riesgos y las enfermedades ocupacionales. La consistencia metodológica es moderada debido a que no se menciona explícitamente la evaluación de la efectividad de las medidas preventivas.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 19068569600,
+  "load_duration": 9116000,
+  "prompt_eval_count": 10781,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 644004000,
+  "eval_count": 305,
+  "eval_duration": 18306205000
+ },
+ "cached_at_utc": "2026-09-19T02:07:05.610044+00:00"
+}

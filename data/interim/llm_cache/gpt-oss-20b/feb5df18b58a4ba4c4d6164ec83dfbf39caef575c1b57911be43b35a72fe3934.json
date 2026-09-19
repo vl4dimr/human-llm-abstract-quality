@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-074",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 10188,
+  "output_tokens": 2407,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.99324369430542,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:54:06.871027+00:00",
+ "raw": {
+  "id": "chatcmpl-48241890-2ed0-4b11-85bb-b98018669e95",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones. All required.\n\nWe must evaluate according to the protocol.\n\nLet's analyze the summary.\n\nTitle: \"Uso de pavimento rígido reciclado de la ciudad de Puno, como agregado grueso para la producción de Concreto\"\n\nResumen: It's quite long. We need to parse.\n\nSummary text:\n\n\"Esta investigación tiene por objetivo principal evaluar las propiedades del concreto fresco y endurecido elaborado con pavimento rígido reciclado y determinar su potencial de uso, para lo cual se ha recopilado y analizado información inherente al tema de estudio y se verificó que reciclar los residuos de construcción es una importante alternativa para un desarrollo sostenible y amigable con el medio ambiente.\n\nEl pavimento que se ha reciclado proviene del Jr. Arbulú, arteria de la zona céntrica de la ciudad de Puno, la demolición de esta calle ha sido clasificada con el objetivo de separar exclusivamente los bloques de pavimento, los cuales fueron lavados en sus diferentes fases, analizados y finalmente triturados para un tamaño máximo nominal de 3/4\", todo esto con el objetivo de producir un agregado con propiedades que cumplan con las normas correspondientes.\n\nTanto los agregados naturales, también usados en esta investigación, como los reciclados han sido ensayados en el laboratorio, en donde se analizaron sus propiedades físicas y químicas; como: contenido de humedad, peso específico, peso unitario, granulometría y abrasión.\n\nRealizado esto, se desarrolló un diseño de mezclas para cuatro resistencias 140, 175, 210 y 245kg/cm2; cada una de ellas posee cuatro grupos con diferentes condiciones, uno patrón con 0% de árido reciclado y tres experimentales con 20, 40 y 60% de reciclado.\n\nSe elaboraron 15 briquetas por cada condición de concreto que hacen un total de 240 especímenes los cuales, pasado su fase de curado, fueron ensayados a compresión a los 28 días; las propiedades del concreto fresco también fueron analizadas para cada una de las condiciones.\n\nAdemás de los estudios de los componentes y del concreto en sí, se realizó un análisis de costos para cada condición de concreto.\n\nSe concluyó que aunque el árido reciclado proveniente del pavimento rígido presenta ciertas cualidades inferiores al árido natural, este tiene una calidad adecuada para producir concreto aunque el uso de este en una proporción mayor al 20% del agregado grueso es riesgoso, ya que a mayor cantidad de árido reciclado la resistencia a compresión disminuye, las propiedades del concreto fresco y endurecido son similares en los grupos patrón y experimentales, además los agregados reciclados produjeron concretos más livianos y que son más caros que un concreto convencional, sin embargo es viable su uso en un 20% ya que el incremento de costos es de apenas unos puntos porcentuales, el uso estará sujeto a las condiciones y capacidades de la obra\"\n\nWe need to annotate:\n\nD1_imryd_objetivo: 1 if objective present. Yes, the first sentence: \"Esta investigación tiene por objetivo principal evaluar las propiedades del concreto fresco y endurecido elaborado con pavimento rígido reciclado y determinar su potencial de uso\". That is explicit. So 1.\n\nD1_imryd_metodologia: 1 if some procedure. The text includes methodology: \"el pavimento que se ha reciclado proviene ... lavados, analizados, triturados\", \"ensayados en laboratorio\", \"desarrolló un diseño de mezclas\", \"15 briquetas por condición, ensayados a compresión a los 28 días\". That is a clear procedure. So 1.\n\nD1_imryd_resultados: 1 if results. The summary includes results: \"se concluyó que ... el uso ... en 20% viable ... la resistencia a compresión disminuye con mayor cantidad de árido reciclado, los agregados reciclados produjeron concretos más livianos y más caros, ...\". Those are results. So 1.\n\nD1_imryd_conclusiones: 1 if closure that interprets results. The last paragraph provides conclusion: viability at 20% etc. That's a conclusion. So 1.\n\nD1_orden_logico: 1 if the present components are in order objective → methodology → results → conclusion. The order: objective first, then methodology (pavimento reciclado, ensayos, diseño de mezclas), then results (resistencia a compresión, etc.), then conclusion. Yes. So 1.\n\nD2_coherencia: 1-5. Need to evaluate flow. The summary is somewhat long but seems logically ordered: first objective, then context about pavimento, then methodology (sampling, lab tests, mix design, tests), then results, then conclusion. No major jumps. There might be some redundancy: \"todo esto con el objetivo de producir un agregado con propiedades que cumplan con las normas correspondientes\" repeated objective phrase. But overall coherent. I'd say 5? Let's analyze: \"Progresión impecable. Cada oración prepara la siguiente. Se lee de un tirón\" The text is coherent but has some repetition and maybe a slight jump when they talk about \"analizó sus propiedades físicas y químicas; como: contenido de humedad, peso específico, peso unitario, granulometría y abrasión.\" It's fine. There is no disjointedness. So I think 5.\n\nBut we should consider that they sometimes mention \"el pavimento que se ha reciclado proviene del Jr. Arbulú... la demolición de esta calle ha sido clasificada con el objetivo de separar exclusivamente los bloques de pavimento... todo esto con el objetivo de producir un agregado con propiedades que cumplan con las normas correspondientes.\" That's a bit of a jump but still part of methodology. Overall coherent. I'd lean 5.\n\nD3_contextualizacion: 1 if summary situates problem: why important, where it occurs, etc. The summary says \"para lo cual se ha recopilado y analizado información inherente al tema de estudio y se verificó que reciclar los residuos de construcción es una importante alternativa para un desarrollo sostenible y amigable con el medio ambiente.\" Also mention \"El pavimento que se ha reciclado proviene del Jr. Arbulú ...\". That gives location (city of Puno). It situates the problem: use of recycled pavement as aggregate for concrete, importance due to sustainability. That seems to be context. So 1.\n\nHowever the example earlier indicated that many summaries lack contextualization (they start directly by objective). But here there is a statement about importance of recycling. I'd count as contextualization. So 1.\n\nD3_metodo_detallado: 1 if at least two precisions about procedure. There are many: design of mixes for 4 resistances, 0-60% recycled, 15 briquettes each, 240 specimens, testing compressive strength at 28 days, analysis of properties, mix design, etc. So yes, 1.\n\nD3_resultados_concretos: 1 if results have specific content: percentages, magnitudes, categories, relationships. We have percentages: 20%, 40%, 60% etc. Results: \"a mayor cantidad de árido reciclado la resistencia a compresión disminuye\". Also \"los agregados reciclados produjeron concretos más livianos y que son más caros\". We have numeric data: resistances 140, 175, 210, 245 kg/cm2. Also 15 briquettes each, 240 specimens. So yes, 1.\n\nD3_conclusion_responde: 1 if conclusion answers objective. The objective: evaluate properties and determine potential of use. Conclusion: \"se concluyó ... que ... este tiene calidad adecuada para producir concreto ... el uso ... en 20% ... viable\". That addresses the objective. So 1.\n\nD4_consistencia: 1-5. Consistency between what summarized says it did and what it presents. We need to check if any contradictions. The summary says the pavimento reciclado from Jr. Arbulú, etc. The methodology: they collected, washed, triturated, etc. They did lab tests. Then mix design for 4 resistances. They made briquettes and tested compressive strength at 28 days. That matches. No contradictions about results. They conclude that 20% is viable, and that beyond 20% risk due to decreased compressive strength. No contradictory statements. So consistency high. Might be 5. But check if \"la resistencia a compresión disminuye\" with higher recycled proportion is a result. They said \"a mayor cantidad de árido reciclado la resistencia a compresión disminuye\". That matches results. The conclusion: \"el uso de este en una proporción mayor al 20% del agregado grueso es riesgoso\". This is consistent. So consistency 5.\n\nno_evaluable: 0 because it's a valid summary.\n\nobservaciones: we can add any notes. Maybe note about repetition of objectives or slight redundancy. But we can leave empty string. The schema requires string; empty string is okay. Let's put empty string or maybe note: \"Repetición de objetivo en metodología\". But we can keep empty.\n\nLet's produce JSON.\n\nCheck schema: all fields required.\n\nSo:\n\n{\n\" D1_imryd_objetivo\":1,\n\" D1_imryd_metodologia\":1,\n\" D1_imryd_resultados\":1,\n\" D1_imryd_conclusiones\":1,\n\" D1_orden_logico\":1,\n\" D2_coherencia\":5,\n\" D3_contextualizacion\":1,\n\" D3_metodo_detallado\":1,\n\" D3_resultados_concretos\":1,\n\" D3_conclusion_responde\":1,\n\" D4_consistencia\":5,\n\" no_evaluable\":0,\n\" observaciones\":\"\"\n}\n\nBut ensure keys no leading spaces.\n\nAlso field names: D1_imryd_objetivo etc. So produce:\n\n{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}\n\nLet's ensure JSON valid."
+    }
+   }
+  ],
+  "created": 1789775646,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4a35f7bd1b",
+  "usage": {
+   "completion_tokens": 2407,
+   "prompt_tokens": 10188,
+   "total_tokens": 12595,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2282,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.193309353,
+   "prompt_time": 0.067822787,
+   "completion_time": 2.433721017,
+   "total_time": 2.5015438039999998
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vf2135epb9reff94grx6m4",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:54:06.871046+00:00"
+}

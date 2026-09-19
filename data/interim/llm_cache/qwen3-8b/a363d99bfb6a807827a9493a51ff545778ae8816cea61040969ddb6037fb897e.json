@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-044",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, aunque hay algunas repeticiones y frases que podrían ser más claras. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante la caracterización geológica de la rampa. La metodología es detallada con el enfoque cuantitativo, nivel descriptivo, y se mencionan las etapas de investigación. Los resultados son concretos con medidas y leyes específicas. La conclusión responde al objetivo al garantizar la explotación de la mina. La consistencia metodológica es buena, aunque hay un uso de términos como 'macizo rocoso' que podrían ser más precisos."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, aunque hay algunas repeticiones y frases que podrían ser más claras. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante la caracterización geológica de la rampa. La metodología es detallada con el enfoque cuantitativo, nivel descriptivo, y se mencionan las etapas de investigación. Los resultados son concretos con medidas y leyes específicas. La conclusión responde al objetivo al garantizar la explotación de la mina. La consistencia metodológica es buena, aunque hay un uso de términos como 'macizo rocoso' que podrían ser más precisos.\"\n}",
+ "usage": {
+  "input_tokens": 10942,
+  "output_tokens": 324,
+  "total_duration_s": 12.7267315
+ },
+ "latency_s": 12.75519609451294,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:31:17.756269+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:31:17.7472616Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, aunque hay algunas repeticiones y frases que podrían ser más claras. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante la caracterización geológica de la rampa. La metodología es detallada con el enfoque cuantitativo, nivel descriptivo, y se mencionan las etapas de investigación. Los resultados son concretos con medidas y leyes específicas. La conclusión responde al objetivo al garantizar la explotación de la mina. La consistencia metodológica es buena, aunque hay un uso de términos como 'macizo rocoso' que podrían ser más precisos.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 12726731500,
+  "load_duration": 9713500,
+  "prompt_eval_count": 10942,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 2908792000,
+  "eval_count": 324,
+  "eval_duration": 9746309000
+ },
+ "cached_at_utc": "2026-09-19T01:31:17.756282+00:00"
+}

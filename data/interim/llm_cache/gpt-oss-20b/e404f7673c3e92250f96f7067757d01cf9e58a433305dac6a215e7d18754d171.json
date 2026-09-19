@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-109",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "El resumen omite contextualizar la relevancia del problema. La conclusión propone un plan de reducción sin datos de soporte directo, pero no presenta contradicciones evidentes con los resultados."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen omite contextualizar la relevancia del problema. La conclusión propone un plan de reducción sin datos de soporte directo, pero no presenta contradicciones evidentes con los resultados.\"}",
+ "usage": {
+  "input_tokens": 10043,
+  "output_tokens": 1856
+ },
+ "latency_s": 2.8486576080322266,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:40:04.365340+00:00",
+ "raw": {
+  "id": "chatcmpl-5124cf06-09f9-4cf0-a783-c0f42627fa35",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen omite contextualizar la relevancia del problema. La conclusión propone un plan de reducción sin datos de soporte directo, pero no presenta contradicciones evidentes con los resultados.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. We need to fill all required fields. Let's examine summary.\n\nTitle: \"Análisis de los factores socioeconómicos que inciden en la generación per cápita de residuos sólidos domiciliarios en el distrito de Puno, 2018\"\n\nSummary: Let's parse content:\n\n\"El presente trabajo de investigación tiene como objetivo: Analizar los factores socioeconómicos que inciden en la generación de per cápita de residuos sólidos domiciliarios en el distrito de Puno. Para lo cual se ha realizado a través del modelo de regresión lineal, un análisis de correlación con datos de corte transversal obtenido mediante encuestas realizadas a 95 viviendas del distrito de Puno, posteriormente se ha recolectado los residuos sólidos domiciliarios durante ocho días en las viviendas encuestados. Los resultados muestran que la situación actual de la generación per cápita de residuos sólidos domiciliarios en las viviendas encuestados es de 0.91 kg/hab/día, de los cuales el 40.05% es materia orgánica y el 27.35% son plásticos y el 12.88% es papel y en otros elementos como, madera, cartón, vidrio, etc. no tienen mayor significancia. Asimismo, se obtuvo una densidad promedio de 2402.17 Kg./m3. Por otro lado se determinó que los factores socioeconómicos que inciden positivamente en la generación per cápita de residuos sólidos domésticos son ingreso familiar (INGF) y numero de miembro de la vivienda (NMV) en tanto que la variable de nivel de educación del jefe del hogar (NEDU) incide negativamente en la generación de residuos sólidos domiciliarios per cápita, y finalmente se ha propuesto el plan de minimización de residuos sólidos domiciliarios, a través del potencial reaprovechamiento de residuos recuperables donde es posible reducir hasta 59.95% de residuos sólidos domiciliarios donde se cuentan con un mercado de comercialización que asciende a un total de 11718.39 kg/mes de residuos reciclables y aprovechables totales, lo que generaría beneficios económicos de 5925.66 soles al mes.\"\n\nNow we annotate.\n\nD1_imryd_objetivo: We can identify explicit objective: \"Analizar los factores socioeconómicos que inciden en la generación de per cápita de residuos sólidos domiciliarios en el distrito de Puno.\" It's explicit, so 1.\n\nD1_imryd_metodologia: It says \"se ha realizado a través del modelo de regresión lineal, un análisis de correlación con datos de corte transversal obtenido mediante encuestas realizadas a 95 viviendas del distrito de Puno, posteriormente se ha recolectado los residuos sólidos domiciliarios durante ocho días en las viviendas encuestados.\" That's a description: regression, correlational analysis, cross-sectional data from surveys (95 houses), and waste collection. This gives multiple precisions. So D1_metodologia = 1.\n\nD1_imryd_resultados: The summary has results: \"Los resultados muestran que la situación actual de la generación per cápita de residuos sólidos domiciliarios en las viviendas encuestados es de 0.91 kg/hab/día, de los cuales el 40.05% es materia orgánica y el 27.35% son plásticos y el 12.88% es papel y en otros elementos ... no tienen mayor significancia. Asimismo, se obtuvo una densidad promedio de 2402.17 Kg./m3.\" That's concrete results. So 1.\n\nD1_imryd_conclusiones: The conclusion: \"Por otro lado se determinó que los factores socioeconómicos que inciden positivamente en la generación per cápita ... y finalmente se ha propuesto el plan de minimización de residuos...\" This is a conclusion: they determined factors and propose plan. That counts as conclusion, yes. It's interpretative and has implication. So 1.\n\nD1_orden_logico: order: objective first, methodology second, results third, conclusion last. That's correct. So 1.\n\nD2_coherencia: We need rating 1-5. Let's assess flow. The text: objective, methodology, results, conclusion. Flow seems logical. But there might be minor issues: \"para lo cual se ha realizado a través del modelo...\" grammar, but overall coherent. No major jumps. So maybe 5. However we should check if there are abrupt transitions, maybe \"para lo cual se ha realizado a través del modelo de regresión lineal, un análisis de correlación con datos de corte transversal\" etc. It flows. So 5.\n\nD3_contextualizacion: This field: situates the problem: why matters, where occurs. The summary begins directly with objective, no context. There's no mention of importance, significance. So 0.\n\nD3_metodo_detallado: Must have at least two precisions. They mention regression model, correlational analysis, cross-sectional data, 95 households, waste collected for 8 days. That's multiple. So 1.\n\nD3_resultados_concretos: Contains concrete results: 0.91 kg/hab/día, percentages, density 2402.17 Kg./m3. So 1.\n\nD3_conclusion_responde: Conclusion should respond to objective. They say \"se determinó que los factores socioeconómicos inciden positivamente ... y se ha propuesto plan ...\". That addresses objective: analyzing factors and proposing plan. So yes responds. So 1.\n\nD4_consistencia: Must be 1-5. We check consistency: The methodology described: regression, correlational analysis, cross-sectional, 95 houses, 8 days collection. The results: give average generation 0.91 kg/hab/día, percentages, density. Conclusion: identifies factors and proposes plan. Are they consistent? The results mention factors? Not directly: they mention factors inciden pos. but results didn't include that? Wait: The results part: they give generation value, percentages, density. The factors inciden pos. are described in conclusion: \"se determinó que los factores socioeconómicos ...\". This could be considered consistent if results implied that but not shown. However they didn't provide specific numeric associations. But it's not necessarily inconsistent; it's summarizing that they found factors. The methodology includes regression and correlation, so analyzing associations. The conclusion states that some variables inciden positively. That's consistent with analysis. So maybe no major discord. But there is one potential discrepancy: They propose plan to minimize waste up to 59.95% reduction; no data to support that figure. But this is a proposal, not necessarily inconsistent. The plan is based on potential reuse, but no evidence presented. That might be considered a slight lack of consistency but not a contradiction. D4 score maybe 4? Let's read guidelines: D4 5 is no discord. 4 is a minor imprecise terminology. 3 is one discord. 2 is several discordances or conclusion exceeding data. 1 is open contradiction. There's no contradiction. So 5 maybe. But the plan reduction figure may be considered imprecise but not major. Let's set 5.\n\nNo_evaluable: The summary is indeed a summary, not a non-summary. So 0.\n\nObservaciones: We can add a note about potential missing context and that conclusion includes plan but no evidence provided but not contradictory.\n\nSo final JSON with all fields.\n\nCheck required fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nAll present. Observations: \"Resumen carece de contextualización del problema; se omite la motivación de la investigación. La conclusión propone un plan sin datos de soporte directo, pero no hay contradicción explícita.\" We'll output that.\n\nJSON must be compact, no whitespace. Let's produce."
+    }
+   }
+  ],
+  "created": 1789774803,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_976a85d17a",
+  "usage": {
+   "completion_tokens": 1856,
+   "prompt_tokens": 10043,
+   "total_tokens": 11899,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1697,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.150253827,
+   "prompt_time": 0.534479117,
+   "completion_time": 1.908474849,
+   "total_time": 2.442953966
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2ve8ae9eav9kt5qkqp92cvg",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:40:04.365352+00:00"
+}

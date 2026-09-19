@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-125",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD correctamente. En la D2_coherencia se penaliza la frase \"no se encontró estructuras quísticas...\" que se repite en dos partes del resumen, lo que puede causar confusión. En la D4_consistencia se penaliza la afirmación de que no existe transmisión vertical, ya que los resultados no sostienen esta conclusión."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. En la D2_coherencia se penaliza la frase \\\"no se encontró estructuras quísticas...\\\" que se repite en dos partes del resumen, lo que puede causar confusión. En la D4_consistencia se penaliza la afirmación de que no existe transmisión vertical, ya que los resultados no sostienen esta conclusión.\"\n}",
+ "usage": {
+  "input_tokens": 11021,
+  "output_tokens": 242,
+  "total_duration_s": 7.9252618
+ },
+ "latency_s": 7.932981491088867,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:36:08.606715+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:36:08.5988103Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. En la D2_coherencia se penaliza la frase \\\"no se encontró estructuras quísticas...\\\" que se repite en dos partes del resumen, lo que puede causar confusión. En la D4_consistencia se penaliza la afirmación de que no existe transmisión vertical, ya que los resultados no sostienen esta conclusión.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7925261800,
+  "load_duration": 3972900,
+  "prompt_eval_count": 11021,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 438171000,
+  "eval_count": 242,
+  "eval_duration": 7375498000
+ },
+ "cached_at_utc": "2026-09-19T02:36:08.606735+00:00"
+}

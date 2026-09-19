@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-027",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 1,
+  "no_evaluable": 0,
+  "observaciones": "El resumen no incluye información sobre el enfoque metodológico, los resultados concretos o conclusiones que respondan al objetivo. La coherencia es moderada debido a la falta de claridad en la estructura y la falta de detalles específicos sobre el comercio y el espacio público. La inconsistencia metodológica se refleja en la falta de una propuesta urbana clara y específica."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 1,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen no incluye información sobre el enfoque metodológico, los resultados concretos o conclusiones que respondan al objetivo. La coherencia es moderada debido a la falta de claridad en la estructura y la falta de detalles específicos sobre el comercio y el espacio público. La inconsistencia metodológica se refleja en la falta de una propuesta urbana clara y específica.\"\n}",
+ "usage": {
+  "input_tokens": 10821,
+  "output_tokens": 241,
+  "total_duration_s": 8.3443864
+ },
+ "latency_s": 8.355906248092651,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:51:50.251884+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:51:50.2420208Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 1,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen no incluye información sobre el enfoque metodológico, los resultados concretos o conclusiones que respondan al objetivo. La coherencia es moderada debido a la falta de claridad en la estructura y la falta de detalles específicos sobre el comercio y el espacio público. La inconsistencia metodológica se refleja en la falta de una propuesta urbana clara y específica.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8344386400,
+  "load_duration": 4608400,
+  "prompt_eval_count": 10821,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 336861000,
+  "eval_count": 241,
+  "eval_duration": 7898386000
+ },
+ "cached_at_utc": "2026-09-19T01:51:50.251897+00:00"
+}

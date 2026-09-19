@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-107",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen bien estructurado y coherente; carece de contextualización del problema."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen bien estructurado y coherente; carece de contextualización del problema.\"}",
+ "usage": {
+  "input_tokens": 9946,
+  "output_tokens": 1372,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.521804094314575,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:08:10.920784+00:00",
+ "raw": {
+  "id": "chatcmpl-800e311c-1c67-45aa-9469-743f04ecc356",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen bien estructurado y coherente; carece de contextualización del problema.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Compromiso organizacional, satisfacción laboral y deserción laboral en los profesionales de Educación de las Asociaciones Educativas Adventistas del Perú, 2019\"\n\nResumen:\n\n\"El estudio tuvo como objetivo determinar en qué medida el compromiso organizacional predice la satisfacción laboral y la deserción laboral de los profesionales de educación de las Asociaciones Educativas Adventistas del Perú. El tipo de investigación es cuantitativa con un diseño no experimental-correlacional de corte transversal, se aplicó un estudio de regresión lineal simple para estimar el coeficiente de determinación (R2) entre las variables. La muestra estuvo conformada por 301 docentes que se obtuvo por conveniencia del investigador. Los instrumentos utilizados fueron: Cuestionario sobre compromiso organizacional, escala de satisfacción docente y cuestionario para medir la deserción laboral, que presentan validez de constructo y confiabilidad por consistencia interna. Los resultados determinaron que existe correlación directa y alta entre el compromiso organizacional, la satisfacción laboral (Rho= 0,73) y la deserción laboral (Rho= -0,6) con un p-val < 0,05. Asimismo, el compromiso organizacional predice un 11% (R2) la satisfacción laboral con un coeficiente de regresión de 1,53 y el compromiso organizacional predice un 16% (R2) la deserción laboral con un coeficiente de regresión de 0.6, se concluye que el compromiso organizacional muestra una predicción baja tanto para satisfacción laboral y la deserción laboral.\"\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 1 if objective present. Yes: \"El estudio tuvo como objetivo determinar en qué medida el compromiso organizacional predice la satisfacción laboral y la deserción laboral...\" So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. Yes: \"El tipo de investigación es cuantitativa con un diseño no experimental-correlacional de corte transversal, se aplicó un estudio de regresión lineal simple...\" So 1.\n\n- D1_imryd_resultados: 1 if results present. Yes: \"Los resultados determinaron que existe correlación directa y alta...\" So 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. The last sentence: \"se concluye que el compromiso organizacional muestra una predicción baja tanto para satisfacción laboral y la deserción laboral.\" That's a conclusion. So 1.\n\n- D1_orden_logico: 1 if components present in logical order. The order: objective, methodology, results, conclusion. Yes. So 1.\n\n- D2_coherencia: 1-5. Evaluate flow. Let's read: The summary flows: objective, methodology, sample, instruments, results, conclusion. It's fairly coherent. No major jumps. Might be 4 or 5. Let's analyze: The summary is fairly straightforward. There's a slight jump from methodology to results, but that's normal. No abrupt changes. I'd give 5. But check for any adverbial or terminological drift. The summary uses \"p-val < 0,05\" but that's fine. The conclusion is consistent. So 5.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where, to whom, etc. The summary does not mention why it's important, or the context beyond the title. It just states the objective. So 0.\n\n- D3_metodo_detallado: 1 if at least two precisions about procedure. We have: design (no experimental-correlational), sample size 301, convenience sampling, instruments: questionnaire, scale, questionnaire. Also regression line. That's more than two. So 1.\n\n- D3_resultados_concretos: 1 if results provide specific content: yes: correlation coefficients, p-value, R2 percentages, regression coefficients. So 1.\n\n- D3_conclusion_responde: 1 if conclusion answers the objective. The objective: determine how commitment predicts satisfaction and turnover. The conclusion: \"se concluye que el compromiso organizacional muestra una predicción baja tanto para satisfacción laboral y la deserción laboral.\" That addresses the objective. So 1.\n\n- D4_consistencia: 1-5. Consistency between what is said and what is presented. Let's check: They say \"El tipo de investigación es cuantitativa con un diseño no experimental-correlacional de corte transversal, se aplicó un estudio de regresión lineal simple para estimar el coeficiente de determinación (R2) entre las variables.\" They present results: correlation coefficients, p-value, R2 percentages, regression coefficients. They conclude that prediction is low. That is consistent. No contradictions. So 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes. We can note that the summary is coherent, but lacks contextualization. Also mention that the conclusion is consistent. Provide a brief note.\n\nThus JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Resumen bien estructurado y coherente; carece de contextualización del problema.\"\n}\n\nCheck schema: all fields present. Observaciones string. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789700890,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e594c51153",
+  "usage": {
+   "completion_tokens": 1372,
+   "prompt_tokens": 9946,
+   "total_tokens": 11318,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1231,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.193355197,
+   "prompt_time": 0.059907358,
+   "completion_time": 1.465393219,
+   "total_time": 1.5253005769999999
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7rpdxehmbjx147a40zmxs",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:08:10.920822+00:00"
+}

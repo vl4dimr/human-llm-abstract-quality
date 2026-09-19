@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-039",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Incluye hipótesis, pero no afecta la puntuación. Flujo coherente con ligera redundancia."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Incluye hipótesis, pero no afecta la puntuación. Flujo coherente con ligera redundancia.\"}",
+ "usage": {
+  "input_tokens": 10041,
+  "output_tokens": 2110
+ },
+ "latency_s": 4.2240073680877686,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:00:04.591381+00:00",
+ "raw": {
+  "id": "chatcmpl-50104e88-5c49-44e7-baf9-04d6ae62a1f1",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Incluye hipótesis, pero no afecta la puntuación. Flujo coherente con ligera redundancia.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Aprendizaje organizacional en el servicio de tutoría, caso Instituto Superior Tecnológico José Antonio Encinas.\"\n\nSummary:\n\n\"El problema que aborda el presente trabajo de investigación trata sobre: Aprendizaje Organizacional en el Servicio de Tutoría, Caso Instituto Superior Tecnológico José Antonio Encinas- Periodo 2009, estudio que se efectúa en la ciudad de Puno, se sintetiza en la siguiente interrogante: ¿De qué manera el aprendizaje organizacional se relaciona con el servicio de tutoría en la gestión pedagógica en el Instituto Superior Público \"José Antonio Encinas\" de Puno?. La investigación se orienta por el siguiente objetivo general: Determinar el tipo y grado de correlación existente entre el aprendizaje organizacional y el servicio de tutoría en la gestión pedagógica en el Instituto Superior Público \"JAE\" de Puno; la respuesta tentativa que se ensaya en el proyecto de tesis es la siguiente hipótesis: cuanto es mayor el grado de aprendizaje organizacional que tienen los profesores sobre Tutoría y Orientación Educativa mayor será el grado de aplicación por parte de los profesores durante el desarrollo de las actividades educativas correspondientes al segundo semestre del año académico 2009. El tipo de investigación al que pertenece el presente trabajo es el tipo descriptivo y el diseño es el correlacional. Las técnicas e instrumentos que se utilizan son: la encuesta con su respectivo cuestionario para la variable \"grado de aprendizaje organizacional\"; en tanto que para la variable \"grado de aplicación\" se aplica la encuesta y el análisis documental. Después de analizar e interpretar los resultados se concluye que la mayoría de los profesores no tienen adecuado aprendizaje organizacional sobre el contenido de Tutoría y Orientación Educativa esta misma cantidad de profesores tampoco aplican durante el desarrollo de las actividades educativas, esto quiere decir, que entre las dos variables existe correlación, esta afirmación se sustenta en el coeficiente de correlación que se obtiene que es de r = 0.64. Palabras Clave: Aprendizaje Organizacional, Servicio de Tutoría, Instituto Superior Tecnológico José Antonio Encinas.\"\n\nWe need to evaluate each field.\n\nFirst, check if it's a valid summary: yes.\n\nNow, D1_imryd_objetivo: Does the summary contain an objective? Yes: \"Determinar el tipo y grado de correlación existente entre el aprendizaje organizacional y el servicio de tutoría en la gestión pedagógica en el Instituto Superior Público 'JAE' de Puno.\" That's explicit. So D1_imryd_objetivo = 1.\n\nD1_imryd_metodologia: Does it indicate how knowledge was obtained? Yes: \"El tipo de investigación al que pertenece el presente trabajo es el tipo descriptivo y el diseño es el correlacional. Las técnicas e instrumentos que se utilizan son: la encuesta con su respectivo cuestionario para la variable 'grado de aprendizaje organizacional'; en tanto que para la variable 'grado de aplicación' se aplica la encuesta y el análisis documental.\" So yes, methodology present. So D1_imryd_metodologia = 1.\n\nD1_imryd_resultados: Does it communicate what was found? Yes: \"se concluye que la mayoría de los profesores no tienen adecuado aprendizaje organizacional sobre el contenido de Tutoría y Orientación Educativa esta misma cantidad de profesores tampoco aplican durante el desarrollo de las actividades educativas, esto quiere decir, que entre las dos variables existe correlación, esta afirmación se sustenta en el coeficiente de correlación que se obtiene que es de r = 0.64.\" So yes, results present. D1_imryd_resultados = 1.\n\nD1_imryd_conclusiones: Does it have a closure that goes beyond repeating results? It says: \"se concluye que la mayoría de los profesores no tienen adecuado aprendizaje organizacional ... esta misma cantidad de profesores tampoco aplican ... esto quiere decir, que entre las dos variables existe correlación, esta afirmación se sustenta en el coeficiente de correlación que se obtiene que es de r = 0.64.\" This is a conclusion that interprets results and states correlation. It is not just repeating results; it interprets. So D1_imryd_conclusiones = 1.\n\nD1_orden_logico: Are the components present in logical order? The summary starts with problem, then objective, then hypothesis, then type of research, then techniques, then results, then conclusion. The order: problem (not part of IMRyD), objective, methodology, results, conclusion. That is correct order. So D1_orden_logico = 1.\n\nNow D2_coherencia: Evaluate flow. Let's read: The summary is somewhat long, but let's see. It starts with problem statement, then objective, then hypothesis, then type of research, then techniques, then results, then conclusion. The flow is fairly coherent. There are some abrupt transitions: \"El tipo de investigación al que pertenece el presente trabajo es el tipo descriptivo y el diseño es el correlacional.\" Then \"Las técnicas e instrumentos que se utilizan son: la encuesta con su respectivo cuestionario...\" Then \"Después de analizar e interpretar los resultados se concluye...\" The flow is okay. There is no major jump. The only potential issue: The conclusion is a bit long but still flows. I'd rate 4 maybe. Let's consider the scale: 5 is impeccable, 4 is good with minor aspereza. There is some repetition: \"la mayoría de los profesores no tienen adecuado aprendizaje organizacional sobre el contenido de Tutoría y Orientación Educativa esta misma cantidad de profesores tampoco aplican durante el desarrollo de las actividades educativas\" - a bit long but still coherent. I'd give 4.\n\nD3_contextualizacion: Does the summary situate the problem? It starts with \"El problema que aborda el presente trabajo de investigación trata sobre: Aprendizaje Organizacional en el Servicio de Tutoría, Caso Instituto Superior Tecnológico José Antonio Encinas- Periodo 2009, estudio que se efectúa en la ciudad de Puno\". That situates the problem: location, institution, period. So yes, contextualization present. D3_contextualizacion = 1.\n\nD3_metodo_detallado: Does it give at least two precisions? It says: \"El tipo de investigación al que pertenece el presente trabajo es el tipo descriptivo y el diseño es el correlacional. Las técnicas e instrumentos que se utilizan son: la encuesta con su respectivo cuestionario para la variable 'grado de aprendizaje organizacional'; en tanto que para la variable 'grado de aplicación' se aplica la encuesta y el análisis documental.\" So we have design (descriptivo, correlacional) and instrument (encuesta, cuestionario). That's at least two. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: Does it provide concrete results? Yes: \"r = 0.64\". Also \"la mayoría de los profesores no tienen adecuado aprendizaje organizacional ... esta misma cantidad de profesores tampoco aplican\". The r=0.64 is a concrete result. So D3_resultados_concretos = 1.\n\nD3_conclusion_responde: Does the conclusion respond to the objective? The objective: \"Determinar el tipo y grado de correlación existente entre el aprendizaje organizacional y el servicio de tutoría en la gestión pedagógica\". The conclusion: \"se concluye que la mayoría de los profesores no tienen adecuado aprendizaje organizacional ... esta misma cantidad de profesores tampoco aplican ... existe correlación, r=0.64.\" That addresses the correlation. So yes, conclusion responds. D3_conclusion_responde = 1.\n\nD4_consistencia: Consistency between what is said and what is presented. Let's check: They say type of research: descriptivo, correlacional. They present correlation coefficient r=0.64. They say \"la mayoría de los profesores no tienen adecuado aprendizaje organizacional ... esta misma cantidad de profesores tampoco aplican\". That is consistent. No contradictions. So D4_consistencia = 5.\n\nno_evaluable: The text is a summary, not a non-summary. So no_evaluable = 0.\n\nobservaciones: We can add any notes. Maybe note that the summary includes a hypothesis but not necessary for IMRyD. But we can mention that the summary includes a hypothesis but that doesn't affect scoring. Also note that the conclusion is somewhat long but still fine. Let's add a short observation: \"Incluye hipótesis, pero no afecta la puntuación.\" Also note that the flow is good. Let's produce JSON.\n\nCheck schema: all fields required. Provide integer or null. We have all values. Provide compact JSON.\n\nLet's produce:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Incluye hipótesis, pero no afecta la puntuación. Flujo coherente con ligera redundancia.\"\n}\n\nCheck that all fields are present. Yes.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789700404,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_8d13edce1d",
+  "usage": {
+   "completion_tokens": 2110,
+   "prompt_tokens": 10041,
+   "total_tokens": 12151,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1964,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.239747119,
+   "prompt_time": 0.511943555,
+   "completion_time": 2.513949196,
+   "total_time": 3.025892751
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s79syse3vav5s8w23hrzne",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:00:04.591474+00:00"
+}

@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-071",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen presenta contexto, objetivo, metodología detallada, resultados concretos y conclusión coherente. No se reporta valor de chi-cuadrado ni p, pero la conclusión es consistente con los resultados."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta contexto, objetivo, metodología detallada, resultados concretos y conclusión coherente. No se reporta valor de chi-cuadrado ni p, pero la conclusión es consistente con los resultados.\"}",
+ "usage": {
+  "input_tokens": 10038,
+  "output_tokens": 1887
+ },
+ "latency_s": 3.7286384105682373,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:03:55.140231+00:00",
+ "raw": {
+  "id": "chatcmpl-8ac1dab3-1ca0-48c7-9ecc-d20c2fdf1823",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta contexto, objetivo, metodología detallada, resultados concretos y conclusión coherente. No se reporta valor de chi-cuadrado ni p, pero la conclusión es consistente con los resultados.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Mobbing laboral y desempeño laboral de los trabajadores de la cooperativa de ahorro y crédito Wiñay Macusani LTDA. – 2022\"\n\nResumen: (I'll rewrite for clarity)\n\n\"La preocupación en cómo mejorar los niveles de productividad ha dejado de lado abordar muchos factores relacionados a la convivencia del trabajador que derivan acciones de hostigamiento asumidos en términos de miedo, terror, o desánimo que lamentablemente inciden en la realización de sus tareas diarias y redundan en su desempeño laboral; en esa dirección la investigación tuvo como objetivo general evaluar la relación entre mobbing laboral y desempeño laboral de los trabajadores de la Cooperativa de Ahorro y Crédito Wiñay Macusani Ltda.– 2022. En el ámbito metodológico se asume los términos del enfoque cuantitativo, tipo de investigación descriptivo-correlacional, diseño no experimental de corte transversal y como métodos el hipotético-deductivo. La población de estudio estuvo conformada por 112 trabajadores que dieron lugar a muestra probabilística de 87 trabajadores. La recolección de datos se realizó mediante la técnica de la encuesta teniendo como instrumentos, dos cuestionarios con 21 y 20 preguntas para mobbing laboral y desempeño laboral respectivamente; al procesar los datos recolectados mediante el programa estadístico SPSS versión 27 generó tablas donde se muestran los resultados obtenidos. Como resultados significativos de manera general se tiene que, la presencia ocasional de casos de mobbing laboral (55,2%) permiten un mal desempeño laboral (12.6%); de manera específica, un desagradable ambiente laboral (68.4%) da lugar a la inexistencia de eficiencia laboral (18.4%); y una desagradable relación con los jefes (62.1%) da lugar a la inexistencia de eficiencia laboral (18.4%) por lo que, se concluye en base a los resultados determinados mediante la prueba del chi cuadrado de Pearson rechazar la hipótesis nula y aceptar la hipótesis alterna: el mobbing laboral se relaciona de manera significativa con el desempeño laboral.\"\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 1 if objective present. Yes: \"la investigación tuvo como objetivo general evaluar la relación entre mobbing laboral y desempeño laboral\". So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. Yes: \"En el ámbito metodológico se asume los términos del enfoque cuantitativo, tipo de investigación descriptivo-correlacional, diseño no experimental de corte transversal y como métodos el hipotético-deductivo.\" Also population, sample, instrument. So 1.\n\n- D1_imryd_resultados: 1 if results present. Yes: \"Como resultados significativos de manera general se tiene que, la presencia ocasional de casos de mobbing laboral (55,2%) permiten un mal desempeño laboral (12.6%); ...\". So 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. Yes: \"se concluye en base a los resultados determinados mediante la prueba del chi cuadrado de Pearson rechazar la hipótesis nula y aceptar la hipótesis alterna: el mobbing laboral se relaciona de manera significativa con el desempeño laboral.\" So 1.\n\n- D1_orden_logico: 1 if components present in logical order. The order: objective, methodology, results, conclusion. Yes. So 1.\n\n- D2_coherencia: scale 1-5. We need to evaluate flow. Let's analyze.\n\nText: starts with a long sentence about productivity and factors, then objective. Then methodology. Then population, sample, instrument. Then results. Then conclusion. The flow: The first sentence is a general context about productivity and factors, then objective. That is okay. Then methodology. Then results. Then conclusion. The text seems coherent, but there is some repetition: \"la presencia ocasional de casos de mobbing laboral (55,2%) permiten un mal desempeño laboral (12.6%)\" etc. The flow is fairly linear. I'd rate 4 maybe. Let's think: 5 would be impeccable, 4 is good with minor aspereza. There is some adjetivization: \"desagradable ambiente laboral\" etc. But overall it's fine. I'd give 4.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where it occurs, to whom it affects, against what norm. The summary starts with \"La preocupación en cómo mejorar los niveles de productividad ha dejado de lado abordar muchos factores relacionados a la convivencia del trabajador...\" That gives context: productivity, factors, hostigamiento. So yes, contextualization present. So 1.\n\n- D3_metodo_detallado: 1 if at least two precisions. We have: \"enfoque cuantitativo, tipo de investigación descriptivo-correlacional, diseño no experimental de corte transversal, métodos hipotético-deductivo, población 112, muestra probabilística de 87, técnica de encuesta, instrumentos dos cuestionarios con 21 y 20 preguntas, programa SPSS v27.\" That's more than two. So 1.\n\n- D3_resultados_concretos: 1 if results concrete: yes, percentages, chi-square. So 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to objective. Yes, conclusion states mobbing relates significantly to performance, which is the objective. So 1.\n\n- D4_consistencia: scale 1-5. We need to evaluate consistency between what is said was done and what is presented. The summary says \"prueba del chi cuadrado de Pearson\" but does not report the chi-square value or p-value. It says \"se concluye ... rechazar la hipótesis nula y aceptar la hipótesis alterna: el mobbing laboral se relaciona de manera significativa con el desempeño laboral.\" That is consistent with results: percentages show association. There's no contradictory statement. So consistency is good. I'd rate 5. But check if any discordance: They mention \"la presencia ocasional de casos de mobbing laboral (55,2%) permiten un mal desempeño laboral (12.6%)\". That is a result. They also mention \"un desagradable ambiente laboral (68.4%) da lugar a la inexistencia de eficiencia laboral (18.4%)\". That is also a result. They mention \"una desagradable relación con los jefes (62.1%) da lugar a la inexistencia de eficiencia laboral (18.4%)\". So results are consistent. Conclusion: \"el mobbing laboral se relaciona de manera significativa con el desempeño laboral.\" That is consistent. So 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes. We can note that the summary is coherent, but maybe mention that the conclusion uses \"se concluye en base a los resultados determinados mediante la prueba del chi cuadrado de Pearson\" but no p-value. But that's fine. We can add a note: \"No se reporta valor de chi-cuadrado ni p, pero la conclusión es coherente con los resultados.\" Also note that the summary is fairly long but coherent. Let's produce a concise observation.\n\nNow produce JSON with all fields. Ensure all required fields present. Use compact JSON. Let's produce:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Resumen presenta contexto, objetivo, metodología detallada, resultados concretos y conclusión coherente. No se reporta valor de chi-cuadrado ni p, pero la conclusión es consistente con los resultados.\"\n}\n\nCheck schema: all fields present, types correct. Observations string. Good."
+    }
+   }
+  ],
+  "created": 1789700634,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_a8c584dda7",
+  "usage": {
+   "completion_tokens": 1887,
+   "prompt_tokens": 10038,
+   "total_tokens": 11925,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1722,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.31063295,
+   "prompt_time": 0.510735099,
+   "completion_time": 2.193878579,
+   "total_time": 2.704613678
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7gv9de3vaa4sfjsa7zm0g",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:03:55.140254+00:00"
+}

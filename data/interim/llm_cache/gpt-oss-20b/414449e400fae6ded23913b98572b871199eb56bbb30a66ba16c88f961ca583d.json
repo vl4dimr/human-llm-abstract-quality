@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-030",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen bien estructurado, con objetivo, metodología, resultados y conclusión claros. Coherencia alta (4)."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen bien estructurado, con objetivo, metodología, resultados y conclusión claros. Coherencia alta (4).\"}",
+ "usage": {
+  "input_tokens": 10064,
+  "output_tokens": 1680
+ },
+ "latency_s": 3.051269769668579,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T02:58:46.930399+00:00",
+ "raw": {
+  "id": "chatcmpl-7e6808c4-ae1c-408e-8ff1-0806ff1a0b05",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen bien estructurado, con objetivo, metodología, resultados y conclusión claros. Coherencia alta (4).\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Factibilidad del uso de la madera Pinus radiata como material estructural para la construcción de tijerales en la región Puno\"\n\nResumen: (I'll reformat)\n\n\"La investigación se enmarca en la región Puno. El problema fue la factibilidad de uso de la madera Pinus Radiata como material estructural para la construcción de tijerales en viviendas. La investigación se realizó de acuerdo a las normas técnicas peruanas sobre maderas, se extrajo 5 árboles de pino en el vivero forestal Trapiche-Moho. Se aserró para obtener vigas para el ensayo a flexión a escala natural, densidad, contenido de humedad y se construyó un tijeral tipo Howe para evaluarlo. Los ensayos físicos y mecánicos se realizaron en los laboratorios de la escuela profesional de Ingeniería Civil de la Universidad Peruana Unión. La densidad básica obtenida fue de 0.45 g/cm3, el contenido de humedad fue de 27.25 %, el módulo de elasticidad mínima y promedio fue: 54549.61 kg/cm2 y 76601.80 kg/cm2 respectivamente y el esfuerzo admisible a flexión es 89.091 kg/cm2. Se concluye que la madera pino no clasifica en el grupo C de la lista de especies agrupadas del RNE E.010 puesto que no alcanza a los valores mínimos de resistencia mecánica. A pesar de su baja resistencia se puede usarlo como material estructural según la evaluación de la armadura sometida a resistencia mecánica. Según la clasificación visual fueron rechazadas, el 44% de las 36 vigas. El rechazo fue por la presencia de nudos, dirección de la fibra y por arqueadura en la madera. Con los resultados de los ensayos físicos y mecánicos se realizó la evaluación de tijeral de madera. Se evaluó el tijeral tipo Howe que resistió una carga de 837.55 kg, siendo el resultado esperado del diseño de 826.82 kg. Se recomienda realizar un nuevo grupo de especies maderables con resistencias más bajas que el grupo C, donde si puede clasificar la madera pino, como se realizó en Chile.\"\n\nWe need to annotate fields:\n\n- D1_imryd_objetivo: 1 if objective present. The summary says: \"El problema fue la factibilidad de uso de la madera Pinus Radiata como material estructural para la construcción de tijerales en viviendas.\" That is objective. So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. The summary describes methodology: extraction of trees, saw, tests, etc. So 1.\n\n- D1_imryd_resultados: 1 if results present. Yes, many results: densities, modulus, etc. So 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. Yes: \"Se concluye que la madera pino no clasifica en el grupo C...\" etc. So 1.\n\n- D1_orden_logico: 1 if components present in logical order. The summary seems to start with objective, then methodology, then results, then conclusion. Let's check: It starts with \"La investigación se enmarca en la región Puno. El problema fue la factibilidad...\" That's objective. Then methodology: extraction, saw, tests. Then results: densities, modulus, etc. Then conclusion: \"Se concluye que la madera pino no clasifica...\" So yes, order is correct. So 1.\n\n- D2_coherencia: 1-5. We need to evaluate coherence. The summary flows: introduction, objective, methodology, results, conclusion. There are some transitions but overall coherent. There is some repetition: \"Se concluye que la madera pino no clasifica...\" then \"A pesar de su baja resistencia se puede usarlo...\" etc. But overall coherent. I'd rate 4 maybe. Let's analyze: The summary is fairly coherent, but there are some abrupt transitions: after results, it goes to conclusion, then recommendation. But still coherent. I'd give 4.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where, etc. The summary says \"La investigación se enmarca en la región Puno.\" That situates location. It also says \"El problema fue la factibilidad de uso de la madera Pinus Radiata como material estructural para la construcción de tijerales en viviendas.\" That explains why it's important: to evaluate feasibility. So yes, contextualization present. So 1.\n\n- D3_metodo_detallado: 1 if at least two precisions about procedure. The summary gives: extraction of 5 trees, saw to obtain beams, tests at natural scale, densitiy, moisture, building a Howe truss, tests in labs, etc. That's more than two. So 1.\n\n- D3_resultados_concretos: 1 if results concrete: yes, densities, modulus, etc. So 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to objective. The conclusion: \"Se concluye que la madera pino no clasifica en el grupo C... A pesar de su baja resistencia se puede usarlo...\" The objective was feasibility of using Pinus radiata as structural material. The conclusion addresses that: it doesn't meet group C but can be used. So yes, responds. So 1.\n\n- D4_consistencia: 1-5. We need to evaluate consistency between what is said and what is presented. Let's check: The summary says \"Se concluye que la madera pino no clasifica en el grupo C... A pesar de su baja resistencia se puede usarlo...\" The results show densities, modulus, etc. The conclusion is consistent with results: the modulus values are low, so not meeting group C. The conclusion also says can be used as structural material according to armadura evaluation. That seems consistent. There's no contradictory statements. So I'd rate 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes. We can note that the summary is coherent, but some minor issues: repeated \"Se concluye\" etc. But we can keep it minimal. Maybe: \"Resumen bien estructurado, con objetivo, metodología, resultados y conclusión claros. Coherencia alta (4).\"\n\nWe must output JSON with all fields. Ensure values are integers or null. Provide string for observaciones.\n\nLet's produce JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Resumen bien estructurado, con objetivo, metodología, resultados y conclusión claros. Coherencia alta (4).\"\n}\n\nCheck schema: all required fields present. Observaciones string. Good.\n\nReturn only JSON."
+    }
+   }
+  ],
+  "created": 1789700326,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_75c733514d",
+  "usage": {
+   "completion_tokens": 1680,
+   "prompt_tokens": 10064,
+   "total_tokens": 11744,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1533,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.316945252,
+   "prompt_time": 0.600162914,
+   "completion_time": 1.789608081,
+   "total_time": 2.389770995
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s77em5ee79gbx5hpp3vf6p",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T02:58:46.930488+00:00"
+}

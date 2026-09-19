@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-087",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta los cuatro componentes canónicos en orden y con claridad. Sin embargo, en la dimensión 2 (coherencia organizacional), se detecta un salto temático al pasar de la metodología a las conclusiones, lo que reduce la puntuación a 3. En la dimensión 3, aunque se menciona que se identificaron medidas normativas, no se dan datos concretos, lo que hace que los campos D3_contextualizacion, D3_metodo_detallado y D3_resultados_concretos valgan 0. En la dimensión 4, la conclusión menciona que la solución no pasa por la criminalización, lo cual contradice la idea de que se identificaron medidas normativas, lo que reduce la puntuación a 3."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta los cuatro componentes canónicos en orden y con claridad. Sin embargo, en la dimensión 2 (coherencia organizacional), se detecta un salto temático al pasar de la metodología a las conclusiones, lo que reduce la puntuación a 3. En la dimensión 3, aunque se menciona que se identificaron medidas normativas, no se dan datos concretos, lo que hace que los campos D3_contextualizacion, D3_metodo_detallado y D3_resultados_concretos valgan 0. En la dimensión 4, la conclusión menciona que la solución no pasa por la criminalización, lo cual contradice la idea de que se identificaron medidas normativas, lo que reduce la puntuación a 3.\"\n}",
+ "usage": {
+  "input_tokens": 10874,
+  "output_tokens": 331,
+  "total_duration_s": 10.5095057
+ },
+ "latency_s": 10.521382570266724,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:30:30.339859+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:30:30.330977Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta los cuatro componentes canónicos en orden y con claridad. Sin embargo, en la dimensión 2 (coherencia organizacional), se detecta un salto temático al pasar de la metodología a las conclusiones, lo que reduce la puntuación a 3. En la dimensión 3, aunque se menciona que se identificaron medidas normativas, no se dan datos concretos, lo que hace que los campos D3_contextualizacion, D3_metodo_detallado y D3_resultados_concretos valgan 0. En la dimensión 4, la conclusión menciona que la solución no pasa por la criminalización, lo cual contradice la idea de que se identificaron medidas normativas, lo que reduce la puntuación a 3.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10509505700,
+  "load_duration": 6890500,
+  "prompt_eval_count": 10874,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 359889000,
+  "eval_count": 331,
+  "eval_duration": 10039250000
+ },
+ "cached_at_utc": "2026-09-19T02:30:30.339874+00:00"
+}

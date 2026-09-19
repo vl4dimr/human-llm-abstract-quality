@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-126",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen narrativo, sin contextualización explícita; flujo coherente y conclusión responde al objetivo."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen narrativo, sin contextualización explícita; flujo coherente y conclusión responde al objetivo.\"}",
+ "usage": {
+  "input_tokens": 10092,
+  "output_tokens": 2113,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.8801796436309814,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:10:33.650759+00:00",
+ "raw": {
+  "id": "chatcmpl-620da24d-49fd-4a62-910e-6a91baea1297",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen narrativo, sin contextualización explícita; flujo coherente y conclusión responde al objetivo.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nWe need to evaluate each field.\n\nLet's parse the summary.\n\nTitle: \"Efecto de la intervención de enfermería en el conocimiento de los factores de riesgo del embarazo en la adolescencia en estudiantes de la Institución Educativa Secundaria Independencia Nacional – Puno 2017\"\n\nSummary:\n\n\"La presente investigación se realizó con el objetivo de determinar el efecto de la Intervención de enfermería en el conocimiento de los factores de riesgo del embarazo en la adolescencia en estudiantes de la Institución Educativa Secundaria Independencia Nacional - Puno 2017. El estudio es de tipo Pre-experimental, con diseño de Pre y Post Test con un grupo; la muestra estuvo conformada por 20 estudiantes comprendidas entre 14 - 16 años de edad, asignadas mediante el muestreo probabilístico (muestreo aleatorio estratificado con afijación proporcional); para la recolección de datos, se utilizó la técnica de la encuesta; la comprobación de la hipótesis se realizó con la prueba estadística T Student. Los resultados obtenidos revelan que los adolescentes en el pre test, presentaron conocimientos regulares un 75% y deficientes 25%; en el post test incrementaron significativamente en un 85% bueno y 15% regular; respecto al factor de riesgo biológico del embarazo en la adolescencia, se observa que el 75% de las adolescentes en el pre test tienen un conocimiento regular, seguido del 25% deficiente; en el post el 85% tiene un conocimiento bueno, 15% regular. Concerniente en el conocimiento del factor de riesgo psicológico del embarazo en la adolescencia en el pre test el 55% tuvo un conocimiento regular, 35% deficiente y solo un 10% bueno; post test el 95% tuvieron un conocimiento bueno y 5% un conocimiento regular; respecto al factor de riesgo socioeconómico en el pre test, el 5% de las adolescentes muestran un conocimiento bueno, 40% regular y 55% deficiente; luego el post test, el 90% bueno y 10% regular. Comprobándose estadísticamente el promedio del grupo Post Test es mayor al promedio del grupo Pre Test; aceptándose la H1, por lo que la intervención educativa de enfermería es efectiva en el conocimiento de los factores de riesgo del embarazo en la adolescencia\"\n\nWe need to evaluate each dimension.\n\n### D1_imryd_objetivo\n\nWe need to see if the objective is present. The summary says: \"La presente investigación se realizó con el objetivo de determinar el efecto de la Intervención de enfermería en el conocimiento de los factores de riesgo del embarazo en la adolescencia en estudiantes de la Institución Educativa Secundaria Independencia Nacional - Puno 2017.\" That is explicit. So D1_imryd_objetivo = 1.\n\n### D1_imryd_metodologia\n\nWe need to see if there is a concrete indication of how knowledge was obtained. The summary says: \"El estudio es de tipo Pre-experimental, con diseño de Pre y Post Test con un grupo; la muestra estuvo conformada por 20 estudiantes comprendidas entre 14 - 16 años de edad, asignadas mediante el muestreo probabilístico (muestreo aleatorio estratificado con afijación proporcional); para la recolección de datos, se utilizó la técnica de la encuesta; la comprobación de la hipótesis se realizó con la prueba estadística T Student.\" That is a concrete method. So D1_imryd_metodologia = 1.\n\n### D1_imryd_resultados\n\nWe need to see if the summary communicates what was found. It says: \"Los resultados obtenidos revelan que los adolescentes en el pre test, presentaron conocimientos regulares un 75% y deficientes 25%; en el post test incrementaron significativamente en un 85% bueno y 15% regular; ...\". So yes, results are present. So D1_imryd_resultados = 1.\n\n### D1_imryd_conclusiones\n\nWe need to see if there is a closure that goes beyond repeating the result. The summary ends with: \"Comprobándose estadísticamente el promedio del grupo Post Test es mayor al promedio del grupo Pre Test; aceptándose la H1, por lo que la intervención educativa de enfermería es efectiva en el conocimiento de los factores de riesgo del embarazo en la adolescencia\". That is a conclusion: it states that the intervention is effective. It goes beyond repeating results. So D1_imryd_conclusiones = 1.\n\n### D1_orden_logico\n\nWe need to check if the components present appear in logical sequence: objective → method → results → conclusion. The summary starts with objective, then method, then results, then conclusion. So D1_orden_logico = 1.\n\n### D2_coherencia\n\nWe need to evaluate flow. Let's read the summary: It is fairly coherent. It starts with objective, then method, then results, then conclusion. The results section is long but flows logically. There are no abrupt jumps. There is some repetition of percentages but that's fine. The flow is good. I'd rate 5 maybe. But we need to consider if there are any issues: The summary uses \"pre test\" and \"post test\" repeatedly. The flow is consistent. There's no contradictory statements. So D2_coherencia = 5.\n\n### D3_contextualizacion\n\nWe need to see if the summary situates the problem: why it matters, where it occurs, to whom it affects, against what norm or framework. The summary does not mention why it's important, or the broader context. It just states the objective. So D3_contextualizacion = 0.\n\n### D3_metodo_detallado\n\nWe need at least two precisions about procedure: design, type of study, sample size, sampling technique, instrument, statistical test, etc. The summary includes: \"tipo Pre-experimental, diseño de Pre y Post Test con un grupo; muestra de 20 estudiantes; muestreo probabilístico (muestreo aleatorio estratificado con afijación proporcional); técnica de la encuesta; prueba estadística T Student.\" That's at least 5 precisions. So D3_metodo_detallado = 1.\n\n### D3_resultados_concretos\n\nWe need results with specific content: percentages, magnitudes, categories, relationships. The summary gives many percentages: 75% regular, 25% deficient, 85% bueno, 15% regular, etc. So D3_resultados_concretos = 1.\n\n### D3_conclusion_responde\n\nWe need to see if the conclusion responds to the stated objective. The objective: \"determinar el efecto de la intervención de enfermería en el conocimiento de los factores de riesgo del embarazo en la adolescencia\". The conclusion: \"la intervención educativa de enfermería es efectiva en el conocimiento de los factores de riesgo del embarazo en la adolescencia\". That directly responds. So D3_conclusion_responde = 1.\n\n### D4_consistencia\n\nWe need to evaluate consistency between what the summary says it did and what it presents. The summary says it's pre-experimental, pre/post test, 20 students, etc. The results are percentages. The conclusion says the intervention is effective. The results show improvement from pre to post. That supports the conclusion. There's no contradictory statements. So D4_consistencia = 5.\n\nBut we need to check if any contradictions: The summary says \"Comprobándose estadísticamente el promedio del grupo Post Test es mayor al promedio del grupo Pre Test; aceptándose la H1\". That is consistent. So D4_consistencia = 5.\n\n### no_evaluable\n\nThe summary is a valid summary. So no_evaluable = 0.\n\n### observaciones\n\nWe can add any notes. We might note that the summary is long but coherent. We might note that the contextualization is missing. We might note that the conclusion is present. We might note that the summary is a narrative, not structured. But we can keep it short.\n\nLet's produce JSON with all fields.\n\nCheck schema: all fields required. Provide integer or null. Provide string for observaciones.\n\nWe need to ensure no extra fields. Provide compact JSON.\n\nLet's produce:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Resumen narrativo, sin contextualización explícita; flujo coherente y conclusión responde al objetivo.\"\n}\n\nCheck that all fields are present. Yes.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789701033,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_66891002f6",
+  "usage": {
+   "completion_tokens": 2113,
+   "prompt_tokens": 10092,
+   "total_tokens": 12205,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1969,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.191322928,
+   "prompt_time": 0.063356035,
+   "completion_time": 2.363163418,
+   "total_time": 2.426519453
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7x0xxe7vtfevsg8b5dr1e",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:10:33.650779+00:00"
+}

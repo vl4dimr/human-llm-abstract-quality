@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-108",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 9836,
+  "output_tokens": 1446,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.512639284133911,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:08:16.935152+00:00",
+ "raw": {
+  "id": "chatcmpl-1393f0c6-928b-4e31-89fd-3e5cb6c78d91",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's analyze the summary.\n\nTitle: \"Incorporación de herramientas tecnológicas en la producción acuícola.\"\n\nSummary:\n\n\"La acuicultura en el Perú está en auge, por lo que es necesario implementar técnicas de producción y tecnificar el proceso para abordar una perspectiva sostenible, eficiente y competitiva. El objetivo de la revisión ha sido identificar las técnicas que utilizan los países con alta competitividad en el sector y dar a conocer la deficiencia que existe en la acuicultura peruana. La obtención de información se ha realizado utilizando el motor de búsqueda google académico para facilitar la filtración de la información utilizada, los artículos tomados comprenden a los años 2016 y 2020 respectivamente. La revisión ha permitido identificar que la tecnología juega un papel importante en la tecnificación del proceso, los países que han aplicado tecnología hoy en día están posicionados como referentes acuícolas. Se concluye que para llegar a posicionarse como un referente acuícola se debe aplicar estrategias, políticas de producción y la implantación de tecnología e innovación en el proceso, y así garantizar una producción de calidad de acuerdo a la demanda del mercado.\"\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 1 if objective present. The summary says: \"El objetivo de la revisión ha sido identificar las técnicas que utilizan los países con alta competitividad en el sector y dar a conocer la deficiencia que existe en la acuicultura peruana.\" That's explicit objective. So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. The summary says: \"La obtención de información se ha realizado utilizando el motor de búsqueda google académico para facilitar la filtración de la información utilizada, los artículos tomados comprenden a los años 2016 y 2020 respectivamente.\" That indicates method: search engine, filtering, years. That's a concrete method. So 1.\n\n- D1_imryd_resultados: 1 if results present. The summary says: \"La revisión ha permitido identificar que la tecnología juega un papel importante en la tecnificación del proceso, los países que han aplicado tecnología hoy en día están posicionados como referentes acuícolas.\" That's a result: technology plays important role, countries with tech are leaders. So 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. The summary says: \"Se concluye que para llegar a posicionarse como un referente acuícola se debe aplicar estrategias, políticas de producción y la implantación de tecnología e innovación en el proceso, y así garantizar una producción de calidad de acuerdo a la demanda del mercado.\" That's a conclusion. So 1.\n\n- D1_orden_logico: 1 if components present in logical order. The order: objective, methodology, results, conclusion. Yes. So 1.\n\n- D2_coherencia: 1-5. Evaluate flow. Let's read: \"La acuicultura en el Perú está en auge, por lo que es necesario implementar técnicas de producción y tecnificar el proceso para abordar una perspectiva sostenible, eficiente y competitiva.\" This is context. Then objective. Then methodology. Then results. Then conclusion. The flow seems coherent. There's no abrupt jumps. So maybe 5. But check for any adverbial or repeated terms. The summary is fairly smooth. I'd give 5.\n\n- D3_contextualizacion: 1 if summary situates problem: why important, where, who, etc. The summary starts with \"La acuicultura en el Perú está en auge, por lo que es necesario implementar técnicas de producción y tecnificar el proceso...\" That situates the problem: it's in Peru, it's booming, need to implement tech. So yes, 1.\n\n- D3_metodo_detallado: 1 if at least two precisions about procedure. The summary says: \"La obtención de información se ha realizado utilizando el motor de búsqueda google académico para facilitar la filtración de la información utilizada, los artículos tomados comprenden a los años 2016 y 2020 respectivamente.\" That gives: search engine, filtering, years. That's at least two precisions: search engine and years. So 1.\n\n- D3_resultados_concretos: 1 if results provide specific content: numbers, categories, etc. The results: \"la tecnología juega un papel importante en la tecnificación del proceso, los países que han aplicado tecnología hoy en día están posicionados como referentes acuícolas.\" That's a qualitative statement but still concrete: technology important, countries with tech are leaders. It's a statement but not numeric. The protocol says \"categorías nombradas, relaciones con dirección.\" This is a relationship: technology -> better position. It's a concrete result. So 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to objective. The objective: identify techniques used by competitive countries and highlight deficiency in Peru. The conclusion: to become a reference, need to apply strategies, policies, technology, innovation. That addresses the objective: it gives recommendation to address deficiency. So yes, 1.\n\n- D4_consistencia: 1-5. Consistency between what summary says it did and what it presents. Let's check: Methodology: search engine, filtering, years. Results: technology important, countries with tech are leaders. Conclusion: need to apply strategies, policies, technology, innovation. There's no contradiction. So consistency high. I'd give 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes? We can add nothing or empty string. The schema requires string. We can put empty string \"\".\n\nThus JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"\"\n}\n\nCheck schema: all required fields present. All values are integers or null. Observaciones string. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789700896,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e189667b30",
+  "usage": {
+   "completion_tokens": 1446,
+   "prompt_tokens": 9836,
+   "total_tokens": 11282,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1320,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.244008578,
+   "prompt_time": 0.052175561,
+   "completion_time": 1.4872897840000001,
+   "total_time": 1.539465345
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7rw7be8mrp4s8nny7nfet",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:08:16.935246+00:00"
+}

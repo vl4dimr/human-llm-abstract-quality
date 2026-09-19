@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-050",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD y presenta cada componente con claridad. La coherencia es buena, aunque podría mejorar en la transición entre los resultados y las conclusiones. La metodología está detallada con el enfoque cuantitativo, diseño cuasi experimental y los grupos homogéneos. Los resultados son concretos, mostrando las medias y la prueba estadística t de Student. La conclusión responde al objetivo, mostrando que los materiales concretos manipulables mejoran el aprendizaje de la geometría."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD y presenta cada componente con claridad. La coherencia es buena, aunque podría mejorar en la transición entre los resultados y las conclusiones. La metodología está detallada con el enfoque cuantitativo, diseño cuasi experimental y los grupos homogéneos. Los resultados son concretos, mostrando las medias y la prueba estadística t de Student. La conclusión responde al objetivo, mostrando que los materiales concretos manipulables mejoran el aprendizaje de la geometría.\"\n}",
+ "usage": {
+  "input_tokens": 10915,
+  "output_tokens": 278,
+  "total_duration_s": 9.0143295
+ },
+ "latency_s": 9.025737285614014,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:24:46.277895+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:24:46.268622Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD y presenta cada componente con claridad. La coherencia es buena, aunque podría mejorar en la transición entre los resultados y las conclusiones. La metodología está detallada con el enfoque cuantitativo, diseño cuasi experimental y los grupos homogéneos. Los resultados son concretos, mostrando las medias y la prueba estadística t de Student. La conclusión responde al objetivo, mostrando que los materiales concretos manipulables mejoran el aprendizaje de la geometría.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9014329500,
+  "load_duration": 8979900,
+  "prompt_eval_count": 10915,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 401745000,
+  "eval_count": 278,
+  "eval_duration": 8508126000
+ },
+ "cached_at_utc": "2026-09-19T02:24:46.277915+00:00"
+}

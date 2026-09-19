@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-094",
+ "model_name": "mistral-7b",
+ "provider": "ollama",
+ "model": "mistral:latest",
+ "model_reported": "mistral:latest",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "No se menciona ningún método específico, ni se presentan resultados concretos o conclusiones que respondan al objetivo"
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"No se menciona ningún método específico, ni se presentan resultados concretos o conclusiones que respondan al objetivo\"\n}",
+ "usage": {
+  "input_tokens": 12400,
+  "output_tokens": 223,
+  "total_duration_s": 6.1972198
+ },
+ "latency_s": 6.199880361557007,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T00:44:50.128624+00:00",
+ "raw": {
+  "model": "mistral:latest",
+  "created_at": "2026-09-19T00:44:50.12694Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"No se menciona ningún método específico, ni se presentan resultados concretos o conclusiones que respondan al objetivo\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 6197219800,
+  "load_duration": 4087600,
+  "prompt_eval_count": 12400,
+  "prompt_eval_cached_count": 12155,
+  "prompt_eval_duration": 183722000,
+  "eval_count": 223,
+  "eval_duration": 5915110000
+ },
+ "cached_at_utc": "2026-09-19T00:44:50.128641+00:00"
+}

@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-023",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 1,
+  "no_evaluable": 0,
+  "observaciones": "El resumen no presenta los componentes IMRyD (objetivo, metodología, resultados, conclusiones) de manera explícita. La metodología y resultados no están presentes. La conclusión no responde al objetivo. La coherencia organizacional es baja debido a la falta de estructura clara y la falta de precisión metodológica. La consistencia metodológica es baja debido a la ausencia de metodología y resultados concretos."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 1,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen no presenta los componentes IMRyD (objetivo, metodología, resultados, conclusiones) de manera explícita. La metodología y resultados no están presentes. La conclusión no responde al objetivo. La coherencia organizacional es baja debido a la falta de estructura clara y la falta de precisión metodológica. La consistencia metodológica es baja debido a la ausencia de metodología y resultados concretos.\"\n}",
+ "usage": {
+  "input_tokens": 11233,
+  "output_tokens": 251,
+  "total_duration_s": 8.0644682
+ },
+ "latency_s": 8.074506282806396,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:28:20.001330+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:28:19.992305Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 1,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen no presenta los componentes IMRyD (objetivo, metodología, resultados, conclusiones) de manera explícita. La metodología y resultados no están presentes. La conclusión no responde al objetivo. La coherencia organizacional es baja debido a la falta de estructura clara y la falta de precisión metodológica. La consistencia metodológica es baja debido a la ausencia de metodología y resultados concretos.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8064468200,
+  "load_duration": 4291300,
+  "prompt_eval_count": 11233,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 621695000,
+  "eval_count": 251,
+  "eval_duration": 7370905000
+ },
+ "cached_at_utc": "2026-09-19T01:28:20.001376+00:00"
+}

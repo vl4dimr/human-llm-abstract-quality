@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-085",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen sin encabezados estructurados, pero cumple todas las funciones informativas."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin encabezados estructurados, pero cumple todas las funciones informativas.\"}",
+ "usage": {
+  "input_tokens": 10047,
+  "output_tokens": 1644,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.718722105026245,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:05:39.317265+00:00",
+ "raw": {
+  "id": "chatcmpl-c2b875fd-2de6-4fae-991d-218585569d21",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin encabezados estructurados, pero cumple todas las funciones informativas.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Evaluación para la mejora del sistema de gestión de seguridad en la Compañía Auromina S.R.L., Corporación Minera Ananea S.A. - 2022\"\n\nSummary:\n\n\"El presente estudió se ha realizado en la Compañía Auromina S.R.L. - Corporación Minera Ananea S.A, ubicado en los parajes del centro poblado la Rinconada y Lunar de Oro en el departamento de Puno, la empresa explota el yacimiento aurífero utilizando el método de explotación de cámaras y pilares de manera convencional. El problema identificado es que la empresa tiene dificultades en su gestión de riesgos y que pueda cumplir eficientemente a los requerimientos de la normativa nacional en seguridad. El objetivo del trabajo de investigación se enmarco en evaluar la gestión actual de seguridad para establecer planes de mejora en el sistema de gestión de seguridad según la Ley 29783, D.S. 024 EM 2016 y su modificatoria D.S. 023 EM 2017 en la Compañía Auromina S.R.L., Corporación Minera Ananea S.A. en el 2022. La metodología de investigación tuvo un enfoque cuantitativo, diseño no experimental, transeccional de tipo descriptivo, para la recolección de datos se utilizó la encuesta, la lista de verificación, observación en situ, documentos e informes. Los resultados y conclusiones alcanzados indican que el diagnóstico del sistema de gestión de seguridad de la Compañía Auromina S.R.L. en general se cumplía en un 24.70% los lineamientos exigidos por la ley, por tanto, requería la mejora. Con respecto al nivel de evaluación de riesgos en los colaboradores se determinó que practican como prioridad la aplicación de controles blandos como son los controles administrativos y EPPs. Por ello, se ha realizado la implementación y actualización del sistema de gestión de seguridad según las exigencias de la Ley 29783, D.S. 024 EM 2016 y su modificatoria en la Compañía Auromina S.R.L.\"\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 1 if objective present. Yes: \"El objetivo del trabajo de investigación se enmarco en evaluar la gestión actual de seguridad para establecer planes de mejora en el sistema de gestión de seguridad...\" So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. Yes: \"La metodología de investigación tuvo un enfoque cuantitativo, diseño no experimental, transeccional de tipo descriptivo, para la recolección de datos se utilizó la encuesta, la lista de verificación, observación en situ, documentos e informes.\" So 1.\n\n- D1_imryd_resultados: 1 if results present. Yes: \"Los resultados y conclusiones alcanzados indican que el diagnóstico del sistema de gestión de seguridad ... se cumplía en un 24.70% los lineamientos exigidos por la ley, por tanto, requería la mejora.\" So 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. The summary ends with \"Por ello, se ha realizado la implementación y actualización del sistema de gestión de seguridad según las exigencias de la Ley 29783, D.S. 024 EM 2016 y su modificatoria en la Compañía Auromina S.R.L.\" That is a conclusion? It states that they implemented and updated the system. That is a conclusion. So 1.\n\n- D1_orden_logico: 1 if components present in logical order. The order: problem, objective, methodology, results, conclusion. That is logical. So 1.\n\n- D2_coherencia: scale 1-5. Let's evaluate flow. The summary is fairly coherent. It starts with context, problem, objective, methodology, results, conclusion. Some repetition: \"El presente estudió se ha realizado...\" \"El problema identificado es que la empresa tiene dificultades en su gestión de riesgos y que pueda cumplir eficientemente a los requerimientos de la normativa nacional en seguridad.\" Then objective. Then methodology. Then results and conclusions. The flow is okay. Might have some minor abruptness but overall coherent. I'd give 4. Because maybe some adverbial or repetition but not too bad. So D2_coherencia = 4.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where, to whom, etc. The summary says: \"El problema identificado es que la empresa tiene dificultades en su gestión de riesgos y que pueda cumplir eficientemente a los requerimientos de la normativa nacional en seguridad.\" It also mentions location: \"ubicado en los parajes del centro poblado la Rinconada y Lunar de Oro en el departamento de Puno\". So yes, contextualization present. So 1.\n\n- D3_metodo_detallado: 1 if at least two precisions. We have: \"enfoque cuantitativo, diseño no experimental, transeccional de tipo descriptivo, para la recolección de datos se utilizó la encuesta, la lista de verificación, observación en situ, documentos e informes.\" That's many precisions: design, type, data collection instruments. So 1.\n\n- D3_resultados_concretos: 1 if results concrete. They give 24.70% compliance. That's a concrete figure. So 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to objective. The conclusion: \"Por ello, se ha realizado la implementación y actualización del sistema de gestión de seguridad según las exigencias de la Ley 29783, D.S. 024 EM 2016 y su modificatoria en la Compañía Auromina S.R.L.\" That addresses the objective of evaluating and establishing improvement plans. So yes, 1.\n\n- D4_consistencia: scale 1-5. We need to check consistency between methodology and results and conclusion. Methodology: quantitative, descriptive, no experimental. Results: 24.70% compliance. Conclusion: implemented and updated system. That seems consistent. No contradictions. So 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes. We can add a note: \"No encabezados estructurados, pero función cumplida.\" But we can keep it empty or minimal. The schema requires string. We can provide an empty string or a note. Provide a note: \"Resumen sin encabezados, pero cumple funciones.\" Let's include that.\n\nNow produce JSON with all fields. Ensure all required fields present. Use compact JSON. Let's produce.\n\nCheck field names: D1_imryd_conclusiones, D1_imryd_metodologia, D1_imryd_objetivo, D1_imryd_resultados, D1_orden_logico, D2_coherencia, D3_conclusion_responde, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D4_consistencia, no_evaluable, observaciones.\n\nAll values integers or null. Provide integers.\n\nLet's produce JSON."
+    }
+   }
+  ],
+  "created": 1789700739,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_92d51d08e5",
+  "usage": {
+   "completion_tokens": 1644,
+   "prompt_tokens": 10047,
+   "total_tokens": 11691,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1505,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.14947739,
+   "prompt_time": 0.069131475,
+   "completion_time": 1.708837047,
+   "total_time": 1.777968522
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7m24xekgbyyggr6ga1hdz",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:05:39.317396+00:00"
+}

@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-083",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "No contextualization of importance provided."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No contextualization of importance provided.\"}",
+ "usage": {
+  "input_tokens": 9994,
+  "output_tokens": 1675,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 3.011718273162842,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:05:25.226648+00:00",
+ "raw": {
+  "id": "chatcmpl-8a2cba6a-2a1e-4ee0-bf60-ab482b883111",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No contextualization of importance provided.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Estado nutricional en estudiantes de la carrera de Nutrición Humana de una Universidad Privada 2019\"\n\nResumen:\n\nObjetivo: Evaluar el estado nutricional de estudiantes de Nutrición Humana mediante el índice de masa corporal y porcentaje de grasa corporal de una Universidad Privada, 2019.\n\nMetodología: El presente estudio se realizó con una población de 155 estudiantes de la carrera de nutrición humana en una universidad privada de Lima este, el 65.2% de la población conformada por sexo femenino y el 34.8% por sexo masculino que en el rango de edad fue de 18 a 35 años, de quienes se obtuvo el índice de masa corporal (IMC) y porcentaje de grasa corporal (%GC). La evaluación antropométrica se efectuó en el consultorio nutricional de la escuela profesional de nutrición.\n\nResultados: Se encontró una prevalencia de 76.8 % con sobrepeso (IMC > 25 kg/m2) de la muestra (66.4% en mujeres y 33.6% en varones), 18.7% con IMC normal (58.6% en mujeres y 41.7% en varones), 3.9% presentaron obesidad (66.7% en mujeres y 33.3% en varones) y un 0.6% presenta bajo peso. Por otro lado, un 59.4% se encontraron con un alto nivel de grasa corporal, de lo cual 74.3% fueron mujeres y 31.5% fueron varones.\n\nConclusión: Se evidencio que la mayoría de los estudiantes de la carrera profesional de nutrición humana de una universidad privada de Lima Este presentaron sobrepeso y obesidad, además se encontró un alto porcentaje de grasa corporal en ellos\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 1 if objective present. Yes, objective is explicit: \"Evaluar el estado nutricional...\" So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. Yes, methodology described: population, sample size, demographics, measures. So 1.\n\n- D1_imryd_resultados: 1 if results present. Yes, results with prevalence percentages. So 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. Yes, conclusion present. So 1.\n\n- D1_orden_logico: 1 if components present in logical order. The order is objective, methodology, results, conclusion. Yes. So 1.\n\n- D2_coherencia: scale 1-5. We need to evaluate coherence. The summary flows logically. Let's examine: It starts with objective, then methodology, then results, then conclusion. The sentences are fairly coherent. There is no abrupt jump. The methodology mentions population and measures. The results give prevalence percentages. The conclusion summarizes. There's no major incoherence. So I'd rate 5. But check for any issues: The methodology mentions \"el 65.2% de la población conformada por sexo femenino y el 34.8% por sexo masculino que en el rango de edad fue de 18 a 35 años\". That is a bit awkward but still coherent. The results mention percentages for overweight, normal, obesity, underweight, and high body fat. The conclusion repeats that most students had overweight and obesity and high body fat. It's coherent. So D2_coherencia = 5.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where it occurs, to whom it affects, against what norm or framework. The summary does not explicitly state why it's important or the context beyond the population. It just says \"Estado nutricional en estudiantes de la carrera de Nutrición Humana de una Universidad Privada 2019\". It doesn't mention why it's important, but it does mention the population. The protocol says: \"Vale 1 cuando el resumen sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco se contrasta.\" The summary does not mention why it matters. It just says \"Estado nutricional en estudiantes\". It doesn't mention the importance. So D3_contextualizacion = 0.\n\n- D3_metodo_detallado: 1 if at least two precisions about procedure. The methodology includes: population of 155 students, 65.2% female, 34.8% male, age 18-35, obtained IMC and %GC, evaluation performed in consultorio nutricional. That is at least two precisions: sample size, demographics, measurement instruments. So 1.\n\n- D3_resultados_concretos: 1 if results provide specific content: numbers, categories, etc. Yes, results give percentages for overweight, normal, obesity, underweight, high body fat. So 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to the objective. The objective: evaluate the nutritional status. The conclusion: \"Se evidencio que la mayoría de los estudiantes ... presentaron sobrepeso y obesidad, además se encontró un alto porcentaje de grasa corporal en ellos.\" That does respond to the objective. So 1.\n\n- D4_consistencia: scale 1-5. We need to evaluate consistency between what the summary says it did and what it presents. The summary says it evaluated nutritional status via BMI and body fat percentage. The results present prevalence of overweight, normal, obesity, underweight, and high body fat. That matches. No contradictions. So D4_consistencia = 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes. We can add a note: \"No contextualization present.\" But we can leave it empty or add a note. The schema requires a string. We can provide an empty string or a note. It's safer to provide a note. Let's provide: \"No contextualization of importance provided.\" That is a string.\n\nCheck that all required fields are present: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nAll present. Ensure values are integers or null. Provide integers. Observaciones string.\n\nNow produce JSON. Use compact formatting. Ensure no trailing commas. Let's produce:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"No contextualization of importance provided.\"\n}\n\nCheck JSON validity: yes. Ensure no extra spaces? It's fine. Provide as final."
+    }
+   }
+  ],
+  "created": 1789700725,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c5a89987dc",
+  "usage": {
+   "completion_tokens": 1675,
+   "prompt_tokens": 9994,
+   "total_tokens": 11669,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1543,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.294185579,
+   "prompt_time": 0.076074623,
+   "completion_time": 1.776570541,
+   "total_time": 1.8526451640000001
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7km51etqbzc6ywbvkyvw5",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:05:25.226736+00:00"
+}

@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-132",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD, presenta datos concretos y se explica el contexto de la investigación. La coherencia es buena, aunque se podría mejorar en la terminología y la claridad de algunos términos. La consistencia metodológica es buena, aunque hay un uso coloquial de términos como 'eficiencia de nutrientes'."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 1,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD, presenta datos concretos y se explica el contexto de la investigación. La coherencia es buena, aunque se podría mejorar en la terminología y la claridad de algunos términos. La consistencia metodológica es buena, aunque hay un uso coloquial de términos como 'eficiencia de nutrientes'.\"\n}",
+ "usage": {
+  "input_tokens": 11113,
+  "output_tokens": 237,
+  "total_duration_s": 11.4629385
+ },
+ "latency_s": 11.473720788955688,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:09:41.088330+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:09:41.0790414Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 1,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD, presenta datos concretos y se explica el contexto de la investigación. La coherencia es buena, aunque se podría mejorar en la terminología y la claridad de algunos términos. La consistencia metodológica es buena, aunque hay un uso coloquial de términos como 'eficiencia de nutrientes'.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 11462938500,
+  "load_duration": 15192900,
+  "prompt_eval_count": 11113,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 572058000,
+  "eval_count": 237,
+  "eval_duration": 10745164000
+ },
+ "cached_at_utc": "2026-09-19T02:09:41.088358+00:00"
+}

@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-135",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD y presenta los componentes necesarios. La coherencia es buena, aunque hay una ligera aspereza en la transición entre los resultados y la discusión. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué el estrés laboral es importante en este contexto. La consistencia metodológica es moderada, ya que la conclusión acepta la hipótesis nula, pero los resultados muestran que el 22% tiene un nivel alto de estrés, lo cual no se alinea perfectamente con la hipótesis nula."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD y presenta los componentes necesarios. La coherencia es buena, aunque hay una ligera aspereza en la transición entre los resultados y la discusión. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué el estrés laboral es importante en este contexto. La consistencia metodológica es moderada, ya que la conclusión acepta la hipótesis nula, pero los resultados muestran que el 22% tiene un nivel alto de estrés, lo cual no se alinea perfectamente con la hipótesis nula.\"\n}",
+ "usage": {
+  "input_tokens": 10828,
+  "output_tokens": 297,
+  "total_duration_s": 9.0592243
+ },
+ "latency_s": 9.079025745391846,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:44:00.389300+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:44:00.380343Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD y presenta los componentes necesarios. La coherencia es buena, aunque hay una ligera aspereza en la transición entre los resultados y la discusión. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué el estrés laboral es importante en este contexto. La consistencia metodológica es moderada, ya que la conclusión acepta la hipótesis nula, pero los resultados muestran que el 22% tiene un nivel alto de estrés, lo cual no se alinea perfectamente con la hipótesis nula.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9059224300,
+  "load_duration": 3673800,
+  "prompt_eval_count": 10828,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 308574000,
+  "eval_count": 297,
+  "eval_duration": 8687028000
+ },
+ "cached_at_utc": "2026-09-19T01:44:00.389313+00:00"
+}

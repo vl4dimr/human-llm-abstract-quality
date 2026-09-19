@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-152",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, aunque el uso de términos como 'subestimaciones volumétricas' y 'exactitud de inventarios' podría ser más preciso. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es relevante estudiar la turbidez del agua en este contexto. La metodología es detallada, incluyendo el diseño, la técnica y los instrumentos utilizados. Los resultados son concretos, con estadísticas y valores específicos. La conclusión responde al objetivo, mencionando el efecto de la turbidez en la precisión batimétrica. La consistencia metodológica es 4, ya que la conclusión no contradice los resultados, pero el uso de términos como 'subestimaciones' podría mejorar su claridad."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, aunque el uso de términos como 'subestimaciones volumétricas' y 'exactitud de inventarios' podría ser más preciso. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es relevante estudiar la turbidez del agua en este contexto. La metodología es detallada, incluyendo el diseño, la técnica y los instrumentos utilizados. Los resultados son concretos, con estadísticas y valores específicos. La conclusión responde al objetivo, mencionando el efecto de la turbidez en la precisión batimétrica. La consistencia metodológica es 4, ya que la conclusión no contradice los resultados, pero el uso de términos como 'subestimaciones' podría mejorar su claridad.\"\n}",
+ "usage": {
+  "input_tokens": 10992,
+  "output_tokens": 349,
+  "total_duration_s": 10.864132
+ },
+ "latency_s": 10.87173581123352,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:40:32.091059+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:40:32.0829792Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, aunque el uso de términos como 'subestimaciones volumétricas' y 'exactitud de inventarios' podría ser más preciso. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es relevante estudiar la turbidez del agua en este contexto. La metodología es detallada, incluyendo el diseño, la técnica y los instrumentos utilizados. Los resultados son concretos, con estadísticas y valores específicos. La conclusión responde al objetivo, mencionando el efecto de la turbidez en la precisión batimétrica. La consistencia metodológica es 4, ya que la conclusión no contradice los resultados, pero el uso de términos como 'subestimaciones' podría mejorar su claridad.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10864132000,
+  "load_duration": 3769700,
+  "prompt_eval_count": 10992,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 400804000,
+  "eval_count": 349,
+  "eval_duration": 10394639000
+ },
+ "cached_at_utc": "2026-09-19T02:40:32.091074+00:00"
+}

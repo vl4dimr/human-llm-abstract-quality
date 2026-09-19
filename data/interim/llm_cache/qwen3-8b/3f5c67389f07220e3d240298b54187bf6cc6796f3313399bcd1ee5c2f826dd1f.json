@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-023",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 1,
+  "no_evaluable": 0,
+  "observaciones": "El resumen no presenta los componentes IMRyD de forma explícita. El objetivo se describe de manera general y no se delimita claramente. No se indica cómo se obtuvo el conocimiento, ni se comunica qué se encontró. La conclusión no cierra el tema ni interpreta los hallazgos. La coherencia organizacional es baja debido a la falta de fluidez y conexión entre las ideas. La completitud de componentes es cero debido a la ausencia de información específica sobre el método, resultados y conclusiones. La consistencia metodológica es baja debido a la falta de coherencia entre lo que se declara y lo que se presenta."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 1,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen no presenta los componentes IMRyD de forma explícita. El objetivo se describe de manera general y no se delimita claramente. No se indica cómo se obtuvo el conocimiento, ni se comunica qué se encontró. La conclusión no cierra el tema ni interpreta los hallazgos. La coherencia organizacional es baja debido a la falta de fluidez y conexión entre las ideas. La completitud de componentes es cero debido a la ausencia de información específica sobre el método, resultados y conclusiones. La consistencia metodológica es baja debido a la falta de coherencia entre lo que se declara y lo que se presenta.\"\n}",
+ "usage": {
+  "input_tokens": 11233,
+  "output_tokens": 301,
+  "total_duration_s": 9.976588
+ },
+ "latency_s": 9.982139587402344,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:20:18.382852+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:20:18.3794619Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 1,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen no presenta los componentes IMRyD de forma explícita. El objetivo se describe de manera general y no se delimita claramente. No se indica cómo se obtuvo el conocimiento, ni se comunica qué se encontró. La conclusión no cierra el tema ni interpreta los hallazgos. La coherencia organizacional es baja debido a la falta de fluidez y conexión entre las ideas. La completitud de componentes es cero debido a la ausencia de información específica sobre el método, resultados y conclusiones. La consistencia metodológica es baja debido a la falta de coherencia entre lo que se declara y lo que se presenta.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9976588000,
+  "load_duration": 6665700,
+  "prompt_eval_count": 11233,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 641690000,
+  "eval_count": 301,
+  "eval_duration": 9224646000
+ },
+ "cached_at_utc": "2026-09-19T02:20:18.382874+00:00"
+}

@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-057",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "No contextualización del problema, pero estructura IMRyD completa."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No contextualización del problema, pero estructura IMRyD completa.\"}",
+ "usage": {
+  "input_tokens": 10040,
+  "output_tokens": 1808
+ },
+ "latency_s": 3.02402925491333,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:21:09.720161+00:00",
+ "raw": {
+  "id": "chatcmpl-8acd0d4c-ecf5-4bfd-a46f-7404dd75924b",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No contextualización del problema, pero estructura IMRyD completa.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate according to protocol. Provide all required fields. Let's parse summary.\n\nWe need to assign D1_imryd_objetivo, D1_metodologia, D1_resultados, D1_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nWe also must obey guidelines. Let's analyze summary content.\n\nTitle: \"Tasa de fertilidad y preñez en alpacas apareadas mediante el empadre dirigido y estacional en la Empresa SAIS Sollocota Ltda del distrito de San José - Azángaro - Puno\"\n\nSummary:\n\n\"LA INVESTIGACION fue realizada ... con los objetivos de evaluar tasa de fertilidad en alpacas mediante empadre dirigido y estacional, y evaluar tasa de preñez en alpacas según tipos de empadre.\"\n\nThus objective is explicit: evaluate fertility rates. So D1_imryd_objetivo =1.\n\nMethodology: \"En el apareamiento se utilizaron 100 alpacas Huacaya para el empadre dirigido y 80 hembras para el método estacional; a cada grupo de hembras se les asignó 04 reproductores machos. Para el diagnóstico de fertilidad se utilizó el método de comportamiento sexual de la hembra frente al macho, y para verificar número de hembras preñadas fue mediante el método de balotaje en el periodo de la esquila. La información obtenida se ha digitado en el programa Microsoft Excel y estos datos se analizaron mediante la prueba estadística de Ji – cuadrada.\"\n\nThis gives multiple precisions: sample sizes, method for diagnosing fertility, method for verifying pregnancy, software used, statistical test used. At least two. So D1_imryd_metodologia =1.\n\nResults: \"Los resultados del empadre dirigido de alpacas mostraron una tasa de fertilidad el 99.0 %, y las de empadre estacional 55.0 % (P<0.05). Las alpacas a la primera cópula lograron alcanzar tasas de fertilidad 71.71 %, y con la segunda cópula completaron al 100.0 %. Las alpacas con empadre dirigido mostraron tasa de preñez de 84.0 %, y las alpacas con el método de empadre estacional el 45.0 % (P<0.05).\"\n\nThese are concrete results: percentages with significance. So D1_imryd_resultados=1.\n\nConclusions: \"En conclusión, el empadre dirigido que se practicó durante la campaña de apareamiento en la crianza de alpacas superó en los índices de fertilidad y preñez en 40% comparado al método de empadre estacional.\"\n\nThis is a conclusion that interprets the results, says that directed breeding performed better. It's an interpretation; yes qualifies. So D1_imryd_conclusiones=1.\n\nD1_orden_logico: Components present appear in order: objective -> methodology -> results -> conclusion. They are in correct order. So D1_orden_logico=1.\n\nNow D2_coherencia: Evaluate flow. The summary is a single paragraph, but let's see flow. It starts with objective, then methodology, then results, then conclusion. There is a slight lack of transitions? It uses \"En el apareamiento ...\" etc. But overall flows. I'd rate 4 or 5. Let's analyze: There's no abrupt jumps. The flow is fairly good. The text is straightforward. I'd give 4 or 5. Let's pick 4. Because there might be some abruptness: \"La información obtenida se ha digitado ... y estos datos se analizaron mediante la prueba estadística...\" is a bit abrupt but still coherent. I'd choose 4.\n\nNow D3_contextualizacion: This refers to situating the problem: why matters, where occurs, to whom. The summary does mention location: Empresa SAIS Sollocota Ltda N° 05 del distrito de San José - Azángaro de la Región Puno, and timeframe. But is it giving context? It basically says \"La investigación fue realizada entre los meses de enero a marzo y octubre 2021 en la Empresa SAIS Sollocota Ltda N° 05 del distrito de San José - Azángaro de la Región Puno\". This gives location and timeframe. The problem context? They evaluate fertility rates in alpacas. The context of why important? Not explicitly. The summary does not mention why it's important, or how the rates affect productivity, or the significance to the industry. So D3_contextualizacion = 0. Because it doesn't give reason why it's relevant.\n\nD3_metodo_detallado: At least two precisions: sample sizes (100, 80), assignment of 4 male reproducers per group, diagnostic methods (behavioral, balotaje), software (Excel), statistical test (Chi-square). That's at least 5. So D3_metodo_detallado=1.\n\nD3_resultados_concretos: Contains concrete results: percentages with significance. Yes. So D3_resultados_concretos=1.\n\nD3_conclusion_responde: The conclusion responds to the objective: yes, it states that directed breeding exceeded in indices of fertility and pregnancy compared to seasonal. The objective was evaluating fertility and pregnancy rates. The conclusion addresses that. So D3_conclusion_responde=1.\n\nNow D4_consistencia: Consistency between methodology and results. Let's check. Methods: sample sizes, diagnostic methods, statistical test (Chi-square). Results: rates, significance. They are consistent: they use chi-square to compare percentages. That is consistent. No contradictions: conclusion says directed breeding exceeded 40% compared to seasonal; that is consistent with results. So D4_consistencia=5. Let's double-check: any contradictions? They report P<0.05 for both fertility and preñez comparisons. Conclusion states directed breeding performed better by 40% compared to seasonal. That's consistent. So D4_consistencia=5.\n\nNo_evaluable: The summary is a valid summary; not truncated, not a title only. So no_evaluable=0.\n\nObservaciones: We may add any notes, but probably none. But we can mention that the summary does not contextualize significance. Provide note. The observations field is required; we need to provide a string. Could be empty? The schema: type string; could be empty string. It's safer to provide at least something: maybe \"No contextualización del problema, pero estructura IMRyD completa.\" We'll write that. Provide a brief observation.\n\nCheck all fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nAll present.\n\nNow produce JSON compact.\n\nCheck values: integers 0-1 for booleans, 1-5 for others, 0-1 for no_evaluable. Observations string.\n\nLet's produce JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"No contextualización del problema, pero estructura IMRyD completa.\"\n}\n\nCheck string: no quotes inside. It's fine.\n\nNow produce JSON."
+    }
+   }
+  ],
+  "created": 1789701669,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_34cb00738d",
+  "usage": {
+   "completion_tokens": 1808,
+   "prompt_tokens": 10040,
+   "total_tokens": 11848,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1670,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.323121463,
+   "prompt_time": 0.522957719,
+   "completion_time": 1.851244221,
+   "total_time": 2.37420194
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8gdyre3b94rf6x7s86ama",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:21:09.720191+00:00"
+}

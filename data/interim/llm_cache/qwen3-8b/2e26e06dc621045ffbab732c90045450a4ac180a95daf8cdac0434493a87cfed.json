@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-057",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD. La coherencia es buena, aunque podría mejorar en la transición entre los resultados y las conclusiones. La contextualización es nula ya que comienza directamente con los objetivos. La metodología es detallada, con especificación del número de alpacas y reproductores. Los resultados son concretos con porcentajes y estadísticos. La conclusión responde al objetivo, aunque podría mejorar en la coherencia interna."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD. La coherencia es buena, aunque podría mejorar en la transición entre los resultados y las conclusiones. La contextualización es nula ya que comienza directamente con los objetivos. La metodología es detallada, con especificación del número de alpacas y reproductores. Los resultados son concretos con porcentajes y estadísticos. La conclusión responde al objetivo, aunque podría mejorar en la coherencia interna.\"\n}",
+ "usage": {
+  "input_tokens": 10949,
+  "output_tokens": 262,
+  "total_duration_s": 8.4552202
+ },
+ "latency_s": 8.47856092453003,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:56:31.553328+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:56:31.5404708Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD. La coherencia es buena, aunque podría mejorar en la transición entre los resultados y las conclusiones. La contextualización es nula ya que comienza directamente con los objetivos. La metodología es detallada, con especificación del número de alpacas y reproductores. Los resultados son concretos con porcentajes y estadísticos. La conclusión responde al objetivo, aunque podría mejorar en la coherencia interna.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8455220200,
+  "load_duration": 18964000,
+  "prompt_eval_count": 10949,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 390235000,
+  "eval_count": 262,
+  "eval_duration": 7927299000
+ },
+ "cached_at_utc": "2026-09-19T01:56:31.553458+00:00"
+}

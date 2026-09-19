@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-160",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica (objetivo → metodología → resultados → conclusiones). La coherencia es 4 debido a que el texto fluye bien, aunque hay algunas repeticiones y adjetivaciones innecesarias. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la relación entre la calidad de atención y la satisfacción. El método detallado es 1 debido a que se menciona el enfoque cuantitativo, el método hipotético deductivo, el diseño no experimental, la muestra probabilística de 249 y el instrumento utilizado (cuestionario). Los resultados concretos son 1 porque se menciona el coeficiente correlacional positivo moderado de Rho de Spearman (0.618) y la significancia (0.002). La conclusión responde al objetivo porque se rechaza la hipótesis nula y se acepta la hipótesis alterna. La consistencia metodológica es 3 porque los resultados son coherentes con la metodología, pero la interpretación de los resultados podría ser más clara."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica (objetivo → metodología → resultados → conclusiones). La coherencia es 4 debido a que el texto fluye bien, aunque hay algunas repeticiones y adjetivaciones innecesarias. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la relación entre la calidad de atención y la satisfacción. El método detallado es 1 debido a que se menciona el enfoque cuantitativo, el método hipotético deductivo, el diseño no experimental, la muestra probabilística de 249 y el instrumento utilizado (cuestionario). Los resultados concretos son 1 porque se menciona el coeficiente correlacional positivo moderado de Rho de Spearman (0.618) y la significancia (0.002). La conclusión responde al objetivo porque se rechaza la hipótesis nula y se acepta la hipótesis alterna. La consistencia metodológica es 3 porque los resultados son coherentes con la metodología, pero la interpretación de los resultados podría ser más clara.\"\n}",
+ "usage": {
+  "input_tokens": 10787,
+  "output_tokens": 411,
+  "total_duration_s": 20.2142853
+ },
+ "latency_s": 20.24602699279785,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:16:25.689060+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:16:25.6798039Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica (objetivo → metodología → resultados → conclusiones). La coherencia es 4 debido a que el texto fluye bien, aunque hay algunas repeticiones y adjetivaciones innecesarias. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la relación entre la calidad de atención y la satisfacción. El método detallado es 1 debido a que se menciona el enfoque cuantitativo, el método hipotético deductivo, el diseño no experimental, la muestra probabilística de 249 y el instrumento utilizado (cuestionario). Los resultados concretos son 1 porque se menciona el coeficiente correlacional positivo moderado de Rho de Spearman (0.618) y la significancia (0.002). La conclusión responde al objetivo porque se rechaza la hipótesis nula y se acepta la hipótesis alterna. La consistencia metodológica es 3 porque los resultados son coherentes con la metodología, pero la interpretación de los resultados podría ser más clara.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 20214285300,
+  "load_duration": 5182700,
+  "prompt_eval_count": 10787,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 361608000,
+  "eval_count": 411,
+  "eval_duration": 19756373000
+ },
+ "cached_at_utc": "2026-09-19T02:16:25.689083+00:00"
+}

@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-130",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 10161,
+  "output_tokens": 1769,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.3486745357513428,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:11:14.399904+00:00",
+ "raw": {
+  "id": "chatcmpl-4b2b7b11-487b-4bfb-986a-77846d9a14e5",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Conocimiento nutricional, actividad física, estado de ánimo, satisfacción corporal y satisfacción con la vida en vegetarianos y no-vegetarianos\"\n\nSummary:\n\nObjetivo: Determinar la relación entre conocimientos nutricionales, patrón dietario, actividad física, estado de ánimo, satisfacción corporal y satisfacción con la vida en adultos colombianos vegetarianos y no vegetarianos.\n\nMateriales y métodos: Estudio con enfoque cuantitativo, observacional, de tipo correlacional multivariado, y de corte trasversal. Se analizaron las variables patrón dietario, conocimientos nutricionales, actividad física, estado de ánimo, satisfacción corporal y satisfacción con la vida. La muestra (N=478) contó con la participación de vegetarianos (N=157) y no vegetarianos (N=321), la selección de la muestra se realizó por muestreo no probabilístico de tipo accidental. Los datos fueron recolectados a través de un cuestionario On-line, procesados a través del programa SPSS 24 y analizados mediante estadística descriptiva, y la prueba de correlación Rho de Spearman, considerándose un nivel de significancia de 0.05.\n\nResultado: En el grupo de no vegetarianos, se encontró una correlación negativa baja entre la Satisfacción corporal y la Satisfacción con la vida (p = 0.000, ρ = -0.249), y una correlación muy baja entre las pruebas de escala de ánimo y el Cuestionario sobre conocimientos nutricionales (p = 0.007, ρ = 0.150). En el grupo de vegetarianos, se observó una correlación negativa baja entre la Actividad física y la Escala de ánimo (p = 0.002, ρ = -0.249), una correlación muy baja entre la Actividad física y el Cuestionario sobre conocimientos nutricionales (p = 0.023, ρ = 0.182), entre satisfacción con la vida y el Cuestionario sobre conocimientos nutricionales (p = 0.035, ρ = 0.169) y una correlación negativa muy baja (p = 0.022, ρ = -0.183) entre la Satisfacción corporal y  Satisfacción con la vida, para las demás pruebas no se encontró correlación en ninguno de los grupos.\n\nConclusión:  Estos resultados sugieren la importancia de la educación nutricional y como esta debería adoptar un enfoque integral que incluya no solo aspectos nutricionales, sino que considere la relación entre la alimentación, la actividad física y el bienestar emocional para promover hábitos saludables y una mejor calidad de vida.\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 1 if objective present. Yes, objective is explicit: \"Determinar la relación entre ...\". So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. Yes, \"Materiales y métodos: Estudio con enfoque cuantitativo, observacional, de tipo correlacional multivariado, y de corte trasversal. ...\". So 1.\n\n- D1_imryd_resultados: 1 if results present. Yes, \"Resultado: En el grupo de no vegetarianos, se encontró una correlación ...\". So 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. Yes, \"Conclusión: Estos resultados sugieren ...\". So 1.\n\n- D1_orden_logico: 1 if components present in logical order. The order: Objetivo, Metodología, Resultados, Conclusión. Yes, correct. So 1.\n\n- D2_coherencia: Scale 1-5. Need to evaluate flow. Let's read. The summary flows: objective, methods, results, conclusion. The text is fairly coherent. There is some repetition? The results section is long but still flows. No major jumps. I'd rate 4 or 5. Let's analyze: The summary is fairly well-structured. The results section is a bit long but still coherent. There's no abrupt shift. I'd give 5. But check for any issues: The results mention \"En el grupo de no vegetarianos, se encontró...\" then \"En el grupo de vegetarianos, se observó...\" It's a bit repetitive but still coherent. No contradictions. So 5.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where it occurs, to whom it affects, against what norm or framework. The summary starts with objective but does not provide context. It doesn't explain why it's important, or the broader context. It just states the objective. So 0.\n\n- D3_metodo_detallado: 1 if at least two precisions about procedure. The methods mention: \"Estudio con enfoque cuantitativo, observacional, de tipo correlacional multivariado, y de corte trasversal. Se analizaron las variables ... La muestra (N=478) contó con la participación de vegetarianos (N=157) y no vegetarianos (N=321), la selección de la muestra se realizó por muestreo no probabilístico de tipo accidental. Los datos fueron recolectados a través de un cuestionario On-line, procesados a través del programa SPSS 24 y analizados mediante estadística descriptiva, y la prueba de correlación Rho de Spearman, considerándose un nivel de significancia de 0.05.\" That is at least 2 precisions: sample size, sampling method, instrument, software, statistical test. So 1.\n\n- D3_resultados_concretos: 1 if results provide specific content: numbers, magnitudes, categories, relationships. The results provide p-values, rho values, correlation directions. So yes, 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to the objective. The objective: determine the relationship between knowledge, diet, physical activity, mood, body satisfaction, life satisfaction. The conclusion: \"Estos resultados sugieren la importancia de la educación nutricional y como esta debería adoptar un enfoque integral que incluya no solo aspectos nutricionales, sino que considere la relación entre la alimentación, la actividad física y el bienestar emocional para promover hábitos saludables y una mejor calidad de vida.\" This conclusion does respond to the objective: it discusses the relationships found and suggests integrated approach. So 1.\n\n- D4_consistencia: Scale 1-5. Consistency between what summary says it did and what it presents. Let's check: The summary says it's a correlational study, uses Spearman correlation. The results present correlations with p-values and rho. That matches. No contradictions. The conclusion is consistent with results. So 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes? We can add a note about the high coherence rating. But we can leave empty string or add a note. The schema requires string. We can provide an empty string or a note. It's safer to provide an empty string. But we might want to note that the summary is coherent. But not necessary. Provide empty string.\n\nThus JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"\"\n}\n\nCheck schema: all required fields present. All values are integers or null. Observaciones string. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789701074,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_976a85d17a",
+  "usage": {
+   "completion_tokens": 1769,
+   "prompt_tokens": 10161,
+   "total_tokens": 11930,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1644,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.150513431,
+   "prompt_time": 0.076401201,
+   "completion_time": 1.832015337,
+   "total_time": 1.908416538
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7y98re1yarpjf1zcq7ehy",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:11:14.400109+00:00"
+}

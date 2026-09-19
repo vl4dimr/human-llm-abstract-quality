@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-124",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 2,
+  "no_evaluable": 0,
+  "observaciones": "Resumen presenta objetivo, metodología (sample size 24) y conclusiones, pero carece de resultados concretos y detalle metodológico suficiente; la conclusión afirma ventaja sin evidencia numérica, lo que genera cierta discordancia metodológica."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":2,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta objetivo, metodología (sample size 24) y conclusiones, pero carece de resultados concretos y detalle metodológico suficiente; la conclusión afirma ventaja sin evidencia numérica, lo que genera cierta discordancia metodológica.\"}",
+ "usage": {
+  "input_tokens": 10640,
+  "output_tokens": 1485
+ },
+ "latency_s": 3.0996758937835693,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T00:00:04.968004+00:00",
+ "raw": {
+  "id": "chatcmpl-7f4b97f5-f37f-4745-9dd4-36c20539e342",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":2,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta objetivo, metodología (sample size 24) y conclusiones, pero carece de resultados concretos y detalle metodológico suficiente; la conclusión afirma ventaja sin evidencia numérica, lo que genera cierta discordancia metodológica.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields per schema. Evaluate summary.\n\nFields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nWe analyze.\n\nFirst, is this a valid summary? It's narrative; appears to be a summary. no 'no_evaluable'.\n\nD1_imryd_objetivo: We look if objective present. The text: \"el objetivo general es el de “identificar los atributos  del sistema online como ventaja competitiva, analizar las ventas online en hoteles tres estrellas de la ciudad de Puno, asimismo proponer alternativas de ventas online que funcionen como ventaja competitiva”.\" So yes objective present. 1.\n\nD1_imryd_metodologia: Look for methodological description: \"En el segundo capítulo ... se plantearon las hipótesis ... el capítulo tercero obedece a la descripción de las técnicas y métodos a los que se recurrió ... se consideran las características ... la población y muestra, 24 establecimientos hoteleros...\" So there is some detail: population and sample of 24 establishments. That's a precision. So 1.\n\nD1_imryd_resultados: Are results reported? The results chapter: \"exposición y análisis de los resultados, cuya finalidad es determinar los atributos ... se ha aplicado la revisión y análisis de las ventas online ... los resultados ... ???\" They didn't give concrete numbers or results; just qualitative. The conclusions state that the use constitutes advantage. But results? It says \"se llegó a las siguientes conclusiones centrales: ... El uso sistema online ... constituye una ventaja competitiva...\". There is no numeric results. So D1_imryd_resultados = 0.\n\nD1_imryd_conclusiones: Conclusiones present: yes there are conclusions. They answer objective? They say that online system is advantage. That is answer to objective of identifying attributes. They also mention that directivos are key etc. So conclusion present. 1.\n\nD1_orden_logico: Sequence? We need to check if present components appear in order: objective, methodology, results, conclusion. Objective appears early. Methodology appears in chapter 3. Results appear in chapter 4. Conclusion at the end. They are in correct order. So 1.\n\nD2_coherencia: Flow. Evaluate. The summary starts with title, then purpose, then objective, then literature, hypotheses, methods, population, results, conclusions. Flow might be okay but some disjoint. There are many repeated phrases. It's fairly coherent though. I'd rate maybe 4? Let's examine: The summary has some repetitive and wordy, but overall logical progression. No major abrupt jumps? There's mention of city coordinates in methods section, not directly relevant. Could be a bit of derail. But I think coherence 4 (good but minor issues). I'll set 4.\n\nD3_contextualizacion: Does summary situate problem: \"identificar con claridad ... que representen una ventaja competitiva\" and mention that many businesses have limited capacity etc. There's some context about why this matters: \"es necesario conocer a detalle la función que cumple el sistema online ... muchos negocios, es la escasa capacidad de potenciar el uso de la red, ...\". So yes there is contextualization. 1.\n\nD3_metodo_detallado: At least two precisions. We have sample size 24 establishments, population city. They mention population and sample. Also mention coordinates of city but that's context. They mention \"técnicas y métodos\", but no specifics on method type, instruments? They mention \"población y muestra\", but not instrument. So we have design? They mention \"población y muestra, ... 24 establecimientos\". That's one precision: sample size. There's also mention of \"población\" but no instrument. They didn't mention design (e.g., descriptive, cross-sectional). There's no mention of data collection method. So maybe only one precision. So D3_metodo_detallado = 0 (needs at least two).\n\nD3_resultados_concretos: No concrete results: no numbers, percentages, categories. So 0.\n\nD3_conclusion_responde: Conclusions answer objective? The objective: identify attributes, analyze sales online, propose alternatives. Conclusions: says online system constitutes advantage and that directivos are key. That does respond to identifying attributes; but doesn't mention alternatives? It does mention that results allow propose improvements but not stated. Conclusion partially responds. I'd lean to 1. They did respond to objective. So 1.\n\nD4_consistencia: Consistency between methodology and results, conclusion. Methodology: sample 24 establishments. Results: no numeric results; just general statements. Conclusion: states that online is advantage. There's potential inconsistency: they didn't present results to support conclusion; conclusion is not directly supported by presented results. That is a lack of evidence; but consistency measure: They declared design and sample but results not aligned. According to protocol, \"Conexión coherente entre lo que dice que hizo y lo que presenta\". Here, methodology says sample 24, but results are not specific; they might be qualitative. Is that inconsistent? Might be okay if qualitative. But conclusion seems to interpret results as advantage; no data to support. That could be inconsistency. However D4 rating 2-3 depending. I'd set 3? Let's see: Discordance: conclusion more general than data. I'd assign 3? But the guidelines: \"Afirmar diferencias tras reportar p > 0,05\" would be 1. But here, they don't provide stats. Conclusion states advantage, but results didn't provide evidence. That could be considered an issue. I'd assign 2 maybe: multiple discordances (lack of evidence). Let's choose 2.\n\nno_evaluable: 0 because it's a summary.\n\nobservaciones: note the lack of concrete results; method details limited; result missing; consistency issues.\n\nWe need to output JSON object. Ensure all required fields.\n\nCheck schema: all fields must be present. For integer or null.\n\nSet values accordingly.\n\nWe need to use compact JSON: no whitespace? It's fine.\n\nLet's produce."
+    }
+   }
+  ],
+  "created": 1789776004,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_3cdd24b83b",
+  "usage": {
+   "completion_tokens": 1485,
+   "prompt_tokens": 10640,
+   "total_tokens": 12125,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1316,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.190757595,
+   "prompt_time": 0.741514394,
+   "completion_time": 1.533390813,
+   "total_time": 2.2749052069999998
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vfcz0we4487aw0mcvddzns",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-19T00:00:04.968018+00:00"
+}

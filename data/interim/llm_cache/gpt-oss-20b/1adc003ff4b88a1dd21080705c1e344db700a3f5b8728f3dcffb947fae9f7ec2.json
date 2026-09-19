@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-063",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "No se incluyen datos cuantitativos, pero los resultados son concretos según la definición del protocolo."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No se incluyen datos cuantitativos, pero los resultados son concretos según la definición del protocolo.\"}",
+ "usage": {
+  "input_tokens": 9966,
+  "output_tokens": 1071
+ },
+ "latency_s": 2.5360147953033447,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:21:49.310181+00:00",
+ "raw": {
+  "id": "chatcmpl-aa1e27cd-8b5b-4740-aadd-db1c92f37a42",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No se incluyen datos cuantitativos, pero los resultados son concretos según la definición del protocolo.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. Need to fill all required fields.\n\nLet's analyze:\n\nSummary: Spanish text. We need to evaluate components:\n\n- D1_imryd_objetivo: objective present? The summary includes: \"Esta investigación tiene como objetivo optimizar la infraestructura ...\". So yes. 1.\n\n- D1_imryd_metodologia: methodology: It says: \"Estratégicamente, se realizó un examen del entorno rápido para evaluar el trabajo ... y se recopiló información mediante revisiones organizadas y semiorganizadas coordinadas con estudiantes e instructores.\" So there is description of methodology. Yes. 1.\n\n- D1_imryd_resultados: Results: It states: \"Las consecuencias de este examen pusieron de manifiesto la importancia de los espacios ... y mostraron que un clima muy planificado puede contribuir ...\". That's results. Yes. 1.\n\n- D1_imryd_conclusiones: Conclusion: Does it provide a closure? The summary ends: \"lo cual es fundamental para alcanzar los objetivos educativos establecidos.\" That's somewhat concluding but not necessarily a separate conclusion section. But D1_conclusiones requires closure that goes beyond repeating results. It may be considered a conclusion: \"lo cual es fundamental para alcanzar los objetivos\". That interprets results. So 1.\n\n- D1_orden_logico: order objective -> methodology -> results -> conclusion. The summary: Starts objective, then context, then methodology, then results, then concluding statement. That seems logically ordered. So 1.\n\n- D2_coherencia: coherence flow. Let's examine flow. It goes objective, context, methodology, results, conclusion. Some repetition maybe. No major jumps. The language is a bit redundant: \"El objetivo es planificar una ingeniería escolar ...\". The summary seems coherent enough. I'd rate maybe 4. Might be 4 (good). Possibly 5 but I think 4 due to some slight jumps like \"En la organización educativa facultativa... se ha reconocido un problema...\". Might be 4. We'll choose 4.\n\n- D3_contextualizacion: Context: summary begins with objective but also mentions \"Actualmente, los espacios arquitectónicos de la institución sólo satisfacen la capacidad ...\". That situates the problem: current infrastructure not meeting needs. So yes context. So 1.\n\n- D3_metodo_detallado: At least two precise details. They mention \"se realizó un examen del entorno rápido\" (examen rápido), \"se recopiló información mediante revisiones organizadas y semiorganizadas coordinadas con estudiantes e instructores.\" That's two precise details: exam and reviews with participants. So 1.\n\n- D3_resultados_concretos: Provides results: \"La importancia de los espacios ... y mostraron que un clima muy planificado puede contribuir ...\". It's not giving numerical data but it is a concrete result: climate planned contributes to quality. That is concrete? According to criteria, concrete means specific categories or quantitative data. This result is somewhat qualitative but is a concrete statement. Should count as concrete. 1.\n\n- D3_conclusion_responde: Conclusion responds to objective? The objective was to optimize infrastructure. The conclusion says: \"lo cual es fundamental para alcanzar los objetivos educativos establecidos.\" That interprets results and ties back to objective. So yes. 1.\n\n- D4_consistencia: Check consistency between declared methodology and results, conclusions. No contradictions. The methodology described environmental exam and data collection; results show importance of spaces and plan. No contradictions. So 5.\n\n- no_evaluable: 0 (since it's a valid summary).\n\n- observaciones: any notes? We may add note about lack of quantitative data but acceptable. We can just provide empty string or some comment. Provide a short note: \"No cuantificación numérica de resultados, pero se considera concreto según criterio.\" Let's add that.\n\nReturn JSON with all fields.\n\nMake sure fields order not required but must include all.\n\nLet's craft JSON: Ensure integers or null. We'll use ints.\n\nObservations string.\n\nCheck field names match schema:\n\n\"D1_imryd_conclusiones\"\n\"D1_imryd_metodologia\"\n\"D1_imryd_objetivo\"\n\"D1_imryd_resultados\"\n\"D1_orden_logico\"\n\"D2_coherencia\"\n\"D3_conclusion_responde\"\n\"D3_contextualizacion\"\n\"D3_metodo_detallado\"\n\"D3_resultados_concretos\"\n\"D4_consistencia\"\n\"no_evaluable\"\n\"observaciones\"\n\nAll present.\n\nLet's produce JSON compact."
+    }
+   }
+  ],
+  "created": 1789701709,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_1074f9ce08",
+  "usage": {
+   "completion_tokens": 1071,
+   "prompt_tokens": 9966,
+   "total_tokens": 11037,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 927,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.215046012,
+   "prompt_time": 0.568057018,
+   "completion_time": 1.12717789,
+   "total_time": 1.695234908
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8hneeetj8pfw9drgc1waw",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:21:49.310290+00:00"
+}

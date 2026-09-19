@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-136",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen presenta objetivo, metodología y resultados de forma coherente, pero carece de contextualización y de resultados concretos. La conclusión responde al objetivo y no contradice los datos presentados."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta objetivo, metodología y resultados de forma coherente, pero carece de contextualización y de resultados concretos. La conclusión responde al objetivo y no contradice los datos presentados.\"}",
+ "usage": {
+  "input_tokens": 10106,
+  "output_tokens": 1133
+ },
+ "latency_s": 2.6499247550964355,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:42:58.397343+00:00",
+ "raw": {
+  "id": "chatcmpl-c1a5daef-ddd5-45cc-af51-b5c7f7dae961",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta objetivo, metodología y resultados de forma coherente, pero carece de contextualización y de resultados concretos. La conclusión responde al objetivo y no contradice los datos presentados.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. We need to fill all required fields. Let's examine summary.\n\nTitle irrelevant.\n\nSummary:\n\n\"La investigación tiene como objetivo principal: Analizar si existe contradicción entre la Prescripción adquisitiva extraordinaria (Art. 950) del Código Civil y el delito de Usurpación (Art. 202°, Inc. 4). EI enfoque de la investigación es cualitativo, el diseño es no experimental, de tipo dogmático jurídico, dialéctico, interpretativo. Las técnicas que se utilizaron fueron: el análisis de contenido, análisis de documentos y los instrumentos: fichas de estudio, fichas de análisis bibliográficos, fichas de resumen de contenido o textuales, fichas de contrastación bibliográfica y fichas de contradicción dialéctica. Los resultados son: el tipo civil (Art. 950) faculta a las personas poder ingresar libremente a un inmueble y tomar posesión durante diez años de manera pacífica, continua y pública sin ostentar un justo título. Ahora bien, en el tipo penal (Art. 202, inc.4), se infiere que cualquier persona que ingrese a un bien inmueble de manera ilegitima, es decir sin poseer justo título que avale su accionar, de manera clandestina, mediante actos ocultos no públicos, estará cometiendo el ilícito penal de usurpación.  Por tanto, se concluye que no existe una contradicción normativa entre los artículos Art. 202°: Usurpación, Inc. 4 del Código Penal y el Art. 950: Prescripción adquisitiva extraordinaria del Código Civil, puesto que, para la configuración de la prescripción adquisitiva extraordinaria el usucapiente debe realizar la posesión de manera pública, no de manera clandestina. De realizar actos ocultos, se estará cometiendo el delito de usurpación, en su modalidad del inciso 4. Además, también se concluye que el artículo 950 del Código Civil, necesita una modificación, en complementariedad con el artículo 202, inciso 4, delito de Usurpación, con el propósito de aumentar la seguridad jurídica de los derechos del propietario no poseedor, facilitar la administración de justicia y contribuir a la lucha contra el crimen organizado de los invasores de bienes inmuebles.\"\n\nWe annotate:\n\nD1_imryd_objetivo: 1 because objective is stated explicitly.\n\nD1_imryd_metodologia: 1 because methodology indicated: qualitative, design non experimental, dogmatic, dialectical, interpretative; also techniques listed. So yes.\n\nD1_imryd_resultados: 1 because results are presented: description of civil art and criminal art etc. So yes.\n\nD1_imryd_conclusiones: 1 because there is a conclusion: no contradiction, and need for modification. Yes.\n\nD1_orden_logico: 1 because sequence: objective, methodology, results, conclusion. Yes.\n\nD2_coherencia: We must evaluate flow 1-5. The summary flows somewhat: It starts with objective, methodology, then results, conclusion. There is repetition of conclusion (two conclusions: \"no existe una contradicción\" and \"necesita una modificación\"). The language is somewhat redundant but coherent. I'd give 5? Let's evaluate: Transitions: \"Por tanto\" used. Not too many abrupt jumps. Might give 5.\n\nD3_contextualizacion: 0 because summary does not provide context of why it matters, just objective. There's no mention of importance or context. So 0.\n\nD3_metodo_detallado: 1 because there are at least two precisions: design type, techniques list, instruments list, etc. So yes.\n\nD3_resultados_concretos: 0 because results are conceptual/descriptive, no quantitative figures. It's a legal analysis; no magnitudes. So 0.\n\nD3_conclusion_responde: 1 because conclusion responds to the objective: it says no contradiction. It also adds a recommendation but that's okay. It responds. So 1.\n\nD4_consistencia: Evaluate consistency between methodology and results. The methodology described as qualitative, dogmatic, dialectical, interpretative. The results: analysis of legal texts. No contradiction. The conclusion: no contradiction. So consistency 5. There's no use of significance tests or contradictory statements. So 5.\n\nno_evaluable: 0 because it's a valid summary.\n\nobservaciones: Provide any notes: maybe note that no contextualization, results not concrete.\n\nAll fields present. JSON must be compact. Ensure null not used. All fields integers or string. Observations string.\n\nLet's craft JSON. Ensure fields order maybe not needed but include all.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789774977,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_99996fee8e",
+  "usage": {
+   "completion_tokens": 1133,
+   "prompt_tokens": 10106,
+   "total_tokens": 11239,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 970,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.284176609,
+   "prompt_time": 0.576552755,
+   "completion_time": 1.1749754669999999,
+   "total_time": 1.7515282220000001
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vedmy7ez1ajdbv2gjv4taw",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:42:58.397417+00:00"
+}

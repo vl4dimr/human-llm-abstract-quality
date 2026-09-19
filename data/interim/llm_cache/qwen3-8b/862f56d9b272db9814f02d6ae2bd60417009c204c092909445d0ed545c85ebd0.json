@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-044",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica (objetivo → metodología → resultados → conclusiones). La coherencia es 4 debido a la presencia de algunos términos redundantes y a un salto en la descripción de la metodología. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante la caracterización geológica. La metodología es detallada con el enfoque, nivel, y descripción de la litología. Los resultados son concretos con medidas y leyes específicas. La conclusión responde al objetivo al garantizar la explotación de la mina. La consistencia es 4 debido a que el resumen presenta una coherencia general, aunque hay un uso redundante de términos."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica (objetivo → metodología → resultados → conclusiones). La coherencia es 4 debido a la presencia de algunos términos redundantes y a un salto en la descripción de la metodología. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante la caracterización geológica. La metodología es detallada con el enfoque, nivel, y descripción de la litología. Los resultados son concretos con medidas y leyes específicas. La conclusión responde al objetivo al garantizar la explotación de la mina. La consistencia es 4 debido a que el resumen presenta una coherencia general, aunque hay un uso redundante de términos.\"\n}",
+ "usage": {
+  "input_tokens": 10942,
+  "output_tokens": 326,
+  "total_duration_s": 10.7966143
+ },
+ "latency_s": 10.806843280792236,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:54:41.056878+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:54:41.0484551Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica (objetivo → metodología → resultados → conclusiones). La coherencia es 4 debido a la presencia de algunos términos redundantes y a un salto en la descripción de la metodología. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante la caracterización geológica. La metodología es detallada con el enfoque, nivel, y descripción de la litología. Los resultados son concretos con medidas y leyes específicas. La conclusión responde al objetivo al garantizar la explotación de la mina. La consistencia es 4 debido a que el resumen presenta una coherencia general, aunque hay un uso redundante de términos.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10796614300,
+  "load_duration": 9997700,
+  "prompt_eval_count": 10942,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 419773000,
+  "eval_count": 326,
+  "eval_duration": 10264720000
+ },
+ "cached_at_utc": "2026-09-19T01:54:41.056892+00:00"
+}

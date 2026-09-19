@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-055",
+ "model_name": "mistral-7b",
+ "provider": "ollama",
+ "model": "mistral:latest",
+ "model_reported": "mistral:latest",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "El objetivo es evaluar la dosis óptima de microorganismos, pero no se explica por qué importa mejorar la salud de los productores y de los consumidores."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 5,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El objetivo es evaluar la dosis óptima de microorganismos, pero no se explica por qué importa mejorar la salud de los productores y de los consumidores.\"\n}",
+ "usage": {
+  "input_tokens": 12805,
+  "output_tokens": 233,
+  "total_duration_s": 7.077231
+ },
+ "latency_s": 7.107471227645874,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:13:44.310329+00:00",
+ "raw": {
+  "model": "mistral:latest",
+  "created_at": "2026-09-19T01:13:44.3021015Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 5,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El objetivo es evaluar la dosis óptima de microorganismos, pero no se explica por qué importa mejorar la salud de los productores y de los consumidores.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7077231000,
+  "load_duration": 4969300,
+  "prompt_eval_count": 12805,
+  "prompt_eval_cached_count": 12155,
+  "prompt_eval_duration": 469220000,
+  "eval_count": 233,
+  "eval_duration": 6507154000
+ },
+ "cached_at_utc": "2026-09-19T01:13:44.310344+00:00"
+}

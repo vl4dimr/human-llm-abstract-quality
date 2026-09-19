@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-074",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen presenta objetivo, metodología, resultados y conclusión en orden lógico. No incluye resultados numéricos concretos, por lo que D3_resultados_concretos = 0. Coherencia alta (5). Consistencia perfecta (5)."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta objetivo, metodología, resultados y conclusión en orden lógico. No incluye resultados numéricos concretos, por lo que D3_resultados_concretos = 0. Coherencia alta (5). Consistencia perfecta (5).\"}",
+ "usage": {
+  "input_tokens": 10188,
+  "output_tokens": 2831
+ },
+ "latency_s": 4.360610246658325,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:04:19.024779+00:00",
+ "raw": {
+  "id": "chatcmpl-efdcc35d-9671-480f-b92e-5bef9875f2ba",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta objetivo, metodología, resultados y conclusión en orden lógico. No incluye resultados numéricos concretos, por lo que D3_resultados_concretos = 0. Coherencia alta (5). Consistencia perfecta (5).\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Uso de pavimento rígido reciclado de la ciudad de Puno, como agregado grueso para la producción de Concreto\"\n\nSummary: (long Spanish text). Let's analyze.\n\nWe need to fill fields:\n\n- D1_imryd_objetivo\n- D1_imryd_metodologia\n- D1_imryd_resultados\n- D1_imryd_conclusiones\n- D1_orden_logico\n- D2_coherencia\n- D3_contextualizacion\n- D3_metodo_detallado\n- D3_resultados_concretos\n- D3_conclusion_responde\n- D4_consistencia\n- no_evaluable\n- observaciones\n\nWe must decide each value 0 or 1 (or null). Let's analyze each dimension.\n\nFirst, check if it's a valid summary. It seems to be a summary. So no_evaluable = 0.\n\nNow, D1_imryd_objetivo: The summary states: \"Esta investigación tiene por objetivo principal evaluar las propiedades del concreto fresco y endurecido elaborado con pavimento rígido reciclado y determinar su potencial de uso\". So objective is explicit. So D1_imryd_objetivo = 1.\n\nD1_imryd_metodologia: We need to see if the summary indicates how the knowledge was obtained. It says: \"se ha recopilado y analizado información inherente al tema de estudio y se verificó que reciclar los residuos de construcción es una importante alternativa\". Then: \"el pavimento que se ha reciclado proviene del Jr. Arbulú ... la demolición de esta calle ha sido clasificada con el objetivo de separar exclusivamente los bloques de pavimento, los cuales fueron lavados en sus diferentes fases, analizados y finalmente triturados para un tamaño máximo nominal de 3/4\". Then: \"Tanto los agregados naturales, también usados en esta investigación, como los reciclados han sido ensayados en el laboratorio, en donde se analizaron sus propiedades físicas y químicas; como: contenido de humedad, peso específico, peso unitario, granulometría y abrasión.\" Then: \"Se desarrolló un diseño de mezclas para cuatro resistencias 140, 175, 210 y 245 kg/cm2; cada una de ellas posee cuatro grupos con diferentes condiciones, uno patrón con 0% de árido reciclado y tres experimentales con 20, 40 y 60% de reciclado. Se elaboraron 15 briquetas por cada condición de concreto que hacen un total de 240 especímenes los cuales, pasado su fase de curado, fueron ensayados a compresión a los 28 días; las propiedades del concreto fresco también fueron analizadas para cada una de las condiciones. Además de los estudios de los componentes y del concreto en sí, se realizó un análisis de costos para cada condición de concreto.\"\n\nSo methodology is described: design of mixes, sample size, lab tests, etc. So D1_imryd_metodologia = 1.\n\nD1_imryd_resultados: The summary states: \"Se concluyó que aunque el árido reciclado proveniente del pavimento rígido presenta ciertas cualidades inferiores al árido natural, este tiene una calidad adecuada para producir concreto aunque el uso de este en una proporción mayor al 20% del agregado grueso es riesgoso, ya que a mayor cantidad de árido reciclado la resistencia a compresión disminuye, las propiedades del concreto fresco y endurecido son similares en los grupos patrón y experimentales, además los agregados reciclados produjeron concretos más livianos y que son más caros que un concreto convencional, sin embargo es viable su uso en un 20% ya que el incremento de costos es de apenas unos puntos porcentuales, el uso estará sujeto a las condiciones y capacidades de la obra.\"\n\nThis is a conclusion, but also includes results: \"resistencia a compresión disminuye\", \"propiedades similares\", \"concretos más livianos\", \"más caros\". Are these results? They are summarizing findings. So D1_imryd_resultados = 1.\n\nD1_imryd_conclusiones: The summary ends with a conclusion: \"Se concluyó que ...\". So yes, D1_imryd_conclusiones = 1.\n\nD1_orden_logico: We need to check if the components present appear in logical order: objective, methodology, results, conclusion. The summary starts with objective, then methodology, then results, then conclusion. So D1_orden_logico = 1.\n\nNow D2_coherencia: We need to rate from 1 to 5. Let's evaluate flow.\n\nThe summary: It starts with objective, then describes the source of pavement, the process of recycling, the lab tests, the mix design, the sample size, the tests, the cost analysis, then conclusion. The flow seems coherent. There are some transitions: \"El pavimento que se ha reciclado proviene del Jr. Arbulú, arteria de la zona céntrica de la ciudad de Puno, la demolición de esta calle ha sido clasificada con el objetivo de separar exclusivamente los bloques de pavimento, los cuales fueron lavados en sus diferentes fases, analizados y finalmente triturados para un tamaño máximo nominal de 3/4\", then \"Tanto los agregados naturales, también usados en esta investigación, como los reciclados han sido ensayados en el laboratorio, en donde se analizaron sus propiedades físicas y químicas; como: contenido de humedad, peso específico, peso unitario, granulometría y abrasión.\" Then \"Realizado esto, se desarrolló un diseño de mezclas...\" etc. The transitions are fairly smooth. There's no abrupt jump. The summary is fairly long but coherent. I'd rate 4 or 5. Let's see if any issues: The summary uses \"el pavimento que se ha reciclado proviene del Jr. Arbulú, arteria de la zona céntrica de la ciudad de Puno, la demolición de esta calle ha sido clasificada con el objetivo de separar exclusivamente los bloques de pavimento, los cuales fueron lavados en sus diferentes fases, analizados y finalmente triturados para un tamaño máximo nominal de 3/4\". That sentence is long but still coherent. There's no contradictory statements. So I'd give 5. But check if any repeated terms or abrupt shift: The summary goes from describing the source to lab tests to mix design to results. It's coherent. So D2_coherencia = 5.\n\nNow D3_contextualizacion: This field requires that the summary situates the problem: why it matters, where it occurs, to whom it affects, against what norm or framework. The summary says: \"se verificó que reciclar los residuos de construcción es una importante alternativa para un desarrollo sostenible y amigable con el medio ambiente.\" That gives context: sustainability. Also mentions \"pavimento rígido reciclado de la ciudad de Puno\". So yes, it situates the problem: recycling construction waste, sustainability, local context. So D3_contextualizacion = 1.\n\nD3_metodo_detallado: We need at least two precise details about procedure: design, sample size, instrument, etc. The summary includes: \"Se desarrolló un diseño de mezclas para cuatro resistencias 140, 175, 210 y 245 kg/cm2; cada una de ellas posee cuatro grupos con diferentes condiciones, uno patrón con 0% de árido reciclado y tres experimentales con 20, 40 y 60% de reciclado. Se elaboraron 15 briquetas por cada condición de concreto que hacen un total de 240 especímenes los cuales, pasado su fase de curado, fueron ensayados a compresión a los 28 días\". So we have design, sample size, test. Also \"Tanto los agregados naturales, también usados en esta investigación, como los reciclados han sido ensayados en el laboratorio, en donde se analizaron sus propiedades físicas y químicas; como: contenido de humedad, peso específico, peso unitario, granulometría y abrasión.\" So yes, at least two details. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: We need specific content: numbers, categories, relationships. The summary includes: \"resistencia a compresión disminuye\", \"propiedades del concreto fresco y endurecido son similares\", \"concretos más livianos\", \"más caros\". But does it give numbers? It says \"resistencia a compresión disminuye\" but no numeric values. It says \"concretos más livianos y que son más caros\". No numeric values. It says \"incremento de costos es de apenas unos puntos porcentuales\". No numeric. So no concrete numbers. So D3_resultados_concretos = 0.\n\nBut maybe the summary includes numeric values for mix design: 140, 175, 210, 245 kg/cm2. But those are design target resistances, not results. The results are not numeric. So 0.\n\nD3_conclusion_responde: The conclusion should answer the objective. The objective: evaluate properties of concrete with recycled pavement and determine potential use. The conclusion: \"Se concluyó que aunque el árido reciclado ... tiene una calidad adecuada para producir concreto aunque el uso ... es riesgoso ... es viable su uso en un 20% ...\". That does answer the objective: it evaluates properties and determines potential use. So yes, D3_conclusion_responde = 1.\n\nD4_consistencia: We need to evaluate consistency between what the summary says it did and what it presents. Let's check for contradictions.\n\nThe summary says: \"Se desarrolló un diseño de mezclas para cuatro resistencias 140, 175, 210 y 245 kg/cm2; cada una de ellas posee cuatro grupos con diferentes condiciones, uno patrón con 0% de árido reciclado y tres experimentales con 20, 40 y 60% de reciclado. Se elaboraron 15 briquetas por cada condición de concreto que hacen un total de 240 especímenes los cuales, pasado su fase de curado, fueron ensayados a compresión a los 28 días; las propiedades del concreto fresco también fueron analizadas para cada una de las condiciones.\" So they did tests. Then conclusion: \"Se concluyó que ... el uso ... es riesgoso ... la resistencia a compresión disminuye ... las propiedades del concreto fresco y endurecido son similares ... los agregados reciclados produjeron concretos más livianos y que son más caros ... es viable su uso en un 20% ...\". This seems consistent. No contradictions. There's no mention of statistical significance or p-values. No contradictory statements. So D4_consistencia = 5.\n\nBut check if any potential inconsistency: They say \"resistencia a compresión disminuye\" but didn't provide numeric values. But that's not a contradiction. They say \"propiedades del concreto fresco y endurecido son similares en los grupos patrón y experimentales\" but earlier they said \"resistencia a compresión disminuye\" with higher recycled content. That is consistent: at 20% maybe similar, at 40% and 60% lower. So consistent.\n\nThus D4_consistencia = 5.\n\nNow no_evaluable = 0.\n\nObservaciones: We can add any notes. Maybe note that D3_resultados_concretos is 0 because no numeric results. Also note that D2_coherencia = 5. Provide a brief note.\n\nLet's produce JSON.\n\nCheck schema: all fields required. Provide integer values or null. We have all fields.\n\nLet's produce JSON:\n\n{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 5,\n  \"D3_contextualizacion\": 1,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 5,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"Resumen presenta objetivo, metodología, resultados y conclusión en orden lógico. No incluye resultados numéricos concretos, por lo que D3_resultados_concretos = 0. Coherencia alta (5). Consistencia perfecta (5).\"\n}\n\nCheck that all values are integers or null. Observaciones is string. Good.\n\nReturn only JSON."
+    }
+   }
+  ],
+  "created": 1789700658,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_8b41efc9a3",
+  "usage": {
+   "completion_tokens": 2831,
+   "prompt_tokens": 10188,
+   "total_tokens": 13019,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2657,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.209788617,
+   "prompt_time": 0.627346965,
+   "completion_time": 2.8640502100000003,
+   "total_time": 3.491397175
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7hj00e6983zj1rpyyc9vs",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:04:19.024873+00:00"
+}

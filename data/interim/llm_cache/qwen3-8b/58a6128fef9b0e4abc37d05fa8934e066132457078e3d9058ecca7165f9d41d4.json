@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-094",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 1,
+  "no_evaluable": 0,
+  "observaciones": "El resumen no presenta los componentes IMRyD (Metodología, Resultados, Conclusiones). La coherencia es 4 debido a que el texto fluye bien, aunque no se identifican componentes estructurales. La contextualización es 0 porque no se explica por qué la función docente es importante. La consistencia es 1 porque no hay metodología declarada para contrastar la coherencia."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 1,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen no presenta los componentes IMRyD (Metodología, Resultados, Conclusiones). La coherencia es 4 debido a que el texto fluye bien, aunque no se identifican componentes estructurales. La contextualización es 0 porque no se explica por qué la función docente es importante. La consistencia es 1 porque no hay metodología declarada para contrastar la coherencia.\"\n}",
+ "usage": {
+  "input_tokens": 10640,
+  "output_tokens": 247,
+  "total_duration_s": 7.7571722
+ },
+ "latency_s": 7.759004354476929,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:02:11.333718+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:02:11.3321853Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 1,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen no presenta los componentes IMRyD (Metodología, Resultados, Conclusiones). La coherencia es 4 debido a que el texto fluye bien, aunque no se identifican componentes estructurales. La contextualización es 0 porque no se explica por qué la función docente es importante. La consistencia es 1 porque no hay metodología declarada para contrastar la coherencia.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7757172200,
+  "load_duration": 6580000,
+  "prompt_eval_count": 10640,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 170158000,
+  "eval_count": 247,
+  "eval_duration": 7437209000
+ },
+ "cached_at_utc": "2026-09-19T02:02:11.333744+00:00"
+}

@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-145",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen sin contextualización ni cifras concretas en resultados."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin contextualización ni cifras concretas en resultados.\"}",
+ "usage": {
+  "input_tokens": 9959,
+  "output_tokens": 2299,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 3.2694170475006104,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:12:49.697100+00:00",
+ "raw": {
+  "id": "chatcmpl-2e6ce3c3-7150-4a69-aa33-8db194940468",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin contextualización ni cifras concretas en resultados.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Nivel de resiliencia en los estudiantes del VII ciclo de la Institución Educativa Secundaria Industrial Muñani durante la pandemia de la Covid 19\"\n\nSummary:\n\n\"El presente trabajo de investigación tuvo como objetivo principal identificar el nivel de resiliencia en los estudiantes del VII ciclo de la IES “Industrial” del Distrito de Muñani durante la pandemia de la Covid 19 del año 2021. Se trabajó con una población de 229 estudiantes. Se desarrolló con un enfoque cuantitativo, de tipo no experimental y diseño descriptivo. No se utilizó ninguna muestra, ya que se trabajó con todos los estudiantes, quienes fueron evaluados con la escala de resiliencia de Wagnild y Young, como instrumento, cuya técnica corresponde a la encuesta. Los resultados evidenciaron que los estudiantes muestran un nivel de resiliencia moderado donde: este resultado se visualiza en la tabla 4 y figura 1. En confianza en sí mismo, se ubicaron en la escala valorativa moderada. En ecuanimidad, se ubicaron con mayor porcentaje en la escala valorativa moderada. En perseverancia se ubicaron en la escala valorativa moderada. En satisfacción personal se ubicaron en la escala valorativa moderada y finalmente en la dimensión sentirse bien solo, de igual manera se ubicaron en la escala valorativa moderada. Los estudiantes muestran un nivel moderado, esto quiere decir que necesitan apoyo en cuanto al fomento de la resiliencia para que ellos mismos puedan afrontar adversidades de la vida, además es fundamental en el ámbito educativo, ya que si los estudiantes muestran un nivel bajo o moderado no se podrá lograr los objetivos educativos que se plantea.\"\n\nWe need to evaluate each field.\n\nFirst, check if it's a valid summary. It seems to be a summary. So no no_evaluable.\n\nNow, D1_imryd_objetivo: The summary explicitly states \"El presente trabajo de investigación tuvo como objetivo principal identificar el nivel de resiliencia en los estudiantes...\" So yes, objective present. So D1_imryd_objetivo = 1.\n\nD1_imryd_metodologia: We need to see if there's a concrete indication of how knowledge was obtained. The summary says: \"Se trabajó con una población de 229 estudiantes. Se desarrolló con un enfoque cuantitativo, de tipo no experimental y diseño descriptivo. No se utilizó ninguna muestra, ya que se trabajó con todos los estudiantes, quienes fueron evaluados con la escala de resiliencia de Wagnild y Young, como instrumento, cuya técnica corresponde a la encuesta.\" So yes, methodology present. So D1_imryd_metodologia = 1.\n\nD1_imryd_resultados: The summary says: \"Los resultados evidenciaron que los estudiantes muestran un nivel de resiliencia moderado donde: este resultado se visualiza en la tabla 4 y figura 1. En confianza en sí mismo, se ubicaron en la escala valorativa moderada. En ecuanimidad, se ubicaron con mayor porcentaje en la escala valorativa moderada. En perseverancia se ubicaron en la escala valorativa moderada. En satisfacción personal se ubicaron en la escala valorativa moderada y finalmente en la dimensión sentirse bien solo, de igual manera se ubicaron en la escala valorativa moderada.\" So yes, results present. So D1_imryd_resultados = 1.\n\nD1_imryd_conclusiones: The summary ends with: \"Los estudiantes muestran un nivel moderado, esto quiere decir que necesitan apoyo en cuanto al fomento de la resiliencia para que ellos mismos puedan afrontar adversidades de la vida, además es fundamental en el ámbito educativo, ya que si los estudiantes muestran un nivel bajo o moderado no se podrá lograr los objetivos educativos que se plantea.\" This is a conclusion: it interprets the results and gives implication. So yes, D1_imryd_conclusiones = 1.\n\nD1_orden_logico: The components present: objective, methodology, results, conclusion. They appear in that order: objective first, methodology second, results third, conclusion last. So yes, D1_orden_logico = 1.\n\nNow D2_coherencia: We need to evaluate flow. Let's read the summary: It starts with objective, then methodology, then results, then conclusion. The flow seems coherent. There are some repeated phrases: \"Los estudiantes muestran un nivel de resiliencia moderado\" appears twice: once in results, once in conclusion. But that's fine. There's no abrupt jumps. The summary is fairly straightforward. I'd rate it maybe 4 or 5. Let's analyze: 5: \"Progresión impecable. Cada oración prepara la siguiente. Se lee de un tirón\". 4: \"Fluye bien, con alguna aspereza menor que no estorba\". 3: \"Se entiende, pero cuesta\". 2: \"Hay que releer para reconstruir el hilo\". 1: \"Incoherente\". The summary seems to flow well. There's no major jump. The only potential issue: The results section lists multiple subcategories but all are \"moderado\". It's repetitive but still coherent. I'd give 5. But maybe 4 because of repetition? The guidelines: \"Adjetivación valorativa innecesaria\" is not present. \"Deriva terminológica\" not present. \"Cambio abrupto de foco\" not present. So I'd give 5. So D2_coherencia = 5.\n\nNow D3_contextualizacion: This field requires that the summary situates the problem: why it matters, where it occurs, to whom it affects, against what norm or framework. The summary starts with objective but does not provide context. It does not explain why resilience matters, or why it's important to study it during pandemic. It just states objective. So D3_contextualizacion = 0.\n\nD3_metodo_detallado: We need at least two precisions about procedure: design, type of study, sample size, sampling technique, instrument named, statistical test, corpus, number of observations, selection criteria. The summary gives: \"población de 229 estudiantes\", \"enfoque cuantitativo, de tipo no experimental y diseño descriptivo\", \"No se utilizó ninguna muestra, ya que se trabajó con todos los estudiantes\", \"evaluados con la escala de resiliencia de Wagnild y Young, como instrumento, cuya técnica corresponde a la encuesta.\" So we have design (descriptivo), sample size (229), instrument (escala de resiliencia de Wagnild y Young). That's at least 3 precisions. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: We need specific content: figures, magnitudes, categories, relationships. The summary says: \"Los estudiantes muestran un nivel de resiliencia moderado donde: este resultado se visualiza en la tabla 4 y figura 1. En confianza en sí mismo, se ubicaron en la escala valorativa moderada. En ecuanimidad, se ubicaron con mayor porcentaje en la escala valorativa moderada. En perseverancia se ubicaron en la escala valorativa moderada. En satisfacción personal se ubicaron en la escala valorativa moderada y finalmente en la dimensión sentirse bien solo, de igual manera se ubicaron en la escala valorativa moderada.\" So it says \"moderado\" but no numeric percentages. It says \"mayor porcentaje\" but not the actual percentage. So it's not concrete. There's no numeric values. So D3_resultados_concretos = 0.\n\nD3_conclusion_responde: The conclusion: \"Los estudiantes muestran un nivel moderado, esto quiere decir que necesitan apoyo en cuanto al fomento de la resiliencia para que ellos mismos puedan afrontar adversidades de la vida, además es fundamental en el ámbito educativo, ya que si los estudiantes muestran un nivel bajo o moderado no se podrá lograr los objetivos educativos que se plantea.\" This conclusion addresses the objective: identify level of resilience. It says they show moderate level and need support. So yes, it responds to objective. So D3_conclusion_responde = 1.\n\nD4_consistencia: We need to evaluate coherence between what the summary says it did and what it presents. The summary says: \"Se trabajó con una población de 229 estudiantes. Se desarrolló con un enfoque cuantitativo, de tipo no experimental y diseño descriptivo. No se utilizó ninguna muestra, ya que se trabajó con todos los estudiantes, quienes fueron evaluados con la escala de resiliencia de Wagnild y Young, como instrumento, cuya técnica corresponde a la encuesta.\" Then results: \"Los estudiantes muestran un nivel de resiliencia moderado\". The conclusion: \"Los estudiantes muestran un nivel moderado, esto quiere decir que necesitan apoyo...\" So no contradictions. There's no mention of statistical tests or significance. The conclusion is consistent with results. So D4_consistencia = 5.\n\nNow no_evaluable: 0 because it's a valid summary.\n\nObservaciones: We can add any notes. We might note that D3_resultados_concretos is 0 because no numeric values. Also note that D3_contextualizacion is 0 because no context. But we can just leave a brief note: \"No contextualización ni resultados concretos con cifras.\" But we can keep it minimal. The schema requires a string. We can provide an empty string or a note. It's safer to provide a note. Let's provide: \"Resumen sin contextualización ni cifras concretas en resultados.\" That is fine.\n\nNow produce JSON with all fields. Ensure all required fields present. Use compact JSON. Let's produce:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":0,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Resumen sin contextualización ni cifras concretas en resultados.\"\n}\n\nCheck that all fields are present. Yes. Ensure no extra fields. Good."
+    }
+   }
+  ],
+  "created": 1789701169,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4a35f7bd1b",
+  "usage": {
+   "completion_tokens": 2299,
+   "prompt_tokens": 9959,
+   "total_tokens": 12258,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2163,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.189482886,
+   "prompt_time": 0.054282051,
+   "completion_time": 2.365687579,
+   "total_time": 2.4199696299999998
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s815s4eakrz72h4aqgk2wx",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:12:49.697152+00:00"
+}

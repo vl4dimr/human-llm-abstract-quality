@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-106",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resultados cualitativos sin cifras; conclusión no responde directamente a los objetivos específicos."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resultados cualitativos sin cifras; conclusión no responde directamente a los objetivos específicos.\"}",
+ "usage": {
+  "input_tokens": 9931,
+  "output_tokens": 2461,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 3.6854817867279053,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:08:04.898627+00:00",
+ "raw": {
+  "id": "chatcmpl-6daa1ea6-71bd-4e5f-ae9c-53977ba00138",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resultados cualitativos sin cifras; conclusión no responde directamente a los objetivos específicos.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Repercusión de la pandemia Covid 19 en los artistas plásticos comerciales de la ciudad de Puno\"\n\nResumen:\n\n\"La pandemia del COVID 19 generó cambios en la dinámica del mercado del arte y obviamente esto trajo consigo que la primera parte de la cadena que son los artistas plásticos se vieran afectados. Motivo por el cual en la presente investigación se planteó; determinar la repercusión de la pandemia COVID 19 en los artistas plásticos comerciales de la ciudad de Puno, para lo cual se considera tres objetivos específicos; establecer el estado psicológico de los artistas plásticos de la ciudad de Puno como consecuencia del COVID 19; luego, determinar en estado socio-económico de los artistas plásticos en tiempos de COVID 19; por último, identificar los espacios donde se desarrollaron los artistas de la ciudad de Puno. Para la presente investigación se trabajó con el enfoque cuantitativo y el diseño de investigación es el descriptivo con tendencia transversal, para lo cual se recurrió a la técnica de investigación; la encuesta y observación, sobre la muestra es por conveniencia, ya que se eligió por su productividad a los artistas plásticos comerciales de la ciudad de Puno. Sobre los resultados se observa que los artistas padecieron por el confinamiento lo que genero algunas emociones negativas, pero no, en alta intensidad; además, a ello se suma la inestabilidad económica para poder mantener un hogar; sin embrago, los artistas supieron adaptarse a este periodo incursionando en lo que ofrece la tecnología.\"\n\nWe need to annotate each field.\n\nLet's go through each dimension.\n\n**D1_imryd_objetivo**: 1 if objective present. The summary states: \"se planteó; determinar la repercusión de la pandemia COVID 19 en los artistas plásticos comerciales de la ciudad de Puno, para lo cual se considera tres objetivos específicos; establecer el estado psicológico ...; luego, determinar en estado socio-económico ...; por último, identificar los espacios donde se desarrollaron los artistas de la ciudad de Puno.\" So objective is present. So D1_imryd_objetivo = 1.\n\n**D1_imryd_metodologia**: 1 if methodology present. The summary says: \"se trabajó con el enfoque cuantitativo y el diseño de investigación es el descriptivo con tendencia transversal, para lo cual se recurrió a la técnica de investigación; la encuesta y observación, sobre la muestra es por conveniencia, ya que se eligió por su productividad a los artistas plásticos comerciales de la ciudad de Puno.\" So yes, methodology present. So D1_imryd_metodologia = 1.\n\n**D1_imryd_resultados**: 1 if results present. The summary says: \"Sobre los resultados se observa que los artistas padecieron por el confinamiento lo que genero algunas emociones negativas, pero no, en alta intensidad; además, a ello se suma la inestabilidad económica para poder mantener un hogar; sin embrago, los artistas supieron adaptarse a este periodo incursionando en lo que ofrece la tecnología.\" This is a description of results: they experienced negative emotions, but not high intensity, economic instability, adaptation. So yes, results present. So D1_imryd_resultados = 1.\n\n**D1_imryd_conclusiones**: 1 if conclusion present. The summary ends with \"los artistas supieron adaptarse a este periodo incursionando en lo que ofrece la tecnología.\" That is a conclusion? It is more like a result or a statement of adaptation. There's no explicit conclusion that ties back to objective or interprets results. It might be considered a conclusion because it states that artists adapted. But does it go beyond repeating results? It says \"los artistas supieron adaptarse a este periodo incursionando en lo que ofrece la tecnología.\" That is a statement of adaptation, which is a conclusion. It is not just repeating results; it interprets that adaptation occurred. So I'd say D1_imryd_conclusiones = 1.\n\n**D1_orden_logico**: 1 if components present in logical order. The summary: starts with objective, then methodology, then results. That is correct order. So D1_orden_logico = 1.\n\n**D2_coherencia**: Scale 1-5. We need to evaluate flow. Let's read the summary: \"La pandemia del COVID 19 generó cambios en la dinámica del mercado del arte y obviamente esto trajo consigo que la primera parte de la cadena que son los artistas plásticos se vieran afectados. Motivo por el cual en la presente investigación se planteó; determinar la repercusión de la pandemia COVID 19 en los artistas plásticos comerciales de la ciudad de Puno, para lo cual se considera tres objetivos específicos; establecer el estado psicológico de los artistas plásticos de la ciudad de Puno como consecuencia del COVID 19; luego, determinar en estado socio-económico de los artistas plásticos en tiempos de COVID 19; por último, identificar los espacios donde se desarrollaron los artistas de la ciudad de Puno. Para la presente investigación se trabajó con el enfoque cuantitativo y el diseño de investigación es el descriptivo con tendencia transversal, para lo cual se recurrió a la técnica de investigación; la encuesta y observación, sobre la muestra es por conveniencia, ya que se eligió por su productividad a los artistas plásticos comerciales de la ciudad de Puno. Sobre los resultados se observa que los artistas padecieron por el confinamiento lo que genero algunas emociones negativas, pero no, en alta intensidad; además, a ello se suma la inestabilidad económica para poder mantener un hogar; sin embrago, los artistas supieron adaptarse a este periodo incursionando en lo que ofrece la tecnología.\"\n\nFlow: It starts with context, then objective, then methodology, then results. The transitions are somewhat abrupt but overall coherent. There's no major jump. The summary is fairly coherent. I'd rate 4 maybe. Let's analyze: 5 would be \"Progresión impecable. Cada oración prepara la siguiente. Se lee de un tirón.\" 4: \"Fluye bien, con alguna aspereza menor que no estorba.\" 3: \"Se entiende, pero cuesta.\" 2: \"Hay que releer para reconstruir el hilo.\" 1: \"Incoherente.\" The summary flows: context -> objective -> methodology -> results. The transitions are okay. There's a semicolon after \"Motivo por el cual en la presente investigación se planteó; determinar la repercusión...\" The semicolon might be a bit odd but not a big issue. I'd give 4.\n\n**D3_contextualizacion**: 1 if summary situates the problem: why it matters, where it occurs, to whom it affects, against what norm or framework. The summary starts with context: \"La pandemia del COVID 19 generó cambios en la dinámica del mercado del arte y obviamente esto trajo consigo que la primera parte de la cadena que son los artistas plásticos se vieran afectados.\" That situates the problem: pandemic changes market, affects artists. So yes, contextualization present. So D3_contextualizacion = 1.\n\n**D3_metodo_detallado**: 1 if at least two precisions about procedure. The summary says: \"se trabajó con el enfoque cuantitativo y el diseño de investigación es el descriptivo con tendencia transversal, para lo cual se recurrió a la técnica de investigación; la encuesta y observación, sobre la muestra es por conveniencia, ya que se eligió por su productividad a los artistas plásticos comerciales de la ciudad de Puno.\" So we have: enfoque cuantitativo, diseño descriptivo transversal, técnica de investigación: encuesta y observación, muestra por conveniencia. That's at least 4 precisions. So D3_metodo_detallado = 1.\n\n**D3_resultados_concretos**: 1 if results provide specific content: figures, magnitudes, categories, relationships. The summary says: \"los artistas padecieron por el confinamiento lo que genero algunas emociones negativas, pero no, en alta intensidad; además, a ello se suma la inestabilidad económica para poder mantener un hogar; sin embrago, los artistas supieron adaptarse a este periodo incursionando en lo que ofrece la tecnología.\" This is qualitative description, no numbers. No categories. So no concrete results. So D3_resultados_concretos = 0.\n\n**D3_conclusion_responde**: 1 if conclusion responds to objective. The conclusion: \"los artistas supieron adaptarse a este periodo incursionando en lo que ofrece la tecnología.\" The objective: \"determinar la repercusión de la pandemia COVID 19 en los artistas plásticos comerciales de la ciudad de Puno, para lo cual se considera tres objetivos específicos; establecer el estado psicológico ...; determinar estado socio-económico ...; identificar los espacios donde se desarrollaron los artistas.\" The conclusion addresses adaptation, which is not directly answering the objective. The objective was to determine repercussion, state psychological, socio-economic, spaces. The conclusion about adaptation is not directly answering those. So D3_conclusion_responde = 0.\n\n**D4_consistencia**: Scale 1-5. We need to evaluate consistency between what the summary says it did and what it presents. The summary says: \"se trabajó con el enfoque cuantitativo y el diseño de investigación es el descriptivo con tendencia transversal, para lo cual se recurrió a la técnica de investigación; la encuesta y observación, sobre la muestra es por conveniencia, ya que se eligió por su productividad a los artistas plásticos comerciales de la ciudad de Puno.\" Then results: \"los artistas padecieron por el confinamiento lo que genero algunas emociones negativas, pero no, en alta intensidad; además, a ello se suma la inestabilidad económica para poder mantener un hogar; sin embrago, los artistas supieron adaptarse a este periodo incursionando en lo que ofrece la tecnología.\" There's no mention of statistical tests, but it's a descriptive study. The results are descriptive. The conclusion is adaptation. There's no contradiction. So consistency is good. I'd rate 5.\n\n**no_evaluable**: 0 because it's a valid summary.\n\n**observaciones**: We can add any notes. Maybe note that results are qualitative, no concrete numbers. Also note that conclusion is not directly answering objective. But we can keep it minimal. Let's add: \"Resultados cualitativos sin cifras; conclusión no responde directamente a los objetivos específicos.\" That is fine.\n\nNow produce JSON with all fields.\n\nCheck schema: required fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nAll present.\n\nNow produce compact JSON."
+    }
+   }
+  ],
+  "created": 1789700884,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e189667b30",
+  "usage": {
+   "completion_tokens": 2461,
+   "prompt_tokens": 9931,
+   "total_tokens": 12392,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2320,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.244414473,
+   "prompt_time": 0.067319874,
+   "completion_time": 2.612685801,
+   "total_time": 2.680005675
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7rfaqe61rb2y5bbes5apm",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:08:04.898726+00:00"
+}

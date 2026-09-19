@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-015",
+ "model_name": "mistral-7b",
+ "provider": "ollama",
+ "model": "mistral:latest",
+ "model_reported": "mistral:latest",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "La muestra es un subsampling de la población, el resultado concreto se refiere a la correlación de Pearson y no a una magnitud, el método detallado incluye un cuestionario pero no otro instrumento y el resultado se refiere a correlaciones y significancias estadísticas."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 5,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"La muestra es un subsampling de la población, el resultado concreto se refiere a la correlación de Pearson y no a una magnitud, el método detallado incluye un cuestionario pero no otro instrumento y el resultado se refiere a correlaciones y significancias estadísticas.\"\n}",
+ "usage": {
+  "input_tokens": 12791,
+  "output_tokens": 261,
+  "total_duration_s": 7.9524896
+ },
+ "latency_s": 7.975800514221191,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:09:34.467866+00:00",
+ "raw": {
+  "model": "mistral:latest",
+  "created_at": "2026-09-19T01:09:34.4578386Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 5,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"La muestra es un subsampling de la población, el resultado concreto se refiere a la correlación de Pearson y no a una magnitud, el método detallado incluye un cuestionario pero no otro instrumento y el resultado se refiere a correlaciones y significancias estadísticas.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7952489600,
+  "load_duration": 3250800,
+  "prompt_eval_count": 12791,
+  "prompt_eval_cached_count": 12155,
+  "prompt_eval_duration": 461420000,
+  "eval_count": 261,
+  "eval_duration": 7425965000
+ },
+ "cached_at_utc": "2026-09-19T01:09:34.467886+00:00"
+}

@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-118",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Repetición del periodo 2018; falta de conclusión; posible error tipográfico en la probabilidad (es.000)."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Repetición del periodo 2018; falta de conclusión; posible error tipográfico en la probabilidad (es.000).\"}",
+ "usage": {
+  "input_tokens": 9879,
+  "output_tokens": 1946
+ },
+ "latency_s": 3.9244489669799805,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:09:27.474867+00:00",
+ "raw": {
+  "id": "chatcmpl-5f86aca6-dece-4fe4-b0c5-7550eaa1f4d3",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Repetición del periodo 2018; falta de conclusión; posible error tipográfico en la probabilidad (es.000).\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Asertividad directiva y trabajo colaborativo en las Instituciones de Educación Superior de la Provincia de Acomayo - Cusco. periodo 2018.\"\n\nSummary:\n\n\"El propósito de este estudio fue examinar la relación entre la agresividad directiva y el trabajo colaborativo en las instituciones de educación superior de la provincia de Acomayo-Cusco. Periodo 2018.\nEn este estudio, debido al reducido tamaño de la población, se seleccionó como muestra representativa a 36 docentes de instituciones de educación superior de la provincia de Acomayo, zona Cusco, para el periodo 2018. La adquisición de los datos se realizó con un enfoque cuantitativo. De acuerdo a la metodología planteada para la investigación cuantitativa, se seleccionarán instrumentos de cuestionario. Como instrumento de evaluación de las variables, se utilizará un cuestionario con evaluación en escala Likert. En el avance de la investigación se determinó que el asertividad directivo está estrechamente asociada al trabajo colaborativo en las Instituciones de Educación Superior de Acomayo-Cusco. Periodo 2018. Dado que la probabilidad es.000 menor que el nivel de significación de 0.05, la prueba es estadísticamente significativa.\"\n\nWe need to evaluate each dimension.\n\nFirst, D1_imryd_objetivo: Does the summary state what was proposed to investigate? Yes: \"El propósito de este estudio fue examinar la relación entre la agresividad directiva y el trabajo colaborativo en las instituciones de educación superior de la provincia de Acomayo-Cusco.\" That's explicit. So D1_imryd_objetivo = 1.\n\nD1_imryd_metodologia: Does it indicate how knowledge was obtained? Yes: \"se seleccionó como muestra representativa a 36 docentes ... La adquisición de los datos se realizó con un enfoque cuantitativo. De acuerdo a la metodología planteada para la investigación cuantitativa, se seleccionarán instrumentos de cuestionario. Como instrumento de evaluación de las variables, se utilizará un cuestionario con evaluación en escala Likert.\" So yes, methodology present. So D1_imryd_metodologia = 1.\n\nD1_imryd_resultados: Does it communicate what was found? It says: \"En el avance de la investigación se determinó que el asertividad directivo está estrechamente asociada al trabajo colaborativo ... Dado que la probabilidad es.000 menor que el nivel de significación de 0.05, la prueba es estadísticamente significativa.\" So yes, it reports a result: association found, significance. So D1_imryd_resultados = 1.\n\nD1_imryd_conclusiones: Does it have a closure that goes beyond repeating results? It says: \"En el avance de la investigación se determinó que el asertividad directivo está estrechamente asociada al trabajo colaborativo ... Dado que la probabilidad es.000 menor que el nivel de significación de 0.05, la prueba es estadísticamente significativa.\" This is basically a result statement, not a conclusion. There's no explicit conclusion that interprets or recommends. So D1_imryd_conclusiones = 0.\n\nD1_orden_logico: Are the components present in logical order? The summary starts with objective, then methodology, then results. There's no conclusion. So the present components are objective, methodology, results. They appear in that order. So D1_orden_logico = 1.\n\nNow D2_coherencia: Evaluate flow. Let's read: \"El propósito de este estudio fue examinar la relación entre la agresividad directiva y el trabajo colaborativo en las instituciones de educación superior de la provincia de Acomayo-Cusco. Periodo 2018. En este estudio, debido al reducido tamaño de la población, se seleccionó como muestra representativa a 36 docentes ... La adquisición de los datos se realizó con un enfoque cuantitativo. De acuerdo a la metodología planteada para la investigación cuantitativa, se seleccionarán instrumentos de cuestionario. Como instrumento de evaluación de las variables, se utilizará un cuestionario con evaluación en escala Likert. En el avance de la investigación se determinó que el asertividad directivo está estrechamente asociada al trabajo colaborativo en las Instituciones de Educación Superior de Acomayo-Cusco. Periodo 2018. Dado que la probabilidad es.000 menor que el nivel de significación de 0.05, la prueba es estadísticamente significativa.\"\n\nFlow: It starts with objective, then mentions period, then methodology, then results. There's repetition of period. The flow is fairly linear, but some redundancy: \"Periodo 2018\" appears twice. Also \"En este estudio\" repeated. But overall it's coherent. I'd rate 4 maybe. Let's consider the scale: 5 perfect, 4 good with minor aspereza. There's some repetition but not major. So D2_coherencia = 4.\n\nNow D3_contextualizacion: Does the summary situate the problem? It says: \"El propósito de este estudio fue examinar la relación entre la agresividad directiva y el trabajo colaborativo en las instituciones de educación superior de la provincia de Acomayo-Cusco. Periodo 2018.\" It doesn't explain why it's important, what gap, etc. So D3_contextualizacion = 0.\n\nD3_metodo_detallado: Need at least two precisions. We have: sample size 36, population reduced, focus on quantitative, instrument: questionnaire with Likert scale. That's at least two: sample size, instrument type. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: Are results concrete? It says: \"En el avance de la investigación se determinó que el asertividad directivo está estrechamente asociada al trabajo colaborativo ... Dado que la probabilidad es.000 menor que el nivel de significación de 0.05, la prueba es estadísticamente significativa.\" There's no actual p-value numeric, just \"es.000\" maybe a typo. But it's a result: association found, significance. It's a concrete result? It says \"probabilidad es.000\" maybe 0.000? It's a numeric value. So yes, it's a concrete result. So D3_resultados_concretos = 1.\n\nD3_conclusion_responde: Since there's no conclusion, it's 0.\n\nD4_consistencia: We need to evaluate consistency between what is said and what is presented. The summary says: \"En el avance de la investigación se determinó que el asertividad directivo está estrechamente asociada al trabajo colaborativo ... Dado que la probabilidad es.000 menor que el nivel de significación de 0.05, la prueba es estadísticamente significativa.\" There's no contradiction. The methodology is quantitative, instrument Likert, sample 36. The result is association. No contradictions. So D4_consistencia = 5? Let's check: The summary uses \"probabilidad es.000\" maybe a typo but still indicates significance. There's no contradictory statements. So consistency is high. I'd give 5.\n\nno_evaluable: The text is a summary, not a non-summary. So no_evaluable = 0.\n\nobservaciones: We can note any issues: The period repeated, the phrase \"probabilidad es.000\" maybe a typo, no conclusion. Also no contextualization. We can mention that. Provide a string.\n\nNow produce JSON with all fields. Ensure all required fields present. Use compact JSON. Let's produce.\n\nCheck schema: all fields required. Provide integer or null. We have all values.\n\nLet's produce JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":0,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":0,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Repetición del periodo 2018; falta de conclusión; posible error tipográfico en la probabilidad (es.000).\"\n}\n\nCheck that all values are integers or null. Observaciones string. Good.\n\nReturn only JSON."
+    }
+   }
+  ],
+  "created": 1789700967,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_99996fee8e",
+  "usage": {
+   "completion_tokens": 1946,
+   "prompt_tokens": 9879,
+   "total_tokens": 11825,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1795,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.593017029,
+   "prompt_time": 0.505188969,
+   "completion_time": 2.103168915,
+   "total_time": 2.608357884
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7tzqkes0bfby5tyhpme9d",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:09:27.474951+00:00"
+}

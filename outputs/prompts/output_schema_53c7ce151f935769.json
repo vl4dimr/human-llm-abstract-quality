@@ -1,0 +1,158 @@
+{
+  "type": "object",
+  "properties": {
+    "D1_imryd_objetivo": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "enum": [
+        0,
+        1,
+        null
+      ]
+    },
+    "D1_imryd_metodologia": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "enum": [
+        0,
+        1,
+        null
+      ]
+    },
+    "D1_imryd_resultados": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "enum": [
+        0,
+        1,
+        null
+      ]
+    },
+    "D1_imryd_conclusiones": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "enum": [
+        0,
+        1,
+        null
+      ]
+    },
+    "D1_orden_logico": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "enum": [
+        0,
+        1,
+        null
+      ]
+    },
+    "D2_coherencia": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "enum": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        null
+      ]
+    },
+    "D3_contextualizacion": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "enum": [
+        0,
+        1,
+        null
+      ]
+    },
+    "D3_metodo_detallado": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "enum": [
+        0,
+        1,
+        null
+      ]
+    },
+    "D3_resultados_concretos": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "enum": [
+        0,
+        1,
+        null
+      ]
+    },
+    "D3_conclusion_responde": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "enum": [
+        0,
+        1,
+        null
+      ]
+    },
+    "D4_consistencia": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "enum": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        null
+      ]
+    },
+    "no_evaluable": {
+      "type": "integer",
+      "enum": [
+        0,
+        1
+      ]
+    },
+    "observaciones": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "D1_imryd_objetivo",
+    "D1_imryd_metodologia",
+    "D1_imryd_resultados",
+    "D1_imryd_conclusiones",
+    "D1_orden_logico",
+    "D2_coherencia",
+    "D3_contextualizacion",
+    "D3_metodo_detallado",
+    "D3_resultados_concretos",
+    "D3_conclusion_responde",
+    "D4_consistencia",
+    "no_evaluable",
+    "observaciones"
+  ],
+  "additionalProperties": false
+}

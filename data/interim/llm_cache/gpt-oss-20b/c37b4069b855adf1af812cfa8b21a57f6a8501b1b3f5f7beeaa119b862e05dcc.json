@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-017",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen sin encabezados, pero cumple con todas las dimensiones."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin encabezados, pero cumple con todas las dimensiones.\"}",
+ "usage": {
+  "input_tokens": 9970,
+  "output_tokens": 1656
+ },
+ "latency_s": 2.6450271606445312,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T02:56:49.703602+00:00",
+ "raw": {
+  "id": "chatcmpl-0e2c2881-408f-420d-bb7f-1702aab7e9b2",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin encabezados, pero cumple con todas las dimensiones.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Evaluación geomecánica del macizo rocoso en la construcción del polvorín subterráneo de la Empresa Minera Coming Santibañez Cunuyo – Distrito de Sina\"\n\nResumen: (Spanish). Let's read:\n\n\"El presente proyecto de investigación se realizó en el paraje Cunuyo, comunidad de Potoni, distrito de Sina, provincia de San Antonio de Putina departamento de Puno, el problema surgió ante la necesidad de contar con un polvorín autorizado, conforme a las normativas emitidas por la Superintendencia nacional de control de servicios de seguridad, armas, municiones y explosivos de uso civil (SUCAMEC), para almacenamiento de explosivos y materiales relacionados, por esa razón nuestro objetivo fue evaluar asimismo determinar las características geomecánicas y geológicas del macizo rocoso en el polvorín subterráneo de la empresa minera COMING SANTIBAÑEZ EIRL. Localizado en su concesión minera denominado Salvación Cunuyo, la metodología de investigación es de tipo aplicada con un enfoque cuantitativo, por otra parte su nivel es de tipo descriptivo, seguidamente los resultados obtenidos sostienen propiedades geomecánicas con un RQD de calidad Excelente, RMR con una valoración de Buena a Regular, índice Q de calidad media a mala y GSI de categorías LF/B, además la estructura geológica emplazada corresponde a la Formación Sandia compuesta de pizarras, meta-areniscas, filitas, cuarcitas, micaesquistos con intrusiones de cuarzo en forma de ramificaciones, en conclusión el polvorín subterráneo es estable y segura así también las estructuras son de buena competencia para su uso como almacenamiento destinado.\"\n\nWe need to annotate fields:\n\n- D1_imryd_objetivo: 1 if objective present. The summary says: \"por esa razón nuestro objetivo fue evaluar asimismo determinar las características geomecánicas y geológicas del macizo rocoso en el polvorín subterráneo de la empresa minera COMING SANTIBAÑEZ EIRL.\" So yes, objective present. So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. It says: \"la metodología de investigación es de tipo aplicada con un enfoque cuantitativo, por otra parte su nivel es de tipo descriptivo\". So yes, methodology present. 1.\n\n- D1_imryd_resultados: 1 if results present. It says: \"los resultados obtenidos sostienen propiedades geomecánicas con un RQD de calidad Excelente, RMR con una valoración de Buena a Regular, índice Q de calidad media a mala y GSI de categorías LF/B\". So yes, results present. 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. It says: \"en conclusión el polvorín subterráneo es estable y segura así también las estructuras son de buena competencia para su uso como almacenamiento destinado.\" So yes, conclusion present. 1.\n\n- D1_orden_logico: 1 if components present in logical order. The order: objective, methodology, results, conclusion. Yes. So 1.\n\n- D2_coherencia: 1-5. We need to evaluate coherence. Let's read the summary: It starts with location, problem, objective, methodology, results, conclusion. The flow seems okay. There is some repetition: \"por esa razón nuestro objetivo fue evaluar asimismo determinar las características geomecánicas y geológicas del macizo rocoso en el polvorín subterráneo de la empresa minera COMING SANTIBAÑEZ EIRL.\" Then \"Localizado en su concesión minera denominado Salvación Cunuyo, la metodología de investigación es de tipo aplicada con un enfoque cuantitativo, por otra parte su nivel es de tipo descriptivo\". Then results. Then conclusion. The text is somewhat long but coherent. There is no abrupt jump. So I'd give 5? But maybe 4 because some adverbial \"por otra parte\" might be a bit abrupt. But overall it's coherent. I'd lean 5. But we need to be careful: The coherence scale: 5: impeccable progression, 4: flows well with minor aspereza. The summary flows well. I'd give 5.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where, to whom, etc. The summary starts with location and problem: \"el problema surgió ante la necesidad de contar con un polvorín autorizado, conforme a las normativas emitidas por la Superintendencia ... para almacenamiento de explosivos y materiales relacionados\". That situates the problem: need for authorized powder magazine. So yes, contextualization present. 1.\n\n- D3_metodo_detallado: 1 if at least two precisions about procedure. It says: \"la metodología de investigación es de tipo aplicada con un enfoque cuantitativo, por otra parte su nivel es de tipo descriptivo\". That's two precisions: type applied, quantitative focus, descriptive level. So yes, 1.\n\n- D3_resultados_concretos: 1 if results provide specific content: yes, RQD, RMR, Q, GSI categories. So 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to objective. The objective: evaluate characteristics geomecánicas y geológicas. Conclusion: \"el polvorín subterráneo es estable y seguro, las estructuras son de buena competencia para su uso\". That addresses the objective: yes, conclusion responds. So 1.\n\n- D4_consistencia: 1-5. We need to evaluate consistency between what the summary says it did and what it presents. The summary says methodology: applied, quantitative, descriptive. Results: RQD, RMR, Q, GSI. Conclusion: stable. No contradictions. So consistency high. I'd give 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes. We can add a note: \"No encabezados, but coherent.\" But we can leave empty string or a note. The schema requires string. We can provide an empty string or a note. Provide a note: \"Resumen sin encabezados, pero cumple con todas las dimensiones.\" Provide that.\n\nNow produce JSON with all fields. Ensure all required fields present. Use compact JSON. Let's produce:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Resumen sin encabezados, pero cumple con todas las dimensiones.\"\n}\n\nCheck schema: all fields present. Observaciones string. Good. Ensure no null. All integers. Good."
+    }
+   }
+  ],
+  "created": 1789700209,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_8b41efc9a3",
+  "usage": {
+   "completion_tokens": 1656,
+   "prompt_tokens": 9970,
+   "total_tokens": 11626,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1519,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.203049899,
+   "prompt_time": 0.499017488,
+   "completion_time": 1.68544187,
+   "total_time": 2.184459358
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s73wh1e9yvn279dxvk70xh",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T02:56:49.703639+00:00"
+}

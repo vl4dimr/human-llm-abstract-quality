@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-088",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD correctamente. Sin embargo, la coherencia organizacional se reduce en un punto debido a la mención de porcentajes sin dar detalles adicionales. La conclusión responde al objetivo planteado. En cuanto a la consistencia metodológica, la prueba Zc = -16.80 < Zt = -1.96 confirma la hipótesis, lo cual es coherente con los resultados."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. Sin embargo, la coherencia organizacional se reduce en un punto debido a la mención de porcentajes sin dar detalles adicionales. La conclusión responde al objetivo planteado. En cuanto a la consistencia metodológica, la prueba Zc = -16.80 < Zt = -1.96 confirma la hipótesis, lo cual es coherente con los resultados.\"\n}",
+ "usage": {
+  "input_tokens": 10839,
+  "output_tokens": 255,
+  "total_duration_s": 8.315952
+ },
+ "latency_s": 8.325535535812378,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:30:38.668432+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:30:38.6592072Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. Sin embargo, la coherencia organizacional se reduce en un punto debido a la mención de porcentajes sin dar detalles adicionales. La conclusión responde al objetivo planteado. En cuanto a la consistencia metodológica, la prueba Zc = -16.80 < Zt = -1.96 confirma la hipótesis, lo cual es coherente con los resultados.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8315952000,
+  "load_duration": 2134800,
+  "prompt_eval_count": 10839,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 301358000,
+  "eval_count": 255,
+  "eval_duration": 7912203000
+ },
+ "cached_at_utc": "2026-09-19T02:30:38.668459+00:00"
+}

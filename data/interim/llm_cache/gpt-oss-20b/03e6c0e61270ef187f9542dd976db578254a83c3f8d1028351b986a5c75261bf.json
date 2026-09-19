@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-159",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "El resumen carece de contextualización (p. ej., relevancia del estudio). Se incluyó el número de 27 creencias como resultado concreto."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen carece de contextualización (p. ej., relevancia del estudio). Se incluyó el número de 27 creencias como resultado concreto.\"}",
+ "usage": {
+  "input_tokens": 9946,
+  "output_tokens": 1997,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 3.212632656097412,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T00:04:23.941722+00:00",
+ "raw": {
+  "id": "chatcmpl-4669a5ab-0fca-458a-827d-257dfd359b07",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen carece de contextualización (p. ej., relevancia del estudio). Se incluyó el número de 27 creencias como resultado concreto.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields per schema. Evaluate summary.\n\nWe have:\n\nTitle: \"Desarrollo histórico de la doctrina de la Trinidad en el adventismo desde 1980 hasta 2011\"\n\nSummary in Spanish. It's humanities, specifically religious studies, so likely qualitative/humanities.\n\nWe must evaluate each field:\n\n- D1_imryd_objetivo: Does it state what was sought? The summary says: \"Esta investigación analiza el desarrollo doctrinal de la Trinidad...\" So yes objective is clearly stated. So 1.\n\n- D1_imryd_metodologia: Methodology: \"una metodología histórica documental, se centra en fuentes primarias y secundarias...\". That's a concrete method description. So 1.\n\n- D1_imryd_resultados: What were the findings? The summary says: \"Las conclusiones indican que la comprensión y aceptación de la doctrina de la Trinidad en la IASD han sido progresivas y complejas, reflejando un esfuerzo continuo por desarrollar una teología trinitaria coherente y basada en las Escrituras. ... subrayan la necesidad de un estudio continuo y sistemático\". Are these concrete results? It's more interpretative; but we can consider this a conclusion. For results, we need something that indicates what was found. The conclusion is about the development, but that's more result: \"la comprensión y aceptación han sido progresivas y complejas\". That could be considered a result: \"progressive and complex\". So yes, result is present, but maybe it's not numeric. But for D1_imryd_resultados we just need that it reports a finding, not that it's numeric. The phrase indicates a finding: \"han sido progresivas y complejas\". So yes. So 1.\n\n- D1_imryd_conclusiones: Are there conclusions? The summary includes \"Las conclusiones indican que la comprensión y aceptación de la doctrina de la Trinidad en la IASD han sido progresivas y complejas... subrayan la necesidad de un estudio continuo y sistemático\". That is a conclusion: summarizing and giving implication. So 1.\n\n- D1_orden_logico: Are components presented in order: Objective, Methodology, Results, Conclusion? Let's examine: Summary starts with objective: \"Esta investigación analiza ...\". Then methodology: \"Utilizando una metodología histórica documental...\". Then description of parts: analysis of first period and second period. Then results/conclusions: \"Las conclusiones indican que ...\". So the order is correct: objective → method → result/conclusion. So 1.\n\n- D2_coherencia: Evaluate coherence 1-5. Let's read.\n\nText: \"Esta investigación analiza el desarrollo doctrinal de la Trinidad en la Iglesia Adventista del Séptimo Día (IASD) durante el período especificado. Utilizando una metodología histórica documental, la investigación se centra en fuentes primarias y secundarias, incluyendo documentos oficiales de la IASD y estudios teológicos contemporáneos. La tesis se divide en dos partes principales: un análisis del desarrollo histórico de la doctrina de la Trinidad en la IASD desde sus inicios hasta 1980, y un estudio exhaustivo del período de 1980 a 2011. Durante el primer período, se examinan las declaraciones y publicaciones de los pioneros adventistas sobre la Trinidad, así como los eventos históricos y teológicos más relevantes que moldearon su comprensión. En la segunda parte, se realiza un análisis detallado de los debates y desarrollos doctrinales en torno a la Trinidad en la IASD, destacando la declaración de las 27 creencias fundamentales en 1980 y la intensificación de los estudios trinitarios en las décadas siguientes. Las conclusiones indican que la comprensión y aceptación de la doctrina de la Trinidad en la IASD han sido progresivas y complejas, reflejando un esfuerzo continuo por desarrollar una teología trinitaria coherente y basada en las Escrituras. La investigación destaca también los desafíos contemporáneos, incluyendo el resurgimiento del antitrinitarismo y las críticas internas, que subrayan la necesidad de un estudio continuo y sistemático de esta doctrina fundamental.\"\n\nThe flow: objective -> method -> structure of study (two parts) -> details of each part -> results -> implications. The transitions are natural, but there might be some redundancy or missing transitional words, but overall it's coherent. No contradictions, no abrupt jumps. I'd give 5 (impeccable) or 4. The difference: we need to consider if there is any lack of transition between parts. It says \"La tesis se divide en dos partes principales: ...\". That is a smooth transition. Then each part is explained. So I'd give 5.\n\n- D3_contextualizacion: Does it situate problem: why it's important, where it occurs, who it affects, contrast with norm? The summary says: \"Esta investigación analiza el desarrollo doctrinal de la Trinidad en la IASD...\". It doesn't give a contextualization of why it's important or what issue arises. It focuses on the objective. So no context. So 0.\n\n- D3_metodo_detallado: At least two precise methodological details: design, type, sample size, instrument, technique, statistical test, etc. Here we have \"metodología histórica documental, fuentes primarias y secundarias, documentos oficiales de la IASD y estudios teológicos contemporáneos\". That includes at least two details: methodology type (historical documental) and sources (primary & secondary, official documents). So that qualifies. So 1.\n\n- D3_resultados_concretos: Do results provide concrete content: numbers, categories, relationships? The results: \"la comprensión y aceptación de la doctrina de la Trinidad en la IASD han sido progresivas y complejas\" – no numbers. Also mention \"declaración de las 27 creencias fundamentales en 1980 y la intensificación de los estudios trinitarios en las décadas siguientes\". There's mention of \"27 creencias fundamentales\", which is a concrete number. Also \"intensificación\" but no quantitative measure. The results include the number 27. That might be considered a concrete result (categorical). The earlier \"27 creencias fundamentales\" is a specific figure. But is that part of the result? It's part of the content of the thesis. But the summary indicates that the study shows that \"la comprensión y aceptación han sido progresivas y complejas\". This is an interpretive statement. But we have a number 27. Is that a result or a context? The 27 creencias fundamental is part of the doctrinal context. It's not a quantitative result of the study, but the summary may consider it a concrete detail. For D3_resultados_concretos, we need \"categorización de categorías nombradas\" qualifies. In the earlier example, \"Emergieron tres categorías: adaptación, resistencia y negociación\" counted as 1. Similarly, \"declaración de 27 creencias fundamentales\" could count as 1. So maybe yes. However we also need at least one specific result. There's no mention of numeric findings like \"en un 70% ...\". But \"27 creencias\" is a number. So I think we can give 1.\n\n- D3_conclusion_responde: Does conclusion respond to objective? Objective: analyze development doctrinal. Conclusion: \"Las conclusiones indican que la comprensión y aceptación han sido progresivas y complejas\". That does respond to the objective of analyzing development. Yes. So 1.\n\n- D4_consistencia: We need to see if methodology and results are consistent. Methodology: historical documental. Results: progress of acceptance; no contradictory statements. No mention of contradictory method. There's mention \"resurgimiento del antitrinitarismo y las críticas internas\". There's no conflict. So consistency is good. Score: 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes? We might note that contextualization missing. We could mention that. Also mention that results are qualitative. Provide brief note.\n\nLet's fill JSON:\n\n{\n\"D1_imryd_objetivo\": 1,\n\"D1_imryd_metodologia\": 1,\n\"D1_imryd_resultados\": 1,\n\"D1_imryd_conclusiones\": 1,\n\"D1_orden_logico\": 1,\n\"D2_coherencia\": 5,\n\"D3_contextualizacion\": 0,\n\"D3_metodo_detallado\": 1,\n\"D3_resultados_concretos\": 1,\n\"D3_conclusion_responde\": 1,\n\"D4_consistencia\": 5,\n\"no_evaluable\": 0,\n\"observaciones\": \"El resumen carece de contextualización (p. ej., relevancia del estudio). Se incluyó el número de 27 creencias como resultado concreto.\"\n}\n\nNeed to ensure JSON compact (no spaces). But okay.\n\nDouble-check: All required fields present.\n\nNow produce final JSON."
+    }
+   }
+  ],
+  "created": 1789776263,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_75c733514d",
+  "usage": {
+   "completion_tokens": 1997,
+   "prompt_tokens": 9946,
+   "total_tokens": 11943,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1841,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.311411258,
+   "prompt_time": 0.072594655,
+   "completion_time": 2.172486878,
+   "total_time": 2.245081533
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vfmvtgea0a25ef8r05baxa",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-19T00:04:23.941738+00:00"
+}

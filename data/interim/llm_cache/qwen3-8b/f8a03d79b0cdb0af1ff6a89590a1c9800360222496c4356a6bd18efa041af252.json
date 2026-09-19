@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-139",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica (objetivo → metodología → resultados → conclusiones), cumpliendo con el orden IMRyD. La coherencia organizacional es buena, aunque podría mejorar en la transición entre los resultados y las conclusiones. La contextualización es nula, ya que el resumen comienza directamente con el objetivo sin situar el problema. El método es detallado, ya que se menciona el diseño y el índice de confiabilidad. Los resultados son concretos, ya que se reporta un coeficiente Rho. La conclusión responde al objetivo, ya que se establece una relación entre la cultura financiera y el uso de productos financieros. La consistencia metodológica es alta, ya que no hay contradicciones entre lo declarado y lo presentado."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica (objetivo → metodología → resultados → conclusiones), cumpliendo con el orden IMRyD. La coherencia organizacional es buena, aunque podría mejorar en la transición entre los resultados y las conclusiones. La contextualización es nula, ya que el resumen comienza directamente con el objetivo sin situar el problema. El método es detallado, ya que se menciona el diseño y el índice de confiabilidad. Los resultados son concretos, ya que se reporta un coeficiente Rho. La conclusión responde al objetivo, ya que se establece una relación entre la cultura financiera y el uso de productos financieros. La consistencia metodológica es alta, ya que no hay contradicciones entre lo declarado y lo presentado.\"\n}",
+ "usage": {
+  "input_tokens": 10771,
+  "output_tokens": 328,
+  "total_duration_s": 10.2574057
+ },
+ "latency_s": 10.265874862670898,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:38:23.415651+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:38:23.4067657Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica (objetivo → metodología → resultados → conclusiones), cumpliendo con el orden IMRyD. La coherencia organizacional es buena, aunque podría mejorar en la transición entre los resultados y las conclusiones. La contextualización es nula, ya que el resumen comienza directamente con el objetivo sin situar el problema. El método es detallado, ya que se menciona el diseño y el índice de confiabilidad. Los resultados son concretos, ya que se reporta un coeficiente Rho. La conclusión responde al objetivo, ya que se establece una relación entre la cultura financiera y el uso de productos financieros. La consistencia metodológica es alta, ya que no hay contradicciones entre lo declarado y lo presentado.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10257405700,
+  "load_duration": 8296400,
+  "prompt_eval_count": 10771,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 252322000,
+  "eval_count": 328,
+  "eval_duration": 9895410000
+ },
+ "cached_at_utc": "2026-09-19T02:38:23.415676+00:00"
+}

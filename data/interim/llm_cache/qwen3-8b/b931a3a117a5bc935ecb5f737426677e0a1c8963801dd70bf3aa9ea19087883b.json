@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-019",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica con componentes presentes en orden objetivo-metodología-resultados-conclusiones. La coherencia es buena, pero se observa una ligera discontinuidad en la descripción de los resultados y en la interpretación de la correlación. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar la relevancia del estudio. La metodología es detallada con el número de muestras, intervalos de tiempo y el estadístico utilizado. Los resultados son concretos con valores numéricos. La conclusión responde al objetivo. La consistencia metodológica es moderada debido a la interpretación de la correlación de Pearson sin una explicación más clara de su significado."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica con componentes presentes en orden objetivo-metodología-resultados-conclusiones. La coherencia es buena, pero se observa una ligera discontinuidad en la descripción de los resultados y en la interpretación de la correlación. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar la relevancia del estudio. La metodología es detallada con el número de muestras, intervalos de tiempo y el estadístico utilizado. Los resultados son concretos con valores numéricos. La conclusión responde al objetivo. La consistencia metodológica es moderada debido a la interpretación de la correlación de Pearson sin una explicación más clara de su significado.\"\n}",
+ "usage": {
+  "input_tokens": 10930,
+  "output_tokens": 318,
+  "total_duration_s": 10.5806759
+ },
+ "latency_s": 10.592233657836914,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:50:35.196866+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:50:35.1891106Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica con componentes presentes en orden objetivo-metodología-resultados-conclusiones. La coherencia es buena, pero se observa una ligera discontinuidad en la descripción de los resultados y en la interpretación de la correlación. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar la relevancia del estudio. La metodología es detallada con el número de muestras, intervalos de tiempo y el estadístico utilizado. Los resultados son concretos con valores numéricos. La conclusión responde al objetivo. La consistencia metodológica es moderada debido a la interpretación de la correlación de Pearson sin una explicación más clara de su significado.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10580675900,
+  "load_duration": 12553700,
+  "prompt_eval_count": 10930,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 357337000,
+  "eval_count": 318,
+  "eval_duration": 10094808000
+ },
+ "cached_at_utc": "2026-09-19T01:50:35.196885+00:00"
+}

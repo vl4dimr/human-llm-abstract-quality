@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-075",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta los cuatro componentes canónicos en orden correcto. La coherencia organizacional se califica en 3 debido a que el texto presenta algunas saltos de tema y repeticiones. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin situar el problema. El método detallado es 1 debido a que se menciona el enfoque cuantitativo, el método descriptivo-causal, y la técnica de encuesta. Los resultados son concretos al mencionar que los factores de riesgo influyen en la gestión de contrataciones públicas. La conclusión responde al objetivo al proponer políticas para reducir los factores de riesgo. La consistencia metodológica se califica en 3 debido a que el resumen menciona métodos y técnicas, pero no se profundiza en su aplicación."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta los cuatro componentes canónicos en orden correcto. La coherencia organizacional se califica en 3 debido a que el texto presenta algunas saltos de tema y repeticiones. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin situar el problema. El método detallado es 1 debido a que se menciona el enfoque cuantitativo, el método descriptivo-causal, y la técnica de encuesta. Los resultados son concretos al mencionar que los factores de riesgo influyen en la gestión de contrataciones públicas. La conclusión responde al objetivo al proponer políticas para reducir los factores de riesgo. La consistencia metodológica se califica en 3 debido a que el resumen menciona métodos y técnicas, pero no se profundiza en su aplicación.\"\n}",
+ "usage": {
+  "input_tokens": 10866,
+  "output_tokens": 347,
+  "total_duration_s": 11.1662225
+ },
+ "latency_s": 11.193698167800903,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:28:39.009172+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:28:38.9952479Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta los cuatro componentes canónicos en orden correcto. La coherencia organizacional se califica en 3 debido a que el texto presenta algunas saltos de tema y repeticiones. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin situar el problema. El método detallado es 1 debido a que se menciona el enfoque cuantitativo, el método descriptivo-causal, y la técnica de encuesta. Los resultados son concretos al mencionar que los factores de riesgo influyen en la gestión de contrataciones públicas. La conclusión responde al objetivo al proponer políticas para reducir los factores de riesgo. La consistencia metodológica se califica en 3 debido a que el resumen menciona métodos y técnicas, pero no se profundiza en su aplicación.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 11166222500,
+  "load_duration": 3206000,
+  "prompt_eval_count": 10866,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 331385000,
+  "eval_count": 347,
+  "eval_duration": 10684262000
+ },
+ "cached_at_utc": "2026-09-19T02:28:39.009185+00:00"
+}

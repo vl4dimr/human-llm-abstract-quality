@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-120",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, aunque podría mejorar en la transición entre la metodología y los resultados. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante el control de riesgos disergonómicos. La metodología es detallada con población, muestra y técnicas de recolección de datos. Los resultados son concretos al mencionar el análisis de riesgos y su impacto en la salud. La conclusión responde al objetivo al proporcionar una comprensión integral de la relación entre riesgos disergonómicos y enfermedades ocupacionales. La consistencia metodológica es buena, aunque se podría mejorar al mencionar más claramente cómo se cuantificará el impacto de los riesgos."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, aunque podría mejorar en la transición entre la metodología y los resultados. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante el control de riesgos disergonómicos. La metodología es detallada con población, muestra y técnicas de recolección de datos. Los resultados son concretos al mencionar el análisis de riesgos y su impacto en la salud. La conclusión responde al objetivo al proporcionar una comprensión integral de la relación entre riesgos disergonómicos y enfermedades ocupacionales. La consistencia metodológica es buena, aunque se podría mejorar al mencionar más claramente cómo se cuantificará el impacto de los riesgos.\"\n}",
+ "usage": {
+  "input_tokens": 10781,
+  "output_tokens": 335,
+  "total_duration_s": 10.1769531
+ },
+ "latency_s": 10.186593770980835,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:41:53.766412+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:41:53.757284Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, aunque podría mejorar en la transición entre la metodología y los resultados. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante el control de riesgos disergonómicos. La metodología es detallada con población, muestra y técnicas de recolección de datos. Los resultados son concretos al mencionar el análisis de riesgos y su impacto en la salud. La conclusión responde al objetivo al proporcionar una comprensión integral de la relación entre riesgos disergonómicos y enfermedades ocupacionales. La consistencia metodológica es buena, aunque se podría mejorar al mencionar más claramente cómo se cuantificará el impacto de los riesgos.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10176953100,
+  "load_duration": 3476500,
+  "prompt_eval_count": 10781,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 290255000,
+  "eval_count": 335,
+  "eval_duration": 9822934000
+ },
+ "cached_at_utc": "2026-09-19T01:41:53.766426+00:00"
+}

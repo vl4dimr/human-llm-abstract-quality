@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-101",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen presenta coherencia y estructura IMRyD. Se incluye objetivo explícito, metodología detallada con al menos dos precisiones, resultados concretos con cifras y significancia, y conclusión que responde al objetivo. No se contextualiza el problema. Se mantiene consistencia entre metodología y resultados, aunque el uso de la prueba \"Tc = 70.12 > Tt = 1.68\" parece redundante, pero no contradice los datos presentados."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta coherencia y estructura IMRyD. Se incluye objetivo explícito, metodología detallada con al menos dos precisiones, resultados concretos con cifras y significancia, y conclusión que responde al objetivo. No se contextualiza el problema. Se mantiene consistencia entre metodología y resultados, aunque el uso de la prueba \\\"Tc = 70.12 > Tt = 1.68\\\" parece redundante, pero no contradice los datos presentados.\"}",
+ "usage": {
+  "input_tokens": 10067,
+  "output_tokens": 1777,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.3742430210113525,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:57:39.765419+00:00",
+ "raw": {
+  "id": "chatcmpl-078728b9-80f7-4084-8714-d32a062c636e",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta coherencia y estructura IMRyD. Se incluye objetivo explícito, metodología detallada con al menos dos precisiones, resultados concretos con cifras y significancia, y conclusión que responde al objetivo. No se contextualiza el problema. Se mantiene consistencia entre metodología y resultados, aunque el uso de la prueba \\\"Tc = 70.12 > Tt = 1.68\\\" parece redundante, pero no contradice los datos presentados.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones. All required.\n\nWe must evaluate based on summary.\n\nLet's analyze.\n\nTitle and summary.\n\nSummary:\n\n\"investigación se realizó con el objetivo de determinar la efectividad de la Metodología Participativa de Enfermería en la Prevención Primaria del Cáncer de Cuello Uterino en mujeres del Asentamiento Humano Pueblo Libre-Ayaviri, 2014.\"\n\nSo objective is explicit. D1_imryd_objetivo=1.\n\nMethodology: \"Fue de tipo cuasi-experimental de corte longitudinal, la muestra de estudio estuvo conformada por 40 mujeres cuyas edades oscilaron de 20 a 49 años de edad, de las cuales 20 conformaron el grupo experimental y 20 el grupo control; para la recolección de datos se utilizó la técnica de la encuesta, el instrumento fue el cuestionario que se aplicó en dos momentos después de la intervención. Se tomó la prueba T-student, con un valor de p<0.05 y un intervalo de confianza de 95%.\" That's multiple precisions: type, longitudinal, sample, group division, technique, instrument, test. So D1_imryd_metodologia =1.\n\nResults: \"Los resultados del estudio demuestran que antes de la intervención el 70% de mujeres tenían conocimiento deficiente y el 30% regular, después de realizar la intervención con metodología participativa de enfermería el 100% obtuvieron conocimiento bueno en la primera medición; lo que fue significativo (p=0.00) con la prueba Tstudent, mientras que en la segunda medición el 95% mantuvo su conocimiento bueno y un 5% regular lo que demuestra que el conocimiento se mantiene, para el grupo control en el pre-test el 70% de mujeres tenían conocimiento deficiente y 30% regular y en el post-test los conocimientos deficientes se mantuvieron con un 75%.\" That's detailed: percentages, significance. So D1_imryd_resultados=1.\n\nConclusions: \"Por lo tanto, al comparar el nivel de conocimiento entre el grupo experimental y control se concluye que la intervención de enfermería con metodología participativa es efectiva para mejorar los conocimientos desde un nivel deficiente a bueno, entonces se confirma la hipótesis planteada, corroborada con el análisis estadístico al obtener la prueba Tc = 70.12 > Tt = 1.68 para un nivel de confianza del 95% y un nivel de significancia de α=0.05\". That's a conclusion interpreting results, confirming hypothesis, yes. So D1_imryd_conclusiones=1.\n\nOrder: objective first, then methodology, then results, then conclusion. The summary appears to start with objective, then methodology, then results, then conclusion at the end. That is in logical order. So D1_orden_logico=1.\n\nCoherence: The text seems to flow logically. There is a little repetition? It goes from objective to methodology to results to conclusion. No major jumps. Slightly long but still coherent. I'd rate 5 perhaps. Let's examine: \"La investigación se realizó con el objetivo de determinar ... Fue de tipo cuasi-experimental ... para la recolección de datos se utilizó la técnica ... Se tomó la prueba T-student, con un valor de p<0.05... Los resultados del estudio demuestran que antes ... luego... Por lo tanto, al comparar ... se concluye...\" This is coherent. I'd give 5.\n\nD2_coherencia=5.\n\nNow D3_contextualizacion: Must situate problem: why important, where occurs, to whom, vs. normative. The summary starts directly with objective, no context. No mention why important, no background, no mention of relevance. So D3_contextualizacion=0.\n\nD3_metodo_detallado: We need at least two precisions about procedure. The summary includes many: design (cuasi-experimental), longitudinal, sample size 40, 20/20, technique: survey, instrument: questionnaire, test: T-student, significance, confidence interval. So definitely >2, so 1.\n\nD3_resultados_concretos: Are results specific? Yes percentages, significance, test results. So 1.\n\nD3_conclusion_responde: conclusion should respond to the objective. Objective: determine effectiveness of the methodology. Conclusion: intervention effective, confirms hypothesis. Yes, matches objective. So 1.\n\nD4_consistencia: Consistency between methodology and results and conclusions. Let's check: Methodology: cuasi-experimental longitudinal, 40 women, 20/20, questionnaire, T-test. Results: percentages, significance. Conclusion: effect. This aligns. No contradictions. There is mention of \"prueba Tc = 70.12 > Tt = 1.68\" maybe it's a confusion? They say \"prueba Tc = 70.12 > Tt = 1.68\". That seems like some confusion but still within method? They used T-test earlier; they present a test result. There is no contradiction. So D4_consistencia=5.\n\nNo_evaluable: 0? It's a valid summary. So 0.\n\nObservaciones: maybe note about the summary being slightly repetitive or mention that the test statistic is confusing but still consistent. Provide observations.\n\nLet's craft observations: \"Resumen presenta coherencia y estructura IMRyD. Se incluye objetivo explícito, metodología detallada con al menos dos precisiones, resultados concretos con cifras y significancia, y conclusión que responde al objetivo. No se contextualiza el problema. Se mantiene consistencia entre metodología y resultados, aunque el uso de la prueba 'Tc = 70.12 > Tt = 1.68' parece redundante, pero no contradice los datos presentados.\"\n\nEnsure fields are all present, correct types. Observaciones string.\n\nReturn compact JSON.\n\nLet's produce:\n\n{\n  \"D1_imryd_objetivo\":1,\n  \"D1_imryd_metodologia\":1,\n  \"D1_imryd_resultados\":1,\n  \"D1_imryd_conclusiones\":1,\n  \"D1_orden_logico\":1,\n  \"D2_coherencia\":5,\n  \"D3_contextualizacion\":0,\n  \"D3_metodo_detallado\":1,\n  \"D3_resultados_concretos\":1,\n  \"D3_conclusion_responde\":1,\n  \"D4_consistencia\":5,\n  \"no_evaluable\":0,\n  \"observaciones\":\"Resumen presenta coherencia y estructura IMRyD. Se incluye objetivo explícito, metodología detallada con al menos dos precisiones, resultados concretos con cifras y significancia, y conclusión que responde al objetivo. No se contextualiza el problema. Se mantiene consistencia entre metodología y resultados, aunque el uso de la prueba 'Tc = 70.12 > Tt = 1.68' parece redundante, pero no contradice los datos presentados.\"\n}\n\nMake sure JSON is compact: no line breaks? They said compact formatting, but they didn't forbid pretty. But I'll output compact.\n\nLet's output."
+    }
+   }
+  ],
+  "created": 1789775859,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e594c51153",
+  "usage": {
+   "completion_tokens": 1777,
+   "prompt_tokens": 10067,
+   "total_tokens": 11844,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1560,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.191645784,
+   "prompt_time": 0.063489347,
+   "completion_time": 1.800755563,
+   "total_time": 1.86424491
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vf8hjcemjrkqyc1vfmz69c",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:57:39.765449+00:00"
+}

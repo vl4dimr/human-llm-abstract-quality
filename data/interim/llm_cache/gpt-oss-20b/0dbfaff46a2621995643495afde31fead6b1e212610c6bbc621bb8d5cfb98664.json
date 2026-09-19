@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-124",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Metodología descrita de forma general; se menciona población y muestra (24) y revisión/análisis de ventas online, cumpliendo la precisión mínima. Coherencia alta (4)."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Metodología descrita de forma general; se menciona población y muestra (24) y revisión/análisis de ventas online, cumpliendo la precisión mínima. Coherencia alta (4).\"}",
+ "usage": {
+  "input_tokens": 10640,
+  "output_tokens": 2497
+ },
+ "latency_s": 3.819149971008301,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:10:20.170041+00:00",
+ "raw": {
+  "id": "chatcmpl-93520cf8-9757-4f25-aa12-f2e6b7a150c8",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Metodología descrita de forma general; se menciona población y muestra (24) y revisión/análisis de ventas online, cumpliendo la precisión mínima. Coherencia alta (4).\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields:\n\n- D1_imryd_objetivo\n- D1_imryd_metodologia\n- D1_imryd_resultados\n- D1_imryd_conclusiones\n- D1_orden_logico\n- D2_coherencia\n- D3_contextualizacion\n- D3_metodo_detallado\n- D3_resultados_concretos\n- D3_conclusion_responde\n- D4_consistencia\n- no_evaluable\n- observaciones\n\nAll must be present. Values can be 0,1 or null for binary fields, 1-5 for coherence and consistency, no_evaluable 0 or 1. Observations string.\n\nWe need to evaluate the summary.\n\nLet's analyze the summary.\n\nTitle: \"Sistema online como ventaja competitiva en hoteles de tres estrellas de la ciudad de Puno-2015\"\n\nSummary content:\n\nParagraph 1: \"El presente trabajo de investigación titulado ... se realizó con la finalidad de identificar con claridad aquellos 'atributos del sistema online' que representen una ventaja competitiva en el desarrollo y gestión de hoteles tres estrellas de la ciudad de Puno. Asimismo es necesario conocer a detalle la función que cumple el sistema online en los servicios hoteleros, además, que uno de los principales problemas que padecen muchos de éstos negocios, es la escasa capacidad de potenciar el uso de la red, debido a que en la mayoría de los casos desconocen la totalidad de los beneficios ofrecidos por el sistema online.\"\n\nParagraph 2: \"El primer capítulo hace referencia al propósito e intención de la investigación, para tal sentido el objetivo general es el de 'identificar los atributos del sistema online como ventaja competitiva, analizar las ventas online en hoteles tres estrellas de la ciudad de Puno, asimismo proponer alternativas de ventas online que funcionen como ventaja competitiva'.\"\n\nParagraph 3: \"En el segundo capítulo se hace mención a los principales aspectos teóricos y referenciales asociados a la presente investigación, de la misma manera se considera conceptos de relevante importancia.\"\n\nParagraph 4: \"Por otro lado se plantearon las hipótesis, así podemos mencionar la hipótesis principal 'Existen atributos del sistema online que representan una ventaja competitiva en hoteles de tres estrellas de la ciudad de Puno'.\"\n\nParagraph 5: \"El capítulo tercero obedece a la descripción de las técnicas y métodos a los que se recurrió en la presente investigación, de la misma manera en este importante capitulo encontramos la población y muestra, esta última se encuentra constituida por veinticuatro establecimientos hoteleros de tres estrellas de la ciudad de Puno. Así también en este capítulo se consideran las características del área de investigación, el que está representado por la ciudad de Puno, la cual se encuentra ubicada entre las coordenadas geográficas 15°50′15″S 70°01′18″O a una altura de 3810 msnm. Ciudad que constituye un importante centro de servicios, comercio, turismo, y sobre todo cultural; muestra de ello es que la Festividad de la Virgen Candelaria fue declarada por la UNESCO como: 'PATRIMONIO CULTURAL E INMATERIAL DE LA HUMANIDAD'.\"\n\nParagraph 6: \"La parte esencial de esta investigación se centra en el capítulo cuarto, en el cual se realiza la exposición y análisis de los resultados, cuya finalidad es determinar los atributos del sistema online como ventaja competitiva, cuyos resultados nos permitan proponer mejoras en el proceso de ventas online, de manera que represente una ventaja competitiva para hoteles de tres estrellas de la ciudad de Puno; en esta investigación se ha aplicado, la revisión y análisis de las ventas online de los hoteles de tres estrellas de la ciudad de Puno, segmento en el cual la demanda ha ido incrementando a lo largo de los últimos años, lo que obedece particularmente a motivos culturales, históricos y paisajísticos de la ciudad de Puno.\"\n\nParagraph 7: \"Finalmente como resultado de la investigación se llegó a las siguientes conclusiones centrales: El uso sistema online (páginas web, redes sociales, microboogging, blogs, foros, videos, motores y plataformas de reservas, aplicaciones telefónicas, swards hoteleros, agencias de viaje online, etc.) constituye una ventaja competitiva en el servicio hotelero tres estrellas de la ciudad de Puno; debido a que su implementación supone mejoras en la atención al cliente y genera valor en el servicio, diferenciándolo de la atención convencional; los directivos o administradores de cada hotel son las personas claves para que cada herramienta online genere los resultados planeados.\"\n\nThen bullet points: \"Son múltiples los atributos del sistema online como ventaja competitiva en hoteles de tres estrellas de la ciudad de Puno; vamos a mencionar los identificados como principales: permite llegar a los interesados en tiempo real, condesciende una mayor interacción y comunicación con los clientes, mejora significativamente la competitividad hotelera y optimiza el servicio de atención al cliente, consecuentemente trae beneficios significativos en la rentabilidad del negocio hotelero.\"\n\nBullet: \"Cada uno de los hoteles de tres estrellas de la ciudad de Puno han desarrollado su propia dinámica de ventas online, las que han sido dispuestas por sus directivos, ya que son los responsables del manejo y establecimiento de procesos utilizados por éstos servicios, sin embargo no cuentan con un proceso definido de manejo y control de ventas online, a pesar de eso se logran resultados, debido a su experiencia en el negocio\"\n\nNow we annotate.\n\nFirst, D1_imryd_objetivo: The summary explicitly states the objective: \"identificar los atributos del sistema online como ventaja competitiva, analizar las ventas online en hoteles tres estrellas de la ciudad de Puno, asimismo proponer alternativas de ventas online que funcionen como ventaja competitiva\". So yes, objective present. So D1_imryd_objetivo = 1.\n\nD1_imryd_metodologia: The summary describes methods: \"El capítulo tercero obedece a la descripción de las técnicas y métodos a los que se recurrió ... población y muestra, veinticuatro establecimientos hoteleros ...\". It also mentions \"técnicas y métodos\", but does it give enough detail? It says \"técnicas y métodos a los que se recurrió\", but doesn't specify what techniques. It says \"población y muestra\" and \"características del área\". But does it specify instrument? It doesn't mention instrument or data collection method. It says \"se ha aplicado, la revisión y análisis de las ventas online\". So we have some method: descriptive, cross-sectional? It says \"capítulo tercero ... técnicas y métodos ... población y muestra ...\". But no details like survey, interview, etc. So we have at least one precision: \"población y muestra\" counts as a precision. But we need at least one concrete procedural indication. The protocol says: \"Umbral mínimo: una indicación procedimental concreta. 'Se aplicó una encuesta' basta\". So \"población y muestra\" counts as a precision? It's a detail about sample. But we might consider that \"población y muestra\" is a precision. So D1_imryd_metodologia = 1.\n\nD1_imryd_resultados: The summary includes results: \"El uso sistema online ... constituye una ventaja competitiva ...\". It also says \"los resultados nos permitan proponer mejoras\". But does it provide specific findings? It says \"El uso sistema online ... constituye una ventaja competitiva\". That's a result. So yes, D1_imryd_resultados = 1.\n\nD1_imryd_conclusiones: The summary ends with conclusions: \"El uso sistema online ... constituye una ventaja competitiva ...\". It also lists bullet points summarizing attributes. So yes, D1_imryd_conclusiones = 1.\n\nD1_orden_logico: The components present: objective, methodology, results, conclusions. Are they in order? The summary starts with objective, then methodology, then results, then conclusions. Yes, the order is correct. So D1_orden_logico = 1.\n\nD2_coherencia: We need to evaluate flow. The summary is somewhat long, but overall it flows: introduction, objective, theory, hypothesis, methods, results, conclusions. There are some abrupt transitions but overall coherent. Let's rate 4 maybe. Let's examine: The summary jumps from objective to theory to hypothesis to methods to results. The transitions are not always smooth but not too abrupt. There is some repetition. But overall coherent. I'd give 4. So D2_coherencia = 4.\n\nD3_contextualizacion: The summary includes context: \"ciudad de Puno, coordenadas, UNESCO, etc.\" It situates the problem: \"escasa capacidad de potenciar el uso de la red\". So yes, contextualization present. So D3_contextualizacion = 1.\n\nD3_metodo_detallado: We need at least two precisions: design, sample size, instrument, technique, etc. The summary says \"población y muestra, veinticuatro establecimientos\". That's one precision. It also says \"técnicas y métodos a los que se recurrió\" but not specified. It says \"se ha aplicado, la revisión y análisis de las ventas online\". That might count as instrument? It's a method: \"revisión y análisis\". But we need at least two. We have sample size (24) and \"revisión y análisis de las ventas online\" as a method. That might count as two. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: The summary gives results: \"El uso sistema online ... constituye una ventaja competitiva\". It also lists attributes: \"permite llegar a los interesados en tiempo real, ...\". These are concrete results. So D3_resultados_concretos = 1.\n\nD3_conclusion_responde: The conclusion addresses the objective: \"El uso sistema online ... constituye una ventaja competitiva\". The objective was to identify attributes and propose alternatives. The conclusion states that the system online is a competitive advantage. That addresses the objective. So D3_conclusion_responde = 1.\n\nD4_consistencia: We need to check consistency between methodology and results. The methodology: descriptive cross-sectional? It says \"población y muestra, veinticuatro establecimientos\". It says \"revisión y análisis de las ventas online\". The results: \"El uso sistema online ... constituye una ventaja competitiva\". There's no contradiction. The conclusion: \"El uso sistema online ... constituye una ventaja competitiva\". So consistency seems fine. No contradictions. So D4_consistencia = 5.\n\nno_evaluable: The text is a summary, not a non-summary. So no_evaluable = 0.\n\nObservaciones: We can note any uncertainties. For example, we might note that methodology details are sparse but still present. Also note that the summary is long but coherent. Let's write a short observation: \"Metodología descrita de forma general; se menciona población y muestra (24) y revisión/ análisis de ventas online, lo cual cumple con la precisión mínima. Coherencia alta (4).\"\n\nNow produce JSON with all fields.\n\nCheck schema: all fields required. Provide integer or null. Observations string.\n\nLet's produce JSON.\n\n"
+    }
+   }
+  ],
+  "created": 1789701019,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_9b8528b477",
+  "usage": {
+   "completion_tokens": 2497,
+   "prompt_tokens": 10640,
+   "total_tokens": 13137,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2332,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.241055638,
+   "prompt_time": 0.535210029,
+   "completion_time": 2.6056171470000002,
+   "total_time": 3.140827176
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7wk0devyrw4gew5ceyecs",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:10:20.170132+00:00"
+}

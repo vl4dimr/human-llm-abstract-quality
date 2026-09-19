@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-102",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica con componentes presentes en orden objetivo → metodología → resultados → conclusiones. La coherencia se califica en 4 debido a que el texto se lee de forma fluida, aunque hay una pequeña repetición en la descripción de los tipos faciales. La contextualización es 0 porque el resumen comienza directamente con el objetivo y no explica por qué es importante estudiar la relación entre el patrón queiloscópico, el tipo facial y la proporción áurea. El método detallado es 1, ya que se menciona el tipo de estudio, la muestra, la técnica utilizada para obtener las huellas y el software de análisis. Los resultados son concretos, ya que se mencionan los tipos labiales más frecuentes y se relacionan con el sexo y la etnia. La conclusión responde al objetivo al señalar la relación entre el patrón queiloscópico y el tipo facial, pero no con la proporción áurea. La consistencia metodológica se califica en 3 porque se mencionan los datos estadísticos y se utilizan métodos adecuados, pero no se verifica si los resultados apoyan completamente las conclusiones."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica con componentes presentes en orden objetivo → metodología → resultados → conclusiones. La coherencia se califica en 4 debido a que el texto se lee de forma fluida, aunque hay una pequeña repetición en la descripción de los tipos faciales. La contextualización es 0 porque el resumen comienza directamente con el objetivo y no explica por qué es importante estudiar la relación entre el patrón queiloscópico, el tipo facial y la proporción áurea. El método detallado es 1, ya que se menciona el tipo de estudio, la muestra, la técnica utilizada para obtener las huellas y el software de análisis. Los resultados son concretos, ya que se mencionan los tipos labiales más frecuentes y se relacionan con el sexo y la etnia. La conclusión responde al objetivo al señalar la relación entre el patrón queiloscópico y el tipo facial, pero no con la proporción áurea. La consistencia metodológica se califica en 3 porque se mencionan los datos estadísticos y se utilizan métodos adecuados, pero no se verifica si los resultados apoyan completamente las conclusiones.\"\n}",
+ "usage": {
+  "input_tokens": 10912,
+  "output_tokens": 427,
+  "total_duration_s": 15.1372726
+ },
+ "latency_s": 15.149096727371216,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:03:30.054688+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:03:30.0447995Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica con componentes presentes en orden objetivo → metodología → resultados → conclusiones. La coherencia se califica en 4 debido a que el texto se lee de forma fluida, aunque hay una pequeña repetición en la descripción de los tipos faciales. La contextualización es 0 porque el resumen comienza directamente con el objetivo y no explica por qué es importante estudiar la relación entre el patrón queiloscópico, el tipo facial y la proporción áurea. El método detallado es 1, ya que se menciona el tipo de estudio, la muestra, la técnica utilizada para obtener las huellas y el software de análisis. Los resultados son concretos, ya que se mencionan los tipos labiales más frecuentes y se relacionan con el sexo y la etnia. La conclusión responde al objetivo al señalar la relación entre el patrón queiloscópico y el tipo facial, pero no con la proporción áurea. La consistencia metodológica se califica en 3 porque se mencionan los datos estadísticos y se utilizan métodos adecuados, pero no se verifica si los resultados apoyan completamente las conclusiones.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 15137272600,
+  "load_duration": 3769900,
+  "prompt_eval_count": 10912,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 375906000,
+  "eval_count": 427,
+  "eval_duration": 14694130000
+ },
+ "cached_at_utc": "2026-09-19T02:03:30.054706+00:00"
+}

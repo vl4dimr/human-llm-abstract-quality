@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-041",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": null,
+  "D1_imryd_metodologia": null,
+  "D1_imryd_resultados": null,
+  "D1_imryd_conclusiones": null,
+  "D1_orden_logico": null,
+  "D2_coherencia": null,
+  "D3_contextualizacion": null,
+  "D3_metodo_detallado": null,
+  "D3_resultados_concretos": null,
+  "D3_conclusion_responde": null,
+  "D4_consistencia": null,
+  "no_evaluable": 1,
+  "observaciones": "Resumen truncado, no evaluable según protocolo."
+ },
+ "text": "{\"D1_imryd_objetivo\":null,\"D1_imryd_metodologia\":null,\"D1_imryd_resultados\":null,\"D1_imryd_conclusiones\":null,\"D1_orden_logico\":null,\"D2_coherencia\":null,\"D3_contextualizacion\":null,\"D3_metodo_detallado\":null,\"D3_resultados_concretos\":null,\"D3_conclusion_responde\":null,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"Resumen truncado, no evaluable según protocolo.\"}",
+ "usage": {
+  "input_tokens": 9827,
+  "output_tokens": 862
+ },
+ "latency_s": 1.9967687129974365,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:00:16.777531+00:00",
+ "raw": {
+  "id": "chatcmpl-e8f30828-ea63-491d-a047-c2f078463de6",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":null,\"D1_imryd_metodologia\":null,\"D1_imryd_resultados\":null,\"D1_imryd_conclusiones\":null,\"D1_orden_logico\":null,\"D2_coherencia\":null,\"D3_contextualizacion\":null,\"D3_metodo_detallado\":null,\"D3_resultados_concretos\":null,\"D3_conclusion_responde\":null,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"Resumen truncado, no evaluable según protocolo.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the given summary according to the protocol. We must produce JSON with fields as per schema. Let's analyze the summary.\n\nTitle: \"Comparación de eficiencia de bioabono Bocashi (elaborado de restos de pescado y suelo) y fertilizante químico en el desarrollo de Allium cepa\"\n\nResumen: \n\"Los residuos hidrobiológicos provenientes de la actividad pesquera y el uso indiscriminado de los insumos químicos constituyen una fuente de contaminación para el agua y degradación del suelo. En este sentido, la busca de alternativas para el aprovechamiento de estos residuos es indispensable. Una opción viable es la elaboración de abonos agrícolas mediante la técnica bocashi a base de restos de pescado, ya que presentan una alta carga microbiana que mejora la diversidad biológica de los suelos. El presente trabajo de investigación tiene como objetivo emplear los abonos orgánicos como alternativa que permita reducir el uso irracional de fertilizantes químicos, haciendo especial énfasis en la comparación de eficiencia de un abono a base residuos de pescado y fertilizante químico en el desarrollo del Allium cepa. Asimismo, está comprobado que los abonos a base de\"\n\nThe summary seems truncated at the end: \"Asimismo, está comprobado que los abonos a base de\" incomplete. So the summary is incomplete. According to protocol, if the text is not a full summary, we might set no_evaluable = 1 and leave other fields empty. But we need to check: The protocol says: \"If the text is not a summary (carátula, licencia, índice, truncated to half a sentence), set no_evaluable = 1 and leave all other fields empty.\" The summary is truncated, but is it a full summary? It ends abruptly. It might be incomplete. The protocol says: \"If the summary is truncated to a half sentence, it's not a summary.\" The last sentence is incomplete: \"Asimismo, está comprobado que los abonos a base de\" - incomplete. So we should treat as not evaluable. But we need to confirm: The summary is incomplete, but maybe it's still a summary but truncated. The protocol says: \"If the text is not a summary (carátula, licencia, índice, truncated to half a sentence), set no_evaluable = 1 and leave all other fields empty.\" So we should set no_evaluable = 1, and all other fields empty (null). Observaciones: we can note that it's truncated. So we set all fields to null. The required fields must be present: all fields must be present. So we set each field to null except no_evaluable = 1, and observaciones string with note.\n\nThus JSON:\n\n{\n  \"D1_imryd_objetivo\": null,\n  \"D1_imryd_metodologia\": null,\n  \"D1_imryd_resultados\": null,\n  \"D1_imryd_conclusiones\": null,\n  \"D1_orden_logico\": null,\n  \"D2_coherencia\": null,\n  \"D3_contextualizacion\": null,\n  \"D3_metodo_detallado\": null,\n  \"D3_resultados_concretos\": null,\n  \"D3_conclusion_responde\": null,\n  \"D4_consistencia\": null,\n  \"no_evaluable\": 1,\n  \"observaciones\": \"Resumen truncado, no evaluable según protocolo.\"\n}\n\nCheck schema: all fields present, types: integers or null. Observaciones string. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789700416,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_587d0d67cc",
+  "usage": {
+   "completion_tokens": 862,
+   "prompt_tokens": 9827,
+   "total_tokens": 10689,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 727,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.153775828,
+   "prompt_time": 0.498543108,
+   "completion_time": 1.073869266,
+   "total_time": 1.572412374
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7a7cfe1wvs2cxny2v76pz",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:00:16.777622+00:00"
+}

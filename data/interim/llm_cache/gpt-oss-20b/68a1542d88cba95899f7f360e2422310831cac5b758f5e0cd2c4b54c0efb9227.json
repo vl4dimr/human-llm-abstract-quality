@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-042",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Conclusión no responde directamente al objetivo; resultados sin magnitud."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Conclusión no responde directamente al objetivo; resultados sin magnitud.\"}",
+ "usage": {
+  "input_tokens": 9935,
+  "output_tokens": 2439,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 3.190783977508545,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:00:23.470441+00:00",
+ "raw": {
+  "id": "chatcmpl-26dc9df3-734a-472e-bf08-e66a8fe3c862",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Conclusión no responde directamente al objetivo; resultados sin magnitud.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Relación de las fuentes de financiamiento y el desarrollo empresarial en el Consorcio Aprocela servicios generales de la Provincia de Melgar – Puno, 2018\"\n\nResumen:\n\n\"La presente investigación se elabora debido a querer conocer si se relaciona las variables pues muchas de las empresas no cuentan con el financiamiento adecuado. Por ello se tuvo como objetivo general determinar cuál es el nivel de relación de las fuentes de financiamiento y el desarrollo empresarial en el Consorcio Aprocela servicios generales de la Provincia de Melgar - Puno, 2018. Se contó con 16 socios que forman parte del consorcio, Se tuvo como tipo de investigación: Descriptivo correlacional, el enfoque cuantitativo, con diseño no experimental por que no Se manipulo la variable y con corte transeccional porque la obtención de información se realizó en un solo momento mediante la encuesta, usando la recolección de datos como instrumento de medición teniendo un cuestionario de 19 preguntas tipo Likert, los resultados fueron procesados mediante el programa estadístico IBM SPSS Statistics 25. Aplicándose la prueba de correlación de Rho Spearman obteniendo como resultado que existe relación positiva significativa entre las fuentes de financiamiento y el desarrollo empresarial en el Consorcio Aprocela servicios generales de la Provincia de Melgar - Puno, 2018., permitiéndoles obtener una oportunidad de mejorar sus activos, gestionar de manera adecuada sus financiamientos y mejorar la economía a fin de propiciar la reducción de pobreza el distrito de Antauta.\"\n\nWe need to evaluate each field.\n\nFirst, check if it's a valid summary. It seems to be a summary. So no no_evaluable.\n\nNow evaluate each dimension.\n\n### D1_imryd_objetivo\n\nWe need to see if the summary can answer \"what was proposed to investigate\". The summary states: \"se tuvo como objetivo general determinar cuál es el nivel de relación de las fuentes de financiamiento y el desarrollo empresarial en el Consorcio Aprocela servicios generales de la Provincia de Melgar - Puno, 2018.\" That is explicit. So D1_imryd_objetivo = 1.\n\n### D1_imryd_metodologia\n\nWe need to see if there is a concrete indication of how knowledge was obtained. The summary says: \"Se contó con 16 socios que forman parte del consorcio, Se tuvo como tipo de investigación: Descriptivo correlacional, el enfoque cuantitativo, con diseño no experimental por que no Se manipulo la variable y con corte transeccional porque la obtención de información se realizó en un solo momento mediante la encuesta, usando la recolección de datos como instrumento de medición teniendo un cuestionario de 19 preguntas tipo Likert, los resultados fueron procesados mediante el programa estadístico IBM SPSS Statistics 25. Aplicándose la prueba de correlación de Rho Spearman\". That includes design, sample size, instrument, statistical test. So yes, D1_imryd_metodologia = 1.\n\n### D1_imryd_resultados\n\nWe need to see if the summary communicates what was found. It says: \"obteniendo como resultado que existe relación positiva significativa entre las fuentes de financiamiento y el desarrollo empresarial\". That is a result. So D1_imryd_resultados = 1.\n\n### D1_imryd_conclusiones\n\nWe need to see if there is a closure that goes beyond repeating the result. The summary ends with: \"permitiéndoles obtener una oportunidad de mejorar sus activos, gestionar de manera adecuada sus financiamientos y mejorar la economía a fin de propiciar la reducción de pobreza el distrito de Antauta.\" This is an implication or recommendation. It is a conclusion that interprets the result and suggests implications. So D1_imryd_conclusiones = 1.\n\n### D1_orden_logico\n\nWe need to check if the components present appear in logical sequence: objective → method → results → conclusion. The summary starts with objective, then method, then results, then conclusion. So D1_orden_logico = 1.\n\n### D2_coherencia\n\nWe need to evaluate flow. Let's read the summary again:\n\n\"La presente investigación se elabora debido a querer conocer si se relaciona las variables pues muchas de las empresas no cuentan con el financiamiento adecuado. Por ello se tuvo como objetivo general determinar cuál es el nivel de relación de las fuentes de financiamiento y el desarrollo empresarial en el Consorcio Aprocela servicios generales de la Provincia de Melgar - Puno, 2018. Se contó con 16 socios que forman parte del consorcio, Se tuvo como tipo de investigación: Descriptivo correlacional, el enfoque cuantitativo, con diseño no experimental por que no Se manipulo la variable y con corte transeccional porque la obtención de información se realizó en un solo momento mediante la encuesta, usando la recolección de datos como instrumento de medición teniendo un cuestionario de 19 preguntas tipo Likert, los resultados fueron procesados mediante el programa estadístico IBM SPSS Statistics 25. Aplicándose la prueba de correlación de Rho Spearman obteniendo como resultado que existe relación positiva significativa entre las fuentes de financiamiento y el desarrollo empresarial en el Consorcio Aprocela servicios generales de la Provincia de Melgar - Puno, 2018., permitiéndoles obtener una oportunidad de mejorar sus activos, gestionar de manera adecuada sus financiamientos y mejorar la economía a fin de propiciar la reducción de pobreza el distrito de Antauta.\"\n\nObservations: The summary is somewhat choppy. It starts with a motivation sentence: \"La presente investigación se elabora debido a querer conocer si se relaciona las variables pues muchas de las empresas no cuentan con el financiamiento adecuado.\" Then objective. Then method. Then results. Then conclusion. The flow is fairly linear, but there are some issues: The first sentence is a bit redundant and not directly connected to the objective. The method description is long and somewhat repetitive. The conclusion is a bit long but still flows. There is no major jump. I'd rate it maybe 4. Let's consider the scale:\n\n- 5: Progresión impecable. Each sentence prepares the next. No repetitions.\n- 4: Fluye bien, con alguna aspereza menor que no estorba. Some repetition or slight abruptness.\n- 3: Se entiende, pero cuesta. Some jumps.\n- 2: Hay que releer para reconstruir el hilo. Ideas desordenadas.\n- 1: Incoherente.\n\nThis summary seems to be 4: flows well, but has some repetition and maybe a bit of abruptness. So D2_coherencia = 4.\n\n### D3_contextualizacion\n\nWe need to see if the summary situates the problem: why it matters, where it occurs, to whom it affects, against what norm or framework. The summary starts with a motivation: \"se elabora debido a querer conocer si se relaciona las variables pues muchas de las empresas no cuentan con el financiamiento adecuado.\" That is a contextualization: it explains why it's important. It also mentions the location: Consorcio Aprocela, Provincia de Melgar, Puno. It doesn't mention a norm or framework, but it does mention the problem: lack of adequate financing. So yes, D3_contextualizacion = 1.\n\n### D3_metodo_detallado\n\nWe need at least two precise details about the procedure. The summary includes: sample size (16 socios), design (descriptivo correlacional, no experimental, transeccional), instrument (cuestionario de 19 preguntas tipo Likert), statistical test (Rho Spearman). That is more than two. So D3_metodo_detallado = 1.\n\n### D3_resultados_concretos\n\nWe need specific content: numbers, categories, relationships. The summary says: \"existe relación positiva significativa entre las fuentes de financiamiento y el desarrollo empresarial\". It doesn't give the correlation coefficient or p-value. It says \"relación positiva significativa\". That is a result but not concrete. According to the guidelines, \"Significancia sin magnitud\" is a case limit: \"Sig. > 0,05 en todas las dimensiones\" is considered a result but not concrete. In this case, we have \"relación positiva significativa\" but no magnitude. So it's a result but not concrete. So D3_resultados_concretos = 0.\n\n### D3_conclusion_responde\n\nWe need to see if the conclusion responds to the objective. The objective: determine the level of relationship between financing sources and business development. The conclusion: \"permitiéndoles obtener una oportunidad de mejorar sus activos, gestionar de manera adecuada sus financiamientos y mejorar la economía a fin de propiciar la reducción de pobreza el distrito de Antauta.\" This is an implication, not a direct answer to the objective. The objective was to determine the level of relationship. The conclusion is about opportunities for improvement. It does not directly answer the objective. So D3_conclusion_responde = 0.\n\n### D4_consistencia\n\nWe need to evaluate consistency between what the summary says it did and what it presents. The summary says: \"Se contó con 16 socios... Descriptivo correlacional, enfoque cuantitativo, diseño no experimental, corte transeccional, encuesta, cuestionario de 19 preguntas tipo Likert, SPSS, prueba de correlación de Rho Spearman.\" The results: \"existe relación positiva significativa\". The conclusion: \"permitiéndoles obtener una oportunidad de mejorar sus activos, gestionar de manera adecuada sus financiamientos y mejorar la economía a fin de propiciar la reducción de pobreza el distrito de Antauta.\" This is consistent: the conclusion is an implication of the positive correlation. There's no contradiction. So D4_consistencia = 5.\n\nBut we need to check if any contradictions: The summary says \"no se manipulo la variable\" and \"corte transeccional\". The conclusion is about improvement, which is fine. No contradictions. So D4_consistencia = 5.\n\n### no_evaluable\n\nSince it's a valid summary, no_evaluable = 0.\n\n### observaciones\n\nWe should add any notes. We might note that the conclusion is not directly answering the objective, but it's an implication. Also note that results lack magnitude. But we can keep it minimal. Let's add: \"Conclusión no responde directamente al objetivo; resultados sin magnitud.\" That is fine.\n\nNow produce JSON with all fields.\n\nCheck schema: required fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nAll fields present.\n\nNow produce JSON. Ensure compact formatting."
+    }
+   }
+  ],
+  "created": 1789700423,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_37c9245f64",
+  "usage": {
+   "completion_tokens": 2439,
+   "prompt_tokens": 9935,
+   "total_tokens": 12374,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2301,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.191518088,
+   "prompt_time": 0.071414654,
+   "completion_time": 2.635375294,
+   "total_time": 2.706789948
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7acrjexnrzw1t6b88fwkk",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:00:23.470978+00:00"
+}

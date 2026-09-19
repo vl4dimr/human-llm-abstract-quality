@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-052",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica y coherente, aunque la conclusión añade una afirmación que no está completamente respaldada por los resultados. La correlación positiva y significativa se reporta correctamente, pero la conclusión sugiere una relación causal que no se puede inferir directamente de los datos."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica y coherente, aunque la conclusión añade una afirmación que no está completamente respaldada por los resultados. La correlación positiva y significativa se reporta correctamente, pero la conclusión sugiere una relación causal que no se puede inferir directamente de los datos.\"\n}",
+ "usage": {
+  "input_tokens": 10780,
+  "output_tokens": 224,
+  "total_duration_s": 7.5034877
+ },
+ "latency_s": 7.535640716552734,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:55:48.704257+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:55:48.6949187Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica y coherente, aunque la conclusión añade una afirmación que no está completamente respaldada por los resultados. La correlación positiva y significativa se reporta correctamente, pero la conclusión sugiere una relación causal que no se puede inferir directamente de los datos.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7503487700,
+  "load_duration": 7695500,
+  "prompt_eval_count": 10780,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 313763000,
+  "eval_count": 224,
+  "eval_duration": 7061899000
+ },
+ "cached_at_utc": "2026-09-19T01:55:48.704291+00:00"
+}

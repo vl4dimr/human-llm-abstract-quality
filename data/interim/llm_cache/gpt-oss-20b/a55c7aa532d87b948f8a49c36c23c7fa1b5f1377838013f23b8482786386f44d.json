@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-001",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Conclusión simplemente repite el resultado sin interpretación adicional; falta contextualización de la importancia del estudio."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Conclusión simplemente repite el resultado sin interpretación adicional; falta contextualización de la importancia del estudio.\"}",
+ "usage": {
+  "input_tokens": 10075,
+  "output_tokens": 1326,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.285947322845459,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:45:52.020104+00:00",
+ "raw": {
+  "id": "chatcmpl-30821435-9523-4ba5-9897-3a5c280c2280",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Conclusión simplemente repite el resultado sin interpretación adicional; falta contextualización de la importancia del estudio.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields per schema. Must parse summary.\n\nFields:\n\nD1_imryd_objetivo\nD1_imryd_metodologia\nD1_imryd_resultados\nD1_imryd_conclusiones\nD1_orden_logico\nD2_coherencia\nD3_contextualizacion\nD3_metodo_detallado\nD3_resultados_concretos\nD3_conclusion_responde\nD4_consistencia\nno_evaluable\nobservaciones\n\nLet's analyze summary.\n\nTitle: ...; summary includes sections separated by colon.\n\nObjective: \"Analizar la relación de la calidad de vida en pacientes mastectomizadas con la funcionalidad atendidas en el Instituto Regional de Enfermedades Neoplásicas, Arequipa 2023.\"\n\nMethod: \"Trabajo de investigación de diseño no experimental, de tipo descriptivo, de corte trasversal, con una muestra de 72 pacientes por mastectomía.\"\n\nResult: \"Existe relación de la calidad de vida ... son: un 63,89% ... (a long list of percentages). All variables significant with p<0,05. Level of functionality ... 69,44% moderate, 25% severe, 5,56% mild.\"\n\nConclusion: \"En el Instituto Regional de Enfermedades Neoplásicas, se establece que existe relación de la calidad de vida en pacientes mastectomizadas con la funcionalidad.\"\n\nWe need to evaluate each dimension.\n\nD1_imryd_objetivo: Yes objective is present explicitly: \"Objetivo: Analizar la relación...\" So 1.\n\nD1_imryd_metodologia: \"Método: Trabajo de investigación de diseño no experimental, de tipo descriptivo, de corte transversal, con una muestra de 72 pacientes por mastectomía.\" That is 1.\n\nD1_imryd_resultados: Does the results contain actual results? It says: \"Existe relación ... son: un 63,89% ... etc.\" It is a list of percentages; yes it's a result, so 1.\n\nD1_imryd_conclusiones: Conclusion is \"En el Instituto Regional de Enfermedades Neoplásicas, se establece que existe relación de la calidad de vida en pacientes mastectomizadas con la funcionalidad.\" That's basically repeating the result; does it go beyond? It restates the existence of relation, not further interpretation. According to rule: conclusion must go beyond repeating result, interpret, implication. This is essentially repeat. So conclusion is 0.\n\nD1_orden_logico: order is objective -> method -> results -> conclusion. They are in that sequence. So 1.\n\nD2_coherencia: evaluate flow. Let's see: objective then method, then results with percentages, then conclusion. The results section is quite long but contains many percentages; but is it cohesive? There might be some jumps: it lists demographics, then functional outcomes, all percentages. The narrative is cohesive. The conclusion restates the same. I'd assign 4 maybe, because it's good but not perfect due to some repetitive phrasing or maybe the conclusion is repetitive. Let's think: D2 ranges 1-5. 5: impeccable. 4: flows well but some minor issue. Here it's good flow. I'd give 5 maybe. But note that there might be slight issue with using \"son:\" then list. Could be fine. I'd assign 5.\n\nD3_contextualizacion: Did summary situate problem? It states \"en el Instituto Regional de Enfermedades Neoplásicas, Arequipa 2023\" and context? The objective mentions institution; but it doesn't explain why this is important or background. So probably 0.\n\nD3_metodo_detallado: We have design, type, cut-off, sample size of 72. That's 3 precise details. So 1.\n\nD3_resultados_concretos: There are many percentages; yes concrete. 1.\n\nD3_conclusion_responde: Since conclusion is a repetition, it doesn't respond to objective beyond repeating. So 0.\n\nD4_consistencia: Consistency between what was said and what is presented. Method: design no experimental, descriptive, transversal, sample 72. Results: list of percentages. Conclusion: same statement of relation. The conclusion says \"existe relación...\" which is supported by results; the conclusion doesn't add contradictions. It's consistent. There's no contradictory statements. So score 5. Wait: In D4, 5 means fully consistent. Since the conclusion repeats result but no conflict. I think it's still consistent: no contradictions. So 5.\n\nBut rule: conclusion that is just repeating results might still be considered acceptable but doesn't add value. Consistency: no contradictions. So 5.\n\nBut is there any mention of p<0.05; that's fine. No contradictions. So 5.\n\nHowever check if the conclusion \"existe relación\" matches result \"Existe relación ...\". So yes. So 5.\n\nno_evaluable: Since it's a proper summary, not a title only, no issues. So 0.\n\nObservaciones: any notes? We can note that conclusion repeats results; maybe mention that we set 0 for conclusion. Also that context missing.\n\nLet's produce JSON with these values.\n\nMake sure fields in correct order: schema requires required fields in order: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nReturn compact JSON."
+    }
+   }
+  ],
+  "created": 1789775151,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_d3e146e1a5",
+  "usage": {
+   "completion_tokens": 1326,
+   "prompt_tokens": 10075,
+   "total_tokens": 11401,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1181,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.239898282,
+   "prompt_time": 0.05999918,
+   "completion_time": 1.352726451,
+   "total_time": 1.412725631
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vejyvnep8sz7ecsgxzny5t",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:45:52.020119+00:00"
+}

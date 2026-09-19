@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-118",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 2,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta los cuatro componentes canónicos en orden y con claridad. La coherencia organizacional se califica en 3 debido a que el texto es bastante claro y coherente, aunque podría mejorar en la progresión temática y conexión entre las partes. La completitud de componentes se califica en 100% debido a que se incluyen los componentes necesarios y se presentan de manera clara. La consistencia metodológica se califica en 2 debido a que la conclusión afirma que la prueba es estadísticamente significativa, pero no se menciona el valor exacto del estadístico ni el nivel de significación."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 2,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta los cuatro componentes canónicos en orden y con claridad. La coherencia organizacional se califica en 3 debido a que el texto es bastante claro y coherente, aunque podría mejorar en la progresión temática y conexión entre las partes. La completitud de componentes se califica en 100% debido a que se incluyen los componentes necesarios y se presentan de manera clara. La consistencia metodológica se califica en 2 debido a que la conclusión afirma que la prueba es estadísticamente significativa, pero no se menciona el valor exacto del estadístico ni el nivel de significación.\"\n}",
+ "usage": {
+  "input_tokens": 10752,
+  "output_tokens": 297,
+  "total_duration_s": 9.3358362
+ },
+ "latency_s": 9.3401780128479,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:35:03.499684+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:35:03.4974002Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 2,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta los cuatro componentes canónicos en orden y con claridad. La coherencia organizacional se califica en 3 debido a que el texto es bastante claro y coherente, aunque podría mejorar en la progresión temática y conexión entre las partes. La completitud de componentes se califica en 100% debido a que se incluyen los componentes necesarios y se presentan de manera clara. La consistencia metodológica se califica en 2 debido a que la conclusión afirma que la prueba es estadísticamente significativa, pero no se menciona el valor exacto del estadístico ni el nivel de significación.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9335836200,
+  "load_duration": 13603600,
+  "prompt_eval_count": 10752,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 230377000,
+  "eval_count": 297,
+  "eval_duration": 8979073000
+ },
+ "cached_at_utc": "2026-09-19T02:35:03.499711+00:00"
+}

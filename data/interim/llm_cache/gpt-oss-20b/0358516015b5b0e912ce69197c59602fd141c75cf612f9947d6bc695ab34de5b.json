@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-014",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta objetivo, método, resultado y conclusión en orden. La conclusión responde al objetivo y se alinea con la metodología descriptiva. El flujo es relativamente coherente aunque algo denso; se le asigna 4 en coherencia. No se detectan contradicciones. El resumen es evaluable."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen presenta objetivo, método, resultado y conclusión en orden. La conclusión responde al objetivo y se alinea con la metodología descriptiva. El flujo es relativamente coherente aunque algo denso; se le asigna 4 en coherencia. No se detectan contradicciones. El resumen es evaluable.\"}",
+ "usage": {
+  "input_tokens": 9879,
+  "output_tokens": 1796,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.3791887760162354,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:16:28.289978+00:00",
+ "raw": {
+  "id": "chatcmpl-0d3fdbf2-13b1-4250-9fcc-49f4c0a65076",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen presenta objetivo, método, resultado y conclusión en orden. La conclusión responde al objetivo y se alinea con la metodología descriptiva. El flujo es relativamente coherente aunque algo denso; se le asigna 4 en coherencia. No se detectan contradicciones. El resumen es evaluable.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate according to protocol. Provide fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nCheck each field.\n\nFirst read the summary:\n\n\"La presente investigación tuvo como propósito general identificar los hábitos de lectura en los niños y niñas del 6to grado de la Institución Educativa N°50961 Tupac Amaru de Quillabamba en el año 2017, la metodología empleada para este trabajo de investigación fue un diseño descriptivo simple en el que se investiga la acaecimiento de los niveles en una población, lo cual quiere decir de qué manera se muestra determinado fenómeno y así mismo indaga detallar las características más resaltantes de las personas, grupos o cualquier otro acontecimiento que sea sujeto a investigación y a su respectivo análisis; donde el instrumento utilizado consta de un cuestionario, para su posterior procesamiento y emisión de los resultados por medio de las tablas , figuras y también su correspondiente interpretación; con la investigación realizada se concluyó los hábitos de lectura en los niños y niñas del sexto grado de la Institución Educativa N°50961 Tupac Amaru de Quillabamba es bueno, yaqué el 40% manifestaron que siempre leen a menudo libros en sus ratos libres.\"\n\nWe must interpret components:\n\nObjective: \"identificar los hábitos de lectura en los niños y niñas del 6to grado...\" It's explicit: \"propósito general identificar los hábitos de lectura\". So objective present: 1.\n\nMethodology: They describe: \"desarrollo de diseño descriptivo simple; instrumento cuestionario.\" They mention \"instrumento utilizado consta de un cuestionario, para su posterior procesamiento y emisión de los resultados por medio de las tablas , figuras y también su correspondiente interpretación.\" So methodology present, at least one precise. They say \"diseño descriptivo simple\". So D1_metodologia = 1.\n\nResults: They say \"con la investigación realizada se concluyó los hábitos de lectura en los niños y niñas ... es bueno, yaqué el 40% manifestaron que siempre leen a menudo libros en sus ratos libres.\" So result: \"40% manifestaron ...\". They also mention \"es bueno\". But that is conclusion. The result is the 40% data. So D1_resultados = 1.\n\nConclusions: \"se concluyó los hábitos de lectura ... es bueno\" (the statement). So conclusion present: 1.\n\nOrder: components present in order: Objective -> Methodology -> Results -> Conclusion. Yes: they start with objective, then methodology, then result, then conclusion. So D1_orden_logico = 1.\n\nCoherence D2: Evaluate flow. Let's read again.\n\n\"La presente investigación tuvo como propósito general identificar los hábitos de lectura ... , la metodología empleada ... fue un diseño descriptivo simple ... donde el instrumento utilizado consta de un cuestionario ... para su posterior procesamiento y emisión de los resultados por medio de las tablas , figuras y también su correspondiente interpretación; con la investigación realizada se concluyó los hábitos de lectura ... es bueno, yaqué el 40% manifestaron que siempre leen a menudo libros en sus ratos libres.\"\n\nFlow: It is fairly coherent. But there is a bit of run-on sentences, but still understandable. I'd give 4 maybe. Let's evaluate: 5 is perfect flow, no abrupt jumps. 4 is minor aspereza. This paragraph has some long sentences but still flows. I'd say 4.\n\nD3 context: contextualización. They mention \"en los niños y niñas del 6to grado de la Institución Educativa N°50961 Tupac Amaru de Quillabamba en el año 2017\". That provides context: location, population. That is the problem. So D3_contextualizacion = 1. They did not explain why it's important, but still context. The rule: contextualization: sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco se contrasta. They mention where occurs: 6to grado de la Institución Educativa N°50961 Tupac Amaru de Quillabamba. They didn't mention why important. But still, it situates. The case example: in 11.1, \"El objetivo solo está en el título\" had 0. But here they start with objective not only title. The summary: \"La presente investigación tuvo como propósito general identificar los hábitos de lectura...\" So contextualization is present: they mention the school and year. I think we can say 1.\n\nD3_metodo_detallado: They give design: \"diseño descriptivo simple\" and instrument: \"cuestionario\". They mention \"para su posterior procesamiento y emisión de los resultados por medio de las tablas, figuras\". But they didn't mention sample size. So we need at least two precisions. We have: design, instrument. That's 2. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: They give 40% manifestaron que siempre leen a menudo libros. That is a concrete result with a magnitude. So D3_resultados_concretos = 1.\n\nD3_conclusion_responde: The conclusion: \"se concluyó los hábitos de lectura... es bueno, yaqué el 40% manifestaron ...\" The conclusion addresses the objective: to identify reading habits. It says \"es bueno\" but also includes 40%. So conclusion responds. So D3_conclusion_responde = 1.\n\nD4_consistencia: Consistency between methodology and results/conclusion. They describe a descriptive design and questionnaire. The result is 40% reading. Conclusion says it's good. That seems consistent: descriptive design, questionnaire, result. No contradictions. No claim of statistical significance. They didn't mention any test. The conclusion uses \"es bueno\" which is an evaluative statement but not contradictory. They didn't claim causality, just observation. So D4_consistencia = 5 maybe. Let's see the scoring: 5 means fully coherent; 4 minor imprecision terminológica; 3 visible discordance; 2 multiple discordances; 1 contradictory. There's no contradiction. It's consistent. So I'd assign 5. But let's read the D4 instructions: \"Consistencia entre lo que el resumen dice que hizo y lo que presenta\". They mention that \"Concluye que es bueno\" is not necessarily contradictory. It's consistent. So 5.\n\nno_evaluable: Since it's a summary, we evaluate. So no_evaluable = 0? The field expects 0 or 1. 0 indicates evaluable, 1 indicates not evaluable. We set 0.\n\nObservaciones: Add notes: mention ambiguous \"es bueno\" maybe subjective. Also note that the summary uses \"yaqué\" which is a typo. But not relevant. Add: \"Objective and conclusion directly mention the same 40% result, consistent with methodology; slight run‑on sentence but overall coherent.\" Provide as a string.\n\nMake sure all fields present.\n\nNow produce JSON.\n\nCheck field names: D1_imryd_conclusiones, D1_imryd_metodologia, D1_imryd_objetivo, D1_imryd_resultados, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nAll required.\n\nNow output compact JSON."
+    }
+   }
+  ],
+  "created": 1789701388,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_d23c14756c",
+  "usage": {
+   "completion_tokens": 1796,
+   "prompt_tokens": 9879,
+   "total_tokens": 11675,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1610,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.209192134,
+   "prompt_time": 0.054599436,
+   "completion_time": 1.8502091649999999,
+   "total_time": 1.904808601
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s87vrfe7v8es9pfs4e5pjh",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:16:28.290051+00:00"
+}

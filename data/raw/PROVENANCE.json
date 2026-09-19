@@ -1,0 +1,118 @@
+{
+  "staged_at_utc": "2026-09-18T23:40:10.953676+00:00",
+  "staged_by": "src/00_stage_raw.py",
+  "files": [
+    {
+      "path": "annotations/Anotacion_principal_A1.xlsx",
+      "source": "C:/Users/LENOVO/Downloads/vlad/DATOS/Anotacion_principal_A1 (1).xlsx",
+      "note": "A1, fase principal. Copia mas reciente (mtime 2026-08-11 22:27).",
+      "bytes": 260814,
+      "sha256": "97bf1a6bb4e7c16e77a6e019e7fb54981fcf97929c15241077db61a00f23d781",
+      "source_mtime_utc": "2026-08-12T03:27:44.243900+00:00"
+    },
+    {
+      "path": "annotations/Anotacion_principal_A1_REV.xlsx",
+      "source": "C:/Users/LENOVO/Downloads/vlad/Anotacion_principal_A1 -REV.xlsx",
+      "note": "A1, fase principal, version '-REV' (mtime 2026-08-11 22:09).",
+      "bytes": 259949,
+      "sha256": "6c1c197134d1fa371503bd03463872803440b63654c66bd075699bf92a401d50",
+      "source_mtime_utc": "2026-08-12T03:09:30.676064+00:00"
+    },
+    {
+      "path": "annotations/Anotacion_principal_A1_v0.xlsx",
+      "source": "C:/Users/LENOVO/Downloads/vlad/Anotacion_principal_A1.xlsx",
+      "note": "A1, fase principal, version mas antigua y parcial (mtime 2026-08-11 21:52).",
+      "bytes": 252902,
+      "sha256": "78ec617d5cd9dd73befc7c2d5f83e9a4de997ed4e5d287ba7e6e35925ac11692",
+      "source_mtime_utc": "2026-08-12T02:52:12.596169+00:00"
+    },
+    {
+      "path": "annotations/Anotacion_principal_A2.xlsx",
+      "source": "C:/Users/LENOVO/Downloads/vlad/DATOS/Anotacion_principal_A2.xlsx",
+      "note": "A2 ORIGINAL: copia exacta de A1, NO independiente. Se conserva solo como evidencia de la auditoria; no entra en el analisis.",
+      "bytes": 261003,
+      "sha256": "04373c17b510b96b548461c5cbf13c19a84fb2c03bac2b45d958dabd4673d7ef",
+      "source_mtime_utc": "2026-08-12T03:39:04.051777+00:00"
+    },
+    {
+      "path": "annotations/Anotacion_principal_A2_independiente.xlsx",
+      "source": "C:/Users/LENOVO/Documents/paers/Anotacion_subset160_A2.xlsx",
+      "note": "A2 REAL: 160 documentos del subconjunto, anotados a ciegas sobre el cuadernillo generado el 2026-09-17; entregado el 2026-09-18. Validado por 00c_receive_a2.py: 147/1920 celdas distintas de A1, 0 observaciones identicas.",
+      "bytes": 146731,
+      "sha256": "f01c9d8e6790f01c580864e1b7558aceb08a37c2d1acbe10caddc19ef3a04f78",
+      "source_mtime_utc": "2026-09-18T21:15:35.630706+00:00"
+    },
+    {
+      "path": "annotations/Anotacion_calibracion_A2_independiente.xlsx",
+      "source": "C:/Users/LENOVO/Documents/paers/Anotacion_calibracion_A2.xlsx",
+      "note": "A2 REAL, fase de calibracion (30 documentos). Excluida del analisis principal.",
+      "bytes": 38674,
+      "sha256": "b99de01e451af9cb610ea8a3adf5540022d4670ccedc4cc3dace380888bad491",
+      "source_mtime_utc": "2026-09-18T21:15:01.879064+00:00"
+    },
+    {
+      "path": "annotations/Anotacion_calibracion_A1.xlsx",
+      "source": "C:/Users/LENOVO/Downloads/vlad/DATOS/Anotacion_calibracion_A1.xlsx",
+      "note": "A1, fase de calibracion (30 resumenes).",
+      "bytes": 40631,
+      "sha256": "2c3f8944e0400d2c94077c506a2a7def1540ea986f782fbe136a83e8c5d40cc3",
+      "source_mtime_utc": "2026-08-12T03:28:31.090891+00:00"
+    },
+    {
+      "path": "annotations/Anotacion_calibracion_A2.xlsx",
+      "source": "C:/Users/LENOVO/Downloads/vlad/DATOS/Anotacion_calibracion_A2.xlsx",
+      "note": "A2, fase de calibracion (30 resumenes).",
+      "bytes": 40834,
+      "sha256": "8d1dd49221fb6e81ea29deb68debafd86460c5197c9d041e42609fc83797c7e0",
+      "source_mtime_utc": "2026-08-12T03:38:39.355300+00:00"
+    },
+    {
+      "path": "annotations/Anotacion_principal_A3_template.csv",
+      "source": "C:/Users/LENOVO/Documents/analisis/tesis_doctoral/ground_truth/anotacion_principal_A3.csv",
+      "note": "A3, plantilla de la fase principal.",
+      "bytes": 7468,
+      "sha256": "42389e1dd9eeeb20f7d00cccd7b6ff7c7d77f6c417393892340ec04fbf68a135",
+      "source_mtime_utc": "2026-08-12T01:53:41.393672+00:00"
+    },
+    {
+      "path": "llm_prior/Anotacion_IA_Claude.xlsx",
+      "source": "C:/Users/LENOVO/Downloads/vlad/DATOS/Anotacion_IA_Claude-c.xlsx",
+      "note": "Anotacion LLM previa, hecha via claude.ai. NO es la corrida de la fase 2.",
+      "bytes": 224911,
+      "sha256": "721d70d0689b63dd1ed12ef00296ecaeb859e000643d49be9b245c3860ed2755",
+      "source_mtime_utc": "2026-08-12T09:52:38.512306+00:00"
+    },
+    {
+      "path": "scheme/PROTOCOLO_ANOTACION.md",
+      "source": "C:/Users/LENOVO/Documents/analisis/tesis_doctoral/ground_truth/PROTOCOLO_ANOTACION.md",
+      "note": "Manual de codificacion. Fuente literal del prompt de la fase 2.",
+      "bytes": 34202,
+      "sha256": "4a30f7d35e11b619cddbbc1ad5aba052c0287c4d8c87589c8560e7b3baed7ae5",
+      "source_mtime_utc": "2026-08-11T23:15:22.940085+00:00"
+    },
+    {
+      "path": "corpus/clave_maestra.csv",
+      "source": "C:/Users/LENOVO/Documents/analisis/tesis_doctoral/ground_truth/clave_maestra.csv",
+      "note": "Clave id_anotacion -> tesis real. CONTIENE IDENTIFICADORES: excluir del deposito.",
+      "bytes": 95632,
+      "sha256": "6343a4817349dbae326f4801190387575f45c519f904802c7a11576086691dec",
+      "source_mtime_utc": "2026-08-12T01:53:41.375974+00:00"
+    },
+    {
+      "path": "corpus/cuadernillo_principal.txt",
+      "source": "C:/Users/LENOVO/Documents/analisis/tesis_doctoral/ground_truth/cuadernillo_principal.txt",
+      "note": "Cuadernillo entregado a los anotadores (fase principal).",
+      "bytes": 606675,
+      "sha256": "3e2fb3958fcc80bb2c3654506cc44a8f88274e9c5a0ef9e1e88156e7a701e093",
+      "source_mtime_utc": "2026-08-12T01:53:41.386051+00:00"
+    },
+    {
+      "path": "corpus/CORPUS.md",
+      "source": "C:/Users/LENOVO/Documents/analisis/tesis_doctoral/CORPUS.md",
+      "note": "Descripcion del corpus del que se muestrearon los 330 resumenes.",
+      "bytes": 1826,
+      "sha256": "551e801fba3d4db65c64082679d0d1b53b4041a1eb4635a5c0cd1c8fb059146b",
+      "source_mtime_utc": "2026-08-11T23:44:58.815768+00:00"
+    }
+  ]
+}

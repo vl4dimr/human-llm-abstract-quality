@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-125",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica de los componentes (objetivo, metodología, resultados, conclusiones). La coherencia organizacional se califica en 3 debido a que hay una repetición de información y una frase que no encaja bien con el resto. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué la enfermedad es relevante. La consistencia metodológica se califica en 3 porque la conclusión menciona que no existe una transmisión vertical, lo cual no se sustenta completamente con los resultados."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica de los componentes (objetivo, metodología, resultados, conclusiones). La coherencia organizacional se califica en 3 debido a que hay una repetición de información y una frase que no encaja bien con el resto. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué la enfermedad es relevante. La consistencia metodológica se califica en 3 porque la conclusión menciona que no existe una transmisión vertical, lo cual no se sustenta completamente con los resultados.\"\n}",
+ "usage": {
+  "input_tokens": 11021,
+  "output_tokens": 280,
+  "total_duration_s": 13.4585493
+ },
+ "latency_s": 13.487689733505249,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:08:11.240641+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:08:11.2316455Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica de los componentes (objetivo, metodología, resultados, conclusiones). La coherencia organizacional se califica en 3 debido a que hay una repetición de información y una frase que no encaja bien con el resto. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué la enfermedad es relevante. La consistencia metodológica se califica en 3 porque la conclusión menciona que no existe una transmisión vertical, lo cual no se sustenta completamente con los resultados.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 13458549300,
+  "load_duration": 8946700,
+  "prompt_eval_count": 11021,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 501889000,
+  "eval_count": 280,
+  "eval_duration": 12802318000
+ },
+ "cached_at_utc": "2026-09-19T02:08:11.240660+00:00"
+}

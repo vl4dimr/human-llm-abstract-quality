@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-038",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica de los componentes IMRyD. Sin embargo, la coherencia organizacional es moderada (puntuación 3) debido a que la información se presenta de manera directa sin transiciones fluidas. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante evaluar el riesgo de adicción a las redes sociales en adolescentes. La consistencia metodológica es 3 porque la escala se describe con propiedades psicométricas, pero no se menciona claramente la relación entre los resultados y las conclusiones."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica de los componentes IMRyD. Sin embargo, la coherencia organizacional es moderada (puntuación 3) debido a que la información se presenta de manera directa sin transiciones fluidas. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante evaluar el riesgo de adicción a las redes sociales en adolescentes. La consistencia metodológica es 3 porque la escala se describe con propiedades psicométricas, pero no se menciona claramente la relación entre los resultados y las conclusiones.\"\n}",
+ "usage": {
+  "input_tokens": 10757,
+  "output_tokens": 291,
+  "total_duration_s": 9.7125488
+ },
+ "latency_s": 9.721534729003906,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:53:42.134101+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:53:42.1297445Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica de los componentes IMRyD. Sin embargo, la coherencia organizacional es moderada (puntuación 3) debido a que la información se presenta de manera directa sin transiciones fluidas. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante evaluar el riesgo de adicción a las redes sociales en adolescentes. La consistencia metodológica es 3 porque la escala se describe con propiedades psicométricas, pero no se menciona claramente la relación entre los resultados y las conclusiones.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9712548800,
+  "load_duration": 13461200,
+  "prompt_eval_count": 10757,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 257529000,
+  "eval_count": 291,
+  "eval_duration": 9333422000
+ },
+ "cached_at_utc": "2026-09-19T01:53:42.134112+00:00"
+}

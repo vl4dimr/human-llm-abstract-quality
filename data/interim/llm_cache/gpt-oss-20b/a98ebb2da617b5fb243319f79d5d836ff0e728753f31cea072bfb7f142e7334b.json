@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-112",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Encabezados claros, flujo lógico; sin observaciones relevantes."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Encabezados claros, flujo lógico; sin observaciones relevantes.\"}",
+ "usage": {
+  "input_tokens": 9967,
+  "output_tokens": 999
+ },
+ "latency_s": 1.9536123275756836,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:40:22.558544+00:00",
+ "raw": {
+  "id": "chatcmpl-2f089a01-515c-4661-b7a3-666a765e39c9",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Encabezados claros, flujo lógico; sin observaciones relevantes.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. Need to fill all required fields.\n\nLet's parse:\n\nTitle: Autoeficacia ... (irrelevant).\n\nResumen: It has sections: Introducción, Método, Resultados, Conclusión. This is a structured abstract with headings. We'll evaluate.\n\nWe need to determine fields:\n\nD1_imryd_objetivo: 1 if objective can be answered. The introduction says: \"este estudio analizó el papel mediador...\". The objective is: to analyze the mediating role of research motivation between AI self-efficacy and satisfaction. So objective present, yes 1.\n\nD1_imryd_metodologia: 1 if indicates how obtained knowledge, at least one concrete procedural detail. It says \"estudio cuantitativo, transversal y explicativo con 559 estudiantes\". So yes 1.\n\nD1_imryd_resultados: 1 if communicates what was found. It says \"Los resultados mostraron correlaciones positivas y significativas...\" So yes 1.\n\nD1_imryd_conclusiones: 1 if conclusion goes beyond repeating results, provides interpretation, implication. The conclusion states: \"El estudio confirma que la motivación investigadora media la relación... destacando la importancia...\". This is interpretation. So 1.\n\nD1_orden_logico: 1 if components present appear in sequence. The order is objective (in introduction), methodology (método), results, conclusion. This is correct. So 1.\n\nD2_coherencia: Score 1-5. Need to assess flow. Let's read:\n\nIntro: AI is transforming processes, influencing motivation and satisfaction. This study analyzed mediating role etc. Method: quantitative, transversal, explicativo, 559 students, instruments. Results: correlations positive significant between all variables. Specific betas and significance levels, mediation explaining 58.3% of effect. Conclusion: confirm mediation, importance of strengthening digital literacy. The flow is clear, headings help. Minor: maybe no explicit transition from results to conclusion? But that's typical. I'd rate 5? But the instruction: 5 = perfect, 4 = minor aspereza. There's no major issue. I'd say 5.\n\nD3_contextualizacion: 1 if summary situates the problem: why important, where, who. The introduction does mention AI transforming education, influencing motivation and satisfaction. It mentions context: universitarios peruanos. That situates. So 1.\n\nD3_metodo_detallado: 1 if at least two precisions about procedure. It gives: study quantitative, transversal, explicativo, 559 students, 3 instruments validated. So yes, multiple precisions. 1.\n\nD3_resultados_concretos: 1 if results provide specific content: numbers, categories, etc. It gives correlation significance, beta coefficients, mediation effect 58.3%. Those are concrete. So 1.\n\nD3_conclusion_responde: 1 if conclusion addresses objective. Objective: mediation role. Conclusion confirms mediation. So 1.\n\nD4_consistencia: Scale 1-5. Check for consistency between methodology and results. It uses quantitative approach with 559, instruments validated. Results show correlations and mediation. Conclusion states mediation. No contradictions. So 5.\n\nno_evaluable: 0 (it is a summary, has methodology).\n\nobservaciones: any notes. Might note that conclusion is present, etc. We can write a brief comment: \"Resumen estructurado con encabezados claros; buena coherencia.\" But we can keep empty string? The schema requires string. We can provide a short observation. Let's add: \"Encabezados claros, flujo lógico; no observaciones relevantes.\" Could use an empty string? The schema says type string, but can be empty. We might keep empty \"\" or a note. I'll put: \"Encabezados claros, flujo lógico; sin observaciones relevantes.\" That is fine.\n\nAll fields included. Let's produce JSON.\n\nEnsure integer values 0/1, not null. All required fields present. Use compact JSON no whitespace? \"compact JSON formatting\" means minimal whitespace. Provide as single line? We'll produce as a single line object. Ensure it's valid JSON."
+    }
+   }
+  ],
+  "created": 1789774822,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_d6de37e6be",
+  "usage": {
+   "completion_tokens": 999,
+   "prompt_tokens": 9967,
+   "total_tokens": 10966,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 861,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.150959721,
+   "prompt_time": 0.540591501,
+   "completion_time": 1.00377763,
+   "total_time": 1.5443691309999998
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2ve8x2set79bh6r8s44q64v",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:40:22.558555+00:00"
+}

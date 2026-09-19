@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+title: >-
+  Human and LLM annotations of the structural quality of thesis abstracts:
+  replication package
+message: >-
+  If you use this software or dataset, please cite it using the metadata
+  from this file.
+type: software
+authors:
+  - given-names: Milton Vladimir
+    family-names: Mamani-Calisaya
+    email: mmamanic@unap.edu.pe
+    affiliation: Universidad Nacional del Altiplano
+    orcid: 'https://orcid.org/0000-0002-0676-0989'
+  - given-names: Fred
+    family-names: Torres-Cruz
+    affiliation: Universidad Nacional del Altiplano
+    orcid: 'https://orcid.org/0000-0003-0834-6834'
+abstract: >-
+  Replication package for a study testing whether the disagreement between a
+  large language model and a human annotator is distinguishable from the
+  disagreement between two human annotators. Two annotators independently
+  coded 160 Spanish-language thesis abstracts from four institutional
+  repositories in Puno, Peru, on a 12-variable protocol covering IMRaD
+  adherence, organisational coherence, component completeness and
+  methodological consistency. Three open-weight models (gpt-oss-20B,
+  Mistral 7B, Qwen3 8B) coded the same abstracts from the verbatim human
+  codebook, three runs each. The package contains the full analysis
+  pipeline, the annotations of all annotators and models, and the derived
+  agreement statistics, figures and error analysis.
+
+  Abstract texts and thesis titles are not redistributed: they were
+  harvested from public institutional repositories and their copyright
+  belongs to the respective authors and institutions. The persistent handle
+  of every record is included so that the exact text can be retrieved from
+  the source repository and every analysis reproduced.
+keywords:
+  - inter-annotator agreement
+  - large language models
+  - abstract quality
+  - institutional repositories
+  - Cohen's kappa
+  - annotation reliability
+license: MIT

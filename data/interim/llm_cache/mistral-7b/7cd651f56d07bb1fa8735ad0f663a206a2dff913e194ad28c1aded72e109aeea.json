@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-115",
+ "model_name": "mistral-7b",
+ "provider": "ollama",
+ "model": "mistral:latest",
+ "model_reported": "mistral:latest",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "El objetivo, metodología, resultados y conclusiones no están presentes. Sin embargo, el texto cumple con la función de comunicar la función de la radio en el evangelismo"
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 5,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El objetivo, metodología, resultados y conclusiones no están presentes. Sin embargo, el texto cumple con la función de comunicar la función de la radio en el evangelismo\"\n}",
+ "usage": {
+  "input_tokens": 12520,
+  "output_tokens": 236,
+  "total_duration_s": 6.7446514
+ },
+ "latency_s": 6.776509761810303,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:03:19.883435+00:00",
+ "raw": {
+  "model": "mistral:latest",
+  "created_at": "2026-09-19T01:03:19.8732133Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 5,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El objetivo, metodología, resultados y conclusiones no están presentes. Sin embargo, el texto cumple con la función de comunicar la función de la radio en el evangelismo\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 6744651400,
+  "load_duration": 4332000,
+  "prompt_eval_count": 12520,
+  "prompt_eval_cached_count": 12155,
+  "prompt_eval_duration": 323438000,
+  "eval_count": 236,
+  "eval_duration": 6314489000
+ },
+ "cached_at_utc": "2026-09-19T01:03:19.883455+00:00"
+}

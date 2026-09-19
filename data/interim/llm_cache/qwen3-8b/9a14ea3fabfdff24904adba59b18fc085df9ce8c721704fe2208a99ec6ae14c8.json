@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-008",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD y proporciona información específica sobre los niveles de ruido, el estándar de ruido industrial y el riesgo de adquisición de problemas auditivos. Sin embargo, no se explica por qué el estudio es relevante o por qué el ruido es un problema en este contexto. La conclusión responde al objetivo, pero hay una ligera discordancia en la coherencia metodológica al afirmar que el personal está expuesto a un alto riesgo de adquirir problemas de audición, aunque los resultados solo muestran que los niveles de ruido son altos."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD y proporciona información específica sobre los niveles de ruido, el estándar de ruido industrial y el riesgo de adquisición de problemas auditivos. Sin embargo, no se explica por qué el estudio es relevante o por qué el ruido es un problema en este contexto. La conclusión responde al objetivo, pero hay una ligera discordancia en la coherencia metodológica al afirmar que el personal está expuesto a un alto riesgo de adquirir problemas de audición, aunque los resultados solo muestran que los niveles de ruido son altos.\"\n}",
+ "usage": {
+  "input_tokens": 10960,
+  "output_tokens": 290,
+  "total_duration_s": 9.1955767
+ },
+ "latency_s": 9.205337762832642,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:17:57.438035+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:17:57.4291142Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD y proporciona información específica sobre los niveles de ruido, el estándar de ruido industrial y el riesgo de adquisición de problemas auditivos. Sin embargo, no se explica por qué el estudio es relevante o por qué el ruido es un problema en este contexto. La conclusión responde al objetivo, pero hay una ligera discordancia en la coherencia metodológica al afirmar que el personal está expuesto a un alto riesgo de adquirir problemas de audición, aunque los resultados solo muestran que los niveles de ruido son altos.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9195576700,
+  "load_duration": 4739300,
+  "prompt_eval_count": 10960,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 383277000,
+  "eval_count": 290,
+  "eval_duration": 8724756000
+ },
+ "cached_at_utc": "2026-09-19T02:17:57.438053+00:00"
+}

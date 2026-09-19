@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-012",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "No se reporta valor de p; uso de 'significativamente' sin evidencia estadística, lo que llevó a una puntuación de 4 en D4_consistencia."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":4,\"no_evaluable\":0,\"observaciones\":\"No se reporta valor de p; uso de 'significativamente' sin evidencia estadística, lo que llevó a una puntuación de 4 en D4_consistencia.\"}",
+ "usage": {
+  "input_tokens": 10018,
+  "output_tokens": 1873,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.7826359272003174,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:16:02.430665+00:00",
+ "raw": {
+  "id": "chatcmpl-1b5056b4-90cc-4433-9292-a4fe8ee7bf9f",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":4,\"no_evaluable\":0,\"observaciones\":\"No se reporta valor de p; uso de 'significativamente' sin evidencia estadística, lo que llevó a una puntuación de 4 en D4_consistencia.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate according to protocol. Fields required: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nLet's evaluate each.\n\nFirst read the summary:\n\n- Title: \"Efectividad de la tecnica educativa sobre prevencion en salud bucal en gestantes de la Micro Red Metropolitano Puno 2013- 2014.\"\n\nResumen text: begins with context (emergencia), then objective: \"determinar la efectividad de la técnica educativa expositiva grupal con respecto a la prevención en salud bucal en gestantes del Micro Red Metropolitano Puno 2013- 2014.\" Good objective present.\n\nMethod: \"El tipo de estudio fue cuasiexperimental, en la que se examinó a 85 pacientes; en quienes se aplicó un cuestionario de entrada y una de salida; posteriormente se examinó la higiene bucal de las gestantes antes de la técnica educativa expositiva, después de tres semanas se volvió a evaluar a las gestantes y finalmente se comparó los resultados para verificar la efectividad de esta técnica.\" That includes design, sample size 85, instruments (questionnaire), procedure timeline. So D1_metodologia = 1.\n\nResults: \"Por medio de los resultados obtenidos en el presente trabajo de investigación se determinó la eficacia de la técnica educativa expositiva a través del nivel de conocimiento adquirido por las gestantes y la aplicación de estos evaluándose clínicamente la higiene oral mediante el índice de higiene oral simplificado de Green y Vermillon (IHO), donde se obtuvo como resultado que antes de la aplicación de la técnica educativa el nivel de conocimiento e índice de higiene oral eran malos (51.8% y 58.8% respectivamente) y después de la aplicación de la técnica educativa el nivel de conocimiento fue bueno (84.7%) y el índice de higiene oral mejoró notablemente en las gestantes (47.1%).\" This gives specific percentages before and after. That's result concrete. So D1_resultados =1.\n\nConclusion: \"Se observó que tanto el nivel de conocimiento y la higiene oral mejoraron significativamente después de la aplicación de la técnica educativa, demostrándose así su Efectividad.\" That's conclusion that interprets results and indicates effectiveness. D1_conclusiones=1.\n\nD1_orden_logico: the order objective -> methods -> results -> conclusions. The summary follows that. So 1.\n\nD2_coherencia: Evaluate flow. Let's read flow: starts with context, then objective, methods, results, conclusion. No major jumps. Could be 5. Let's check descriptors: 5 means progression impecable. The text has a smooth flow. Some slight abruptness maybe in \"El tipo de estudio fue cuasiexperimental, en la que se examinó a 85 pacientes; en quienes se aplicó un cuestionario de entrada y una de salida; posteriormente se examinó la higiene bucal de las gestantes antes de la técnica educativa expositiva, después de tres semanas se volvió a evaluar a las gestantes y finalmente se comparó los resultados para verificar la efectividad de esta técnica.\" That sentence is long but still flows. I think 5.\n\nD3_contextualizacion: Is the problem situated? The summary starts with: \"El embarazo es un momento sublime ... la prevención en salud bucal durante este período es particularmente importante.\" That provides context: why important. So yes, 1. According to section, contextualization requires situating problem: why it matters, where it occurs, to whom it affects, against what norm. This summary explains the importance of prevention in dental health during pregnancy. Good.\n\nD3_metodo_detallado: Must have at least 2 precisiones. We have: design: cuasiexperimental; sample size: 85; instruments: questionnaire (entrada y salida); also procedure: measure before, after three weeks. That's >2. So 1.\n\nD3_resultados_concretos: We have numeric results: 51.8% and 58.8% before, 84.7% after, 47.1% improvement in IHO. So yes 1.\n\nD3_conclusion_responde: The conclusion: \"Se observó que tanto el nivel de conocimiento y la higiene oral mejoraron significativamente después de la aplicación de la técnica educativa, demostrándose así su Efectividad.\" That directly responds to objective. So 1.\n\nD4_consistencia: Check coherence between what claimed and what presented. Method claims cuasiexperimental, 85 participants, questionnaire, IHO. Results show percentages before and after. Conclusion claims effectiveness. No contradictions. No claims of significance without evidence? They did not report p-values or statistical significance, but conclusion says \"mejoraron significativamente\". That is an inference of significance but no p-value. The protocol says: \"Declarar diferencias tras reportar p > 0,05\" is error. But here they didn't report p-values, just percentages. They say \"mejoraron significativamente\" which is a statement of significance without evidence. Is that considered a discordance? In case 11.5: \"Conclusión que contradice los resultados\" but here not contradictory, but inference of significance without data. The protocol's discordance: \"Afirmar diferencias tras reportar p > 0,05\" is error. But here no p-value. There's no error flagged. We have to decide D4_consistencia. The description: \"Consistencia metodológica\" measures coherence between what summary says it did and what it presents. It also accounts for contradictions and overreaching. Here the conclusion claims significance; but no statistical test is mentioned. That might be considered an overreach but not necessarily a contradiction. The protocol didn't specify scoring for this nuance; only a general scale 1-5. Let's examine examples: Example B had p > 0.05 but then says \"mayor nivel\". They scored D4 = 2 because conclusion broader than data. Example D used \"significant\" without stats, scored 4 (descuento de un punto). Actually example D had no p-values but used \"significant\" and got 4. So the scoring is that \"significativo\" without stats results in one point deduction (so 4). For our case, they used \"significativamente\" but no stats. So we expect D4_consistencia = 4. But we need to confirm. The text: \"Se observó que tanto el nivel de conocimiento y la higiene oral mejoraron significativamente después de la aplicación de la técnica educativa, demostrándose así su Efectividad\". They say \"mejoraron significativamente\". That's akin to example D: used \"mejora significativa\" without stats. That got 4. So D4_consistencia = 4.\n\nno_evaluable: Since it's a summary, and there is a methodology, so no. So no_evaluable = 0.\n\nobservaciones: Could include any notes: e.g., \"No se reporta p-value; conclusion uses 'significativamente' but no evidence, resulting in D4_consistencia=4\". Or \"No problemas.\" We should include an observation explaining D4.\n\nThus JSON fields:\n\nD1_imryd_objetivo:1\nD1_imryd_metodologia:1\nD1_imryd_resultados:1\nD1_imryd_conclusiones:1\nD1_orden_logico:1\nD2_coherencia:5\nD3_contextualizacion:1\nD3_metodo_detallado:1\nD3_resultados_concretos:1\nD3_conclusion_responde:1\nD4_consistencia:4\nno_evaluable:0\nobservaciones:\"No se reporta valor de p; uso de 'significativamente' sin evidencia estadística. D4=4.\"\n\nCheck schema: all fields present, correct types. All ints or null. Observations string.\n\nMake compact JSON."
+    }
+   }
+  ],
+  "created": 1789701362,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_1c0f5282a2",
+  "usage": {
+   "completion_tokens": 1873,
+   "prompt_tokens": 10018,
+   "total_tokens": 11891,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1712,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.149804656,
+   "prompt_time": 0.063109638,
+   "completion_time": 1.9380578499999999,
+   "total_time": 2.001167488
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s872f7ek6tewzp166mnv4s",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:16:02.430683+00:00"
+}

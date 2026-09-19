@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-126",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen estructurado en prosa; objetivo, metodología, resultados y conclusiones claramente identificados; flujo coherente con puntuación 4; falta de contextualización del problema."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen estructurado en prosa; objetivo, metodología, resultados y conclusiones claramente identificados; flujo coherente con puntuación 4; falta de contextualización del problema.\"}",
+ "usage": {
+  "input_tokens": 10092,
+  "output_tokens": 1633
+ },
+ "latency_s": 3.3899953365325928,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T00:00:19.402226+00:00",
+ "raw": {
+  "id": "chatcmpl-eb163322-0fae-4b2f-ae5a-adf87ab59037",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen estructurado en prosa; objetivo, metodología, resultados y conclusiones claramente identificados; flujo coherente con puntuación 4; falta de contextualización del problema.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields per schema. Evaluate summary.\n\nWe must annotate D1_imryd_* components: objetivo, metodologia, resultados, conclusiones, orden_logico.\n\nAlso D2_coherencia: 1-5. D3_* fields: contextualizacion, metodo_detallado, resultados_concretos, conclusion_responde. D4_consistencia: 1-5. no_evaluable: 0. observaciones: string.\n\nNeed to parse summary. Let's analyze.\n\nTitle: \"Efecto de la intervención de enfermería en el conocimiento de los factores de riesgo del embarazo en la adolescencia en estudiantes de la Institución Educativa Secundaria Independencia Nacional – Puno 2017\"\n\nResumen: includes objective, methodology, results, conclusions.\n\nWe need to identify each component.\n\nD1_imryd_objetivo: \"La presente investigación se realizó con el objetivo de determinar el efecto de la Intervención de enfermería en el conocimiento de los factores de riesgo del embarazo en la adolescencia en estudiantes de la Institución Educativa Secundaria Independencia Nacional - Puno 2017.\" => objective explicit. So 1.\n\nD1_imryd_metodologia: The methodology description: \"El estudio es de tipo Pre-experimental, con diseño de Pre y Post Test con un grupo; la muestra estuvo conformada por 20 estudiantes comprendidas entre 14 - 16 años de edad, asignadas mediante el muestreo probabilístico (muestreo aleatorio estratificado con afijación proporcional); para la recolección de datos, se utilizó la técnica de la encuesta; la comprobación de la hipótesis se realizó con la prueba estadística T Student.\" So yes, at least one precise procedural. 1.\n\nD1_imryd_resultados: The results: \"Los resultados obtenidos revelan que los adolescentes en el pre test, presentaron conocimientos regulares un 75% y deficientes 25%; en el post test incrementaron significativamente en un 85% bueno y 15% regular; ...\". There are multiple results: percentages. So 1.\n\nD1_imryd_conclusiones: The concluding part: \"Comprobándose estadísticamente el promedio del grupo Post Test es mayor al promedio del grupo Pre Test; aceptándose la H1, por lo que la intervención educativa de enfermería es efectiva en el conocimiento de los factores de riesgo del embarazo en la adolescencia\". That is a conclusion that responds to the objective, indicates effect, and states the intervention is effective. So 1.\n\nD1_orden_logico: The summary seems to follow the order: objective -> methodology -> results -> conclusions. Yes, 1.\n\nD2_coherencia: Evaluate flow. Let's read: The summary flows logically: objective statement, methodology details, results with percentages for each factor, concluding sentence. There's no abrupt jumps. But some repetition: multiple paragraphs for each risk factor results. There is a bit of repetitiveness but still flows. I'd rate maybe 4? Let's evaluate scale: 5 is impeccable, 4 is good with some minor aspereza. There might be slight jump from \"pre test\" to \"post test\" but it's standard. I'd give 4. There are multiple risk factors but they are described sequentially: biological, psychological, socio-economic. This is coherent. So D2_coherencia = 4.\n\nD3_contextualizacion: Does the summary situate the problem? It does not explicitly mention why this issue is important or the context beyond \"estudiantes de la Institución Educativa Secundaria Independencia Nacional\". The summary doesn't explain why it matters. So D3_contextualizacion = 0.\n\nD3_metodo_detallado: At least two precisions: Pre-experimental design with pre and post test; group size 20; age 14-16; sampling: probabilistic, stratified random with proportional allocation; data collection: survey; statistical test: T Student. That's more than 2. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: Contains percentages: 75% regular 25% deficient, etc. So yes. D3_resultados_concretos = 1.\n\nD3_conclusion_responde: Conclusión addresses objective: yes, \"intervención educativa es efectiva en el conocimiento\". So 1.\n\nD4_consistencia: Need coherence between what was claimed to have been done and what is presented. The summary states Pre-experimental design, pre-post test with one group; sample of 20; data collection survey; test used T Student. The results reported: percentages of knowledge levels; but did they mention statistical significance? They mention \"incrementaron significativamente\" and later \"Comprobándose estadísticamente el promedio del grupo Post Test es mayor al promedio del grupo Pre Test; aceptándose la H1\". They used T Student test. There's no contradictory statements. So D4_consistencia = 5? However need to check: They say \"incrementaron significativamente en un 85% bueno y 15% regular\" but then \"Comprobándose estadísticamente el promedio del grupo Post Test es mayor al promedio del grupo Pre Test; aceptándose la H1\". This indicates significance. They also report \"Comprobándose estadísticamente el promedio del grupo Post Test es mayor al promedio del grupo Pre Test\" - that's consistent. There's no contradictory claim like saying there were no differences. So we can mark 5.\n\nBut D4 is 1-5. Provide 5. Yes.\n\nno_evaluable: 0.\n\nobservaciones: Provide any notes. We can note that the summary is fairly coherent, no contradictions, but missing contextualization. Also mention that the summary uses percentages for each risk factor separately; that's considered concrete results. Provide note.\n\nWe must output JSON with fields. All must be present. Ensure types: integers or null. All fields must be there. Provide observations string. Use compact JSON formatting.\n\nLet's produce:\n\n{\n\"D1_imryd_objetivo\":1,\n\"D1_imryd_metodologia\":1,\n\"D1_imryd_resultados\":1,\n\"D1_imryd_conclusiones\":1,\n\"D1_orden_logico\":1,\n\"D2_coherencia\":4,\n\"D3_contextualizacion\":0,\n\"D3_metodo_detallado\":1,\n\"D3_resultados_concretos\":1,\n\"D3_conclusion_responde\":1,\n\"D4_consistencia\":5,\n\"no_evaluable\":0,\n\"observaciones\":\"Resumen estructurado en prosa; objetivo, metodología, resultados y conclusiones claramente identificados; flujo coherente con puntuación 4; falta de contextualización del problema.\"\n}\n\nCheck field names: D4_consistencia must match schema. The schema defined \"D4_consistencia\" as the field. Good.\n\nObservations: string.\n\nAll good.\n\nLet's double-check each field. Schema requires \"no_evaluable\" integer 0/1. Observations string.\n\nMake sure to output as compact JSON (no newlines? It says \"Use compact JSON formatting\" - typically meaning no pretty formatting. Provide a single line JSON.\n\nOk."
+    }
+   }
+  ],
+  "created": 1789776018,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_a12402de73",
+  "usage": {
+   "completion_tokens": 1633,
+   "prompt_tokens": 10092,
+   "total_tokens": 11725,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1473,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.30607308,
+   "prompt_time": 0.676549891,
+   "completion_time": 1.7531541430000002,
+   "total_time": 2.4297040340000002
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vfdctzevcbpqbpspk0wsgp",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-19T00:00:19.402255+00:00"
+}

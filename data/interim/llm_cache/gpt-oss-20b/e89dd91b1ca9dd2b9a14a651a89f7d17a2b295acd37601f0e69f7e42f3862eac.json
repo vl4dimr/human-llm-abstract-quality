@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-105",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen bien estructurado y coherente, aunque la contextualización del problema es mínima."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen bien estructurado y coherente, aunque la contextualización del problema es mínima.\"}",
+ "usage": {
+  "input_tokens": 9985,
+  "output_tokens": 848,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 1.5662682056427002,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:58:05.006486+00:00",
+ "raw": {
+  "id": "chatcmpl-1f81f2ff-2103-4a30-a15b-aa4f0d31876c",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen bien estructurado y coherente, aunque la contextualización del problema es mínima.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields per schema. Evaluate summary.\n\nLet's analyze:\n\nTitle: \"Evaluación de rendimiento y caracterización agromorfológica de cinco progenies ...\"\n\nSummary content: It's a summary, appears to contain objective, methodology, results, conclusion.\n\nCheck each field:\n\nD1_imryd_objetivo: Does it contain what was proposed? \"Esta investigación tuvo como objetivo general evaluar el rendimiento y características agromorfológicas de cinco progenies derivadas de cruzas dobles de quinua.\" So objective present. So 1.\n\nD1_imryd_metodologia: \"Como metodología, se empleó un diseño de bloque completamente al azar (DBCA) con 4 bloques y 5 tratamientos (cruzas).\" So methodology present, yes. 1.\n\nD1_imryd_resultados: They present results: maturity days, height, diameter, damage, yield. So yes. 1.\n\nD1_imryd_conclusiones: \"Se concluye que existen diferencias significativas entre las progenies evaluadas, destacando la línea ... como la más prometedora.\" So yes. 1.\n\nD1_orden_logico: components present in order: objective first, methodology second, results third, conclusions last. Yes. 1.\n\nD2_coherencia: Evaluate coherence. Let's assess flow: The summary is fairly coherent. It goes from objective, methodology, results (multiple metrics) and conclusion. The sentences are fairly connected. Maybe small jumps, but still coherent. I would rate 4 maybe 5? Let's evaluate: 5: progress impeccable. 4: some minor issues but fine. 3: some jumps. Let's think: They start with objective, methodology, then present multiple results in a long sentence with many metrics. Then conclusion. The transition from methods to results is direct. The results description is long, but still flows. Might be 5. But maybe a slight issue: they mention \"En cuanto al rendimiento, los tratamientos T3 y T4 tuvieron mayor peso de 1000 granos, con T3 alcanzando 81.5 g de biomasa por planta. El rendimiento de grano por hectárea fue mayor en T1...\". This is fine. There is some repetition? Not much. So I think 5.\n\nBut we need to choose a number 1-5. I'll go 5.\n\nD3_contextualizacion: Does summary situate the problem? It begins with objective; not explicit contextualization. So 0.\n\nD3_metodo_detallado: At least two precisions: design DBCA, 4 blocks, 5 treatments. Also mentions 5 progenies, cross names. That's at least 3. So 1.\n\nD3_resultados_concretos: Many concrete results with numbers: maturity days, height, diameter, damage percentages, yield. So 1.\n\nD3_conclusion_responde: Conclusion answers objective. Yes. 1.\n\nD4_consistencia: Consistency between methods and results and conclusion. Are there contradictions? No. They describe results and conclude differences. They don't claim causality incorrectly. So high consistency. I'd rate 5.\n\nNo_evaluable: 0.\n\nObservaciones: any issues. Provide minimal notes: maybe note that the summary is narratively compressed but coherent.\n\nNow produce JSON with all fields. Ensure fields types: integer or null. Use 0/1 etc.\n\nLet's produce JSON."
+    }
+   }
+  ],
+  "created": 1789775884,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_a12402de73",
+  "usage": {
+   "completion_tokens": 848,
+   "prompt_tokens": 9985,
+   "total_tokens": 10833,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 707,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.305363543,
+   "prompt_time": 0.054725219,
+   "completion_time": 0.897491208,
+   "total_time": 0.952216427
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vf9b0he23tw31nmrgmb63s",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:58:05.006519+00:00"
+}

@@ -1,0 +1,13 @@
+variable,type,weights,n,p_obs,kappa,kappa_lo,kappa_hi,kappa_degenerate_frac,gwet_ac,ac_lo,ac_hi,pabak,kripp_alpha,kripp_metric
+D1_imryd_objetivo,binary,unweighted,159,1.000,1.000,1.000,1.000,0.379,1.000,1.000,1.000,1.000,1.000,nominal
+D1_imryd_metodologia,binary,unweighted,159,0.975,0.833,0.643,0.962,0.000,0.970,0.938,0.993,0.950,0.833,nominal
+D1_imryd_resultados,binary,unweighted,159,0.981,0.922,0.822,1.000,0.000,0.975,0.944,1.000,0.962,0.923,nominal
+D1_imryd_conclusiones,binary,unweighted,159,0.950,0.881,0.795,0.954,0.000,0.913,0.848,0.968,0.899,0.881,nominal
+D1_orden_logico,binary,unweighted,159,0.975,0.701,0.322,0.938,0.000,0.973,0.942,0.993,0.950,0.702,nominal
+D2_coherencia,ordinal,quadratic,159,0.981,0.768,0.686,0.834,0.000,0.949,0.934,0.963,0.638,0.745,ordinal
+D3_contextualizacion,binary,unweighted,159,0.956,0.696,0.441,0.886,0.000,0.949,0.908,0.985,0.912,0.697,nominal
+D3_metodo_detallado,binary,unweighted,159,0.906,0.705,0.560,0.830,0.000,0.862,0.783,0.926,0.811,0.704,nominal
+D3_resultados_concretos,binary,unweighted,159,0.987,0.968,0.916,1.000,0.000,0.979,0.946,1.000,0.975,0.968,nominal
+D3_conclusion_responde,binary,unweighted,159,0.925,0.836,0.737,0.921,0.000,0.860,0.780,0.933,0.849,0.836,nominal
+D4_consistencia,ordinal,quadratic,148,0.981,0.753,0.672,0.811,0.000,0.955,0.941,0.968,0.611,0.738,ordinal
+no_evaluable,binary,unweighted,160,1.000,1.000,1.000,1.000,0.000,1.000,1.000,1.000,1.000,1.000,nominal

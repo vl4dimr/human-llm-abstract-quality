@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-045",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Conclusión no explícita; se asume que los resultados implican mejora de la cimentación."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Conclusión no explícita; se asume que los resultados implican mejora de la cimentación.\"}",
+ "usage": {
+  "input_tokens": 9925,
+  "output_tokens": 1271,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.6426267623901367,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:50:41.968794+00:00",
+ "raw": {
+  "id": "chatcmpl-7a3c3c13-7a9f-410f-b16f-1ff65a9cdaf3",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Conclusión no explícita; se asume que los resultados implican mejora de la cimentación.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields per schema. Evaluate summary.\n\nLet's analyze summary:\n\nTitle: Influencia del concreto reciclado y ceniza volcánica para suelos cohesivos con fines de cimentación\n\nResumen text: (in Spanish) The article centers on studying the impact of using recycled concrete and volcanic ash in cohesive soils for foundation purposes. The goal is to evaluate how adding these materials at percentages 15%, 20%, 25% affects properties of 3 types of clays. First sample uses volcanic ash, second recycled concrete, third combination. Quasi-experimental design included lab tests to evaluate physical-mechanical properties of natural, improved soils to design foundation. It seeks to determine how addition influences behavior. The experiments allowed analysis and better understanding. Finally, project design for two-level reinforced concrete considering natural and improved bearing capacity. Results: initial dimension 3.20 m and height 0.50 m in natural foundation. After optimization, improved dimensions 1.60 m and height 0.50 m.\n\nWe need to assign values:\n\nD1_imryd_objetivo: 1 if objective stated. Text: \"El objetivo es evaluar cómo la adición de estos materiales...\". Yes explicit objective. So 1.\n\nD1_imryd_metodologia: 1 if method indicated. \"El diseño cuasiexperimental incluyó ensayos de laboratorio para evaluar las propiedades físico-mecánicas\". Also mentions percentages. So yes 1.\n\nD1_imryd_resultados: 1 if results communicated. They provide dimension results 3.20 m etc. So 1.\n\nD1_imryd_conclusiones: 1 if conclusion that goes beyond repeating results: They mention \"Finalmente, se llevó a cabo la planificación ...\". But is that conclusion? It says \"Los resultados mostraron ...\". It's more a statement of results. Conclusion may be missing: They don't explicitly say what the implication is. They just describe results. There's no explicit interpretation. So maybe 0. However, they say \"se llevó a cabo la planificación...\" but that's more a method of next step. There's no interpretation like \"the addition improved bearing capacity.\" They just state optimized dimensions. So I'd set 0.\n\nD1_orden_logico: Evaluate if components in logical order. Sequence: objective, methodology, results, conclusion? The order seems: objective, methodology, results, conclusion. It appears objective first, then methodology, then results, then conclusion. So 1.\n\nD2_coherencia: Coherence score 1-5. Evaluate flow. The text is fairly coherent. It transitions from objective to method to results. It uses \"Finalmente\" but that might be a little abrupt. But overall it's coherent. I'd rate maybe 4. Let's pick 4.\n\nD3_contextualizacion: 1 if summary situates problem. It states \"para suelos cohesivos con fines de cimentación\" and \"impacto del uso de ...\". This gives context: what type of soil, purpose foundation. So yes 1.\n\nD3_metodo_detallado: 1 if at least two precisions: They mention percentages, types of samples, quasi-experimental design, lab tests. That's at least two precisions. So 1.\n\nD3_resultados_concretos: 1 if results concrete content: They provide dimensions numeric values. So 1.\n\nD3_conclusion_responde: 1 if conclusion responds to objective. Since conclusion is missing or ambiguous, I'd say 0. There's no explicit conclusion that addresses objective. So 0.\n\nD4_consistencia: 1-5 scale. Consistency between what declared and presented. They declared quasi-experimental design, lab tests, percentages. They presented results: dimension changes. No contradictions. So high consistency. Might be 5.\n\nBut need to check for possible discrepancy: They say \"se buscó determinar cómo la adición de concreto reciclado y ceniza volcánica influye en el comportamiento del suelo.\" Then they present results of dimensions (3.20m to 1.60m). That's a measure of foundation dimension. Does that answer the objective? It might. But they don't explicitly say that the addition improved bearing capacity or something. But no contradictory statements. So consistency high. I'd set 5.\n\nno_evaluable: 0 (since it's a valid summary).\n\nobservaciones: Add some notes: mention that conclusion is missing; or that the summary is short but coherent. We'll include brief observation: \"Conclusión no explícita; se asume que los resultados implican mejora.\"\n\nNow produce JSON with those values.\n\nCheck schema: All required fields.\n\nLet's write JSON:\n\n{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 1,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 5,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"Conclusión no explícita; se asume que los resultados implican mejora de la cimentación.\"\n}\n\nReturn only this JSON."
+    }
+   }
+  ],
+  "created": 1789775441,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e99e93f2ac",
+  "usage": {
+   "completion_tokens": 1271,
+   "prompt_tokens": 9925,
+   "total_tokens": 11196,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1126,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.273284731,
+   "prompt_time": 0.057641784,
+   "completion_time": 1.5646169570000001,
+   "total_time": 1.622258741
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vevsrdexkr584n1jz1ynrq",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:50:41.968814+00:00"
+}

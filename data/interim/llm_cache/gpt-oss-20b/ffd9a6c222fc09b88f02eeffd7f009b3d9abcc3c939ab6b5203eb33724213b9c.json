@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-026",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 9988,
+  "output_tokens": 1843
+ },
+ "latency_s": 2.888134479522705,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T02:58:18.965110+00:00",
+ "raw": {
+  "id": "chatcmpl-360db673-383d-43d7-9045-e2f97c0f30d4",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: Marketing digital como factor clave en la sustentabilidad de Pymes turísticas, región Puno\n\nSummary:\n\n\"El marketing digital ha emergido como un factor clave en la sustentabilidad de las pequeñas y medianas empresas (PYMEs) del sector turístico, especialmente en la región Puno. En un entorno donde la digitalización es fundamental para la competitividad empresarial, esta investigación busca determinar la influencia del marketing digital en la sustentabilidad de estas empresas. La metodología que se adoptó es de un enfoque cuantitativo, con un diseño descriptivo y correlacional. La población conformada por PYMEs turísticas (restaurantes, hoteles y agencias de viajes), aplicando un muestreo por conveniencia. Se aplicó dos escalas validadas: la de Mahmutović (2021) para medir el marketing digital y la de Vinodh & Joy (2012) para evaluar la sustentabilidad. Los resultados revelan una relación positiva y significativa entre marketing digital y sustentabilidad (r = 0.564, p = 0.001). El modelo de regresión explica el 44% de la varianza en la sustentabilidad (R² ajustado = .44), indicando que un aumento en la implementación de estrategias de marketing digital mejora la sostenibilidad de las PYMEs turísticas. En conclusión, los hallazgos coinciden con estudios previos que demuestran cómo la transformación digital fortalece la competitividad y resiliencia empresarial. La adopción de herramientas digitales permite a las empresas optimizar sus recursos, ampliar su alcance en el mercado y mejorar la experiencia del cliente. Finalmente, el marketing digital no solo es un motor de crecimiento económico, sino también un elemento determinante para la sostenibilidad, favoreciendo la rentabilidad y la responsabilidad ambiental y social de las PYMEs turísticas.\"\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 1 if objective present. The summary says: \"esta investigación busca determinar la influencia del marketing digital en la sustentabilidad de estas empresas.\" That's explicit objective. So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. It says: \"La metodología que se adoptó es de un enfoque cuantitativo, con un diseño descriptivo y correlacional. La población conformada por PYMEs turísticas (restaurantes, hoteles y agencias de viajes), aplicando un muestreo por conveniencia. Se aplicó dos escalas validadas: la de Mahmutović (2021) para medir el marketing digital y la de Vinodh & Joy (2012) para evaluar la sustentabilidad.\" That's a concrete method. So 1.\n\n- D1_imryd_resultados: 1 if results present. It says: \"Los resultados revelan una relación positiva y significativa entre marketing digital y sustentabilidad (r = 0.564, p = 0.001). El modelo de regresión explica el 44% de la varianza en la sustentabilidad (R² ajustado = .44).\" That's results. So 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. It says: \"En conclusión, los hallazgos coinciden con estudios previos que demuestran cómo la transformación digital fortalece la competitividad y resiliencia empresarial. La adopción de herramientas digitales permite a las empresas optimizar sus recursos, ampliar su alcance en el mercado y mejorar la experiencia del cliente. Finalmente, el marketing digital no solo es un motor de crecimiento económico, sino también un elemento determinante para la sostenibilidad, favoreciendo la rentabilidad y la responsabilidad ambiental y social de las PYMEs turísticas.\" This is a conclusion that interprets results and gives implications. So 1.\n\n- D1_orden_logico: 1 if components present in logical order. The order: objective, methodology, results, conclusion. Yes. So 1.\n\n- D2_coherencia: scale 1-5. We need to evaluate flow. Let's read: The summary flows: first context, then objective, then methodology, then results, then conclusion. The text is fairly coherent. There is no abrupt jumps. The only potential issue: after results, it goes into conclusion. The conclusion is a bit long but still flows. I'd rate 4 or 5. Let's analyze: The summary starts with context: \"El marketing digital ha emergido...\" then objective. Then methodology. Then results. Then conclusion. The conclusion is a bit long but still coherent. There's no repetition or contradictory statements. So I'd give 5. But we need to consider if any adverbial or repeated terms. There's no major issues. So D2_coherencia = 5.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where it occurs, to whom it affects, etc. The summary starts with context: \"El marketing digital ha emergido como un factor clave en la sustentabilidad de las pequeñas y medianas empresas (PYMEs) del sector turístico, especialmente en la región Puno.\" That situates the problem: region Puno, PYMEs turísticas. So 1.\n\n- D3_metodo_detallado: 1 if at least two precisions about procedure. We have: \"enfoque cuantitativo, diseño descriptivo y correlacional, población conformada por PYMEs turísticas, muestreo por conveniencia, dos escalas validadas.\" That's more than two. So 1.\n\n- D3_resultados_concretos: 1 if results provide specific content: yes, r=0.564, p=0.001, R^2=0.44. So 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to objective. The objective: determine influence of marketing digital on sustainability. The conclusion: \"En conclusión, los hallazgos coinciden con estudios previos que demuestran cómo la transformación digital fortalece la competitividad y resiliencia empresarial... Finalmente, el marketing digital no solo es un motor de crecimiento económico, sino también un elemento determinante para la sostenibilidad.\" This does respond to objective: it states that marketing digital influences sustainability. So 1.\n\n- D4_consistencia: scale 1-5. We need to evaluate consistency between what is said and what is presented. The summary says: \"Los resultados revelan una relación positiva y significativa entre marketing digital y sustentabilidad (r = 0.564, p = 0.001). El modelo de regresión explica el 44% de la varianza en la sustentabilidad (R² ajustado = .44), indicando que un aumento en la implementación de estrategias de marketing digital mejora la sostenibilidad de las PYMEs turísticas.\" The conclusion says: \"En conclusión, los hallazgos coinciden con estudios previos que demuestran cómo la transformación digital fortalece la competitividad y resiliencia empresarial... Finalmente, el marketing digital no solo es un motor de crecimiento económico, sino también un elemento determinante para la sostenibilidad, favoreciendo la rentabilidad y la responsabilidad ambiental y social de las PYMEs turísticas.\" This is consistent: the conclusion is consistent with results. There's no contradictory statements. So I'd give 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes? We can add a note: \"No issues.\" But we can leave empty string. The schema requires string. We can put empty string \"\".\n\nThus JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"\"\n}\n\nCheck schema: all required fields present. All values are integers or null. Observaciones string. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789700298,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_851252edc2",
+  "usage": {
+   "completion_tokens": 1843,
+   "prompt_tokens": 9988,
+   "total_tokens": 11831,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1717,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.216693881,
+   "prompt_time": 0.502307864,
+   "completion_time": 1.914961392,
+   "total_time": 2.417269256
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s76keqe34v7yqt7n5a70we",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T02:58:18.965138+00:00"
+}

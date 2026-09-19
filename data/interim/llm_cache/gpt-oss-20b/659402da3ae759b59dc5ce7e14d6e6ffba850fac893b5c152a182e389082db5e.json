@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-119",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": null,
+  "no_evaluable": 1,
+  "observaciones": "Metodología no descrita; resultados cualitativos sin cifras; conclusión recomendatoria."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"Metodología no descrita; resultados cualitativos sin cifras; conclusión recomendatoria.\"}",
+ "usage": {
+  "input_tokens": 9965,
+  "output_tokens": 2570,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 3.6528966426849365,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:09:34.629753+00:00",
+ "raw": {
+  "id": "chatcmpl-d155dcbd-b756-4170-bece-f9adfd4e38be",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"Metodología no descrita; resultados cualitativos sin cifras; conclusión recomendatoria.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nWe need to evaluate each field.\n\nLet's read the summary carefully.\n\nTitle: \"Revaloración histórica de la danza autóctona Wiphalitas en el contexto cultural del distrito de Huancane\"\n\nResumen:\n\n\"El presente trabajo de investigación tiene por título: “REVALORACIÓN HISTÓRICA DE LA DANZA AUTÓCTONA WIPHALITAS EN EL CONTEXTO CULTURAL DEL DISTRITO DE HUANCANÉ”, el espacio geográfico en donde se manifiesta esta danza, se ubica en la provincia y distrito de Huancané, ciudad en la que por la dinámica de los acontecimientos en las fiestas de carnaval, la danza se presenta dentro del marco un proceso de interrelación social. Nuestro cuestionamiento está enmarcado dentro de la revaloración histórica de la danza autóctona wiphalitas, en el contexto cultural del distrito de Huancané; explicando, describiendo e identificando; el vestuario, coreografía y música, que de forma a nuestra investigación. De acuerdo a nuestra investigación, podemos advertir que dicha danza sufre tergiversación ya que hay variaciones con relación a la indumentaria y música tradicional. Las exigencias de los danzarines por renovar anualmente sus trajes, obligan a los artesanos a alejarse de los modelos clásicos, tradicionales, que su vigencia de hoy va perdiendo, se va alejando y convirtiendo en un vestuario complejo, podemos observar exageraciones recargadas en decoraciones, tamaño, vistosidad, etc. Además para evitar su extinción de esta danza, es importante que las instituciones, educativas, municipio, la sociedad civil, deberían de promocionar y practicarla en eventos públicos como la necesidad de una buena presentación en concursos de Danza\"\n\nWe need to annotate.\n\nFirst, check if it's a summary. It seems to be a summary. So no no_evaluable.\n\nNow evaluate each dimension.\n\nDimension 1: Adherencia a IMRyD.\n\nWe need to check presence of objective, methodology, results, conclusions, and order.\n\nLet's parse.\n\nObjective: The summary says \"Nuestro cuestionamiento está enmarcado dentro de la revaloración histórica de la danza autóctona wiphalitas, en el contexto cultural del distrito de Huancané; explicando, describiendo e identificando; el vestuario, coreografía y música, que de forma a nuestra investigación.\" This is basically the objective: to revalorizar histórica la danza, explaining, describing, identifying vestuario, coreografía, música. So objective present. So D1_imryd_objetivo = 1.\n\nMethodology: Does it describe how they did it? It says \"Nuestro cuestionamiento está enmarcado dentro de la revaloración histórica ... explicando, describiendo e identificando; el vestuario, coreografía y música, que de forma a nuestra investigación.\" It doesn't specify method: no mention of design, sample, instruments, etc. So methodology not present. D1_imryd_metodologia = 0.\n\nResults: It says \"De acuerdo a nuestra investigación, podemos advertir que dicha danza sufre tergiversación ya que hay variaciones con relación a la indumentaria y música tradicional.\" So they found that the dance suffers tergiversación. That's a result. So D1_imryd_resultados = 1.\n\nConclusion: It says \"Además para evitar su extinción de esta danza, es importante que las instituciones, educativas, municipio, la sociedad civil, deberían de promocionar y practicarla en eventos públicos como la necesidad de una buena presentación en concursos de Danza.\" This is a recommendation, but is it a conclusion? It is a recommendation to avoid extinction. It is a conclusion that the dance is at risk and needs promotion. It is a recommendation. According to D1_imryd_conclusiones: \"Vale 1 cuando hay un cierre que va más allá de repetir el resultado: interpretación, implicación, respuesta explícita al objetivo, recomendación fundada.\" This seems to be a recommendation. So D1_imryd_conclusiones = 1.\n\nOrder: The components present: objective, results, conclusion. No methodology. The order: objective first, then results, then conclusion. That is logical. So D1_orden_logico = 1.\n\nNow D2_coherencia: We need to evaluate flow. Let's read the summary again.\n\n\"El presente trabajo de investigación tiene por título: “REVALORACIÓN HISTÓRICA DE LA DANZA AUTÓCTONA WIPHALITAS EN EL CONTEXTO CULTURAL DEL DISTRITO DE HUANCANÉ”, el espacio geográfico en donde se manifiesta esta danza, se ubica en la provincia y distrito de Huancané, ciudad en la que por la dinámica de los acontecimientos en las fiestas de carnaval, la danza se presenta dentro del marco un proceso de interrelación social. Nuestro cuestionamiento está enmarcado dentro de la revaloración histórica de la danza autóctona wiphalitas, en el contexto cultural del distrito de Huancané; explicando, describiendo e identificando; el vestuario, coreografía y música, que de forma a nuestra investigación. De acuerdo a nuestra investigación, podemos advertir que dicha danza sufre tergiversación ya que hay variaciones con relación a la indumentaria y música tradicional. Las exigencias de los danzarines por renovar anualmente sus trajes, obligan a los artesanos a alejarse de los modelos clásicos, tradicionales, que su vigencia de hoy va perdiendo, se va alejando y convirtiendo en un vestuario complejo, podemos observar exageraciones recargadas en decoraciones, tamaño, vistosidad, etc. Además para evitar su extinción de esta danza, es importante que las instituciones, educativas, municipio, la sociedad civil, deberían de promocionar y practicarla en eventos públicos como la necesidad de una buena presentación en concursos de Danza\"\n\nFlow: It starts with title, location, context, then objective, then results, then recommendation. The flow is somewhat okay but there are some abrupt transitions: \"el espacio geográfico ... se ubica en la provincia y distrito de Huancané, ciudad en la que por la dinámica de los acontecimientos en las fiestas de carnaval, la danza se presenta dentro del marco un proceso de interrelación social.\" Then \"Nuestro cuestionamiento está enmarcado...\" Then \"De acuerdo a nuestra investigación, podemos advertir...\" Then \"Las exigencias de los danzarines...\" Then \"Además para evitar su extinción...\"\n\nIt seems fairly coherent, but there are some abruptness: \"que de forma a nuestra investigación\" is incomplete. Also \"que de forma a nuestra investigación\" is a fragment. But overall, the flow is understandable. I'd rate 4 maybe. Let's consider the scale:\n\n5: Progresión impecable. 4: Fluye bien, con alguna aspereza menor que no estorba. 3: Se entiende, pero cuesta. 2: Hay que releer. 1: Incoherente.\n\nI think it's 4. So D2_coherencia = 4.\n\nNow D3: Completitud de componentes.\n\nD3_contextualizacion: Does the summary situate the problem? It mentions the location, the dance, the context of carnival, the process of interrelación social. It says \"El presente trabajo de investigación tiene por título... el espacio geográfico en donde se manifiesta esta danza, se ubica en la provincia y distrito de Huancané, ciudad en la que por la dinámica de los acontecimientos en las fiestas de carnaval, la danza se presenta dentro del marco un proceso de interrelación social.\" That is contextualization: it situates the problem: the dance in Huancané, carnival, interrelación social. So yes, D3_contextualizacion = 1.\n\nD3_metodo_detallado: Does it give at least two precisions about procedure? It does not mention design, sample, instrument, etc. So 0.\n\nD3_resultados_concretos: It says \"podemos advertir que dicha danza sufre tergiversación ya que hay variaciones con relación a la indumentaria y música tradicional.\" That's a result but not concrete: no numbers, no categories. It's a qualitative observation. According to D3_resultados_concretos: \"Vale 1 cuando los resultados aportan contenido específico: cifras, magnitudes, categorías nombradas, relaciones con dirección.\" Here it's a qualitative observation but no categories or numbers. It's a statement that there are variations. That might be considered a category? It's a general statement. I'd say it's not concrete enough. So D3_resultados_concretos = 0.\n\nD3_conclusion_responde: The conclusion is \"es importante que las instituciones... deberían de promocionar y practicarla en eventos públicos...\" This is a recommendation. Does it respond to the objective? The objective was to revalorizar la danza, explaining, describing, identifying. The conclusion is about promoting to avoid extinction. That is somewhat related to the objective: to revalorizar, but the conclusion is more about promotion. It does respond to the objective? The objective is to revalorizar, but the conclusion is about promotion. It's a recommendation that addresses the problem. I'd say it does respond to the objective: the objective is to revalorizar, and the conclusion is to promote to avoid extinction. So D3_conclusion_responde = 1.\n\nNow D4_consistencia: Consistency between what the summary says it did and what it presents. Since methodology is missing, D4_consistencia is \"no_evaluable\" because no methodology declared. According to section 9.3: \"Si el resumen no declara ninguna metodología, la D4 no puede evaluarse: no hay nada contra lo que contrastar la coherencia. Marca no_evaluable = 1 y deja vacía la puntuación de D4.\" So D4_consistencia = null? Actually the schema says D4_consistencia can be null. But we also have no_evaluable field. So we set no_evaluable = 1. And D4_consistencia = null.\n\nNow we need to produce JSON with all fields. Observations: We should add any notes. Observations: We can note that methodology missing, results not concrete, etc. But we can keep it short.\n\nLet's produce JSON:\n\n{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 1,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": null,\n  \"no_evaluable\": 1,\n  \"observaciones\": \"Metodología no descrita; resultados cualitativos sin cifras; conclusión recomendatoria.\"\n}\n\nCheck schema: all required fields present. D4_consistencia can be null. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789700974,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_d23c14756c",
+  "usage": {
+   "completion_tokens": 2570,
+   "prompt_tokens": 9965,
+   "total_tokens": 12535,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2427,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.218962165,
+   "prompt_time": 0.055817815,
+   "completion_time": 2.63659145,
+   "total_time": 2.692409265
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7v702eb1axatrg3r7jyjb",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:09:34.629843+00:00"
+}

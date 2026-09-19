@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-144",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica de los componentes IMRyD. La coherencia es buena, aunque podría mejorar en la fluidez entre las frases. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante el reconocimiento facial. El método es detallado, ya que se menciona la transformada Wavelet de Gabor y el Análisis de Componentes Principales. Los resultados son concretos, ya que se menciona una tasa de reconocimiento superior al 95%. La conclusión responde al objetivo, ya que se menciona la combinación de técnicas que logra una tasa de reconocimiento superior al 95%. La consistencia metodológica es 4, ya que el método es coherente, pero se menciona el uso de SVM sin especificar los parámetros de clasificación."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica de los componentes IMRyD. La coherencia es buena, aunque podría mejorar en la fluidez entre las frases. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante el reconocimiento facial. El método es detallado, ya que se menciona la transformada Wavelet de Gabor y el Análisis de Componentes Principales. Los resultados son concretos, ya que se menciona una tasa de reconocimiento superior al 95%. La conclusión responde al objetivo, ya que se menciona la combinación de técnicas que logra una tasa de reconocimiento superior al 95%. La consistencia metodológica es 4, ya que el método es coherente, pero se menciona el uso de SVM sin especificar los parámetros de clasificación.\"\n}",
+ "usage": {
+  "input_tokens": 10791,
+  "output_tokens": 349,
+  "total_duration_s": 16.8886739
+ },
+ "latency_s": 16.891935110092163,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:12:32.740625+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:12:32.7388319Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica de los componentes IMRyD. La coherencia es buena, aunque podría mejorar en la fluidez entre las frases. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante el reconocimiento facial. El método es detallado, ya que se menciona la transformada Wavelet de Gabor y el Análisis de Componentes Principales. Los resultados son concretos, ya que se menciona una tasa de reconocimiento superior al 95%. La conclusión responde al objetivo, ya que se menciona la combinación de técnicas que logra una tasa de reconocimiento superior al 95%. La consistencia metodológica es 4, ya que el método es coherente, pero se menciona el uso de SVM sin especificar los parámetros de clasificación.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 16888673900,
+  "load_duration": 4943700,
+  "prompt_eval_count": 10791,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 280759000,
+  "eval_count": 349,
+  "eval_duration": 16509035000
+ },
+ "cached_at_utc": "2026-09-19T02:12:32.740642+00:00"
+}

@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-120",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen sin resultados concretos ni conclusión; falta contextualización del problema."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin resultados concretos ni conclusión; falta contextualización del problema.\"}",
+ "usage": {
+  "input_tokens": 9893,
+  "output_tokens": 1523,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 3.533378839492798,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:09:41.665434+00:00",
+ "raw": {
+  "id": "chatcmpl-7d2d0dbd-79dd-480e-b9a2-e1117d8df8fb",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin resultados concretos ni conclusión; falta contextualización del problema.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Control de riesgos disergonómicos para disminuir enfermedades ocupacionales de la Empresa Maquinaria Ingenieros Arequipa\"\n\nResumen:\n\n\"Esta investigación tiene como objetivo evaluar el control de riesgos disergonómicos para reducir las enfermedades ocupacionales en la empresa Maquinaria Ingenieros en Arequipa durante el año 2023. Se trata de un estudio aplicado de diseño no experimental con un enfoque correlacional. La población de interés incluye a 70 trabajadores, y la muestra consiste en la totalidad de esta población. La recopilación de datos se llevará a cabo mediante observación directa, análisis documental y el uso de cuestionarios. Los riesgos disergonómicos, como el dolor de espalda y de manos, serán analizados en diversas actividades laborales. Se cuantificará el impacto de estos riesgos en la salud ocupacional de los trabajadores y se evaluará la efectividad de las medidas preventivas implementadas. Este estudio busca proporcionar una comprensión integral de la relación entre los riesgos disergonómicos y las enfermedades ocupacionales en el entorno laboral específico de Maquinaria Ingenieros. La metodología actualizada tiene en cuenta las condiciones y avances actuales en el año 2023 para garantizar la relevancia y aplicabilidad de los hallazgos. Los resultados esperados contribuirán a la implementación de medidas más efectivas para mejorar la salud y seguridad ocupacional en la empresa.\"\n\nWe need to evaluate each dimension.\n\nD1_imryd_objetivo: The summary explicitly states \"tiene como objetivo evaluar el control de riesgos disergonómicos para reducir las enfermedades ocupacionales\". So yes, 1.\n\nD1_imryd_metodologia: It says \"estudio aplicado de diseño no experimental con un enfoque correlacional. La población de interés incluye a 70 trabajadores, y la muestra consiste en la totalidad de esta población. La recopilación de datos se llevará a cabo mediante observación directa, análisis documental y el uso de cuestionarios.\" So yes, 1.\n\nD1_imryd_resultados: The summary says \"Los resultados esperados contribuirán a la implementación de medidas más efectivas\". It does not provide actual results, only expected results. It says \"Se cuantificará el impacto ... y se evaluará la efectividad ...\". But no actual results. So D1_imryd_resultados = 0. Because no actual results communicated.\n\nD1_imryd_conclusiones: The summary ends with \"Los resultados esperados contribuirán a la implementación de medidas más efectivas para mejorar la salud y seguridad ocupacional en la empresa.\" This is a conclusion? It is a statement of expected contribution, but not a conclusion that interprets results. It's more like a statement of expected impact. The protocol says: \"Vale 1 cuando hay un cierre que va más allá de repetir el resultado: interpretación, implicación, respuesta explícita al objetivo, recomendación fundada.\" Here, it's a statement of expected contribution, but no actual results. It's not a conclusion that interprets results. It's more like a statement of expected outcome. According to the protocol, if no results, no conclusion. So D1_imryd_conclusiones = 0.\n\nD1_orden_logico: The components present: objective, methodology, results (none), conclusion (none). Since only objective and methodology present, we have 2 components. The rule: If 0 or 1 components present, order = 0. If 2 components present, we evaluate order. They appear in order: objective first, methodology second. So order is correct. So D1_orden_logico = 1.\n\nD2_coherencia: We need to evaluate flow. The summary flows: objective, design, population, data collection, analysis, expected results. It's coherent. No abrupt jumps. So I'd give 5. But check for any adjetivación or terminological drift. It uses \"observación directa, análisis documental y el uso de cuestionarios\" - consistent. No major issues. So D2_coherencia = 5.\n\nD3_contextualizacion: The summary does not provide context beyond the objective. It doesn't explain why it's important, where it occurs, etc. It just states objective. So D3_contextualizacion = 0.\n\nD3_metodo_detallado: It gives at least two precisions: design (no experimental, correlational), population (70 workers), sample (total population), data collection methods (observation, documentary analysis, questionnaires). So yes, 1.\n\nD3_resultados_concretos: No actual results. So 0.\n\nD3_conclusion_responde: No conclusion. So 0.\n\nD4_consistencia: Since no conclusion, no consistency to evaluate? The protocol says: If no methodology declared, D4 not evaluable. But we have methodology. But we also have no results or conclusion. The consistency is about coherence between what is said and what is presented. We have objective, methodology, no results, no conclusion. There's no contradiction. But D4 is about consistency between what the summary says it did and what it presents. Since we have no results, we can't evaluate consistency of results. But we can evaluate consistency of methodology: It says design, population, sample, data collection. That matches. So no contradictions. So D4_consistencia = 5? But the scale is 1-5. The highest indicates perfect consistency. Since no contradictions, we can assign 5. But check if the protocol says if no conclusion, D4 still can be evaluated. It says: \"Si el resumen no declara ninguna metodología, la D4 no puede evaluarse.\" But we have methodology. So we can evaluate. There's no contradiction. So 5.\n\nBut we need to consider that the summary says \"Se cuantificará el impacto ... y se evaluará la efectividad ...\". That is a statement of future action, not actual results. There's no contradiction. So 5.\n\nno_evaluable: The summary is a valid summary. So 0.\n\nobservaciones: We can add a note: \"No resultados concretos, no conclusión, no contextualización.\" Provide a brief comment.\n\nNow produce JSON with all fields.\n\nCheck schema: required fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nAll present.\n\nNow produce compact JSON."
+    }
+   }
+  ],
+  "created": 1789700981,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c5a89987dc",
+  "usage": {
+   "completion_tokens": 1523,
+   "prompt_tokens": 9893,
+   "total_tokens": 11416,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1384,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.292975911,
+   "prompt_time": 0.081163096,
+   "completion_time": 2.224545688,
+   "total_time": 2.305708784
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7ve5qejh932sw0kptxf3e",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:09:41.665654+00:00"
+}

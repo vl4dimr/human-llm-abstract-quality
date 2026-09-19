@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-048",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen narrativo sin encabezados, pero cumple todas las funciones y mantiene coherencia."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen narrativo sin encabezados, pero cumple todas las funciones y mantiene coherencia.\"}",
+ "usage": {
+  "input_tokens": 9998,
+  "output_tokens": 1817,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.630133628845215,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:01:19.879578+00:00",
+ "raw": {
+  "id": "chatcmpl-fbad205f-aa43-4b85-b1b6-b4fde632fb04",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen narrativo sin encabezados, pero cumple todas las funciones y mantiene coherencia.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's analyze the summary.\n\nTitle: \"Determinación de costos de fabricación de snacks: propuesta para una pequeña empresa industrial, Distrito de Ate Vitarte, 2021\"\n\nResumen: (I'll rewrite for clarity)\n\n\"La presente investigación desarrolla una propuesta para la determinación de costos de fabricación de snacks (chifles, papa chips y camote chips) en una pequeña empresa industrial. El estudio es descriptivo propositivo, de diseño no experimental cuantitativo; para el análisis previo de los costos incurridos en el proceso, se utilizó documentos de la pequeña empresa industrial al 2021 e información directa de colaboradores. Se aplicó la ficha de recolección de datos y la entrevista estructurada. Los resultados evidencian la aplicación de métodos inapropiados para el costeo de materia prima, mano de obra y costos indirectos de fabricación, identificándose que la empresa costea sus productos de forma general y/o empírica; detallándose una propuesta de estructura de costos de fabricación. En conclusión, existe una inadecuada determinación de costos de fabricación de productos industriales en las pequeñas empresas peruanas, siendo importante contar con un costeo adecuado para que la empresa pueda evaluar su desempeño, analizar las variaciones en los costos de cada producto; con la propuesta de estructuración de costos posibilitara implementar a tiempo medidas correctivas para la mejora de gestión de costos y la toma de decisiones; de allí que la propuesta, implica sincerar el costo de los 3 productos analizados de S/ 0.80 céntimos por producto, de 50g con costos fijos unitarios y costos variables: que con la propuesta da el siguiente resultado; chifle (S/0.78), papa chips (S/ 1.03) y camote chips (S/0.77) en presentaciones de 50g cada producto; propuesta que permitirá a la empresa tomar otras medidas antes de producir.\"\n\nWe need to evaluate each dimension.\n\nDimension 1: Adherencia a IMRyD\n\n- D1_imryd_objetivo: Does the summary state what was proposed? The summary says \"desarrolla una propuesta para la determinación de costos de fabricación de snacks\". That is the objective: to develop a proposal for cost determination. So yes, objective present. So 1.\n\n- D1_imryd_metodologia: Does it indicate how they obtained knowledge? It says \"El estudio es descriptivo propositivo, de diseño no experimental cuantitativo; ... se utilizó documentos ... e información directa de colaboradores. Se aplicó la ficha de recolección de datos y la entrevista estructurada.\" So yes, methodology present. 1.\n\n- D1_imryd_resultados: Does it communicate what was found? It says \"Los resultados evidencian la aplicación de métodos inapropiados ... identificándose que la empresa costea sus productos de forma general y/o empírica; detallándose una propuesta de estructura de costos de fabricación.\" Also later gives specific cost numbers. So yes, results present. 1.\n\n- D1_imryd_conclusiones: Does it have a closure that goes beyond repeating results? It says \"En conclusión, existe una inadecuada determinación de costos ... siendo importante contar con un costeo adecuado ... con la propuesta de estructuración de costos posibilitara implementar a tiempo medidas correctivas ... de allí que la propuesta, implica sincerar el costo de los 3 productos analizados ... que con la propuesta da el siguiente resultado; chifle (S/0.78), papa chips (S/ 1.03) y camote chips (S/0.77) ... propuesta que permitirá a la empresa tomar otras medidas antes de producir.\" This is a conclusion that interprets results and suggests implications. So yes, 1.\n\n- D1_orden_logico: Are the components present in logical order? The summary starts with objective, then methodology, then results, then conclusion. Yes. So 1.\n\nDimension 2: Coherencia organizacional (1-5)\n\nWe need to evaluate flow. Let's read: The summary flows: objective, methodology, results, conclusion. The text is somewhat long but seems coherent. There is some repetition: \"la propuesta\" repeated. But overall, it's fairly coherent. I'd rate maybe 4. Let's analyze: The summary is a single paragraph, but the flow is logical. There is no abrupt jump. The conclusion repeats some earlier points but that's normal. I'd give 4.\n\nDimension 3: Completitud de componentes\n\n- D3_contextualizacion: Does the summary situate the problem? It says \"la presente investigación desarrolla una propuesta para la determinación de costos de fabricación de snacks ... en una pequeña empresa industrial.\" It doesn't explicitly state why it's important, but it does mention \"es importante contar con un costeo adecuado para que la empresa pueda evaluar su desempeño, analizar las variaciones en los costos de cada producto\". That is some contextualization: it explains why cost determination matters. So yes, 1.\n\n- D3_metodo_detallado: At least two precisions. It says \"El estudio es descriptivo propositivo, de diseño no experimental cuantitativo; ... se utilizó documentos ... e información directa de colaboradores. Se aplicó la ficha de recolección de datos y la entrevista estructurada.\" That's at least design, type of data collection, interview. So yes, 1.\n\n- D3_resultados_concretos: Are results concrete? It gives specific cost numbers: \"S/0.78, S/1.03, S/0.77\". Also earlier says \"S/0.80 céntimos por producto\". So yes, 1.\n\n- D3_conclusion_responde: Does conclusion respond to objective? The objective was to develop a proposal for cost determination. The conclusion says \"existe una inadecuada determinación ... con la propuesta ... implica sincerar el costo ... que con la propuesta da el siguiente resultado ... propuesta que permitirá a la empresa tomar otras medidas\". That addresses the objective: it proposes a cost structure and shows results. So yes, 1.\n\nDimension 4: Consistencia metodológica (1-5)\n\nWe need to check coherence between what is said and what is presented. The summary says it's a descriptive propositivo, no experimental, uses documents and interviews. The results are cost numbers. The conclusion says the proposal will help. There's no contradiction. So consistency high. I'd rate 5.\n\nBut check for any discordance: It says \"Los resultados evidencian la aplicación de métodos inapropiados ... identificándose que la empresa costea sus productos de forma general y/o empírica; detallándose una propuesta de estructura de costos de fabricación.\" That is consistent. No contradictions. So 5.\n\nNow no_evaluable: It's a valid summary. So 0.\n\nObservaciones: We can note any uncertainties. But seems straightforward. Maybe note that the conclusion repeats some earlier points but that's fine. Also note that the summary is a single paragraph but still coherent. We can add a brief note: \"No encabezados, pero función cumplida.\" But not necessary. But we can add something like \"Resumen narrativo, sin encabezados, pero cumple funciones.\" Let's add that.\n\nNow produce JSON with fields:\n\nD1_imryd_objetivo: 1\nD1_imryd_metodologia: 1\nD1_imryd_resultados: 1\nD1_imryd_conclusiones: 1\nD1_orden_logico: 1\nD2_coherencia: 4\nD3_contextualizacion: 1\nD3_metodo_detallado: 1\nD3_resultados_concretos: 1\nD3_conclusion_responde: 1\nD4_consistencia: 5\nno_evaluable: 0\nobservaciones: \"Resumen narrativo sin encabezados, pero cumple todas las funciones y mantiene coherencia.\"\n\nCheck schema: all fields present, types correct. Observaciones string. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789700479,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c5a89987dc",
+  "usage": {
+   "completion_tokens": 1817,
+   "prompt_tokens": 9998,
+   "total_tokens": 11815,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1675,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.291683355,
+   "prompt_time": 0.061162297,
+   "completion_time": 1.91072831,
+   "total_time": 1.971890607
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7c4f4e1yrcnyq08ba3qp4",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:01:19.879663+00:00"
+}

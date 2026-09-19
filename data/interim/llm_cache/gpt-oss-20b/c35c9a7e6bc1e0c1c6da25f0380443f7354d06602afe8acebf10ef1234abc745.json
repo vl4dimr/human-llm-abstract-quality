@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-083",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen estructurado y coherente; falta contextualización del problema (por ejemplo, importancia de la salud nutricional en estudiantes)."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen estructurado y coherente; falta contextualización del problema (por ejemplo, importancia de la salud nutricional en estudiantes).\"}",
+ "usage": {
+  "input_tokens": 9994,
+  "output_tokens": 865,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 1.8595218658447266,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:55:06.598304+00:00",
+ "raw": {
+  "id": "chatcmpl-469762d0-5d0e-4e4d-9813-d3c771b925c6",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen estructurado y coherente; falta contextualización del problema (por ejemplo, importancia de la salud nutricional en estudiantes).\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields per schema. Must follow required fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nWe evaluate the summary.\n\nFirst, identify components.\n\nSummary text: \n\nObjetivo: Evaluar el estado nutricional de estudiantes de Nutrición Humana mediante el índice de masa corporal y porcentaje de grasa corporal de una Universidad Privada, 2019.\n\nMetodología: The study with population of 155 students, percentages by sex, age range, etc. They obtained IMC and %GC, evaluation took place in consultorio. So methodology present.\n\nResultados: Prevalencia numbers for overweight, normal, obesity, underweight, %GC high. Contains concrete data.\n\nConclusión: Se evidencio que la mayoría... presentaron sobrepeso y obesidad, además se encontró un alto porcentaje de grasa corporal. It repeats results but also interprets significance.\n\nThus D1 components: objective = 1; methodology = 1; results = 1; conclusions = 1. D1_orden_logico: order appears objective, methodology, results, conclusion. All present. So D1_orden_logico = 1.\n\nD2_coherencia: The summary flows logically. It's structured. There's a smooth flow; some repetition maybe, but likely 4 or 5. Let's think: \"Objetivo: Evaluar...\" then \"Metodología: ...\" then \"Resultados: ...\" then \"Conclusión: ...\" Good. No major jumps. So I'd score 5 maybe. But check: They mention \"se encontró un alto nivel de grasa corporal\" in results; conclusion repeats. There's no big jump. So D2_coherencia = 5.\n\nD3_contextualizacion: Does the summary situate the problem? It does not explicitly discuss why it's important; it just states objective. So 0.\n\nD3_metodo_detallado: Need at least two precisions. They give: population 155 students, sex percentages, age range 18-35, measurement: index of mass body, %GC, evaluation location. That's more than two. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: Results provide concrete data: prevalence of overweight 76.8%, breakdowns, etc. So 1.\n\nD3_conclusion_responde: Does conclusion respond to the stated objective? Objective: Evaluate the nutritional status. Conclusion: \"Se evidencio que la mayoría... presentaron sobrepeso y obesidad, además se encontró un alto porcentaje de grasa corporal\". That does answer the objective. So 1.\n\nD4_consistencia: Need to check coherence between methodology and results and conclusion. They have used percentages and numbers, no contradictions. They didn't claim significance without stats. They didn't mention significance; no contradiction. So D4_consistencia = 5.\n\nno_evaluable = 0.\n\nObservations: Provide notes. Maybe mention that objective includes year but okay. I will add observations: \"The summary follows IMRyD structure. No contextualization provided.\" Something like that.\n\nAll fields required. Provide JSON. Ensure valid. Use compact. Let's produce."
+    }
+   }
+  ],
+  "created": 1789775706,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_3023a70d60",
+  "usage": {
+   "completion_tokens": 865,
+   "prompt_tokens": 9994,
+   "total_tokens": 10859,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 716,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.149346453,
+   "prompt_time": 0.061902669,
+   "completion_time": 1.012471996,
+   "total_time": 1.0743746650000001
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vf3wvwexya9c6mdweftcgp",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:55:06.598332+00:00"
+}

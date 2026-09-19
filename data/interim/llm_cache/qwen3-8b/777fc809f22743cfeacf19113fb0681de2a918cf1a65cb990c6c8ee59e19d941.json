@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-044",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD correctamente. Sin embargo, la descripción de la metodología incluye términos como 'batolito de Pataz', 'litología predominante compuesta de roca granodiorita', y 'emplazada' que no son precisos en el contexto de la metodología. La descripción de las potencias y leyes de las zonas de la veta Lima son concretas, pero la descripción geomecánica y el diseño de sostenimiento se presentan de forma más descriptiva que metodológica. La coherencia organizacional es buena, pero hay algunas repeticiones de términos y un salto entre la descripción de la veta Lima y la caracterización geomecánica que resta un punto. La consistencia metodológica es buena, pero se descuenta un punto por el uso de términos como 'macizo rocoso donde necesita el sostenimiento' que no son claros."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. Sin embargo, la descripción de la metodología incluye términos como 'batolito de Pataz', 'litología predominante compuesta de roca granodiorita', y 'emplazada' que no son precisos en el contexto de la metodología. La descripción de las potencias y leyes de las zonas de la veta Lima son concretas, pero la descripción geomecánica y el diseño de sostenimiento se presentan de forma más descriptiva que metodológica. La coherencia organizacional es buena, pero hay algunas repeticiones de términos y un salto entre la descripción de la veta Lima y la caracterización geomecánica que resta un punto. La consistencia metodológica es buena, pero se descuenta un punto por el uso de términos como 'macizo rocoso donde necesita el sostenimiento' que no son claros.\"\n}",
+ "usage": {
+  "input_tokens": 10942,
+  "output_tokens": 367,
+  "total_duration_s": 11.8006696
+ },
+ "latency_s": 11.824471235275269,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:23:45.659995+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:23:45.6515974Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. Sin embargo, la descripción de la metodología incluye términos como 'batolito de Pataz', 'litología predominante compuesta de roca granodiorita', y 'emplazada' que no son precisos en el contexto de la metodología. La descripción de las potencias y leyes de las zonas de la veta Lima son concretas, pero la descripción geomecánica y el diseño de sostenimiento se presentan de forma más descriptiva que metodológica. La coherencia organizacional es buena, pero hay algunas repeticiones de términos y un salto entre la descripción de la veta Lima y la caracterización geomecánica que resta un punto. La consistencia metodológica es buena, pero se descuenta un punto por el uso de términos como 'macizo rocoso donde necesita el sostenimiento' que no son claros.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 11800669600,
+  "load_duration": 6776100,
+  "prompt_eval_count": 10942,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 407842000,
+  "eval_count": 367,
+  "eval_duration": 11272025000
+ },
+ "cached_at_utc": "2026-09-19T02:23:45.660016+00:00"
+}

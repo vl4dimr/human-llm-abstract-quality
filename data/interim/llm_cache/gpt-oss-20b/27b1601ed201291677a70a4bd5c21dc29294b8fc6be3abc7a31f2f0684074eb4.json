@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-014",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Observaciones: Conclusión breve pero responde al objetivo"
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Observaciones: Conclusión breve pero responde al objetivo\"}",
+ "usage": {
+  "input_tokens": 9879,
+  "output_tokens": 1454
+ },
+ "latency_s": 2.8229594230651855,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:47:16.728379+00:00",
+ "raw": {
+  "id": "chatcmpl-f8c97dcc-7c53-4945-b0e7-17512514eb94",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Observaciones: Conclusión breve pero responde al objetivo\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones. All required.\n\nWe must analyze the summary to fill.\n\nSummary: \"La presente investigación tuvo como propósito general identificar los hábitos de lectura en los niños y niñas del 6to grado de la Institución Educativa N°50961 Tupac Amaru de Quillabamba en el año 2017, la metodología empleada para este trabajo de investigación fue un diseño descriptivo simple en el que se investiga la acaecimiento de los niveles en una población, lo cual quiere decir de qué manera se muestra determinado fenómeno y así mismo indaga detallar las características más resaltantes de las personas, grupos o cualquier otro acontecimiento que sea sujeto a investigación y a su respectivo análisis; donde el instrumento utilizado consta de un cuestionario, para su posterior procesamiento y emisión de los resultados por medio de las tablas , figuras y también su correspondiente interpretación; con la investigación realizada se concluyó los hábitos de lectura en los niños y niñas del sexto grado de la Institución Educativa N°50961 Tupac Amaru de Quillabamba es bueno, yaqué el 40% manifestaron que siempre leen a menudo libros en sus ratos libres.\"\n\nWe parse:\n\nD1_imryd_objetivo: Is objective present? \"tiene como propósito general identificar los hábitos de lectura...\" That's a clear objective. So D1_imryd_objetivo = 1.\n\nD1_imryd_metodologia: Need at least one concrete procedural indication: \"la metodología empleada ... fue un diseño descriptivo simple ... el instrumento utilizado consta de un cuestionario\". That qualifies. So 1.\n\nD1_imryd_resultados: Does it communicate what was found? It says \"se concluyó los hábitos de lectura ... es bueno, yaqué el 40% manifestaron que siempre leen a menudo libros\". There's a percent 40%. So yes. So 1.\n\nD1_imryd_conclusiones: Must be more than just repeating result: \"se concluyó los hábitos de lectura ... es bueno, yaqué el 40% manifestaron...\". The conclusion says they are good; but is it more than repeating results? It repeats that 40% read often? It says \"se concluyó ... es bueno\". That's an interpretation maybe. So qualifies. 1.\n\nD1_orden_logico: Must be objective -> method -> results -> conclusion order. The order: objective first, methodology second, results third, conclusion last. Yes. So 1.\n\nD2_coherencia: Flow 1 to 5. Let's check: The summary is fairly coherent. It moves from objective to methodology, then to results, then conclusion. No major jumps. Some slight grammatical issues but not big. So rating 5? But maybe 4 because of some adverbial like \"la metodología empleada ...\" But likely 5. Let's think: D2 1-5: 5 = impeccably flows. 4 = flows well with some minor awkwardness. The summary has some wordy sentences but still flows. I would give 4. But we can consider 5. The summary: \"La presente investigación tuvo como propósito general identificar los hábitos de lectura... la metodología empleada ... fue un diseño descriptivo simple ... ; ... el instrumento ... consta de un cuestionario, ...; con la investigación realizada se concluyó los hábitos de lectura... es bueno, yaqué el 40% manifestaron que siempre leen a menudo libros en sus ratos libres.\" It's a single paragraph, but flows. I'd choose 4. \n\nD3_contextualizacion: Does it sit the problem? The summary starts with objective; no context about why it matters, where occurs, etc. So 0.\n\nD3_metodo_detallado: At least two precisions. We have design (descriptivo simple), instrument (cuestionario). That is two precisions. So 1.\n\nD3_resultados_concretos: Must provide specific content: we have 40%. That's a concrete figure. So 1.\n\nD3_conclusion_responde: Conclusion must answer the objective. Objective: identify habits. Conclusion: says habits are good, 40% read often. That addresses the objective. So 1.\n\nD4_consistencia: Consistency between what is declared and presented. Did they declare a design descriptive simple? Did they present results consistent with design? Yes. No contradictions. So 5. But check for any contradictions: they say \"la metodología empleada ... fue un diseño descriptivo simple ... el instrumento ... consta de un cuestionario\". They present 40% reading often. That is consistent. So 5.\n\nno_evaluable: 0 because it's a valid summary.\n\nobservaciones: Any remarks: maybe note that conclusion states \"es bueno\" but not fully developed. But no big. Observations can be blank or short. Let's fill with empty string or some note. We'll put: \"Observación: conclusión breve pero responde al objetivo\". The schema expects string. It's optional? It's required but can be empty. Provide a small note. We'll provide \"Observaciones: Conclusión breve pero responde al objetivo\". We must not exceed field length? Not defined. So fine.\n\nNow produce JSON with all fields. Use compact JSON.\n\nCheck each field present:\n\n- D1_imryd_objetivo: 1\n- D1_imryd_metodologia: 1\n- D1_imryd_resultados: 1\n- D1_imryd_conclusiones: 1\n- D1_orden_logico: 1\n- D2_coherencia: 4\n- D3_contextualizacion: 0\n- D3_metodo_detallado: 1\n- D3_resultados_concretos: 1\n- D3_conclusion_responde: 1\n- D4_consistencia: 5\n- no_evaluable: 0\n- observaciones: \"Observaciones: Conclusión breve pero responde al objetivo\"\n\nNow output.\n\n"
+    }
+   }
+  ],
+  "created": 1789775236,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_3023a70d60",
+  "usage": {
+   "completion_tokens": 1454,
+   "prompt_tokens": 9879,
+   "total_tokens": 11333,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1318,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.148691209,
+   "prompt_time": 0.51576516,
+   "completion_time": 1.525438749,
+   "total_time": 2.041203909
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2venh25eyp84e9a6k3p4srx",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:47:16.728406+00:00"
+}

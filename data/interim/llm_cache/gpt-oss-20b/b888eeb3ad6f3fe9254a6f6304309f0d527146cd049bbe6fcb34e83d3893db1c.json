@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-136",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 10106,
+  "output_tokens": 1451,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.2623305320739746,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T00:01:50.136551+00:00",
+ "raw": {
+  "id": "chatcmpl-e3298b7a-ee91-4ce4-bffb-f87c2813cfe8",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields. Evaluate each field for this summary.\n\nLet's analyze summary.\n\n**Summary content**: Spanish, about legal analysis.\n\nComponents:\n\n- **Objetivo**: \"Analizar si existe contradicción entre la Prescripción adquisitiva extraordinaria (Art. 950) del Código Civil y el delito de Usurpación (Art. 202°, Inc. 4).\" So objective present.\n\n- **Metodología**: \"El enfoque de la investigación es cualitativo, el diseño es no experimental, de tipo dogmático jurídico, dialéctico, interpretativo. Las técnicas que se utilizaron fueron: el análisis de contenido, análisis de documentos y los instrumentos: fichas de estudio, fichas de análisis bibliográficos, fichas de resumen de contenido o textuales, fichas de contrastación bibliográfica y fichas de contradicción dialéctica.\" So method present.\n\n- **Resultados**: \"el tipo civil (Art. 950) faculta... los resultados son: ...; ... se concluye que ... no existe una contradicción ...\". So results present with content.\n\n- **Conclusiones**: \"por tanto, se concluye que no existe una contradicción normativa ...; además, también se concluye que el artículo 950 del Código Civil, necesita una modificación ...\" So conclusion present.\n\n**Check D1 fields**:\n\n- D1_imryd_objetivo: 1 (objective present)\n\n- D1_imryd_metodologia: 1 (method present)\n\n- D1_imryd_resultados: 1 (results present)\n\n- D1_imryd_conclusiones: 1 (conclusion present)\n\n- D1_orden_logico: They appear in order: objective, methodology, results, conclusions. Yes. So 1.\n\n**D2_coherencia**: Evaluate coherence 1-5.\n\nWe must evaluate flow. The summary: starts with objective, then methodology, then results, then conclusion. The transitions: \"La investigación tiene como objetivo principal: ...\" \"EI enfoque de la investigación es cualitativo...\" \"Las técnicas que se utilizaron fueron:...\" \"Los resultados son: el tipo civil...\" \"Por tanto, se concluye que...\" \"Además, también se concluye que...\" The flow is clear, but some adjectives: \"cualitativo\", \"no experimental\" etc. It is coherent. No abrupt jumps. I'd rate 5 maybe? Let's examine if there's any confusion. They mention \"los resultados son: el tipo civil (Art. 950) faculta a las personas ...\". That is somewhat confusing: they use \"el tipo civil faculta\" but results present. They then talk about the criminal article. This flows logically. No repeated or contradictory statements. So coherence 5 seems okay. There is no heavy adjetivación or abrupt change. So D2_coherencia = 5.\n\n**D3 fields**: Completitud.\n\n- D3_contextualizacion: Are they situating problem? They start with objective; they don't give background context like why it's important. They just jump to objective. So D3_contextualizacion = 0.\n\n- D3_metodo_detallado: They provide quite a detailed list: design, techniques, instruments. They mention \"fichas de estudio\", \"fichas de análisis bibliográficos\", \"fichas de resumen de contenido o textuales\", etc. That's at least two precisions: design type, techniques, instruments. So 1.\n\n- D3_resultados_concretos: They provide some specific statements about what the civil article allows, the criminal article defines. They provide the actual content: the civil article allows possession for ten years etc; the criminal article defines usurpation. They have numbers: \"tres\" maybe? Not quantitative numeric but qualitative content. That's concrete. So 1.\n\n- D3_conclusion_responde: The conclusion responds to objective? Objective is about existence of contradiction. Conclusion says \"no existe una contradicción\". That addresses objective. So 1.\n\n**D4_consistencia**: Consistency between methodology and results and conclusions. Are there contradictions? Let's review:\n\nMethodology: qualitative, no experimental, dogmatic, interpretative. They used analysis of content, documents. They mention instruments.\n\nResults: they describe the civil article's provisions, criminal article's provisions. They claim no contradiction, because civil requires public possession, criminal requires clandestine.\n\nConclusion: same.\n\nConsistency: Are there contradictions? The methodology is qualitative interpretative. The results are interpretive statements of legal texts. That is consistent. There's no mention of statistical significance or other issues. No contradictions. So D4_consistencia = 5 (fully consistent).\n\n**no_evaluable**: This is not a non-summary; it's a valid summary. So no_evaluable = 0.\n\nObservations: any notes? We might mention that \"Observaciones: None\". But must provide a string. Could be empty string. That should be fine. Provide \"\".\n\nNow produce JSON with all fields.\n\nMake sure to include all required fields in order: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nAll values integers 0 or 1 except D2 and D4 may be 1-5. Observaciones string.\n\nThus final JSON:\n\n{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 5,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 5,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"\"\n}\n\nCheck JSON validity. It parses. Good.\n\nReturn only JSON."
+    }
+   }
+  ],
+  "created": 1789776109,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_1074f9ce08",
+  "usage": {
+   "completion_tokens": 1451,
+   "prompt_tokens": 10106,
+   "total_tokens": 11557,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1325,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.216902579,
+   "prompt_time": 0.075806549,
+   "completion_time": 1.549456128,
+   "total_time": 1.625262677
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vfg690e1rrmdbmtrqcnzmy",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-19T00:01:50.136582+00:00"
+}

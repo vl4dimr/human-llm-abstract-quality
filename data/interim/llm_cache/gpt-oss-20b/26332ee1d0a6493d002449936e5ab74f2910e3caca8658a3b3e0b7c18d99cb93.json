@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-145",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Repetición de la frase 'los estudiantes muestran un nivel moderado'. Los resultados no incluyen cifras concretas."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Repetición de la frase 'los estudiantes muestran un nivel moderado'. Los resultados no incluyen cifras concretas.\"}",
+ "usage": {
+  "input_tokens": 9959,
+  "output_tokens": 1743,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.282156467437744,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:44:11.761530+00:00",
+ "raw": {
+  "id": "chatcmpl-2ac55d66-54cd-4e32-829d-3bb5f9af3e4b",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Repetición de la frase 'los estudiantes muestran un nivel moderado'. Los resultados no incluyen cifras concretas.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. We need to fill all required fields. Let's interpret the summary.\n\nFirst, read the summary:\n\nTitle: Nivel de resiliencia en los estudiantes del VII ciclo de la Institución Educativa Secundaria Industrial Muñani durante la pandemia de la Covid 19\n\nResumen: \n\n\"El presente trabajo de investigación tuvo como objetivo principal identificar el nivel de resiliencia en los estudiantes del VII ciclo de la IES “Industrial” del Distrito de Muñani durante la pandemia de la Covid 19 del año 2021. Se trabajó con una población de 229 estudiantes. Se desarrolló con un enfoque cuantitativo, de tipo no experimental y diseño descriptivo. No se utilizó ninguna muestra, ya que se trabajó con todos los estudiantes, quienes fueron evaluados con la escala de resiliencia de Wagnild y Young, como instrumento, cuya técnica corresponde a la encuesta. Los resultados evidenciaron que los estudiantes muestran un nivel de resiliencia moderado donde: este resultado se visualiza en la tabla 4 y figura 1. En confianza en sí mismo, se ubicaron en la escala valorativa moderada. En ecuanimidad, se ubicaron con mayor porcentaje en la escala valorativa moderada. En perseverancia se ubicaron en la escala valorativa moderada. En satisfacción personal se ubicaron en la escala valorativa moderada y finalmente en la dimensión sentirse bien solo, de igual manera se ubicaron en la escala valorativa moderada. Los estudiantes muestran un nivel moderado, esto quiere decir que necesitan apoyo en cuanto al fomento de la resiliencia para que ellos mismos puedan afrontar adversidades de la vida, además es fundamental en el ámbito educativo, ya que si los estudiantes muestran un nivel bajo o moderado no se podrá lograr los objetivos educativos que se plantea.\"\n\nWe annotate each field:\n\n**D1_imryd_objetivo**: Does the summary explicitly state objective? Yes: \"El presente trabajo de investigación tuvo como objetivo principal identificar el nivel de resiliencia en los estudiantes del VII ciclo...\". So 1.\n\n**D1_imryd_metodologia**: Does it provide how they did it? Yes: \"Se trabajó con una población de 229 estudiantes. Se desarrolló con un enfoque cuantitativo, de tipo no experimental y diseño descriptivo. No se utilizó ninguna muestra, ya que se trabajó con todos los estudiantes, quienes fueron evaluados con la escala de resiliencia de Wagnild y Young, como instrumento, cuya técnica corresponde a la encuesta.\" That is at least one precise procedural indication: instrument, technique. Also design and sample info. So 1.\n\n**D1_imryd_resultados**: Does it report what was found? Yes: \"Los resultados evidenciaron que los estudiantes muestran un nivel de resiliencia moderado...\" plus breakdown across dimensions. So 1.\n\n**D1_imryd_conclusiones**: Does it provide a closure that interprets beyond just repeating result? Let's see: Last sentence: \"Los estudiantes muestran un nivel moderado, esto quiere decir que necesitan apoyo en cuanto al fomento de la resiliencia para que ellos mismos puedan afrontar adversidades de la vida, además es fundamental en el ámbito educativo, ya que si los estudiantes muestran un nivel bajo o moderado no se podrá lograr los objetivos educativos que se plantea.\" This seems like a conclusion: It interprets implication: they need support, it's fundamental to education, low resilience may hinder objectives. So yes. 1.\n\n**D1_orden_logico**: Are components present in logical order? Sequence: objective, methodology, results, conclusion. Yes. All present. So 1.\n\n**D2_coherencia**: Evaluate flow. Let's analyze. The summary flows: objective, population, design, instrument. Results: moderate resilience, breakdown by dimensions. Conclusion: implication. Does it have any abrupt jumps? Not really. Some repetition: \"Los estudiantes muestran un nivel moderado, ...\". There's repetition of \"los estudiantes muestran un nivel moderado\". But the flow seems coherent. Probably rating 4 or 5. Let's see guidelines: 5: impeccable; 4: some aspereza. There's a minor repetition but no major disruption. I think 5 or 4. Let's decide 5? But the repetition could be considered slight. According to 5: \"transitions natural; no repetitions\". There's repetition but not necessarily a big issue. I'd lean to 4. But check: The phrase \"Los estudiantes muestran un nivel moderado\" appears twice. Might be a slight redundancy. I'd give 4.\n\n**D3_contextualizacion**: Does it situate problem: why it matters, where, to whom, etc. The summary says \"identificar el nivel de resiliencia en los estudiantes... durante la pandemia de la Covid 19\" but doesn't explain why it's important or why study is needed, only mentions later implication. There's no explicit contextualization: \"El presente trabajo ... se realizó ...\". There's no statement of why resilience matters. The last sentences provide implication but context missing. So 0.\n\n**D3_metodo_detallado**: Need at least two precisions. We have: design (descriptivo, no experimental), instrument (escala de resiliencia de Wagnild y Young), sample size (229). That's at least 3. So 1.\n\n**D3_resultados_concretos**: Does it provide specific results? It states \"nivel moderado\" but no numeric values, only categories. It says \"en confianza en sí mismo, se ubicaron en la escala valorativa moderada\" etc. It also says \"este resultado se visualiza en la tabla 4 y figura 1.\" But no numbers. It's not concrete like percentages. So maybe 0. The result is qualitative categories \"moderado\". It's not a concrete value. So 0.\n\n**D3_conclusion_responde**: Conclusion responds to objective. Objective: identify level of resiliencia. Conclusion: states the level is moderate and that support needed. That does respond to objective. So 1.\n\n**D4_consistencia**: Consistency between what summary says it did and what it presents. It describes methodology: population 229, design descriptive, instrument Wagnild & Young. It reports results: moderate level across dimensions, no numeric values, but describes categories. There's no contradiction. The conclusion says they need support. The results don't contradict that. The only potential issue: \"Los estudiantes muestran un nivel moderado\" repeated but no contradictions. So consistency = 5.\n\nBut we need check if any contradiction: The result is \"moderado\". The conclusion: \"Necesitan apoyo\". That is consistent. So D4_consistencia = 5.\n\n**no_evaluable**: This is not a non-evaluable text. So 0.\n\n**observaciones**: Provide any notes, maybe about the repetition or the lack of numbers. We'll add a brief comment.\n\nSo final fields:\n\n- D1_imryd_objetivo:1\n- D1_imryd_metodologia:1\n- D1_imryd_resultados:1\n- D1_imryd_conclusiones:1\n- D1_orden_logico:1\n- D2_coherencia:4\n- D3_contextualizacion:0\n- D3_metodo_detallado:1\n- D3_resultados_concretos:0\n- D3_conclusion_responde:1\n- D4_consistencia:5\n- no_evaluable:0\n- observaciones:\"Repetición de la frase 'los estudiantes muestran un nivel moderado'. Los resultados no incluyen cifras concretas.\"\n\nCheck JSON schema: all fields present, types correct.\n\nNow produce JSON."
+    }
+   }
+  ],
+  "created": 1789775051,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4a35f7bd1b",
+  "usage": {
+   "completion_tokens": 1743,
+   "prompt_tokens": 9959,
+   "total_tokens": 11702,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1595,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.195136893,
+   "prompt_time": 0.05630527,
+   "completion_time": 1.760058668,
+   "total_time": 1.8163639379999998
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vefwk6ebv9krftnrb5pp8z",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:44:11.761544+00:00"
+}

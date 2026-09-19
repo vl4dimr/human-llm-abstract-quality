@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-153",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen presenta coherencia completa y no contiene contradicciones metodológicas; la conclusión responde al objetivo aunque no menciona cifras concretas de resultados."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta coherencia completa y no contiene contradicciones metodológicas; la conclusión responde al objetivo aunque no menciona cifras concretas de resultados.\"}",
+ "usage": {
+  "input_tokens": 9945,
+  "output_tokens": 1033,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.175131320953369,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T00:03:41.995811+00:00",
+ "raw": {
+  "id": "chatcmpl-4d33f61c-4feb-4fe9-8e98-c749247f3dc6",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta coherencia completa y no contiene contradicciones metodológicas; la conclusión responde al objetivo aunque no menciona cifras concretas de resultados.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields per schema. Must parse summary.\n\nWe need to annotate each dimension:\n\n- D1_imryd_objetivo: presence of objective. The summary explicitly states \"Objetivo: Evaluar el impacto ...\" so 1.\n\n- D1_imryd_metodologia: presence of methodology. \"Materiales y métodos: Estudio de enfoque cuantitativo, diseño pre experimental y corte longitudinal. ... muestra fue obtenida por un muestreo no probabilístico por conveniencia...\" So yes 1.\n\n- D1_imryd_resultados: presence of results. \"Resultados: La intervención educativa nutricional causó un efecto significativo en el nivel de conocimiento e índice de alimentación saludable (p=0.001) ... nivel de hemoglobina... (p=0.04) ... Finalmente, para la hemoglobina y glucosa de los adultos mayores no se evidenció mejoras\" So yes 1.\n\n- D1_imryd_conclusiones: presence of conclusions. \"Conclusiones: Los programas de intervención educativa nutricional son fundamentales...\". Yes 1.\n\n- D1_orden_logico: Order of components present. Sequence: objective, methods, results, conclusions. This matches. So 1.\n\n- D2_coherencia: coherence 1-5. Evaluate flow. The summary starts objective, then methods, then results, then conclusions. The transitions: \"Materiales y métodos:\" to \"Resultados:\" to \"Conclusiones:\" The language seems coherent; slight missing connection but fine. I'd assign 4 maybe? But evaluate. The summary uses \"Además\" maybe but not huge. I'd choose 4 or 5? Let's examine: objective mentions impact. Methods mention design pre-experimental, community. Results mention significant effect with p-values. Then mention \"Finalmente\" about no improvement. Then conclusions mention fundamental. The flow is clear; no abrupt jumps; transitions are natural. I'd give 5. But check for any abrupt shift: The last part of conclusions includes \"Sobre todo, si se aplican estrategias...\" This is a bit extended but still coherent. I'd assign 5.\n\n- D3_contextualizacion: presence of context. Does summary situate problem: The objective statement says \"evaluar el impacto... en la comunidad de Sinchicuy.\" It mentions location: \"ubicada en la ribera del río Amazonas, Iquitos-Perú.\" So yes 1.\n\n- D3_metodo_detallado: presence of at least two precisions about procedure: design pre-experimental, longitudinal, sample 61 families, 253 persons, non-prob sampling convenience. That's 2+ precisions. So 1.\n\n- D3_resultados_concretos: results have p-values and mention levels. They mention \"efecto significativo\" but not actual numbers for knowledge level, just p-values. They mention hemoglobina increase significance. No exact values for knowledge or hemoglobin levels. There's mention p=0.001 and p=0.04. That counts as concrete? According to definition, results must have content: \"fuerza de la asociación\" etc. p-values with significance yes is concrete? The definition: \"Magnitudes, cifras, categories.\" P-values are significant but may count. It's a concrete result. I think yes. The example of 0 p-values still counted as result. So 1.\n\n- D3_conclusion_responde: conclusion responds to objective. The objective: evaluate impact. Conclusion: says programs are fundamental to change knowledge etc. This is a response but not directly referencing results but general. Does it answer the objective? It addresses that interventions are fundamental to change knowledge etc. It's consistent. I'd consider yes 1.\n\n- D4_consistencia: Consistency between methodology and results. The design is pre-experimental longitudinal; results show significance for some variables. No contradictions. The conclusion general, no claim of causality beyond results. No contradictory statements. So likely 5.\n\nNo_evaluable: 0 because it's a proper summary.\n\nObservaciones: any notes? Might note that the conclusion somewhat general but still consistent. Provide observations: \"General conclusion aligns with results; minor lack of specific numeric outcome values.\" Provide.\n\nNow produce JSON.\n\nMake sure each field present. Use null? but all filled. So output.\n\n"
+    }
+   }
+  ],
+  "created": 1789776221,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_8e23cedc90",
+  "usage": {
+   "completion_tokens": 1033,
+   "prompt_tokens": 9945,
+   "total_tokens": 10978,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 880,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.150114619,
+   "prompt_time": 0.235837554,
+   "completion_time": 1.14067511,
+   "total_time": 1.376512664
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vfkkw9e5ev2bawtj4ytqr9",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-19T00:03:41.995859+00:00"
+}

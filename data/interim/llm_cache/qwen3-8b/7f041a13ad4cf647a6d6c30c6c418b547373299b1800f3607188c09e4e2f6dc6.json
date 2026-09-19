@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-133",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, aunque hay un salto entre los resultados y las conclusiones. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la prevalencia de anticuerpos contra Fasciola hepática. La metodología es detallada con el uso de la técnica ELISA y el análisis estadístico con SPSS. Los resultados son concretos con porcentajes y estadísticas. La conclusión responde al objetivo al mencionar la prevalencia alta y los factores de riesgo."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, aunque hay un salto entre los resultados y las conclusiones. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la prevalencia de anticuerpos contra Fasciola hepática. La metodología es detallada con el uso de la técnica ELISA y el análisis estadístico con SPSS. Los resultados son concretos con porcentajes y estadísticas. La conclusión responde al objetivo al mencionar la prevalencia alta y los factores de riesgo.\"\n}",
+ "usage": {
+  "input_tokens": 10925,
+  "output_tokens": 288,
+  "total_duration_s": 8.8955307
+ },
+ "latency_s": 8.929854393005371,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:43:41.626699+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:43:41.6178813Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, aunque hay un salto entre los resultados y las conclusiones. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la prevalencia de anticuerpos contra Fasciola hepática. La metodología es detallada con el uso de la técnica ELISA y el análisis estadístico con SPSS. Los resultados son concretos con porcentajes y estadísticas. La conclusión responde al objetivo al mencionar la prevalencia alta y los factores de riesgo.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8895530700,
+  "load_duration": 5043100,
+  "prompt_eval_count": 10925,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 362793000,
+  "eval_count": 288,
+  "eval_duration": 8466199000
+ },
+ "cached_at_utc": "2026-09-19T01:43:41.626712+00:00"
+}

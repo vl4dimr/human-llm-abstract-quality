@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-047",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 9911,
+  "output_tokens": 1121,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 1.686959981918335,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:20:08.737203+00:00",
+ "raw": {
+  "id": "chatcmpl-d750e2c0-ffe0-4c58-808d-ebdf602c46c7",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must produce JSON according to schema. Determine values.\n\nWe have summary. Let's annotate.\n\nFields:\nD1_imryd_objetivo: 1 if objective present. Yes: \"El objetivo de este estudio fue determinar si existe relación significativa...\" so 1.\n\nD1_imryd_metodologia: 1 if indicates methodology. They give sample, instruments, data processed with SPSS, descriptive and correlation analysis. So yes 1.\n\nD1_imryd_resultados: 1 if results. They present r=0.187 significance, other correlations, and one non-significant. So yes 1.\n\nD1_imryd_conclusiones: 1 if conclusion beyond repetition. Do they have explicit conclusion? The summary ends with mention of non-significant correlation but no explicit concluding statement or implication. The last sentence is \"Sin embargo, al analizar la dimensión energía con gestión del conocimiento, se aprecia que no existe relación significativa (r = .101, p = 0.264).\" This is still a result, not a conclusion. So no explicit conclusion. Thus 0.\n\nD1_orden_logico: They have objective, methods, results. Order: objective first, then methodology, then results. That is correct. So 1.\n\nD2_coherencia: Evaluate flow. Let's read. Objective, sample, instruments, SPSS, results. The flow seems coherent. Some minor issues: The sentence \"Los resultados evidencian que existe una relación directa y significativa entre work engagement y gestión del conocimiento (r = .187**, p = 0.037). De manera semejante ocurre en la correlación entre atención y gestión del conocimiento r = .187**, p = 0.037), absorción y gestión del conocimiento r = .187**, p = 0.037).\" There's some punctuation errors: a closing parenthesis before the comma maybe, but that does not affect coherence too much. Overall flow is good. No contradictions. So likely 5. But D2 is 1-5. 5 = impeccable flow. There are minor issues but still coherent. I'd assign 5. Could assign 4 if minor. Let's assign 5.\n\nD3_contextualizacion: 1 if problem is situated. The summary states \"catedráticos de una universidad confesional de Lima Este\" and mention sample of 225 students of Engineering School? Wait sample: \"225 estudiantes de la Escuela Profesional de Ingeniería Ambiental\". That's contradictory: catedráticos but sample of students? There's confusion. But no explicit contextualization: why is this important? They mention \"relación significativa entre work engagement y gestión del conocimiento\", but they don't state why it's important or what the implications. So D3_contextualizacion = 0.\n\nD3_metodo_detallado: 1 if at least two precisions. They give: sample size 225, instruments details, statistical software, descriptive and correlation analysis. That is 3 precisions. So 1.\n\nD3_resultados_concretos: 1 if results provide specific content. They provide r = .187**, p=0.037; repeated for other correlations. So yes 1.\n\nD3_conclusion_responde: 1 if conclusion answers objective. Since no conclusion, 0.\n\nD4_consistencia: 1-5 scale. Evaluate consistency between methodology and results, and conclusion. There is no conclusion, but still D4 might be 5? But the rule: if no conclusion, still can evaluate consistency: do results match methodology? Yes. No contradictions. So we can give 5. But the scale 1-5. Since there is no conclusion, the consistency is still high: no contradictions. I'd assign 5. However, the D4 field is required. It can be 5. Alternatively could be 4 if we consider lack of conclusion as minor. But we can say 5.\n\nno_evaluable: 0 because it's a valid summary.\n\nobservaciones: any comments: note the inconsistency sample vs. participants, but not required.\n\nThus JSON fields:\n\n- D1_imryd_objetivo:1\n- D1_imryd_metodologia:1\n- D1_imryd_resultados:1\n- D1_imryd_conclusiones:0\n- D1_orden_logico:1\n- D2_coherencia:5\n- D3_contextualizacion:0\n- D3_metodo_detallado:1\n- D3_resultados_concretos:1\n- D3_conclusion_responde:0\n- D4_consistencia:5\n- no_evaluable:0\n- observaciones: \"\" or maybe comment \"Sample described as students, but objective refers to catedráticos\" but not necessary. We'll put an empty string.\n\nMake sure JSON is valid. Provide compact formatting. Let's produce.\n\n"
+    }
+   }
+  ],
+  "created": 1789701608,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_3cdd24b83b",
+  "usage": {
+   "completion_tokens": 1121,
+   "prompt_tokens": 9911,
+   "total_tokens": 11032,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 995,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.19322836,
+   "prompt_time": 0.059504635,
+   "completion_time": 1.142439465,
+   "total_time": 1.2019441
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8ekqpew199nj8tp9kctd2",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:20:08.737224+00:00"
+}

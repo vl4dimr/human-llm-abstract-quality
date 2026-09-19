@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-051",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica de los componentes IMRyD. La coherencia es 4 debido a que hay una ligera repetición en la explicación de la relación entre el conocimiento y la anemia. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar el conocimiento sobre alimentación complementaria en relación a la anemia. El método detallado es 1 por la descripción del enfoque cuantitativo, diseño y la población. Los resultados concretos son 1 debido a la presentación de porcentajes y el valor p. La conclusión responde al objetivo al demostrar que el conocimiento influye en el nivel de anemia. La consistencia metodológica es 3 porque la conclusión afirma una relación significativa, pero no se menciona explícitamente que se usó una prueba estadística para confirmar la relación."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica de los componentes IMRyD. La coherencia es 4 debido a que hay una ligera repetición en la explicación de la relación entre el conocimiento y la anemia. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar el conocimiento sobre alimentación complementaria en relación a la anemia. El método detallado es 1 por la descripción del enfoque cuantitativo, diseño y la población. Los resultados concretos son 1 debido a la presentación de porcentajes y el valor p. La conclusión responde al objetivo al demostrar que el conocimiento influye en el nivel de anemia. La consistencia metodológica es 3 porque la conclusión afirma una relación significativa, pero no se menciona explícitamente que se usó una prueba estadística para confirmar la relación.\"\n}",
+ "usage": {
+  "input_tokens": 10909,
+  "output_tokens": 360,
+  "total_duration_s": 11.5668031
+ },
+ "latency_s": 11.580735683441162,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:24:57.863626+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:24:57.8548869Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica de los componentes IMRyD. La coherencia es 4 debido a que hay una ligera repetición en la explicación de la relación entre el conocimiento y la anemia. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar el conocimiento sobre alimentación complementaria en relación a la anemia. El método detallado es 1 por la descripción del enfoque cuantitativo, diseño y la población. Los resultados concretos son 1 debido a la presentación de porcentajes y el valor p. La conclusión responde al objetivo al demostrar que el conocimiento influye en el nivel de anemia. La consistencia metodológica es 3 porque la conclusión afirma una relación significativa, pero no se menciona explícitamente que se usó una prueba estadística para confirmar la relación.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 11566803100,
+  "load_duration": 4612800,
+  "prompt_eval_count": 10909,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 400437000,
+  "eval_count": 360,
+  "eval_duration": 11056336000
+ },
+ "cached_at_utc": "2026-09-19T02:24:57.863652+00:00"
+}

@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-100",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen cumple con la estructura IMRyD y presenta los componentes necesarios. La coherencia es buena, pero hay algunas redundancias y repeticiones. La contextualización es deficiente, ya que no se explica por qué es importante el cultivo de papaya andina. La consistencia metodológica es aceptable, aunque hay algunas contradicciones en los resultados y conclusiones."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen cumple con la estructura IMRyD y presenta los componentes necesarios. La coherencia es buena, pero hay algunas redundancias y repeticiones. La contextualización es deficiente, ya que no se explica por qué es importante el cultivo de papaya andina. La consistencia metodológica es aceptable, aunque hay algunas contradicciones en los resultados y conclusiones.\"\n}",
+ "usage": {
+  "input_tokens": 11097,
+  "output_tokens": 241,
+  "total_duration_s": 8.180455
+ },
+ "latency_s": 8.18193769454956,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:03:04.277413+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:03:04.2758089Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen cumple con la estructura IMRyD y presenta los componentes necesarios. La coherencia es buena, pero hay algunas redundancias y repeticiones. La contextualización es deficiente, ya que no se explica por qué es importante el cultivo de papaya andina. La consistencia metodológica es aceptable, aunque hay algunas contradicciones en los resultados y conclusiones.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8180455000,
+  "load_duration": 10340500,
+  "prompt_eval_count": 11097,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 510803000,
+  "eval_count": 241,
+  "eval_duration": 7542282000
+ },
+ "cached_at_utc": "2026-09-19T02:03:04.277423+00:00"
+}

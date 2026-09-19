@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-112",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 9967,
+  "output_tokens": 2129,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 3.238490581512451,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:08:45.115427+00:00",
+ "raw": {
+  "id": "chatcmpl-92fc651d-aea8-42eb-a910-6775a4376c17",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Autoeficacia en el uso de la inteligencia artificial como predictor de la satisfacción con los estudios: el papel mediador de la motivación investigadora en universitarios peruanos\"\n\nResumen:\n\nIntroducción: La inteligencia artificial (IA) está transformando los procesos educativos, influyendo en la motivación y la satisfacción de los estudiantes. Este estudio analizó el papel mediador de la motivación investigadora en la relación entre la autoeficacia en el uso de la IA y la satisfacción con los estudios en universitarios peruanos.\n\nMétodo: Se llevó el estudio cuantitativo, transversal y explicativo con 559 estudiantes universitarios peruanos. Se aplicaron tres instrumentos validados: Escala de Autoeficacia en IA (GSE-6AI), Escala de Motivación Investigadora y Escala de satisfacción con los estudios.\n\nResultados: Los resultados mostraron correlaciones positivas y significativas entre todas las variables. La autoeficacia en IA predijo de forma directa la motivación investigadora (β = .313, p < .001) y la satisfacción con los estudios (β = .100, p = .039). Asimismo, la motivación investigadora influyó significativamente sobre la satisfacción académica (β = .448, p < .001) y desempeñó un papel mediador parcial, explicando el 58.3% del efecto total.\n\nConclusión: El estudio confirma que la motivación investigadora media la relación entre la autoeficacia en el uso de la inteligencia artificial y la satisfacción con los estudios, destacando la importancia de fortalecer la alfabetización digital y las competencias investigativas mediante estrategias pedagógicas basadas en IA.\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 1 if objective present. The summary states: \"Este estudio analizó el papel mediador de la motivación investigadora en la relación entre la autoeficacia en el uso de la IA y la satisfacción con los estudios en universitarios peruanos.\" That is objective. So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. It says: \"Se llevó el estudio cuantitativo, transversal y explicativo con 559 estudiantes universitarios peruanos. Se aplicaron tres instrumentos validados: Escala de Autoeficacia en IA (GSE-6AI), Escala de Motivación Investigadora y Escala de satisfacción con los estudios.\" So yes 1.\n\n- D1_imryd_resultados: 1 if results present. It says: \"Los resultados mostraron correlaciones positivas y significativas entre todas las variables. La autoeficacia en IA predijo de forma directa la motivación investigadora (β = .313, p < .001) y la satisfacción con los estudios (β = .100, p = .039). Asimismo, la motivación investigadora influyó significativamente sobre la satisfacción académica (β = .448, p < .001) y desempeñó un papel mediador parcial, explicando el 58.3% del efecto total.\" So yes 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. It says: \"El estudio confirma que la motivación investigadora media la relación entre la autoeficacia en el uso de la inteligencia artificial y la satisfacción con los estudios, destacando la importancia de fortalecer la alfabetización digital y las competencias investigativas mediante estrategias pedagógicas basadas en IA.\" That is a conclusion. So 1.\n\n- D1_orden_logico: 1 if components present in logical order. The order: Introducción (objective), Método, Resultados, Conclusión. That is correct. So 1.\n\n- D2_coherencia: 1-5 scale. We need to evaluate coherence. The summary flows: Intro, method, results, conclusion. The sentences are coherent. There's no abrupt jumps. The introduction sets context, method describes design, results present correlations, conclusion interprets. So I'd rate 5. But check for any issues: The introduction mentions \"IA está transformando los procesos educativos, influyendo en la motivación y la satisfacción de los estudiantes.\" Then \"Este estudio analizó el papel mediador...\" Good. Method: \"Se llevó el estudio cuantitativo, transversal y explicativo con 559 estudiantes universitarios peruanos. Se aplicaron tres instrumentos validados: Escala de Autoeficacia en IA (GSE-6AI), Escala de Motivación Investigadora y Escala de satisfacción con los estudios.\" Good. Results: \"Los resultados mostraron correlaciones positivas y significativas entre todas las variables. La autoeficacia en IA predijo de forma directa la motivación investigadora (β = .313, p < .001) y la satisfacción con los estudios (β = .100, p = .039). Asimismo, la motivación investigadora influyó significativamente sobre la satisfacción académica (β = .448, p < .001) y desempeñó un papel mediador parcial, explicando el 58.3% del efecto total.\" Good. Conclusion: \"El estudio confirma que la motivación investigadora media la relación entre la autoeficacia en el uso de la inteligencia artificial y la satisfacción con los estudios, destacando la importancia de fortalecer la alfabetización digital y las competencias investigativas mediante estrategias pedagógicas basadas en IA.\" Good. No major coherence issues. So D2_coherencia = 5.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where it occurs, to whom it affects, against what norm or framework. The introduction says: \"IA está transformando los procesos educativos, influyendo en la motivación y la satisfacción de los estudiantes.\" That gives context: IA transforms education, influences motivation and satisfaction. It also says \"este estudio analizó el papel mediador...\" So yes, it situates the problem: IA's impact on motivation and satisfaction. So D3_contextualizacion = 1.\n\n- D3_metodo_detallado: 1 if at least two precisions about procedure. We have: \"estudio cuantitativo, transversal y explicativo con 559 estudiantes universitarios peruanos.\" That's design, type, sample size. Also \"Se aplicaron tres instrumentos validados: Escala de Autoeficacia en IA (GSE-6AI), Escala de Motivación Investigadora y Escala de satisfacción con los estudios.\" That's instrument names. So at least two precisions. So 1.\n\n- D3_resultados_concretos: 1 if results provide specific content: numbers, magnitudes, categories, relationships with direction. We have β coefficients, p-values, correlation significance, 58.3% mediation. So yes 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to the objective. The objective: \"analizar el papel mediador de la motivación investigadora en la relación entre la autoeficacia en el uso de la IA y la satisfacción con los estudios.\" The conclusion: \"El estudio confirma que la motivación investigadora media la relación entre la autoeficacia en el uso de la inteligencia artificial y la satisfacción con los estudios, destacando la importancia de fortalecer la alfabetización digital y las competencias investigativas mediante estrategias pedagógicas basadas en IA.\" That indeed responds to the objective. So 1.\n\n- D4_consistencia: 1-5 scale. We need to evaluate consistency between what the summary says it did and what it presents. The summary says: \"Se llevó el estudio cuantitativo, transversal y explicativo con 559 estudiantes universitarios peruanos. Se aplicaron tres instrumentos validados: Escala de Autoeficacia en IA (GSE-6AI), Escala de Motivación Investigadora y Escala de satisfacción con los estudios.\" Then results: \"Los resultados mostraron correlaciones positivas y significativas entre todas las variables. La autoeficacia en IA predijo de forma directa la motivación investigadora (β = .313, p < .001) y la satisfacción con los estudios (β = .100, p = .039). Asimismo, la motivación investigadora influyó significativamente sobre la satisfacción académica (β = .448, p < .001) y desempeñó un papel mediador parcial, explicando el 58.3% del efecto total.\" So the results are consistent with the methodology: they used the instruments, did correlations, regression, mediation. No contradictions. So D4_consistencia = 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes? We can add a brief note: \"No issues.\" But we can leave empty string. The schema requires string, but can be empty. We'll put empty string.\n\nThus JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"\"\n}\n\nCheck schema: all required fields present. All values are integers or null. Observaciones string. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789700924,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4f7e7dc26e",
+  "usage": {
+   "completion_tokens": 2129,
+   "prompt_tokens": 9967,
+   "total_tokens": 12096,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2003,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.191061918,
+   "prompt_time": 0.064209714,
+   "completion_time": 2.224223436,
+   "total_time": 2.28843315
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7sq1zeh091erbhj5yvt58",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:08:45.115543+00:00"
+}

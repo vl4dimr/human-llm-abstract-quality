@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-158",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, pero hay una ligera aspereza en la transición entre los resultados y la conclusión. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué la calidad de la atención de enfermería es importante. La metodología es detallada con el enfoque, diseño, nivel y la muestra. Los resultados son concretos con porcentajes y el análisis estadístico. La conclusión responde al objetivo al establecer una relación directa y significativa entre la calidad de la atención y la satisfacción del paciente. La consistencia metodológica es 3 porque la conclusión menciona un nivel 'Regular' de calidad y 'Satisfecho' de satisfacción, lo cual es coherente con los resultados, pero la interpretación podría ser más clara."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, pero hay una ligera aspereza en la transición entre los resultados y la conclusión. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué la calidad de la atención de enfermería es importante. La metodología es detallada con el enfoque, diseño, nivel y la muestra. Los resultados son concretos con porcentajes y el análisis estadístico. La conclusión responde al objetivo al establecer una relación directa y significativa entre la calidad de la atención y la satisfacción del paciente. La consistencia metodológica es 3 porque la conclusión menciona un nivel 'Regular' de calidad y 'Satisfecho' de satisfacción, lo cual es coherente con los resultados, pero la interpretación podría ser más clara.\"\n}",
+ "usage": {
+  "input_tokens": 10871,
+  "output_tokens": 348,
+  "total_duration_s": 11.0438996
+ },
+ "latency_s": 11.069416999816895,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:47:19.996721+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:47:19.9879391Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, pero hay una ligera aspereza en la transición entre los resultados y la conclusión. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué la calidad de la atención de enfermería es importante. La metodología es detallada con el enfoque, diseño, nivel y la muestra. Los resultados son concretos con porcentajes y el análisis estadístico. La conclusión responde al objetivo al establecer una relación directa y significativa entre la calidad de la atención y la satisfacción del paciente. La consistencia metodológica es 3 porque la conclusión menciona un nivel 'Regular' de calidad y 'Satisfecho' de satisfacción, lo cual es coherente con los resultados, pero la interpretación podría ser más clara.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 11043899600,
+  "load_duration": 21289000,
+  "prompt_eval_count": 10871,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 348324000,
+  "eval_count": 348,
+  "eval_duration": 10560491000
+ },
+ "cached_at_utc": "2026-09-19T01:47:19.996743+00:00"
+}

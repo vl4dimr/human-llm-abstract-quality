@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-054",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica con los componentes IMRyD. La coherencia se puntuó en 4 debido a que aunque el flujo es claro, hay algunos saltos de tema y adjetivación innecesaria. La contextualización se puntuó en 0 porque el resumen comienza directamente con el objetivo sin explicar por qué importa el tema. La consistencia metodológica se puntuó en 3 porque, aunque el análisis estadístico se describe, la conclusión menciona una relación significativa sin mencionar la prueba estadística exacta."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica con los componentes IMRyD. La coherencia se puntuó en 4 debido a que aunque el flujo es claro, hay algunos saltos de tema y adjetivación innecesaria. La contextualización se puntuó en 0 porque el resumen comienza directamente con el objetivo sin explicar por qué importa el tema. La consistencia metodológica se puntuó en 3 porque, aunque el análisis estadístico se describe, la conclusión menciona una relación significativa sin mencionar la prueba estadística exacta.\"\n}",
+ "usage": {
+  "input_tokens": 10871,
+  "output_tokens": 284,
+  "total_duration_s": 9.1109611
+ },
+ "latency_s": 9.12614393234253,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:25:24.454680+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:25:24.4438486Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica con los componentes IMRyD. La coherencia se puntuó en 4 debido a que aunque el flujo es claro, hay algunos saltos de tema y adjetivación innecesaria. La contextualización se puntuó en 0 porque el resumen comienza directamente con el objetivo sin explicar por qué importa el tema. La consistencia metodológica se puntuó en 3 porque, aunque el análisis estadístico se describe, la conclusión menciona una relación significativa sin mencionar la prueba estadística exacta.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9110961100,
+  "load_duration": 6748400,
+  "prompt_eval_count": 10871,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 351968000,
+  "eval_count": 284,
+  "eval_duration": 8647193000
+ },
+ "cached_at_utc": "2026-09-19T02:25:24.454700+00:00"
+}

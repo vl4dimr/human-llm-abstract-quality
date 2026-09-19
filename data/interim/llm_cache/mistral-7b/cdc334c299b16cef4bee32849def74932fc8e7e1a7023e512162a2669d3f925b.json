@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-097",
+ "model_name": "mistral-7b",
+ "provider": "ollama",
+ "model": "mistral:latest",
+ "model_reported": "mistral:latest",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "Estudyó seroprevalencia de E. canis en perros. La ausencia de contextualización no significa que no haya importancia para el estudio; el término «patógeno» en la conclusión es correcto, y se puede inferir del objeto y los resultados que se está hablando de E. canis. Se puede hacer una discusión sobre el valor de 4 en la D4, ya que el uso correcto de la prueba estadística no garantiza consistencia metodológica. Pero aquí está el caso limite 11.10: el resumen no está etiquetado como «Palabras clave», por lo que no se debe descuentar por ello."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"Estudyó seroprevalencia de E. canis en perros. La ausencia de contextualización no significa que no haya importancia para el estudio; el término «patógeno» en la conclusión es correcto, y se puede inferir del objeto y los resultados que se está hablando de E. canis. Se puede hacer una discusión sobre el valor de 4 en la D4, ya que el uso correcto de la prueba estadística no garantiza consistencia metodológica. Pero aquí está el caso limite 11.10: el resumen no está etiquetado como «Palabras clave», por lo que no se debe descuentar por ello.\"\n}",
+ "usage": {
+  "input_tokens": 12801,
+  "output_tokens": 361,
+  "total_duration_s": 10.3589572
+ },
+ "latency_s": 10.36861515045166,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:18:11.858316+00:00",
+ "raw": {
+  "model": "mistral:latest",
+  "created_at": "2026-09-19T01:18:11.8495847Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"Estudyó seroprevalencia de E. canis en perros. La ausencia de contextualización no significa que no haya importancia para el estudio; el término «patógeno» en la conclusión es correcto, y se puede inferir del objeto y los resultados que se está hablando de E. canis. Se puede hacer una discusión sobre el valor de 4 en la D4, ya que el uso correcto de la prueba estadística no garantiza consistencia metodológica. Pero aquí está el caso limite 11.10: el resumen no está etiquetado como «Palabras clave», por lo que no se debe descuentar por ello.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10358957200,
+  "load_duration": 4883100,
+  "prompt_eval_count": 12801,
+  "prompt_eval_cached_count": 12155,
+  "prompt_eval_duration": 466987000,
+  "eval_count": 361,
+  "eval_duration": 9779811000
+ },
+ "cached_at_utc": "2026-09-19T01:18:11.858333+00:00"
+}

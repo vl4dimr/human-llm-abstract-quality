@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-120",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD correctamente. En la dimensión 2, se otorga 4 debido a que el flujo es generalmente coherente, aunque la frase \"Los riesgos disergonómicos, como el dolor de espalda y de manos, serán analizados en diversas actividades laborales\" podría mejorar su cohesión. En la dimensión 3, se otorga 1 a la contextualización porque el resumen no explica por qué es importante evaluar los riesgos disergonómicos. En la dimensión 4, se otorga 4 debido a que el resumen menciona la metodología y los resultados, pero no se reporta la prueba estadística para el análisis de los resultados."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. En la dimensión 2, se otorga 4 debido a que el flujo es generalmente coherente, aunque la frase \\\"Los riesgos disergonómicos, como el dolor de espalda y de manos, serán analizados en diversas actividades laborales\\\" podría mejorar su cohesión. En la dimensión 3, se otorga 1 a la contextualización porque el resumen no explica por qué es importante evaluar los riesgos disergonómicos. En la dimensión 4, se otorga 4 debido a que el resumen menciona la metodología y los resultados, pero no se reporta la prueba estadística para el análisis de los resultados.\"\n}",
+ "usage": {
+  "input_tokens": 10781,
+  "output_tokens": 321,
+  "total_duration_s": 10.1820076
+ },
+ "latency_s": 10.190321683883667,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:35:21.822336+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:35:21.8141646Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. En la dimensión 2, se otorga 4 debido a que el flujo es generalmente coherente, aunque la frase \\\"Los riesgos disergonómicos, como el dolor de espalda y de manos, serán analizados en diversas actividades laborales\\\" podría mejorar su cohesión. En la dimensión 3, se otorga 1 a la contextualización porque el resumen no explica por qué es importante evaluar los riesgos disergonómicos. En la dimensión 4, se otorga 4 debido a que el resumen menciona la metodología y los resultados, pero no se reporta la prueba estadística para el análisis de los resultados.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10182007600,
+  "load_duration": 6657400,
+  "prompt_eval_count": 10781,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 299223000,
+  "eval_count": 321,
+  "eval_duration": 9782457000
+ },
+ "cached_at_utc": "2026-09-19T02:35:21.822358+00:00"
+}

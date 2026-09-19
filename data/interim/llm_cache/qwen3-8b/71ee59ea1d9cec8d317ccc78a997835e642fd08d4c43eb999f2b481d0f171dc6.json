@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-091",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen describe el objetivo y la metodología de manera clara. Sin embargo, no se mencionan resultados concretos ni conclusiones que respondan al objetivo. La coherencia es buena, pero se podría mejorar con una mejor conexión entre las secciones. La consistencia metodológica es buena, pero se podría mejorar al mencionar más detalles sobre los resultados obtenidos."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen describe el objetivo y la metodología de manera clara. Sin embargo, no se mencionan resultados concretos ni conclusiones que respondan al objetivo. La coherencia es buena, pero se podría mejorar con una mejor conexión entre las secciones. La consistencia metodológica es buena, pero se podría mejorar al mencionar más detalles sobre los resultados obtenidos.\"\n}",
+ "usage": {
+  "input_tokens": 10699,
+  "output_tokens": 235,
+  "total_duration_s": 7.3683161
+ },
+ "latency_s": 7.377901792526245,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:31:04.786469+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:31:04.7779652Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen describe el objetivo y la metodología de manera clara. Sin embargo, no se mencionan resultados concretos ni conclusiones que respondan al objetivo. La coherencia es buena, pero se podría mejorar con una mejor conexión entre las secciones. La consistencia metodológica es buena, pero se podría mejorar al mencionar más detalles sobre los resultados obtenidos.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7368316100,
+  "load_duration": 5578100,
+  "prompt_eval_count": 10699,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 189760000,
+  "eval_count": 235,
+  "eval_duration": 7071293000
+ },
+ "cached_at_utc": "2026-09-19T02:31:04.786490+00:00"
+}

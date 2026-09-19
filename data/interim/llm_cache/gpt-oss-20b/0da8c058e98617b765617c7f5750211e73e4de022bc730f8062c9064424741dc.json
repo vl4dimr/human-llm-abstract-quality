@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-024",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Title repeated; conclusion present; overall coherent and consistent."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Title repeated; conclusion present; overall coherent and consistent.\"}",
+ "usage": {
+  "input_tokens": 10102,
+  "output_tokens": 1947
+ },
+ "latency_s": 3.2220752239227295,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T02:58:06.332094+00:00",
+ "raw": {
+  "id": "chatcmpl-1935214b-5265-4892-b18b-039c459547ea",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Title repeated; conclusion present; overall coherent and consistent.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Evaluación de la ejecución presupuestaria y el cumplimiento de metas presupuestarias, en la Municipalidad Distrital de Capaso, provincia del Collao, periodo 2020 y 2021\"\n\nSummary:\n\n\"El actual proyecto de investigación tiene como título, “Evaluación de la Ejecución Presupuestaria y el Cumplimiento de Metas Presupuestarias En la Municipalidad Distrital de Capaso, Provincia del Collao, 2020 Y 2021”. Teniendo como objetivo general: “Evaluar la ejecución presupuestaria y su repercusión en el cumplimiento de metas presupuestarias en la Municipalidad Distrital de Capaso, Provincia del Collao, Periodos 2020 y 2021”.  Se utilizó el diseño no experimental. El tipo de investigación utilizada es cuantitativa, así como también, el nivel de investigación empleado fue el explicativo y descriptivo, se aplicó el método deductivo. Se concluyó que “El Presupuesto de Ingresos asignado según monto PIM para el ejercicio fiscal 2020 fue de S/ 1,740,095.00 logrando ejecutar un monto efectivo de S/ 1,544,427.00 representando el 88.76% de lo programado, para el ejercicio fiscal 2021 se tuvo una programación PIM de S/ 2,408,399.00 llegando a ejecutar un monto efectivo de S/ 2,402,769.00 que representa el 99.77% de lo programado. Respecto al Presupuesto de Gastos para el ejercicio fiscal 2020, se tuvo un presupuesto PIM de S/ 2,522,503.00 logrando ejecutar S/ 1,999,883.00 que representa el 79.28% de lo programado, con un indicador de eficacia de 0.79 mostrando así un indicador de eficacia Deficiente; para el periodo 2021 se hizo una programación PIM de S/ 2,600,270.00 logrando ejecutar un monto efectivo de S/ 2,233,463.00 que representa el 85.89% de lo programado, con un indicador de eficacia de 0.96, mostrando para ambos periodos una calificación según indicadores de Regular, no logrando cumplir satisfactoriamente lo programado respecto al PIM”.\"\n\nWe need to evaluate each dimension.\n\nFirst, D1_imryd_objetivo: The summary explicitly states the objective: \"Evaluar la ejecución presupuestaria y su repercusión en el cumplimiento de metas presupuestarias en la Municipalidad Distrital de Capaso, Provincia del Collao, Periodos 2020 y 2021\". So yes, objective present. So D1_imryd_objetivo = 1.\n\nD1_imryd_metodologia: The summary says \"Se utilizó el diseño no experimental. El tipo de investigación utilizada es cuantitativa, así como también, el nivel de investigación empleado fue el explicativo y descriptivo, se aplicó el método deductivo.\" So yes, methodology present. So D1_imryd_metodologia = 1.\n\nD1_imryd_resultados: The summary gives results: percentages, amounts, etc. So yes, results present. D1_imryd_resultados = 1.\n\nD1_imryd_conclusiones: The summary says \"Se concluyó que ...\" and then gives a conclusion: \"El Presupuesto de Ingresos ... 88.76% ... 99.77% ... etc. ... mostrando para ambos periodos una calificación según indicadores de Regular, no logrando cumplir satisfactoriamente lo programado respecto al PIM.\" This is a conclusion that interprets results and gives an overall assessment. So yes, conclusion present. D1_imryd_conclusiones = 1.\n\nD1_orden_logico: We need to check if the components present appear in logical order: objective, methodology, results, conclusion. The summary starts with title, then objective, then methodology, then results, then conclusion. So yes, order is correct. D1_orden_logico = 1.\n\nNow D2_coherencia: We need to evaluate flow. The summary is fairly coherent: it starts with title, objective, methodology, results, conclusion. There is some repetition of title, but overall flow is fine. There might be some abruptness but not too bad. I'd rate 4 maybe. Let's analyze: The summary is a bit long, but the flow is: Title, objective, methodology, results, conclusion. The transitions are not explicit but the structure is clear. There's no major jump. So I'd give 4. D2_coherencia = 4.\n\nNow D3_contextualizacion: This field requires that the summary situates the problem: why it matters, where it occurs, to whom it affects, against what norm or framework. The summary does not explicitly state why the evaluation matters, or what the significance is. It just states the objective. It does not mention the importance of budget execution or the impact on the municipality. So D3_contextualizacion = 0.\n\nD3_metodo_detallado: We need at least two precisions: design, type, sample size, instrument, etc. The summary says \"Se utilizó el diseño no experimental. El tipo de investigación utilizada es cuantitativa, así como también, el nivel de investigación empleado fue el explicativo y descriptivo, se aplicó el método deductivo.\" That's at least 3 precisions: design, type, level, method. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: The summary gives concrete results: percentages, amounts, etc. So D3_resultados_concretos = 1.\n\nD3_conclusion_responde: The conclusion should answer the objective. The objective was to evaluate the execution and its repercussion on compliance with budgetary goals. The conclusion states that the budget execution percentages were 88.76% and 99.77% for incomes, 79.28% and 85.89% for expenses, with efficacy indicators 0.79 and 0.96, and that overall the periods were rated Regular and did not meet the program. This does answer the objective. So D3_conclusion_responde = 1.\n\nD4_consistencia: We need to evaluate consistency between what the summary says it did and what it presents. The summary says design non-experimental, quantitative, explanatory and descriptive, deductive method. The results are descriptive statistics of budget execution. There's no mention of statistical tests, but that's fine because it's descriptive. The conclusion is consistent with the results. There's no contradictory statements. So D4_consistencia = 5. Wait, we need to check if any contradictions: The summary says \"se aplicó el método deductivo\" but the results are descriptive. That's fine. There's no mention of inferential tests. So consistency is high. I'd give 5.\n\nNow no_evaluable: The text is a summary, not a non-summary. So no_evaluable = 0.\n\nObservaciones: We can add any notes. Maybe note that the summary repeats the title, but that's fine. Also note that the summary includes the title twice. But no issues. We can mention that the summary includes the title twice, but that doesn't affect evaluation. Also note that the summary uses \"se concluyó que\" but no explicit \"Conclusión:\" heading. But that's fine. We can mention that the summary is coherent and consistent. So we can add a short observation: \"Title repeated; no explicit conclusion heading but conclusion present; overall coherent and consistent.\" But we need to keep it short. Let's write: \"Title repeated; conclusion present; overall coherent and consistent.\"\n\nNow produce JSON with all fields. Ensure all required fields present. Use compact JSON. Let's produce:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Title repeated; conclusion present; overall coherent and consistent.\"\n}\n\nCheck schema: all fields present. D4_consistencia is integer 1-5. Good. Observaciones string. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789700286,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_ef00694abe",
+  "usage": {
+   "completion_tokens": 1947,
+   "prompt_tokens": 10102,
+   "total_tokens": 12049,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1811,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.240967643,
+   "prompt_time": 0.606572788,
+   "completion_time": 2.043247817,
+   "total_time": 2.649820605
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s766snegfaa037k2z9xh83",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T02:58:06.332218+00:00"
+}

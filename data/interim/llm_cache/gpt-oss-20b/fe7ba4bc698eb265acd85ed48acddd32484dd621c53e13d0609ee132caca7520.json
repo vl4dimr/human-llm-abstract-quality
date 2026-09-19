@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-100",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen presenta objetivo, metodología y resultados concretos, pero carece de conclusión. Coherencia alta (4/5). No contradicciones entre metodología y resultados."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta objetivo, metodología y resultados concretos, pero carece de conclusión. Coherencia alta (4/5). No contradicciones entre metodología y resultados.\"}",
+ "usage": {
+  "input_tokens": 10179,
+  "output_tokens": 2628
+ },
+ "latency_s": 4.297925233840942,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:07:22.793311+00:00",
+ "raw": {
+  "id": "chatcmpl-1d615657-dba0-4720-9f9d-88534c6a9aa3",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta objetivo, metodología y resultados concretos, pero carece de conclusión. Coherencia alta (4/5). No contradicciones entre metodología y resultados.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nWe need to evaluate each field.\n\nLet's parse the summary.\n\nTitle: \"Efecto de la aplicación de estiércol de cuy y microorganismos eficaces en la producción de plántulas de papaya andina (Carica pubescens Lenné & K. Koch) en condiciones de vivero en Sandia - Puno\"\n\nSummary:\n\n\"El presente trabajo permitirá tener opciones de abonamiento para el cultivo de papaya andina (Carica pubescens Lenné & K. Koch). En vivero de producción de plántulas en el distrito y provincia de Sandia-región Puno. Siendo los objetivos: a) determinar el área foliar, altura de planta, numero de hojas por planta y diámetro de tallo de plántulas de papaya andina con la aplicación de abonos orgánicos en condiciones de vivero; b) estimar la longitud radicular al momento de transplante de plántulas de papaya andina y c) calcular los costos de producción de plántulas de papaya andina en vivero, donde se utilizó productos orgánicos y ecológicos, siendo el diseño experimental bloque completamente al azar con 4 tratamientos y 3 repeticiones. La unidad experimental fue de 12 m2 con un área total de 209 m2. Los resultados fueron: a) para área foliar los tratamientos: estiércol de cuy-25t/ha+EM con 96.98 cm2 seguido del tratamiento estiércol fermentado de cuy -25 t/ha con 79.00 cm2 presentaron mayor área foliar; para altura de planta la aplicación de estiércol de cuy con 23.06 cm y estiércol de cuy+EM con 21.79 cm fueron los mejores, para número de hojas por planta los tratamientos: estiercol de cuy fermentado-25t/ha y estiercol de cuy -25t+EM con 8.00 y 7.8 unidades respectivamente presentan los mejores resultados; para diámetro de tallo el tratamiento estiércol de cuy-25 t/ha+EM con 0.96 cm y estiércol fermentado de cuy -25 t/ha con 0.85 cm fueron mejores. b) en longitud de raíz, el tratamiento con estiércol de cuy -25 t/ha+EM con 26.82 cm; Microorganismos Eficaces EM activado con 23.77 cm presentaron raíces de mayor longitud. c) en cuanto a costos de producción, el tratamiento estiércol fermentado de cuy -25 t/ha y estiércol de cuy -25 t/ha+EM con 1.47 soles y 1.37 soles respectivamente muestran los ingresos más altos.\"\n\nWe need to evaluate each dimension.\n\n### D1_imryd_objetivo\n\nWe need to see if the summary contains an explicit objective. The summary says: \"Siendo los objetivos: a) determinar el área foliar, altura de planta, numero de hojas por planta y diámetro de tallo de plántulas de papaya andina con la aplicación de abonos orgánicos en condiciones de vivero; b) estimar la longitud radicular al momento de transplante de plántulas de papaya andina y c) calcular los costos de producción de plántulas de papaya andina en vivero, donde se utilizó productos orgánicos y ecológicos, siendo el diseño experimental bloque completamente al azar con 4 tratamientos y 3 repeticiones.\"\n\nThus objective is present. So D1_imryd_objetivo = 1.\n\n### D1_imryd_metodologia\n\nWe need to see if the summary indicates how the knowledge was obtained. It says: \"donde se utilizó productos orgánicos y ecológicos, siendo el diseño experimental bloque completamente al azar con 4 tratamientos y 3 repeticiones. La unidad experimental fue de 12 m2 con un área total de 209 m2.\" Also earlier: \"El presente trabajo permitirá tener opciones de abonamiento para el cultivo de papaya andina (Carica pubescens Lenné & K. Koch). En vivero de producción de plántulas en el distrito y provincia de Sandia-región Puno.\" So yes, methodology is present: experimental design, treatments, replications, unit experimental. So D1_imryd_metodologia = 1.\n\n### D1_imryd_resultados\n\nWe need to see if the summary communicates what was found. It lists results: area foliar values, height, number of leaves, diameter, root length, costs. So yes, results are present. D1_imryd_resultados = 1.\n\n### D1_imryd_conclusiones\n\nWe need to see if there is a conclusion that goes beyond repeating results. The summary ends with \"c) en cuanto a costos de producción, el tratamiento estiércol fermentado de cuy -25 t/ha y estiércol de cuy -25 t/ha+EM con 1.47 soles y 1.37 soles respectivamente muestran los ingresos más altos.\" That is a statement of results, not a conclusion. There's no explicit conclusion or interpretation. So D1_imryd_conclusiones = 0.\n\n### D1_orden_logico\n\nWe need to check if the components present appear in logical order: objective, methodology, results, conclusion. The summary: starts with objective, then methodology, then results. No conclusion. So the present components are objective, methodology, results. They appear in that order. So D1_orden_logico = 1.\n\n### D2_coherencia\n\nWe need to rate coherence 1-5. Let's evaluate flow. The summary starts with \"El presente trabajo permitirá tener opciones de abonamiento...\" then \"En vivero de producción...\" then \"Siendo los objetivos: a) determinar...\" then \"donde se utilizó productos orgánicos y ecológicos, siendo el diseño experimental bloque completamente al azar con 4 tratamientos y 3 repeticiones. La unidad experimental fue de 12 m2 con un área total de 209 m2.\" Then \"Los resultados fueron: a) para área foliar...\" etc. The flow is fairly coherent: objective, methodology, results. Some repetition of \"el tratamiento\" etc. No major jumps. Might be a bit long but still coherent. I'd rate 4. Because there is a slight abruptness when moving from methodology to results but still fine. So D2_coherencia = 4.\n\n### D3_contextualizacion\n\nWe need to see if the summary situates the problem: why it matters, where it occurs, to whom it affects, against what norm or framework. The summary starts with \"El presente trabajo permitirá tener opciones de abonamiento para el cultivo de papaya andina (Carica pubescens Lenné & K. Koch). En vivero de producción de plántulas en el distrito y provincia de Sandia-región Puno.\" That gives context: location, purpose. It says \"El presente trabajo permitirá tener opciones de abonamiento para el cultivo de papaya andina.\" That is a statement of relevance. So yes, contextualization is present. D3_contextualizacion = 1.\n\n### D3_metodo_detallado\n\nWe need at least two precisions: design, sample size, instrument, etc. The summary says: \"donde se utilizó productos orgánicos y ecológicos, siendo el diseño experimental bloque completamente al azar con 4 tratamientos y 3 repeticiones. La unidad experimental fue de 12 m2 con un área total de 209 m2.\" That gives design (block completely randomized), number of treatments (4), replications (3), unit experimental area. That's at least two precisions. So D3_metodo_detallado = 1.\n\n### D3_resultados_concretos\n\nWe need results with specific content: numbers, categories, etc. The summary lists many numeric values: area foliar 96.98 cm2, 79.00 cm2, height 23.06 cm, 21.79 cm, number of leaves 8.00, 7.8, diameter 0.96 cm, 0.85 cm, root length 26.82 cm, 23.77 cm, costs 1.47 soles, 1.37 soles. So yes, results are concrete. D3_resultados_concretos = 1.\n\n### D3_conclusion_responde\n\nWe need to see if the conclusion responds to the objective. There is no conclusion. So D3_conclusion_responde = 0.\n\n### D4_consistencia\n\nWe need to evaluate consistency between what the summary says it did and what it presents. The summary says: \"donde se utilizó productos orgánicos y ecológicos, siendo el diseño experimental bloque completamente al azar con 4 tratamientos y 3 repeticiones.\" Then results are presented for each treatment. The conclusion is missing. But consistency: The methodology is described and results correspond to that methodology. No contradictions. There's no mention of statistical tests or significance. But that is not a contradiction. The summary does not claim significance or p-values. So no contradictions. So D4_consistencia = 5? Wait, we need to check if any contradictions: The summary says \"El presente trabajo permitirá tener opciones de abonamiento...\" but no conclusion. But consistency is about coherence between methodology and results. There's no contradictory statements. So D4_consistencia = 5.\n\nBut we need to check if the summary uses \"bloque completamente al azar\" but then results are presented as \"los tratamientos: estiércol de cuy-25t/ha+EM con 96.98 cm2 ...\". That is consistent. No contradictions. So D4_consistencia = 5.\n\n### no_evaluable\n\nThe summary is a valid summary. So no_evaluable = 0.\n\n### observaciones\n\nWe should add any notes. We might note that there is no conclusion, but that's fine. Also note that the summary is fairly coherent. We might mention that the summary lacks a conclusion, but that's not a problem. Also mention that the summary uses numeric results but no statistical significance. That is fine. We might note that the summary is fairly coherent but could improve by adding a conclusion. But we can keep it short.\n\nLet's produce JSON.\n\nCheck schema: all fields required. Provide integer or null. We have all fields.\n\nLet's produce JSON:\n\n{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 1,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 5,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"Resumen presenta objetivo, metodología y resultados concretos, pero carece de conclusión. Coherencia alta (4/5). No contradicciones entre metodología y resultados.\"\n}\n\nCheck that all values are integers or null. Observations is string. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789700842,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c9afb2bdb4",
+  "usage": {
+   "completion_tokens": 2628,
+   "prompt_tokens": 10179,
+   "total_tokens": 12807,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2470,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.191690598,
+   "prompt_time": 0.589810712,
+   "completion_time": 2.698139774,
+   "total_time": 3.287950486
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7q5mmedvbv1p16t1q5b4q",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:07:22.793390+00:00"
+}

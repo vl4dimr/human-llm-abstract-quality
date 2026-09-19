@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-156",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 2,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 1,
+  "no_evaluable": 0,
+  "observaciones": "El resumen no incluye información sobre el método utilizado para la investigación, por lo que no se puede evaluar la consistencia metodológica. Además, no se presentan resultados concretos ni conclusiones que respondan al objetivo planteado."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 2,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 1,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen no incluye información sobre el método utilizado para la investigación, por lo que no se puede evaluar la consistencia metodológica. Además, no se presentan resultados concretos ni conclusiones que respondan al objetivo planteado.\"\n}",
+ "usage": {
+  "input_tokens": 10845,
+  "output_tokens": 206,
+  "total_duration_s": 10.3712428
+ },
+ "latency_s": 10.390731811523438,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:15:27.188085+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:15:27.1795009Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 2,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 1,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen no incluye información sobre el método utilizado para la investigación, por lo que no se puede evaluar la consistencia metodológica. Además, no se presentan resultados concretos ni conclusiones que respondan al objetivo planteado.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10371242800,
+  "load_duration": 5737600,
+  "prompt_eval_count": 10845,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 365072000,
+  "eval_count": 206,
+  "eval_duration": 9902209000
+ },
+ "cached_at_utc": "2026-09-19T02:15:27.188104+00:00"
+}

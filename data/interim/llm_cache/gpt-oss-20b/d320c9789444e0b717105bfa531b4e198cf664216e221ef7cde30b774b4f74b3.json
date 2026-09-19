@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-003",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": null,
+  "no_evaluable": 1,
+  "observaciones": "Resumen sin resultados ni conclusión; metodología mínima; D4 no evaluable."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"Resumen sin resultados ni conclusión; metodología mínima; D4 no evaluable.\"}",
+ "usage": {
+  "input_tokens": 9761,
+  "output_tokens": 1421
+ },
+ "latency_s": 3.1063077449798584,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:46:05.073409+00:00",
+ "raw": {
+  "id": "chatcmpl-dcbb2321-61ea-41fe-84cb-2ab4b276bb7f",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"Resumen sin resultados ni conclusión; metodología mínima; D4 no evaluable.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones. All required.\n\nWe need to analyze the provided summary. Title: \"Análisis y modelamiento de la cinematica directa aplicado al robot kuka kr150 por matlab\". Summary:\n\n\"El presente proyecto nos permitirá desarrollar el análisis y modelamiento de la cinemática directa del robot Kuka KR150 empleando el software Matlab.  La primera parte del desarrollo del proyecto describe en forma general la identificación del problema, la justificación del problema, identificamos los objetivos generales y específicos, así como también la metodología de investigación. En la segunda parte describiremos los fundamentos teóricos de la robótica en especial el análisis de la cinemática directa del robot KUKA. Finalmente se desarrolla la expresión del análisis del modelamiento de la cinemática directa del Robot KUKA KR150.\"\n\nWe must annotate following protocol.\n\nFirst, check if it's a summary: Yes, a summary.\n\nNo missing methodology? We need to evaluate each dimension.\n\nDimension 1: Adherencia a IMRyD.\n\nWe need to see if the four components present and order.\n\nDoes summary mention objective? It says \"identificamos los objetivos generales y específicos\" but no explicit objective statement. However it says \"El presente proyecto nos permitirá desarrollar el análisis y modelamiento...\" So the objective is \"desarrollar el análisis y modelamiento de la cinemática directa del robot Kuka KR150\" - that's the purpose. So D1_imryd_objetivo = 1.\n\nMethodology: It says \"metodología de investigación\" but not details. It says \"desarrollaremos ... empleando el software Matlab\" maybe that counts as methodology: \"empleando el software Matlab\". It's a minimal procedural description. The guidelines: \"una indicación procedimental concreta\" e.g. \"Se aplicó una encuesta\". Here, \"employing the software Matlab\" qualifies? It's a method, but maybe considered too vague. But it's still a procedural step. They said \"una indicación procedimental concreta\" like \"Se aplicó una encuesta\" is enough. Using Matlab might count. I'll give 1.\n\nResults: The summary does not report any results. It describes what will be developed, not results. So D1_imryd_resultados = 0.\n\nConclusion: No conclusion or closing. Just a description of what will happen. So D1_imryd_conclusiones = 0.\n\nOrder: Since components present are objective and methodology only. There are two components. They appear in order: first objective (implied) and then methodology. That's fine. D1_orden_logico = 1.\n\nDimension 2: Coherencia organizacional. Need to rate 1-5. The summary is short. Flow: \"El presente proyecto nos permitirá desarrollar...\" then \"La primera parte... describe ... la metodología.\" then \"En la segunda parte describiremos...\" then \"Finalmente se desarrolla la expresión...\". There's some flow but maybe a bit abrupt: It goes from objective to methodology to theory to expression. I'd rate 4: good flow but some abrupt transitions. So D2_coherencia = 4.\n\nDimension 3: Completitud de componentes.\n\nContextualization: Does it sit the problem? It says \"identificación del problema\" but not description of why it's important. No context. So D3_contextualizacion = 0.\n\nMethodo_detallado: \"metodología de investigación\" but no details: no design, no sample. So D3_metodo_detallado = 0.\n\nResultados_concretos: no results. So 0.\n\nConclusion_responde: There's no conclusion. So 0.\n\nDimension 4: Consistencia metodológica. The summary does not declare methodology. Actually it has minimal methodology: \"empleando el software Matlab\". But no results to compare. So D4_consistencia: if no methodology declared, rule says: If the summary does not declare any methodology, D4 not evaluable. In that case set no_evaluable = 1 and D4_consistencia is left blank (maybe null). But the schema requires D4_consistencia field present, but it can be null. For no_evaluable = 1, D4_consistencia should be null. So no_evaluable = 1. D4_consistencia = null.\n\nHowever, check the rule: \"Si el resumen no declara ninguna metodología, la D4 no puede evaluarse: no hay nada contra lo que contrastar la coherencia. Marca no_evaluable = 1 y deja vacía la puntuación de D4. No pongas 1\". So yes. So D4_consistencia = null.\n\nObservaciones: Provide any notes. We can mention that the summary lacks results, no conclusion, minimal methodology, etc. Also note that D4_consistencia cannot be evaluated. So observations string.\n\nWe need to ensure all fields are included.\n\nReturn JSON with fields in any order? The schema requires all required fields. Let's produce compact JSON. Let's do:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":0,\n \"D1_imryd_conclusiones\":0,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":0,\n \"D3_resultados_concretos\":0,\n \"D3_conclusion_responde\":0,\n \"D4_consistencia\":null,\n \"no_evaluable\":1,\n \"observaciones\":\"Resumen sin resultados ni conclusión; metodología mínima; D4 no evaluable.\"\n}\n\nCheck each field type: integers or null, D4_consistencia integer or null. Good. no_evaluable integer 1. Observaciones string. Good.\n\nReturn that."
+    }
+   }
+  ],
+  "created": 1789775164,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_a12402de73",
+  "usage": {
+   "completion_tokens": 1421,
+   "prompt_tokens": 9761,
+   "total_tokens": 11182,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1281,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.311057986,
+   "prompt_time": 0.597378227,
+   "completion_time": 1.514234161,
+   "total_time": 2.111612388
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vekassegtsgfpagvtt1kxf",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:46:05.073424+00:00"
+}

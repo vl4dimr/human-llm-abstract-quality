@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-111",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, aunque podría mejorar en la transición entre la metodología y los resultados. La contextualización es cero porque el resumen comienza directamente con el objetivo. La metodología es detallada con porcentajes de escoria y ensayos de compresión. Los resultados son concretos con valores numéricos. La conclusión responde al objetivo. La consistencia metodológica es 4 debido a que se menciona el uso del software Plaxis 2D, pero no se explica cómo se integró en el análisis."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, aunque podría mejorar en la transición entre la metodología y los resultados. La contextualización es cero porque el resumen comienza directamente con el objetivo. La metodología es detallada con porcentajes de escoria y ensayos de compresión. Los resultados son concretos con valores numéricos. La conclusión responde al objetivo. La consistencia metodológica es 4 debido a que se menciona el uso del software Plaxis 2D, pero no se explica cómo se integró en el análisis.\"\n}",
+ "usage": {
+  "input_tokens": 10820,
+  "output_tokens": 288,
+  "total_duration_s": 8.8409509
+ },
+ "latency_s": 8.84297251701355,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:40:37.033184+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:40:37.0317522Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, aunque podría mejorar en la transición entre la metodología y los resultados. La contextualización es cero porque el resumen comienza directamente con el objetivo. La metodología es detallada con porcentajes de escoria y ensayos de compresión. Los resultados son concretos con valores numéricos. La conclusión responde al objetivo. La consistencia metodológica es 4 debido a que se menciona el uso del software Plaxis 2D, pero no se explica cómo se integró en el análisis.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8840950900,
+  "load_duration": 3334600,
+  "prompt_eval_count": 10820,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 319830000,
+  "eval_count": 288,
+  "eval_duration": 8453463000
+ },
+ "cached_at_utc": "2026-09-19T01:40:37.033204+00:00"
+}

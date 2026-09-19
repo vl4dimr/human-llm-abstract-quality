@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-093",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD correctamente. Sin embargo, la coherencia se ve afectada por la frase 'El 44.2% de las madres tienen un nivel de conocimiento regular sobre el esquema de vacunación, y el 52.8% de las madres presentó un cumplimiento inoportuno del esquema de vacunación' que introduce una desviación en la narrativa. Además, la contextualización es nula ya que el resumen comienza directamente con el objetivo."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. Sin embargo, la coherencia se ve afectada por la frase 'El 44.2% de las madres tienen un nivel de conocimiento regular sobre el esquema de vacunación, y el 52.8% de las madres presentó un cumplimiento inoportuno del esquema de vacunación' que introduce una desviación en la narrativa. Además, la contextualización es nula ya que el resumen comienza directamente con el objetivo.\"\n}",
+ "usage": {
+  "input_tokens": 10894,
+  "output_tokens": 273,
+  "total_duration_s": 9.4378274
+ },
+ "latency_s": 9.462772130966187,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:31:21.381683+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:31:21.3791402Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. Sin embargo, la coherencia se ve afectada por la frase 'El 44.2% de las madres tienen un nivel de conocimiento regular sobre el esquema de vacunación, y el 52.8% de las madres presentó un cumplimiento inoportuno del esquema de vacunación' que introduce una desviación en la narrativa. Además, la contextualización es nula ya que el resumen comienza directamente con el objetivo.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9437827400,
+  "load_duration": 12078900,
+  "prompt_eval_count": 10894,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 335932000,
+  "eval_count": 273,
+  "eval_duration": 8978159000
+ },
+ "cached_at_utc": "2026-09-19T02:31:21.381703+00:00"
+}

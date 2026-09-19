@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-051",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "P valor expresado como 0.00000 sin estadístico; la conclusión refleja correctamente la relación significativa encontrada."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"P valor expresado como 0.00000 sin estadístico; la conclusión refleja correctamente la relación significativa encontrada.\"}",
+ "usage": {
+  "input_tokens": 9995,
+  "output_tokens": 1178,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 1.7444326877593994,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:20:32.992876+00:00",
+ "raw": {
+  "id": "chatcmpl-03722b73-803d-40b7-8c36-f09b9fae3fc0",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"P valor expresado como 0.00000 sin estadístico; la conclusión refleja correctamente la relación significativa encontrada.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate according to protocol. Need fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nCheck if it's a valid summary (should be a summary). It has objective, method, results, conclusion. So no_evaluable = 0. Wait schema says no_evaluable enum [0,1]. Likely 0 means evaluable. Yes.\n\nNow assign each field.\n\nLet's parse summary:\n\nObjective: \"El objetivo de este estudio fue determinar el nivel de conocimiento sobre alimentación complementaria en relación a la anemia en madres de niños lactantes de 6 a 24 meses...\"\n\nThus D1_imryd_objetivo = 1.\n\nMethodology: \"Fue un estudio correlacional comparativo, de enfoque cuantitativo y corte transversal. La población estuvo compuesta por 84 madres ... Se utilizó como técnica la entrevista y como instrumento un cuestionario.\" So contains design, sample size 84, technique, instrument. So D1_imryd_metodologia = 1.\n\nResults: \"El 22 % de las madres tienen un conocimiento regular y bueno, el 25 % conocimiento muy bueno, y solo el 34 % conocimiento excelente. Respecto al nivel de anemia en los niños, el 19 % presentaron anemia moderada y el 81 % anemia leve.\" Also \"Al relacionar las variables de estudio se comprueba la hipótesis ... indicando que hay suficiente evidencia para rechazar la H0 y aceptar la Ha\" So results: contains concrete percentages. D1_imryd_resultados = 1.\n\nConclusion: \"Por lo tanto, a mayor conocimiento de las madres sobre alimentación complementaria, el nivel de hemoglobina del niño será óptimo para la edad correspondiente.\" That's conclusion. D1_imryd_conclusiones = 1.\n\nOrder: objective, methodology, results, conclusion. Yes. D1_orden_logico = 1.\n\nNow D2_coherencia. Evaluate flow. Let's read:\n\nText: starts with objective sentence. Then methodology, population, technique. Then results percentages. Then hypothesis significance, then conclusion. Flow seems coherent, though the sentence about hypothesis uses weird P value 0.00000, \"p valor de 0.00000\" maybe formatting but still. No abrupt jumps. So I think coherence 4 or 5. Maybe 5 because it's pretty smooth? There might be an abrupt jump from results to significance statement, but that's fine. I'd assign 5. But check for any terminological derivation or adverbial? Not many. I'd put 5.\n\nNow D3_contextualizacion. Does the summary situate the problem: why is it important? It doesn't explicitly say \"why is it important\" or \"problem context.\" It just says objective to determine level of knowledge etc. It doesn't discuss why it's important, where occurs. So D3_contextualizacion = 0.\n\nD3_metodo_detallado: must have at least two precisions about procedure. It includes design, sample size 84, technique (interview), instrument (questionnaire). That is 4 precisions. So 1.\n\nD3_resultados_concretos: yes percentages for knowledge and anemia, plus significance. So 1.\n\nD3_conclusion_responde: conclusion states that higher knowledge leads to optimal hemoglobin. That's answering objective: objective to determine level of knowledge and relation. It says higher knowledge influences anemia. That addresses objective. So 1.\n\nNow D4_consistencia. We need to check consistency between methodology and results and conclusions. Evaluate possible discordances.\n\nMethodology: correlational comparative, quantitative, cross-sectional. Sample 84, technique interview, instrument questionnaire. Results: percentages of knowledge levels, percentages of anemia severity, correlation significance. The conclusion: higher knowledge leads to better hemoglobin. This is consistent: they tested hypothesis and found significant association. The conclusion states direction: higher knowledge leads to optimal hemoglobin. That seems consistent with results. No contradictions. So D4_consistencia = 5.\n\nObservations: maybe note about the P value formatting or that they used 0.00000 which is weird but still okay. Also note that \"conocimiento regular y bueno\" maybe ambiguous but okay.\n\nEdge: They used \"p valor de 0.00000\" but didn't provide test statistic. But that doesn't break consistency. So D4=5.\n\nNow we need to ensure all fields present. no_evaluable: 0.\n\nObservations: we can write \"P value displayed as 0.00000; no test statistic provided; still consistent.\"\n\nNow produce JSON object with required fields. Use compact JSON.\n\nCheck that no field is null: we assign integers. All required.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789701632,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_d23c14756c",
+  "usage": {
+   "completion_tokens": 1178,
+   "prompt_tokens": 9995,
+   "total_tokens": 11173,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1031,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.203872028,
+   "prompt_time": 0.076223051,
+   "completion_time": 1.198081781,
+   "total_time": 1.2743048319999999
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8fbbbec99zs84nq5k4q0y",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:20:32.992967+00:00"
+}

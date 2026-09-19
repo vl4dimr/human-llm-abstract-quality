@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-014",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD. La metodología se describe como un diseño descriptivo simple, aunque no se detalla el tipo de muestra o instrumento. Los resultados son concretos (40% siempre leen a menudo). La conclusión responde al objetivo. Sin embargo, la coherencia organizacional es moderada debido a la falta de transiciones claras y a la repetición de términos. La contextualización es cero ya que el resumen comienza directamente con el objetivo sin situar el problema. La consistencia metodológica es moderada, ya que la conclusión afirma que los hábitos de lectura son buenos, pero no se justifica con datos suficientes."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD. La metodología se describe como un diseño descriptivo simple, aunque no se detalla el tipo de muestra o instrumento. Los resultados son concretos (40% siempre leen a menudo). La conclusión responde al objetivo. Sin embargo, la coherencia organizacional es moderada debido a la falta de transiciones claras y a la repetición de términos. La contextualización es cero ya que el resumen comienza directamente con el objetivo sin situar el problema. La consistencia metodológica es moderada, ya que la conclusión afirma que los hábitos de lectura son buenos, pero no se justifica con datos suficientes.\"\n}",
+ "usage": {
+  "input_tokens": 10769,
+  "output_tokens": 312,
+  "total_duration_s": 10.6707502
+ },
+ "latency_s": 10.69444465637207,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:49:44.988149+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:49:44.9796891Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD. La metodología se describe como un diseño descriptivo simple, aunque no se detalla el tipo de muestra o instrumento. Los resultados son concretos (40% siempre leen a menudo). La conclusión responde al objetivo. Sin embargo, la coherencia organizacional es moderada debido a la falta de transiciones claras y a la repetición de términos. La contextualización es cero ya que el resumen comienza directamente con el objetivo sin situar el problema. La consistencia metodológica es moderada, ya que la conclusión afirma que los hábitos de lectura son buenos, pero no se justifica con datos suficientes.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10670750200,
+  "load_duration": 44181000,
+  "prompt_eval_count": 10769,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 276391000,
+  "eval_count": 312,
+  "eval_duration": 10250778000
+ },
+ "cached_at_utc": "2026-09-19T01:49:44.988164+00:00"
+}

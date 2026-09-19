@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-060",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen cumple con IMRyD y coherencia, pero carece de contextualización del problema y no presenta resultados concretos (no cifras ni categorías)."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen cumple con IMRyD y coherencia, pero carece de contextualización del problema y no presenta resultados concretos (no cifras ni categorías).\"}",
+ "usage": {
+  "input_tokens": 9776,
+  "output_tokens": 1630
+ },
+ "latency_s": 2.8628695011138916,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:02:38.700959+00:00",
+ "raw": {
+  "id": "chatcmpl-8afca13e-5b9b-4c28-a0e1-3a697f93760a",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen cumple con IMRyD y coherencia, pero carece de contextualización del problema y no presenta resultados concretos (no cifras ni categorías).\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the given summary according to the protocol. We must produce JSON with fields as per schema. Let's analyze the summary.\n\nTitle: \"Compromiso organizacional y satisfacción laboral en el sector salud\"\n\nResumen:\n\n\"El propósito de este trabajo fue realizar una revisión bibliográfica sobre el compromiso organizacional, donde se estudió los conceptos y teorías de diferentes autores, esto con la finalidad de determinar su influencia en la satisfacción en el sector Salud, El método utilizado es de revisión bibliográfica en artículos sobre el compromiso organizacional de diferentes bases de datos como Scielo, Redalyc, y también del libro Gestión del talento Humano de Chiavenato, fuentes en las que resaltan la importancia del compromiso organizacional y como ayuda en la satisfacción laboral; se concluyó que en una organización se debe mantener un ambiente armonioso y en constante coordinación, esto ayudará a una satisfacción laboral positiva y al logro de los objetivos organizacionales.\"\n\nWe need to evaluate each dimension.\n\nFirst, D1_imryd_objetivo: Does the summary state what was proposed to investigate? It says: \"El propósito de este trabajo fue realizar una revisión bibliográfica sobre el compromiso organizacional, donde se estudió los conceptos y teorías de diferentes autores, esto con la finalidad de determinar su influencia en la satisfacción en el sector Salud\". So yes, objective is stated: to conduct a bibliographic review on organizational commitment, to determine its influence on satisfaction in health sector. So D1_imryd_objetivo = 1.\n\nD1_imryd_metodologia: Does it indicate how knowledge was obtained? It says: \"El método utilizado es de revisión bibliográfica en artículos sobre el compromiso organizacional de diferentes bases de datos como Scielo, Redalyc, y también del libro Gestión del talento Humano de Chiavenato\". So yes, method is bibliographic review. So D1_imryd_metodologia = 1.\n\nD1_imryd_resultados: Does it communicate what was found? It says: \"se concluyó que en una organización se debe mantener un ambiente armonioso y en constante coordinación, esto ayudará a una satisfacción laboral positiva y al logro de los objetivos organizacionales.\" So it states a conclusion about what should be done, but does it present a result? It says \"se concluyó que ...\". It is a conclusion, but is it a result? The result is that the review concluded that maintaining harmonious environment leads to positive satisfaction. That is a result. So D1_imryd_resultados = 1.\n\nD1_imryd_conclusiones: Does it have a closure that goes beyond repeating the result? It says: \"se concluyó que en una organización se debe mantener un ambiente armonioso y en constante coordinación, esto ayudará a una satisfacción laboral positiva y al logro de los objetivos organizacionales.\" This is a conclusion that interprets the result and gives implication. So yes, D1_imryd_conclusiones = 1.\n\nD1_orden_logico: Are the components present in logical order? The summary starts with objective, then methodology, then conclusion. So yes, order is correct. So D1_orden_logico = 1.\n\nNow D2_coherencia: Evaluate flow. The summary is fairly coherent: objective, method, conclusion. Some repetition: \"El propósito de este trabajo fue realizar una revisión bibliográfica sobre el compromiso organizacional, donde se estudió los conceptos y teorías de diferentes autores, esto con la finalidad de determinar su influencia en la satisfacción en el sector Salud\". Then \"El método utilizado es de revisión bibliográfica en artículos sobre el compromiso organizacional de diferentes bases de datos como Scielo, Redalyc, y también del libro Gestión del talento Humano de Chiavenato, fuentes en las que resaltan la importancia del compromiso organizacional y como ayuda en la satisfacción laboral\". Then \"se concluyó que en una organización se debe mantener un ambiente armonioso y en constante coordinación, esto ayudará a una satisfacción laboral positiva y al logro de los objetivos organizacionales.\" The flow is okay. There's some repetition of \"compromiso organizacional\" but that's fine. No major jumps. I'd rate 4 maybe? Let's see the scale: 5 is impeccable, 4 is good with minor aspereza. There's some adjetivization? \"ambiente armonioso\" is a descriptor but not too heavy. I'd give 4. So D2_coherencia = 4.\n\nNow D3_contextualizacion: Does the summary situate the problem? It says: \"El propósito de este trabajo fue realizar una revisión bibliográfica sobre el compromiso organizacional, donde se estudió los conceptos y teorías de diferentes autores, esto con la finalidad de determinar su influencia en la satisfacción en el sector Salud\". It doesn't explain why it's important, where it occurs, or to whom it affects. It just states the purpose. So D3_contextualizacion = 0.\n\nD3_metodo_detallado: Does it give at least two precisions? It says: \"El método utilizado es de revisión bibliográfica en artículos sobre el compromiso organizacional de diferentes bases de datos como Scielo, Redalyc, y también del libro Gestión del talento Humano de Chiavenato\". That gives: type of method (revisión bibliográfica), sources (Scielo, Redalyc, book). That's at least two precisions: type of method and sources. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: Does it provide concrete results? It says: \"se concluyó que en una organización se debe mantener un ambiente armonioso y en constante coordinación, esto ayudará a una satisfacción laboral positiva y al logro de los objetivos organizacionales.\" This is a conclusion, not a concrete result. There's no numeric or categorical data. So D3_resultados_concretos = 0.\n\nD3_conclusion_responde: Does the conclusion respond to the objective? The objective was to determine influence of commitment on satisfaction. The conclusion says that maintaining harmonious environment leads to positive satisfaction. That is a response to the objective: yes, it addresses the influence. So D3_conclusion_responde = 1.\n\nD4_consistencia: Consistency between what is said and what is presented. The summary says it's a bibliographic review. It presents a conclusion that maintaining harmonious environment leads to positive satisfaction. That is consistent with a review. There's no contradictory statements. So D4_consistencia = 5? Let's check: 5 is no contradictions. 4 is minor imprecision. 3 is visible discordance. 2 is multiple discordances. 1 is open contradiction. There's no contradiction. So D4_consistencia = 5.\n\nno_evaluable: The text is a summary, not a non-summary. So no_evaluable = 0.\n\nobservaciones: We can add any notes. Maybe note that the summary lacks contextualization. Also mention that the conclusion is not strongly supported by data but that's fine. Provide a brief note.\n\nNow produce JSON with all fields. Ensure all required fields present. Use compact JSON. Let's produce.\n\nCheck schema: all fields must be present. They can be null but we have values. Provide integer values. Observaciones string.\n\nLet's produce JSON."
+    }
+   }
+  ],
+  "created": 1789700558,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_9b8528b477",
+  "usage": {
+   "completion_tokens": 1630,
+   "prompt_tokens": 9776,
+   "total_tokens": 11406,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1475,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.238658032,
+   "prompt_time": 0.502990477,
+   "completion_time": 1.793669067,
+   "total_time": 2.296659544
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7eh4mejathxmtdscjq3t0",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:02:38.701041+00:00"
+}

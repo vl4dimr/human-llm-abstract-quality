@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-036",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "El resumen inicia con observaciones sin contextualizar explícitamente la importancia del estudio; la conclusión repite los resultados pero responde al objetivo."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen inicia con observaciones sin contextualizar explícitamente la importancia del estudio; la conclusión repite los resultados pero responde al objetivo.\"}",
+ "usage": {
+  "input_tokens": 10016,
+  "output_tokens": 1564
+ },
+ "latency_s": 3.435441732406616,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T02:59:29.551438+00:00",
+ "raw": {
+  "id": "chatcmpl-f10f391e-c583-4533-9da1-de4d9fb45f65",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen inicia con observaciones sin contextualizar explícitamente la importancia del estudio; la conclusión repite los resultados pero responde al objetivo.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Adicción a redes sociales y hábitos de estudio en estudiantes de la Institución Educativa Secundaria Pedro Vilcapaza Alarcón de Azángaro en el año 2022\"\n\nResumen: (I'll reformat)\n\n\"Durante desarrollo de la práctica preprofesional del semestre 2021 - II, se observó que los estudiantes mostraban más atención a las notificaciones que recibían en sus celulares, además se observó que los estudiantes interactuaban mediante las plataformas de las redes sociales estando en el mismo salón, a raíz de este comportamiento, el objetivo de la investigación fue establecer la relación que existe entre la adicción a redes sociales y hábitos de estudio en estudiantes de cuarto y quinto grado de la Institución Educativa Secundaria Pedro Vilcapaza Alarcón de Azángaro en el año 2022. El estudio corresponde al enfoque cuantitativo, diseño no experimental de corte transversal y de tipo correlacional, la muestra se obtuvo por muestreo no probabilístico que estuvo conformado por 330 estudiantes, como técnicas de investigación se utilizó la encuesta para ambas variables, los instrumentos aplicados fueron el cuestionario de adicción a redes sociales propuesto por Escurra y Salas y el inventario de hábitos de estudio CASM-85 de Vicuña Peri. Los datos de las dos variables se sometieron a la prueba estadística no paramétrica Rho de Spearman, con el 95% de confiabilidad y una significancia de p < 0,05. Como resultado se obtuvo el coeficiente de correlación rs = 0,298 y p = 0,000 además el 32% de estudiantes se conectan entre tres a seis veces por día, en conclusión, existe una correlación positiva débil entre adicción a redes sociales y hábitos de estudio. Dicho de otra forma, los estudiantes utilizan las redes sociales pero el nivel de adicción es bajo por tanto no interfiere en los hábitos de estudio de los estudiantes.\"\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 1 if objective present. Yes: \"el objetivo de la investigación fue establecer la relación que existe entre la adicción a redes sociales y hábitos de estudio\". So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. Yes: \"El estudio corresponde al enfoque cuantitativo, diseño no experimental de corte transversal y de tipo correlacional, la muestra se obtuvo por muestreo no probabilístico que estuvo conformado por 330 estudiantes, ... los instrumentos aplicados fueron el cuestionario ... y el inventario ... Los datos ... se sometieron a la prueba estadística no paramétrica Rho de Spearman\". So 1.\n\n- D1_imryd_resultados: 1 if results present. Yes: \"Como resultado se obtuvo el coeficiente de correlación rs = 0,298 y p = 0,000 además el 32% de estudiantes se conectan entre tres a seis veces por día\". So 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. Yes: \"en conclusión, existe una correlación positiva débil entre adicción a redes sociales y hábitos de estudio. Dicho de otra forma, los estudiantes utilizan las redes sociales pero el nivel de adicción es bajo por tanto no interfiere en los hábitos de estudio de los estudiantes.\" So 1.\n\n- D1_orden_logico: 1 if components present in logical order. The order: objective, methodology, results, conclusion. Yes. So 1.\n\n- D2_coherencia: scale 1-5. We need to evaluate flow. Let's read: The summary starts with observation of behavior, then objective, then methodology, then results, then conclusion. The initial observation might be a bit extraneous but still flows. There's a bit of narrative: \"Durante desarrollo de la práctica preprofesional ... se observó ... a raíz de este comportamiento, el objetivo ...\". That is fine. The flow is okay. I'd rate 4 maybe. There's no major jump. The conclusion is a bit repetitive but still coherent. I'd give 4.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where, to whom, etc. The summary does not explicitly state why it's important, but it does mention that students show more attention to notifications, etc. It doesn't explicitly say why this matters. It just states the objective. So likely 0. The example 12.1 says that if it starts directly by objective, it's 0. Here it starts with observation, but still no context. So 0.\n\n- D3_metodo_detallado: 1 if at least two precisions. We have: \"enfoque cuantitativo, diseño no experimental de corte transversal y de tipo correlacional, muestra 330 estudiantes, muestreo no probabilístico, encuesta, instrumentos: cuestionario de adicción a redes sociales, inventario de hábitos de estudio, prueba estadística no paramétrica Rho de Spearman\". That's many precisions. So 1.\n\n- D3_resultados_concretos: 1 if results concrete. Yes: rs=0.298, p=0.000, 32% of students connect 3-6 times per day. So 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to objective. Yes: conclusion states correlation between addiction and study habits. So 1.\n\n- D4_consistencia: scale 1-5. We need to check consistency between methodology and results. The methodology: correlational study, Spearman correlation. Results: rs=0.298, p=0.000. Conclusion: positive weak correlation, no interference. That is consistent. No contradictions. So 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes. We might note that the summary starts with observation but no explicit context. Also mention that the conclusion repeats results but that's fine. We can add a note: \"Observación inicial sin contexto explícito; no se menciona la importancia del estudio.\" But we can keep it short.\n\nWe must ensure all fields present. Let's produce JSON.\n\nCheck schema: all required fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nAll are present.\n\nNow produce JSON. Use compact formatting."
+    }
+   }
+  ],
+  "created": 1789700369,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c5a89987dc",
+  "usage": {
+   "completion_tokens": 1564,
+   "prompt_tokens": 10016,
+   "total_tokens": 11580,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1412,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.304779365,
+   "prompt_time": 0.858316373,
+   "completion_time": 1.631012296,
+   "total_time": 2.489328669
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s78r76ex9rdf2he9ntg032",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T02:59:29.551517+00:00"
+}

@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-160",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen presenta buena coherencia y orden lógico, aunque algo repetitivo. Falta contextualización explícita (no se indica por qué el estudio importa)."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta buena coherencia y orden lógico, aunque algo repetitivo. Falta contextualización explícita (no se indica por qué el estudio importa).\"}",
+ "usage": {
+  "input_tokens": 9900,
+  "output_tokens": 1998,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.8474032878875732,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:14:44.601013+00:00",
+ "raw": {
+  "id": "chatcmpl-d1fe85b7-a83b-4e79-8933-b467d277dfa8",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta buena coherencia y orden lógico, aunque algo repetitivo. Falta contextualización explícita (no se indica por qué el estudio importa).\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Calidad de atención y satisfacción de los usuarios del establecimiento de salud la revolución, San Miguel - San Román, 2022\"\n\nResumen:\n\n\"La investigación adquirida trata sobre: Calidad de atención y satisfacción de los usuarios del establecimiento de salud la Revolución, San Miguel – San Román, 2022, cuyo planteamiento de objetivo es: Determinar la relación que existe entre la calidad de atención y la satisfacción de los usuarios del establecimiento de salud la Revolución, teniendo como hipótesis: existe relación significativa entre la calidad de atención y la satisfacción de los usuarios del establecimiento de salud la Revolución. La investigación se estructura desde un enfoque cuantitativo, con un método hipotético deductivo, de alcance descriptivo correlacional – transversal, de tipo básica, con un diseño no experimental, obteniendo una muestra probabilística de 249, empleándose como instrumento el cuestionario, toda la información obtenida fue procesado mediante el software SPSS versión 25. Llegando como resultados hallados demuestran que se obtuvo un coeficiente correlacional positiva moderada de Rho de Spearman, 0.618**, lo que demuestra que la calidad de atención guarda relación con la satisfacción, aun nivel de error 0,05 y resultado de significancia es de 0,002 por lo que, se rechaza la hipótesis nula, por tanto, se acepta la hipótesis alterna.\"\n\nWe need to evaluate each dimension.\n\nD1_imryd_objetivo: 1 if objective present. The summary says: \"planteamiento de objetivo es: Determinar la relación que existe entre la calidad de atención y la satisfacción de los usuarios del establecimiento de salud la Revolución\". So yes, objective present. So 1.\n\nD1_imryd_metodologia: 1 if methodology present. The summary includes: \"enfoque cuantitativo, método hipotético deductivo, alcance descriptivo correlacional – transversal, tipo básica, diseño no experimental, muestra probabilística de 249, instrumento cuestionario, software SPSS\". So yes, 1.\n\nD1_imryd_resultados: 1 if results present. The summary says: \"se obtuvo un coeficiente correlacional positiva moderada de Rho de Spearman, 0.618**, lo que demuestra que la calidad de atención guarda relación con la satisfacción, aun nivel de error 0,05 y resultado de significancia es de 0,002\". So yes, 1.\n\nD1_imryd_conclusiones: 1 if conclusion present. The summary says: \"se rechaza la hipótesis nula, por tanto, se acepta la hipótesis alterna.\" That is a conclusion. So 1.\n\nD1_orden_logico: 1 if components present in logical order. The order: objective, methodology, results, conclusion. Yes. So 1.\n\nD2_coherencia: scale 1-5. We need to evaluate flow. Let's read the summary: It starts with \"La investigación adquirida trata sobre: Calidad de atención y satisfacción de los usuarios del establecimiento de salud la Revolución, San Miguel – San Román, 2022, cuyo planteamiento de objetivo es: Determinar la relación que existe entre la calidad de atención y la satisfacción de los usuarios del establecimiento de salud la Revolución, teniendo como hipótesis: existe relación significativa entre la calidad de atención y la satisfacción de los usuarios del establecimiento de salud la Revolución.\" That is a bit repetitive but still flows. Then \"La investigación se estructura desde un enfoque cuantitativo, con un método hipotético deductivo, de alcance descriptivo correlacional – transversal, de tipo básica, con un diseño no experimental, obteniendo una muestra probabilística de 249, empleándose como instrumento el cuestionario, toda la información obtenida fue procesado mediante el software SPSS versión 25.\" Then \"Llegando como resultados hallados demuestran que se obtuvo un coeficiente correlacional positiva moderada de Rho de Spearman, 0.618**, lo que demuestra que la calidad de atención guarda relación con la satisfacción, aun nivel de error 0,05 y resultado de significancia es de 0,002 por lo que, se rechaza la hipótesis nula, por tanto, se acepta la hipótesis alterna.\" The flow is okay but there is some repetition and maybe some abruptness. I'd rate 4 maybe. Let's analyze: The summary is fairly coherent, but the first sentence is long and repetitive. The second sentence is a bit long but still flows. The third sentence is the results and conclusion. There's no major jump. So I'd give 4. But we need to decide. The scale: 5 is impeccable, 4 is good with minor aspereza. 3 is understandable but some jumps. 2 is need to reread. 1 is incoherent. I think 4 is appropriate.\n\nD3_contextualizacion: 1 if summary situates the problem: why it matters, where it occurs, to whom it affects, against what norm or framework. The summary starts with \"La investigación adquirida trata sobre: Calidad de atención y satisfacción de los usuarios del establecimiento de salud la Revolución, San Miguel – San Román, 2022\". That situates the problem: location, health establishment. It doesn't explicitly say why it matters, but it does mention \"Calidad de atención y satisfacción de los usuarios\". It doesn't mention why it's important. But it does mention the context: the health establishment. The question: \"sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco se contrasta.\" The summary does mention the location and the population (users). It doesn't mention why it matters. But maybe it's implied. The protocol says \"sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco se contrasta.\" The summary does not mention why it matters. So maybe 0. But we need to decide. The summary says \"Calidad de atención y satisfacción de los usuarios del establecimiento de salud la Revolución, San Miguel – San Román, 2022\". That is the context. It doesn't mention why it's important. So I'd set 0.\n\nD3_metodo_detallado: 1 if at least two precisions about procedure. The summary includes: \"enfoque cuantitativo, método hipotético deductivo, alcance descriptivo correlacional – transversal, tipo básica, diseño no experimental, muestra probabilística de 249, instrumento cuestionario, software SPSS versión 25.\" That's more than two precisions. So 1.\n\nD3_resultados_concretos: 1 if results provide specific content: numbers, categories, etc. The summary gives \"coeficiente correlacional positiva moderada de Rho de Spearman, 0.618**, nivel de error 0,05, significancia 0,002\". So yes, 1.\n\nD3_conclusion_responde: 1 if conclusion responds to the objective. The objective: \"Determinar la relación que existe entre la calidad de atención y la satisfacción de los usuarios\". The conclusion: \"se rechaza la hipótesis nula, por tanto, se acepta la hipótesis alterna.\" That indicates that there is a relationship. So yes, 1.\n\nD4_consistencia: scale 1-5. We need to evaluate consistency between what the summary says it did and what it presents. The summary says \"muestra probabilística de 249, instrumento cuestionario, software SPSS\". The results: correlation coefficient. That is consistent. No contradictions. So I'd give 5. But check if any contradictions: The summary says \"muestra probabilística de 249\" but doesn't mention sampling method. But that's fine. The conclusion is consistent with results. So 5.\n\nno_evaluable: 0 because it's a valid summary.\n\nobservaciones: we can add any notes. Maybe note that the summary is somewhat repetitive but still coherent. Also note that contextualization is missing. So we can add a note: \"Contextualization missing; no explicit statement of why the study matters.\" Also note that the flow is good but some repetition. So we can add that.\n\nNow produce JSON with all fields. Ensure all required fields present. Use compact JSON. Let's produce.\n\nCheck schema: all fields required: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nAll values are integers or null. Provide integer values. Observaciones string.\n\nLet's produce JSON."
+    }
+   }
+  ],
+  "created": 1789701284,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c5a89987dc",
+  "usage": {
+   "completion_tokens": 1998,
+   "prompt_tokens": 9900,
+   "total_tokens": 11898,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1843,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.290903367,
+   "prompt_time": 0.061854656,
+   "completion_time": 2.110876645,
+   "total_time": 2.172731301
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s84p2aery8rs6avndjgsx3",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:14:44.601100+00:00"
+}

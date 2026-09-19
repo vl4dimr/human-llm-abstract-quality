@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-024",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 10102,
+  "output_tokens": 1208,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.333434820175171,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:48:21.777865+00:00",
+ "raw": {
+  "id": "chatcmpl-75fb90ca-9e76-4f99-b44d-24d53541eed1",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields per schema. Evaluate.\n\nFirst, determine if no_evaluable 0 (since it is a summary). Observaciones empty or string.\n\nNow fields:\n\nD1_imryd_objetivo: check objective presence. The summary says: \"Teniendo como objetivo general: 'Evaluar la ejecución presupuestaria...'\" That is explicit. So D1_imryd_objetivo = 1.\n\nD1_imryd_metodologia: Check if indicates how it was done: \"Se utilizó el diseño no experimental. El tipo de investigación utilizada es cuantitativa... el nivel de investigación empleado fue el explicativo y descriptivo, se aplicó el método deductivo.\" That is concrete method. So 1.\n\nD1_imryd_resultados: Check if communicates findings. It gives numbers, percentages, efficiency indicators. So 1.\n\nD1_imryd_conclusiones: Need a closure that interprets or responds to objective, not just repeats results. The summary ends: \"... mostrando para ambos periodos una calificación según indicadores de Regular, no logrando cumplir satisfactoriamente lo programado respecto al PIM.\" This is more of a conclusion. It interprets the results: \"no logrando cumplir satisfactoramente...\" So yes, 1.\n\nD1_orden_logico: The order seems objective, methodology, results, conclusion. Yes. So 1.\n\nD2_coherencia: Need to rate 1-5. Let's read the summary.\n\nThe text is:\n\n\"El actual proyecto de investigación tiene como título... Teniendo como objetivo general... Se utilizó el diseño no experimental. ... Se concluyó que “El Presupuesto de Ingresos ... 88.76% ... 2021 99.77% ... Respecto al Presupuesto de Gastos... 79.28% ... 2021 85.89% ... mostrando para ambos periodos una calificación según indicadores de Regular, no logrando cumplir satisfactoriamente lo programado respecto al PIM”.\"\n\nWe should evaluate flow. The summary begins with title, then objective, then methodology, then results, then conclusion. The flow seems coherent: each part follows logically. But there may be some abruptness: \"Se concluyó que 'El Presupuesto de Ingresos...\" The results are in quotes inside the conclusion. But that's fine. There's a repeated \"Se concluyó que\" but it's basically a single conclusion. There's no abrupt changes. The coherence rating: likely 4? Let's examine potential issues: There's a lot of percentages, but the narrative is quite straightforward. No mention of \"minucioso\" etc. There's no big jumps. It's a typical summary. So D2_coherencia=4 or 5. Let's decide 5? The text seems coherent. Only potential issue: The \"Se concluyó que\" phrase encloses the results in quotes, but that's okay. So I think 5.\n\nNow D3_contextualizacion: The summary does not provide context of why it's important, where occurs, who affected, or normative framework. It just says \"El Presupuesto de Ingresos ...\". So 0.\n\nD3_metodo_detallado: We have: \"Se utilizó el diseño no experimental. El tipo de investigación utilizada es cuantitativa ... el nivel de investigación ... se aplicó el método deductivo.\" That's design, type, level, method. That's at least two precisions: design, type, level, method. So 1.\n\nD3_resultados_concretos: The results include specific percentages, amounts. So yes 1.\n\nD3_conclusion_responde: The conclusion says \"mostrar para ambos periodos una calificación según indicadores de Regular, no logrando cumplir satisfactoriamente lo programado respecto al PIM\". The objective: Evaluate the execution and its repercussion on compliance with budgetary targets. The conclusion addresses compliance (regular, not meeting). It responds to objective? Yes. So 1.\n\nD4_consistencia: Need consistency between what is said was done and what is presented. Let's check if any contradictions: They say design non-experimental, quantitative, explanatory and descriptive, deductive method. The results are percentages, etc. There is no mention of statistical tests or sample. But is it consistent? There's no claim of hypothesis testing. The conclusion states regular performance; no contradictions. So D4_consistencia should be 5. Check for any contradictions: The only potential issue is that they say \"se aplicó el método deductivo\" but not specifying details. But D4 looks at consistency: no contradictions. So 5.\n\nThus fields:\n\nD1_imryd_objetivo:1\nD1_imryd_metodologia:1\nD1_imryd_resultados:1\nD1_imryd_conclusiones:1\nD1_orden_logico:1\nD2_coherencia:5\nD3_contextualizacion:0\nD3_metodo_detallado:1\nD3_resultados_concretos:1\nD3_conclusion_responde:1\nD4_consistencia:5\nno_evaluable:0\nobservaciones:\"\"\n\nWe must ensure all fields present, order not relevant but all must be there.\n\nNow produce JSON compact.\n\n"
+    }
+   }
+  ],
+  "created": 1789775301,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_d3e146e1a5",
+  "usage": {
+   "completion_tokens": 1208,
+   "prompt_tokens": 10102,
+   "total_tokens": 11310,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1082,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.240565796,
+   "prompt_time": 0.084244439,
+   "completion_time": 1.252283533,
+   "total_time": 1.336527972
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2veqh5tezw9mncs1srgseec",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:48:21.777878+00:00"
+}

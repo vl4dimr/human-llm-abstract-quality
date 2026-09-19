@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-038",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 9864,
+  "output_tokens": 1553,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.787550926208496,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T02:59:41.763576+00:00",
+ "raw": {
+  "id": "chatcmpl-28cd2b40-ac47-41e3-932c-34eb8bfc59b9",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Propiedades psicométricas de la Escala de Riesgo de Adicción a las Redes Sociales (CrARS)\"\n\nResumen:\n\n\"El objetivo de la presente investigación fue la construcción y adaptación de un instrumento capaz de detectar el riesgo de presentar adicción a las redes sociales en adolescentes peruanos entre las edades de 14 y 18 años. La escala está constituida por 43 ítems que evalúan las 7 dimensiones de la adición a redes sociales. Para tal fin la investigación se desarrollado en varios colegios de Lima Metropolitana y en diferentes fases: una primera fase piloto con 205 escolares y una segunda fase con 453 escolares de tercero, cuarto y quinto de secundaria. En base a ello se realizó las correcciones en el instrumento original y se verifica sus propiedades psicométricas, donde la estructura factorial de la escala es buena (RMSEA = .047, CFI = .91) y el coeficiente alpha de Cronbach para las dimensiones de la escala oscilan entre .71 y .90. En virtud de lo mencionado se concluye que el instrumento elaborado evidencia una buena consistencia interna presentando una fiabilidad y validez del constructo. Lo cual hace confiable los resultados que reporte la escala.\"\n\nWe need to evaluate each field.\n\nD1_imryd_objetivo: 1 if objective present. The summary starts with \"El objetivo de la presente investigación fue la construcción y adaptación de un instrumento...\" So yes, objective present. So 1.\n\nD1_imryd_metodologia: 1 if methodology present. The summary describes methodology: \"La escala está constituida por 43 ítems que evalúan las 7 dimensiones de la adición a redes sociales. Para tal fin la investigación se desarrollado en varios colegios de Lima Metropolitana y en diferentes fases: una primera fase piloto con 205 escolares y una segunda fase con 453 escolares de tercero, cuarto y quinto de secundaria.\" So yes, methodology present. 1.\n\nD1_imryd_resultados: 1 if results present. The summary says \"En base a ello se realizó las correcciones en el instrumento original y se verifica sus propiedades psicométricas, donde la estructura factorial de la escala es buena (RMSEA = .047, CFI = .91) y el coeficiente alpha de Cronbach para las dimensiones de la escala oscilan entre .71 y .90.\" So yes, results present. 1.\n\nD1_imryd_conclusiones: 1 if conclusion present. The summary ends with \"En virtud de lo mencionado se concluye que el instrumento elaborado evidencia una buena consistencia interna presentando una fiabilidad y validez del constructo. Lo cual hace confiable los resultados que reporte la escala.\" So yes, conclusion present. 1.\n\nD1_orden_logico: 1 if components present appear in logical order. The order: objective, methodology, results, conclusion. Yes. So 1.\n\nD2_coherencia: 1-5. We need to evaluate coherence. Let's read: The summary flows: objective, description of instrument, phases, corrections, properties, conclusion. It's fairly coherent. No abrupt jumps. Some repetition? \"En virtud de lo mencionado se concluye...\" It's fine. I'd rate 4 or 5. Let's analyze: The summary is fairly smooth. There's no major jump. The only potential issue: \"Lo cual hace confiable los resultados que reporte la escala.\" This is a bit redundant but not a big coherence issue. I'd give 5. But we need to be careful: The scale 5 is \"Progresión impecable. Cada oración prepara la siguiente. Se lee de un tirón\". The summary is quite good. I'd give 5.\n\nD3_contextualizacion: 1 if summary situates the problem: why it matters, where, to whom, etc. The summary says \"El objetivo de la presente investigación fue la construcción y adaptación de un instrumento capaz de detectar el riesgo de presentar adicción a las redes sociales en adolescentes peruanos entre las edades de 14 y 18 años.\" That situates the problem: risk of addiction in adolescents. It also mentions \"en adolescentes peruanos\" and \"en Lima Metropolitana\". So yes, contextualization present. 1.\n\nD3_metodo_detallado: 1 if at least two precisions about procedure. The summary gives: \"La escala está constituida por 43 ítems que evalúan las 7 dimensiones de la adición a redes sociales.\" That's one precision. \"Para tal fin la investigación se desarrollado en varios colegios de Lima Metropolitana y en diferentes fases: una primera fase piloto con 205 escolares y una segunda fase con 453 escolares de tercero, cuarto y quinto de secundaria.\" That's more precisions: number of participants, phases, location. So yes, at least two. 1.\n\nD3_resultados_concretos: 1 if results provide specific content: numbers, magnitudes, categories, relationships. The summary gives RMSEA = .047, CFI = .91, alpha .71-.90. So yes, concrete results. 1.\n\nD3_conclusion_responde: 1 if conclusion responds to objective. The objective: construction and adaptation of instrument to detect risk. Conclusion: instrument evidence good consistency, reliability, validity. That addresses the objective. So 1.\n\nD4_consistencia: 1-5. We need to evaluate consistency between what is said and what is presented. The summary says: objective: construct instrument. Methodology: instrument with 43 items, 7 dimensions, pilot and second phase with 205 and 453 participants. Results: factor structure good, RMSEA .047, CFI .91, alpha .71-.90. Conclusion: instrument has good consistency, reliability, validity. This seems consistent. No contradictions. So I'd give 5.\n\nno_evaluable: 0 because it's a valid summary.\n\nobservaciones: any notes. We can add a note: \"No encabezados, but coherent.\" But we can leave empty string. The schema requires string. We can put empty string \"\".\n\nNow produce JSON with all fields. Ensure all required fields present. Use compact JSON. Let's produce:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"\"\n}\n\nCheck schema: all fields present. Good."
+    }
+   }
+  ],
+  "created": 1789700381,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c5a89987dc",
+  "usage": {
+   "completion_tokens": 1553,
+   "prompt_tokens": 9864,
+   "total_tokens": 11417,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1427,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.291370734,
+   "prompt_time": 0.140057565,
+   "completion_time": 1.675130829,
+   "total_time": 1.815188394
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s794sbeh98r8xah2aw1cww",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T02:59:41.763670+00:00"
+}

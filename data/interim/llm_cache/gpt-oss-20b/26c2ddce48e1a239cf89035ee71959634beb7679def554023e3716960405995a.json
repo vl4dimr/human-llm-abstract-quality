@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-053",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 10113,
+  "output_tokens": 1310,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.3589086532592773,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:51:37.194961+00:00",
+ "raw": {
+  "id": "chatcmpl-fdf39eef-d736-426a-a172-b1063d18a5ce",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields per schema. Must parse the summary.\n\nWe have the summary structure. It's a structured summary with headings but we just parse.\n\nWe need to assign values for each field:\n\n- D1_imryd_objetivo: 1 if can answer \"what was proposed to investigate\" reading only summary. The summary begins with \"Objetivo: Determinar la relación entre calidad de vida y desempeño laboral de las enfermeras en tiempos de Covid-19...\" That's explicit. So 1.\n\n- D1_imryd_metodologia: 1 if indicates how obtained knowledge. They give \"Métodos: La investigación tuvo un enfoque cuantitativo con un estudio transversal, de tipo descriptivo-correlacional, la muestra fue de 60 enfermeras. Se aplicó un cuestionario para la calidad de vida (SF-36) con una confiabilidad de α= .82, de igual manera para el desempeño laboral y tuvo una confiabilidad de α= .89. Se aplicó la prueba de correlación de Rho Spearman.\" That has at least one procedural detail, so 1.\n\n- D1_imryd_resultados: 1 if communicates what was found, not method. The results section lists percentages and correlations. So yes 1.\n\n- D1_imryd_conclusiones: 1 if closing that goes beyond repeating result. The conclusion: \"Existe relación directa entre el nivel de calidad de vida y desempeño laboral (rs=.681) de las enfermeras...\". It's essentially a restatement of results but maybe it's a concise summary: It states existence of a direct relationship and cites the correlation. This may count as a conclusion. It goes beyond just repeating result? It restates correlation; but it's more an interpretation: \"Existe relación directa\" is a conclusion that the correlation indicates. They didn't propose recommendation. But it's a statement that addresses objective. According to protocol, conclusion must respond to objective, interpret, implication. This qualifies. So 1.\n\n- D1_orden_logico: 1 if components present appear in logical sequence. The summary is structured: objective, methods, results, conclusions in that order. So 1.\n\n- D2_coherencia: rating 1-5. We need to judge flow.\n\nLet's analyze: The summary has headings and content. It is fairly coherent: starts with objective, then methods, results, conclusion. The results section lists many percentages and correlations. It might be a bit dense but flows logically. Might assign 5 or 4. There are no abrupt jumps. The only slight issue: after listing many results, they say \"Según la correlación entre la calidad de vida y el desempeño laboral se afirma lo siguiente calidad de vida (rs=.681)...\" The phrase might be a bit repetitive but still coherent. So maybe 4 or 5. I'll choose 5.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it's important, where, who it affects, against what norm or framework. The objective mentions \"en tiempos de Covid-19 en los servicios de hospitalización del Hospital Carlos Monge Medrano, Juliaca\". The context of Covid-19 is important; they mention hospital. Might still be considered contextualization, though maybe the summary starts directly with objective and doesn't explicitly describe why quality of life is important in nursing during Covid. But the context includes the hospital and pandemic. So I'd say 1.\n\nThe protocol says \"Sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco se contrasta.\" The summary includes setting: \"Hospital Carlos Monge Medrano, Juliaca, 2021.\" The pandemic is the reason. So yes.\n\n- D3_metodo_detallado: 1 if gives at least two precise details: design, sample, instrument, technique, test. They have: quantitative, transversal, descriptive-correlational, sample 60, questionnaire SF-36 with α .82, performance questionnaire with α .89, Spearman rho test. That's more than two. So 1.\n\n- D3_resultados_concretos: 1 if results provide content: percentages, magnitudes, categories, relations. They have many percentages and Spearman correlations. So 1.\n\n- D3_conclusion_responde: 1 if conclusion answers the objective. The objective was determine relationship between quality of life and performance. Conclusion states \"Existe relación directa entre el nivel de calidad de vida y desempeño laboral (rs=.681)\". Yes, it answers objective. So 1.\n\n- D4_consistencia: 1-5. Evaluate coherence between declared methodology and presented results, and conclusion. They use Spearman correlation (nonparametric) appropriate for ordinal data? The result: They provide many percentages for each dimension, and correlations. No p-values. They didn't report significance. They state rs values but no significance. They didn't mention if p-values or significance thresholds. So there's partial consistency: They used Spearman, which matches data. Conclusion states relationship direct. There's no contradictory statement. So likely consistent. Might give 5.\n\nBut check for any contradictions: They reported results as percentages for each dimension and correlation values. They didn't report any significance. In conclusion they mention relationship direct but not significance. It's fine.\n\nThus D4_consistencia = 5.\n\n- no_evaluable: 0 (it's a valid summary with methodology).\n\n- observaciones: any notes. Possibly mention that no significance values reported; but okay. We can leave it empty or note that significance not reported.\n\nBetter to put empty string. But it's required field string. Provide empty string.\n\nThus produce JSON with all fields. Ensure values as per schema: ints or null. Use 0 or 1 or 5 etc.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789775496,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_1074f9ce08",
+  "usage": {
+   "completion_tokens": 1310,
+   "prompt_tokens": 10113,
+   "total_tokens": 11423,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1184,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.215367951,
+   "prompt_time": 0.06461416,
+   "completion_time": 1.347993472,
+   "total_time": 1.412607632
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vexfz7e1bb3rjabd0s7st2",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:51:37.194989+00:00"
+}

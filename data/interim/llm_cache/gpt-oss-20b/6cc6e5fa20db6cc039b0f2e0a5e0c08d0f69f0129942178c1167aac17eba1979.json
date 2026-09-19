@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-008",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Cumple con IMRyD, sin encabezados, flujo coherente."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Cumple con IMRyD, sin encabezados, flujo coherente.\"}",
+ "usage": {
+  "input_tokens": 10052,
+  "output_tokens": 1521
+ },
+ "latency_s": 2.5880484580993652,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T02:55:47.702773+00:00",
+ "raw": {
+  "id": "chatcmpl-2b55c533-839e-48ab-b6e9-fb4f8164aee5",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Cumple con IMRyD, sin encabezados, flujo coherente.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Evaluación del nivel de ruido y sus efectos en los trabajadores del taller de mantenimiento y producción de la Universidad Nacional del Altiplano - Puno\"\n\nSummary: Provided.\n\nWe need to evaluate:\n\n- D1_imryd_objetivo: 1 if objective present. The summary says: \"En este estudio se evaluó el nivel de ruido en el taller de mantenimiento y producción de la Universidad Nacional del Altiplano - Puno, considerando las fuentes de ruido que afectan el área de trabajo.\" That is objective: evaluate noise level. So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. The summary describes: \"se utilizó un sonómetro conforme a la norma ISO 1996-Parte 1:1986 y IEC 61672-1:2002. Para el monitoreo se siguió el Protocolo Nacional de Monitoreo de Ruido (D.S. Nº 223), y la medición en los puestos de trabajo se utilizó la metodología de la Guía N° 1 del Reglamento de Seguridad y Salud Ocupacional en Minería (D.S. Nº 024-2016-EM).\" So yes, methodology present. 1.\n\n- D1_imryd_resultados: 1 if results present. The summary gives numeric results: \"se registraron niveles de ruido de 78,1 dB, 80,8 dB, 78,2 dB y 78,0 dB, ... PR-2 la única área que supera el estándar de 80 dB ... 27 equipos, 93% registraron niveles superiores a 80 dB, alcanzando hasta 107,9 dB.\" So yes, 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. The summary ends: \"La data, indica que el personal está expuesto a un alto riesgo de adquirir problemas de audición. Por lo tanto, es fundamental controlar el tiempo de exposición y realizar evaluaciones periódicas para minimizar los efectos a largo plazo.\" That is a conclusion: risk and recommendation. So 1.\n\n- D1_orden_logico: 1 if components present in logical order. The summary: objective first, then methodology, then results, then conclusion. Yes. So 1.\n\n- D2_coherencia: scale 1-5. Evaluate flow. The summary is fairly coherent. It starts with objective, then describes areas, then methodology, then results, then conclusion. There is some repetition of area names but overall flow is good. I'd rate 4 or 5. Let's analyze: The summary is a single paragraph. It flows logically. No abrupt jumps. Some repeated mention of \"en las áreas PR-1, PR-2, PR-3 y PR-4\" after earlier listing of areas. But that's fine. I'd give 5. But check guidelines: 5 is \"Progresión impecable. Cada oración prepara la siguiente. Se lee de un tirón. Transiciones naturales; un solo término por concepto; sin repeticiones.\" There are some repetitions: \"en las áreas PR-1, PR-2, PR-3 y PR-4\" repeated after earlier listing. But still maybe 4. I'd choose 4. Because there is some repetition but not major. So D2_coherencia = 4.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where it occurs, to whom it affects, against what standard. The summary does mention: \"El personal está expuesto a un alto riesgo de adquirir problemas de audición.\" It also mentions the standard. It situates the problem: noise exposure risk. So yes, 1.\n\n- D3_metodo_detallado: 1 if at least two precisions about procedure. The summary gives: sonómetro conforme a norma ISO 1996-Parte 1:1986 y IEC 61672-1:2002; Protocolo Nacional de Monitoreo de Ruido (D.S. Nº 223); metodología de la Guía N° 1 del Reglamento de Seguridad y Salud Ocupacional en Minería (D.S. Nº 024-2016-EM). That's more than two. So 1.\n\n- D3_resultados_concretos: 1 if results provide specific content: numbers, categories, etc. Yes, numeric dB values, percentages, etc. So 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to objective. The objective: evaluate noise level. Conclusion: risk and recommendation. That responds. So 1.\n\n- D4_consistencia: scale 1-5. Consistency between what summary says it did and what it presents. The summary says methodology and results consistent. No contradictions. So 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes. We can add a note: \"No encabezados, pero cumple con IMRyD.\" But we can leave empty string or a note. The schema requires string. We can provide a brief note. Let's provide: \"Cumple con IMRyD, sin encabezados, flujo coherente.\" That is fine.\n\nCheck all fields present: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nAll are present. Ensure JSON is compact. Provide as single line? The instruction says \"Use compact JSON formatting\". So no pretty printing. Provide as one line. Ensure no trailing spaces. Provide final JSON object.\n\nLet's produce:\n\n{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Cumple con IMRyD, sin encabezados, flujo coherente.\"}\n\nCheck JSON validity: yes. All fields present. Good."
+    }
+   }
+  ],
+  "created": 1789700147,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_3cdd24b83b",
+  "usage": {
+   "completion_tokens": 1521,
+   "prompt_tokens": 10052,
+   "total_tokens": 11573,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1381,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.192807466,
+   "prompt_time": 0.559094751,
+   "completion_time": 1.549909231,
+   "total_time": 2.109003982
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7201tefs9dj8n62fvy5tt",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T02:55:47.702899+00:00"
+}

@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-094",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Objective after methodology; no results or conclusion; no contextualization; no detailed methodology; coherence 4; consistency 5."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":0,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Objective after methodology; no results or conclusion; no contextualization; no detailed methodology; coherence 4; consistency 5.\"}",
+ "usage": {
+  "input_tokens": 9768,
+  "output_tokens": 1409,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.4774672985076904,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:06:40.161241+00:00",
+ "raw": {
+  "id": "chatcmpl-56108585-5b14-4a81-98df-2f2744aff0de",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":0,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Objective after methodology; no results or conclusion; no contextualization; no detailed methodology; coherence 4; consistency 5.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the given summary according to the protocol. The summary is:\n\nTitle: Informe de suficiencia profesional del área de Arte de una Institución Educativa Secundaria Estatal del distrito de Juli-Puno\n\nResumen:\n\"La función docente se caracteriza por ser una labor de carácter profesional que implica la realización directa de los procesos sistemáticos de enseñanza-aprendizaje. Estos procesos abarcan el diagnóstico, la planificación, la ejecución y la evaluación, así como otras actividades educativas. El objetivo principal de esta función es contribuir de manera efectiva en la formación integral de los estudiantes, atendiendo todas las dimensiones de su desarrollo humano. Para lograrlo, el docente debe desempeñarse con ética profesional, honestidad, justicia, responsabilidad y respeto hacia los derechos de las personas, así como mantener un compromiso social como agente fundamental de la educación.\"\n\nWe need to fill all fields:\n\n- D1_imryd_objetivo: 1 if objective present. The summary says: \"El objetivo principal de esta función es contribuir de manera efectiva en la formación integral de los estudiantes, atendiendo todas las dimensiones de su desarrollo humano.\" That is an explicit objective. So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. The summary describes processes: \"diagnóstico, planificación, ejecución y evaluación, así como otras actividades educativas.\" That is a description of methodology? It's describing the processes that the teacher does. It's a description of the methodology: the processes. So yes, 1.\n\n- D1_imryd_resultados: 1 if results present. The summary does not present any results. It only states objective and methodology. So 0.\n\n- D1_imryd_conclusiones: 1 if conclusion present. The summary does not have a conclusion. It ends with \"para lograrlo, el docente debe desempeñarse con ética profesional, ...\". That's not a conclusion. So 0.\n\n- D1_orden_logico: 1 if components present appear in logical order. We have objective, methodology, no results, no conclusion. The order: objective appears after methodology? Actually the summary: first sentence: \"La función docente se caracteriza por ser una labor de carácter profesional que implica la realización directa de los procesos sistemáticos de enseñanza-aprendizaje.\" That is describing the function, not objective. Then: \"Estos procesos abarcan el diagnóstico, la planificación, la ejecución y la evaluación, así como otras actividades educativas.\" That is methodology. Then: \"El objetivo principal de esta función es contribuir de manera efectiva en la formación integral de los estudiantes, atendiendo todas las dimensiones de su desarrollo humano.\" That is objective. So the order is: methodology first, then objective. That is not the canonical order (objective -> methodology -> results -> conclusion). So D1_orden_logico = 0.\n\n- D2_coherencia: 1-5. The summary is fairly coherent: it flows from describing the function, to processes, to objective, to ethical requirements. It's a single paragraph. I'd rate 4 maybe. Let's analyze: The flow: first describes function, then processes, then objective, then ethical requirements. It's coherent, but the objective appears after methodology, which is a bit odd but still coherent. No abrupt jumps. I'd give 4. But we need to decide. The scale: 5 is impeccable, 4 is good with minor aspereza. There's no major jump. I'd give 4.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where it occurs, to whom it affects, against what norm. The summary does not mention why it's important, or context. It just describes the function. So 0.\n\n- D3_metodo_detallado: 1 if at least two precisions about procedure. The summary lists processes: \"diagnóstico, planificación, ejecución y evaluación, así como otras actividades educativas.\" That's one precision? It's a list of processes. But we need at least two precisions: design, sample size, instrument, etc. This is not enough. So 0.\n\n- D3_resultados_concretos: 1 if results with specific content. None. So 0.\n\n- D3_conclusion_responde: 1 if conclusion responds to objective. No conclusion. So 0.\n\n- D4_consistencia: 1-5. Consistency between what is said and what is presented. Since we have objective and methodology but no results or conclusion, there's no inconsistency. But D4 is only evaluated if methodology is present. It is present. So we can evaluate consistency. There's no contradiction. So I'd give 5. But we need to check if any inconsistency: The objective says \"contribuir de manera efectiva en la formación integral de los estudiantes\". The methodology says \"diagnóstico, planificación, ejecución y evaluación\". That is consistent. So 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: we can add notes: \"Objective appears after methodology; no results or conclusion; no contextualization; no detailed methodology; no results; no conclusion; coherence rating 4; consistency rating 5.\" But we can keep it short. Provide a string.\n\nWe must output JSON with all required fields. Ensure no extra fields. Use compact JSON. Let's produce:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":0,\n \"D1_imryd_conclusiones\":0,\n \"D1_orden_logico\":0,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":0,\n \"D3_resultados_concretos\":0,\n \"D3_conclusion_responde\":0,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Objective after methodology; no results or conclusion; no contextualization; no detailed methodology; coherence 4; consistency 5.\"\n}\n\nCheck schema: all fields present. Observations string. Good. Ensure no trailing comma. Output only JSON."
+    }
+   }
+  ],
+  "created": 1789700799,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_d23c14756c",
+  "usage": {
+   "completion_tokens": 1409,
+   "prompt_tokens": 9768,
+   "total_tokens": 11177,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1259,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.204991833,
+   "prompt_time": 0.045107842,
+   "completion_time": 1.450597888,
+   "total_time": 1.49570573
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7nxs6etc99jssreedaxc0",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:06:40.161325+00:00"
+}

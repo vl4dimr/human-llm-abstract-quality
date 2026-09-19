@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-073",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD y presenta cada componente con claridad. La coherencia es buena, aunque hay una ligera repetición en la descripción de los resultados. La contextualización es cero porque el resumen comienza directamente con el objetivo. La consistencia metodológica es 3 debido a que la conclusión menciona una relación de fuerza con la ocupación, lo cual está respaldado por los resultados, pero no se menciona claramente el impacto de los otros factores sociodemográficos."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD y presenta cada componente con claridad. La coherencia es buena, aunque hay una ligera repetición en la descripción de los resultados. La contextualización es cero porque el resumen comienza directamente con el objetivo. La consistencia metodológica es 3 debido a que la conclusión menciona una relación de fuerza con la ocupación, lo cual está respaldado por los resultados, pero no se menciona claramente el impacto de los otros factores sociodemográficos.\"\n}",
+ "usage": {
+  "input_tokens": 10942,
+  "output_tokens": 271,
+  "total_duration_s": 8.7901404
+ },
+ "latency_s": 8.809937715530396,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:28:15.858392+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:28:15.8506222Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD y presenta cada componente con claridad. La coherencia es buena, aunque hay una ligera repetición en la descripción de los resultados. La contextualización es cero porque el resumen comienza directamente con el objetivo. La consistencia metodológica es 3 debido a que la conclusión menciona una relación de fuerza con la ocupación, lo cual está respaldado por los resultados, pero no se menciona claramente el impacto de los otros factores sociodemográficos.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8790140400,
+  "load_duration": 10262000,
+  "prompt_eval_count": 10942,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 407636000,
+  "eval_count": 271,
+  "eval_duration": 8254361999
+ },
+ "cached_at_utc": "2026-09-19T02:28:15.858410+00:00"
+}

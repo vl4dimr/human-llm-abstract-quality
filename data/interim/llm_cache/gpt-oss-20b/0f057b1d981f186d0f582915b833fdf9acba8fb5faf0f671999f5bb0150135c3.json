@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-066",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Se consideró que la contextualización está presente porque se menciona la necesidad de reducir costos de operación; se consideró insuficiente la descripción de la metodología (solo se menciona equipo y banco de pruebas, sin diseño ni tamaño de muestra), por lo tanto D3_metodo_detallado =0. Los objetivos, metodología, resultados y orden lógico están presentes y en secuencia. La conclusión no está explícita, así que D1_imryd_conclusiones=0 y D3_conclusion_responde=0. Coherencia evaluada como 4. Consistencia metodológica se consideró alta (5)."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Se consideró que la contextualización está presente porque se menciona la necesidad de reducir costos de operación; se consideró insuficiente la descripción de la metodología (solo se menciona equipo y banco de pruebas, sin diseño ni tamaño de muestra), por lo tanto D3_metodo_detallado =0. Los objetivos, metodología, resultados y orden lógico están presentes y en secuencia. La conclusión no está explícita, así que D1_imryd_conclusiones=0 y D3_conclusion_responde=0. Coherencia evaluada como 4. Consistencia metodológica se consideró alta (5).\"}",
+ "usage": {
+  "input_tokens": 10020,
+  "output_tokens": 2093,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 3.0805132389068604,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:22:08.723672+00:00",
+ "raw": {
+  "id": "chatcmpl-a103e363-fd2f-45e8-91fd-cf2a50404e34",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Se consideró que la contextualización está presente porque se menciona la necesidad de reducir costos de operación; se consideró insuficiente la descripción de la metodología (solo se menciona equipo y banco de pruebas, sin diseño ni tamaño de muestra), por lo tanto D3_metodo_detallado =0. Los objetivos, metodología, resultados y orden lógico están presentes y en secuencia. La conclusión no está explícita, así que D1_imryd_conclusiones=0 y D3_conclusion_responde=0. Coherencia evaluada como 4. Consistencia metodológica se consideró alta (5).\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. We need to produce JSON with required fields. Must decide each field:\n\nFields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nLet's analyze summary.\n\nTitle: \"Análisis técnico económico de reutilización de inyectores eui bosch instalados en camiones Volvo Fmx que operan en altitudes superiores a 3800 M.S.N.M.\"\n\nSummary:\n\n1. Starts: \"El presente trabajo partió de la necesidad de disminuir los costos de operatividad de los camiones VOLVO, el mayor porcentaje de gastos se lo lleva el consumo de combustible, este se incrementa cuando el sistema de inyección ...\"\n\n2. Objectives: \"Objetivos primordiales desarrollar una estrategia de evaluación para realizar el análisis técnico de los inyectores, con esto podremos optar por criterios de reparación más seguros con equipos de simulación, diagnóstico y comprobación, después de haber realizado todas estas pruebas podremos determinar el óptimo funcionamiento de los inyectores, así como también determinaremos la rentabilidad...\"\n\nSo objective explicitly stated. Good.\n\n3. \"En el marco tenemos una amplia información...\" This seems like contextualization. But let's see: D3_contextualizacion: \"el resumen sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco se contrasta.\" The summary gives problem: cost of operation due to fuel consumption increased by faulty injectors. But does it mention where, to whom, or contrast to normative? Not strongly. It explains reason: need to reduce costs. So D3_contextualizacion maybe 1? They mention \"la necesidad de disminuir los costos de operatividad de los camiones\". That is the reason. It doesn't mention \"en una norma\" or \"a quién afecta\" but it is a problem: high fuel cost. So yes, contextualization present. But maybe it's partial? I'd set 1.\n\n4. Method: \"El trabajo de investigación nos dio resultados positivos a partir de la estrategia de evaluación técnica propuesta con equipos y herramientas hartridge, así como en el banco de pruebas AVM2-PC\". So they mention evaluation strategy and equipment used. But does it give details? They mention \"equipos y herramientas hartridge, banco de pruebas AVM2-PC\". So at least design? It's a \"estrategia de evaluación técnica\" - no mention of sample size or statistical tests. So D1_imryd_metodologia = 1 (there is a methodology indicated). For D3_metodo_detallado: needs at least two precise details: design, n, instrument, etc. Here we have: equipment and tools and test bench. That's one precision: type of equipment. Not two. Also no design type, no sample size. So D3_metodo_detallado = 0.\n\nBut maybe the \"estrategia de evaluación técnica\" implies a design; but we don't have enough. I'd set 0.\n\n5. Results: \"se determinó que los inyectores trabajan óptimamente ... en cuanto a la parte económica tenemos una rentabilidad del 64.5 %\". So they give specific result: 64.5% rentabilidad. So D1_imryd_resultados = 1. D3_resultados_concretos: yes because they give 64.5% and statement that injectors work optimally. So 1.\n\n6. Conclusions: They didn't have explicit separate conclusion section but end: \"en cuanto a la parte económica tenemos una rentabilidad del 64.5 %\". They didn't provide interpretation beyond stating result. The conclusion should go beyond result. There's no mention of implications or recommendation. So D1_imryd_conclusiones = 0. Also D3_conclusion_responde: since no conclusion, 0.\n\n7. D1_orden_logico: The components present: objective, methodology, results. They appear in sequence: objective first, then methodology, then results. So D1_orden_logico = 1.\n\n8. D2_coherencia: Evaluate flow. Let's read summary:\n\n- First paragraph: context and problem.\n- Then objectives.\n- Then more context about information about injectors etc.\n- Then \"El trabajo de investigación nos dio resultados positivos a partir de la estrategia de evaluación técnica propuesta con equipos y herramientas hartridge, así como en el banco de pruebas AVM2-PC, a partir de estas pruebas realizadas se determinó que los inyectores trabajan óptimamente, en cuanto a la parte económica tenemos una rentabilidad del 64.5 %...\"\n\nThis seems somewhat coherent but there are some abrupt transitions: after objective, they discuss general information, then results. There might be some repetition of objectives. Overall coherence maybe 4. But let's analyze:\n\nThe paragraph after objectives: \"En el marco tenemos una amplia información acerca del funcionamiento de los inyectores, adicionalmente tenemos los conceptos de todo el sistema de inyección que nos permitirá conocer el funcionamiento de los inyectores, veremos cómo los sensores, sistema eléctrico, entre otros son piezas fundamentales para el óptimo funcionamiento de los inyectores, a partir de todos estos conocimientos adquiridos encontraremos estrategias que nos accedan resolver problemas técnicos de los inyectores.\" This is somewhat verbose but still flows: sets up knowledge base.\n\nThen they jump to results. I think coherence is good. Maybe 4 (fluye bien, con alguna aspereza menor). But check if there are issues: Repetition: \"trabajaron óptimamente\" appears only once. No major contradictions. So I'd set D2_coherencia = 4.\n\n9. D4_consistencia: We need to assess consistency between what methodology says and results/conclusions. Since we have no conclusion, D4_consistencia? According to protocol: If the summary does not declare any methodology, D4 not evaluable. But we do have methodology declared. So we evaluate consistency. The methodology mentions \"estrategia de evaluación técnica\" and equipment used. Results mention that injectors work optimally and 64.5% rentability. Does that align? Yes, it's consistent. No contradictory statements. So D4_consistencia = 5? Or maybe 5 because all coherent. But need to consider the definition: D4 5: Enfoque, diseño, resultados y conclusiones encajan sin fisuras. Since we only have methodology and results, and they align. So 5.\n\nBut maybe we should consider that they didn't mention statistical tests. But that's not contradictory. So 5.\n\n10. no_evaluable: 0 because it is a summary.\n\nObservations: we need to note any uncertainties. Let's write notes: We had some uncertainty on D3_metodo_detallado: we decided 0 because only one precision. Also D3_contextualizacion 1 maybe. We can mention that. Let's produce JSON.\n\nWe must use compact JSON. Ensure all fields present and correct types. Null values allowed, but we have values.\n\nLet's produce:\n\n{\n\"no_evaluable\":0,\n\"observaciones\":\"Se consideró que la contextualización está presente porque se menciona la necesidad de reducir costos de operación; se consideró insuficiente la descripción de la metodología (solo se menciona equipo y banco de pruebas, sin diseño ni tamaño de muestra), por lo tanto D3_metodo_detallado =0. Los objetivos, metodología, resultados y orden lógico están presentes y en secuencia. La conclusión no está explícita, así que D1_imryd_conclusiones=0 y D3_conclusion_responde=0. Coherencia evaluada como 4. Consistencia metodológica se consideró alta (5).\",\n\"D1_imryd_objetivo\":1,\n\"D1_imryd_metodologia\":1,\n\"D1_imryd_resultados\":1,\n\"D1_imryd_conclusiones\":0,\n\"D1_orden_logico\":1,\n\"D2_coherencia\":4,\n\"D3_contextualizacion\":1,\n\"D3_metodo_detallado\":0,\n\"D3_resultados_concretos\":1,\n\"D3_conclusion_responde\":0,\n\"D4_consistencia\":5\n}\n\nCheck required order: required list: [\"D1_imryd_objetivo\",\"D1_imryd_metodologia\",\"D1_imryd_resultados\",\"D1_imryd_conclusiones\",\"D1_orden_logico\",\"D2_coherencia\",\"D3_contextualizacion\",\"D3_metodo_detallado\",\"D3_resultados_concretos\",\"D3_conclusion_responde\",\"D4_consistencia\",\"no_evaluable\",\"observaciones\"]\n\nSo put in that order.\n\nLet's produce JSON accordingly."
+    }
+   }
+  ],
+  "created": 1789701728,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_3cdd24b83b",
+  "usage": {
+   "completion_tokens": 2093,
+   "prompt_tokens": 10020,
+   "total_tokens": 12113,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1844,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.19193819,
+   "prompt_time": 0.074091139,
+   "completion_time": 2.187191389,
+   "total_time": 2.261282528
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8j7wgef7v38e0rsbk69zt",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:22:08.723692+00:00"
+}

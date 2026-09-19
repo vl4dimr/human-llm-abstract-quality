@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-051",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen cumple con la estructura IMRyD y presenta los componentes necesarios. La coherencia es buena, pero hay una leve aspereza en la transición entre la metodología y los resultados. La conclusión responde al objetivo y se alinea con los resultados. La consistencia metodológica es moderada, ya que la conclusión afirma una relación estadísticamente significativa, lo cual está respaldado por los resultados."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen cumple con la estructura IMRyD y presenta los componentes necesarios. La coherencia es buena, pero hay una leve aspereza en la transición entre la metodología y los resultados. La conclusión responde al objetivo y se alinea con los resultados. La consistencia metodológica es moderada, ya que la conclusión afirma una relación estadísticamente significativa, lo cual está respaldado por los resultados.\"\n}",
+ "usage": {
+  "input_tokens": 10909,
+  "output_tokens": 252,
+  "total_duration_s": 8.6960293
+ },
+ "latency_s": 8.701127052307129,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:55:41.159761+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:55:41.155614Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen cumple con la estructura IMRyD y presenta los componentes necesarios. La coherencia es buena, pero hay una leve aspereza en la transición entre la metodología y los resultados. La conclusión responde al objetivo y se alinea con los resultados. La consistencia metodológica es moderada, ya que la conclusión afirma una relación estadísticamente significativa, lo cual está respaldado por los resultados.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8696029300,
+  "load_duration": 4103400,
+  "prompt_eval_count": 10909,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 419560000,
+  "eval_count": 252,
+  "eval_duration": 8189657000
+ },
+ "cached_at_utc": "2026-09-19T01:55:41.159839+00:00"
+}

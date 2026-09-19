@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-002",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen menciona que se realizó una revisión bibliográfica, pero no proporciona detalles específicos sobre el procedimiento metodológico. La ausencia de resultados concretos se refleja en D3_resultados_concretos = 0. La conclusión responde al objetivo, pero no se mencionan resultados específicos que respalden la afirmación de que el neuromarketing es una herramienta estratégica para el posicionamiento de marca."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen menciona que se realizó una revisión bibliográfica, pero no proporciona detalles específicos sobre el procedimiento metodológico. La ausencia de resultados concretos se refleja en D3_resultados_concretos = 0. La conclusión responde al objetivo, pero no se mencionan resultados específicos que respalden la afirmación de que el neuromarketing es una herramienta estratégica para el posicionamiento de marca.\"\n}",
+ "usage": {
+  "input_tokens": 10678,
+  "output_tokens": 253,
+  "total_duration_s": 8.1848888
+ },
+ "latency_s": 8.193782567977905,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:25:20.140994+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:25:20.132673Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen menciona que se realizó una revisión bibliográfica, pero no proporciona detalles específicos sobre el procedimiento metodológico. La ausencia de resultados concretos se refleja en D3_resultados_concretos = 0. La conclusión responde al objetivo, pero no se mencionan resultados específicos que respalden la afirmación de que el neuromarketing es una herramienta estratégica para el posicionamiento de marca.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8184888800,
+  "load_duration": 3480900,
+  "prompt_eval_count": 10678,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 232236000,
+  "eval_count": 253,
+  "eval_duration": 7888473000
+ },
+ "cached_at_utc": "2026-09-19T01:25:20.141009+00:00"
+}

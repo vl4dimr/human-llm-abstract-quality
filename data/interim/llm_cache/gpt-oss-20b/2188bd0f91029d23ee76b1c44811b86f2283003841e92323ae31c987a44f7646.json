@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-069",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen cumple con los cuatro componentes y la coherencia es alta. No se incluye contextualización del problema."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen cumple con los cuatro componentes y la coherencia es alta. No se incluye contextualización del problema.\"}",
+ "usage": {
+  "input_tokens": 10080,
+  "output_tokens": 1408
+ },
+ "latency_s": 2.920347213745117,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:03:40.364322+00:00",
+ "raw": {
+  "id": "chatcmpl-d2f1eee5-b220-4340-a5b8-ac8a27cae09e",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen cumple con los cuatro componentes y la coherencia es alta. No se incluye contextualización del problema.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: Estimación de heredabilidad, correlaciones genéticas y correlaciones fenotípicas de características de la fibra de alpacas Suri de un año de edad en el Anexo Quimsachata del INIA - Puno\n\nResumen: (long Spanish text). Let's analyze.\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 0 or 1. Determine if objective is present. The summary says: \"Los objetivos del presente estudio fueron estimar las heredabilidades, correlaciones genéticas y fenotípicas para caracteres asociados a la uniformidad del diámetro de fibra en el vellón de alpacas Suri de primera esquila, del Anexo Quimsachata del INIA Puno, ubicado en el Departamento de Puno, a 4190 m.s.n.m. en la Zona Agroecológica de Puna Seca.\" This is explicit objective. So 1.\n\n- D1_imryd_metodologia: 0 or 1. Determine if methodology is present. The summary says: \"Se utilizaron muestras de 413 alpacas Suri de primera esquila, nacidas en los años 2013 hasta el año 2017. Los caracteres evaluados fueron ... Para estimar los componentes de varianza de los caracteres mencionados se utilizó el modelo animal multicarácter. Los componentes de varianza y parámetros genéticos fueron estimados por el método de Máxima Verosimilitud Restringida y se utilizó el programa VCE. Las correlaciones fenotípicas se estimaron por el método de correlación de Pearson con el programa estadístico SAS.\" So yes, methodology present. 1.\n\n- D1_imryd_resultados: 0 or 1. Determine if results present. The summary says: \"Los resultados muestran que las heredabilidades obtenidas para DF, CV, FC, FH, IC y DS, fueron: 0,69; 0,48; 0,59; 0,68; 0,14 y 0,61, respectivamente. Las correlaciones genéticas y fenotípicas fueron de baja, mediana y alta magnitud.\" So yes, results present. 1.\n\n- D1_imryd_conclusiones: 0 or 1. Determine if conclusion present. The summary says: \"Se concluye que las heredabilidades sugieren que la selección individual por estas características, menos por IC, resultarán en un progreso genético aceptable. Asimismo, seleccionando por estos caracteres se lograría reducir la variabilidad de la finura en los vellones, y de esta manera poder implementar programas de mejoramiento genético en alpacas Suri.\" So yes, conclusion present. 1.\n\n- D1_orden_logico: 0 or 1. Determine if components present in logical order. The summary: objective first, then methodology, then results, then conclusion. Yes. So 1.\n\n- D2_coherencia: 1-5. Evaluate coherence. Let's read the summary: It flows logically: objective, methodology, results, conclusion. The text is fairly coherent. No major jumps. Some technical terms but consistent. I'd rate 5. But check for any abrupt transitions: The summary flows: objective, sample description, characters, model, estimation methods, results, conclusion. It's coherent. So 5.\n\n- D3_contextualizacion: 0 or 1. Determine if summary situates the problem: why it matters, where, to whom, against what standard. The summary does not explicitly state why it's important or the context beyond location. It says \"Los objetivos del presente estudio fueron estimar ...\". It doesn't explain why it's important, or the broader context. So 0.\n\n- D3_metodo_detallado: 0 or 1. Determine if at least two precisions about procedure. The summary includes: sample size 413, years 2013-2017, characters evaluated, model animal multicarácter, method of maximum restricted likelihood, program VCE, method of Pearson correlation, program SAS. That's more than two. So 1.\n\n- D3_resultados_concretos: 0 or 1. Determine if results provide specific content: numbers, categories, etc. The summary gives specific heredabilities: 0.69; 0.48; 0.59; 0.68; 0.14; 0.61. Also says correlations of low, medium, high magnitude. So yes. 1.\n\n- D3_conclusion_responde: 0 or 1. Determine if conclusion responds to objective. The objective: estimate heritabilities, genetic and phenotypic correlations. The conclusion: \"Se concluye que las heredabilidades sugieren que la selección individual por estas características, menos por IC, resultarán en un progreso genético aceptable. Asimismo, seleccionando por estos caracteres se lograría reducir la variabilidad de la finura en los vellones, y de esta manera poder implementar programas de mejoramiento genético en alpacas Suri.\" This indeed responds to objective: it interprets the results. So 1.\n\n- D4_consistencia: 1-5. Determine consistency between what summary says it did and what it presents. Let's check: The summary says methodology: sample, model, estimation methods. Results: heritabilities, correlations. Conclusion: interpretation. No contradictions. So consistency high. I'd rate 5.\n\n- no_evaluable: 0 or 1. The text is a summary. So 0.\n\n- observaciones: string. We can add any notes. Maybe note that no contextualization. Also note that the summary is coherent. Provide a brief note.\n\nWe must ensure all fields present. Provide JSON with all fields. Use compact JSON. Ensure no trailing commas. Provide string for observaciones. Let's craft.\n\nObservaciones: \"Resumen cumple con los cuatro componentes y la coherencia es alta. No se incluye contextualización del problema.\" That is fine.\n\nNow produce JSON."
+    }
+   }
+  ],
+  "created": 1789700620,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_8b41efc9a3",
+  "usage": {
+   "completion_tokens": 1408,
+   "prompt_tokens": 10080,
+   "total_tokens": 11488,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1262,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.209847998,
+   "prompt_time": 0.503688628,
+   "completion_time": 1.547524983,
+   "total_time": 2.051213611
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7gdnge3xtfgjf5yvekd90",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:03:40.364408+00:00"
+}

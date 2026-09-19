@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-114",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "Conclusión afirma significancia (p<0:05) sin reportar p‑valor ni estadístico; se considera una inconsistencia leve."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":3,\"no_evaluable\":0,\"observaciones\":\"Conclusión afirma significancia (p<0:05) sin reportar p‑valor ni estadístico; se considera una inconsistencia leve.\"}",
+ "usage": {
+  "input_tokens": 10096,
+  "output_tokens": 3131,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 4.516470670700073,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:08:59.818140+00:00",
+ "raw": {
+  "id": "chatcmpl-3659864a-80d4-45ab-83d0-77bffe52b8e3",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":3,\"no_evaluable\":0,\"observaciones\":\"Conclusión afirma significancia (p<0:05) sin reportar p‑valor ni estadístico; se considera una inconsistencia leve.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Influencia de factores sociofamiliares en el grado de información sexual en estudiantes de la I.E.S. Comercial N° 45 'Emilio Romero Padilla, Puno Periodo 2013'\"\n\nResumen: Provided.\n\nWe need to evaluate each field.\n\nFirst, check if it's a valid summary. It seems to be a summary. No missing methodology? It has methodology: \"tipo explicativo con diseño transversal\", population, sample, technique, instrument, analysis, results, conclusion. So it's evaluable.\n\nNow evaluate each dimension.\n\n### D1_imryd_objetivo\n\nDefinition: 1 if can answer \"what was proposed to investigate\" reading only the summary.\n\nThe summary states: \"se realizó con el objetivo de establecer la influencia de los factores socio; familiares en el grado de información sexual.\" So yes, objective is explicit. So D1_imryd_objetivo = 1.\n\n### D1_imryd_metodologia\n\nDefinition: 1 if indicates how knowledge was obtained. Minimum: one concrete procedural indication. The summary says: \"El estudio fue de tipo explicativo con diseño transversal. La poblacíón estüvo constituida por 1200 estudiantes y la muestra por 291 que cursan el 3ro, 4to y 5to de educación secundaria. Para la recolección de datos se aplicó la técnica de la encuesta y como instrumento un cuestionario. El análisis de los datos se realizó en forma porcentual y la contrastación de hipótesis con la prueba estadística Chi Cuadrado.\" So yes, methodology present. So D1_imryd_metodologia = 1.\n\n### D1_imryd_resultados\n\nDefinition: 1 if communicates what was found, not just what was done. The summary says: \"Los resultados fueron: En el 61% de los estudiantes predomina grado de lnformación sexual regular. El 27% dé estudiantes con informacion regular tienen padres en edades de 41 a 50 años de edad, 35% madres en edades de 30 a 40 años, 38% padres casados, 36% y 34% padres con educación secundaria; 33% vive dentro de una familia nuclear; 30% tienen padres que mantienen relaciones regulares, 33% se comunican con sus padres dialogando, del 44% sus padres -son estables a la hora de hacer cumplir las reglas del hogar, del 30% sus padres son permisivos, el 37% tienen confianza con sus padres, ef 48% señalaron que sus padres algunas veces tienen problemas, y del 19% sus padres conversan con ellos en temas de enamoramiento.\" This is a list of percentages. So yes, results present. So D1_imryd_resultados = 1.\n\n### D1_imryd_conclusiones\n\nDefinition: 1 if there is a closure that goes beyond repeating the result: interpretation, implication, answer to objective, recommendation.\n\nThe summary says: \"Por tanto se concluye que: En el factor social grado de instrucción de los padres y factores familiares, la estructura familiar, relación entre los padres, la forma de comunicación entre le padres y el hijo, cumplimiento de reglas en el hogar, confianza entre padres e hijos y frecuencia de problemas en los padres influyen significativamente (p<0:05) en -el grado de informacion sexual de los estudiantes.\"\n\nThis is a conclusion that interprets results and states significance. So yes, D1_imryd_conclusiones = 1.\n\n### D1_orden_logico\n\nDefinition: 1 if components present appear in logical sequence: objective → method → results → conclusion. If 0 or 1 components present, 0. Here we have all four. The order: objective first, then methodology, then results, then conclusion. So D1_orden_logico = 1.\n\n### D2_coherencia\n\nScale 1-5. Evaluate flow. Let's read the summary.\n\n\"El presente trabajo de investigación titulado ... se realizó con el objetivo de establecer la influencia de los factores socio; familiares en el grado de información sexual. El estudio fue de tipo explicativo con diseño transversal. La poblacíón estüvo constituida por 1200 estudiantes y la muestra por 291 que cursan el 3ro, 4to y 5to de educación secundaria. Para la recolección de datos se aplicó la técnica de la encuesta y como instrumento un cuestionario. El análisis de los datos se realizó en forma porcentual y la contrastación de hipótesis con la prueba estadística Chi Cuadrado. Los resultados fueron: En el 61% de los estudiantes predomina grado de lnformación sexual regular. El 27% dé estudiantes con informacion regular tienen padres en edades de 41 a 50 años de edad, 35% madres en edades de 30 a 40 años, 38% padres casados, 36% y 34% padres con educación secundaria; 33% vive dentro de una familia nuclear; 30% tienen padres que mantienen relaciones regulares, 33% se comunican con sus padres dialogando, del 44% sus padres -son estables a la hora de hacer cumplir las reglas del hogar, del 30% sus padres son permisivos, el 37% tienen confianza con sus padres, ef 48% señalaron que sus padres algunas veces tienen problemas, y del 19% sus padres conversan con ellos en temas de enamoramiento. Por tanto se concluye que: En el factor social grado de instrucción de los padres y factores familiares, la estructura familiar, relación entre los padres, la forma de comunicación entre le padres y el hijo, cumplimiento de reglas en el hogar, confianza entre padres e hijos y frecuencia de problemas en los padres influyen significativamente (p<0:05) en -el grado de informacion sexual de los estudiantes.\"\n\nFlow: It starts with objective, then methodology, then results, then conclusion. The transitions are fairly smooth. There is some repetition of \"El 27%...\" etc. The text is a bit long but still coherent. No major jumps. So I'd rate 4 or 5. Let's consider if any issues: The results section is a long list of percentages, but still part of the same paragraph. There's no abrupt shift. The conclusion is a single sentence. So I'd give 5: Progresión impecable. But check for any repeated terms or abrupt changes: The word \"El 27%\" etc. It's all within results. The conclusion is separate. So I'd give 5.\n\nBut we need to consider if there is any adjetivación valorativa or terminological drift. There's no adjetivación like \"minucioso\". There's no terminological drift. So 5.\n\nThus D2_coherencia = 5.\n\n### D3_contextualizacion\n\nDefinition: 1 if summary situates the problem: why it matters, where it occurs, to whom it affects, against what norm or framework.\n\nThe summary starts with objective but does not provide context. It does not explain why it's important, or the significance. It just states objective. So D3_contextualizacion = 0.\n\n### D3_metodo_detallado\n\nDefinition: 1 if at least two precisions about procedure: design, type of study, sample size, sampling technique, instrument named, statistical test, corpus, number of observations, selection criteria.\n\nThe summary includes: design transversal, population 1200, sample 291, technique encuesta, instrument cuestionario, analysis percentages, test Chi Cuadrado. That's at least two. So D3_metodo_detallado = 1.\n\n### D3_resultados_concretos\n\nDefinition: 1 if results provide specific content: figures, magnitudes, categories, relationships with direction.\n\nThe results list percentages: 61% regular, 27% etc. So yes, specific content. So D3_resultados_concretos = 1.\n\n### D3_conclusion_responde\n\nDefinition: 1 if conclusion answers the stated objective. The objective: \"establecer la influencia de los factores socio-familiares en el grado de información sexual\". The conclusion: \"En el factor social grado de instrucción de los padres y factores familiares, la estructura familiar, relación entre los padres, la forma de comunicación entre le padres y el hijo, cumplimiento de reglas en el hogar, confianza entre padres e hijos y frecuencia de problemas en los padres influyen significativamente (p<0:05) en -el grado de informacion sexual de los estudiantes.\" This addresses the objective. So D3_conclusion_responde = 1.\n\n### D4_consistencia\n\nDefinition: 1-5 scale. Evaluate coherence between what summary says it did and what it presents. Check for contradictions.\n\nWe need to see if there are any contradictions. The summary says: \"El análisis de los datos se realizó en forma porcentual y la contrastación de hipótesis con la prueba estadística Chi Cuadrado.\" Then results: percentages. Then conclusion: \"influyen significativamente (p<0:05)\". The results mention percentages but do not provide p-values or chi-square values. The conclusion states significance. But the results didn't provide the chi-square statistic or p-value. However, the conclusion says significance. Is that a contradiction? The summary says \"Los resultados fueron: En el 61% ...\". It doesn't mention p-values. The conclusion says \"influyen significativamente (p<0:05)\". That is a claim of significance but no evidence provided. That could be considered a mild inconsistency: the conclusion claims significance but the results didn't provide evidence. According to the protocol, \"Afirmar diferencias tras reportar p > 0,05\" is a severe error. But here it's the opposite: they claim significance but didn't report p-value. That is a mild inconsistency. According to the \"Catálogo de discordancias\", \"Declarar enfoque mixto y presentar solo resultados cuantitativos\" is 3. \"Declarar diseño correlacional y concluir en términos causales\" is 3. \"Conclusión más amplia que la muestra permite\" is 2-3. \"Afirmar diferencias tras reportar p > 0,05\" is 1. Here we have \"Afirmar diferencias (significancia) sin reportar p-value\". That is not exactly in the list. But it's a mild inconsistency: the conclusion claims significance but no evidence. That might be considered a 3? Or maybe 2? The protocol says \"Afirmar diferencias tras reportar p > 0,05\" is 1. But we have no p-value. So maybe it's a 2: \"Varias discordancias, o la conclusión excede lo que los datos sostienen\". The conclusion says significance but no p-value. That is a mismatch. So I'd assign D4_consistencia = 3? Let's think: The summary says \"Los resultados fueron: En el 61% ...\". It doesn't mention any p-values. The conclusion says \"influyen significativamente (p<0:05)\". That is a claim of significance but no evidence. That is a mild inconsistency. According to the guidelines, \"Declarar enfoque mixto y presentar solo resultados cuantitativos\" is 3. \"Declarar diseño correlacional y concluir en términos causales\" is 3. \"Conclusión más amplia que la muestra permite\" is 2-3. \"Afirmar diferencias tras reportar p > 0,05\" is 1. So this is similar to \"Conclusión más amplia que la muestra permite\" but not exactly. I'd lean to 3: moderate inconsistency. But maybe 2? Let's see: The conclusion is not necessarily more broad than the data; it's just claiming significance. The data didn't provide p-values. So it's a mismatch. I'd give 3.\n\nBut we need to check if the summary includes any contradictory statements. The summary says \"El 61% de los estudiantes predomina grado de lnformación sexual regular.\" Then it lists percentages for various parental characteristics. The conclusion says \"influyen significativamente\". That is consistent with the data: the percentages show relationships. But no p-values. So it's not a direct contradiction. It's a mild inconsistency. So D4_consistencia = 3.\n\n### no_evaluable\n\nSet to 0 because it's a valid summary and has methodology.\n\n### observaciones\n\nWe should include any notes. We might note that the conclusion claims significance without reporting p-values. Also note that the summary uses \"p<0:05\" but uses colon instead of comma. Also note that the summary has some typographical errors but not relevant. We can mention that the conclusion claims significance but no evidence provided. Also mention that the summary is coherent and flows well. But we can keep it concise.\n\nNow produce JSON with all fields.\n\nCheck schema: required fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nAll must be present. Provide integer values or null. We have all values.\n\nLet's produce JSON:\n\n{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 5,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"Conclusión afirma significancia (p<0:05) sin reportar p‑valor ni estadístico; se considera una inconsistencia leve.\"\n}\n\nCheck JSON validity: yes.\n\nReturn only JSON."
+    }
+   }
+  ],
+  "created": 1789700939,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e99e93f2ac",
+  "usage": {
+   "completion_tokens": 3131,
+   "prompt_tokens": 10096,
+   "total_tokens": 13227,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2977,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.29193886,
+   "prompt_time": 0.076457675,
+   "completion_time": 3.392557644,
+   "total_time": 3.469015319
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7t45mepmt1t0dq0f0ca91",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:08:59.818241+00:00"
+}

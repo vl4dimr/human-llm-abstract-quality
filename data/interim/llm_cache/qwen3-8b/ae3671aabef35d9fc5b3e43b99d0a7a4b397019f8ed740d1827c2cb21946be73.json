@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-117",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica y coherente, con una descripción clara de los métodos utilizados y los resultados obtenidos. La conclusión responde directamente al objetivo del estudio. La coherencia organizacional es buena, aunque podría mejorar en la precisión terminológica. La consistencia metodológica es alta, ya que los resultados y la metodología se alinean correctamente."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 1,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica y coherente, con una descripción clara de los métodos utilizados y los resultados obtenidos. La conclusión responde directamente al objetivo del estudio. La coherencia organizacional es buena, aunque podría mejorar en la precisión terminológica. La consistencia metodológica es alta, ya que los resultados y la metodología se alinean correctamente.\"\n}",
+ "usage": {
+  "input_tokens": 10920,
+  "output_tokens": 241,
+  "total_duration_s": 7.4866003
+ },
+ "latency_s": 7.496252775192261,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:41:26.554147+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:41:26.5451419Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 1,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica y coherente, con una descripción clara de los métodos utilizados y los resultados obtenidos. La conclusión responde directamente al objetivo del estudio. La coherencia organizacional es buena, aunque podría mejorar en la precisión terminológica. La consistencia metodológica es alta, ya que los resultados y la metodología se alinean correctamente.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7486600300,
+  "load_duration": 2941900,
+  "prompt_eval_count": 10920,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 360264000,
+  "eval_count": 241,
+  "eval_duration": 7060192000
+ },
+ "cached_at_utc": "2026-09-19T01:41:26.554158+00:00"
+}

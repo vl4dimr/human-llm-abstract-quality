@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-148",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD. La coherencia es 4 debido a que se menciona la significancia estadística, pero no se explica claramente la relación entre las variables. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la incidencia de la solidez financiera en la inversión privada. La consistencia es 3 porque la conclusión menciona que la solidez financiera está sujeta al capital acumulado, políticas prudenciales y potencial macroeconómico, lo cual es coherente con los resultados, pero no se explica completamente cómo."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD. La coherencia es 4 debido a que se menciona la significancia estadística, pero no se explica claramente la relación entre las variables. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la incidencia de la solidez financiera en la inversión privada. La consistencia es 3 porque la conclusión menciona que la solidez financiera está sujeta al capital acumulado, políticas prudenciales y potencial macroeconómico, lo cual es coherente con los resultados, pero no se explica completamente cómo.\"\n}",
+ "usage": {
+  "input_tokens": 10766,
+  "output_tokens": 302,
+  "total_duration_s": 13.8264741
+ },
+ "latency_s": 13.839670896530151,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:13:34.415524+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:13:34.4139745Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD. La coherencia es 4 debido a que se menciona la significancia estadística, pero no se explica claramente la relación entre las variables. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la incidencia de la solidez financiera en la inversión privada. La consistencia es 3 porque la conclusión menciona que la solidez financiera está sujeta al capital acumulado, políticas prudenciales y potencial macroeconómico, lo cual es coherente con los resultados, pero no se explica completamente cómo.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 13826474100,
+  "load_duration": 4870400,
+  "prompt_eval_count": 10766,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 308771000,
+  "eval_count": 302,
+  "eval_duration": 13430529000
+ },
+ "cached_at_utc": "2026-09-19T02:13:34.415544+00:00"
+}

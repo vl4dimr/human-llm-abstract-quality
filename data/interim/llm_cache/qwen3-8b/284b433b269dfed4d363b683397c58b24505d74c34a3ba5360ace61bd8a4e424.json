@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-086",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 2,
+  "no_evaluable": 0,
+  "observaciones": "El resumen menciona el objetivo de identificar los criterios utilizados por los Jueces Penales para establecer el monto indemnizatorio, lo que cumple con el objetivo. La metodología se describe como un enfoque mixto con métodos cualitativos y cuantitativos, lo que se considera suficiente para asignar 1. Los resultados no se comunican concretamente, solo se mencionan los instrumentos utilizados. Las conclusiones no se presentan explícitamente, por lo que se asigna 0. La coherencia es 3 debido a que el texto fluye, pero hay saltos y repeticiones. La contextualización es 0 porque el resumen no explica por qué importa el tema. El método detallado se asigna 1 debido a la descripción de los métodos utilizados. Los resultados concretos son 0 porque no se presentan hallazgos específicos. La conclusión responde es 0 porque no se presenta una conclusión explícita. La consistencia metodológica es 2 debido a que se mencionan métodos pero no se presentan resultados que respalden las conclusiones."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 2,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen menciona el objetivo de identificar los criterios utilizados por los Jueces Penales para establecer el monto indemnizatorio, lo que cumple con el objetivo. La metodología se describe como un enfoque mixto con métodos cualitativos y cuantitativos, lo que se considera suficiente para asignar 1. Los resultados no se comunican concretamente, solo se mencionan los instrumentos utilizados. Las conclusiones no se presentan explícitamente, por lo que se asigna 0. La coherencia es 3 debido a que el texto fluye, pero hay saltos y repeticiones. La contextualización es 0 porque el resumen no explica por qué importa el tema. El método detallado se asigna 1 debido a la descripción de los métodos utilizados. Los resultados concretos son 0 porque no se presentan hallazgos específicos. La conclusión responde es 0 porque no se presenta una conclusión explícita. La consistencia metodológica es 2 debido a que se mencionan métodos pero no se presentan resultados que respalden las conclusiones.\"\n}",
+ "usage": {
+  "input_tokens": 10721,
+  "output_tokens": 409,
+  "total_duration_s": 12.3104388
+ },
+ "latency_s": 12.32071852684021,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:37:10.795190+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:37:10.7855498Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 2,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen menciona el objetivo de identificar los criterios utilizados por los Jueces Penales para establecer el monto indemnizatorio, lo que cumple con el objetivo. La metodología se describe como un enfoque mixto con métodos cualitativos y cuantitativos, lo que se considera suficiente para asignar 1. Los resultados no se comunican concretamente, solo se mencionan los instrumentos utilizados. Las conclusiones no se presentan explícitamente, por lo que se asigna 0. La coherencia es 3 debido a que el texto fluye, pero hay saltos y repeticiones. La contextualización es 0 porque el resumen no explica por qué importa el tema. El método detallado se asigna 1 debido a la descripción de los métodos utilizados. Los resultados concretos son 0 porque no se presentan hallazgos específicos. La conclusión responde es 0 porque no se presenta una conclusión explícita. La consistencia metodológica es 2 debido a que se mencionan métodos pero no se presentan resultados que respalden las conclusiones.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 12310438800,
+  "load_duration": 4078000,
+  "prompt_eval_count": 10721,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 259664000,
+  "eval_count": 409,
+  "eval_duration": 11989676000
+ },
+ "cached_at_utc": "2026-09-19T01:37:10.795203+00:00"
+}

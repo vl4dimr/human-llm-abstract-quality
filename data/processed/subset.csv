@@ -1,0 +1,161 @@
+doc_id,stratum,estrato,tipo,institucion_cod,anio,resumen_palabras
+GT-001,Ciencias Médicas y de la Salud,Ciencias Médicas y de la Salud,bachelorThesis,UANCV,2025,237
+GT-002,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UPEU,2019,145
+GT-003,Ingeniería y Tecnología,Ingeniería y Tecnología,bachelorThesis,UANCV,2025,93
+GT-004,Ciencias Médicas y de la Salud,Ciencias Médicas y de la Salud,bachelorThesis,UPSC,2026,240
+GT-005,Ciencias Agrícolas y Veterinarias,Ciencias Agrícolas y Veterinarias,bachelorThesis,UNAP,2024,276
+GT-006,Ciencias Médicas y de la Salud,Ciencias Médicas y de la Salud,bachelorThesis,UPEU,2020,205
+GT-007,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UPSC,2022,251
+GT-008,Ingeniería y Tecnología,Ingeniería y Tecnología,masterThesis,UNAP,2025,248
+GT-009,Ciencias Agrícolas y Veterinarias,Ciencias Agrícolas y Veterinarias,bachelorThesis,UNAP,2021,393
+GT-010,(sin código FORD),(sin código FORD),bachelorThesis,UNAP,2019,261
+GT-011,Ingeniería y Tecnología,Ingeniería y Tecnología,bachelorThesis,UNAP,2022,219
+GT-012,(sin código FORD),(sin código FORD),bachelorThesis,UNAP,2016,276
+GT-013,Ingeniería y Tecnología,Ingeniería y Tecnología,bachelorThesis,UNAP,2021,281
+GT-014,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UNAP,2023,169
+GT-015,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UPEU,2021,311
+GT-016,(sin código FORD),(sin código FORD),bachelorThesis,UNAP,2018,215
+GT-017,Ciencias Naturales,Ciencias Naturales,bachelorThesis,UNAP,2025,206
+GT-018,Ciencias Agrícolas y Veterinarias,Ciencias Agrícolas y Veterinarias,bachelorThesis,UNAP,2024,213
+GT-019,Ciencias Agrícolas y Veterinarias,Ciencias Agrícolas y Veterinarias,bachelorThesis,UNAP,2025,228
+GT-020,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UPEU,2026,370
+GT-021,Ciencias Agrícolas y Veterinarias,Ciencias Agrícolas y Veterinarias,bachelorThesis,UNAP,2023,342
+GT-022,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UPEU,2024,263
+GT-023,Humanidades y Artes,Humanidades y Artes,bachelorThesis,UPEU,2022,530
+GT-024,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UNAP,2022,251
+GT-025,Ingeniería y Tecnología,Ingeniería y Tecnología,bachelorThesis,UNAP,2021,285
+GT-026,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UPEU,2026,244
+GT-027,Humanidades y Artes,Humanidades y Artes,bachelorThesis,UPEU,2020,226
+GT-028,Ciencias Naturales,Ciencias Naturales,masterThesis,UNAP,2025,246
+GT-029,(sin código FORD),(sin código FORD),bachelorThesis,UNAP,2017,424
+GT-030,Ingeniería y Tecnología,Ingeniería y Tecnología,bachelorThesis,UPEU,2021,293
+GT-031,Ingeniería y Tecnología,Ingeniería y Tecnología,bachelorThesis,UPSC,2022,286
+GT-032,Ciencias Naturales,Ciencias Naturales,bachelorThesis,UNAP,2024,269
+GT-033,Ciencias Naturales,Ciencias Naturales,doctoralThesis,UNAP,2026,249
+GT-034,Ingeniería y Tecnología,Ingeniería y Tecnología,bachelorThesis,UNAP,2021,314
+GT-035,Humanidades y Artes,Humanidades y Artes,bachelorThesis,UNAP,2024,285
+GT-036,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UNAP,2024,264
+GT-037,Ciencias Agrícolas y Veterinarias,Ciencias Agrícolas y Veterinarias,bachelorThesis,UNAP,2020,328
+GT-038,(sin código FORD),(sin código FORD),bachelorThesis,UPEU,2017,176
+GT-039,(sin código FORD),(sin código FORD),masterThesis,UNAP,2016,306
+GT-040,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UPEU,2020,214
+GT-041,Ciencias Agrícolas y Veterinarias,Ciencias Agrícolas y Veterinarias,bachelorThesis,UPEU,2020,134
+GT-042,Ciencias Naturales,Ciencias Naturales,bachelorThesis,UPEU,2021,210
+GT-043,(sin código FORD),(sin código FORD),bachelorThesis,UNAP,2016,265
+GT-044,Ciencias Naturales,Ciencias Naturales,bachelorThesis,UNAP,2025,246
+GT-045,Ingeniería y Tecnología,Ingeniería y Tecnología,bachelorThesis,UPEU,2024,203
+GT-046,Ciencias Naturales,Ciencias Naturales,bachelorThesis,UNAP,2017,229
+GT-047,Ciencias Sociales,Ciencias Sociales,masterThesis,UPEU,2020,189
+GT-048,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UPEU,2022,249
+GT-049,Ciencias Naturales,Ciencias Naturales,bachelorThesis,UNAP,2018,221
+GT-050,Ciencias Sociales,Ciencias Sociales,masterThesis,UNAP,2024,249
+GT-051,Ciencias Médicas y de la Salud,Ciencias Médicas y de la Salud,bachelorThesis,UPEU,2019,246
+GT-052,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UNAP,2025,172
+GT-053,Ciencias Médicas y de la Salud,Ciencias Médicas y de la Salud,bachelorThesis,UPEU,2022,299
+GT-054,Ciencias Sociales,Ciencias Sociales,masterThesis,UNAP,2025,249
+GT-055,Ciencias Agrícolas y Veterinarias,Ciencias Agrícolas y Veterinarias,bachelorThesis,UPEU,2020,266
+GT-056,Humanidades y Artes,Humanidades y Artes,bachelorThesis,UPEU,2021,120
+GT-057,Ciencias Agrícolas y Veterinarias,Ciencias Agrícolas y Veterinarias,bachelorThesis,UNAP,2022,254
+GT-058,Ingeniería y Tecnología,Ingeniería y Tecnología,bachelorThesis,UANCV,2024,228
+GT-059,Ciencias Médicas y de la Salud,Ciencias Médicas y de la Salud,bachelorThesis,UPEU,2017,141
+GT-060,Ciencias Naturales,Ciencias Naturales,bachelorThesis,UPEU,2020,117
+GT-061,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UNAP,2024,245
+GT-062,Ciencias Agrícolas y Veterinarias,Ciencias Agrícolas y Veterinarias,bachelorThesis,UNAP,2021,235
+GT-063,Humanidades y Artes,Humanidades y Artes,bachelorThesis,UANCV,2025,235
+GT-064,Humanidades y Artes,Humanidades y Artes,bachelorThesis,UANCV,2025,120
+GT-065,Ciencias Naturales,Ciencias Naturales,bachelorThesis,UNAP,2019,204
+GT-066,Ingeniería y Tecnología,Ingeniería y Tecnología,bachelorThesis,UANCV,2024,285
+GT-067,Ciencias Agrícolas y Veterinarias,Ciencias Agrícolas y Veterinarias,bachelorThesis,UNAP,2024,207
+GT-068,Ciencias Médicas y de la Salud,Ciencias Médicas y de la Salud,bachelorThesis,UPEU,2020,306
+GT-069,Ciencias Agrícolas y Veterinarias,Ciencias Agrícolas y Veterinarias,masterThesis,UNAP,2022,257
+GT-070,Ciencias Naturales,Ciencias Naturales,bachelorThesis,UNAP,2026,238
+GT-071,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UNAP,2024,274
+GT-072,(sin código FORD),(sin código FORD),bachelorThesis,UNAP,2020,301
+GT-073,Ciencias Médicas y de la Salud,Ciencias Médicas y de la Salud,bachelorThesis,UNAP,2024,274
+GT-074,(sin código FORD),(sin código FORD),bachelorThesis,UNAP,2016,405
+GT-075,(sin código FORD),(sin código FORD),masterThesis,UNAP,2019,232
+GT-076,Ingeniería y Tecnología,Ingeniería y Tecnología,bachelorThesis,UANCV,2025,165
+GT-077,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UNAP,2021,265
+GT-078,Ingeniería y Tecnología,Ingeniería y Tecnología,bachelorThesis,UANCV,2025,180
+GT-079,Ingeniería y Tecnología,Ingeniería y Tecnología,bachelorThesis,UPSC,2023,279
+GT-080,Ciencias Naturales,Ciencias Naturales,bachelorThesis,UNAP,2022,250
+GT-081,(sin código FORD),(sin código FORD),bachelorThesis,UNAP,2017,286
+GT-082,Ciencias Médicas y de la Salud,Ciencias Médicas y de la Salud,bachelorThesis,UPSC,2025,279
+GT-083,Ciencias Médicas y de la Salud,Ciencias Médicas y de la Salud,bachelorThesis,UPEU,2019,221
+GT-084,Ciencias Médicas y de la Salud,Ciencias Médicas y de la Salud,bachelorThesis,UNAP,2024,292
+GT-085,Ingeniería y Tecnología,Ingeniería y Tecnología,bachelorThesis,UNAP,2024,269
+GT-086,Ciencias Sociales,Ciencias Sociales,masterThesis,UANCV,2025,135
+GT-087,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UPSC,2025,268
+GT-088,(sin código FORD),(sin código FORD),bachelorThesis,UNAP,2017,205
+GT-089,(sin código FORD),(sin código FORD),masterThesis,UNAP,2016,196
+GT-090,Ciencias Sociales,Ciencias Sociales,masterThesis,UPEU,2023,266
+GT-091,Ingeniería y Tecnología,Ingeniería y Tecnología,bachelorThesis,UNAP,2021,131
+GT-092,Humanidades y Artes,Humanidades y Artes,bachelorThesis,UANCV,2025,175
+GT-093,Ciencias Médicas y de la Salud,Ciencias Médicas y de la Salud,bachelorThesis,UPEU,2023,246
+GT-094,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UPEU,2023,98
+GT-095,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UANCV,2024,181
+GT-096,(sin código FORD),(sin código FORD),masterThesis,UNAP,2018,277
+GT-097,Ciencias Agrícolas y Veterinarias,Ciencias Agrícolas y Veterinarias,bachelorThesis,UNAP,2023,296
+GT-098,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UPEU,2022,206
+GT-099,(sin código FORD),(sin código FORD),bachelorThesis,UNAP,2019,319
+GT-100,Ciencias Agrícolas y Veterinarias,Ciencias Agrícolas y Veterinarias,bachelorThesis,UNAP,2023,299
+GT-101,(sin código FORD),(sin código FORD),bachelorThesis,UNAP,2016,292
+GT-102,Ciencias Médicas y de la Salud,Ciencias Médicas y de la Salud,doctoralThesis,UNAP,2022,243
+GT-103,Ciencias Médicas y de la Salud,Ciencias Médicas y de la Salud,bachelorThesis,UPEU,2021,159
+GT-104,(sin código FORD),(sin código FORD),bachelorThesis,UNAP,2016,367
+GT-105,Ciencias Agrícolas y Veterinarias,Ciencias Agrícolas y Veterinarias,bachelorThesis,UNAP,2024,196
+GT-106,Humanidades y Artes,Humanidades y Artes,bachelorThesis,UNAP,2023,227
+GT-107,Ciencias Sociales,Ciencias Sociales,doctoralThesis,UPEU,2022,190
+GT-108,Ingeniería y Tecnología,Ingeniería y Tecnología,bachelorThesis,UPEU,2020,167
+GT-109,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UNAP,2022,262
+GT-110,Ciencias Agrícolas y Veterinarias,Ciencias Agrícolas y Veterinarias,bachelorThesis,UNAP,2022,256
+GT-111,Ingeniería y Tecnología,Ingeniería y Tecnología,bachelorThesis,UPEU,2025,191
+GT-112,Humanidades y Artes,Humanidades y Artes,masterThesis,UPEU,2026,201
+GT-113,Ciencias Médicas y de la Salud,Ciencias Médicas y de la Salud,bachelorThesis,UPEU,2023,191
+GT-114,(sin código FORD),(sin código FORD),masterThesis,UNAP,2016,306
+GT-115,Humanidades y Artes,Humanidades y Artes,bachelorThesis,UPEU,2022,181
+GT-116,Ciencias Médicas y de la Salud,Ciencias Médicas y de la Salud,bachelorThesis,UANCV,2024,237
+GT-117,Ingeniería y Tecnología,Ingeniería y Tecnología,bachelorThesis,UNAP,2023,253
+GT-118,Ciencias Sociales,Ciencias Sociales,masterThesis,UANCV,2024,152
+GT-119,(sin código FORD),(sin código FORD),bachelorThesis,UNAP,2016,212
+GT-120,Ingeniería y Tecnología,Ingeniería y Tecnología,bachelorThesis,UANCV,2024,189
+GT-121,(sin código FORD),(sin código FORD),masterThesis,UNAP,2016,375
+GT-122,Ciencias Naturales,Ciencias Naturales,bachelorThesis,UNAP,2024,387
+GT-123,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UNAP,2025,258
+GT-124,(sin código FORD),(sin código FORD),bachelorThesis,UNAP,2017,721
+GT-125,(sin código FORD),(sin código FORD),bachelorThesis,UNAP,2016,304
+GT-126,(sin código FORD),(sin código FORD),bachelorThesis,UNAP,2017,303
+GT-127,Ciencias Médicas y de la Salud,Ciencias Médicas y de la Salud,bachelorThesis,UPEU,2026,250
+GT-128,Ciencias Naturales,Ciencias Naturales,bachelorThesis,UNAP,2024,245
+GT-129,Ciencias Médicas y de la Salud,Ciencias Médicas y de la Salud,bachelorThesis,UNAP,2022,272
+GT-130,Ciencias Médicas y de la Salud,Ciencias Médicas y de la Salud,masterThesis,UPEU,2025,328
+GT-131,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UNAP,2026,161
+GT-132,Ciencias Agrícolas y Veterinarias,Ciencias Agrícolas y Veterinarias,bachelorThesis,UNAP,2021,351
+GT-133,Ciencias Naturales,Ciencias Naturales,bachelorThesis,UNAP,2022,235
+GT-134,Humanidades y Artes,Humanidades y Artes,bachelorThesis,UNAP,2024,206
+GT-135,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UPEU,2017,212
+GT-136,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UNAP,2023,300
+GT-137,(sin código FORD),(sin código FORD),bachelorThesis,UNAP,2018,488
+GT-138,(sin código FORD),(sin código FORD),bachelorThesis,UNAP,2020,267
+GT-139,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UPEU,2024,176
+GT-140,Ciencias Sociales,Ciencias Sociales,masterThesis,UNAP,2022,231
+GT-141,(sin código FORD),(sin código FORD),bachelorThesis,UNAP,2020,271
+GT-142,Ingeniería y Tecnología,Ingeniería y Tecnología,bachelorThesis,UPEU,2024,226
+GT-143,Ingeniería y Tecnología,Ingeniería y Tecnología,bachelorThesis,UPEU,2020,248
+GT-144,Ciencias Naturales,Ciencias Naturales,bachelorThesis,UNAP,2018,202
+GT-145,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UNAP,2023,234
+GT-146,Ingeniería y Tecnología,Ingeniería y Tecnología,bachelorThesis,UNAP,2023,352
+GT-147,Ciencias Agrícolas y Veterinarias,Ciencias Agrícolas y Veterinarias,bachelorThesis,UNAP,2024,251
+GT-148,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UANCV,2025,163
+GT-149,Ingeniería y Tecnología,Ingeniería y Tecnología,bachelorThesis,UNAP,2022,224
+GT-150,Ciencias Médicas y de la Salud,Ciencias Médicas y de la Salud,bachelorThesis,UNAP,2021,209
+GT-151,(sin código FORD),(sin código FORD),bachelorThesis,UNAP,2017,471
+GT-152,Ingeniería y Tecnología,Ingeniería y Tecnología,bachelorThesis,UNAP,2026,223
+GT-153,Ciencias Médicas y de la Salud,Ciencias Médicas y de la Salud,bachelorThesis,UPEU,2023,202
+GT-154,(sin código FORD),(sin código FORD),bachelorThesis,UPEU,2017,198
+GT-155,Ingeniería y Tecnología,Ingeniería y Tecnología,bachelorThesis,UPEU,2019,141
+GT-156,(sin código FORD),(sin código FORD),masterThesis,UNAP,2018,239
+GT-157,(sin código FORD),(sin código FORD),bachelorThesis,UNAP,2019,137
+GT-158,Ciencias Médicas y de la Salud,Ciencias Médicas y de la Salud,bachelorThesis,UPSC,2025,221
+GT-159,Humanidades y Artes,Humanidades y Artes,masterThesis,UPEU,2024,223
+GT-160,Ciencias Sociales,Ciencias Sociales,bachelorThesis,UNAP,2024,183

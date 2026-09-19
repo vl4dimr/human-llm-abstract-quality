@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-102",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen presenta los cuatro componentes en orden lógico y coherente. No incluye contextualización del problema, pero la conclusión responde al objetivo y no hay contradicciones metodológicas."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta los cuatro componentes en orden lógico y coherente. No incluye contextualización del problema, pero la conclusión responde al objetivo y no hay contradicciones metodológicas.\"}",
+ "usage": {
+  "input_tokens": 10025,
+  "output_tokens": 1778
+ },
+ "latency_s": 3.5027248859405518,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:07:37.186389+00:00",
+ "raw": {
+  "id": "chatcmpl-58b74008-b2d9-474c-a8d5-31658200826c",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta los cuatro componentes en orden lógico y coherente. No incluye contextualización del problema, pero la conclusión responde al objetivo y no hay contradicciones metodológicas.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Relación del patrón queiloscópico con el tipo facial y la proporción áurea en estudiantes de origen andino de la Universidad Nacional del Altiplano - Puno. 2019\"\n\nSummary: (Spanish)\n\n\"La presente investigación tuvo como objetivo relacionar el patrón queiloscópico con el tipo facial y la proporción áurea en estudiantes de la Universidad Nacional del Altiplano de Puno. Fue un estudio relacional, transversal y observacional; la muestra estuvo conformada por 157 estudiantes de ambos sexos de las etnias quechua y aimara a quienes se registraron las medidas faciales, grosor labial, disposición de comisuras e impresión de las huellas de ambos labios, estas últimas se obtuvieron con la técnica del lápiz labial y cinta adhesiva; el análisis de las huellas se realizó con la clasificación de Suzuki y Tsuchihashi, utilizando una lupa de aumento. Los datos fueron analizados con la prueba Chi- cuadrado de Pearson, y procesados con el software SPSS v. 24, con un nivel de significancia de 0.05 o 5%. Los resultados indican a los patrones labiales tipo I y II como los más frecuentes seguidos de los tipos III, V, I’; el tipo IV fue el menos frecuente; encontrándose relacion con el sexo y la etnia; las comisuras con disposición horizontal se relacionaron con mujeres leptoprosopas y mesoprosopas, mientras que en hombres leptoprosopos fueron más frecuentes las comisuras abatidas y en mesoprosopos las horizontales, los labios  gruesos se relacionaron con hombres leptoprosopos y los medianos con mujeres mesoprosopas, el cumplimiento de la proporción áurea fue muy reducida. Se concluye que se encontró relación entre el patrón queiloscópico y el tipo facial pero no con la proporción áurea facial de los estudiantes.\"\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 1 if objective present. Yes: \"tuvo como objetivo relacionar el patrón queiloscópico con el tipo facial y la proporción áurea\". So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. Yes: \"Fue un estudio relacional, transversal y observacional; la muestra estuvo conformada por 157 estudiantes ... se registraron ... se obtuvieron ... el análisis de las huellas se realizó con la clasificación ... utilizando una lupa de aumento. Los datos fueron analizados con la prueba Chi-cuadrado de Pearson, y procesados con el software SPSS v. 24, con un nivel de significancia de 0.05 o 5%.\" So 1.\n\n- D1_imryd_resultados: 1 if results present. Yes: \"Los resultados indican a los patrones labiales tipo I y II ... el tipo IV fue el menos frecuente; encontrándose relacion con el sexo y la etnia; las comisuras con disposición horizontal se relacionaron con mujeres ...\". So 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. Yes: \"Se concluye que se encontró relación entre el patrón queiloscópico y el tipo facial pero no con la proporción áurea facial de los estudiantes.\" So 1.\n\n- D1_orden_logico: 1 if components present in logical order. The order: objective, methodology, results, conclusion. Yes. So 1.\n\n- D2_coherencia: 1-5. Evaluate flow. Let's analyze. The summary flows: objective, then methodology, then results, then conclusion. The text is fairly coherent. Some long sentences but overall flow is okay. Might be 4 or 5. Let's examine: The summary starts with objective, then methodology: \"Fue un estudio relacional, transversal y observacional; la muestra estuvo conformada por 157 estudiantes ...\". Then details of measurements, classification, analysis. Then results: \"Los resultados indican a los patrones labiales tipo I y II ...\". Then conclusion. The flow is logical. There is no abrupt jump. So I'd give 5. But check for any issues: The methodology part is long but still flows. No contradictions. So D2_coherencia = 5.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where, to whom, etc. The summary does not mention why it's important, or the context beyond the location. It just states objective. So 0.\n\n- D3_metodo_detallado: 1 if at least two precisions. We have: \"estudio relacional, transversal y observacional\" (design), \"muestra de 157 estudiantes\" (n), \"medidas faciales, grosor labial, disposición de comisuras e impresión de las huellas de ambos labios\" (instrument details), \"clasificación de Suzuki y Tsuchihashi\" (instrument), \"utilizando una lupa de aumento\" (instrument), \"prueba Chi-cuadrado de Pearson\" (statistical test), \"software SPSS v. 24\" (software). So definitely >2. So 1.\n\n- D3_resultados_concretos: 1 if results provide specific content: yes: \"Los resultados indican a los patrones labiales tipo I y II ... el tipo IV fue el menos frecuente; encontrándose relacion con el sexo y la etnia; las comisuras con disposición horizontal se relacionaron con mujeres leptoprosopas y mesoprosopas, ... el cumplimiento de la proporción áurea fue muy reducida.\" So yes. 1.\n\n- D3_conclusion_responde: 1 if conclusion answers the objective. Objective: relate pattern with facial type and golden proportion. Conclusion: \"Se concluye que se encontró relación entre el patrón queiloscópico y el tipo facial pero no con la proporción áurea facial de los estudiantes.\" That addresses the objective: yes. So 1.\n\n- D4_consistencia: 1-5. Consistency between what is said and what is presented. Let's check for contradictions. The methodology says \"prueba Chi-cuadrado de Pearson\" and significance 0.05. The results mention relationships but no p-values. No contradictions. The conclusion says no relation with golden proportion. That matches results: \"el cumplimiento de la proporción áurea fue muy reducida.\" So no contradictions. So D4_consistencia = 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes. We can note that the summary is coherent, no contradictions, but no contextualization. Also mention that the conclusion is consistent. Provide a brief note.\n\nThus JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Resumen presenta los cuatro componentes en orden lógico y coherente. No incluye contextualización del problema, pero la conclusión responde al objetivo y no hay contradicciones metodológicas.\"\n}\n\nCheck schema: all fields present. Types: integers or null. Observaciones string. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789700856,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_63473661d7",
+  "usage": {
+   "completion_tokens": 1778,
+   "prompt_tokens": 10025,
+   "total_tokens": 11803,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1620,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.303719801,
+   "prompt_time": 0.588320388,
+   "completion_time": 1.821555342,
+   "total_time": 2.40987573
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7qme3eepvn2njyb3wq0yj",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:07:37.186456+00:00"
+}

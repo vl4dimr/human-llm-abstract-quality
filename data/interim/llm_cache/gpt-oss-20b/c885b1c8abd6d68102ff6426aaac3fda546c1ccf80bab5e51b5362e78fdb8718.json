@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-064",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": null,
+  "no_evaluable": 0,
+  "observaciones": "El resumen indica un objetivo implícito y menciona análisis y progreso, pero carece de descripción de la metodología, no presenta resultados ni conclusiones. La secuencia de ideas es algo fragmentada, con varios conceptos sin transición clara."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":0,\"D2_coherencia\":3,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":0,\"observaciones\":\"El resumen indica un objetivo implícito y menciona análisis y progreso, pero carece de descripción de la metodología, no presenta resultados ni conclusiones. La secuencia de ideas es algo fragmentada, con varios conceptos sin transición clara.\"}",
+ "usage": {
+  "input_tokens": 9794,
+  "output_tokens": 1607,
+  "cache_read_tokens": 9728
+ },
+ "latency_s": 2.6401944160461426,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:21:55.454944+00:00",
+ "raw": {
+  "id": "chatcmpl-d47bc000-3a70-479f-a990-e1b8bb368fab",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":0,\"D2_coherencia\":3,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":0,\"observaciones\":\"El resumen indica un objetivo implícito y menciona análisis y progreso, pero carece de descripción de la metodología, no presenta resultados ni conclusiones. La secuencia de ideas es algo fragmentada, con varios conceptos sin transición clara.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We have to annotate. Let's read the protocol and identify fields.\n\nWe need to produce JSON with the required fields. No other keys. Must be compact. Fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nWe need to decide for each.\n\nSummary:\n\n\"El proyecto de indagación da conocer el análisis, metodología y progreso de 'generación de un conjunto habitacional para la reactivación del entorno urbano en la ciudad', la necesidad de definir nuevos parámetros de diseño para la vivienda contemporánea. La vivienda no es solo un elemento de cobijo y protección: es la materialización de la casa como unidad dinámica que interpela a quienes la habitan, contribuye a la ciudad no solo como lugar de residencia, sino también como lugar de uso y sensibilidad. dirección. el contexto concreta los espacios de este proyecto de vivienda colectiva, a priori muy simple pero muy complejo, donde la luz natural, la arquitectura, la naturaleza y las vistas brindan a los usuarios la comodidad del hogar.\"\n\nThis is a summary but seems more like a description of a project. We need to evaluate components.\n\n1. Objective: \"El proyecto de indagación da conocer el análisis, metodología y progreso de 'generación de un conjunto habitacional para la reactivación del entorno urbano en la ciudad', la necesidad de definir nuevos parámetros de diseño para la vivienda contemporánea.\" The phrase says the project aims to \"da conocer el análisis, metodología y progreso\" and to \"definir nuevos parámetros de diseño\". Is that the objective? There's some statement but might not be explicit \"objetivo\". But there is an objective: to \"definir nuevos parámetros de diseño\". It's present. So D1_imryd_objetivo = 1.\n\n2. Methodology: The summary mentions \"análisis, metodología y progreso\". But no details. It says \"el proyecto de indagación da conocer el análisis, metodología y progreso de …\". It doesn't specify what methods, how the data collected or studied. So method is not specified concretely. So D1_imryd_metodologia = 0.\n\n3. Results: No results. The summary mentions \"progreso\" but no numbers, no findings. So D1_imryd_resultados = 0.\n\n4. Conclusions: None. There's no closure or implications. So D1_imryd_conclusiones = 0.\n\n5. Order: The components present: objective present? methodology not present, results not present, conclusions not present. We have only objective. According to rule: If 0 or 1 components present, D1_orden_logico = 0. So 0.\n\n6. D2_coherencia: How coherent is the flow? The summary: \"El proyecto de indagación da conocer el análisis, metodología y progreso ... la necesidad de definir nuevos parámetros ... La vivienda no es solo ... Contribuye a la ciudad ... dirección. el contexto concreta los espacios ...\". The flow is a bit disjointed, but still somewhat coherent. We can rate. The descriptors: 5: immaculate. 4: flows well with minor glitch. 3: understandable but some jumps. 2: need to reread to reconstruct. 1: incoherent. This seems somewhat understandable but with some jumps: first sentence about the project, then about what the project is, then about the nature of the house. Probably 3. So D2_coherencia = 3.\n\n7. D3_contextualizacion: Does the summary situate the problem: why it's important, where it occurs, to whom it affects, etc. It says \"para la reactivación del entorno urbano en la ciudad\" and describes the housing. It doesn't talk about why important, the context of reactivación. But it says \"contribuye a la ciudad\". It kind of situates. The summary states the context of the project but not much about significance. The rule says: \"Vale 1 cuando el resumen sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco se contrasta.\" The summary says \"para la reactivación del entorno urbano\" which indicates the problem is urban reactivation. But it's more of a description of the project. There's no explicit statement of importance. So maybe 0. I think 0.\n\n8. D3_metodo_detallado: We have no details. So 0.\n\n9. D3_resultados_concretos: None. So 0.\n\n10. D3_conclusion_responde: None. So 0.\n\n11. D4_consistencia: Since no methodology and no results, can't evaluate. So D4_consistencia = \"no_evaluable\" must be 1 and D4 field blank? Wait the schema expects D4_consistencia as enum 1-5 or null. But no_evaluable indicates not a summary. But we do have a summary; but D4_consistencia not evaluable because no methodology. In the protocol: \"If the summary does not declare any methodology, D4 cannot be evaluated: set no_evaluable = 1 and leave D4 empty.\" The JSON schema: D4_consistencia can be null. So we set D4_consistencia = null.\n\nno_evaluable: The text is a summary? It's a summary. So no_evaluable = 0. Wait but the instruction says: \"If the summary is not a summary (like cover, license etc.) then no_evaluable=1 and all fields empty.\" We have a summary, so no_evaluable=0.\n\nobservaciones: We might add notes: mention that methodology absent, results absent. Also maybe note the lack of objective clarity. We'll write.\n\nLet's produce JSON.\n\nWe must include all required fields: yes.\n\nSet values:\n\n- D1_imryd_objetivo: 1\n- D1_imryd_metodologia: 0\n- D1_imryd_resultados: 0\n- D1_imryd_conclusiones: 0\n- D1_orden_logico: 0\n- D2_coherencia: 3\n- D3_contextualizacion: 0\n- D3_metodo_detallado: 0\n- D3_resultados_concretos: 0\n- D3_conclusion_responde: 0\n- D4_consistencia: null\n- no_evaluable: 0\n- observaciones: string.\n\nLet's craft observaciones: \"El resumen presenta un objetivo implícito pero sin metodología concreta, sin resultados, sin conclusión. La estructura de la información es algo fragmentada, con varias ideas sin transición clara.\"\n\nOk produce compact JSON.\n\n"
+    }
+   }
+  ],
+  "created": 1789701715,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_a4315eb300",
+  "usage": {
+   "completion_tokens": 1607,
+   "prompt_tokens": 9794,
+   "total_tokens": 11401,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1434,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9728,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.24190596,
+   "prompt_time": 0.032292991,
+   "completion_time": 1.692313111,
+   "total_time": 1.724606102
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8hvcye73v9n5xmjpkwkjh",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:21:55.455038+00:00"
+}

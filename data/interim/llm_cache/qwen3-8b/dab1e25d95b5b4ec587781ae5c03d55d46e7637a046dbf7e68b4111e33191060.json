@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-102",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD correctamente. En la dimensión 2, se observa una ligera aspereza en la transición entre los resultados y las conclusiones, lo que le resta un punto. En la dimensión 4, la conclusión menciona una relación entre el patrón queiloscópico y el tipo facial, lo cual está respaldado por los resultados, pero no se menciona claramente la relación con la proporción áurea, lo que le resta un punto."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. En la dimensión 2, se observa una ligera aspereza en la transición entre los resultados y las conclusiones, lo que le resta un punto. En la dimensión 4, la conclusión menciona una relación entre el patrón queiloscópico y el tipo facial, lo cual está respaldado por los resultados, pero no se menciona claramente la relación con la proporción áurea, lo que le resta un punto.\"\n}",
+ "usage": {
+  "input_tokens": 10912,
+  "output_tokens": 272,
+  "total_duration_s": 8.8418395
+ },
+ "latency_s": 8.853189706802368,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:32:42.852494+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:32:42.8426604Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. En la dimensión 2, se observa una ligera aspereza en la transición entre los resultados y las conclusiones, lo que le resta un punto. En la dimensión 4, la conclusión menciona una relación entre el patrón queiloscópico y el tipo facial, lo cual está respaldado por los resultados, pero no se menciona claramente la relación con la proporción áurea, lo que le resta un punto.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8841839500,
+  "load_duration": 4355700,
+  "prompt_eval_count": 10912,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 406443000,
+  "eval_count": 272,
+  "eval_duration": 8329736999
+ },
+ "cached_at_utc": "2026-09-19T02:32:42.852504+00:00"
+}

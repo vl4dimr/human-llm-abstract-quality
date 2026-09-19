@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-028",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 9970,
+  "output_tokens": 1682
+ },
+ "latency_s": 3.3201522827148438,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T02:58:32.169295+00:00",
+ "raw": {
+  "id": "chatcmpl-83f8d84f-483a-4d3f-a0bf-d5dd5e1d787d",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Mejora de habilidades conversacionales en el idioma inglés mediante Large Language Models en estudiantes de 15 a 17 años\"\n\nSummary:\n\n\"El aprendizaje del inglés como segunda lengua presenta desafíos considerables, particularmente en la adquisición de habilidades conversacionales efectivas. En el presente trabajo se investigó cómo un Modelo de Lenguaje de Gran Tamaño traducido al inglés como Large Laguage Model (LLM) basado en inteligencia artificial como ChatGPT mejora el aprendizaje del idioma inglés en estudiantes de 15 a 17 años. El objetivo general de la investigación fue evaluar si los LLMs basados en IA como ChatGPT mejoran la adquisición de habilidades conversacionales en inglés en comparación con métodos tradicionales de aprendizaje en estudiantes de 15 a 17 años en el Colegio de Alto Rendimiento de la región Moquegua, año 2024. Se utilizó una metodología con enfoque cuantitativo de nivel explicativo aplicada y diseño descriptivo comparativo. Los instrumentos de recolección de datos fueron cuestionarios y tests. Para la comprobación de hipótesis se utilizó la prueba T de Student. Se obtuvo como resultado un incremento en la media de 6,49 en el grupo intervenido con un modelo estructurado de uso de LLMs basados en IA como ChatGPT y un incremento de 2,02 en el grupo con el método tradicional. Asimismo, se estableció el nivel percibido del contexto de desarrollo en ambos grupos. Se concluye que los LLMs basados en IA como ChatGPT mejoran significativamente la adquisición de habilidades conversacionales en el idioma inglés en comparación con métodos tradicionales de aprendizaje. También, se resalta la importancia de un contexto adecuado para el uso de LLMs basados en IA como ChatGPT.\"\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 1 if objective present. The summary explicitly states: \"El objetivo general de la investigación fue evaluar si los LLMs basados en IA como ChatGPT mejoran la adquisición de habilidades conversacionales en inglés en comparación con métodos tradicionales de aprendizaje en estudiantes de 15 a 17 años en el Colegio de Alto Rendimiento de la región Moquegua, año 2024.\" So yes, 1.\n\n- D1_imryd_metodologia: 1 if methodology present. The summary says: \"Se utilizó una metodología con enfoque cuantitativo de nivel explicativo aplicada y diseño descriptivo comparativo. Los instrumentos de recolección de datos fueron cuestionarios y tests. Para la comprobación de hipótesis se utilizó la prueba T de Student.\" So yes, 1.\n\n- D1_imryd_resultados: 1 if results present. The summary says: \"Se obtuvo como resultado un incremento en la media de 6,49 en el grupo intervenido con un modelo estructurado de uso de LLMs basados en IA como ChatGPT y un incremento de 2,02 en el grupo con el método tradicional. Asimismo, se estableció el nivel percibido del contexto de desarrollo en ambos grupos.\" So yes, 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. The summary says: \"Se concluye que los LLMs basados en IA como ChatGPT mejoran significativamente la adquisición de habilidades conversacionales en el idioma inglés en comparación con métodos tradicionales de aprendizaje. También, se resalta la importancia de un contexto adecuado para el uso de LLMs basados en IA como ChatGPT.\" So yes, 1.\n\n- D1_orden_logico: 1 if components present in logical order. The order: objective, methodology, results, conclusion. Yes, it's in that order. So 1.\n\n- D2_coherencia: scale 1-5. We need to evaluate flow. Let's read: The summary starts with context: \"El aprendizaje del inglés como segunda lengua presenta desafíos considerables, particularmente en la adquisición de habilidades conversacionales efectivas.\" Then \"En el presente trabajo se investigó cómo un Modelo de Lenguaje de Gran Tamaño ...\". Then objective. Then methodology. Then results. Then conclusion. The flow seems coherent. There's no abrupt jumps. The first sentence sets context, then objective, then methodology, results, conclusion. So I'd rate 5. But check for any adverbial or repeated terms. There's no major issues. So D2_coherencia = 5.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where, to whom, etc. The summary starts with \"El aprendizaje del inglés como segunda lengua presenta desafíos considerables, particularmente en la adquisición de habilidades conversacionales efectivas.\" That situates the problem: challenges in learning English as a second language, especially conversational skills. So yes, 1.\n\n- D3_metodo_detallado: 1 if at least two precisions about procedure. The summary gives: \"Se utilizó una metodología con enfoque cuantitativo de nivel explicativo aplicada y diseño descriptivo comparativo. Los instrumentos de recolección de datos fueron cuestionarios y tests. Para la comprobación de hipótesis se utilizó la prueba T de Student.\" That's at least 3 precisions: design, instruments, statistical test. So 1.\n\n- D3_resultados_concretos: 1 if results provide specific content: numbers, categories, etc. The summary gives: \"incremento en la media de 6,49 en el grupo intervenido ... y un incremento de 2,02 en el grupo con el método tradicional.\" That's concrete. So 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to the objective. The objective: evaluate if LLMs improve acquisition of conversational skills compared to traditional methods. The conclusion: \"Se concluye que los LLMs basados en IA como ChatGPT mejoran significativamente la adquisición de habilidades conversacionales en el idioma inglés en comparación con métodos tradicionales de aprendizaje.\" That directly responds. So 1.\n\n- D4_consistencia: scale 1-5. We need to check consistency between what is said and what is presented. The summary says: objective, methodology, results, conclusion. The conclusion states improvement. The results show improvement. So consistent. No contradictions. So D4_consistencia = 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes? We can add a note about the summary being coherent, no issues. But we can leave empty string or a note. The schema requires string. We can provide an empty string or a note. It's safer to provide an empty string. But maybe we can add a note: \"No issues.\" But it's optional. Let's provide an empty string.\n\nThus JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"\"\n}\n\nCheck schema: all required fields present. All values are integers or null. Observaciones string. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789700311,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_9b8528b477",
+  "usage": {
+   "completion_tokens": 1682,
+   "prompt_tokens": 9970,
+   "total_tokens": 11652,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1556,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.244244218,
+   "prompt_time": 0.673603707,
+   "completion_time": 2.002145858,
+   "total_time": 2.6757495650000003
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s76zy9eqja499e4h0ja6k1",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T02:58:32.169385+00:00"
+}

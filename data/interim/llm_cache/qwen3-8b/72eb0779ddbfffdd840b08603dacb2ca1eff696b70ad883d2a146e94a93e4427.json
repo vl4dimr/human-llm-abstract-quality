@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-003",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen describe el objetivo y la metodología, pero no presenta resultados concretos ni conclusiones que respondan al objetivo. La coherencia es moderada debido a la falta de detalles en los resultados y conclusiones."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen describe el objetivo y la metodología, pero no presenta resultados concretos ni conclusiones que respondan al objetivo. La coherencia es moderada debido a la falta de detalles en los resultados y conclusiones.\"\n}",
+ "usage": {
+  "input_tokens": 10624,
+  "output_tokens": 202,
+  "total_duration_s": 6.1424783
+ },
+ "latency_s": 6.15264892578125,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:25:26.296379+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:25:26.2869106Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen describe el objetivo y la metodología, pero no presenta resultados concretos ni conclusiones que respondan al objetivo. La coherencia es moderada debido a la falta de detalles en los resultados y conclusiones.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 6142478300,
+  "load_duration": 4596600,
+  "prompt_eval_count": 10624,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 194800000,
+  "eval_count": 202,
+  "eval_duration": 5871210000
+ },
+ "cached_at_utc": "2026-09-19T01:25:26.296392+00:00"
+}

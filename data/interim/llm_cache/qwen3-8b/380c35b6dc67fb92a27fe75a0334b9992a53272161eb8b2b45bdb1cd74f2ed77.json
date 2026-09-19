@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-064",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 0,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 2,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 1,
+  "no_evaluable": 0,
+  "observaciones": "El resumen no presenta los componentes IMRyD (objetivo, metodología, resultados, conclusiones) de manera explícita. La coherencia organizacional es baja debido a la falta de una progresión clara y la presencia de ideas desordenadas. La contextualización es nula ya que no se explica por qué es importante el proyecto. No hay metodología detallada ni resultados concretos. La conclusión no responde al objetivo enunciado. La consistencia metodológica es baja debido a la falta de coherencia entre lo declarado y lo presentado."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 0,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 2,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 1,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen no presenta los componentes IMRyD (objetivo, metodología, resultados, conclusiones) de manera explícita. La coherencia organizacional es baja debido a la falta de una progresión clara y la presencia de ideas desordenadas. La contextualización es nula ya que no se explica por qué es importante el proyecto. No hay metodología detallada ni resultados concretos. La conclusión no responde al objetivo enunciado. La consistencia metodológica es baja debido a la falta de coherencia entre lo declarado y lo presentado.\"\n}",
+ "usage": {
+  "input_tokens": 10662,
+  "output_tokens": 282,
+  "total_duration_s": 8.8223393
+ },
+ "latency_s": 8.83674931526184,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:26:55.109541+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:26:55.0987179Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 0,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 2,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 1,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen no presenta los componentes IMRyD (objetivo, metodología, resultados, conclusiones) de manera explícita. La coherencia organizacional es baja debido a la falta de una progresión clara y la presencia de ideas desordenadas. La contextualización es nula ya que no se explica por qué es importante el proyecto. No hay metodología detallada ni resultados concretos. La conclusión no responde al objetivo enunciado. La consistencia metodológica es baja debido a la falta de coherencia entre lo declarado y lo presentado.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8822339300,
+  "load_duration": 8864100,
+  "prompt_eval_count": 10662,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 190902000,
+  "eval_count": 282,
+  "eval_duration": 8520678000
+ },
+ "cached_at_utc": "2026-09-19T02:26:55.109551+00:00"
+}

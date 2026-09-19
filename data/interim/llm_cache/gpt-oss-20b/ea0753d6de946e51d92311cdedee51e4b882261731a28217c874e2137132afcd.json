@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-155",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen sin conclusión explícita; falta contextualización del problema; flujo coherente con ligera repetición de verbos."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin conclusión explícita; falta contextualización del problema; flujo coherente con ligera repetición de verbos.\"}",
+ "usage": {
+  "input_tokens": 9846,
+  "output_tokens": 1741,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.357142210006714,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:14:12.602825+00:00",
+ "raw": {
+  "id": "chatcmpl-b63b7890-ae74-4a7b-8931-4bac52ac011b",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin conclusión explícita; falta contextualización del problema; flujo coherente con ligera repetición de verbos.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Influencia de la incorporación de fibra de bagazo de caña de azúcar en la resistencia del concreto f´c = 210 Kg/cm2\"\n\nResumen: \n\"La influencia de la fibra Bagazo de Caña de Azúcar (Saccharum officinarum), en la resistencia mecánica del concreto, para ello se realizó el diseño de mezcla según a las normas vigentes. En el presente trabajo se realizó la preparación con el material compuesto de fibra de bagazo de caña y concreto. Se examina la incidencia del tamaño y la adición natural de fibras expresadas en porcentaje, las propiedades con respecto a la resistencia a compresión del material. Este artículo realizado de concreto con fibra vegetal y con una adición entre el 0.5, 1.0 y 1.5% de fibras en relación al peso del agregado grueso, nos dio una resistencia máxima de 64.8 kg/ cm², con una adición de 0.5 % de fibra vegetal, a los 7 días como resultado se obtuvo por debajo de la resistencia del patrón de 134.4 kg/ cm².\"\n\nWe need to evaluate each field.\n\nFirst, check if it's a valid summary. It seems to be a summary. No missing methodology? Let's analyze.\n\nD1_imryd_objetivo: Does the summary state what was proposed to investigate? It says: \"La influencia de la fibra Bagazo de Caña de Azúcar (Saccharum officinarum), en la resistencia mecánica del concreto\". That is the objective: to investigate the influence of bagasse fiber on concrete compressive strength. So yes, objective present. So D1_imryd_objetivo = 1.\n\nD1_imryd_metodologia: Does it indicate how they obtained knowledge? It says: \"se realizó el diseño de mezcla según a las normas vigentes\" and \"se realizó la preparación con el material compuesto de fibra de bagazo de caña y concreto.\" Also \"Se examina la incidencia del tamaño y la adición natural de fibras expresadas en porcentaje, las propiedades con respecto a la resistencia a compresión del material.\" So yes, methodology present. So D1_imryd_metodologia = 1.\n\nD1_imryd_resultados: Does it communicate what was found? It says: \"nos dio una resistencia máxima de 64.8 kg/ cm², con una adición de 0.5 % de fibra vegetal, a los 7 días como resultado se obtuvo por debajo de la resistencia del patrón de 134.4 kg/ cm².\" So yes, results present. So D1_imryd_resultados = 1.\n\nD1_imryd_conclusiones: Does it have a closure that goes beyond repeating results? It doesn't explicitly say \"conclusion\" but the last sentence says \"a los 7 días como resultado se obtuvo por debajo de la resistencia del patrón de 134.4 kg/ cm².\" That is a result, not a conclusion. There's no explicit conclusion. So D1_imryd_conclusiones = 0.\n\nD1_orden_logico: Are the components present in logical order? The summary starts with objective, then methodology, then results. There's no conclusion. So the present components are objective, methodology, results. They appear in that order. So D1_orden_logico = 1.\n\nD2_coherencia: Evaluate flow. Let's read: \"La influencia de la fibra Bagazo de Caña de Azúcar (Saccharum officinarum), en la resistencia mecánica del concreto, para ello se realizó el diseño de mezcla según a las normas vigentes. En el presente trabajo se realizó la preparación con el material compuesto de fibra de bagazo de caña y concreto. Se examina la incidencia del tamaño y la adición natural de fibras expresadas en porcentaje, las propiedades con respecto a la resistencia a compresión del material. Este artículo realizado de concreto con fibra vegetal y con una adición entre el 0.5, 1.0 y 1.5% de fibras en relación al peso del agregado grueso, nos dio una resistencia máxima de 64.8 kg/ cm², con una adición de 0.5 % de fibra vegetal, a los 7 días como resultado se obtuvo por debajo de la resistencia del patrón de 134.4 kg/ cm².\"\n\nFlow: It's fairly coherent. Some repetition: \"se realizó\" repeated. But overall, it's a single paragraph. I'd rate 4 maybe. Let's think: 5 is impeccable, 4 is good but some minor aspereza. There's some repetition but not major. I'd give 4.\n\nD3_contextualizacion: Does it situate the problem? It says \"La influencia de la fibra Bagazo de Caña de Azúcar ... en la resistencia mecánica del concreto\". It doesn't explain why it's important, where it occurs, or to whom it affects. So D3_contextualizacion = 0.\n\nD3_metodo_detallado: At least two precisions. It says \"diseño de mezcla según a las normas vigentes\" (design). \"preparación con el material compuesto de fibra de bagazo de caña y concreto\" (material). \"incidencia del tamaño y la adición natural de fibras expresadas en porcentaje\" (size and addition). \"adición entre el 0.5, 1.0 y 1.5% de fibras en relación al peso del agregado grueso\" (percentage). So yes, at least two precisions. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: It gives concrete results: \"resistencia máxima de 64.8 kg/ cm², con una adición de 0.5 % de fibra vegetal, a los 7 días\" and \"por debajo de la resistencia del patrón de 134.4 kg/ cm².\" So yes, concrete results. So D3_resultados_concretos = 1.\n\nD3_conclusion_responde: Since there's no conclusion, D3_conclusion_responde = 0.\n\nD4_consistencia: Consistency between what is said and what is presented. The summary says they did design, preparation, examine incidence, and results. There's no contradiction. There's no conclusion that contradicts results. So consistency is good. I'd rate 5. But check if any discordance: They say \"resistencia máxima de 64.8 kg/ cm², con una adición de 0.5 % de fibra vegetal, a los 7 días\" and \"por debajo de la resistencia del patrón de 134.4 kg/ cm².\" That is consistent. So D4_consistencia = 5.\n\nno_evaluable: It's a valid summary, so 0.\n\nobservaciones: We can note that there's no conclusion, and maybe mention that the summary lacks contextualization. Also mention that the flow is good but some repetition. Let's produce a concise observation.\n\nNow produce JSON with all fields. Ensure all required fields present. Use compact JSON. Let's produce.\n\nCheck schema: fields: D1_imryd_conclusiones, D1_imryd_metodologia, D1_imryd_objetivo, D1_imryd_resultados, D1_orden_logico, D2_coherencia, D3_conclusion_responde, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D4_consistencia, no_evaluable, observaciones.\n\nAll must be present. Provide integer or null. We'll provide integers.\n\nLet's produce JSON."
+    }
+   }
+  ],
+  "created": 1789701252,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e594c51153",
+  "usage": {
+   "completion_tokens": 1741,
+   "prompt_tokens": 9846,
+   "total_tokens": 11587,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1593,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.192676596,
+   "prompt_time": 0.05188375,
+   "completion_time": 1.8359346159999999,
+   "total_time": 1.8878183659999999
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s83q8yerx9sr49z6afdrkv",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:14:12.603162+00:00"
+}

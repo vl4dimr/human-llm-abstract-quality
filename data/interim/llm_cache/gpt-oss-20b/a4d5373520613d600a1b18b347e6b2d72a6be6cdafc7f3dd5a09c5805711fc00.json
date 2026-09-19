@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-089",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": null,
+  "no_evaluable": 1,
+  "observaciones": "El resumen carece de detalles metodológicos (no se indica diseño, muestra, instrumentos ni procedimientos concretos). No se contextualiza el problema ni se explica por qué la influencia del monitoreo es relevante. Los resultados se expresan como \"influencia significativa\" sin cifras ni pruebas estadísticas. Debido a la ausencia de metodología, la consistencia metodológica (D4) no se puede evaluar; por eso se marca no_evaluable=1 y D4_consistencia=null."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"El resumen carece de detalles metodológicos (no se indica diseño, muestra, instrumentos ni procedimientos concretos). No se contextualiza el problema ni se explica por qué la influencia del monitoreo es relevante. Los resultados se expresan como \\\"influencia significativa\\\" sin cifras ni pruebas estadísticas. Debido a la ausencia de metodología, la consistencia metodológica (D4) no se puede evaluar; por eso se marca no_evaluable=1 y D4_consistencia=null.\"}",
+ "usage": {
+  "input_tokens": 9981,
+  "output_tokens": 2004,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.9827702045440674,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:55:46.943141+00:00",
+ "raw": {
+  "id": "chatcmpl-3ad55558-233e-41a1-bace-d3a65a77ac3a",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"El resumen carece de detalles metodológicos (no se indica diseño, muestra, instrumentos ni procedimientos concretos). No se contextualiza el problema ni se explica por qué la influencia del monitoreo es relevante. Los resultados se expresan como \\\"influencia significativa\\\" sin cifras ni pruebas estadísticas. Debido a la ausencia de metodología, la consistencia metodológica (D4) no se puede evaluar; por eso se marca no_evaluable=1 y D4_consistencia=null.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary.\n\nWe have fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia (1-5), D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia (1-5), no_evaluable, observaciones.\n\nWe must decide values. Let's analyze the summary:\n\nText: \"La presente tesis titulada … busca encontrar mecanismos que nos ayuden a mejorar el rendimiento profesional de los docentes en cada una de sus labores, por lo que la Interrogante principal es: ¿Cómo influye el monitoreo y acompañamiento en el desempeño de los docentes de las Instituciones Educativas Secundarias de Tarace - Huancané y la Institución Educativa Secundaria \"San Martin\" de Juliaca, periodo 2012?, el objetivo principal que nos planteamos fue: determinar la influencia del monitoreo y acompañamiento en el desempeño de los docentes de las Instituciones Educativas Secundarias de Tarace- Huancané y la Institución Educativa Secundaria \"San Martin\" de Juliaca, periodo 2012. Con la investigación realizada se llega a la siguiente conclusión principal: con los resultados obtenidos en la prueba de hipótesis general haciendo uso del análisis multivariado podemos determinar que, existe influencia significativa del monitoreo y acompañamiento en el desempeño de los docentes de las instituciones educativas secundarias de Tarace - Huancané y la institución educativa secundaria \"San Martin\" de Juliaca, para el periodo 2012.\"\n\nNo methodology details: no design, sample, instrument, etc. Only says \"prueba de hipótesis general haciendo uso del análisis multivariado\". That's vague.\n\nResults: states \"existe influencia significativa\". That's a result but no numeric values. So D1_resultados = 1 (since it communicates what was found). D3_resultados_concretos = 0 because no concrete numbers. D1_metodologia = 0 (no method details). D1_conclusiones = 1 (since there is conclusion). D1_objetivo = 1 (objective is stated). D1_orden_logico = 1? Order: objective, methodology, results, conclusion. But methodology missing, but order of present ones: objective → results → conclusion? Actually \"Con la investigación realizada se llega a la siguiente conclusión principal: con los resultados ...\". The results phrase appears before conclusion; but there is no explicit method section. The objective is first, then conclusion preceded by \"Con los resultados obtenidos ...\", but the results are described in the conclusion, but not before. The order of present components: objective, results (within conclusion), conclusion. This is not strictly objective→method→results→conclusion but method missing. The rule: if 0 or 1 components, order = 0; else if more than one, evaluate the order of those present. We have objective, results, conclusion (three components). Are they in correct order? objective first, then results (within conclusion? but not separated), but the conclusion is after the results. So sequence: objetivo, resultados, conclusiones. That matches objective→results→conclusion (method missing). This is acceptable? The rule: \"Se juzga solo sobre los componentes presentes. Si faltan dos, se evalúa el orden de los otros dos. Si hay 0 o 1 componentes presentes, vale 0 automáticamente.\" So we have three present. They appear objective first, results next, conclusion last. So D1_orden_logico = 1.\n\nD2_coherencia: need to score 1-5. Let's read flow: starts with title repeated. Then objective. Then conclusion. It is short. Flow: The sentence structure: first repeats title, then \"busca encontrar mecanismos\" (objective). Then question. Then objective restated. Then conclusion summarizing results. There's no methodology mention. The flow is somewhat abrupt but still readable. I'd give 4 maybe? There's a slight abruptness but overall coherent. I think 4.\n\nD3_contextualizacion: Must situate the problem: why matters, where occurs, who affected. The summary does not provide context; it just repeats the title and objective, no background. So 0.\n\nD3_metodo_detallado: needs at least two precisions. There is no design, n, etc. Only \"prueba de hipótesis general haciendo uso del análisis multivariado\". That's one precision about analysis method. No other details. So 0.\n\nD3_resultados_concretos: 0.\n\nD3_conclusion_responde: The conclusion states \"existe influencia significativa...\". That responds to the objective: \"determinar la influencia...\". Yes, it responds to objective. So 1.\n\nD4_consistencia: requires coherence between what is claimed and presented. There's no method declared, but results and conclusion present. There's no contradiction. Consistency? It's not contradictory. However we have no methodology, but that doesn't count as inconsistency. So I'd assign 5 maybe? But D4 rules: if no methodology declared, D4 cannot be evaluated? Wait: \"Si el resumen no declara ninguna metodología, la D4 no puede evaluarse: no hay nada contra lo que contrastar la coherencia.\" So D4_consistencia should be marked as \"no_evaluable = 1\"? Actually in the schema, no_evaluable is separate field. D4_consistencia is still required but can be null? In schema, D4_consistencia enum includes null. So we can set D4_consistencia: null, and set no_evaluable: 1? Wait no_evaluable indicates summary not a summary or lacks methodology. The rule: If no methodology declared, D4 no evaluable. But they said \"no_evaluable = 1\" and leave D4 blank? The schema requires D4_consistencia field, but can be null. So we set no_evaluable = 1 and D4_consistencia = null.\n\nObservaciones: Note that methodology not present. Note that objective repeated, conclusion states significance but no numbers. Also no contextualization. Mention lack of method details.\n\nLet's fill.\n\nValues:\n\nD1_imryd_objetivo = 1\nD1_imryd_metodologia = 0\nD1_imryd_resultados = 1\nD1_imryd_conclusiones = 1\nD1_orden_logico = 1\n\nD2_coherencia = 4\n\nD3_contextualizacion = 0\nD3_metodo_detallado = 0\nD3_resultados_concretos = 0\nD3_conclusion_responde = 1\n\nD4_consistencia = null\nno_evaluable = 1\n\nObservaciones: Provide some explanation: \"Resumen no presenta detalles metodológicos (no se indica diseño, tamaño de muestra, instrumentos ni procedimientos concretos). Además carece de contextualización del problema (por qué es importante el monitoreo y acompañamiento). Los resultados se expresan como 'influencia significativa' sin cifras ni pruebas estadísticas. La coherencia entre los componentes presentes es aceptable, aunque la falta de metodología dificulta la evaluación de consistencia; por ello se marca D4_consistencia como no evaluable y no_evaluable=1.\"\n\nWait, no_evaluable indicates not a summary? Actually the field no_evaluable indicates \"El texto no es un resumen (carátula, licencia, etc.) o carece de metodología para la D4. Si no es un resumen en absoluto, deja todos los demás campos vacíos\". Our summary is a summary but lacks methodology. The protocol says: \"Si el resumen no declara ninguna metodología, la D4 no puede evaluarse: no hay nada contra lo que contrastar la coherencia.\" That suggests we set D4_consistencia null, but no_evaluable? The \"no_evaluable\" field is used to mark when text is not a summary or lacks methodology for D4. The description says: \"Si el resumen no declara ninguna metodología, la D4 no puede evaluarse: no hay nada contra lo que contrastar la coherencia. Marca no_evaluable = 1 y deja vacía la puntuación de D4.\" That matches. So set no_evaluable = 1.\n\nBut we also must fill all required fields; D4_consistencia can be null.\n\nLet's produce JSON.\n\nCheck JSON validity. Use compact formatting.\n\nMake sure all fields present. Provide strings for observaciones.\n\nLet's produce.\n\n"
+    }
+   }
+  ],
+  "created": 1789775746,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_1074f9ce08",
+  "usage": {
+   "completion_tokens": 2004,
+   "prompt_tokens": 9981,
+   "total_tokens": 11985,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1785,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.214322561,
+   "prompt_time": 0.066333497,
+   "completion_time": 2.088581303,
+   "total_time": 2.1549148
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vf534ve739fhbaqw4sp5ta",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:55:46.943170+00:00"
+}

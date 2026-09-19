@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-101",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica de los componentes IMRyD. La coherencia es buena, aunque hay algunas repeticiones y salto entre la descripción de la muestra y los resultados. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante la prevención del cáncer de cuello uterino en este grupo poblacional. El método detallado se cumple con el diseño, la muestra y la prueba estadística. Los resultados son concretos con porcentajes y valores estadísticos. La conclusión responde al objetivo al demostrar la efectividad de la intervención. La consistencia metodológica es 3 porque la conclusión afirma una mejora significativa sin reportar el valor exacto del estadístico T-student."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica de los componentes IMRyD. La coherencia es buena, aunque hay algunas repeticiones y salto entre la descripción de la muestra y los resultados. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante la prevención del cáncer de cuello uterino en este grupo poblacional. El método detallado se cumple con el diseño, la muestra y la prueba estadística. Los resultados son concretos con porcentajes y valores estadísticos. La conclusión responde al objetivo al demostrar la efectividad de la intervención. La consistencia metodológica es 3 porque la conclusión afirma una mejora significativa sin reportar el valor exacto del estadístico T-student.\"\n}",
+ "usage": {
+  "input_tokens": 10988,
+  "output_tokens": 332,
+  "total_duration_s": 10.6123571
+ },
+ "latency_s": 10.623550176620483,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:03:14.902797+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:03:14.8937089Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica de los componentes IMRyD. La coherencia es buena, aunque hay algunas repeticiones y salto entre la descripción de la muestra y los resultados. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante la prevención del cáncer de cuello uterino en este grupo poblacional. El método detallado se cumple con el diseño, la muestra y la prueba estadística. Los resultados son concretos con porcentajes y valores estadísticos. La conclusión responde al objetivo al demostrar la efectividad de la intervención. La consistencia metodológica es 3 porque la conclusión afirma una mejora significativa sin reportar el valor exacto del estadístico T-student.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10612357100,
+  "load_duration": 10409200,
+  "prompt_eval_count": 10988,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 450830000,
+  "eval_count": 332,
+  "eval_duration": 10047657000
+ },
+ "cached_at_utc": "2026-09-19T02:03:14.902811+00:00"
+}

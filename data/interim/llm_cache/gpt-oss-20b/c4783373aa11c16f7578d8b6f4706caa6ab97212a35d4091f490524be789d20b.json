@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-135",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 1,
+  "no_evaluable": 0,
+  "observaciones": "Conclusión contradice resultados (22% alto vs aceptación nula de alto ≤20%); falta contextualización del problema."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":1,\"no_evaluable\":0,\"observaciones\":\"Conclusión contradice resultados (22% alto vs aceptación nula de alto ≤20%); falta contextualización del problema.\"}",
+ "usage": {
+  "input_tokens": 9929,
+  "output_tokens": 1718,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.6983845233917236,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:42:52.247115+00:00",
+ "raw": {
+  "id": "chatcmpl-abe4ad56-9368-4163-a1d7-ad94aeb581cb",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":1,\"no_evaluable\":0,\"observaciones\":\"Conclusión contradice resultados (22% alto vs aceptación nula de alto ≤20%); falta contextualización del problema.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate according to protocol. Fields required: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nLet's evaluate each.\n\nSummary content: It's a research on stress level in employees.\n\nGoal: \"determinar el nivel de estrés laboral de los colaboradores\". It states \"tuvo como propósito determinar el nivel de estrés laboral de los colaboradores\". That qualifies as objective. So D1_imryd_objetivo = 1.\n\nMetodologia: describes design, instrumentation, test. So D1_metodologia = 1.\n\nResultados: says \"Como resultado principal se determinó que el 22% de los colaboradores tienen un nivel de estrés laboral alto, el 60%...\". That's concrete results. So D1_resultados = 1.\n\nConclusiones: It says \"En consecuencia, se acepta la Hipótesis nula donde indica que el estrés laboral de los colaboradores de la empresa es alto en menos o igual al 20%.\" That's a conclusion that interprets results; it also restates objective? It says \"se acepta la Hipótesis nula\". That's a conclusion. It doesn't discuss implications, but it's a conclusion that responds to objective. So D1_conclusiones = 1.\n\nOrden lógico: objective, methodology, results, conclusion in that order? The summary: \"La presente investigación ... tuvo como propósito determinar ... El diseño utilizado ... Para la recolección ... Como resultado principal ... En consecuencia ...\". That is objective first, methodology second, results third, conclusion last. That's the correct logical order. So D1_orden_logico = 1.\n\nNow D2_coherencia: Evaluate coherence. The summary flows logically: purpose, design, instrument, results, conclusion. Are there abrupt jumps or disconnections? It is relatively coherent. Let's give 4 maybe 5? The transitions: \"La presente investigación ... tuvo como propósito determinar ... El diseño utilizado ... Para la recolección ... Como resultado principal ... En consecuencia, se acepta ...\" This is a logical progression. I'd say D2_coherencia = 5.\n\nNow D3_contextualizacion: This field requires that the summary situates the problem: why it matters, where it occurs, to whom it affects, against what standard. The summary says \"nivel de estrés laboral en los colaboradores de la empresa Transportes Express San Pedro S.C.R.L. Juliaca\". It does not give broader context or why it's important, or what standard. So D3_contextualizacion = 0.\n\nD3_metodo_detallado: Needs at least two precisions: design, type, n, instrument, technique. It provides design (no experimental transaccional descriptivo de tipo cuantitativo), instrument (encuesta, validada, 15 ítems in 3 dimensions), test chi-cuadrada. That is 3 precisions at least. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: Concrete results: 22%, 60%, 18%. That's concrete. So D3_resultados_concretos = 1.\n\nD3_conclusion_responde: Conclusion should respond to objective. The objective was to determine level of stress. The conclusion says \"se acepta la Hipótesis nula donde indica que el estrés laboral de los colaboradores de la empresa es alto en menos o igual al 20%.\" Wait the objective was to determine level; the conclusion is about hypothesis acceptance: \"se acepta la Hipótesis nula ... es alto en menos o igual al 20%.\" The hypothesis is that stress level is high <=20%. They accept the null. That is a bit odd because they concluded high <=20%, but results show 22% high, so they'd accept null? This may be contradictory. But D3_conclusion_responde: does the conclusion answer objective? The objective is to determine level. Conclusion states that they accept hypothesis that high <=20%. It does not directly state the level. But it indirectly addresses level. It's a conclusion, but does it respond? Possibly yes: it says that the stress level is high <=20% (i.e., no high level). But the results indicated 22% high. There is inconsistency, but that will affect D4. For D3_conclusion_responde, we check if conclusion responds to objective. The objective: \"determine the level of stress.\" The conclusion says \"se acepta la Hipótesis nula ... es alto en <=20%.\" That is an answer: it claims that level is not high >20. But it contradicts results. Still, the conclusion addresses the objective. So D3_conclusion_responde = 1.\n\nNow D4_consistencia: Evaluate consistency between declared methodology and results and conclusion.\n\nMethodology: no experimental, descriptive, quantitative, survey with 15 items. Results: percentages. Conclusion: accepts null hypothesis that stress level high <=20%. But results show 22% high. The conclusion contradicts results. That is a consistency issue. According to D4, we must score 1-5 where 1 = contradictory, 5 = perfect coherence. Here we have a clear inconsistency: they concluded something that contradicts the reported result. That is a major inconsistency. So D4_consistencia likely = 1. Because the conclusion says high <=20, but results show 22% high. The conclusion is contradictory. So D4_consistencia = 1.\n\nNow no_evaluable: The summary is a legitimate summary. It's evaluable, so no_evaluable = 0.\n\nObservaciones: we might note the inconsistency between results and conclusion, as a case limit 11.5? We should mention. Also mention that contextualization missing. So write an observation: \"Inconsistency: conclusion contradicts result percentages; contextualization missing.\"\n\nCheck each field type: all integer or null. Observaciones string.\n\nNow produce JSON. Ensure all required keys present.\n\nAlso check that no field missing: D1_imryd_conclusiones, D1_imryd_metodologia, D1_imryd_objetivo, D1_imryd_resultados, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nAll values numeric 0 or 1, except D2_coherencia 5, D4_consistencia 1, no_evaluable 0. Observaciones string.\n\nLet's craft JSON:\n\n{\n\"D1_imryd_objetivo\":1,\n\"D1_imryd_metodologia\":1,\n\"D1_imryd_resultados\":1,\n\"D1_imryd_conclusiones\":1,\n\"D1_orden_logico\":1,\n\"D2_coherencia\":5,\n\"D3_contextualizacion\":0,\n\"D3_metodo_detallado\":1,\n\"D3_resultados_concretos\":1,\n\"D3_conclusion_responde\":1,\n\"D4_consistencia\":1,\n\"no_evaluable\":0,\n\"observaciones\":\"Conclusión contradice resultados (22% alto vs aceptación nula de alto ≤20%); falta contextualización del problema.\"\n}\n\nCheck: All keys present. Good. Ensure JSON compact.\n\nNow produce final."
+    }
+   }
+  ],
+  "created": 1789774971,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_5979a0e1b7",
+  "usage": {
+   "completion_tokens": 1718,
+   "prompt_tokens": 9929,
+   "total_tokens": 11647,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1568,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.203907961,
+   "prompt_time": 0.05716446,
+   "completion_time": 1.761526782,
+   "total_time": 1.8186912419999999
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vedewbef39gprjztz1ezyh",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:42:52.247129+00:00"
+}

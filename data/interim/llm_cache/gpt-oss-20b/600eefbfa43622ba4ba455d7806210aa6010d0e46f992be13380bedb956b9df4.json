@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-080",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen presenta buena coherencia y orden lógico, pero carece de contextualización explícita sobre la importancia del estudio y no menciona normas de referencia más allá de las tolerancias catastrales."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta buena coherencia y orden lógico, pero carece de contextualización explícita sobre la importancia del estudio y no menciona normas de referencia más allá de las tolerancias catastrales.\"}",
+ "usage": {
+  "input_tokens": 10024,
+  "output_tokens": 1419,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.6040079593658447,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:05:02.408218+00:00",
+ "raw": {
+  "id": "chatcmpl-b1106758-9279-4201-95a3-51cd6414f51d",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta buena coherencia y orden lógico, pero carece de contextualización explícita sobre la importancia del estudio y no menciona normas de referencia más allá de las tolerancias catastrales.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Plano base catastral urbano a partir de fotogrametría con dron comprobado con estación total - barrio Santiago de Chejoña, Puno\"\n\nResumen: (I'll rewrite key points)\n\n- The thesis titled ... was carried out in district and province of Puno.\n- The general objective: generate the base cadastral urban plan from photogrammetry with drone and its verification with total station.\n- The research developed: establishing two geodetic control points of order \"C\" linked to national geodetic network; then located photocontrol points across area; then flight plan; captured photos; post-process to obtain orthoimage and then the base cadastral plan. Finally, a georeferenced support polygon for corroboration with total station.\n- Results of both methodologies processed, evaluated, validated via Student's t-test. Obtained results with 95% confidence interval: coordinates, distances, areas, perimeters are statistically equal and meet cadastral tolerances, affirming general hypothesis; but altitudes are statistically different.\n- Conclusion: measurements with drone at 100m height are acceptable for base cadastral plans; however altitudes obtained with drone have variations.\n\nWe need to fill fields:\n\nD1_imryd_objetivo: 1 if objective present. Yes: \"El objetivo general es generar el plano base catastral urbano a partir de fotogrametría con Dron y su comprobación con Estación Total.\" So 1.\n\nD1_imryd_metodologia: 1 if methodology present. Yes: description of control points, flight plan, post-processing, validation with t-test. So 1.\n\nD1_imryd_resultados: 1 if results present. Yes: results of t-test, coordinates equal, altitudes different. So 1.\n\nD1_imryd_conclusiones: 1 if conclusion present. Yes: \"En conclusión, las mediciones realizadas con Dron a una altura de 100 metros son aceptables ...\". So 1.\n\nD1_orden_logico: 1 if components present in logical order. The summary seems to follow objective, methodology, results, conclusion. Yes. So 1.\n\nD2_coherencia: scale 1-5. Need to evaluate flow. Let's read: The summary starts with title, then objective, then methodology, then results, then conclusion. The flow seems coherent. Some transitions: \"El objetivo general es generar...\" then \"La investigación se desarrolló primeramente estableciendo...\" then \"seguidamente se realizó el plan de vuelo...\" then \"con las fotografías capturadas se efectuó el post proceso...\" then \"Finalmente se realizó la poligonal...\" then \"Los resultados de ambas metodologías fueron procesados...\" then \"Se obtuvieron resultados estadísticamente con un intervalo de confianza...\" then \"En conclusión...\" So fairly coherent. No abrupt jumps. So maybe 5. But check for any adverbial or repeated terms? Not much. So I'd assign 5.\n\nD3_contextualizacion: 1 if summary situates problem: why important, where, to whom, against what standard. The summary does not explicitly state why it's important, but it does mention that the plan is for the district and province of Puno, and that the results confirm the hypothesis. It doesn't explicitly state the importance or context beyond the location. The example says: \"La escasez de agua potable...\" etc. Here we have location but not why it's important. So maybe 0. But we might consider that the objective itself implies importance: generating base cadastral plan. But the protocol says: \"sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco se contrasta.\" The summary does not mention why it's important, but it does mention that the results meet cadastral tolerances. It doesn't mention a standard. So I'd set 0.\n\nD3_metodo_detallado: 1 if at least two precisions. We have: establishing two geodetic control points of order \"C\" linked to national network; located photocontrol points; flight plan; post-processing to obtain orthoimage; georeferenced polygon; validation with Student's t-test. That's more than two. So 1.\n\nD3_resultados_concretos: 1 if results provide specific content: numbers, magnitudes, categories, relationships. We have: \"Se obtuvieron resultados estadísticamente con un intervalo de confianza del 95 % en el que se determinó que las coordenadas planas, distancias, áreas y perímetros son iguales estadísticamente y cumplen con las tolerancias catastrales afirmando así la hipótesis general planteada; en cambio las altitudes son estadísticamente diferentes.\" That's specific: 95% CI, coordinates equal, altitudes different. So 1.\n\nD3_conclusion_responde: 1 if conclusion responds to objective. The objective: generate base cadastral plan. Conclusion: drone measurements at 100m height acceptable for base cadastral plans; altitudes have variations. That addresses the objective. So 1.\n\nD4_consistencia: scale 1-5. Need to check consistency between methodology and results. The methodology: control points, flight plan, post-processing, validation with t-test. Results: coordinates equal, altitudes different. Conclusion: drone at 100m acceptable for base cadastral plans. That seems consistent. No contradictions. So 5.\n\nno_evaluable: 0 because it's a valid summary.\n\nobservaciones: any notes? We might note that the summary is coherent, but no contextualization. Also mention that the conclusion uses \"en conclusión\" but that's fine. We can add a note: \"No contextualization of importance; no mention of standard beyond tolerances.\" But we can keep it short.\n\nLet's produce JSON with all fields.\n\nCheck schema: required fields: all fields must be present. Provide integer or null. We'll provide integers.\n\nObservaciones: string. Provide note.\n\nLet's produce JSON."
+    }
+   }
+  ],
+  "created": 1789700702,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_a12402de73",
+  "usage": {
+   "completion_tokens": 1419,
+   "prompt_tokens": 10024,
+   "total_tokens": 11443,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1254,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.30885898,
+   "prompt_time": 0.072621636,
+   "completion_time": 1.511048089,
+   "total_time": 1.583669725
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7jy2nebrs0k9vsz9hnbm6",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:05:02.408369+00:00"
+}

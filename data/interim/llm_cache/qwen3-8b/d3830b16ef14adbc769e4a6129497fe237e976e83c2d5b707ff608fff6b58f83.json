@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-128",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 2,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica con los componentes IMRyD. La coherencia se puntuó en 4 debido a que, aunque fluye bien, hay una leve aspereza en la redacción. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es relevante estudiar la relación entre la norma ISO 27001 y el control de seguridad de información en boticas. La consistencia metodológica se puntuó en 2 debido a que la conclusión menciona una correlación positiva moderada (0.460) con un valor de p de 0.004, lo cual es significativo, pero no se alinea completamente con los coeficientes de las dimensiones específicas mencionadas (0.789, 0.957, 0.839, 0.884)."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 2,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica con los componentes IMRyD. La coherencia se puntuó en 4 debido a que, aunque fluye bien, hay una leve aspereza en la redacción. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es relevante estudiar la relación entre la norma ISO 27001 y el control de seguridad de información en boticas. La consistencia metodológica se puntuó en 2 debido a que la conclusión menciona una correlación positiva moderada (0.460) con un valor de p de 0.004, lo cual es significativo, pero no se alinea completamente con los coeficientes de las dimensiones específicas mencionadas (0.789, 0.957, 0.839, 0.884).\"\n}",
+ "usage": {
+  "input_tokens": 10896,
+  "output_tokens": 359,
+  "total_duration_s": 11.2816358
+ },
+ "latency_s": 11.282421350479126,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:36:37.394263+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:36:37.3929443Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 2,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica con los componentes IMRyD. La coherencia se puntuó en 4 debido a que, aunque fluye bien, hay una leve aspereza en la redacción. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es relevante estudiar la relación entre la norma ISO 27001 y el control de seguridad de información en boticas. La consistencia metodológica se puntuó en 2 debido a que la conclusión menciona una correlación positiva moderada (0.460) con un valor de p de 0.004, lo cual es significativo, pero no se alinea completamente con los coeficientes de las dimensiones específicas mencionadas (0.789, 0.957, 0.839, 0.884).\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 11281635800,
+  "load_duration": 2421700,
+  "prompt_eval_count": 10896,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 344984000,
+  "eval_count": 359,
+  "eval_duration": 10895142000
+ },
+ "cached_at_utc": "2026-09-19T02:36:37.394275+00:00"
+}

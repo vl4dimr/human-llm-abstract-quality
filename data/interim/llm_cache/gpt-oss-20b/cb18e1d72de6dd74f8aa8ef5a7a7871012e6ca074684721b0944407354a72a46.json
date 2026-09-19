@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-076",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": null,
+  "no_evaluable": 0,
+  "observaciones": "No se presentan resultados ni conclusiones, por lo que la consistencia no puede evaluarse completamente."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":0,\"observaciones\":\"No se presentan resultados ni conclusiones, por lo que la consistencia no puede evaluarse completamente.\"}",
+ "usage": {
+  "input_tokens": 9864,
+  "output_tokens": 2783
+ },
+ "latency_s": 4.414532423019409,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:04:34.657029+00:00",
+ "raw": {
+  "id": "chatcmpl-99f60319-96be-497b-9e74-2d4a397aa6d2",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":0,\"observaciones\":\"No se presentan resultados ni conclusiones, por lo que la consistencia no puede evaluarse completamente.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Análisis de los inyectores electrónicos del sistema common rail de la camioneta Volkswagen Amarok en la Region Puno\"\n\nResumen: (English translation: This thesis focuses on investigating and examining the operation of electronic injectors in the Common Rail system of the Volkswagen Amarok 2.0 BiTDI Power Plus 4x4, particularly in altitude conditions in Puno. Altitude can significantly impact diesel engine performance, and the Common Rail system is essential for efficient fuel supply. The study examines the efficacy of these injectors in high-altitude regions, where air density is lower and a proper fuel-air mixture is required for proper engine operation. A detailed functional analysis is carried out, possibly including tests, measurements, and performance evaluations under altitude conditions. The results could provide important data about the adaptation of electronic injectors and the Common Rail system to different geographic conditions, which could be relevant for optimizing diesel vehicles in high-altitude regions.)\n\nWe need to evaluate:\n\nD1_imryd_objetivo: Does the summary state the objective? It says \"Esta tesis se enfoca en investigar y examinar la operación de los inyectores electrónicos en el sistema Common Rail del pickup Volkswagen Amarok 2.0 BiTDI Power Plus 4x4, particularmente en condiciones de altitud en el departamento de Puno.\" That is an objective: to investigate and examine operation of injectors in high altitude. So yes, 1.\n\nD1_imryd_metodologia: Does it describe how they did it? It says \"Se lleva a cabo un análisis funcional detallado, que posiblemente incluya pruebas, mediciones y evaluaciones de rendimiento en condiciones de altitud.\" That indicates methodology: functional analysis, tests, measurements, performance evaluations. So yes, 1.\n\nD1_imryd_resultados: Does it report results? It says \"Los resultados de la tesis podrían ofrecer datos importantes acerca de la adaptación de los inyectores electrónicos y el sistema Common Rail a diferentes condiciones geográficas, lo que podría ser relevante para la optimización de vehículos diésel en regiones con altitudes elevadas.\" This is a statement of potential results, but not actual results. It says \"Los resultados podrían ofrecer datos importantes\". That is not a concrete result; it's a speculation. According to the protocol, D1_imryd_resultados requires that the summary communicates what was found, not just what could be found. So this is not a result. So 0.\n\nD1_imryd_conclusiones: Does it provide a conclusion? It says \"Los resultados de la tesis podrían ofrecer datos importantes...\" That's not a conclusion; it's a statement of potential significance. There's no explicit conclusion. So 0.\n\nD1_orden_logico: We have objective, methodology, results, conclusion. But results and conclusion are missing. The order of present components: objective, methodology, results (0), conclusion (0). Since we have at least two components present (objective and methodology). The rule: If 0 or 1 components present, order = 0. But we have 2 components present. So we evaluate order: Are the present components in logical sequence? Objective then methodology. That's correct. So order = 1.\n\nD2_coherencia: We need to rate coherence 1-5. Let's read the summary: It's fairly coherent. It flows: first objective, then context, then methodology, then potential results. It's a short summary. No major jumps. I'd rate 4 maybe. Let's analyze: The summary starts with objective, then context about altitude impact, then study examines efficacy, then analysis functional, then results could offer data. It's coherent. There's no abrupt jumps. So 4.\n\nD3_contextualizacion: Does it situate the problem? It says \"La altitud puede tener un impacto significativo en el rendimiento de los motores diésel, y el sistema Common Rail es esencial para el suministro de combustible de manera eficiente.\" That situates the problem: altitude impact on diesel engine performance. So yes, 1.\n\nD3_metodo_detallado: Does it give at least two precisions? It says \"Se lleva a cabo un análisis funcional detallado, que posiblemente incluya pruebas, mediciones y evaluaciones de rendimiento en condiciones de altitud.\" That's one precision: analysis funcional detallado. It also says \"pruebas, mediciones y evaluaciones de rendimiento\". That's more than one precision? The protocol says at least two precisions: design, type of study, sample size, sampling technique, instrument named, statistical test, corpus, number of observations, selection criterion. Here we have \"análisis funcional detallado\" (design?), \"pruebas, mediciones y evaluaciones de rendimiento\" (instrument? maybe). But we don't have sample size, instrument name, etc. It's ambiguous. The protocol says \"Cuentan como precisión: diseño, tipo de estudio, tamaño de muestra, técnica de muestreo, instrumento nombrado, prueba estadística, corpus analizado, número de observaciones, criterio de selección.\" We have design: \"análisis funcional detallado\" (maybe design). We have instrument: \"pruebas, mediciones y evaluaciones de rendimiento\" but not named. So maybe only one precision. So D3_metodo_detallado = 0.\n\nBut we might consider \"análisis funcional detallado\" as design, and \"pruebas, mediciones y evaluaciones de rendimiento\" as instrument? But it's not named. The protocol says instrument nombrado. So maybe not. So 0.\n\nD3_resultados_concretos: Does it provide concrete results? It says \"Los resultados de la tesis podrían ofrecer datos importantes acerca de la adaptación...\" That's not concrete. So 0.\n\nD3_conclusion_responde: Since conclusion is missing, 0.\n\nD4_consistencia: Since no methodology declared? We have methodology present. But we have no results or conclusion. The consistency is about coherence between what the summary says it did and what it presents. Since we have no results, we can't evaluate consistency. The protocol says: If the summary does not declare any methodology, D4 cannot be evaluated. But we have methodology. But we have no results or conclusion. The consistency would be about whether the conclusion matches results. Since no conclusion, we can't evaluate. But we can still evaluate consistency between methodology and results? There's no results. So maybe we set D4_consistencia = 0? But the protocol says: \"If the summary does not declare any methodology, the D4 cannot be evaluated: mark no_evaluable = 1 and leave D4 empty.\" But we have methodology. So we can evaluate. But we have no results or conclusion. The consistency is about coherence between what the summary says it did and what it presents. Since we have methodology but no results, there's no mismatch. But we can't evaluate because there's no data to compare. The protocol says: \"If the summary does not declare any methodology, the D4 cannot be evaluated.\" It doesn't say if no results, we can't evaluate. But we can still evaluate consistency: we can say it's consistent because there's no contradictory statement. But we might set D4_consistencia = 5? But that seems too high. The protocol says: \"Consistencia: 1-5. 5: Enfoque, diseño, resultados y conclusiones encajan sin fisuras.\" But we don't have results or conclusions. So we can't say they encajan. So maybe we set D4_consistencia = 0? But 0 is not in the enum. The enum is 1-5 or null. So we need to decide. The protocol says: \"If the summary does not declare any methodology, the D4 cannot be evaluated: mark no_evaluable = 1 and leave D4 empty.\" But we have methodology. So we can evaluate. But we have no results or conclusion. So we can't evaluate consistency. But maybe we set D4_consistencia = 0? But 0 is not allowed. So we might set D4_consistencia = null? But the schema says type integer or null. But the enum includes 1-5 or null. So null is allowed. But we need to decide if we set null or a value. The protocol says we should evaluate. But we can't evaluate because no results or conclusion. But we can still evaluate consistency: we can say it's consistent because there's no contradictory statement. But we can't say it's 5 because we don't have results or conclusion. Maybe we set 3? But that would be arbitrary. The protocol says: \"If the summary does not declare any methodology, the D4 cannot be evaluated.\" It doesn't say if no results or conclusion, we can't evaluate. But we can still evaluate consistency: we can say it's consistent because there's no mismatch. But we might set 5? But that would be wrong because we don't have results or conclusion. The best is to set D4_consistencia = null? But the schema allows null. But the protocol says we should provide a value. But maybe we can set null to indicate not evaluable. But the protocol says no_evaluable only if no methodology. But we have methodology. So we should evaluate. But we can't evaluate because no results or conclusion. But we can still evaluate: we can say it's consistent because there's no contradictory statement. But we might set 5? But that would be too high. Maybe 4? But we can't say it's 4 because we don't have results or conclusion. The best is to set 3? But that would be arbitrary. The protocol says: \"If the summary does not declare any methodology, the D4 cannot be evaluated: mark no_evaluable = 1 and leave D4 empty.\" It doesn't mention the case of missing results or conclusion. So we can evaluate. But we can only evaluate consistency between methodology and results. Since no results, we can't find inconsistency. So we might set 5? But that would be wrong because we don't have results. But maybe we can set 5 because there's no mismatch. But the protocol says 5 means \"Enfoque, diseño, resultados y conclusiones encajan sin fisuras.\" We don't have results or conclusions. So we can't say they encajan. So maybe we set 4? But 4 means \"Coherente, con una imprecisión terminológica menor.\" We have no results or conclusion. So we can't say that. So maybe we set 3? But 3 means \"Una discordancia visible que no invalida el conjunto.\" We have no discordance. So maybe 3 is not correct. So maybe we set 2? But 2 means \"Varias discordancias, o la conclusión excede lo que los datos sostienen.\" We have no conclusion. So not correct. So maybe we set 1? But 1 means \"Contradicción abierta que invalida la conclusión.\" We have no conclusion. So not correct. So the only correct is null. But the schema allows null. But the protocol says we should provide a value. But maybe we can set null to indicate not evaluable. But the protocol says no_evaluable only if no methodology. But we have methodology. So maybe we set D4_consistencia = 0? But 0 not allowed. So we must decide. The best is to set D4_consistencia = null. But we also need to set no_evaluable. The no_evaluable field indicates if the text is not a summary or lacks methodology. We have methodology. So no_evaluable = 0. So we set no_evaluable = 0.\n\nThus D4_consistencia = null.\n\nObservaciones: We can add a note: \"No se presentan resultados ni conclusiones, por lo que la consistencia no puede evaluarse completamente.\" But we can mention that.\n\nNow we need to produce JSON with all required fields.\n\nLet's list fields:\n\n- D1_imryd_objetivo: 1\n- D1_imryd_metodologia: 1\n- D1_imryd_resultados: 0\n- D1_imryd_conclusiones: 0\n- D1_orden_logico: 1\n- D2_coherencia: 4\n- D3_contextualizacion: 1\n- D3_metodo_detallado: 0\n- D3_resultados_concretos: 0\n- D3_conclusion_responde: 0\n- D4_consistencia: null\n- no_evaluable: 0\n- observaciones: \"No se presentan resultados ni conclusiones, por lo que la consistencia no puede evaluarse completamente.\"\n\nCheck schema: all fields present. D4_consistencia can be null. Good.\n\nNow produce JSON."
+    }
+   }
+  ],
+  "created": 1789700674,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_d23c14756c",
+  "usage": {
+   "completion_tokens": 2783,
+   "prompt_tokens": 9864,
+   "total_tokens": 12647,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2639,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.205378015,
+   "prompt_time": 0.597121544,
+   "completion_time": 2.938012965,
+   "total_time": 3.535134509
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7j171e6vv82v71akrtyf4",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:04:34.657117+00:00"
+}

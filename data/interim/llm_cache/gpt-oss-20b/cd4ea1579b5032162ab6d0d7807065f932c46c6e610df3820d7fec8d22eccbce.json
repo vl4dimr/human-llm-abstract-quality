@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-112",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 9967,
+  "output_tokens": 1030,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.0245611667633057,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:58:47.550895+00:00",
+ "raw": {
+  "id": "chatcmpl-338c1f7a-a303-45d7-bed1-7cd941da049f",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields per schema. Must follow protocol.\n\nWe have a summary. Evaluate dimensions.\n\nLet's analyze.\n\nD1_imryd_objetivo: Is objective present? The summary says: \"este estudio analizó el papel mediador de la motivación investigadora en la relación entre la autoeficacia en el uso de la IA y la satisfacción con los estudios en universitarios peruanos.\" That's a clear objective. So 1.\n\nD1_imryd_metodologia: We have method: \"estudio cuantitativo, transversal y explicativo con 559 estudiantes\" instruments. So yes. 1.\n\nD1_imryd_resultados: The results show correlations, regression coefficients, partial mediation 58.3%. That's a result. Yes. 1.\n\nD1_imryd_conclusiones: Conclusión: \"El estudio confirma que la motivación investigadora media la relación ... destacando la importancia de fortalecer ...\". That is a conclusion that interprets and responds. 1.\n\nD1_orden_logico: Are they in logical order? Intro -> Method -> Result -> Conclusión. Yes. 1.\n\nD2_coherencia: Need to score 1-5. Let's evaluate flow.\n\nText is: Intro: IA transforms, influence. Then \"este estudio analizó...\" ; Method: \"Se llevó el estudio cuantitativo, transversal y explicativo con 559 estudiantes ... instrumentos\". Results: \"Los resultados mostraron correlaciones positivas y significativas... β etc.\" Conclusion: \"El estudio confirma...\"\n\nThis is coherent, flows logically, no abrupt jumps. Should be 5? Might check for transitions. It's straightforward. No redundancies or missing transitions. I would give 5. But check if any term shift? No. So 5.\n\nD3_contextualizacion: Is problem situated? Intro mentions \"IA está transformando procesos educativos, influyendo en la motivación y la satisfacción de los estudiantes.\" That's context. It situates the problem: AI impacts motivation and satisfaction. Good. So 1.\n\nD3_metodo_detallado: We have design: \"cuantitativo, transversal, explicativo\" with 559 participants; instruments: GSE-6AI, Motivación, Satisfacción. That's at least two precisions: design, sample size, instruments. So 1.\n\nD3_resultados_concretos: Results: correlations, regression coefficients, β values, p-values. That's concrete. Yes 1.\n\nD3_conclusion_responde: Does conclusion respond to objective? Yes, it confirms the mediation role. Yes 1.\n\nD4_consistencia: We need to evaluate consistency. Method says quantitative, cross-sectional, explanatory; used 3 instruments; results show correlations and regression. Conclusion says confirms mediation, importance. No contradictions. So 5.\n\nno_evaluable: 0 (it is a summary).\n\nobservaciones: We might add any comments. Nothing major. But we should provide an empty string maybe. But schema says type string, not required? It is required. So we can put empty string \"\".\n\nNow produce JSON with fields. Use compact format.\n\nLet's list all fields in order required:\n\n\"D1_imryd_objetivo\", \"D1_imryd_metodologia\", \"D1_imryd_resultados\", \"D1_imryd_conclusiones\", \"D1_orden_logico\", \"D2_coherencia\", \"D3_contextualizacion\", \"D3_metodo_detallado\", \"D3_resultados_concretos\", \"D3_conclusion_responde\", \"D4_consistencia\", \"no_evaluable\", \"observaciones\"\n\nReturn JSON.\n\nMake sure no trailing comma. Let's craft:\n\n{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}\n\nCheck schema: All fields are integers or null. Values are integers. Observaciones is string, empty string allowed. All good.\n\nReturn that."
+    }
+   }
+  ],
+  "created": 1789775927,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_3cdd24b83b",
+  "usage": {
+   "completion_tokens": 1030,
+   "prompt_tokens": 9967,
+   "total_tokens": 10997,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 904,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.193452446,
+   "prompt_time": 0.063371755,
+   "completion_time": 1.063231871,
+   "total_time": 1.126603626
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vfamemerkty0xzr2t5khqa",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:58:47.550928+00:00"
+}

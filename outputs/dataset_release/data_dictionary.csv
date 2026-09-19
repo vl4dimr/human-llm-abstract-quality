@@ -1,0 +1,28 @@
+file,field,type,description
+annotations.csv,doc_id,string,Anonymous document identifier (GT-nnn).
+annotations.csv,annotator,string,"A1, A2 (human annotators) or <model>#<run> for LLM runs."
+annotations.csv,category,string,Variable of the coding scheme (see codebook).
+annotations.csv,label,integer,"Assigned value. 0/1 for binary variables, 1-5 for ordinal ones. An absent row means 'not annotated'; nothing is imputed."
+documents.csv,doc_id,string,Anonymous document identifier.
+documents.csv,phase,string,calibration or principal.
+documents.csv,stratum,string,OECD/FORD discipline area used for stratified sampling.
+documents.csv,thesis_type,string,"bachelorThesis, masterThesis, doctoralThesis, Thesis."
+documents.csv,institution,string,"Repository code (UNAP, UPEU, UPSC, UANCV)."
+documents.csv,year,integer,Year of deposit (2016-2026).
+documents.csv,abstract_words,integer,Length of the abstract in words.
+documents.csv,handle,string,Persistent public URL of the thesis record in its institutional repository. Present only if release.include_handle is true; it is the pointer that makes the abstract text retrievable without redistributing it.
+annotator_notes.csv,doc_id,string,Anonymous document identifier.
+annotator_notes.csv,annotator,string,"A1, A2 or <model>#<run>."
+annotator_notes.csv,notes,string,Free-text justification written while annotating. Screened for personal identifiers.
+annotations.csv,category = D1_imryd_objetivo,binary,"D1 Objective; levels [0, 1]; dimension D1."
+annotations.csv,category = D1_imryd_metodologia,binary,"D1 Method; levels [0, 1]; dimension D1."
+annotations.csv,category = D1_imryd_resultados,binary,"D1 Results; levels [0, 1]; dimension D1."
+annotations.csv,category = D1_imryd_conclusiones,binary,"D1 Conclusions; levels [0, 1]; dimension D1."
+annotations.csv,category = D1_orden_logico,binary,"D1 Logical order; levels [0, 1]; dimension D1."
+annotations.csv,category = D2_coherencia,ordinal,"D2 Coherence (1–5); levels [1, 2, 3, 4, 5]; dimension D2."
+annotations.csv,category = D3_contextualizacion,binary,"D3 Context; levels [0, 1]; dimension D3."
+annotations.csv,category = D3_metodo_detallado,binary,"D3 Method detail; levels [0, 1]; dimension D3."
+annotations.csv,category = D3_resultados_concretos,binary,"D3 Concrete results; levels [0, 1]; dimension D3."
+annotations.csv,category = D3_conclusion_responde,binary,"D3 Conclusion answers aim; levels [0, 1]; dimension D3."
+annotations.csv,category = D4_consistencia,ordinal,"D4 Consistency (1–5); levels [1, 2, 3, 4, 5]; dimension D4."
+annotations.csv,category = no_evaluable,binary,"Not assessable; levels [0, 1]; dimension control."

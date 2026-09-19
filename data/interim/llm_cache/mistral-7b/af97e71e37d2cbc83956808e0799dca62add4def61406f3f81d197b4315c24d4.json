@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-018",
+ "model_name": "mistral-7b",
+ "provider": "ollama",
+ "model": "mistral:latest",
+ "model_reported": "mistral:latest",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "no se encuentra el tipo de diseño estadístico utilizado, se menciona el coeficiente de correlación de Pearson pero no se menciona el tipo de correlación"
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"no se encuentra el tipo de diseño estadístico utilizado, se menciona el coeficiente de correlación de Pearson pero no se menciona el tipo de correlación\"\n}",
+ "usage": {
+  "input_tokens": 12624,
+  "output_tokens": 231,
+  "total_duration_s": 6.5939379
+ },
+ "latency_s": 6.6183788776397705,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T00:53:12.523106+00:00",
+ "raw": {
+  "model": "mistral:latest",
+  "created_at": "2026-09-19T00:53:12.5219071Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"no se encuentra el tipo de diseño estadístico utilizado, se menciona el coeficiente de correlación de Pearson pero no se menciona el tipo de correlación\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 6593937900,
+  "load_duration": 7155100,
+  "prompt_eval_count": 12624,
+  "prompt_eval_cached_count": 12155,
+  "prompt_eval_duration": 317369000,
+  "eval_count": 231,
+  "eval_duration": 6168651000
+ },
+ "cached_at_utc": "2026-09-19T00:53:12.523120+00:00"
+}

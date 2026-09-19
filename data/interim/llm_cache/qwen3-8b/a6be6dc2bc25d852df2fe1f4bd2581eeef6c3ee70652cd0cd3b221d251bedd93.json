@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-144",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD correctamente. La metodología se describe con la transformada Wavelet de Gabor y el análisis de componentes principales. Los resultados se presentan con una tasa de reconocimiento superior al 95%. La conclusión responde al objetivo. Sin embargo, la coherencia organizacional se reduce debido a la repetición de términos y la falta de transiciones claras entre las secciones."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. La metodología se describe con la transformada Wavelet de Gabor y el análisis de componentes principales. Los resultados se presentan con una tasa de reconocimiento superior al 95%. La conclusión responde al objetivo. Sin embargo, la coherencia organizacional se reduce debido a la repetición de términos y la falta de transiciones claras entre las secciones.\"\n}",
+ "usage": {
+  "input_tokens": 10791,
+  "output_tokens": 249,
+  "total_duration_s": 7.5744421
+ },
+ "latency_s": 7.593397617340088,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:45:13.970612+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:45:13.9620945Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. La metodología se describe con la transformada Wavelet de Gabor y el análisis de componentes principales. Los resultados se presentan con una tasa de reconocimiento superior al 95%. La conclusión responde al objetivo. Sin embargo, la coherencia organizacional se reduce debido a la repetición de términos y la falta de transiciones claras entre las secciones.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7574442100,
+  "load_duration": 3269300,
+  "prompt_eval_count": 10791,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 240601000,
+  "eval_count": 249,
+  "eval_duration": 7273969000
+ },
+ "cached_at_utc": "2026-09-19T01:45:13.970627+00:00"
+}

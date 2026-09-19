@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-070",
+ "model_name": "mistral-7b",
+ "provider": "ollama",
+ "model": "mistral:latest",
+ "model_reported": "mistral:latest",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "La metodología se refiere a la observación directa, modelación hidrológica con SWAT y análisis de NDVI. El término 'eventos ambientales' es sinónimo de muestra."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"La metodología se refiere a la observación directa, modelación hidrológica con SWAT y análisis de NDVI. El término 'eventos ambientales' es sinónimo de muestra.\"\n}",
+ "usage": {
+  "input_tokens": 12725,
+  "output_tokens": 243,
+  "total_duration_s": 7.0081691
+ },
+ "latency_s": 7.016946792602539,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T00:58:39.090027+00:00",
+ "raw": {
+  "model": "mistral:latest",
+  "created_at": "2026-09-19T00:58:39.0819044Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"La metodología se refiere a la observación directa, modelación hidrológica con SWAT y análisis de NDVI. El término 'eventos ambientales' es sinónimo de muestra.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7008169100,
+  "load_duration": 6682700,
+  "prompt_eval_count": 12725,
+  "prompt_eval_cached_count": 12155,
+  "prompt_eval_duration": 403960000,
+  "eval_count": 243,
+  "eval_duration": 6490795000
+ },
+ "cached_at_utc": "2026-09-19T00:58:39.090053+00:00"
+}

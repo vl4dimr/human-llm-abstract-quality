@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-121",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 2,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta los cuatro componentes canónicos en orden y con claridad. La coherencia organizacional se califica en 3 debido a que hay saltos de tema y algunas repeticiones. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante el tema. La consistencia metodológica se califica en 2 porque la conclusión contradice los resultados, afirmando que no existe relación cuando la prueba estadística indica que no hay significancia."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 2,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta los cuatro componentes canónicos en orden y con claridad. La coherencia organizacional se califica en 3 debido a que hay saltos de tema y algunas repeticiones. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante el tema. La consistencia metodológica se califica en 2 porque la conclusión contradice los resultados, afirmando que no existe relación cuando la prueba estadística indica que no hay significancia.\"\n}",
+ "usage": {
+  "input_tokens": 11031,
+  "output_tokens": 265,
+  "total_duration_s": 8.7111144
+ },
+ "latency_s": 8.722212314605713,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:35:30.548590+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:35:30.5392681Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 2,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta los cuatro componentes canónicos en orden y con claridad. La coherencia organizacional se califica en 3 debido a que hay saltos de tema y algunas repeticiones. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante el tema. La consistencia metodológica se califica en 2 porque la conclusión contradice los resultados, afirmando que no existe relación cuando la prueba estadística indica que no hay significancia.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8711114400,
+  "load_duration": 12125000,
+  "prompt_eval_count": 11031,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 472477000,
+  "eval_count": 265,
+  "eval_duration": 8122963000
+ },
+ "cached_at_utc": "2026-09-19T02:35:30.548607+00:00"
+}

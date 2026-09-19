@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-095",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen no presenta resultados concretos, aunque menciona la sobrepoblación y sus efectos. La metodología se describe de manera general, pero no se detallan elementos específicos como la muestra o el diseño. La coherencia es moderada debido a la falta de conexión clara entre los resultados y las conclusiones."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen no presenta resultados concretos, aunque menciona la sobrepoblación y sus efectos. La metodología se describe de manera general, pero no se detallan elementos específicos como la muestra o el diseño. La coherencia es moderada debido a la falta de conexión clara entre los resultados y las conclusiones.\"\n}",
+ "usage": {
+  "input_tokens": 10815,
+  "output_tokens": 226,
+  "total_duration_s": 7.2715439
+ },
+ "latency_s": 7.279640197753906,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:02:18.618848+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:02:18.6158383Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen no presenta resultados concretos, aunque menciona la sobrepoblación y sus efectos. La metodología se describe de manera general, pero no se detallan elementos específicos como la muestra o el diseño. La coherencia es moderada debido a la falta de conexión clara entre los resultados y las conclusiones.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7271543900,
+  "load_duration": 14900200,
+  "prompt_eval_count": 10815,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 336923000,
+  "eval_count": 226,
+  "eval_duration": 6807491000
+ },
+ "cached_at_utc": "2026-09-19T02:02:18.618868+00:00"
+}

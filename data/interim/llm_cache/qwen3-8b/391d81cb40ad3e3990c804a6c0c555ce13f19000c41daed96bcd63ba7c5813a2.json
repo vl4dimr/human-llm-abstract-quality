@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-033",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica (objetivo → metodología → resultados → conclusiones). La coherencia es buena, aunque hay algunos saltos en la narrativa, como la transición entre la metodología y los resultados. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la variabilidad de precipitación. El método detallado se refleja con la descripción del enfoque cuantitativo, nivel explicativo, diseño no experimental longitudinal, y la utilización de 30 estaciones meteorológicas. Los resultados son concretos, con porcentajes de eficiencia y capacidades de reproducción. La conclusión responde al objetivo al señalar que los autómatas celulares son una metodología sólida, flexible e innovadora para modelar procesos hidrológicos complejos."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica (objetivo → metodología → resultados → conclusiones). La coherencia es buena, aunque hay algunos saltos en la narrativa, como la transición entre la metodología y los resultados. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la variabilidad de precipitación. El método detallado se refleja con la descripción del enfoque cuantitativo, nivel explicativo, diseño no experimental longitudinal, y la utilización de 30 estaciones meteorológicas. Los resultados son concretos, con porcentajes de eficiencia y capacidades de reproducción. La conclusión responde al objetivo al señalar que los autómatas celulares son una metodología sólida, flexible e innovadora para modelar procesos hidrológicos complejos.\"\n}",
+ "usage": {
+  "input_tokens": 10948,
+  "output_tokens": 349,
+  "total_duration_s": 12.0961868
+ },
+ "latency_s": 12.106868743896484,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:52:56.664644+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:52:56.6554528Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica (objetivo → metodología → resultados → conclusiones). La coherencia es buena, aunque hay algunos saltos en la narrativa, como la transición entre la metodología y los resultados. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la variabilidad de precipitación. El método detallado se refleja con la descripción del enfoque cuantitativo, nivel explicativo, diseño no experimental longitudinal, y la utilización de 30 estaciones meteorológicas. Los resultados son concretos, con porcentajes de eficiencia y capacidades de reproducción. La conclusión responde al objetivo al señalar que los autómatas celulares son una metodología sólida, flexible e innovadora para modelar procesos hidrológicos complejos.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 12096186800,
+  "load_duration": 8560000,
+  "prompt_eval_count": 10948,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 425753000,
+  "eval_count": 349,
+  "eval_duration": 11555103000
+ },
+ "cached_at_utc": "2026-09-19T01:52:56.664658+00:00"
+}

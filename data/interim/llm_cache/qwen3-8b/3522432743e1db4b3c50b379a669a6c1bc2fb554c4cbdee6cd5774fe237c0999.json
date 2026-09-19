@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-037",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 2,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta los componentes de objetivo, metodología, resultados, pero no incluye una conclusión explícita. La coherencia es moderada debido a la repetición de datos y falta de transición entre los resultados. La metodología es detallada con tres tratamientos, y los resultados son concretos con porcentajes y estadísticas. Sin embargo, la conclusión no responde explícitamente al objetivo, lo que afecta la completitud. La consistencia metodológica es moderada debido a la falta de interpretación de los resultados en el contexto del objetivo."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 2,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta los componentes de objetivo, metodología, resultados, pero no incluye una conclusión explícita. La coherencia es moderada debido a la repetición de datos y falta de transición entre los resultados. La metodología es detallada con tres tratamientos, y los resultados son concretos con porcentajes y estadísticas. Sin embargo, la conclusión no responde explícitamente al objetivo, lo que afecta la completitud. La consistencia metodológica es moderada debido a la falta de interpretación de los resultados en el contexto del objetivo.\"\n}",
+ "usage": {
+  "input_tokens": 11501,
+  "output_tokens": 279,
+  "total_duration_s": 9.5095296
+ },
+ "latency_s": 9.52558422088623,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:22:31.714832+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:22:31.7061647Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 2,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta los componentes de objetivo, metodología, resultados, pero no incluye una conclusión explícita. La coherencia es moderada debido a la repetición de datos y falta de transición entre los resultados. La metodología es detallada con tres tratamientos, y los resultados son concretos con porcentajes y estadísticas. Sin embargo, la conclusión no responde explícitamente al objetivo, lo que afecta la completitud. La consistencia metodológica es moderada debido a la falta de interpretación de los resultados en el contexto del objetivo.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9509529600,
+  "load_duration": 9831900,
+  "prompt_eval_count": 11501,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 796005000,
+  "eval_count": 279,
+  "eval_duration": 8586289000
+ },
+ "cached_at_utc": "2026-09-19T02:22:31.714849+00:00"
+}

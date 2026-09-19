@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-011",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica y coherente, aunque la descripción del objetivo es explícita y clara. La metodología incluye detalles sobre la preparación de la solución, ajuste de pH, y el proceso de lixiviación. Los resultados incluyen porcentajes de extracción y constantes de velocidad. La conclusión responde al objetivo, aunque hay una ligera desviación en el uso de términos como 'peculiaridad mecánicas' en el ejemplo, pero en este resumen no se presenta tal error."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica y coherente, aunque la descripción del objetivo es explícita y clara. La metodología incluye detalles sobre la preparación de la solución, ajuste de pH, y el proceso de lixiviación. Los resultados incluyen porcentajes de extracción y constantes de velocidad. La conclusión responde al objetivo, aunque hay una ligera desviación en el uso de términos como 'peculiaridad mecánicas' en el ejemplo, pero en este resumen no se presenta tal error.\"\n}",
+ "usage": {
+  "input_tokens": 10943,
+  "output_tokens": 275,
+  "total_duration_s": 8.8353592
+ },
+ "latency_s": 8.850964069366455,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:49:12.815804+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:49:12.8081801Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica y coherente, aunque la descripción del objetivo es explícita y clara. La metodología incluye detalles sobre la preparación de la solución, ajuste de pH, y el proceso de lixiviación. Los resultados incluyen porcentajes de extracción y constantes de velocidad. La conclusión responde al objetivo, aunque hay una ligera desviación en el uso de términos como 'peculiaridad mecánicas' en el ejemplo, pero en este resumen no se presenta tal error.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8835359200,
+  "load_duration": 17051500,
+  "prompt_eval_count": 10943,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 389795000,
+  "eval_count": 275,
+  "eval_duration": 8306718999
+ },
+ "cached_at_utc": "2026-09-19T01:49:12.815817+00:00"
+}

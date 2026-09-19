@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-013",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "No explicit context provided; only location and rock quality mentioned."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No explicit context provided; only location and rock quality mentioned.\"}",
+ "usage": {
+  "input_tokens": 10098,
+  "output_tokens": 2942
+ },
+ "latency_s": 4.169978857040405,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T02:56:22.900845+00:00",
+ "raw": {
+  "id": "chatcmpl-be5256aa-c238-4e93-b236-46733094f4b2",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No explicit context provided; only location and rock quality mentioned.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Calidad del macizo rocoso en incremento de la capacidad de soporte de Split set corrugado y cartuchos de cemento respecto a Split set convencional en By Pass 815NE de la Unidad Minera Las Águilas - CIEMSA\"\n\nSummary: (I'll reformat)\n\n\"El trabajo de investigación en la Unidad Minera Las Águilas – CIEMSA tiene como objetivo, determinar la capacidad de anclaje del Split set corrugado con cartuchos de cemento respecto al Split set convencional para una determinada calidad del macizo rocoso basados en la clasificación de Bieniawski 1989, la investigación es descriptiva, explicativa y aplicativa. La calidad del macizo rocoso en By Pass 815 NE es de RMR 35 – 46.75 (IV-III), el tipo de roca es una andesita porfirítica alterada conforme los resultados obtenidos en trece estaciones geomecánicas el mínimo valor de RMR es 35 y el máximo de RMR es 46,75, en 10 estaciones la roca es de mala calidad con RMR [21,40], en 03 estaciones tienen calidad regular RMR [41,60]. La carga promedio que soportaron los pernos Split Set convencionales de 5 pies en longitud fueron 5.7 t, la carga promedio que soportaron los pernos Split set convencional de 5 pies en longitud con cartuchos de cemento fueron 7.0 t, la carga promedio que soportaron los pernos Split set corrugado de 5 pies en longitud fueron 7.5 t, y la carga promedio que soportaron los pernos Split Set corrugado de 5 pies de longitud con cartuchos de cemento fueron 8.2 t. La capacidad de anclaje de Split set convencional es 1.1 t/pie, la capacidad de anclaje del Split set convencional con cemento es 1.4 t/pie, la capacidad de anclaje del Split set corrugado es 1.5 t/pie y con cemento 1,6 t/pie, como resultado de las pruebas realizadas el Split set corrugado tiene mayor capacidad de anclaje respecto a Split set convencional, considerando estos resultados es recomendable hacer uso de Split set corrugado y se puede adicionar cartuchos de cemento.\"\n\nWe need to evaluate each field.\n\nFirst, check if it's a valid summary. It seems to be a summary. So no no_evaluable.\n\nNow, D1_imryd_objetivo: The summary states: \"El trabajo de investigación ... tiene como objetivo, determinar la capacidad de anclaje del Split set corrugado con cartuchos de cemento respecto al Split set convencional para una determinada calidad del macizo rocoso basados en la clasificación de Bieniawski 1989\". So objective is explicit. So D1_imryd_objetivo = 1.\n\nD1_imryd_metodologia: The summary says: \"la investigación es descriptiva, explicativa y aplicativa.\" It also gives details: \"La carga promedio que soportaron los pernos ...\", \"La capacidad de anclaje ...\". But does it describe how they obtained the knowledge? It says \"La carga promedio que soportaron los pernos ...\". That indicates they performed tests. But does it mention the method? It says \"la investigación es descriptiva, explicativa y aplicativa.\" That is a classification of the study type. It also says \"la carga promedio que soportaron los pernos ...\". That is a result. But does it mention the procedure? It says \"La carga promedio que soportaron los pernos ...\". That is a result. But the methodology: \"la investigación es descriptiva, explicativa y aplicativa.\" That is a type. But does it mention sample size? It says \"en trece estaciones geomecánicas\". That is a sample. It also says \"en 10 estaciones la roca es de mala calidad con RMR [21,40], en 03 estaciones tienen calidad regular RMR [41,60]\". So it gives some details. But does it mention the instrument? It says \"La carga promedio que soportaron los pernos ...\". That is a measurement. But the methodology: \"la investigación es descriptiva, explicativa y aplicativa.\" That is a design. So we have at least one precision: design (descriptiva, explicativa, aplicativa). Also sample: 13 stations. So we have at least two precisions. So D1_imryd_metodologia = 1.\n\nD1_imryd_resultados: The summary gives results: \"La carga promedio que soportaron los pernos ...\", \"La capacidad de anclaje ...\", \"como resultado de las pruebas realizadas el Split set corrugado tiene mayor capacidad de anclaje respecto a Split set convencional\". So yes, results are present. So D1_imryd_resultados = 1.\n\nD1_imryd_conclusiones: The summary ends with \"considerando estos resultados es recomendable hacer uso de Split set corrugado y se puede adicionar cartuchos de cemento.\" That is a recommendation. It also says \"el Split set corrugado tiene mayor capacidad de anclaje respecto a Split set convencional\". That is a conclusion. So yes, D1_imryd_conclusiones = 1.\n\nD1_orden_logico: The components present: objective, methodology, results, conclusion. Are they in order? The summary starts with objective, then methodology (descriptiva, etc.), then results (cargas, capacities), then conclusion. So yes, order is correct. So D1_orden_logico = 1.\n\nNow D2_coherencia: We need to rate 1-5. Let's evaluate flow. The summary is somewhat dense but flows logically: objective, then description of rock quality, then loads, then capacities, then conclusion. There are some transitions: \"La calidad del macizo rocoso en By Pass 815 NE es de RMR 35 – 46.75 (IV-III), el tipo de roca es una andesita porfirítica alterada conforme los resultados obtenidos en trece estaciones geomecánicas el mínimo valor de RMR es 35 y el máximo de RMR es 46,75, en 10 estaciones la roca es de mala calidad con RMR [21,40], en 03 estaciones tienen calidad regular RMR [41,60].\" That sentence is long but coherent. Then \"La carga promedio que soportaron los pernos ...\". Then \"La capacidad de anclaje ...\". Then conclusion. There is no abrupt jump. So I'd rate 4 or 5. Let's see if any issues: The summary uses \"la investigación es descriptiva, explicativa y aplicativa.\" That is fine. The flow is okay. There's no contradictory statements. So I'd give 5. But check if any repeated terms or abrupt transitions: The sentence \"La carga promedio que soportaron los pernos Split Set convencionales de 5 pies en longitud fueron 5.7 t, la carga promedio que soportaron los pernos Split set convencional de 5 pies en longitud con cartuchos de cemento fueron 7.0 t, la carga promedio que soportaron los pernos Split set corrugado de 5 pies en longitud fueron 7.5 t, y la carga promedio que soportaron los pernos Split Set corrugado de 5 pies de longitud con cartuchos de cemento fueron 8.2 t.\" It's a list. Then \"La capacidad de anclaje ...\". Then conclusion. So it's coherent. I'd give 5.\n\nNow D3_contextualizacion: Does the summary situate the problem? It says \"El trabajo de investigación en la Unidad Minera Las Águilas – CIEMSA tiene como objetivo, determinar la capacidad de anclaje del Split set corrugado con cartuchos de cemento respecto al Split set convencional para una determinada calidad del macizo rocoso basados en la clasificación de Bieniawski 1989\". That is the objective. But does it provide context? It says \"la investigación es descriptiva, explicativa y aplicativa.\" It also gives rock quality. But does it explain why this matters? It doesn't explicitly say why it's important, but it does mention the rock quality classification and the context of the mine. It says \"La calidad del macizo rocoso en By Pass 815 NE es de RMR 35 – 46.75 (IV-III)\". That situates the problem. But does it explain why it's important? It doesn't say \"this is important for safety\" or \"for cost\". But it does mention the context: \"Unidad Minera Las Águilas – CIEMSA\". So maybe it's enough. The field D3_contextualizacion requires the summary to situate the problem: why it matters, where it occurs, to whom it affects, against what norm or framework. The summary does mention the location and the rock quality classification. But does it mention why it's important? It doesn't explicitly say \"this is important for safety\" or \"for cost\". But maybe the context is implied. The guidelines say: \"Vale 1 cuando el resumen sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco se contrasta.\" The summary mentions the location (By Pass 815 NE), the rock quality classification (RMR 35-46.75). It doesn't mention a norm or framework. It doesn't mention why it matters. But maybe the context is enough? The guidelines say \"El resumen debe situar el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco se contrasta.\" The summary does not mention \"por qué importa\" or \"a quién afecta\". It just states the objective. So I'd lean to 0. But maybe we can consider that the context is partially present: the location and rock quality classification. But the guidelines emphasize \"por qué importa\". The summary doesn't say that. So I'd set D3_contextualizacion = 0.\n\nD3_metodo_detallado: We need at least two precisions. The summary says: \"la investigación es descriptiva, explicativa y aplicativa.\" That's one precision: design type. It also says \"en trece estaciones geomecánicas\". That's a sample size. It also says \"en 10 estaciones la roca es de mala calidad con RMR [21,40], en 03 estaciones tienen calidad regular RMR [41,60]\". That is more detail. It also says \"La carga promedio que soportaron los pernos ...\". That is measurement. So we have at least two precisions. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: The summary gives concrete results: loads (5.7 t, 7.0 t, 7.5 t, 8.2 t), capacities (1.1 t/pie, 1.4 t/pie, 1.5 t/pie, 1.6 t/pie). So yes, D3_resultados_concretos = 1.\n\nD3_conclusion_responde: The conclusion: \"considerando estos resultados es recomendable hacer uso de Split set corrugado y se puede adicionar cartuchos de cemento.\" The objective was to determine the capacity of anclaje of Split set corrugado with cartuchos de cemento vs conventional. The conclusion recommends using corrugado. That addresses the objective. So D3_conclusion_responde = 1.\n\nD4_consistencia: We need to evaluate consistency between what the summary says it did and what it presents. The summary says \"la investigación es descriptiva, explicativa y aplicativa.\" It then presents loads and capacities. That is consistent. There's no contradictory statements. The conclusion is consistent with results. So D4_consistencia = 5.\n\nNow no_evaluable: 0 (since it's a valid summary). Observaciones: we can add any notes. We might note that D3_contextualizacion is 0 because no explicit context. But we can mention that. But we can leave it empty or add a note. The schema requires a string. We can put an empty string or a note. It's safer to put an empty string. But we can also add a note: \"No explicit context provided.\" But the guidelines say we can use observations for doubts. We can add a note: \"No explicit context provided; only location and rock quality mentioned.\" That might be helpful. But it's optional. I'll add a short note.\n\nThus JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"No explicit context provided; only location and rock quality mentioned.\"\n}\n\nCheck schema: all required fields present. All values are integers or null. Observations string. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789700182,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_37c9245f64",
+  "usage": {
+   "completion_tokens": 2942,
+   "prompt_tokens": 10098,
+   "total_tokens": 13040,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2805,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.193771603,
+   "prompt_time": 0.578744477,
+   "completion_time": 3.086151554,
+   "total_time": 3.664896031
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s730wbescv87b7zfdg7ynz",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T02:56:22.900944+00:00"
+}

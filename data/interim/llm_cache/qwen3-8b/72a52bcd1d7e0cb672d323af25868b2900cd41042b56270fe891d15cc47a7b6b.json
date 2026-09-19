@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-116",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la estructura IMRyD correctamente. La coherencia es buena, aunque podría mejorar en la transición entre la metodología y los resultados. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar el lavado de manos en relación con las enfermedades diarreicas agudas. La consistencia metodológica es 3 porque las conclusiones reflejan una asociación que se basa en los resultados, pero no se menciona si la asociación fue estadísticamente significativa."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la estructura IMRyD correctamente. La coherencia es buena, aunque podría mejorar en la transición entre la metodología y los resultados. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar el lavado de manos en relación con las enfermedades diarreicas agudas. La consistencia metodológica es 3 porque las conclusiones reflejan una asociación que se basa en los resultados, pero no se menciona si la asociación fue estadísticamente significativa.\"\n}",
+ "usage": {
+  "input_tokens": 10952,
+  "output_tokens": 276,
+  "total_duration_s": 11.3539069
+ },
+ "latency_s": 11.37779712677002,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:06:15.467904+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:06:15.4589551Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la estructura IMRyD correctamente. La coherencia es buena, aunque podría mejorar en la transición entre la metodología y los resultados. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar el lavado de manos en relación con las enfermedades diarreicas agudas. La consistencia metodológica es 3 porque las conclusiones reflejan una asociación que se basa en los resultados, pero no se menciona si la asociación fue estadísticamente significativa.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 11353906900,
+  "load_duration": 5242900,
+  "prompt_eval_count": 10952,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 502432000,
+  "eval_count": 276,
+  "eval_duration": 10769591000
+ },
+ "cached_at_utc": "2026-09-19T02:06:15.467918+00:00"
+}

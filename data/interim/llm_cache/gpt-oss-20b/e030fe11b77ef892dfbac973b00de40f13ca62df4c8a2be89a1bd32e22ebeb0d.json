@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-156",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": null,
+  "no_evaluable": 1,
+  "observaciones": "Resumen sin metodología ni resultados ni conclusión; objetivo presente; contextualización adecuada; coherencia razonable (4); D4 no evaluable por falta de metodología; no orden lógico (solo objetivo)."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":0,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"Resumen sin metodología ni resultados ni conclusión; objetivo presente; contextualización adecuada; coherencia razonable (4); D4 no evaluable por falta de metodología; no orden lógico (solo objetivo).\"}",
+ "usage": {
+  "input_tokens": 9945,
+  "output_tokens": 1746,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.7879891395568848,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:14:18.898424+00:00",
+ "raw": {
+  "id": "chatcmpl-2f23b29f-239a-49a9-9675-4aaf4c361cbb",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":0,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"Resumen sin metodología ni resultados ni conclusión; objetivo presente; contextualización adecuada; coherencia razonable (4); D4 no evaluable por falta de metodología; no orden lógico (solo objetivo).\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nWe need to evaluate each field.\n\nFirst, read the summary:\n\nTitle: Determinar la incidencia del control interno en la gestión de las entidades públicas de la provincia de Abancay-Apurímac\n\nResumen: \n\"La investigación tiene la finalidad de determinar la incidencia del control interno en la gestión de las entidades públicas de la provincia de Abancay – Apurímac,  siendo el Control Interno un proceso integral y dinámico que se adapta constantemente a los cambios que enfrenta la entidad pública ello implica a los funcionarios y servidores de todo los niveles que están involucrados en este proceso para prevenir riesgos, el objetivo es de determinar la incidencia del control interno en la gestión de las entidades asentadas en Abancay y Apurímac y así prevenir irregularidades y actos de corrupción  para hacer que la gestión pública sea más  eficiente y transparente  y brindar mejores servicios a la ciudadanía. En razón a ello todo los trabajadores de la entidades públicas deben ejercer el control interno sobre las acciones que desarrollan y reportar las deficiencias, igualmente los funcionarios deben diseñar, implementar y supervisar constantemente las acciones de control interno en su institución; considerando como un aporte por ello  la Contraloría General  de la República ha emitido Normas  de Control Interno y Guías para la implantación del Sistema de Control Interno, estableciendo plazos que pasaron de efectivos a referenciales. En el poco tiempo de exigencia y hasta la fecha, las entidades públicas como son los Ministerios, no han logrado implementar sus Sistemas de Control Interno. La investigación explica la  importancia del variable control y la tendencia de un gobierno corporativo en las entidades públicas del país.\"\n\nWe need to evaluate each dimension.\n\nFirst, D1_imryd_objetivo: Does the summary state the objective? It says: \"La investigación tiene la finalidad de determinar la incidencia del control interno en la gestión de las entidades públicas de la provincia de Abancay – Apurímac\". Also repeats \"el objetivo es de determinar la incidencia del control interno en la gestión de las entidades asentadas en Abancay y Apurímac\". So yes, objective is present. So D1_imryd_objetivo = 1.\n\nD1_imryd_metodologia: Does it describe how they did it? The summary does not mention any methodology: no design, sample, instrument, etc. It just describes the context and the importance. So no methodology. So D1_imryd_metodologia = 0.\n\nD1_imryd_resultados: Does it present results? It says \"La investigación explica la importancia del variable control y la tendencia de un gobierno corporativo en las entidades públicas del país.\" It does not present any data or findings. So D1_imryd_resultados = 0.\n\nD1_imryd_conclusiones: Does it provide a conclusion? It says \"La investigación explica la importancia del variable control y la tendencia de un gobierno corporativo en las entidades públicas del país.\" That is more like a statement of what the research explains, not a conclusion. It doesn't interpret results or give implications. So D1_imryd_conclusiones = 0.\n\nD1_orden_logico: Since only objective present, and no other components, we have only 1 component present. According to rule: If 0 or 1 components present, order = 0. So D1_orden_logico = 0.\n\nD2_coherencia: Evaluate flow. The summary is somewhat repetitive, but overall it flows: introduction of objective, context, mention of norms, lack of implementation, importance. It's somewhat coherent but maybe a bit repetitive. Let's rate 4? Let's analyze: The summary starts with objective, then context, then mention of norms, then lack of implementation, then importance. It's fairly coherent. No major jumps. So I'd give 4. But we need to consider that the summary is somewhat repetitive and maybe not fully coherent. But 4 seems okay. Let's set D2_coherencia = 4.\n\nD3_contextualizacion: Does it situate the problem? It says \"La investigación tiene la finalidad de determinar la incidencia del control interno en la gestión de las entidades públicas de la provincia de Abancay – Apurímac\". It also mentions that the control internal is a process, that it involves all levels, that the Contraloría has issued norms, that entities have not implemented them. So yes, it situates the problem: the lack of implementation of control internal in Abancay and Apurímac. So D3_contextualizacion = 1.\n\nD3_metodo_detallado: Does it give at least two precisions about procedure? No methodology described. So D3_metodo_detallado = 0.\n\nD3_resultados_concretos: No results. So D3_resultados_concretos = 0.\n\nD3_conclusion_responde: No conclusion. So D3_conclusion_responde = 0.\n\nD4_consistencia: Since no methodology, D4_consistencia is not evaluable. According to rule: If no methodology, mark no_evaluable = 1 and leave D4_consistencia empty. But the schema requires D4_consistencia field present, but can be null? The schema says D4_consistencia enum [1,2,3,4,5,null] type integer or null. So we can set D4_consistencia = null. And no_evaluable = 1.\n\nObservaciones: We should note any relevant observations. For example: \"No metodología descrita; no resultados; no conclusión; no orden lógico; coherencia 4; contextualización presente.\" Also mention that D4_consistencia not evaluable due to missing methodology. Also mention that the summary is narrative, no structured headings. Also mention that the objective is repeated. Also mention that the summary is somewhat repetitive. Let's craft a concise observation.\n\nObservaciones: \"Resumen sin metodología ni resultados ni conclusión; objetivo presente; contextualización adecuada; coherencia razonable (4); D4 no evaluable por falta de metodología; no orden lógico (solo objetivo).\"\n\nNow produce JSON with all fields.\n\nCheck required fields: all fields must be present. D4_consistencia can be null. no_evaluable must be 0 or 1. Observaciones string.\n\nLet's produce JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":0,\n \"D1_imryd_resultados\":0,\n \"D1_imryd_conclusiones\":0,\n \"D1_orden_logico\":0,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":0,\n \"D3_resultados_concretos\":0,\n \"D3_conclusion_responde\":0,\n \"D4_consistencia\":null,\n \"no_evaluable\":1,\n \"observaciones\":\"Resumen sin metodología ni resultados ni conclusión; objetivo presente; contextualización adecuada; coherencia razonable (4); D4 no evaluable por falta de metodología; no orden lógico (solo objetivo).\"\n}\n\nCheck JSON validity: all keys present, values correct. Ensure no trailing commas. Good.\n\nReturn only JSON."
+    }
+   }
+  ],
+  "created": 1789701258,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_9b8528b477",
+  "usage": {
+   "completion_tokens": 1746,
+   "prompt_tokens": 9945,
+   "total_tokens": 11691,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1582,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.241110758,
+   "prompt_time": 0.068994851,
+   "completion_time": 2.07552524,
+   "total_time": 2.144520091
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s83x1cecnrp95vy7ek4yma",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:14:18.898515+00:00"
+}

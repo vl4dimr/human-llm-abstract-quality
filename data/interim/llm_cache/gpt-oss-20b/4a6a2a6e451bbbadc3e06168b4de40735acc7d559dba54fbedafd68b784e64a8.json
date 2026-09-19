@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-135",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 1,
+  "no_evaluable": 0,
+  "observaciones": "Conclusión contradice los resultados; falta contextualización inicial."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":1,\"no_evaluable\":0,\"observaciones\":\"Conclusión contradice los resultados; falta contextualización inicial.\"}",
+ "usage": {
+  "input_tokens": 9929,
+  "output_tokens": 1829
+ },
+ "latency_s": 6.19891357421875,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T00:01:44.373220+00:00",
+ "raw": {
+  "id": "chatcmpl-4d3e99fd-88a1-4011-987c-343b94311866",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":1,\"no_evaluable\":0,\"observaciones\":\"Conclusión contradice los resultados; falta contextualización inicial.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones. All required.\n\nWe must analyze the summary to fill.\n\nLet's parse:\n\nSummary text:\n\n\"La presente investigación titulada Nivel de Estrés laboral en los colaboradores de la empresa Transportes Express San Pedro S.C.R.L. Juliaca, 2016 tuvo como propósito determinar el nivel de estrés laboral de los colaboradores de la empresa. El diseño utilizado para la investigacion fue no experimental transaccional, descriptivo de tipo cuantitativo. Para la recolección de datos se usó el instrumento de tipo encuesta que fue validada por juicio de expertos, estos instrumentos fueron evaluados obteniendo una validez y confiabilidad aceptable, además se utilizó la prueba chi – cuadrada para comprobar la hipótesis de investigación. Este instrumento consta de 15 ítems distribuidos en tres dimensiones (Factores ambientales, factores organizacionales y factores individuales). Como resultado principal se determinó que el 22% de los colaboradores tienen un nivel de estrés laboral alto, el 60% de los colaboradores tienen un nivel de estrés laboral medio y que solo el 18% de los colaboradores tienen un nivel de estrés laboral bajo; influenciados por los factores intervinientes como lo son el factor ambiental, organizacional e individual, teniéndose en cuenta que los problemas económicos afectan considerablemente en el estrés laboral de los colaboradores. En consecuencia, se acepta la Hipótesis nula donde indica que el estrés laboral de los colaboradores de la empresa es alto en menos o igual al 20%.\"\n\nLet's identify components.\n\nObjective: \"tuvo como propósito determinar el nivel de estrés laboral de los colaboradores de la empresa.\" This is explicit. So D1_imryd_objetivo = 1.\n\nMethodology: We need to see if any procedural details. \"El diseño utilizado fue no experimental transaccional, descriptivo de tipo cuantitativo. Para la recolección de datos se usó el instrumento de tipo encuesta que fue validada por juicio de expertos, estos instrumentos fueron evaluados obteniendo una validez y confiabilidad aceptable, además se utilizó la prueba chi – cuadrada para comprobar la hipótesis de investigación. Este instrumento consta de 15 ítems distribuidos en tres dimensiones.\" These are at least 3 precisions: design (no experimental transaccional descriptivo), instrument details (encuesta, validez, confiabilidad), test (chi^2). That's at least two precisions. So D1_imryd_metodologia = 1.\n\nResults: \"Como resultado principal se determinó que el 22% de los colaboradores tienen un nivel de estrés laboral alto, el 60% de los colaboradores tienen un nivel de estrés laboral medio y que solo el 18% de los colaboradores tienen un nivel de estrés laboral bajo; influenciados por los factores intervinientes...\" This provides concrete results (percentages). So D1_imryd_resultados = 1.\n\nConclusions: The final sentence: \"En consecuencia, se acepta la Hipótesis nula donde indica que el estrés laboral de los colaboradores de la empresa es alto en menos o igual al 20%.\" That is a conclusion, but is it a conclusion that goes beyond the results? The result said 22% high, 60% medium, 18% low. So 22% high is above 20%. So the conclusion says the hypothesis null that the stress level is <=20% is accepted, but result shows 22% high. So conclusion is contradictory? Wait: The hypothesis might be \"the stress level is <=20%.\" If 22% high, then hypothesis would be rejected. But conclusion says accepted. That is contradictory. But we consider the conclusion as \"se acepta la Hipótesis nula...\" It is not a synthesis of results. It is a statement of acceptance of null, but contradictory. But for D1_imryd_conclusiones we consider if it's a conclusion that goes beyond repeating results. It does present a closure that interprets results (or at least claims). So D1_conclusiones = 1 (though content questionable). The D4_consistency later may penalize.\n\nOrder: Objective, method, results, conclusion appears in that order. Yes: objective first, then design, method, instrument, results, conclusion. So D1_orden_logico = 1.\n\nNow D2_coherencia: Flow of text. Let's evaluate. The summary flows fairly well: objective, design, instrument, results, conclusion. But there might be some abruptness. There's a semicolon: \"... bajo; influenciados por los factores intervinientes...\" That phrase might be a bit abrupt but still coherent. The mention of \"problemas económicos afectan considerablemente\" is a bit like adding additional comment but still within results discussion. I'd give 4. The criteria: 5: flawless, 4: slight aspereza. I think 4 is appropriate.\n\nD3_contextualizacion: Does summary situate the problem? It starts with the research title and objective, but does not give why the problem matters, or context such as workplace stress significance. It states \"el problema de los problemas económicos ... afecta considerablemente.\" That is a hint but not explicit context. The summary does not say why it's important. So D3_contextualizacion = 0.\n\nD3_metodo_detallado: We need at least two precisions. Yes. We have design (no experimental transaccional descriptivo), instrument details, test used. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: Contains concrete percentages. Yes. So D3_resultados_concretos = 1.\n\nD3_conclusion_responde: Does conclusion respond to the objective? The objective is to determine the level of stress. The conclusion says that the null hypothesis that stress is <=20% is accepted, which is a conclusion about the level. The conclusion addresses the level but is contradictory. Still, it is a response. So D3_conclusion_responde = 1 (even though wrong). If the conclusion didn't address the objective, we'd set 0.\n\nD4_consistencia: This checks coherence between what summary says it did and what it presents. Here there is a contradiction: results say 22% high, but conclusion accepts null of <=20%. That is a major inconsistency. According to the D4 categories, that is a \"Afirmar diferencias tras reportar p > 0,05\" style? But here it's acceptance of null vs contradictory data. This is a contradiction that undermines the conclusion. That falls in \"Contradicción abierta que invalida la conclusión\" (score 1). So D4_consistencia = 1.\n\nno_evaluable: The summary is a proper summary; no issues. So no_evaluable = 0.\n\nObservaciones: We should note the contradictory conclusion, maybe mention that the conclusion contradicts results. Also note that contextualization is missing. We can provide a brief observation: \"Conclusión contradice los resultados; falta contextualización inicial.\"\n\nNow produce JSON. Need compact JSON. All fields present.\n\nLet's assemble:\n\n{\n\"D1_imryd_objetivo\":1,\n\"D1_imryd_metodologia\":1,\n\"D1_imryd_resultados\":1,\n\"D1_imryd_conclusiones\":1,\n\"D1_orden_logico\":1,\n\"D2_coherencia\":4,\n\"D3_contextualizacion\":0,\n\"D3_metodo_detallado\":1,\n\"D3_resultados_concretos\":1,\n\"D3_conclusion_responde\":1,\n\"D4_consistencia\":1,\n\"no_evaluable\":0,\n\"observaciones\":\"Conclusión contradice los resultados; falta contextualización inicial.\"\n}\n\nEnsure JSON keys order? Not necessary but okay.\n\nCheck that all values are integers or null. Observaciones string fine. Done.\n\n"
+    }
+   }
+  ],
+  "created": 1789776103,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_99996fee8e",
+  "usage": {
+   "completion_tokens": 1829,
+   "prompt_tokens": 9929,
+   "total_tokens": 11758,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1692,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.288257925,
+   "prompt_time": 0.588458169,
+   "completion_time": 2.230379157,
+   "total_time": 2.818837326
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vffze1e1fb35a5whx855ax",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-19T00:01:44.373242+00:00"
+}

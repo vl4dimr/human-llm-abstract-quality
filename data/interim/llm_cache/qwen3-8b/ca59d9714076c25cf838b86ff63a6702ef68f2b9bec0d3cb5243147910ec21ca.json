@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-027",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 1,
+  "no_evaluable": 0,
+  "observaciones": "El resumen no presenta una metodología detallada, resultados concretos ni conclusiones que respondan al objetivo. La coherencia es media debido a la falta de fluidez en la narrativa y la ausencia de una estructura clara. La contextualización es cero ya que no se explica por qué el comercio informal afecta la calidad de vida. La consistencia metodológica es baja debido a la falta de información sobre cómo se abordó la investigación."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 1,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen no presenta una metodología detallada, resultados concretos ni conclusiones que respondan al objetivo. La coherencia es media debido a la falta de fluidez en la narrativa y la ausencia de una estructura clara. La contextualización es cero ya que no se explica por qué el comercio informal afecta la calidad de vida. La consistencia metodológica es baja debido a la falta de información sobre cómo se abordó la investigación.\"\n}",
+ "usage": {
+  "input_tokens": 10821,
+  "output_tokens": 256,
+  "total_duration_s": 7.8720599
+ },
+ "latency_s": 7.886620044708252,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:28:51.042664+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:28:51.0416387Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 1,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen no presenta una metodología detallada, resultados concretos ni conclusiones que respondan al objetivo. La coherencia es media debido a la falta de fluidez en la narrativa y la ausencia de una estructura clara. La contextualización es cero ya que no se explica por qué el comercio informal afecta la calidad de vida. La consistencia metodológica es baja debido a la falta de información sobre cómo se abordó la investigación.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7872059900,
+  "load_duration": 4014300,
+  "prompt_eval_count": 10821,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 299174000,
+  "eval_count": 256,
+  "eval_duration": 7501517000
+ },
+ "cached_at_utc": "2026-09-19T01:28:51.042678+00:00"
+}

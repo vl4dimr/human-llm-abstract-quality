@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-151",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica con los componentes IMRyD. La coherencia es buena, aunque hay repeticiones en la descripción de los pozos. La contextualización es cero porque el resumen comienza directamente con los objetivos sin explicar por qué es importante el estudio. La metodología está detallada con el uso de métodos específicos y normas. Los resultados son concretos con valores numéricos y análisis estadísticos. La conclusión responde al objetivo al indicar que el agua no es apta para el consumo humano. La consistencia metodológica es 3 porque la conclusión menciona que el agua no es apta, pero no se justifica con los resultados presentados."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica con los componentes IMRyD. La coherencia es buena, aunque hay repeticiones en la descripción de los pozos. La contextualización es cero porque el resumen comienza directamente con los objetivos sin explicar por qué es importante el estudio. La metodología está detallada con el uso de métodos específicos y normas. Los resultados son concretos con valores numéricos y análisis estadísticos. La conclusión responde al objetivo al indicar que el agua no es apta para el consumo humano. La consistencia metodológica es 3 porque la conclusión menciona que el agua no es apta, pero no se justifica con los resultados presentados.\"\n}",
+ "usage": {
+  "input_tokens": 11672,
+  "output_tokens": 314,
+  "total_duration_s": 15.7559762
+ },
+ "latency_s": 15.766043663024902,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:14:18.903696+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:14:18.8958331Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica con los componentes IMRyD. La coherencia es buena, aunque hay repeticiones en la descripción de los pozos. La contextualización es cero porque el resumen comienza directamente con los objetivos sin explicar por qué es importante el estudio. La metodología está detallada con el uso de métodos específicos y normas. Los resultados son concretos con valores numéricos y análisis estadísticos. La conclusión responde al objetivo al indicar que el agua no es apta para el consumo humano. La consistencia metodológica es 3 porque la conclusión menciona que el agua no es apta, pero no se justifica con los resultados presentados.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 15755976200,
+  "load_duration": 10149700,
+  "prompt_eval_count": 11672,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 1032292999,
+  "eval_count": 314,
+  "eval_duration": 14597392000
+ },
+ "cached_at_utc": "2026-09-19T02:14:18.903727+00:00"
+}

@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-022",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "Conclusión incluye afirmaciones no respaldadas por los resultados y no responde directamente al objetivo, lo que reduce la coherencia metodológica."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":3,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":4,\"no_evaluable\":0,\"observaciones\":\"Conclusión incluye afirmaciones no respaldadas por los resultados y no responde directamente al objetivo, lo que reduce la coherencia metodológica.\"}",
+ "usage": {
+  "input_tokens": 9986,
+  "output_tokens": 1402
+ },
+ "latency_s": 3.1823418140411377,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:48:10.160929+00:00",
+ "raw": {
+  "id": "chatcmpl-7d6ad711-5deb-4c9e-936c-d01958d57482",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":3,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":4,\"no_evaluable\":0,\"observaciones\":\"Conclusión incluye afirmaciones no respaldadas por los resultados y no responde directamente al objetivo, lo que reduce la coherencia metodológica.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields per schema. Evaluate summary.\n\nLet's analyze each field:\n\nD1_imryd_objetivo: Does the summary include what was proposed? It states: \"el objetivo determinar la influencia de habilidades directivas y proceso administrativo de los trabajadores\". Yes explicit. So 1.\n\nD1_imryd_metodologia: Does the summary include how they got knowledge? It says: \"diseño metodológico es de tipo correlacional descriptivo explicativo, de diseño no experimental de corte transversal. Se trabajó con una muestra de 244 individuos ... se utilizó 2 instrumentos\". That's a methodology. So 1.\n\nD1_imryd_resultados: Are results communicated? It says \"como resultado los hallazgos demuestran que la variable HD explican la variabilidad del proceso administrativo en un 13%, además según el resultado de la prueba t de Student, se asume que la variable HD predice el proceso administrativo (t = 6.317, p < .05)\". That is result. So 1.\n\nD1_imryd_conclusiones: Are conclusions beyond result? It says: \"Se concluye, a mayor energía y entusiasmo de parte del emprendedor las condiciones de su vida serán más cercanos a lo ideal en su vida cotidiana, además el éxito laboral se ha malentendido, olvidando factores como el trabajo bien hecho y la satisfacción personal. Un buen liderazgo es esencial para el éxito de las organizaciones en la actualidad.\" That seems not directly tying to results, more general statement. So conclusion not clearly answering objective. So 0. According to protocol: closure that goes beyond results; should interpret and implications. This conclusion seems vague, not tying to objective or data. So 0.\n\nD1_orden_logico: Are components in logical order? The order: introduction, objective, methodology, sample, instruments, results, conclusion. This is logical sequence. So 1.\n\nD2_coherencia: Need to rate 1-5. Let's examine flow. The summary: start with importance of procedures, then challenges, then objective, then methodology, sample, instruments, results, conclusion. The flow: introduction (importance), then challenges, objective, method, sample, instruments, results, conclusion. It's somewhat coherent but maybe a bit jumpy. There's mention of \"se utilizó 2 instrumentos...\" after sample. Good. The conclusion is not directly tied. But overall flow is decent. I'd rate 3 or 4? Let's decide.\n\nObservations: There's an abrupt shift from results to conclusion about \"a mayor energía y entusiasmo...\" which is unrelated to results. That's a disconnect. That may reduce coherence. But earlier flow was fine. So I'd give 3 or 4. Let's set 3.\n\nD3_contextualizacion: Is problem situating? It says \"En el mundo actual, los procedimientos administrativos son de gran importancia...\". That gives context about importance of procedures in general but not specific to why it matters for the study, or specific problem? It sets general context, but maybe not enough to situate. The context: \"falta de capacitación de los directivos\". It does give context: challenges due to lack of training. That explains why study is important. That counts. I think yes, it provides context. So 1. However, per guidelines: situate problem: why it matters, where, to whom, normative. It says \"procedimientos administrativos son de gran importancia para ...\". That sets context. So 1.\n\nD3_metodo_detallado: Need at least two precisions. They have design, sample size 244, sex distribution, method of convenience, instruments (2). So yes at least two. So 1.\n\nD3_resultados_concretos: Are results specific: 13% explained, t=6.317, p<.05. That's specific. So 1.\n\nD3_conclusion_responde: Does conclusion respond to objective? Objective: determine influence of HD on process administrative. Conclusion: says \"a mayor energía y entusiasmo... las condiciones de su vida serán más cercanos a lo ideal... éxito laboral se ha malentendido... Un buen liderazgo es esencial\". This does not directly respond. So 0.\n\nD4_consistencia: We need to check if methodology matches results and conclusion. There's no major contradictions. The result says t=6.317, p<.05, HD predicts process administrative. Conclusion says good leadership is essential; that is consistent with HD being leadership? Might be okay. But the conclusion also states \"a mayor energía y entusiasmo... las condiciones de su vida...\" unrelated. That's a contradiction? It introduces new concept not supported by data. That is a minor discord. According to protocol, contradictions may downgrade score. We have one mismatch: conclusion includes \"a mayor energía y entusiasmo...\" not supported by results. That seems to be a discord. But is it a \"contradiction\" or just additional claim? It's not contradictory to results but adds something unrelated. That could be considered a minor discord, maybe score 4? But D4 scoring: 5 perfect, 4 with a minor inaccuracy. So 4 seems appropriate.\n\nNo_evaluable: 0 (it's a valid summary). Observaciones: maybe note the mismatch of conclusion not directly tied to objective. Provide a brief note.\n\nLet's produce JSON.\n\nCheck fields: all required.\n\nValues:\n\nD1_imryd_objetivo:1\nD1_imryd_metodologia:1\nD1_imryd_resultados:1\nD1_imryd_conclusiones:0\nD1_orden_logico:1\nD2_coherencia:3\nD3_contextualizacion:1\nD3_metodo_detallado:1\nD3_resultados_concretos:1\nD3_conclusion_responde:0\nD4_consistencia:4\nno_evaluable:0\nobservaciones: \"Conclusión incluye afirmaciones no respaldadas por los resultados y no responde directamente al objetivo, lo que reduce la coherencia metodológica.\"\n\nMake sure JSON compact.\n\nLet's output."
+    }
+   }
+  ],
+  "created": 1789775289,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_feb9b278f1",
+  "usage": {
+   "completion_tokens": 1402,
+   "prompt_tokens": 9986,
+   "total_tokens": 11388,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1251,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.243730539,
+   "prompt_time": 0.691029128,
+   "completion_time": 1.490131026,
+   "total_time": 2.181160154
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2veq50ae38asx1kr237nq8j",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:48:10.161004+00:00"
+}

@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-129",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Conclusión declara 'alta capacidad predictiva' mientras ROC = 0.613 indica capacidad aceptable; sin embargo, el resumen mantiene coherencia funcional y estructural."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Conclusión declara 'alta capacidad predictiva' mientras ROC = 0.613 indica capacidad aceptable; sin embargo, el resumen mantiene coherencia funcional y estructural.\"}",
+ "usage": {
+  "input_tokens": 10198,
+  "output_tokens": 1416,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.366895914077759,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T00:00:38.793839+00:00",
+ "raw": {
+  "id": "chatcmpl-ebe46754-3674-47ef-b708-01ebce9b849d",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Conclusión declara 'alta capacidad predictiva' mientras ROC = 0.613 indica capacidad aceptable; sin embargo, el resumen mantiene coherencia funcional y estructural.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields. Evaluate each field:\n\nWe need to read the summary. Title and summary.\n\nFirst, D1_imryd_objetivo: Does summary provide objective? Yes: \"Objetivo: Determinar la eficacia del score FLAMM Y GROBMAN como predictor del éxito de parto vaginal...\" So 1.\n\nD1_imryd_metodologia: Does summary provide methodology? Yes: \"Metodología: Tipo analítico; descriptivo, transversal, se revisó 86 Historias clínicas seleccionados por muestreo no probabilístico; el estadístico se analizó en el programa R(V.4.1.1), la eficacia se calculó con la sensibilidad; especificidad, VPP, VPN y área bajo la curva ROC.\" So 1.\n\nD1_imryd_resultados: Provides results? Yes: \"Resultados: El score de FLAMM demostró mayor sensibilidad ... (93.8%), ...; hubo asociación significativa (p<0.05)...\". So 1.\n\nD1_imryd_conclusiones: Conclusiones section: \"Los Score de FLAMM y GROBMAN, tienen alta capacidad predictiva ...\". This is conclusion; does it go beyond repeating results? It does interpret: \"Los Score ... tienen alta capacidad predictiva ... demostran que la culminación en otra cesárea trae mayores complicaciones\". That seems a closure. So 1.\n\nD1_orden_logico: Sequence objective, method, results, conclusions: yes. All present and in order: Objetivo, Metodología, Resultados, Conclusiones. So 1.\n\nD2_coherencia: Coherencia organizacional: Evaluate flow, transitions. The text is somewhat long, but we need to rate 1-5. Let's see: The summary has a paragraph structure, but not obvious transitions? Let's evaluate:\n\nParagraph 1: region Puno, many gestantes, etc. Introduces problem. Then objective. Then methodology. Then results. Then conclusions.\n\nTransitions: \"Objetivo:\" preceded by a colon, but preceding context: \"En la región Puno, muchas gestantes con antecedentes de cesárea son innecesariamente intervenidas quirúrgicamente... Objetivo:\" So it goes from context to objective. Then \"Metodología:\" follows objective. Then \"Resultados:\" follows methodology. Then \"Conclusiones:\" follows results. So flow is logical. But there are some abrupt changes: e.g., after listing complications, still in results? The results section includes complications, which are part of results. It is coherent. Slightly long but fine. I'd rate 4: good flow with minimal abruptness. No contradictions or repeated phrases? Possibly the phrase \"las complicaciones maternas\" appears after results, still in results section. It's fine. I'd give 4.\n\nD3_contextualizacion: Does the summary situate the problem: \"En la región Puno, muchas gestantes ...\". Yes, it describes why it's important and where. So 1.\n\nD3_metodo_detallado: Need at least two precisions: design, type, sample size, instrument, etc. It says: \"Tipo analítico; descriptivo, transversal, se revisó 86 Historias clínicas seleccionados por muestreo no probabilístico; el estadístico se analizó en el programa R(V.4.1.1), la eficacia se calculó con la sensibilidad; especificidad, VPP, VPN y área bajo la curva ROC.\" That includes design type, sample size (86), sampling method, instrument program R. That's multiple. So 1.\n\nD3_resultados_concretos: Should have specific content: yes, they list percentages, odds ratios, p-values, etc. So 1.\n\nD3_conclusion_responde: The conclusion should respond to the objective. Objective: Determine efficacy of scores as predictor. Conclusion: \"Los Score de FLAMM y GROBMAN, tienen alta capacidad predictiva ...\". That responds to objective. So 1.\n\nD4_consistencia: Consistency between what is claimed and what is presented. Need to check any contradictions. The summary: methodology says they analyzed 86 records, statistical analysis via R, etc. Results: list of sensitivities, etc. Conclusions: says \"Los Score de FLAMM y GROBMAN, tienen alta capacidad predictiva ...\". That's consistent. No contradictions about significance or results. The only potential is they mention \"p<0.05\" for associations, but not the actual test. They use \"area bajo la curva ROC\" of 0.613 - that indicates moderate predictive value. Conclusion says \"high predictive capacity\". There's some mild mismatch? But still acceptable. Consistency should be high. I would give 5.\n\nno_evaluable: It's a valid summary. So 0.\n\nObservaciones: Provide any notes. Maybe mention that \"conclusión uses 'alta capacidad predictiva' but ROC 0.613 may not be high. But it's fine.\" We'll note.\n\nWe must output JSON with all fields. Ensure fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nValues: integers or null.\n\nThus:\n\nD1_imryd_objetivo:1\nD1_imryd_metodologia:1\nD1_imryd_resultados:1\nD1_imryd_conclusiones:1\nD1_orden_logico:1\nD2_coherencia:4\nD3_contextualizacion:1\nD3_metodo_detallado:1\nD3_resultados_concretos:1\nD3_conclusion_responde:1\nD4_consistencia:5\nno_evaluable:0\nobservaciones: string.\n\nLet's craft JSON. Ensure compact."
+    }
+   }
+  ],
+  "created": 1789776038,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_1074f9ce08",
+  "usage": {
+   "completion_tokens": 1416,
+   "prompt_tokens": 10198,
+   "total_tokens": 11614,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1257,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.217819443,
+   "prompt_time": 0.069050455,
+   "completion_time": 1.474726444,
+   "total_time": 1.543776899
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vfe0r9ef9aawzqm23xqs8e",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-19T00:00:38.793862+00:00"
+}

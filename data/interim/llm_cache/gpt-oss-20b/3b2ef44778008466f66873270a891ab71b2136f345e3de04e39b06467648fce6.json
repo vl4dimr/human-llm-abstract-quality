@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-037",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "no_evaluable": 0,
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "observaciones": "El resumen presenta objetivo, metodología y resultados, pero no incluye una conclusión o discusión que responda al objetivo. La contextualización del problema no está presente. La coherencia es buena con flujo objetivo‑método‑resultados. Consistencia metodológica alta, ya que no hay contradicciones entre lo declarado y los datos reportados."
+ },
+ "text": "{\"no_evaluable\":0,\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"observaciones\":\"El resumen presenta objetivo, metodología y resultados, pero no incluye una conclusión o discusión que responda al objetivo. La contextualización del problema no está presente. La coherencia es buena con flujo objetivo‑método‑resultados. Consistencia metodológica alta, ya que no hay contradicciones entre lo declarado y los datos reportados.\"}",
+ "usage": {
+  "input_tokens": 10523,
+  "output_tokens": 1257,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.2311184406280518,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:18:51.786389+00:00",
+ "raw": {
+  "id": "chatcmpl-3a911467-b4bc-4e39-9e9d-55374a8f4c9f",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"no_evaluable\":0,\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"observaciones\":\"El resumen presenta objetivo, metodología y resultados, pero no incluye una conclusión o discusión que responda al objetivo. La contextualización del problema no está presente. La coherencia es buena con flujo objetivo‑método‑resultados. Consistencia metodológica alta, ya que no hay contradicciones entre lo declarado y los datos reportados.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. We need to fill all required fields. Let's go through each dimension:\n\nWe have:\n\n- D1_imryd_objetivo: Must be 1 if objective can be answered. The summary starts \"El objetivo del presente trabajo fue criopreservar espermatozoides...\" So yes: 1.\n\n- D1_imryd_metodologia: Must be 1 if indicates how obtained knowledge. They describe methods: they used 3 alpacas, described treatments T1, T2, T3, collection method, etc. So yes: 1.\n\n- D1_imryd_resultados: Must be 1 if results communicated, not method. They report motility percentages etc. So yes: 1.\n\n- D1_imryd_conclusiones: Must be 1 if closure beyond repeating result, interpretation, implication, response to objective, recommendation. The summary ends with data but no explicit conclusion sentence. It lists results but does not give a concluding statement. So D1_conclusiones = 0. The summary does not provide a conclusion; it's just data.\n\n- D1_orden_logico: Must be 1 if components present appear in logical sequence. The summary's order: objective, then methodology (treatments), then results (multiple metrics). No conclusion. That's objective → method → results. That's correct order. So 1.\n\nNow D2_coherencia: Scale 1-5. We need to evaluate coherence flow. The summary is quite dense but still flows: objective, methodology, results. The text seems fairly cohesive; some transitions but overall seems okay. I'd assign 4 perhaps. There is some abruptness in listing percentages but it's a scientific summary. I'd give 4.\n\nD3_contextualizacion: 1 if summary situates the problem: why it matters, where, etc. It says: \"El objetivo del presente trabajo fue criopreservar espermatozoides del conducto deferente el cual fue realizada en el Laboratorio...\" It does not explain why it's important or problem context. So 0.\n\nD3_metodo_detallado: 1 if at least two precise details about procedure. They mention 3 alpacas, treatments T1 T2 T3, collection volume 0.5 mL per treatment, motility, etc. So at least design (cryo), sample size (3 alpacas), treatments. So 1.\n\nD3_resultados_concretos: 1 if results provide specific content: yes, percentages, p-values, etc. So 1.\n\nD3_conclusion_responde: 1 if conclusion responds to objective. There is no conclusion; so 0.\n\nD4_consistencia: Scale 1-5. Need to see if what summary says it did matches results. The summary says objective to cryopreserve. Then lists results. There's no contradictory statement. So it's consistent. There's no over-claiming or misinterpretation. So consistency is good; I'd give 5. However, need to ensure no contradictions: They state p<=0.05 for some comparisons and p>0.05 for others. They correctly report results. So 5.\n\nBut check: The summary includes \"p<=0.05\" for some and \"p>0.05\" for others. There's no conclusion like \"the cryopreservation was effective.\" So it's consistent.\n\nThus D4 = 5.\n\nno_evaluable: 0 because it is a summary.\n\nobservaciones: We can add any notes. Maybe note that no conclusion provided. Also note that some percentages have small errors like \"37oC\" instead of 37°C but not relevant. Might also note that the summary uses \"a\" after percentages (like 43.98%a) weird but not relevant. We can mention that objective is present, method present, results present, no conclusion. Provide observation: \"No conclusion or discussion provided; summary stops after results.\" Also maybe note that contextualization missing.\n\nLet's produce JSON:\n\n{\n\"no_evaluable\": 0,\n\"D1_imryd_objetivo\": 1,\n\"D1_imryd_metodologia\": 1,\n\"D1_imryd_resultados\": 1,\n\"D1_imryd_conclusiones\": 0,\n\"D1_orden_logico\": 1,\n\"D2_coherencia\": 4,\n\"D3_contextualizacion\": 0,\n\"D3_metodo_detallado\": 1,\n\"D3_resultados_concretos\": 1,\n\"D3_conclusion_responde\": 0,\n\"D4_consistencia\": 5,\n\"observaciones\": \"El resumen presenta objetivo, metodología y resultados, pero no incluye una conclusión o discusión que responda al objetivo. La contextualización del problema no está presente. La coherencia es buena con flujo objetivo-método-resultados. Consistencia metodológica alta, ya que no hay contradicciones entre lo declarado y los datos reportados.\"\n}\n\nNeed to ensure all required fields present: D1_imryd_conclusiones etc. Yes.\n\nWe should also check that we have \"D1_imryd_objetivo\" field present. Yes.\n\nNow output as compact JSON."
+    }
+   }
+  ],
+  "created": 1789701531,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_24bfb4a850",
+  "usage": {
+   "completion_tokens": 1257,
+   "prompt_tokens": 10523,
+   "total_tokens": 11780,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1066,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.191811148,
+   "prompt_time": 0.094267339,
+   "completion_time": 1.309900847,
+   "total_time": 1.404168186
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8c8cwe9hs1b0k5feznakn",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:18:51.786474+00:00"
+}

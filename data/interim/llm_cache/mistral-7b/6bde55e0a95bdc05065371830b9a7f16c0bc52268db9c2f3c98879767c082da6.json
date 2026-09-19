@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-072",
+ "model_name": "mistral-7b",
+ "provider": "ollama",
+ "model": "mistral:latest",
+ "model_reported": "mistral:latest",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "Especificar la importancia de obtener plata refinada, justificar la elección del tipo de investigación, aclarar que la población es la solución cianurada y la muestra es 5 litros de dicha solución, hacer claras las pruebas experimentales, especificar el software utilizado para el análisis estadístico, y aclarar que la ley de plata es la ley de cabeza"
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"Especificar la importancia de obtener plata refinada, justificar la elección del tipo de investigación, aclarar que la población es la solución cianurada y la muestra es 5 litros de dicha solución, hacer claras las pruebas experimentales, especificar el software utilizado para el análisis estadístico, y aclarar que la ley de plata es la ley de cabeza\"\n}",
+ "usage": {
+  "input_tokens": 12831,
+  "output_tokens": 297,
+  "total_duration_s": 8.6029943
+ },
+ "latency_s": 8.624460935592651,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:15:32.939323+00:00",
+ "raw": {
+  "model": "mistral:latest",
+  "created_at": "2026-09-19T01:15:32.9316551Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"Especificar la importancia de obtener plata refinada, justificar la elección del tipo de investigación, aclarar que la población es la solución cianurada y la muestra es 5 litros de dicha solución, hacer claras las pruebas experimentales, especificar el software utilizado para el análisis estadístico, y aclarar que la ley de plata es la ley de cabeza\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8602994300,
+  "load_duration": 6437100,
+  "prompt_eval_count": 12831,
+  "prompt_eval_cached_count": 12155,
+  "prompt_eval_duration": 531068000,
+  "eval_count": 297,
+  "eval_duration": 7964274000
+ },
+ "cached_at_utc": "2026-09-19T01:15:32.939343+00:00"
+}

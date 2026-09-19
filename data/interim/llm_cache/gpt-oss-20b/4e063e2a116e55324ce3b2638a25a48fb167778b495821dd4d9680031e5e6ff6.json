@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-082",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "El resumen no incluye una sección de conclusiones explícita; los resultados se presentan como enumeración de porcentajes. Se considera que la falta de contextualización sobre la importancia del tema reduce el valor de D3_contextualizacion. No se detectan contradicciones entre metodología y resultados, por lo que D4_consistencia se asigna 5."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen no incluye una sección de conclusiones explícita; los resultados se presentan como enumeración de porcentajes. Se considera que la falta de contextualización sobre la importancia del tema reduce el valor de D3_contextualizacion. No se detectan contradicciones entre metodología y resultados, por lo que D4_consistencia se asigna 5.\"}",
+ "usage": {
+  "input_tokens": 10047,
+  "output_tokens": 1399,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.0095746517181396,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:25:48.881140+00:00",
+ "raw": {
+  "id": "chatcmpl-8d8b45c2-b6cd-4c23-a81a-85b449c81021",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen no incluye una sección de conclusiones explícita; los resultados se presentan como enumeración de porcentajes. Se considera que la falta de contextualización sobre la importancia del tema reduce el valor de D3_contextualizacion. No se detectan contradicciones entre metodología y resultados, por lo que D4_consistencia se asigna 5.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate according to protocol. Fields:\n\n- D1_imryd_objetivo\n- D1_imryd_metodologia\n- D1_imryd_resultados\n- D1_imryd_conclusiones\n- D1_orden_logico\n- D2_coherencia\n- D3_contextualizacion\n- D3_metodo_detallado\n- D3_resultados_concretos\n- D3_conclusion_responde\n- D4_consistencia\n- no_evaluable\n- observaciones\n\nWe must fill all with integer or null. Determine each.\n\nFirst read summary: Title: Organizacional en el personal de enfermería ... 2025.\n\nSummary text: \"El objetivo del estudio fue analizar el compromiso organizacional en el personal de enfermería del Hospital II-I de Ilave, El Collao – 2025.\" Good.\n\nMethodology: \"La metodología fue cuantitativa, descriptiva, no experimental-transversal e hipotético deductiva. La técnica y el instrumento fueron la encuesta y un cuestionario, respectivamente. La muestra estudiada correspondió a 41 enfermeras (os) del Hospital II-I de Ilave.\" Good.\n\nResults: It enumerates four categories: commitment organizational regular 34 (82.93%) etc. So results present specific percentages. Good.\n\nConclusion: The summary ends without explicit conclusion? It just lists results. It doesn't have a separate \"conclusiones\" sentence. It ends after describing last result. So D1_imryd_conclusiones likely 0. However maybe implicit conclusion? It says \"el nivel de compromiso organizacional ... regular\" etc. But not summarizing or concluding. So 0.\n\nD1_orden_logico: The order appears objective -> methodology -> results -> no conclusion. All components present in correct order? Yes. So order=1.\n\nD2_coherencia: Flow: It seems cohesive; but there is some repetition: \"primer, segundo, tercero, por último\" listing. The flow is somewhat segmented but coherent. Maybe 4? Let's analyze: transitions: \"primero\", \"segundo\", \"tercero\", \"por último\" are enumerated. The sentences are fairly connected, but some adjectives. I'd give 4.\n\nD3_contextualizacion: Does summary situate the problem: \"analizar el compromiso organizacional en el personal de enfermería del Hospital II-I de Ilave, El Collao – 2025.\" It states location. So yes, context present: 1.\n\nBut the context includes why it matters? It doesn't explain importance. But the protocol says context: sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco. The summary mentions location, but not why it's important. The rule: D3_contextualizacion = 1 if summary sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma. The summary: \"El objetivo del estudio fue analizar el compromiso organizacional en el personal de enfermería del Hospital II-I de Ilave, El Collao – 2025.\" This identifies the problem but doesn't explain why important. So maybe still 1 because it says \"análisis del compromiso organizacional\" but not \"por qué importa\". The example 0: starting directly by objective. In that example, they considered no contextualization because they didn't explain why it's important. This summary may also not explain why important; but it mentions the setting. The rule: \"Sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco\". It does mention where occurs: Hospital II-I de Ilave. Who it affects: personal de enfermería. Does not explain why important. So maybe 0? Let's examine earlier example A: In that example they marked D3_contextualizacion 0 because \"Arranca directamente por el objetivo; no dice por qué importa el RCP en bomberos\". They didn't mention location but maybe didn't mention importance. So here too we don't mention importance. They only mention setting. The example B had D3_contextualizacion 0 because same. So we should set 0. So D3_contextualizacion = 0.\n\nD3_metodo_detallado: At least two precisions: They mention \"cuantitativa, descriptiva, no experimental-transversal e hipotético deductiva\" (design, type). \"Técnica y el instrumento fueron la encuesta y un cuestionario\" (instrument). \"Muestra 41 enfermeras\" (sample size). That's more than two. So 1.\n\nD3_resultados_concretos: They give percentages and counts for each type: 82.93% etc. So 1.\n\nD3_conclusion_responde: Since no explicit conclusion, 0.\n\nD4_consistencia: Consistency between stated methodology and results. Method: quantitative, descriptive, non-experimental, cross-sectional, deductive. Results: percentages. That's consistent. There's no contradiction. So 5? The scale 1-5. If no contradictions, should be 5. However there might be minor issues: \"no experimental-transversal e hipotético deductiva\" might be inconsistent with presenting results as percentages; but that's typical for descriptive. There's no mention of statistical tests. But no contradictions. So D4_consistencia = 5.\n\nno_evaluable: 0 (since it's a proper summary).\n\nobservaciones: Provide notes: maybe mention lack of conclusion.\n\nLet's craft JSON.\n\nFields must be present.\n\nAll integers 0 or 1 or 5 etc.\n\nCheck D2_coherencia: choose 4. Provide justification: Flow with enumerated points, no major issues.\n\nD1_conclusiones: 0.\n\nNow produce JSON. Ensure compact formatting (no line breaks? It's okay with minimal). I'll produce minimal pretty but still valid.\n\nLet's produce."
+    }
+   }
+  ],
+  "created": 1789701948,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_565badff47",
+  "usage": {
+   "completion_tokens": 1399,
+   "prompt_tokens": 10047,
+   "total_tokens": 11446,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1204,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.239119969,
+   "prompt_time": 0.068138863,
+   "completion_time": 1.4471950040000001,
+   "total_time": 1.5153338669999998
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8rzj9ea0safjw89kp41dk",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:25:48.881157+00:00"
+}

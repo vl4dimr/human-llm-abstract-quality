@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-160",
+ "model_name": "mistral-7b",
+ "provider": "ollama",
+ "model": "mistral:latest",
+ "model_reported": "mistral:latest",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "El término 'Rho de Spearman' es un estadístico no paramétrico que no se puede comparar con un p-valor. Sin embargo, el valor se da y se explica la prueba estadística aplicada"
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 5,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El término 'Rho de Spearman' es un estadístico no paramétrico que no se puede comparar con un p-valor. Sin embargo, el valor se da y se explica la prueba estadística aplicada\"\n}",
+ "usage": {
+  "input_tokens": 12591,
+  "output_tokens": 248,
+  "total_duration_s": 7.0192539
+ },
+ "latency_s": 7.02832818031311,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:24:52.121994+00:00",
+ "raw": {
+  "model": "mistral:latest",
+  "created_at": "2026-09-19T01:24:52.1136615Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 5,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El término 'Rho de Spearman' es un estadístico no paramétrico que no se puede comparar con un p-valor. Sin embargo, el valor se da y se explica la prueba estadística aplicada\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7019253900,
+  "load_duration": 5792200,
+  "prompt_eval_count": 12591,
+  "prompt_eval_cached_count": 12155,
+  "prompt_eval_duration": 318022000,
+  "eval_count": 248,
+  "eval_duration": 6602967000
+ },
+ "cached_at_utc": "2026-09-19T01:24:52.122012+00:00"
+}

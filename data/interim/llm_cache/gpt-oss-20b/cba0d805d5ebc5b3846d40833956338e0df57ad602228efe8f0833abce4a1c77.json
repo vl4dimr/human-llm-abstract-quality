@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-035",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "No se presentan resultados ni conclusiones."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No se presentan resultados ni conclusiones.\"}",
+ "usage": {
+  "input_tokens": 10020,
+  "output_tokens": 2063,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 3.021207809448242,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:18:39.329702+00:00",
+ "raw": {
+  "id": "chatcmpl-3d01ea26-9134-4f08-b69e-f9ec601de24f",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No se presentan resultados ni conclusiones.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. We need to produce JSON with required fields. Must use compact JSON (no pretty printing). Must include all required fields. Let's parse summary.\n\nSummary:\n\n- Title: \"Diseño bioclimático del mercado de abastos minorista Unión y Dignidad en la ciudad de Puno\".\n\n- The summary is in Spanish, narrative.\n\nLet's extract components.\n\n1. Objective: The summary says: \"Por lo tanto, el objetivo de esta investigación es diseñar un mercado de abastos minorista integrando principios de la arquitectura bioclimática, brindando una infraestructura comercial acorde a las necesidades de los comerciantes y la población, logrando abastecer los productos de primera necesidad, respetando el entorno inmediato.\" So objective present. So D1_imryd_objetivo=1.\n\n2. Methodology: They mention \"La presente investigación tiene un enfoque mixto, los cuales se utilizan para examinar el entorno inmediato enfocándose en la arquitectura bioclimática dentro de la propuesta arquitectónica. Además, se llevará a cabo la recopilación y análisis de datos con el fin de proponer parámetros bioclimáticos óptimos para el proyecto comercial. El enfoque de esta investigación es principalmente descriptivo, involucrando la revisión de literatura académica pertinente y la comparación de casos similares que siguen patrones bioclimáticos.\" They mention mixed approach, descriptive, literature review, comparison of cases. Do they specify sample size, data collection? They mention \"recopilación y análisis de datos\". Not concrete: no n, no instrument. But they mention \"revisión de literatura\". So for D1_metodologia: Does it meet threshold? Needs at least one concrete procedural indication. \"recopilación y análisis de datos\" is generic; \"revisión de literatura académica pertinente y comparación de casos similares\". Is that concrete enough? It does provide approach. Might count as 1? According to guidelines, a method can be: \"Enfoque mixto\" counts as design? They require at least one precise procedure. In D1_metodologia, \"se llevará a cabo la recopilación y análisis de datos\" is generic. But \"revisión de literatura académica pertinente y la comparación de casos similares\" provides two details: literature review and case comparison. But do we need an instrument? It's ambiguous. I think D1_metodologia should be 1 because it describes the methodology: mixed approach, descriptive, literature review and case comparison. According to \"Umbral mínimo: una indicación procedimental concreta.\" \"revisión de literatura\" is a procedure; \"comparación de casos\". So we can count it as 1.\n\n3. Results: summary does not present results. They propose parameters, but no data. So D1_resultados=0.\n\n4. Conclusions: There's no conclusion; they didn't say \"En conclusión\". They say \"El enfoque de esta investigación es principalmente descriptivo, ...\". But no closure. So D1_conclusiones=0.\n\n5. Order: Since only objective and methodology present? Actually we have objective and methodology but no results nor conclusions. So two components present: objective then methodology. That is the correct order. So D1_orden_logico=1 because present components (objective, methodology) appear in that order. But rule: If 0 or 1 components present => order=0. Here we have two components: objective, methodology. So qualifies. So 1.\n\nNow D2_coherencia: Evaluate flow. The summary is fairly coherent. Let's read:\n\n\"En las diversas ciudades Latinoamericanas, así como en Perú, los mercados de abastos juegan un papel significativo para el desarrollo económico del país, ... Este investigación se origina ... no cuente con infraestructuras comerciales ... etc ... Por lo tanto, el objetivo ... La presente investigación tiene un enfoque mixto, los cuales se utilizan para examinar el entorno inmediato enfocándose en la arquitectura bioclimática ... se llevará a cabo la recopilación y análisis de datos ... El enfoque ... es principalmente descriptivo, involucrando la revisión de literatura académica pertinente y la comparación de casos similares que siguen patrones bioclimáticos.\"\n\nThe flow: introduction context, problem statement, objective, method, approach. That seems coherent. No major jumps. I'd rate 5: Progresión impecable? Might be 5. Let's analyze: transitions: \"En las diversas ciudades... ... Esta investigación se origina como resultado de la alta demanda... ... Por lo tanto, el objetivo... La presente investigación tiene un enfoque mixto, los cuales se utilizan para examinar el entorno inmediato enfocándose en la arquitectura bioclimática dentro de la propuesta arquitectónica. ... Además, se llevará a cabo la recopilación y análisis de datos con el fin de proponer parámetros bioclimáticos óptimos para el proyecto comercial. El enfoque de esta investigación es principalmente descriptivo, involucrando la revisión de literatura académica pertinente y la comparación de casos similares que siguen patrones bioclimáticos.\"\n\nTransitions are okay. Might be a bit disjointed but overall fine. I'd give 4? Let's decide. According to D2: 5 is flawless, 4 has minor awkwardness. There's no obvious awkwardness. Might be 5. I'll set D2_coherencia=5.\n\nNow D3 fields.\n\n- D3_contextualizacion: Does summary situate problem? It states \"los mercados de abastos ... juegan un papel significativo ... se origina por alta demanda ... no cuente con infraestructuras comerciales adecuadas ... inadecuado abastecimiento ... inestabilidad y precariedad ...\". So yes, contextualizes problem: why it's needed. So D3_contextualizacion=1.\n\n- D3_metodo_detallado: Requires at least two precise precisions about procedure: design, type, sample size, instrument, etc. The summary mentions \"enfoque mixto\", \"revisión de literatura\", \"comparación de casos\", \"recopilación y análisis de datos\", \"parámetros bioclimáticos óptimos\". It doesn't specify sample size or instrument. But it mentions two precise items: \"enfoque mixto\" and \"revisión de literatura\". Are those considered precisiones? They may count as \"precisión\" if they specify type of study, approach. The guideline says: \"Diseño, tipo de estudio, tamaño de muestra, técnica de muestreo, instrumento nombrado, prueba estadística, corpus analizado, número de observaciones, criterio de selección.\" We don't have many. Only design: mixed approach; type of study: descriptive; literature review; comparison of cases. But no sample size or instrument. But we have at least two of these: design and type of study. So D3_metodo_detallado=1.\n\n- D3_resultados_concretos: Since no results, 0.\n\n- D3_conclusion_responde: no conclusion, 0.\n\nNow D4_consistencia: Requires coherence between what was declared and presented. Here we have objective and methodology but no results or conclusion. So D4_consistencia maybe not evaluable? The protocol says: \"Si el resumen no declara ninguna metodología, la D4 no puede evaluarse: no hay nada contra lo que contrastar la coherencia.\" But here it does declare methodology. So we can evaluate. But we have no results, no conclusion. The consistency check would see that there's no conflict because no results to compare. So the D4_consistencia maybe 5? Wait: The D4 rating is 1-5: 5 is perfect coherence; 1 is contradictory. With only objective and method, there is no conflict. So we could assign 5. But we need to ensure no contradictions: no conclusion contradictory, no results contradictory. So D4_consistencia=5.\n\nBut is it valid? The guidelines: \"Si el resumen no declara ninguna metodología, la D4 no puede evaluarse.\" But here it declares. So yes we can evaluate. Since no conflict, 5.\n\nBut some might argue D4_consistencia should be 4 because there is no results to show if method was followed. But the metric is about consistency within the summary; if you have method but no results, that might be incomplete but not contradictory. The D4 rating could still be high. I think 5 is acceptable.\n\nNow no_evaluable: The summary is a valid summary. So no_evaluable = 0.\n\nobservaciones: maybe we note that no results or conclusion present. But we can leave empty or short note. It's a string; must be included. We can provide empty string or note. We'll provide \"No se presentan resultados ni conclusiones.\"\n\nNow compile JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":0,\n \"D1_imryd_conclusiones\":0,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":0,\n \"D3_conclusion_responde\":0,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"No se presentan resultados ni conclusiones.\"\n}\n\nEnsure JSON is compact. Done."
+    }
+   }
+  ],
+  "created": 1789701519,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_c9afb2bdb4",
+  "usage": {
+   "completion_tokens": 2063,
+   "prompt_tokens": 10020,
+   "total_tokens": 12083,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1931,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.189682686,
+   "prompt_time": 0.065715686,
+   "completion_time": 2.13613771,
+   "total_time": 2.201853396
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8bvegeprs7gjdanyhjvcp",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:18:39.329779+00:00"
+}

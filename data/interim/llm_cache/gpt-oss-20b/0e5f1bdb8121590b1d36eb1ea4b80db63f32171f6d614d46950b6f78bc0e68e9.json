@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-116",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Falta contextualización del problema y la conclusión no responde directamente al objetivo de determinar los procedimientos."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Falta contextualización del problema y la conclusión no responde directamente al objetivo de determinar los procedimientos.\"}",
+ "usage": {
+  "input_tokens": 10033,
+  "output_tokens": 2118,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.6653387546539307,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:40:47.630605+00:00",
+ "raw": {
+  "id": "chatcmpl-d4b99ff6-4acc-4af0-b752-4b9b062fd16c",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Falta contextualización del problema y la conclusión no responde directamente al objetivo de determinar los procedimientos.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate according to protocol. Fields required: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nLet's evaluate each.\n\nFirst read the summary.\n\nTitle: Procedimiento del lavado de manos social asociado a las enfermedades diarreicas agudas en niños mayores a 10 años del Centro de Salud Pueblo Libre - Juli, 2021\n\nSummary:\nObjetivo: Determinar los procedimientos del lavado de manos social asociado a las enfermedades diarreicas agudas en niños mayores a 10 años del Centro De Salud Pueblo Libre - Juli, 2021.\nMétodo: De diseño no experimental, de tipo descriptivo, analítico y trasversal, con una muestra de 127 niños mayores a 10 años.\nResultado: El procedimiento del lavado de manos social asociado a las enfermedades diarreicas agudas en niños mayores a 10 de años, son: Un 86,61% usa el jabón tipo barra, un 80,31% utiliza agua de cañería, el 50,39% utiliza toalla compartida, un 70,08% siempre libera objetos de la mano, un 73,23% se frota las manos siempre con abundante jabón, un 84,25% se enjuaga la mano siempre con abundante agua, un 78,74% se lava las manos antes y después de consumir alimentos, un 79,53% refiere que siempre se lava después de salir del baño, un 81,89% manipula las bolsas clasificadas (orgánicas e inorgánicas), un 78,74% se lava las manos antes y después de tocar a personas enfermas, todas las variables son significativas con una p<0,05, Las enfermedades diarreicas agudas en niños mayores a 10 de años, un 58,27% presento enfermedades diarreicas alguna vez durante toda la infancia, un 29,92% presento enfermedades diarreicas este último año, un 11,81% presento enfermedades diarreicas una vez en los últimos 6 meses.\nConclusión: Los procedimientos del lavado de manos social están asociados a las enfermedades diarreicas agudas en niños mayores a 10 años.\n\nWe need to determine each field.\n\nD1_imryd_objetivo: Yes, there is explicit objective. 1.\n\nD1_imryd_metodologia: Method described: design non-experimental, descriptive, analytic, transversal, with sample of 127. That's at least one concrete procedural detail. 1.\n\nD1_imryd_resultados: The summary gives percentages for multiple variables and indicates significance p<0.05. So yes. 1.\n\nD1_imryd_conclusiones: Conclusión is \"Los procedimientos del lavado de manos social están asociados a las enfermedades diarreicas agudas en niños mayores a 10 años.\" This is a statement of association, not just repeating results. It doesn't interpret beyond. It says \"están asociados\" but not further. It's a conclusion. So 1.\n\nD1_orden_logico: The components appear in order: Objetivo, Método, Resultado, Conclusión. Yes, logical order. 1.\n\nD2_coherencia: Need to evaluate flow. The summary is fairly straightforward: objective, method, results, conclusion. Is there any abrupt jumps or lack of transitions? The text goes directly from objective to method, then results with many percentages, then conclusion. No obvious contradictory or jarring transitions. However, the results section is very long with many bullet-like percentages but still coherent. Might be considered good. We need to score 1-5.\n\nScore 5: \"Progresión impecable. Cada oración prepara la siguiente.\" Score 4: \"Fluye bien, con alguna aspereza menor que no estorba.\" Score 3: \"Se entiende, pero cuesta.\" Score 2: \"Hay que releer para reconstruir el hilo.\" Score 1: \"Incoherente.\"\n\nI think it flows well, but the result section is a bit long and maybe some minor abruptness: after listing percentages, it jumps to \"todas las variables son significativas con una p<0,05\". Then mentions disease incidence percentages. Then conclusion. That is coherent. I'd give 4. There's no major break. Maybe 5 would require extremely smooth. So D2_coherencia = 4.\n\nD3_contextualizacion: Does it situate the problem? The summary includes the title which provides context but the summary itself: The first sentence \"Objetivo: Determinar los procedimientos...\" doesn't provide context. There's no explanation of why it's important. No mention of significance, why this study matters. So D3_contextualizacion = 0.\n\nD3_metodo_detallado: We need at least two precisions. The method includes design, type, and sample size. That's two precisions: \"De diseño no experimental, de tipo descriptivo, analítico y transversal\" and \"con una muestra de 127 niños mayores a 10 años.\" That qualifies. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: Are results concrete? They list many percentages. Yes, concrete. So D3_resultados_concretos = 1.\n\nD3_conclusion_responde: Does conclusion respond to the objective? Objective: determine the procedures of hand washing. Conclusion: \"Los procedimientos del lavado de manos social están asociados a las enfermedades diarreicas agudas...\" So conclusion is about association between procedures and diseases. That is related but does it directly answer the objective? The objective is to determine the procedures. The conclusion says that these procedures are associated with diseases, which is an interpretation of results, not directly answering \"determine procedures.\" But is that considered responding? The protocol: D3_conclusion_responde = 1 when the conclusion contesta al objetivo enunciado. Let's check. In the example B, the conclusion was missing. In example A, the conclusion responded because it said \"nivel de conocimiento ... es predominantemente regular\". That responded to objective. Here, conclusion says procedures are associated with disease. That is a relationship but still addresses procedures? It could be considered that the objective is to determine the procedures, and the conclusion is to state that the procedures are associated with disease. That does respond to objective? I think it's not a direct answer. The conclusion is more about association, but still about procedures. The objective is \"determine the procedures.\" The conclusion says \"procedures are associated to diseases\" which is a statement about the procedures but not a description of them. It might be considered that it partially addresses the objective but not fully. The question is whether it's a conclusion that \"responde al objetivo enunciado\". The objective is to determine the procedures. The conclusion is about association. I'd say it's not directly answering the objective; it's more of a relation. I'd lean to 0.\n\nBut the protocol example: In Example A, conclusion \"nivel de conocimientos ... es predominantemente regular\" responded to objective \"nivel de conocimiento\". In Example B, conclusion missing. In Example D, conclusion responded to objective. So if objective: determine procedures; conclusion: \"procedures are associated to diseases.\" That is an interpretation but still about procedures. The objective: Determine procedures. Conclusion: procedures are associated with diseases. It's more about the effect. I'd interpret as not directly answering the objective. So D3_conclusion_responde = 0.\n\nD4_consistencia: Consistency between what is said was done and what's presented. The summary says: method: design, sample. Results: percentages for procedure usage and disease incidence. Conclusion: association. There is no contradiction. No contradictory statements like \"no differences but conclude differences.\" It's consistent. So D4_consistencia = 5. But check for usage of \"p<0,05\" but no mention of test; but not contradictory. So 5.\n\nno_evaluable: Is the text a summary? Yes. There's no methodology declared? It has method. So no_evaluable=0.\n\nObservaciones: Note any issues: The summary lacks contextualization and the conclusion doesn't answer objective directly. Also maybe mention that no explicit mention of significance test for disease incidence. But okay. Let's craft observaciones: \"Falta contextualización del problema y la conclusión no responde directamente al objetivo de determinar los procedimientos.\" Provide this in Spanish.\n\nNow produce JSON.\n\nCheck schema: all fields present, values 0/1/5/4 etc. All integers, null allowed but not used. Provide string for observaciones.\n\nSo final JSON:\n\n{\n\"D1_imryd_objetivo\":1,\n\"D1_imryd_metodologia\":1,\n\"D1_imryd_resultados\":1,\n\"D1_imryd_conclusiones\":1,\n\"D1_orden_logico\":1,\n\"D2_coherencia\":4,\n\"D3_contextualizacion\":0,\n\"D3_metodo_detallado\":1,\n\"D3_resultados_concretos\":1,\n\"D3_conclusion_responde\":0,\n\"D4_consistencia\":5,\n\"no_evaluable\":0,\n\"observaciones\":\"Falta contextualización del problema y la conclusión no responde directamente al objetivo de determinar los procedimientos.\"\n}\n\nCheck JSON validity: compact. All fields. Good."
+    }
+   }
+  ],
+  "created": 1789774847,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_1c0f5282a2",
+  "usage": {
+   "completion_tokens": 2118,
+   "prompt_tokens": 10033,
+   "total_tokens": 12151,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1974,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.148500419,
+   "prompt_time": 0.065136807,
+   "completion_time": 2.198175441,
+   "total_time": 2.263312248
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2ve9mw0ek8awn77p1gavtcn",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:40:47.630618+00:00"
+}

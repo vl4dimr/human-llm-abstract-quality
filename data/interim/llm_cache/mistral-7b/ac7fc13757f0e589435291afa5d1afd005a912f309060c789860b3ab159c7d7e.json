@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-122",
+ "model_name": "mistral-7b",
+ "provider": "ollama",
+ "model": "mistral:latest",
+ "model_reported": "mistral:latest",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "La prueba de Chi cuadrado no se ha aplicado adecuadamente. En lugar de indicar la presencia o ausencia de una cepa bacteriana, se ha informado de los porcentajes de presencia en cada área. Se recomienda que en el futuro se informe de la presencia o ausencia de cada cepa, de manera que se pueda realizar la prueba de Chi cuadrado correctamente."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"La prueba de Chi cuadrado no se ha aplicado adecuadamente. En lugar de indicar la presencia o ausencia de una cepa bacteriana, se ha informado de los porcentajes de presencia en cada área. Se recomienda que en el futuro se informe de la presencia o ausencia de cada cepa, de manera que se pueda realizar la prueba de Chi cuadrado correctamente.\"\n}",
+ "usage": {
+  "input_tokens": 13148,
+  "output_tokens": 293,
+  "total_duration_s": 8.8444067
+ },
+ "latency_s": 8.8778715133667,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:04:07.327840+00:00",
+ "raw": {
+  "model": "mistral:latest",
+  "created_at": "2026-09-19T01:04:07.3182841Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"La prueba de Chi cuadrado no se ha aplicado adecuadamente. En lugar de indicar la presencia o ausencia de una cepa bacteriana, se ha informado de los porcentajes de presencia en cada área. Se recomienda que en el futuro se informe de la presencia o ausencia de cada cepa, de manera que se pueda realizar la prueba de Chi cuadrado correctamente.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8844406700,
+  "load_duration": 7172800,
+  "prompt_eval_count": 13148,
+  "prompt_eval_cached_count": 12155,
+  "prompt_eval_duration": 796682000,
+  "eval_count": 293,
+  "eval_duration": 7928766000
+ },
+ "cached_at_utc": "2026-09-19T01:04:07.327858+00:00"
+}

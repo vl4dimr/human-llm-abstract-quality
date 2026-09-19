@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-075",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta los cuatro componentes canónicos en orden. La coherencia es buena, pero podría mejorar con transiciones más claras. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar los factores de riesgo en la gestión de contrataciones públicas. El método detallado se cumple porque se menciona el enfoque cuantitativo y el método descriptivo-causal. Los resultados son concretos al mencionar que los factores de riesgo influyen en la gestión. La conclusión responde al objetivo al señalar que los factores de riesgo influyen y proponer políticas. La consistencia metodológica es 3 porque aunque se menciona el enfoque y los métodos, no se especifican todas las técnicas utilizadas en detalle."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta los cuatro componentes canónicos en orden. La coherencia es buena, pero podría mejorar con transiciones más claras. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar los factores de riesgo en la gestión de contrataciones públicas. El método detallado se cumple porque se menciona el enfoque cuantitativo y el método descriptivo-causal. Los resultados son concretos al mencionar que los factores de riesgo influyen en la gestión. La conclusión responde al objetivo al señalar que los factores de riesgo influyen y proponer políticas. La consistencia metodológica es 3 porque aunque se menciona el enfoque y los métodos, no se especifican todas las técnicas utilizadas en detalle.\"\n}",
+ "usage": {
+  "input_tokens": 10866,
+  "output_tokens": 342,
+  "total_duration_s": 10.8211232
+ },
+ "latency_s": 10.829339742660522,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:59:12.358452+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:59:12.3516007Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta los cuatro componentes canónicos en orden. La coherencia es buena, pero podría mejorar con transiciones más claras. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar los factores de riesgo en la gestión de contrataciones públicas. El método detallado se cumple porque se menciona el enfoque cuantitativo y el método descriptivo-causal. Los resultados son concretos al mencionar que los factores de riesgo influyen en la gestión. La conclusión responde al objetivo al señalar que los factores de riesgo influyen y proponer políticas. La consistencia metodológica es 3 porque aunque se menciona el enfoque y los métodos, no se especifican todas las técnicas utilizadas en detalle.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10821123200,
+  "load_duration": 8319600,
+  "prompt_eval_count": 10866,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 313709000,
+  "eval_count": 342,
+  "eval_duration": 10386019000
+ },
+ "cached_at_utc": "2026-09-19T01:59:12.358473+00:00"
+}

@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-031",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD y presenta los componentes necesarios. La coherencia es buena, aunque hay un pequeño descuento por la repetición de términos como 'sistema de lodos activados' y la falta de transición entre el tratamiento primario y secundario. La metodología está detallada con el diseño, población futura y cálculos. Los resultados son concretos con valores numéricos. La conclusión responde al objetivo y se alinea con los estándares establecidos."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD y presenta los componentes necesarios. La coherencia es buena, aunque hay un pequeño descuento por la repetición de términos como 'sistema de lodos activados' y la falta de transición entre el tratamiento primario y secundario. La metodología está detallada con el diseño, población futura y cálculos. Los resultados son concretos con valores numéricos. La conclusión responde al objetivo y se alinea con los estándares establecidos.\"\n}",
+ "usage": {
+  "input_tokens": 10981,
+  "output_tokens": 272,
+  "total_duration_s": 8.4426362
+ },
+ "latency_s": 8.45287036895752,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:29:22.401203+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:29:22.3922204Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD y presenta los componentes necesarios. La coherencia es buena, aunque hay un pequeño descuento por la repetición de términos como 'sistema de lodos activados' y la falta de transición entre el tratamiento primario y secundario. La metodología está detallada con el diseño, población futura y cálculos. Los resultados son concretos con valores numéricos. La conclusión responde al objetivo y se alinea con los estándares establecidos.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8442636200,
+  "load_duration": 4488400,
+  "prompt_eval_count": 10981,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 406971000,
+  "eval_count": 272,
+  "eval_duration": 7969479000
+ },
+ "cached_at_utc": "2026-09-19T01:29:22.401216+00:00"
+}

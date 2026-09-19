@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-017",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD correctamente. La coherencia es 3 porque hay un salto de la descripción del macizo rocoso a la estructura geológica sin una transición clara. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante evaluar el macizo rocoso para el polvorín. La consistencia es 3 porque la conclusión afirma que el polvorín es estable y seguro, pero no se respalda completamente con los resultados presentados. La metodología es detallada con enfoque cuantitativo, nivel descriptivo, y menciona RQD, RMR, índice Q y GSI, lo cual se considera suficiente para el campo D3_metodo_detallado."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. La coherencia es 3 porque hay un salto de la descripción del macizo rocoso a la estructura geológica sin una transición clara. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante evaluar el macizo rocoso para el polvorín. La consistencia es 3 porque la conclusión afirma que el polvorín es estable y seguro, pero no se respalda completamente con los resultados presentados. La metodología es detallada con enfoque cuantitativo, nivel descriptivo, y menciona RQD, RMR, índice Q y GSI, lo cual se considera suficiente para el campo D3_metodo_detallado.\"\n}",
+ "usage": {
+  "input_tokens": 10857,
+  "output_tokens": 331,
+  "total_duration_s": 10.4156089
+ },
+ "latency_s": 10.444617748260498,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:50:17.255303+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:50:17.24387Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. La coherencia es 3 porque hay un salto de la descripción del macizo rocoso a la estructura geológica sin una transición clara. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante evaluar el macizo rocoso para el polvorín. La consistencia es 3 porque la conclusión afirma que el polvorín es estable y seguro, pero no se respalda completamente con los resultados presentados. La metodología es detallada con enfoque cuantitativo, nivel descriptivo, y menciona RQD, RMR, índice Q y GSI, lo cual se considera suficiente para el campo D3_metodo_detallado.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10415608900,
+  "load_duration": 5759800,
+  "prompt_eval_count": 10857,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 318959000,
+  "eval_count": 331,
+  "eval_duration": 9970034000
+ },
+ "cached_at_utc": "2026-09-19T01:50:17.255333+00:00"
+}

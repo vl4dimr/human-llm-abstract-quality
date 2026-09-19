@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-127",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen es de tipo caso único; no incluye inferencias estadísticas ni afirmaciones causales; se mantiene la coherencia entre metodología y resultados."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen es de tipo caso único; no incluye inferencias estadísticas ni afirmaciones causales; se mantiene la coherencia entre metodología y resultados.\"}",
+ "usage": {
+  "input_tokens": 10015,
+  "output_tokens": 1133
+ },
+ "latency_s": 2.7549362182617188,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T00:00:25.659054+00:00",
+ "raw": {
+  "id": "chatcmpl-a995b245-a056-4e89-8571-d1817fef74f8",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen es de tipo caso único; no incluye inferencias estadísticas ni afirmaciones causales; se mantiene la coherencia entre metodología y resultados.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields per schema. Evaluate summary.\n\nFields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nWe analyze.\n\nSummary: It's about a single case of nursing care. It has objective: \"gestionar el Proceso de Atención de Enfermería a un paciente con tuberculosis pulmonar...\" Yes objective present. D1_imryd_objetivo =1.\n\nMethodology: has a detailed description: \"enfoque cualitativo, de tipo caso único, con metodología de proceso de atención de enfermería, aplicado a un paciente de 19 años de edad, desarrollando todas las etapas del Proceso de Atención de Enfermería de forma ordenada y secuencial.\" And details: techniques, instruments etc. So yes methodology present. D1_imryd_metodologia=1.\n\nResultados: It says \"Como resultado se obtuvo una puntuación final basal respectivamente de cambio NOC. En los resultados se obtuvo una puntuación de cambio de +2.\" That's a numeric result. So D1_imryd_resultados=1.\n\nConclusions: \"En conclusión, el Proceso de Atención de Enfermería se gestionó en sus 5 etapas, lo que permitió brindar un cuidado de calidad al paciente del Servicio de Emergencia.\" This repeats but also gives some interpretive closure? It says the process allowed care quality. It does respond to objective? The objective is to manage the process, and conclusion says it was managed. It may be more of a statement rather than interpretation of significance. It says \"lo que permitió brindar un cuidado de calidad\". That is an implication. So yes it's a conclusion. D1_imryd_conclusiones=1.\n\nOrden lógico: sequence appears: objective, methodology, results, conclusion. The summary has them in that order? Let's check text: objective first; then \"Tiene un enfoque cualitativo...\" that's methodology; then \"Como resultado ...\" results; then \"En conclusión...\" conclusion. So yes order correct. D1_orden_logico=1.\n\nD2_coherencia: Evaluate flow. The summary is fairly coherent, but there are some jumps. But overall seems cohesive: objective, approach, data collection, results, conclusion. No major jumps or contradictions. I would rate maybe 4. Not perfect but good. So D2_coherencia=4.\n\nNow D3_contextualizacion: Does it sit problem: \"La Tuberculosis es una enfermedad bacteriana...\" That gives background, why relevant. So yes contextualization present. D3_contextualizacion=1.\n\nD3_metodo_detallado: Must have at least two precise details: design, n, instrument, technique etc. We have \"enfoque cualitativo, de tipo caso único, con metodología de proceso de atención de enfermería, aplicado a un paciente de 19 años de edad\" that's two details: design (cualitativo caso único), n (un paciente). Also instruments: \"Guía para la valoración de Marjori Gordon\", \"técnica de la observación, entrevista, examen físico y revisión documentada\". So yes. D3_metodo_detallado=1.\n\nD3_resultados_concretos: They report a numeric result: \"puntuación de cambio de +2\". That's a concrete result. So D3_resultados_concretos=1.\n\nD3_conclusion_responde: The conclusion: \"En conclusión, el Proceso de Atención de Enfermería se gestionó en sus 5 etapas, lo que permitió brindar un cuidado de calidad al paciente del Servicio de Emergencia.\" The objective was to manage process. The conclusion does mention process was managed and allowed quality care, which is an outcome. So yes it responds to objective. D3_conclusion_responde=1.\n\nD4_consistencia: We need to see if methodology and results coherent. They mention qualitative case, process of care, measurement via NOC change +2. No contradictions. They do not make causal claims beyond that process allowed quality care. That's acceptable. There is no mismatch. So D4_consistencia=5? Let's think: The conclusion is consistent with results; they didn't claim significance beyond. So best score 5. No contradictions.\n\nno_evaluable: it's a normal summary, so 0.\n\nObservaciones: maybe mention that it's a case report, no statistical significance etc. But we can add brief note.\n\nLet's produce JSON. Use compact.\n\nFields all required.\n\nReturn.\n\n"
+    }
+   }
+  ],
+  "created": 1789776025,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e23fc997ca",
+  "usage": {
+   "completion_tokens": 1133,
+   "prompt_tokens": 10015,
+   "total_tokens": 11148,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 980,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.305690992,
+   "prompt_time": 0.631825357,
+   "completion_time": 1.204819181,
+   "total_time": 1.836644538
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vfdkhnea8bmtcjcvx73w9d",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-19T00:00:25.659173+00:00"
+}

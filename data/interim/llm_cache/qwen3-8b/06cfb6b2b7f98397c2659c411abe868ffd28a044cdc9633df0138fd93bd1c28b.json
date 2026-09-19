@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-111",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen cumple con la estructura IMRyD y presenta una coherencia adecuada. La contextualización es cero porque el resumen comienza directamente con el objetivo. La metodología es detallada, con porcentajes de escoria y ensayos de compresión no confinada. Los resultados son concretos, con valores numéricos como 868.81 kPa. La conclusión responde al objetivo, mencionando la mejora en la capacidad de carga y la reducción de riesgos geotécnicos. La consistencia metodológica es 4 debido a que el resumen describe el uso del software Plaxis 2D, pero no menciona si los resultados son consistentes con la metodología."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen cumple con la estructura IMRyD y presenta una coherencia adecuada. La contextualización es cero porque el resumen comienza directamente con el objetivo. La metodología es detallada, con porcentajes de escoria y ensayos de compresión no confinada. Los resultados son concretos, con valores numéricos como 868.81 kPa. La conclusión responde al objetivo, mencionando la mejora en la capacidad de carga y la reducción de riesgos geotécnicos. La consistencia metodológica es 4 debido a que el resumen describe el uso del software Plaxis 2D, pero no menciona si los resultados son consistentes con la metodología.\"\n}",
+ "usage": {
+  "input_tokens": 10820,
+  "output_tokens": 317,
+  "total_duration_s": 12.8609519
+ },
+ "latency_s": 12.87065863609314,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:05:17.499163+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:05:17.4902087Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen cumple con la estructura IMRyD y presenta una coherencia adecuada. La contextualización es cero porque el resumen comienza directamente con el objetivo. La metodología es detallada, con porcentajes de escoria y ensayos de compresión no confinada. Los resultados son concretos, con valores numéricos como 868.81 kPa. La conclusión responde al objetivo, mencionando la mejora en la capacidad de carga y la reducción de riesgos geotécnicos. La consistencia metodológica es 4 debido a que el resumen describe el uso del software Plaxis 2D, pero no menciona si los resultados son consistentes con la metodología.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 12860951900,
+  "load_duration": 4606600,
+  "prompt_eval_count": 10820,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 406798000,
+  "eval_count": 317,
+  "eval_duration": 12379219000
+ },
+ "cached_at_utc": "2026-09-19T02:05:17.499175+00:00"
+}

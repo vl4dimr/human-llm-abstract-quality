@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-086",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen carece de resultados concretos y de una conclusión explícita; la última frase describe el contexto pero se presenta después de una declaración de conclusión sin contenido, lo que afecta la coherencia y el orden lógico."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":0,\"D2_coherencia\":3,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen carece de resultados concretos y de una conclusión explícita; la última frase describe el contexto pero se presenta después de una declaración de conclusión sin contenido, lo que afecta la coherencia y el orden lógico.\"}",
+ "usage": {
+  "input_tokens": 9836,
+  "output_tokens": 2276,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 3.566049575805664,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:05:46.385297+00:00",
+ "raw": {
+  "id": "chatcmpl-14abc6d5-1a4e-4b0f-bd79-1de520ca2225",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":0,\"D2_coherencia\":3,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen carece de resultados concretos y de una conclusión explícita; la última frase describe el contexto pero se presenta después de una declaración de conclusión sin contenido, lo que afecta la coherencia y el orden lógico.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Reparación civil en delitos culposos  por accidente de transito en la  Provincia de San Román.  2020 – 2021\"\n\nResumen: \n\"Reparación civil en delitos culposos derivados de accidentes de tránsito en la provincia de San Román - Juliaca\" es el nombre de la investigación que busca identificar los criterios utilizados por los Jueces Penales para establecer el monto indemnizatorio al entendimiento de reparación civil en delitos culposos derivados de accidentes de tránsito. El estudio se llevó a cabo utilizando un enfoque de métodos mixtos, combinando un enfoque cualitativo para el análisis con un diseño cuantitativo para la presentación de resultados. Se llegó a la siguiente conclusión mediante la utilización de encuestas, entrevistas, acceso a registros documentales, observación y búsqueda en internet como instrumentos. Los conductores de autobuses, microbuses, automóviles, motocicletas, taxis y mototaxis provocan accidentes de tránsito violentos que causan daños materiales y lesiones graves que afectan la salud humana, la vida y el cuerpo.\n\nWe need to evaluate each dimension.\n\nFirst, check if it's a valid summary. It seems to be a summary. It includes objective, methodology, results, conclusions? Let's parse.\n\nObjective: \"identificar los criterios utilizados por los Jueces Penales para establecer el monto indemnizatorio al entendimiento de reparación civil en delitos culposos derivados de accidentes de tránsito.\" So objective present.\n\nMethodology: \"El estudio se llevó a cabo utilizando un enfoque de métodos mixtos, combinando un enfoque cualitativo para el análisis con un diseño cuantitativo para la presentación de resultados.\" Also \"Se llegó a la siguiente conclusión mediante la utilización de encuestas, entrevistas, acceso a registros documentales, observación y búsqueda en internet como instrumentos.\" So methodology includes methods: surveys, interviews, document records, observation, internet search. So yes.\n\nResults: The summary says \"Se llegó a la siguiente conclusión mediante la utilización de encuestas, entrevistas, acceso a registros documentales, observación y búsqueda en internet como instrumentos.\" Wait, that sentence says \"Se llegó a la siguiente conclusión mediante la utilización de encuestas, entrevistas, acceso a registros documentales, observación y búsqueda en internet como instrumentos.\" That seems to describe how they reached the conclusion, not the results. The results are not explicitly stated. The last sentence: \"Los conductores de autobuses, microbuses, automóviles, motocicletas, taxis y mototaxis provocan accidentes de tránsito violentos que causan daños materiales y lesiones graves que afectan la salud humana, la vida y el cuerpo.\" That seems to describe the phenomenon, not the results. So results are missing. So D1_imryd_resultados = 0.\n\nConclusion: The summary says \"Se llegó a la siguiente conclusión mediante la utilización de encuestas, entrevistas, acceso a registros documentales, observación y búsqueda en internet como instrumentos.\" But it doesn't actually state the conclusion content. It just says they reached a conclusion via those methods. So no conclusion content. So D1_imryd_conclusiones = 0.\n\nOrder: The components present: objective, methodology, results (none), conclusion (none). So only objective and methodology present. According to rule: If 0 or 1 components present, D1_orden_logico = 0. So 0.\n\nD2_coherencia: Evaluate flow. The summary flows: Title, objective, methodology, conclusion statement, then description of conductors causing accidents. The flow is somewhat disjointed: after conclusion statement, they describe conductors causing accidents. That seems like a shift. But overall it's somewhat coherent? Let's analyze: The summary starts with title, then objective, then methodology, then \"Se llegó a la siguiente conclusión mediante la utilización de encuestas, entrevistas, acceso a registros documentales, observación y búsqueda en internet como instrumentos.\" That is a statement about how they reached conclusion, but no conclusion content. Then last sentence describes conductors causing accidents. That seems like a description of the problem, but it's placed after conclusion statement. That is a bit out of order. So coherence maybe 3? Let's think: The summary is not very coherent. There's a jump from methodology to conclusion statement to description of conductors. There's no transition. So maybe 3 (understandable but some jumps). But we can consider 2? Let's decide: 3.\n\nD3_contextualizacion: Does the summary situate the problem? It says \"Los conductores ... provocan accidentes de tránsito violentos que causan daños materiales y lesiones graves que afectan la salud humana, la vida y el cuerpo.\" That is context: it explains the problem. But is it placed at the beginning? It's at the end. But the question: D3_contextualizacion is 1 if the summary situates the problem: why it matters, where it occurs, to whom it affects, etc. The summary does mention that accidents cause damages and injuries. That is context. So yes, 1.\n\nD3_metodo_detallado: At least two precisions. They mention \"enfoque de métodos mixtos, combinando un enfoque cualitativo para el análisis con un diseño cuantitativo para la presentación de resultados.\" That's two precisions: mixed methods, qualitative analysis, quantitative results. Also \"encuestas, entrevistas, acceso a registros documentales, observación y búsqueda en internet como instrumentos.\" That's many. So yes, 1.\n\nD3_resultados_concretos: No results content. So 0.\n\nD3_conclusion_responde: No conclusion content. So 0.\n\nD4_consistencia: Since no conclusion, no consistency to evaluate? The rule: If no methodology declared, D4 not evaluable. But we have methodology. But we have no results or conclusion. The consistency is about coherence between what they say they did and what they present. Since they present no results, no conclusion, we cannot evaluate consistency. The rule says: If the summary does not declare any methodology, D4 not evaluable. But we have methodology. But we have no results or conclusion. The consistency is about the relationship between methodology and results and conclusion. Since we have no results or conclusion, we cannot evaluate consistency. But the rule says: \"If the summary does not declare any methodology, the D4 cannot be evaluated: no information to contrast.\" But we have methodology. But we have no results or conclusion. So we can evaluate consistency? The consistency is about coherence between what the summary says it did and what it presents. Since it presents nothing else, there's nothing to compare. So maybe we set D4_consistencia = 0? But the field expects 1-5 or null. The rule says: \"If the summary does not declare any methodology, the D4 cannot be evaluated: no information to contrast.\" But we have methodology. So we can evaluate. But we have no results or conclusion. So we can say consistency is 5? Because there's no contradiction. But the rule: \"If the summary does not declare any methodology, the D4 cannot be evaluated: no information to contrast.\" But we have methodology. So we can evaluate. But we have no results or conclusion. So there's no contradiction. So we can set D4_consistencia = 5? But maybe we should set 0? Let's read the rule: \"If the summary does not declare any methodology, the D4 cannot be evaluated: no information to contrast.\" That is only for no methodology. We have methodology. So we can evaluate. But we have no results or conclusion. So we can still evaluate consistency: there's no contradiction because there's no conclusion to contradict. So we can set 5. But maybe we should set 0? Let's think: The consistency dimension is about coherence between what the summary says it did and what it presents. If it says it did something but doesn't present results, it's incomplete. But consistency is about contradictions, not completeness. So we can set 5. But maybe we should set 0 because it's not evaluable due to missing results? The rule says \"If the summary does not declare any methodology, the D4 cannot be evaluated.\" It doesn't say if no results. So we can evaluate. But we have no results, so we can't find contradictions. So we can set 5. But maybe we should set 0? Let's check the examples: In example B, they had methodology, results, but conclusion contradictory. They set D4_consistencia = 2. In example C, they had all, set 5. In example D, they had methodology, results, conclusion, but used \"significativo\" without stats, set 4. So they evaluate consistency even if no stats. So we can evaluate. So we set 5.\n\nBut we might consider that the summary has no results or conclusion, so it's incomplete. But consistency dimension is about contradictions, not completeness. So 5.\n\nNow no_evaluable: The summary is a valid summary. So no_evaluable = 0.\n\nObservaciones: We can note that results are missing, conclusion missing, order not present. Also note that the last sentence is context but placed after conclusion statement. We can mention that.\n\nNow produce JSON with all fields.\n\nLet's fill:\n\nD1_imryd_objetivo: 1\nD1_imryd_metodologia: 1\nD1_imryd_resultados: 0\nD1_imryd_conclusiones: 0\nD1_orden_logico: 0\nD2_coherencia: 3\nD3_contextualizacion: 1\nD3_metodo_detallado: 1\nD3_resultados_concretos: 0\nD3_conclusion_responde: 0\nD4_consistencia: 5\nno_evaluable: 0\nobservaciones: \"Resumen carece de resultados concretos y de una conclusión explícita; la última frase describe el contexto pero se presenta después de una declaración de conclusión sin contenido, lo que afecta la coherencia y el orden lógico.\"\n\nCheck that all fields present. Yes.\n\nNow produce JSON."
+    }
+   }
+  ],
+  "created": 1789700746,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_228717f27c",
+  "usage": {
+   "completion_tokens": 2276,
+   "prompt_tokens": 9836,
+   "total_tokens": 12112,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2109,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.148919789,
+   "prompt_time": 0.047576758,
+   "completion_time": 2.495767356,
+   "total_time": 2.543344114
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7m86jet580q3tbn8p8nah",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:05:46.385383+00:00"
+}

@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-139",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "No sample size reported, but methodology details sufficient for D3_metodo_detallado."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No sample size reported, but methodology details sufficient for D3_metodo_detallado.\"}",
+ "usage": {
+  "input_tokens": 9890,
+  "output_tokens": 1490,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.1466994285583496,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:12:11.114098+00:00",
+ "raw": {
+  "id": "chatcmpl-4348cd39-1e2e-41e6-b6e4-5a4fcf78e543",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No sample size reported, but methodology details sufficient for D3_metodo_detallado.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate according to protocol. Let's parse the summary.\n\nTitle: \"Cultura Financiera y uso de productos financieros en ganaderos del distrito San José, Azángaro, Puno\"\n\nResumen:\n\n\"Puno es conocida por su abundancia de recursos naturales y su economía centrada en la ganadería, ofrece un terreno fértil para investigar la relación entre la cultura financiera arraigada en la comunidad y las prácticas financieras de los ganaderos. Bajo esta premisa, el objetivo del presente estudio fue determinar la relación de la cultura financiera (CF) y el uso de productos financieros (UPF) en los ganaderos del distrito San José, Azángaro, Puno. Para lograr estos objetivos, se emplearon métodos cuantitativos, de diseño no experimental, transversales, descriptivos y correlacionales. Se utilizó un cuestionario cuyo índice de confiabilidad, calculado a través del Alpha de Cronbach, fue de 0.977, lo que indica que el cuestionario demuestra claramente que los elementos de la escala están correlacionados entre sí y miden el mismo constructo subyacente. Los resultados fueron un coeficiente Rho=0,994, el cual indica una correlación fuerte y perfecta entre las variables de estudio. Se concluye que a medida que la CF de los ganaderos aumenta, también lo hace su propensión a utilizar productos financieros de manera más activa, y viceversa.\"\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 1 if objective present. Yes: \"el objetivo del presente estudio fue determinar la relación de la cultura financiera (CF) y el uso de productos financieros (UPF)\". So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. Yes: \"se emplearon métodos cuantitativos, de diseño no experimental, transversales, descriptivos y correlacionales. Se utilizó un cuestionario...\". So 1.\n\n- D1_imryd_resultados: 1 if results present. Yes: \"Los resultados fueron un coeficiente Rho=0,994\". So 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. Yes: \"Se concluye que a medida que la CF de los ganaderos aumenta, también lo hace su propensión a utilizar productos financieros de manera más activa, y viceversa.\" So 1.\n\n- D1_orden_logico: 1 if components present in logical order. The order: introduction (context), objective, methodology, results, conclusion. That is correct. So 1.\n\n- D2_coherencia: scale 1-5. Evaluate flow. Let's analyze: The summary starts with context: \"Puno es conocida por su abundancia de recursos naturales y su economía centrada en la ganadería, ofrece un terreno fértil para investigar la relación entre la cultura financiera arraigada en la comunidad y las prácticas financieras de los ganaderos.\" Then objective. Then methodology. Then results. Then conclusion. The flow seems coherent. No abrupt jumps. Some adjectives: \"descriptivos y correlacionales\" but that's fine. No major issues. I'd rate 5. But check for any adverbial or repeated terms? The summary is fairly concise. I'd give 5.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where it occurs, to whom it affects, etc. The summary starts with context: \"Puno es conocida por su abundancia de recursos naturales y su economía centrada en la ganadería, ofrece un terreno fértil para investigar la relación entre la cultura financiera arraigada en la comunidad y las prácticas financieras de los ganaderos.\" That situates the problem: region, economy, community. So 1.\n\n- D3_metodo_detallado: 1 if at least two precisions about procedure. We have: \"se emplearon métodos cuantitativos, de diseño no experimental, transversales, descriptivos y correlacionales. Se utilizó un cuestionario cuyo índice de confiabilidad, calculado a través del Alpha de Cronbach, fue de 0.977.\" That includes design type, sample? No sample size given. But we have design, type, instrument, reliability. That's at least two precisions: design type and instrument. So 1.\n\n- D3_resultados_concretos: 1 if results provide specific content: numbers, categories, etc. We have \"coeficiente Rho=0,994\". That's a concrete result. So 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to objective. The objective: determine relationship between CF and UPF. Conclusion: as CF increases, propensity to use products increases, and vice versa. That directly addresses the objective. So 1.\n\n- D4_consistencia: scale 1-5. Consistency between what summary says it did and what it presents. Let's check: Methodology: quantitative, non-experimental, cross-sectional, descriptive, correlational. They used a questionnaire with reliability 0.977. They report Rho=0.994. That is consistent: correlation analysis. No contradictions. So high consistency. I'd rate 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes? We can add a note: \"No sample size provided; could be considered missing detail but still meets criteria.\" But we can leave empty string or add note. The schema requires string. We can provide empty string or a note. It's optional but required. Provide a note: \"No sample size reported, but methodology details sufficient for D3_metodo_detallado.\" Let's include that.\n\nNow produce JSON with all fields. Ensure values are integers or null. Provide all required fields.\n\nLet's produce:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"No sample size reported, but methodology details sufficient for D3_metodo_detallado.\"\n}\n\nCheck schema: all fields present. Observations string. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789701130,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_ef00694abe",
+  "usage": {
+   "completion_tokens": 1490,
+   "prompt_tokens": 9890,
+   "total_tokens": 11380,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1347,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.243216005,
+   "prompt_time": 0.048963733,
+   "completion_time": 1.5833036759999999,
+   "total_time": 1.632267409
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s800v1ep1tc0xf3nctrd3z",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:12:11.114182+00:00"
+}

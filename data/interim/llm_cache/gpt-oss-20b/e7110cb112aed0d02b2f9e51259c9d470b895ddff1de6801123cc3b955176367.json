@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-018",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen sin conclusión explícita y sin contextualización del problema."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin conclusión explícita y sin contextualización del problema.\"}",
+ "usage": {
+  "input_tokens": 9958,
+  "output_tokens": 1812
+ },
+ "latency_s": 3.415191888809204,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T02:56:56.620938+00:00",
+ "raw": {
+  "id": "chatcmpl-759a105e-1a56-4aa6-aaec-e048427f6646",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin conclusión explícita y sin contextualización del problema.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Influencia de la edad sobre características textiles en fibra de alpacas Suri en el CE Illpa\"\n\nSummary: \n\"El presente trabajo de investigación se realizó en el CE ILLPA PUNO de la Universidad Nacional del Altiplano Puno, con el objetivo estimar la influencia de la edad (Diente de leche “DL”, Diente de leche mayor “DLM”, Dos dientes “2D”, Cuatro dientes “4D”, Boca llena “BLL” y zonas de muestreo corporal: Paleta, costillar medio y grupa, en las características textiles en la fibra de alpaca Suri. Se realizó un muestreo de un total de 138 alpacas hembras de la raza Suri, el diseño estadístico utilizado fue un Diseño Completamente al Azar (DCA) para evaluar la significancia de los efectos de la edad y zona de muestreo sobre las características textiles de la fibra de alpaca Suri y para la correlación entre diferentes características textiles de la fibra se determinó bajo un coeficiente de correlación de Pearson. Los resultados obtenidos determinaron que la edad de la alpaca Suri tiene efecto significativo sobre el diámetro medio, desviación estándar, coeficiente de variación, finura al hilado, factor de picazón y curvatura de la lana (p≤0.05); así mismo la zona de muestreo no tuvo efecto significativo sobre diámetro medio, desviación estándar, coeficiente de variación, finura al hilado, factor de picazón y  curvatura de la fibra (p≥0.05), además se han encontrado correlaciones positivas y negativos entre las características textiles\"\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 1 if objective present. Yes: \"con el objetivo estimar la influencia de la edad ...\". So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. Yes: \"Se realizó un muestreo de un total de 138 alpacas hembras ... el diseño estadístico utilizado fue un Diseño Completamente al Azar (DCA) ... y para la correlación ... se determinó bajo un coeficiente de correlación de Pearson.\" So 1.\n\n- D1_imryd_resultados: 1 if results present. Yes: \"Los resultados obtenidos determinaron que la edad ... tiene efecto significativo ... (p≤0.05); así mismo la zona de muestreo no tuvo efecto significativo ... (p≥0.05), además se han encontrado correlaciones positivas y negativos entre las características textiles.\" So 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. The summary ends with results, but does it have a conclusion? It says \"Los resultados obtenidos determinaron que la edad ... tiene efecto significativo ...; así mismo la zona de muestreo no tuvo efecto significativo ... además se han encontrado correlaciones positivas y negativos entre las características textiles\". That is more like results, not a conclusion. There's no explicit conclusion statement like \"En conclusión, ...\". So D1_imryd_conclusiones = 0.\n\n- D1_orden_logico: 1 if components present in logical order. The order: objective, methodology, results. No conclusion. So we have 3 components in order. According to rule: if 0 or 1 components present, order=0. Here 3 components present, so we evaluate order. They appear in order: objective, methodology, results. So order=1.\n\n- D2_coherencia: 1-5. We need to assess flow. The summary is fairly coherent: starts with objective, then methodology, then results. Some repetition? Let's read: \"El presente trabajo de investigación se realizó en el CE ILLPA PUNO ... con el objetivo estimar la influencia de la edad ... Se realizó un muestreo de un total de 138 alpacas hembras ... el diseño estadístico utilizado fue un Diseño Completamente al Azar (DCA) ... y para la correlación ... se determinó bajo un coeficiente de correlación de Pearson. Los resultados obtenidos determinaron que la edad ... tiene efecto significativo ...; así mismo la zona de muestreo no tuvo efecto significativo ... además se han encontrado correlaciones positivas y negativos entre las características textiles\". Flow is good. No abrupt jumps. So maybe 5. But check for any adverbial or repeated terms. There's no excessive adverbial. So D2_coherencia = 5.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where, to whom, etc. The summary says \"El presente trabajo de investigación se realizó en el CE ILLPA PUNO ... con el objetivo estimar la influencia de la edad ... en las características textiles en la fibra de alpaca Suri.\" It doesn't explain why it's important, or the broader context. It just says objective. So D3_contextualizacion = 0.\n\n- D3_metodo_detallado: 1 if at least two precisions about procedure. We have: \"Se realizó un muestreo de un total de 138 alpacas hembras de la raza Suri\" (n=138). \"el diseño estadístico utilizado fue un Diseño Completamente al Azar (DCA)\" (design). \"para la correlación ... se determinó bajo un coeficiente de correlación de Pearson\" (instrument? test). So at least 3 precisions. So D3_metodo_detallado = 1.\n\n- D3_resultados_concretos: 1 if results provide specific content: numbers, magnitudes, categories, relationships. We have: \"efecto significativo ... (p≤0.05)\" and \"no tuvo efecto significativo ... (p≥0.05)\" and \"se han encontrado correlaciones positivas y negativos entre las características textiles\". There's no actual correlation coefficients or specific numbers. But we have p-values. Are p-values considered concrete? The example says \"p = 0.72\" is a result. So p-values count. So yes, we have p-values. So D3_resultados_concretos = 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to objective. Since no conclusion, 0.\n\n- D4_consistencia: 1-5. We need to assess consistency between what is said and what is presented. The summary says objective: influence of age on textile characteristics. Methodology: sampling, design, correlation. Results: age has significant effect, zone of sampling not significant, correlations found. No contradictions. So consistency high. No contradictory statements. So D4_consistencia = 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes. We might note that no conclusion present. Also that D3_contextualizacion missing. Also that D1_conclusiones missing. But we can just write a brief note: \"No conclusión explícita; falta contextualización del problema.\" Provide as string.\n\nNow produce JSON with all fields. Ensure all required fields present. Use compact JSON. Let's produce.\n\nCheck schema: all fields required. Provide integer or null. We'll provide integers.\n\nLet's produce:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":0,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":0,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Resumen sin conclusión explícita y sin contextualización del problema.\"\n}\n\nCheck that all fields are present. Yes. Ensure no extra spaces. Provide as JSON."
+    }
+   }
+  ],
+  "created": 1789700216,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_a12402de73",
+  "usage": {
+   "completion_tokens": 1812,
+   "prompt_tokens": 9958,
+   "total_tokens": 11770,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1675,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.308695654,
+   "prompt_time": 0.541361277,
+   "completion_time": 1.907336916,
+   "total_time": 2.4486981930000002
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s742x4e26sjbh19qbthw9p",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T02:56:56.621039+00:00"
+}

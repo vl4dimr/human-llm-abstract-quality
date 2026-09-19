@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-004",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "No se proporcionaron cifras concretas, solo categorías de riesgo; por eso D3_resultados_concretos=0. Se evaluó coherencia como 4, ya que la redacción fluye bien aunque carece de datos cuantitativos."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No se proporcionaron cifras concretas, solo categorías de riesgo; por eso D3_resultados_concretos=0. Se evaluó coherencia como 4, ya que la redacción fluye bien aunque carece de datos cuantitativos.\"}",
+ "usage": {
+  "input_tokens": 9968,
+  "output_tokens": 874,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 1.9123764038085938,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:46:10.486174+00:00",
+ "raw": {
+  "id": "chatcmpl-f7f8760a-bcce-441c-a267-e9d901fd0555",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No se proporcionaron cifras concretas, solo categorías de riesgo; por eso D3_resultados_concretos=0. Se evaluó coherencia como 4, ya que la redacción fluye bien aunque carece de datos cuantitativos.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields per schema. Must parse. We must annotate according to protocol. Let's annotate.\n\nFields:\n\nD1_imryd_objetivo: Does summary include objective? Yes: \"el objetivo determinar el nivel de riesgo...\" So 1.\n\nD1_imryd_metodologia: Has methodology? Yes: \"enfoque cuantitativo, descriptivo, diseño no experimental, corte transversal, población 248 estudiantes, instrumento cuestionario...\". So 1.\n\nD1_imryd_resultados: Does it contain results? Yes: \"nivel predominante fue el riesgo leve..., riesgo moderado, un grupo reducido no presentó riesgo...\" So 1.\n\nD1_imryd_conclusiones: Has a conclusion that goes beyond repeating results? Yes: \"existe una alta exposición a factores de riesgo, lo que demanda implementar estrategias preventivas...\". So 1.\n\nD1_orden_logico: Are components in order? Sequence: objective, methodology, results, conclusion. Yes. 1.\n\nD2_coherencia: Evaluate coherence. Text flows well. Slightly descriptive but coherent. I'd assign 4. Let's consider: transitions? \"En este contexto, el estudio tuvo como objetivo...\" then methodology, then results, then conclusion. It's coherent. No abrupt jumps. So 4 or 5? It's prosa, but may have some adverbial connectors. I'd say 4.\n\nD3_contextualizacion: Does summary situate the problem? Yes: \"Las redes sociales ... uso inadecuado puede afectar la salud mental ...\". That is contextualization: why it's important. Yes 1.\n\nD3_metodo_detallado: Need at least two precise details: design, type, sample, instrument. Yes: \"enfoque cuantitativo, descriptivo, diseño no experimental, corte transversal, población 248 estudiantes, instrument questionnaire.\" That's >2. So 1.\n\nD3_resultados_concretos: Need concrete results: percentages? It says \"nivel predominante fue el riesgo leve\" but no percentages. It says \"un grupo reducido no presentó riesgo y solo un porcentaje mínimo se ubicó en riesgo alto\". No explicit numbers. So not concrete? The definition: \"magnitudes, categories nombradas\". It does name categories: riesgo leve, moderado, alto. But not magnitudes. It's not \"concreto\" maybe counts. So 0.\n\nD3_conclusion_responde: Conclusion responds to objective: yes, says need strategies to address risk. So 1.\n\nD4_consistencia: We need consistency between methodology and results. The methodology describes a descriptive cross-sectional survey; results give risk categories but no quantitative statistics. Consistency? No major contradictions. However the conclusion demands strategies; this is consistent with results. No contradictions. So I think score 5. But we need to check if there's any use of \"significant\" etc. No. So 5.\n\nno_evaluable: 0 (we have methodology).\n\nobservaciones: any notes? Provide note about D3_resultados_concretos: no numeric percentages. Also mention that results categories are qualitative. So: \"No se proporcionaron cifras concretas, solo categorías de riesgo; por eso D3_resultados_concretos=0.\" Also mention that D2_coherencia=4 because minor lack of quantitative data but flow is good.\n\nReturn JSON. Ensure compact. Let's craft.\n\n"
+    }
+   }
+  ],
+  "created": 1789775170,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_a12402de73",
+  "usage": {
+   "completion_tokens": 874,
+   "prompt_tokens": 9968,
+   "total_tokens": 10842,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 698,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.306193698,
+   "prompt_time": 0.05346023,
+   "completion_time": 0.914960763,
+   "total_time": 0.968420993
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vekh8fehg8sqhjdy9rh5q7",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:46:10.486196+00:00"
+}

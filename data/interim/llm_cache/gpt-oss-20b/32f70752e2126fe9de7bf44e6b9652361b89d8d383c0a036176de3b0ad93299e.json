@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-012",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "Se emplea el adjetivo 'significativamente' en la conclusión sin reportar pruebas estadísticas; se considera una ligera imprecisión metodológica."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":4,\"no_evaluable\":0,\"observaciones\":\"Se emplea el adjetivo 'significativamente' en la conclusión sin reportar pruebas estadísticas; se considera una ligera imprecisión metodológica.\"}",
+ "usage": {
+  "input_tokens": 10018,
+  "output_tokens": 1638,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.6500892639160156,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:47:04.467240+00:00",
+ "raw": {
+  "id": "chatcmpl-c0f9fcb5-702e-4bb6-bb02-34411ef3def3",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":4,\"no_evaluable\":0,\"observaciones\":\"Se emplea el adjetivo 'significativamente' en la conclusión sin reportar pruebas estadísticas; se considera una ligera imprecisión metodológica.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones. All required.\n\nWe must annotate this summary accordingly.\n\nLet's analyze the summary:\n\nTitle: \"Efectividad de la tecnica educativa sobre prevencion en salud bucal en gestantes de la Micro Red Metropolitano Puno 2013- 2014.\"\n\nResumen: The summary begins with context: \"El embarazo ... prevención en salud bucal ...\". Then \"El presente estudio tuvo como objetivo determinar la efectividad de la técnica educativa expositiva grupal con respecto a la prevención en salud bucal en gestantes del Micro Red Metropolitano Puno 2013- 2014.\" This is an explicit objective. So D1_imryd_objetivo = 1.\n\nThen \"El tipo de estudio fue cuasiexperimental, en la que se examinó a 85 pacientes; ... se aplicó un cuestionario de entrada y una de salida; ... posteriormente ... se examinó la higiene bucal ... antes ... después ... se volvió a evaluar ... y finalmente se comparó los resultados para verificar la efectividad.\" So methodology present. At least a design, sample, instrument, procedure. D1_imryd_metodologia = 1.\n\nResults: \"Por medio de los resultados obtenidos en el presente trabajo de investigación se determinó la eficacia ... donde se obtuvo como resultado que antes de la aplicación de la técnica educativa el nivel de conocimiento e índice de higiene oral eran malos (51.8% y 58.8% respectivamente) y después de la aplicación de la técnica educativa el nivel de conocimiento fue bueno (84.7%) y el índice de higiene oral mejoró notablemente en las gestantes (47.1%).\" So explicit percentages. D1_imryd_resultados = 1.\n\nConclusions: \"Conclusiones: Se observó que tanto el nivel de conocimiento y la higiene oral mejoraron significativamente después de la aplicación de la técnica educativa, demostrándose así su Efectividad.\" That is a conclusion that interprets results and states effectiveness. D1_imryd_conclusiones = 1.\n\nOrder: Sequence: It seems the objective is first, then methodology, results, conclusion. So D1_orden_logico = 1.\n\nD2_coherencia: We need to assign 1-5. The summary flows well; begins with context, then objective, then methodology, then results, conclusion. There may be some slight jumps: after results, the conclusion is fine. The coherence seems high. I'd assign 5 (progresión impecable). Let's analyze: \"El embarazo es un momento... prevención en salud bucal ... El presente estudio tuvo como objetivo determinar ... El tipo de estudio fue cuasiexperimental ... se examinó a 85 pacientes ... se aplicó un cuestionario de entrada y una de salida; ... posteriormente ... se examinó la higiene bucal ... antes de la técnica educativa ... después ... se volvió a evaluar ... y finalmente se comparó los resultados para verificar la efectividad de esta técnica. Por medio de los resultados obtenidos ... se determinó la eficacia ... donde se obtuvo como resultado que antes ... y después ... y ... mejoró notablemente. Conclusiones: ... se observó que tanto ... mejoraron ...\". There's no major jumps, though there is some repetition: \"se obtuvo como resultado que\" is okay. I'd give 5.\n\nD3_contextualizacion: This requires the summary to sit the problem: why it matters, where, etc. The summary starts with context about pregnancy and importance of oral health; that situates problem. So D3_contextualizacion = 1.\n\nD3_metodo_detallado: Need at least two precisions: design, sample, instrument, technique, etc. The summary has: \"cuasiexperimental\", \"85 pacientes\", \"cuestionario de entrada y una de salida\", \"índice de higiene oral simplificado de Green y Vermillon (IHO)\". That is multiple precisions: design, sample size, instruments. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: They provide percentages: 51.8% and 58.8% before; 84.7% knowledge after; 47.1% improvement. So yes concrete. D3_resultados_concretos = 1.\n\nD3_conclusion_responde: Conclusion responds to objective: objective was to determine effectiveness; conclusion says that knowledge and hygiene improved, showing effectiveness. So yes. D3_conclusion_responde = 1.\n\nD4_consistencia: Need to check consistency between methods and results. No contradictions. The conclusion uses the results to claim effectiveness; results show improvement. No mention of significance test, but not contradictory. There is no mention of p-values. It's a quasi-experimental design with pre-post but no statistical significance. The conclusion states \"mejoraron significativamente\" - uses \"significativamente\" but no statistical test reported. That might be a mild inconsistency. In D4, the rating 1-5. According to the protocol, the use of \"significativamente\" without test might be a minor issue (discordancia) but not major. But we need to decide the rating.\n\nLet's review D4 guidelines: 5: no contradictions. 4: coherence with minor imprecision. 3: one visible discordance. 2: several. 1: open contradiction.\n\nHere, the summary says \"mejoraron significativamente\" but no statistical test reported. That could be considered a slight imprecision: a mild inconsistency. That would be D4 = 4. Because there's no open contradiction. It's just a use of \"significativamente\" but no p-value. So I think 4.\n\nAlso \"se observó\" indicates observation but \"demostrándose así su efectividad\" implies conclusion; the results show improvement. It's fine.\n\nThus D4_consistencia = 4.\n\nno_evaluable: The summary is a valid summary. So 0.\n\nobservaciones: Should note any case-limiting issues or notes. We might add: \"Uso de término 'significativamente' sin estadístico; minor imprecision noted.\" Or \"No se reportaron pruebas estadísticas; la conclusión se basa en resultados descriptivos.\" Provide note. We can include that.\n\nNow produce JSON with fields and values.\n\nCheck required fields list:\n\n[\"D1_imryd_objetivo\",\"D1_imryd_metodologia\",\"D1_imryd_resultados\",\"D1_imryd_conclusiones\",\"D1_orden_logico\",\"D2_coherencia\",\"D3_contextualizacion\",\"D3_metodo_detallado\",\"D3_resultados_concretos\",\"D3_conclusion_responde\",\"D4_consistencia\",\"no_evaluable\",\"observaciones\"]\n\nAll present.\n\nNow produce compact JSON."
+    }
+   }
+  ],
+  "created": 1789775224,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_92d51d08e5",
+  "usage": {
+   "completion_tokens": 1638,
+   "prompt_tokens": 10018,
+   "total_tokens": 11656,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1483,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.148970383,
+   "prompt_time": 0.062895769,
+   "completion_time": 1.757039233,
+   "total_time": 1.819935002
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2ven58qez2s713n2pfv1kwh",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:47:04.467266+00:00"
+}

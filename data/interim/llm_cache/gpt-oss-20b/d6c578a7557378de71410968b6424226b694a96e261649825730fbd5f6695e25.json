@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-093",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 9975,
+  "output_tokens": 2391
+ },
+ "latency_s": 3.9923524856567383,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:06:34.182318+00:00",
+ "raw": {
+  "id": "chatcmpl-67f60173-06c5-418a-9c62-5a2c3276c65d",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Factores sociodemográficos, conocimiento y cumplimiento sobre inmunizaciones en madres peruanas de menores de cinco años\"\n\nResumen:\n\n\"La vacunación a lo largo de los años ha salvado millones de vidas, por ello es una prioridad a nivel mundial. Sin embargo, el bajo conocimiento de las madres o el incumplimiento en la vacunación de sus hijos, hacen que el índice mortalidad y morbilidad en la población infantil haya aumentado en los últimos años. Objetivo: determinar la relación entre factores sociodemográficos, nivel de conocimiento y cumplimiento sobre inmunizaciones en madres de menores de cinco años. Metodos: tipo de investigación de enfoque cuantitativo, de diseño no experimental, de corte transversal, y tipo correlacional. El muestreo fue no probabilístico por conveniencia. La muestra estuvo conformada por 500 madres con menores de cinco años de los centros de salud de los departamentos de Lima y Ancash . Resultado: la identificación de una relación significativa y positiva (X2 = 0.830, p = 0.040) entre el nivel de conocimiento y el cumplimiento del esquema de vacunación. Discusión: El 44.2% de las madres tienen un nivel de conocimiento regular sobre el esquema de vacunación, y el 52.8% de las madres presentó un cumplimiento inoportuno del esquema de vacunación. Se observó, además, que el número de hijos, lugar de procedencia y grado de instrucción se relacionó significativamente con el nivel conocimiento sobre el esquema de vacunación. Y sólo el lugar de procedencia tuvo una relación significativa con el cumplimiento del esquema de vacunación. Conclusión: cuanto mayor nivel de conocimientos sobre el esquema de vacunación mayor sería el cumplimiento del esquema de vacunación.\"\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 1 if objective present. Yes: \"Objetivo: determinar la relación entre factores sociodemográficos, nivel de conocimiento y cumplimiento sobre inmunizaciones en madres de menores de cinco años.\" So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. Yes: \"Metodos: tipo de investigación de enfoque cuantitativo, de diseño no experimental, de corte transversal, y tipo correlacional. El muestreo fue no probabilístico por conveniencia. La muestra estuvo conformada por 500 madres...\" So 1.\n\n- D1_imryd_resultados: 1 if results present. Yes: \"Resultado: la identificación de una relación significativa y positiva (X2 = 0.830, p = 0.040) entre el nivel de conocimiento y el cumplimiento del esquema de vacunación.\" So 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. Yes: \"Conclusión: cuanto mayor nivel de conocimientos sobre el esquema de vacunación mayor sería el cumplimiento del esquema de vacunación.\" So 1.\n\n- D1_orden_logico: 1 if components present in logical order. The order: introduction (background), objective, methods, results, discussion, conclusion. The summary: starts with background, then objective, methods, result, discussion, conclusion. That is correct order. So 1.\n\n- D2_coherencia: scale 1-5. We need to evaluate flow. Let's read: \"La vacunación a lo largo de los años ha salvado millones de vidas, por ello es una prioridad a nivel mundial. Sin embargo, el bajo conocimiento de las madres o el incumplimiento en la vacunación de sus hijos, hacen que el índice mortalidad y morbilidad en la población infantil haya aumentado en los últimos años.\" That's background. Then objective. Then methods. Then result. Then discussion: \"El 44.2% de las madres tienen un nivel de conocimiento regular sobre el esquema de vacunación, y el 52.8% de las madres presentó un cumplimiento inoportuno del esquema de vacunación. Se observó, además, que el número de hijos, lugar de procedencia y grado de instrucción se relacionó significativamente con el nivel conocimiento sobre el esquema de vacunación. Y sólo el lugar de procedencia tuvo una relación significativa con el cumplimiento del esquema de vacunación.\" Then conclusion. Flow seems coherent. No abrupt jumps. Some repetition: \"El 44.2% de las madres tienen un nivel de conocimiento regular sobre el esquema de vacunación, y el 52.8% de las madres presentó un cumplimiento inoportuno del esquema de vacunación.\" That is fine. The discussion includes percentages and relationships. The flow is good. I'd rate 5. But check for any abruptness: The discussion starts with percentages, then mentions relationships. It's fine. So D2_coherencia = 5.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where, to whom, etc. The summary starts with background: \"La vacunación a lo largo de los años ha salvado millones de vidas, por ello es una prioridad a nivel mundial. Sin embargo, el bajo conocimiento de las madres o el incumplimiento en la vacunación de sus hijos, hacen que el índice mortalidad y morbilidad en la población infantil haya aumentado en los últimos años.\" That situates the problem: why it matters. So 1.\n\n- D3_metodo_detallado: 1 if at least two precisions about procedure. We have: \"tipo de investigación de enfoque cuantitativo, de diseño no experimental, de corte transversal, y tipo correlacional. El muestreo fue no probabilístico por conveniencia. La muestra estuvo conformada por 500 madres con menores de cinco años de los centros de salud de los departamentos de Lima y Ancash.\" That's at least two: design, sample size, sampling method. So 1.\n\n- D3_resultados_concretos: 1 if results provide specific content: yes: \"X2 = 0.830, p = 0.040\" and percentages 44.2% and 52.8%. So 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to objective. Objective: determine relationship between sociodemographic factors, knowledge level, and compliance. Conclusion: \"cuanto mayor nivel de conocimientos sobre el esquema de vacunación mayor sería el cumplimiento del esquema de vacunación.\" That addresses relationship between knowledge and compliance, but not fully addressing all aspects of objective (like sociodemographic factors). But the conclusion does respond to part of objective: relationship between knowledge and compliance. The objective also includes sociodemographic factors. The conclusion doesn't mention them. But the question: \"conclusion responde al objetivo enunciado\". The objective is to determine relationship between factors, knowledge, compliance. The conclusion only addresses knowledge and compliance. It doesn't mention sociodemographic factors. So maybe 0? But the protocol says: \"Vale 1 cuando la conclusión contesta al objetivo enunciado, no a otra cosa.\" The conclusion partially addresses objective but not fully. The protocol might consider that as not fully responding. But we need to decide. The objective: \"determinara la relación entre factores sociodemográficos, nivel de conocimiento y cumplimiento sobre inmunizaciones en madres de menores de cinco años.\" The conclusion: \"cuanto mayor nivel de conocimientos sobre el esquema de vacunación mayor sería el cumplimiento del esquema de vacunación.\" That addresses relationship between knowledge and compliance, but not sociodemographic factors. So it's incomplete. According to the rule, we might set 0. But maybe the protocol expects 1 if it addresses at least one part? Let's check the examples: In example B, D3_conclusion_responde = 0 because no conclusion. In example C, D3_conclusion_responde = 1 because conclusion responded to objective. In example D, D3_conclusion_responde = 1 because conclusion responded to objective. In example A, D3_conclusion_responde = 1. So they consider conclusion that responds to objective. If conclusion only partially addresses objective, maybe still 1? But the rule: \"Vale 1 cuando la conclusión contesta al objetivo enunciado, no a otra cosa.\" That implies it should respond to the objective. If it doesn't mention all aspects, maybe still 1? But the objective includes multiple aspects. The conclusion only addresses one. I'd lean to 0 because it's incomplete. But we need to decide. Let's read the protocol: \"D3_conclusion_responde: Vale 1 cuando la conclusión contesta al objetivo enunciado, no a otra cosa.\" So if conclusion does not address the objective, 0. The conclusion addresses only part. So I'd set 0.\n\n- D4_consistencia: scale 1-5. We need to evaluate consistency between what summary says it did and what it presents. Let's check: The summary says methods: quantitative, non-experimental, cross-sectional, correlational, convenience sampling, 500 mothers. Results: significant positive relationship (X2 = 0.830, p = 0.040) between knowledge and compliance. Discussion: percentages of knowledge and compliance, relationships with number of children, place of origin, education level. Conclusion: knowledge level leads to compliance. Are there contradictions? The summary says \"El 44.2% de las madres tienen un nivel de conocimiento regular sobre el esquema de vacunación, y el 52.8% de las madres presentó un cumplimiento inoportuno del esquema de vacunación.\" That seems consistent with the result: positive relationship. The conclusion says higher knowledge leads to higher compliance. That matches. No contradictions. The only potential issue: The result says \"X2 = 0.830, p = 0.040\" but X2 value seems low for chi-square? But that's not a contradiction. The conclusion uses \"mayor sería el cumplimiento\" which is consistent with positive relationship. So consistency is good. I'd rate 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes? We can add a note about partial conclusion. But we can leave empty string. But we might note that conclusion partially addresses objective. But we can leave empty.\n\nThus JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":0,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"\"\n}\n\nCheck schema: all required fields present. Observaciones type string. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789700793,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_66f3850a1a",
+  "usage": {
+   "completion_tokens": 2391,
+   "prompt_tokens": 9975,
+   "total_tokens": 12366,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2265,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.214731159,
+   "prompt_time": 0.504584462,
+   "completion_time": 2.497430835,
+   "total_time": 3.002015297
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7npf7engs26vw6fwj3nk0",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:06:34.182444+00:00"
+}

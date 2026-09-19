@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-037",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen sin conclusión y sin contextualización; flujo coherente pero denso; cumplimiento de IMRyD en objetivo, método y resultados; consistencia metodológica alta."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin conclusión y sin contextualización; flujo coherente pero denso; cumplimiento de IMRyD en objetivo, método y resultados; consistencia metodológica alta.\"}",
+ "usage": {
+  "input_tokens": 10523,
+  "output_tokens": 1462,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.4205830097198486,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T02:59:35.473848+00:00",
+ "raw": {
+  "id": "chatcmpl-ffd33b37-adb4-4817-a99b-fd12e5dcd631",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin conclusión y sin contextualización; flujo coherente pero denso; cumplimiento de IMRyD en objetivo, método y resultados; consistencia metodológica alta.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nWe need to evaluate each field.\n\nFirst, read the summary.\n\nTitle: Viabilidad in vitro de los espermatozoides de alpacas congelados/descongelados con dilutores a base de leche descremeda\n\nResumen: The objective: \"El objetivo del presente trabajo fue criopreservar espermatozoides del conducto deferente el cual fue realizada en el Laboratorio de Reproducción Animal de la FMVZ – UNA Puno; Donde se evaluó los tres tratamientos; T1: Tratamiento control (TRIS); T2: Leche descremada 100%; T3: Leche descremada 75%, yema de huevo 25%; Para ello se utilizó 3 alpacas macho de la raza Huacaya, mayores de 5 años de edad, a los que se sometió a la plastia de desvió de los conductos deferentes, la colección fue realizada en una fracción de 0.5 mL de cada tratamiento.\"\n\nThen results: many percentages for motility, viability, etc. They report p-values.\n\nNo explicit conclusion section. The summary ends with results. No conclusion.\n\nWe need to evaluate each dimension.\n\nD1_imryd_objetivo: 1 if objective is present. Yes, objective is explicitly stated: \"El objetivo del presente trabajo fue criopreservar espermatozoides del conducto deferente\". So 1.\n\nD1_imryd_metodologia: 1 if methodology indicated. Yes, they describe treatments, number of alpacas, procedure, sample volume. So 1.\n\nD1_imryd_resultados: 1 if results communicated. Yes, many percentages. So 1.\n\nD1_imryd_conclusiones: 1 if conclusion present. No conclusion. So 0.\n\nD1_orden_logico: 1 if components present appear in logical order. We have objective, methodology, results. No conclusion. So order is objective -> methodology -> results. That's correct. So 1.\n\nD2_coherencia: scale 1-5. Need to assess flow. The summary is somewhat dense, but it flows: objective, methodology, results. The results are presented in a long paragraph with many percentages. There is no abrupt jump. The flow is okay. I'd rate 4 maybe. Let's analyze: The summary starts with objective, then methodology, then results. The results are a long list of percentages. There's no disjointedness. The only potential issue: the methodology paragraph is a bit long and includes details about treatments and animals. Then results paragraph is long. The flow is coherent. I'd give 4. 5 would require impeccable flow, but there is some repetition of \"p≤0.05\" etc. But still coherent. So D2_coherencia = 4.\n\nD3_contextualizacion: 1 if summary situates the problem: why it matters, where it occurs, to whom it affects, against what norm. The summary does not provide context beyond stating the objective. It doesn't explain why it's important, or the broader context. So 0.\n\nD3_metodo_detallado: 1 if at least two precisions about procedure. They mention: 3 alpacas, age >5, procedure: plastia de desvió de los conductos deferentes, collection in 0.5 mL of each treatment. They mention treatments: T1, T2, T3. They mention the diluents. They mention the sample volume. That's at least two precisions: number of animals, sample volume, treatments. So 1.\n\nD3_resultados_concretos: 1 if results provide specific content: yes, many percentages. So 1.\n\nD3_conclusion_responde: 1 if conclusion responds to objective. No conclusion. So 0.\n\nD4_consistencia: 1-5. Consistency between what summary says it did and what it presents. They say objective: cryopreservation. They present results of motility, viability, etc. They didn't present any conclusion. No contradictions. They didn't claim significance incorrectly. They reported p-values. They didn't claim differences when p>0.05. They didn't claim significance incorrectly. So consistency is good. I'd rate 5. But check: They mention \"p≤0.05\" for some results, but also \"P>0.05\" for others. They didn't claim significance incorrectly. So consistency is high. So D4_consistencia = 5.\n\nno_evaluable: 0 because it's a valid summary.\n\nobservaciones: any notes. We can note that no conclusion present, but that's fine. Also note that the summary is long and dense. We can mention that the summary lacks contextualization. Also mention that the conclusion is missing. Also mention that the flow is coherent but somewhat dense. Let's craft a concise observation.\n\nNow produce JSON with all fields.\n\nCheck schema: all fields required. Provide integer or null. We have all values.\n\nLet's produce JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":0,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":0,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Resumen sin conclusión y sin contextualización; flujo coherente pero denso; cumplimiento de IMRyD en objetivo, método y resultados; consistencia metodológica alta.\"\n}\n\nCheck JSON validity: compact, no spaces? It's okay. Provide as final."
+    }
+   }
+  ],
+  "created": 1789700375,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_334cc21c60",
+  "usage": {
+   "completion_tokens": 1462,
+   "prompt_tokens": 10523,
+   "total_tokens": 11985,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1304,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.15010108,
+   "prompt_time": 0.104311472,
+   "completion_time": 1.522038315,
+   "total_time": 1.626349787
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s78yzyeybvgs709pgm86gg",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T02:59:35.473930+00:00"
+}

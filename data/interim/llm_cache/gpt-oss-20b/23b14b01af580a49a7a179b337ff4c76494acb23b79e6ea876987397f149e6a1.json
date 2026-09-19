@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-118",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resultados no incluyen magnitud concreta (coeficiente, r, etc.) y p‑valor no se presenta con claridad; se menciona “es.000” sin número exacto. No se ofrece conclusión que responda al objetivo."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resultados no incluyen magnitud concreta (coeficiente, r, etc.) y p‑valor no se presenta con claridad; se menciona “es.000” sin número exacto. No se ofrece conclusión que responda al objetivo.\"}",
+ "usage": {
+  "input_tokens": 9879,
+  "output_tokens": 1715
+ },
+ "latency_s": 3.2391483783721924,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:41:00.157123+00:00",
+ "raw": {
+  "id": "chatcmpl-6e9cec21-3c01-4e4d-b9d9-d6bb508d038b",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resultados no incluyen magnitud concreta (coeficiente, r, etc.) y p‑valor no se presenta con claridad; se menciona “es.000” sin número exacto. No se ofrece conclusión que responda al objetivo.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate according to protocol. Fields required: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nLet's evaluate each.\n\nSummary content: Let's break:\n\nTitle: \"Asertividad directiva y trabajo colaborativo en las Instituciones de Educación Superior de la Provincia de Acomayo - Cusco. periodo 2018.\" Not relevant.\n\nResumen: \"El propósito de este estudio fue examinar la relación entre la agresividad directiva y el trabajo colaborativo en las instituciones de educación superior de la provincia de Acomayo-Cusco. Periodo 2018.\" That's objective.\n\nThen: \"En este estudio, debido al reducido tamaño de la población, se seleccionó como muestra representativa a 36 docentes de instituciones de educación superior de la provincia de Acomayo, zona Cusco, para el periodo 2018.\" That's methodology part: sample size 36; population reduced; selection method.\n\nThen: \"La adquisición de los datos se realizó con un enfoque cuantitativo.\" indicates quantitative approach.\n\n\"De acuerdo a la metodología planteada para la investigación cuantitativa, se seleccionarán instrumentos de cuestionario.\" This is methodological detail; but note that future tense? \"se seleccionarán\" but maybe it's past; but okay.\n\n\"Como instrumento de evaluación de las variables, se utilizará un cuestionario con evaluación en escala Likert.\" instrumentation.\n\nThen: \"En el avance de la investigación se determinó que el asertividad directivo está estrechamente asociada al trabajo colaborativo en las Instituciones de Educación Superior de Acomayo-Cusco. Periodo 2018.\" That's results: a finding that they are associated.\n\nThen: \"Dado que la probabilidad es.000 menor que el nivel de significación de 0.05, la prueba es estadísticamente significativa.\" That's result again: significance; but missing exact p-value; says \"es.000\". ambiguous. But indicates significance.\n\nNow we need to annotate:\n\nD1_imryd_objetivo: 1 (objective explicitly given: \"El propósito de este estudio fue examinar la relación...\").\n\nD1_imryd_metodologia: 1 (Method indicated: sample size, quantitative approach, questionnaire instrument). It meets minimum: \"una indicación procedimental concreta\" => yes. So 1.\n\nD1_imryd_resultados: 1? We have results: \"el asertividad directivo está estrechamente asociada al trabajo colaborativo\" and significance. It's a result, not method. So yes. So 1.\n\nD1_imryd_conclusiones: Does it contain a conclusion beyond results? The summary says: \"En el avance de la investigación se determinó que ... está asociada.\" That is result. And \"Dado que la probabilidad es.000 menor que el nivel de significación de 0.05, la prueba es estadísticamente significativa.\" That's again result. There's no interpretation or implications beyond the finding. There's no closing statement like \"Concluimos que la asertividad directiva...\". So conclusion not present. So 0.\n\nD1_orden_logico: The order is objective → methodology → results. Yes. So 1.\n\nD2_coherencia: Evaluate flow. Let's examine: The summary starts with objective, then methodology, then results, then significance. Flow seems logical, minimal abruptness. No contradictions. So likely 5. But check for potential abrupt jumps: They mention \"En este estudio, debido al reducido tamaño de la población...\" flows. Then \"La adquisición de los datos se realizó con un enfoque cuantitativo.\" Then \"De acuerdo a la metodología planteada ...\" etc. Then results. Seems good. I think D2_coherencia = 5.\n\nD3_contextualizacion: Does summary situate problem: why important, where occurs, to whom affects, etc. The title gives context: institutions of education superior in Acomayo. But does summary provide context like why this matters? No: it just states objective, no context. So 0.\n\nD3_metodo_detallado: Need at least two precisions: design, type of study, sample size, technique, instrument etc. Here we have: \"reducido tamaño de la población, se seleccionó como muestra representativa a 36 docentes\" – that gives sample size (precision 1). \"La adquisición de los datos se realizó con un enfoque cuantitativo\" – gives approach (precision 2). Also mention \"se seleccionarán instrumentos de cuestionario\" (instrument). So we have at least 2. So 1.\n\nD3_resultados_concretos: Need specific content: figures, categories, etc. The result \"está estrechamente asociada\" is vague. No magnitude, correlation coefficient, p-value numeric? They say \"probabilidad es.000 menor que 0.05\" but ambiguous; missing actual value. So not concrete. So 0.\n\nD3_conclusion_responde: Since no conclusion, 0.\n\nD4_consistencia: We have no conclusion; but D4 only evaluated if methodology declared. Methodology declared, so we can evaluate consistency between methodology and results. The methodology: quantitative, sample 36, questionnaire Likert, quantitative. Results: association, significance. That seems consistent; no contradictions. So D4_consistencia should be 5? Wait D4 scale 1-5, with 5 being full coherence. Check guidelines: 5 is \"Enfoque, diseño, resultados y conclusiones encajan sin fisuras\". We have no conclusion, but results align. But D4 considers consistency between what is said about what was done and what was presented. We have consistency: no contradictions. So I think 5. But do we need conclusion? Not for D4. So 5.\n\nBut check rule: D4_consistencia = 1-5. So 5 seems fine.\n\nno_evaluable: The text is a summary; not non-summary. So 0.\n\nobservaciones: Provide any notes, e.g., \"Result concrete missing, no magnitude; significance p-value not fully reported.\" Also mention \"p-value ambiguous\" etc. Let's craft.\n\nCheck JSON fields order not required; just include all fields.\n\nWe need to ensure JSON valid. We'll produce compact JSON.\n\nFields: D1_imryd_objetivo:1, D1_imryd_metodologia:1, D1_imryd_resultados:1, D1_imryd_conclusiones:0, D1_orden_logico:1, D2_coherencia:5, D3_contextualizacion:0, D3_metodo_detallado:1, D3_resultados_concretos:0, D3_conclusion_responde:0, D4_consistencia:5, no_evaluable:0, observaciones:\"Missing concrete magnitude for association; p-value unclear; no conclusion present.\" Ensure JSON string quotes.\n\nLet's double-check D4_consistency: We have no conclusion but consistency is about methodology vs results. No contradictions. So 5. Yes.\n\nThus produce JSON.\n\nCheck that all required fields present: yes. Good.\n\nLet's produce JSON."
+    }
+   }
+  ],
+  "created": 1789774859,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4f7e7dc26e",
+  "usage": {
+   "completion_tokens": 1715,
+   "prompt_tokens": 9879,
+   "total_tokens": 11594,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1543,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.19380404,
+   "prompt_time": 0.988998898,
+   "completion_time": 1.7978065760000002,
+   "total_time": 2.786805474
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vea0hne70tk1y2dtgmk5mc",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:41:00.157148+00:00"
+}

@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-090",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen carece de contextualización explícita (motivo de estudio) pero cumple con los demás criterios; flujo es coherente, con ligera repetición entre objetivo y conclusión."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen carece de contextualización explícita (motivo de estudio) pero cumple con los demás criterios; flujo es coherente, con ligera repetición entre objetivo y conclusión.\"}",
+ "usage": {
+  "input_tokens": 9987,
+  "output_tokens": 1156,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.081242322921753,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:26:39.579872+00:00",
+ "raw": {
+  "id": "chatcmpl-173a7c1b-d2ea-4a53-8daf-37b651e2882d",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen carece de contextualización explícita (motivo de estudio) pero cumple con los demás criterios; flujo es coherente, con ligera repetición entre objetivo y conclusión.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate according to protocol. Fields required: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nLet's parse the summary.\n\nTitle: El síndrome de burnout y su relación con el desempeño laboral en los trabajadores de la clínica Good Hope, año 2021\n\nResumen: \"La presente investigación tuvo como objetivo determinar la relación que existe entre el síndrome de burnout con el desempeño laboral en los trabajadores de la clínica Good Hope, año 2022.\" So objective is present: yes. D1_imryd_objetivo=1.\n\nMethodology: \"El tipo de investigación fue de enfoque cuantitativo, descriptivo, correlacional... El diseño de la investigación fue no experimental, correlacional... la muestra con la que se trabajó fue de 300 trabajadores... bajo un muestreo a conveniencia del autor.\" That's at least 2 precisiones: design, sample size. So D1_imryd_metodologia=1. Also D3_metodo_detallado? D3_metodo_detallado requires at least two precisions. Yes design + n + sampling. So D3_metodo_detallado=1.\n\nResults: \"Se concluyó que existe correlación entre la variable síndrome de burnout y el desempeño laboral, la cual se muestra con una asociación aceptable, directa y significativa (Rho = 0.461), la que indica que mientras la institución mantenga niveles aceptables de burnout, el desempeño laboral será satisfactorio, pues al indicarse una relación significa que ambas variables tienen una variabilidad de acuerdo a cómo se comporten.\" This is a concrete result: correlation coefficient Rho=0.461. So D1_imryd_resultados=1, D3_resultados_concretos=1.\n\nConclusion: \"Se concluyó que existe correlación entre la variable síndrome de burnout y el desempeño laboral, la cual se muestra con una asociación aceptable, directa y significativa (Rho = 0.461)...\" It's basically same as results but with some interpretation: says \"mantenga niveles aceptables de burnout, el desempeño laboral será satisfactorio.\" This is an implication. It's an answer to objective: yes. So D1_imryd_conclusiones=1. D3_conclusion_responde=1.\n\nNow D1_orden_logico: need to check order of components present. The summary goes: Objective, methodology, results, conclusion. In order: objective -> methodology -> results -> conclusion. That is correct. So D1_orden_logico=1.\n\nD2_coherencia: Evaluate flow 1-5. Let's see. The summary: first objective statement. Then describes research type and purpose; then design and sample; then conclusion. It's fairly cohesive. Minor issues: the first sentences are long but okay. The flow is relatively good. No major jumps. Maybe a bit repetitive: the objective is repeated in the conclusion. But still coherent. I'd rate maybe 4. Because it's coherent with minor repetition or abrupt mention of \"la que indica...\" but overall it's okay. I'd choose 4. If we wanted 5, but there may be some small abruptness. Let's choose 4.\n\nD3_contextualizacion: Does the summary situate the problem? It says \"El presente investigación tuvo como objetivo determinar la relación ... en los trabajadores de la clínica Good Hope, año 2022.\" It identifies setting (clinic Good Hope) and population (workers). It doesn't explicitly state why this relationship is important; it just states the objective. So D3_contextualizacion=0.\n\nD4_consistencia: Consistency between methodology and results. Check: methodology: correlational study with 300 workers, convenience sampling, measuring burnout and performance. Results: correlation Rho 0.461, significant. That's consistent: no contradictions. No claim of causality. The conclusion says \"mantenga niveles aceptables de burnout, el desempeño laboral será satisfactorio\" which is basically an implication of correlation but not claiming causation. That seems consistent. So D4_consistencia=5. Because no contradictions. Let's check: no contradictions about significance. They mention \"significativa\". They provide Rho value. No p-values. But no conflict. So score 5.\n\nno_evaluable: 0 because it's a valid summary.\n\nObservaciones: we can add any notes. We might note the omission of contextualization. And maybe note that \"mantenga niveles aceptables\" is a mild implication but okay. Let's write something.\n\nLet's produce JSON. Ensure compact, no extraneous spaces."
+    }
+   }
+  ],
+  "created": 1789701999,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_228717f27c",
+  "usage": {
+   "completion_tokens": 1156,
+   "prompt_tokens": 9987,
+   "total_tokens": 11143,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 996,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.151037524,
+   "prompt_time": 0.075592877,
+   "completion_time": 1.230324317,
+   "total_time": 1.305917194
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8thc0enzsb5r8mk7kn1ca",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:26:39.579891+00:00"
+}

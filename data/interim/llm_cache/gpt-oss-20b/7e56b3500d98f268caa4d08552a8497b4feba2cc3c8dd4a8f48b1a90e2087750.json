@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-067",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "Resumen contiene objetivo explícito, método mínimo (descriptores INIA) y resultados concretos con rangos y categorías. No se ofrece conclusión. Se observa falta de detalle metodológico (solo un criterio) y uso coloquial de 'significativa variabilidad' sin prueba estadística, lo que baja ligeramente la consistencia metodológica. La estructura sigue orden IMRyD y el flujo es bastante coherente, aunque algunos enunciados incompletos pueden generar leve confusión."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":4,\"no_evaluable\":0,\"observaciones\":\"Resumen contiene objetivo explícito, método mínimo (descriptores INIA) y resultados concretos con rangos y categorías. No se ofrece conclusión. Se observa falta de detalle metodológico (solo un criterio) y uso coloquial de 'significativa variabilidad' sin prueba estadística, lo que baja ligeramente la consistencia metodológica. La estructura sigue orden IMRyD y el flujo es bastante coherente, aunque algunos enunciados incompletos pueden generar leve confusión.\"}",
+ "usage": {
+  "input_tokens": 9958,
+  "output_tokens": 1445,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.349437952041626,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:22:14.573501+00:00",
+ "raw": {
+  "id": "chatcmpl-1818b9a4-d933-4827-8fc0-fac9622cfeba",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":4,\"no_evaluable\":0,\"observaciones\":\"Resumen contiene objetivo explícito, método mínimo (descriptores INIA) y resultados concretos con rangos y categorías. No se ofrece conclusión. Se observa falta de detalle metodológico (solo un criterio) y uso coloquial de 'significativa variabilidad' sin prueba estadística, lo que baja ligeramente la consistencia metodológica. La estructura sigue orden IMRyD y el flujo es bastante coherente, aunque algunos enunciados incompletos pueden generar leve confusión.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. Need to fill all required fields.\n\nLet's analyze:\n\nSummary: Spanish; about morphological characterization of 46 potato progenies.\n\nWe need to determine:\n\nD1_imryd_objetivo: 1? Let's see: The summary states: \"El objetivo general fue: Evaluar la variabilidad morfológica de 46 progenies provenientes de cruzas de papa (Solanum tuberosum L.) F1, a través de la evaluación de su crecimiento y desarrollo, para identificar y seleccionar las mejores progenies en relación al número de tuberculillos, uniformidad del color de piel y pigmentación de la pulpa.\"\n\nSo objective clearly stated: yes 1.\n\nD1_imryd_metodologia: They mention: \"Para la caracterización morfológica se utilizo descriptores morfológicos de papa propuesto por INIA.\" That's a methodological detail: they used descriptors. It's a minimal indication; but qualifies as method. Should be 1.\n\nD1_imryd_resultados: \"Se encontró significativa variabilidad morfológica en las 46 progenies, referidas al hábito de crecimiento, foliolos laterales, interhojuelas, color de tallos. Los colores dominantes de las flores fueron lila y blanco. El color dominante de la piel de tuberculillos fue marrón, el color de pulpa que predomino fue crema y los colores secundarios fueron morado y rojo distribuidos en el anillo vascular y medula, la forma más común de tuberculillos fueron redondos con profundidad de ojos superficiales. La evaluación agronómica en términos de rendimiento/progenie fueron: 9 g a 698 g por progenie.\"\n\nThat's results: yes 1.\n\nD1_imryd_conclusiones: The summary ends with results. It does not contain a conclusion. There is no \"en conclusión\" or summarizing sentence. So 0.\n\nD1_orden_logico: The summary order: first intro, then objective, then method, then results. That's the typical order. So yes 1.\n\nD2_coherencia: Evaluate flow. Let's analyze: The summary is somewhat disjointed: Intro: \"La papa ...\". Then \"El presente trabajo ...\", then objective, then method, then results. There is no transition but overall coherent. The flow from introduction to objective is clear. But there are some grammatical issues. The language: \"El presente trabajo de investigación realizado en el Invernadero del Programa Papa... durante la campaña agrícola 2022-2023.\" That sentence is incomplete: maybe missing a verb \"se llevó a cabo\". That could break coherence. But still understandable.\n\nGiven that the sample D2 values: 5 is impeccable, 4 is good with minor roughness, 3 is understandable but a bit heavy, 2 requires rereading, 1 incoherent.\n\nThis summary: There are some disjointed fragments, missing verbs. I'd say it's coherent but somewhat rough: maybe 3 or 4. I'd lean 4: it flows well, but minor issues (missing verbs). So D2=4.\n\nD3_contextualizacion: Does summary situate the problem? It mentions the importance of potato globally. That is some context. It says \"La papa (Solanum tuberosum L.), es un cultivo de gran importancia a nivel mundial, siendo una fuente primaria de nutrientes en la dieta de muchas personas.\" That provides context. So 1.\n\nD3_metodo_detallado: They mention \"Para la caracterización morfológica se utilizo descriptores morfológicos de papa propuesto por INIA.\" That's one precision. They don't mention sample size, number of plants, etc. So only one precision. The rule: need at least 2 precisions for 1. So 0.\n\nD3_resultados_concretos: They provide variability, but no quantitative metrics except the range 9 g to 698 g. That is a magnitude. Also mentions colors, shapes. That are specific categories. So 1.\n\nD3_conclusion_responde: There is no conclusion. So 0.\n\nD4_consistencia: This requires coherence between methodology and results. Here method minimal: only descriptors. Results provide variability and ranges. No contradictions. But method lacking details but still not contradictory. There's no mention of statistical tests, but results mention \"Se encontró significativa variabilidad morfológica\". That implies significance but no test. That could be a slight issue: \"significativa variabilidad\" is a result, but no evidence. But no explicit contradiction. According to catalog: \"Declarar 'significativa' sin prueba estadística\" would be a slight imprecision, maybe 4? But the rule says: \"Usar «significativo» en sentido coloquial, sin prueba estadística → 4\". So D4 = 4.\n\nno_evaluable: Not null; it's a valid summary. So 0.\n\nobservaciones: Should include any notes. Let's mention that objective is explicitly stated, methodology minimal, no conclusion, slight lack of statistical details. Also mention that missing verbs may affect coherence, but overall okay.\n\nNow produce JSON with fields in required order. Ensure fields are present with values, no additional properties.\n\nThe schema: required fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nAll values must be integer or null. Observaciones is string. We'll produce.\n\nCheck for null? All fields filled with integers: 1 or 0. Observaciones string.\n\nLet's write.\n\nAlso ensure compact JSON: no pretty printing. Let's produce.\n\n"
+    }
+   }
+  ],
+  "created": 1789701734,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_976a85d17a",
+  "usage": {
+   "completion_tokens": 1445,
+   "prompt_tokens": 9958,
+   "total_tokens": 11403,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1222,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.149138358,
+   "prompt_time": 0.078049292,
+   "completion_time": 1.5200588819999998,
+   "total_time": 1.598108174
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8je9ge0rs720vxar19xpn",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:22:14.573522+00:00"
+}

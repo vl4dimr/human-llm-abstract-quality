@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-109",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen cumple con la estructura IMRyD y presenta los componentes necesarios. La coherencia es buena, pero hay un descuento debido a la mención de variables sin explicación adicional. La metodología está detallada con el diseño, la muestra y la técnica de recolección. Los resultados son concretos con porcentajes y valores específicos. Las conclusiones responden al objetivo y proponen una solución. La consistencia metodológica es moderada debido a la falta de explicación sobre la relación entre las variables socioeconómicas y la generación de residuos."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen cumple con la estructura IMRyD y presenta los componentes necesarios. La coherencia es buena, pero hay un descuento debido a la mención de variables sin explicación adicional. La metodología está detallada con el diseño, la muestra y la técnica de recolección. Los resultados son concretos con porcentajes y valores específicos. Las conclusiones responden al objetivo y proponen una solución. La consistencia metodológica es moderada debido a la falta de explicación sobre la relación entre las variables socioeconómicas y la generación de residuos.\"\n}",
+ "usage": {
+  "input_tokens": 10988,
+  "output_tokens": 285,
+  "total_duration_s": 11.8028558
+ },
+ "latency_s": 11.811363220214844,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:04:52.735058+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:04:52.7272763Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen cumple con la estructura IMRyD y presenta los componentes necesarios. La coherencia es buena, pero hay un descuento debido a la mención de variables sin explicación adicional. La metodología está detallada con el diseño, la muestra y la técnica de recolección. Los resultados son concretos con porcentajes y valores específicos. Las conclusiones responden al objetivo y proponen una solución. La consistencia metodológica es moderada debido a la falta de explicación sobre la relación entre las variables socioeconómicas y la generación de residuos.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 11802855800,
+  "load_duration": 5610900,
+  "prompt_eval_count": 10988,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 528279000,
+  "eval_count": 285,
+  "eval_duration": 11198691000
+ },
+ "cached_at_utc": "2026-09-19T02:04:52.735072+00:00"
+}

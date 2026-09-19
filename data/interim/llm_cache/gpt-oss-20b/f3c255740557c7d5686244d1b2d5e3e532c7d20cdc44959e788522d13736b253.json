@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-073",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 10041,
+  "output_tokens": 1579
+ },
+ "latency_s": 3.3535070419311523,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:04:11.162211+00:00",
+ "raw": {
+  "id": "chatcmpl-c377661b-1065-4bf4-99c4-d5f5755efadd",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Factores sociodemográficos relacionados a la adherencia al tratamiento de anemia en madres de niños de 6 a 59 meses de edad, Centro de Salud Putina, Puno 2023\"\n\nSummary: (I'll reformat)\n\n\"La anemia en niños, es un problema de salud pública en el Perú y el mundo, su reducción requiere un abordaje de cuanto factor determinante o de riesgo este asociado a su presencia. Por tanto, la presente investigación tuvo como objetivo determinar la relación entre los factores sociodemográficos y la adherencia al tratamiento de anemia administrado por las madres de niños de 6 a 59 meses de edad que se atienden en el Centro de Salud Putina; este estudio es de enfoque cuantitativo, de tipo descriptivo con diseño no experimental correlacional con corte transversal, la población estuvo constituida por 302 madres de niños de 6 a 59 meses de edad con anemia y la muestra por 169, la técnica de recolección de datos fue la encuesta y el instrumento el cuestionario “Adherencia al tratamiento de anemia dirigido a madres”, con una confiabilidad de Kuder Richardson = 0.82, para el procesamiento de datos se utilizó el programa Microsoft Excel y el paquete estadístico SPSS V25. Resultados: El nivel de adherencia al tratamiento de anemia es regular en un 65.7%, baja 23.7% y buena 10.6%; según correlación de Rho de Spearman los factores sociodemográficos de la madre edad, grado de instrucción y estado civil tienen correlación positiva media (Rho = 0.289, Rho = 0.426 y Rho = 0.214), la ocupación correlación positiva considerable (Rho = 0.516) con la adherencia la tratamiento de anemia, de acuerdo a los resultados obtenidos se concluye que el factor sociodemográfico que tiene mayor fuerza de relación es la ocupación de la madre, siendo de menor intensidad la edad, grado de instrucción y estado civil con la adherencia al tratamiento de anemia.\"\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 1 if objective present. Yes: \"tuvo como objetivo determinar la relación entre los factores sociodemográficos y la adherencia al tratamiento de anemia administrado por las madres...\" So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. Yes: \"este estudio es de enfoque cuantitativo, de tipo descriptivo con diseño no experimental correlacional con corte transversal, la población estuvo constituida por 302 madres ... la muestra por 169, la técnica de recolección de datos fue la encuesta y el instrumento el cuestionario ... confiabilidad ... procesamiento de datos se utilizó ... SPSS V25.\" So 1.\n\n- D1_imryd_resultados: 1 if results present. Yes: \"El nivel de adherencia al tratamiento de anemia es regular en un 65.7%, baja 23.7% y buena 10.6%; según correlación de Rho de Spearman ...\". So 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. Yes: \"de acuerdo a los resultados obtenidos se concluye que el factor sociodemográfico que tiene mayor fuerza de relación es la ocupación de la madre, siendo de menor intensidad la edad, grado de instrucción y estado civil con la adherencia al tratamiento de anemia.\" So 1.\n\n- D1_orden_logico: 1 if components present in logical order. The order: objective, methodology, results, conclusion. Yes. So 1.\n\n- D2_coherencia: scale 1-5. We need to evaluate flow. Let's read: The summary starts with background: \"La anemia en niños, es un problema de salud pública...\" Then objective. Then methodology. Then results. Then conclusion. The flow seems coherent. There is a slight jump from background to objective, but that's typical. No abrupt jumps. So maybe 5. But we need to consider if any issues: The summary is fairly long, but transitions are okay. I'd give 5.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where, to whom, etc. The summary starts with \"La anemia en niños, es un problema de salud pública en el Perú y el mundo, su reducción requiere un abordaje de cuanto factor determinante o de riesgo este asociado a su presencia.\" That situates the problem. So 1.\n\n- D3_metodo_detallado: 1 if at least two precisions. We have design, sample size, instrument, reliability, software. So yes 1.\n\n- D3_resultados_concretos: 1 if results concrete. Yes: percentages, Rho values. So 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to objective. Yes: conclusion states which factor has strongest relationship. So 1.\n\n- D4_consistencia: scale 1-5. We need to check consistency between methodology and results and conclusion. The methodology: quantitative, descriptive, correlational, cross-sectional, sample 169, instrument questionnaire, reliability 0.82, SPSS. Results: percentages of adherence, Spearman correlations. Conclusion: identifies occupation as strongest factor. This is consistent: correlation analysis supports conclusion. No contradictions. So 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes. We can add a note: \"No issues detected.\" But we can leave empty string. The schema requires string. We can put empty string \"\".\n\nCheck all required fields present: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nAll are present. Ensure values are integers or null. Provide 0 or 1 or 5 etc. Observaciones string.\n\nLet's produce JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"\"\n}\n\nCheck JSON validity: yes. Use compact formatting."
+    }
+   }
+  ],
+  "created": 1789700650,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_34cb00738d",
+  "usage": {
+   "completion_tokens": 1579,
+   "prompt_tokens": 10041,
+   "total_tokens": 11620,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1453,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.302145362,
+   "prompt_time": 0.514097372,
+   "completion_time": 1.737512323,
+   "total_time": 2.251609695
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7hba2e9hb0y4skbjd90f4",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:04:11.162302+00:00"
+}

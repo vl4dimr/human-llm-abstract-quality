@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-012",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 10018,
+  "output_tokens": 1571
+ },
+ "latency_s": 2.8849611282348633,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T02:56:15.226143+00:00",
+ "raw": {
+  "id": "chatcmpl-66ed52f1-9e54-4fd3-a84f-82e1ecd74d5f",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. Provide JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Efectividad de la tecnica educativa sobre prevencion en salud bucal en gestantes de la Micro Red Metropolitano Puno 2013- 2014.\"\n\nSummary:\n\nParagraph 1: \"El embarazo es un momento sublime en la vida de una mujer, está acompañado de una serie de cambios fisiológicos y psíquicos que las convierten en pacientes especiales, por lo que la prevención en salud bucal durante este período es particularmente importante.\"\n\nParagraph 2: \"El presente estudio tuvo como objetivo determinar la efectividad de la técnica educativa expositiva grupal con respecto a la prevención en salud bucal en gestantes del Micro Red Metropolitano Puno 2013- 2014.\"\n\nParagraph 3: \"El tipo de estudio fue cuasiexperimental, en la que se examinó a 85 pacientes; en quienes se aplicó un cuestionario de entrada y una de salida; posteriormente se examinó la higiene bucal de las gestantes antes de la técnica educativa expositiva, después de tres semanas se volvió a evaluar a las gestantes y finalmente se comparó los resultados para verificar la efectividad de esta técnica.\"\n\nParagraph 4: \"Por medio de los resultados obtenidos en el presente trabajo de investigación se determinó la eficacia de la técnica educativa expositiva a través del nivel de conocimiento adquirido por las gestantes y la aplicación de estos evaluándose clínicamente la higiene oral mediante el índice de higiene oral simplificado de Green y Vermillon (IHO), donde se obtuvo como resultado que antes de la aplicación de la técnica educativa el nivel de conocimiento e índice de higiene oral eran malos (51.8% y 58.8% respectivamente) y después de la aplicación de la técnica educativa el nivel de conocimiento fue bueno (84.7%) y el índice de higiene oral mejoro notablemente en las gestantes (47.1%).\"\n\nParagraph 5: \"Conclusiones: Se observó que tanto el nivel de conocimiento y la higiene oral mejoraron significativamente después de la aplicación de la técnica educativa, demostrándose así su Efectividad\"\n\nNow annotate.\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 1 if objective present. Yes: \"El presente estudio tuvo como objetivo determinar la efectividad...\" So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. Yes: \"El tipo de estudio fue cuasiexperimental, en la que se examinó a 85 pacientes; ... se aplicó un cuestionario de entrada y una de salida; ...\". So 1.\n\n- D1_imryd_resultados: 1 if results present. Yes: \"Por medio de los resultados obtenidos ... se determinó la eficacia ... donde se obtuvo como resultado que antes ... y después ...\". So 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. Yes: \"Conclusiones: Se observó que tanto el nivel de conocimiento y la higiene oral mejoraron significativamente después de la aplicación de la técnica educativa, demostrándose así su Efectividad\". So 1.\n\n- D1_orden_logico: 1 if components present in logical order. The order: objective, methodology, results, conclusion. Yes. So 1.\n\n- D2_coherencia: 1-5. Evaluate flow. Let's analyze. The summary flows: first context, then objective, then methodology, then results, then conclusion. The context paragraph sets background. The flow is coherent. There is no abrupt jump. The only potential issue: the first paragraph is background, then objective, then methodology, then results, then conclusion. That is coherent. So maybe 5. But check for any adverbial or repeated terms. The summary uses \"El presente estudio\" repeated. But that's fine. No major jumps. So D2_coherencia = 5.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where, to whom, etc. The first paragraph does: \"El embarazo ... la prevención en salud bucal ... es particularmente importante.\" That situates the problem. So 1.\n\n- D3_metodo_detallado: 1 if at least two precisions about procedure. We have: \"El tipo de estudio fue cuasiexperimental, en la que se examinó a 85 pacientes; en quienes se aplicó un cuestionario de entrada y una de salida; posteriormente se examinó la higiene bucal ... antes de la técnica educativa expositiva, después de tres semanas se volvió a evaluar ...\". So we have design (cuasiexperimental), sample size (85), instrument (cuestionario de entrada y salida), time points (before, after 3 weeks). That's more than two. So 1.\n\n- D3_resultados_concretos: 1 if results provide specific content: yes: percentages 51.8%, 58.8%, 84.7%, 47.1%. So 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to objective. Objective: determine effectiveness of educational technique. Conclusion: \"Se observó que tanto el nivel de conocimiento y la higiene oral mejoraron significativamente ... demostrándose así su Efectividad.\" That responds to objective. So 1.\n\n- D4_consistencia: 1-5. Consistency between what summary says it did and what it presents. Let's check: They say it's cuasiexperimental, 85 patients, questionnaires, evaluation of hygiene. They present results: before and after percentages. They conclude improvement. No contradictions. So consistency high. Maybe 5. But check if any claim not supported: They say \"el nivel de conocimiento fue bueno (84.7%) y el índice de higiene oral mejoró notablemente en las gestantes (47.1%).\" They present percentages. They claim improvement. That is supported. So 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes? We can add a note: \"No issues.\" But we can leave empty string. The schema requires string. We can put empty string \"\".\n\nThus JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"\"\n}\n\nCheck schema: all fields present. All values are integers or null. Observaciones string. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789700175,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_228717f27c",
+  "usage": {
+   "completion_tokens": 1571,
+   "prompt_tokens": 10018,
+   "total_tokens": 11589,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1445,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.2888224,
+   "prompt_time": 0.595208558,
+   "completion_time": 1.704914759,
+   "total_time": 2.300123317
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s72tn3eznak5nmgpyycvsw",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T02:56:15.226163+00:00"
+}

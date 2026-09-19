@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-154",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen sin conclusión explícita; falta contextualización del problema."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin conclusión explícita; falta contextualización del problema.\"}",
+ "usage": {
+  "input_tokens": 9938,
+  "output_tokens": 1680
+ },
+ "latency_s": 2.8879024982452393,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:45:08.730542+00:00",
+ "raw": {
+  "id": "chatcmpl-eed113c4-24d4-4eea-9dc9-d5acf475738b",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin conclusión explícita; falta contextualización del problema.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. We need to produce JSON with required fields. Must include all fields as per schema: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones. All must be present.\n\nWe need to read summary carefully. Determine values.\n\nSummary:\n\nTitle: \"Eficacia del programa ...\"\n\nText:\n\n\"El propósito de la investigación fue determinar la eficacia del programa “me divierto mirando lo que hacen mis manitas” en el desarrollo de la coordinación viso manual, en niños y niñas de 4 años, del nivel Inicial del Colegio Adventista “El Buen Maestro” de Quillabamba-Cusco.\"\n\nThis is objective: Yes explicit.\n\nNext: \"Para el recojo de la información concerniente a la desarrollo de la coordinación viso manual se utilizó el instrumento “Guía de observación” para medir el nivel de logro en que se encontraban los niños y niñas de 4 años, y así poder aplicar el programa.\"\n\nThat's methodology: mentions instrument \"Guía de observación\" to measure level. That qualifies as methodology: yes.\n\n\"Para el proceso de análisis estadístico se utilizó el programa Statistical Package of Social Science (SPSS) 20.0 que nos permitió obtener los resultados confiables de la investigación, mostrando estadísticamente la eficacia de la aplicación del programa “Me divierto mirando lo que hacen mis manitas”; lo cual evidenció mejoras, resultando que el 50% de los niños y niñas que se encontraba en el nivel de proceso en el desarrollo de la coordinación viso manual en el pre test, luego en el post tes los resultados pasaron al nivel de logro con un 50% en el desarrollo de la coordinación viso manual de los niños y niñas de 4 años.\"\n\nThis includes results: 50% improved. Also mentions statistical analysis. So results present.\n\nConclusions: Not explicit separate. The summary ends with result statement. No explicit \"En conclusión\". So conclusion is missing. D1_imryd_conclusiones = 0. But check D1_orden_logico: The components present: objective, methodology, results. They are in order: objective -> method -> results. So D1_orden_logico = 1.\n\nD2_coherencia: evaluate flow. The text flows logically, but we can evaluate. Let's see sentences:\n\n1) \"El propósito ... fue determinar la eficacia...\" objective.\n\n2) \"Para el recojo de la información ... se utilizó el instrumento ... para medir el nivel de logro ...\" methodology.\n\n3) \"Para el proceso de análisis estadístico se utilizó el programa SPSS 20.0 que nos permitió obtener los resultados confiables de la investigación, mostrando estadísticamente la eficacia...\" So methodology extended to statistical analysis.\n\n4) \"... lo cual evidenció mejoras, resultando que el 50% ... en el pre test, luego en el post tes los resultados pasaron al nivel de logro con un 50%...\" results.\n\nFlow seems fine: objective, methodology, results. No major jumps. Slight repetition maybe. So I'd give D2_coherencia = 4? Let's analyze scale:\n\n5: Progresión impecable. 4: Fluye bien, con alguna aspereza menor que no estorba. 3: Se entiende pero cuesta. 2: Hay que releer. 1: Incoherente.\n\nI think 4. There is no major issues; just maybe redundant use of \"50%\" twice. But still coherent. So D2_coherencia = 4.\n\nD3_contextualizacion: This requires that summary situates problem: why important, where occurs, etc. The summary starts with purpose. It mentions children, location, program, but does it explain why it matters? It doesn't explicitly state importance or broader context. It just states purpose: determine efficacy of program. So likely missing contextualization. So D3_contextualizacion = 0.\n\nD3_metodo_detallado: At least two precisions. We have instrument \"Guía de observación\" to measure level of logro. Also used SPSS 20.0 for analysis. That counts as two precisions: instrument name (Guía de observación) and software used. Also maybe sample: children 4 years old, but not number of participants. It does not give number of children. So we have at least two: instrument and software. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: Contains specific percentages: 50% improved. That's a concrete result. So D3_resultados_concretos = 1.\n\nD3_conclusion_responde: There's no conclusion. So D3_conclusion_responde = 0.\n\nD4_consistencia: Consistency between declared methodology and presented results. The summary declares use of observation guide to measure level of logro, then uses SPSS for statistical analysis, and reports percentage improvement. That seems consistent. There's no contradiction. So D4_consistencia = 5? Let's evaluate: The scale 1 to 5: 5 = approach, design, results and conclusions align without fissures. 4 = coherent with one minor imprecision. 3 = one discordance. 2 = many. 1 = contradiction. I think it's consistent: the methodology (observation, SPSS) and results (percentage improvement) align. So D4_consistencia = 5. However check if there is any statement that contradicts results? The summary says \"most reliable results\" and \"evidenciaron mejoras\" then states 50% improved. That's consistent. So D4_consistencia = 5.\n\nno_evaluable: Is it a valid summary? It seems a summary. It's not a non-summary. So no_evaluable = 0.\n\nobservaciones: Provide any notes. Maybe note that there is no conclusion, also note that no contextualization. Provide in Spanish. Something like \"Resumen sin conclusión explícita; falta contextualización del problema\".\n\nMake sure JSON compact, includes all fields. Also ensure integer values 0/1 etc. No null needed. Observations: string.\n\nLet's craft JSON.\n\nFields order as required? The schema's \"required\" lists them. So output must contain all required fields, but order doesn't matter. We can keep order as required.\n\nLet's produce:\n\n{\n  \"D1_imryd_objetivo\":1,\n  \"D1_imryd_metodologia\":1,\n  \"D1_imryd_resultados\":1,\n  \"D1_imryd_conclusiones\":0,\n  \"D1_orden_logico\":1,\n  \"D2_coherencia\":4,\n  \"D3_contextualizacion\":0,\n  \"D3_metodo_detallado\":1,\n  \"D3_resultados_concretos\":1,\n  \"D3_conclusion_responde\":0,\n  \"D4_consistencia\":5,\n  \"no_evaluable\":0,\n  \"observaciones\":\"Resumen sin conclusión explícita; falta contextualización del problema.\"\n}\n\nCheck JSON: All integers 0 or 1 or 4 or 5. Good.\n\nNow produce JSON only."
+    }
+   }
+  ],
+  "created": 1789775108,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_9340e7d14d",
+  "usage": {
+   "completion_tokens": 1680,
+   "prompt_tokens": 9938,
+   "total_tokens": 11618,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1543,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.240586861,
+   "prompt_time": 0.584679512,
+   "completion_time": 1.8010740680000001,
+   "total_time": 2.38575358
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vehkmkeq0v0g9c8g0eqkpz",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:45:08.730554+00:00"
+}

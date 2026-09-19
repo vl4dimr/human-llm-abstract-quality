@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-155",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta los cuatro componentes canónicos en orden (objetivo → metodología → resultados → conclusiones). La coherencia organizacional se califica en 3 debido a que la redacción contiene algunas frases inconexas y repeticiones, lo que interrumpe el flujo del texto. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la influencia de la fibra de bagazo de caña de azúcar en la resistencia del concreto. El método detallado se califica en 1 porque se menciona el diseño de mezcla, el porcentaje de adición de fibras y la norma vigente. Los resultados son concretos, ya que se mencionan valores numéricos como 64.8 kg/cm² y 134.4 kg/cm². La conclusión responde al objetivo, ya que se menciona que la adición de fibra de bagazo de caña de azúcar afectó la resistencia del concreto. La consistencia metodológica se califica en 3 porque la conclusión afirma una mejora en la resistencia, pero los resultados muestran que la resistencia obtenida fue por debajo del patrón, lo que podría indicar una contradicción interna."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta los cuatro componentes canónicos en orden (objetivo → metodología → resultados → conclusiones). La coherencia organizacional se califica en 3 debido a que la redacción contiene algunas frases inconexas y repeticiones, lo que interrumpe el flujo del texto. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la influencia de la fibra de bagazo de caña de azúcar en la resistencia del concreto. El método detallado se califica en 1 porque se menciona el diseño de mezcla, el porcentaje de adición de fibras y la norma vigente. Los resultados son concretos, ya que se mencionan valores numéricos como 64.8 kg/cm² y 134.4 kg/cm². La conclusión responde al objetivo, ya que se menciona que la adición de fibra de bagazo de caña de azúcar afectó la resistencia del concreto. La consistencia metodológica se califica en 3 porque la conclusión afirma una mejora en la resistencia, pero los resultados muestran que la resistencia obtenida fue por debajo del patrón, lo que podría indicar una contradicción interna.\"\n}",
+ "usage": {
+  "input_tokens": 10727,
+  "output_tokens": 444,
+  "total_duration_s": 13.4554329
+ },
+ "latency_s": 13.47057557106018,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:41:02.781700+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:41:02.7804145Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta los cuatro componentes canónicos en orden (objetivo → metodología → resultados → conclusiones). La coherencia organizacional se califica en 3 debido a que la redacción contiene algunas frases inconexas y repeticiones, lo que interrumpe el flujo del texto. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar la influencia de la fibra de bagazo de caña de azúcar en la resistencia del concreto. El método detallado se califica en 1 porque se menciona el diseño de mezcla, el porcentaje de adición de fibras y la norma vigente. Los resultados son concretos, ya que se mencionan valores numéricos como 64.8 kg/cm² y 134.4 kg/cm². La conclusión responde al objetivo, ya que se menciona que la adición de fibra de bagazo de caña de azúcar afectó la resistencia del concreto. La consistencia metodológica se califica en 3 porque la conclusión afirma una mejora en la resistencia, pero los resultados muestran que la resistencia obtenida fue por debajo del patrón, lo que podría indicar una contradicción interna.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 13455432900,
+  "load_duration": 4257000,
+  "prompt_eval_count": 10727,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 227314000,
+  "eval_count": 444,
+  "eval_duration": 13157088000
+ },
+ "cached_at_utc": "2026-09-19T02:41:02.781716+00:00"
+}

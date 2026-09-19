@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-158",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 9981,
+  "output_tokens": 1512
+ },
+ "latency_s": 2.5695669651031494,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:14:32.003471+00:00",
+ "raw": {
+  "id": "chatcmpl-760cec8b-4672-4efb-83c5-c9b671415bd6",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate according to protocol. Let's parse the summary.\n\nTitle: \"Calidad de atención de enfermería y satisfacción en el paciente del servicio de medicina del Hospital Regional Manuel Núñez Butrón - Puno, 2025.\"\n\nSummary:\n\n\"La calidad de la atención de enfermería es fundamental en la experiencia hospitalaria del paciente. El objetivo general de esta investigación fue determinar la relación entre la calidad de atención de enfermería y la satisfacción de los pacientes del servicio de medicina del Hospital Regional Manuel Núñez Butrón - Puno, 2025. Metodología: Se realizó un estudio de enfoque cuantitativo, con diseño no experimental, transversal y de nivel descriptivo-correlacional. La muestra fue de tipo censo, conformada por 58 pacientes que cumplieron los criterios de inclusión durante el mes de octubre de 2025. Para la recolección de datos se utilizaron los cuestionarios validados Cuestionario de Evaluación de la Calidad Donabedian Modificado (para Calidad) y el Cuestionario SERVQUAL Modificado (para Satisfacción). Resultados: Los resultados descriptivos identificaron que el nivel de calidad de atención de enfermería predominante fue 'Regular' (55.17%), mientras que el nivel de satisfacción fue mayoritariamente 'Satisfecho' (68.97%). El análisis inferencial, mediante la prueba Rho de Spearman, demostró una correlación positiva, muy alta y estadísticamente significativa entre ambas variables. Conclusión: Se concluye que la calidad de atención de enfermería está directa y significativamente relacionada con la satisfacción del paciente. El nivel 'Regular' de la calidad es un factor determinante del nivel 'Satisfecho', evidenciando la necesidad de implementar planes de mejora en el cuidado humanizado para elevar la experiencia del paciente en el servicio.\"\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 1 if objective present. Yes: \"El objetivo general de esta investigación fue determinar la relación entre la calidad de atención de enfermería y la satisfacción de los pacientes...\" So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. Yes: \"Metodología: Se realizó un estudio de enfoque cuantitativo, con diseño no experimental, transversal y de nivel descriptivo-correlacional. La muestra fue de tipo censo, ...\". So 1.\n\n- D1_imryd_resultados: 1 if results present. Yes: \"Resultados: Los resultados descriptivos identificaron que el nivel de calidad de atención de enfermería predominante fue 'Regular' (55.17%), mientras que el nivel de satisfacción fue mayoritariamente 'Satisfecho' (68.97%). El análisis inferencial, mediante la prueba Rho de Spearman, demostró una correlación positiva, muy alta y estadísticamente significativa entre ambas variables.\" So 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. Yes: \"Conclusión: Se concluye que la calidad de atención de enfermería está directa y significativamente relacionada con la satisfacción del paciente. El nivel 'Regular' de la calidad es un factor determinante del nivel 'Satisfecho', evidenciando la necesidad de implementar planes de mejora...\" So 1.\n\n- D1_orden_logico: 1 if components present in logical order. The order: objective, methodology, results, conclusion. Yes. So 1.\n\n- D2_coherencia: scale 1-5. We need to evaluate flow. The summary flows: introduction, objective, methodology, results, conclusion. It's fairly coherent. No major jumps. Some adverbial \"fundamental\" but okay. I'd rate 4 or 5. Let's analyze: The summary starts with a statement of importance, then objective, methodology, results, conclusion. The introduction is a single sentence. The flow is logical. No abrupt transitions. I'd give 5. But check for any adverbial or repeated terms. There's no repetition. So 5.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where it occurs, to whom it affects, against what norm. The summary starts with \"La calidad de la atención de enfermería es fundamental en la experiencia hospitalaria del paciente.\" That situates the problem: importance. It also mentions the service: \"servicio de medicina del Hospital Regional Manuel Núñez Butrón - Puno, 2025.\" So yes, contextualization present. So 1.\n\n- D3_metodo_detallado: 1 if at least two precisions about procedure. We have: \"estudio de enfoque cuantitativo, con diseño no experimental, transversal y de nivel descriptivo-correlacional. La muestra fue de tipo censo, conformada por 58 pacientes ... Para la recolección de datos se utilizaron los cuestionarios validados Cuestionario de Evaluación de la Calidad Donabedian Modificado (para Calidad) y el Cuestionario SERVQUAL Modificado (para Satisfacción).\" That's more than two precisions: design, sample type, sample size, instruments. So 1.\n\n- D3_resultados_concretos: 1 if results provide specific content: yes: percentages 55.17% and 68.97%, correlation positive, significant. So 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to objective. Objective: determine relationship between quality and satisfaction. Conclusion: \"Se concluye que la calidad de atención de enfermería está directa y significativamente relacionada con la satisfacción del paciente.\" Yes, responds. So 1.\n\n- D4_consistencia: scale 1-5. We need to evaluate consistency between what summary says it did and what it presents. The summary says: \"prueba Rho de Spearman\" used for correlation. The results mention correlation positive, very high, significant. That matches. No contradictions. So consistency high. I'd give 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes. We can add a note: \"No issues.\" But we can leave empty string. The schema requires string. We can put empty string \"\".\n\nCheck all fields present: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nAll are present. Provide JSON.\n\nLet's produce compact JSON."
+    }
+   }
+  ],
+  "created": 1789701271,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_24bfb4a850",
+  "usage": {
+   "completion_tokens": 1512,
+   "prompt_tokens": 9981,
+   "total_tokens": 11493,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1386,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.190842944,
+   "prompt_time": 0.567789288,
+   "completion_time": 1.534761199,
+   "total_time": 2.102550487
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s84a0net89dhwhgf1a7s9t",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:14:32.003595+00:00"
+}

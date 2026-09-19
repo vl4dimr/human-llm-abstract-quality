@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-010",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica (objetivo → metodología → resultados → conclusiones), aunque hay un ligero salto en la descripción de los resultados al pasar de la importancia del uso de tecnologías a la descripción de la muestra y la metodología de recolección. La coherencia se mantiene generalmente buena, pero se descuenta un punto debido a la falta de conexión entre algunos puntos. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar el uso de tecnologías en la competencia profesional. La metodología es detallada, ya que se menciona el tipo de investigación, el diseño ex post facto, la muestra y el instrumento de recolección de datos. Los resultados son concretos, ya que se mencionan porcentajes y se describe el impacto del uso de tecnologías en la competencia profesional. La conclusión responde al objetivo, ya que se menciona la influencia directa del uso de tecnologías en la competencia profesional."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica (objetivo → metodología → resultados → conclusiones), aunque hay un ligero salto en la descripción de los resultados al pasar de la importancia del uso de tecnologías a la descripción de la muestra y la metodología de recolección. La coherencia se mantiene generalmente buena, pero se descuenta un punto debido a la falta de conexión entre algunos puntos. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar el uso de tecnologías en la competencia profesional. La metodología es detallada, ya que se menciona el tipo de investigación, el diseño ex post facto, la muestra y el instrumento de recolección de datos. Los resultados son concretos, ya que se mencionan porcentajes y se describe el impacto del uso de tecnologías en la competencia profesional. La conclusión responde al objetivo, ya que se menciona la influencia directa del uso de tecnologías en la competencia profesional.\"\n}",
+ "usage": {
+  "input_tokens": 10912,
+  "output_tokens": 386,
+  "total_duration_s": 12.2260536
+ },
+ "latency_s": 12.252739429473877,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:18:19.505185+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:18:19.4968732Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica (objetivo → metodología → resultados → conclusiones), aunque hay un ligero salto en la descripción de los resultados al pasar de la importancia del uso de tecnologías a la descripción de la muestra y la metodología de recolección. La coherencia se mantiene generalmente buena, pero se descuenta un punto debido a la falta de conexión entre algunos puntos. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar el uso de tecnologías en la competencia profesional. La metodología es detallada, ya que se menciona el tipo de investigación, el diseño ex post facto, la muestra y el instrumento de recolección de datos. Los resultados son concretos, ya que se mencionan porcentajes y se describe el impacto del uso de tecnologías en la competencia profesional. La conclusión responde al objetivo, ya que se menciona la influencia directa del uso de tecnologías en la competencia profesional.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 12226053600,
+  "load_duration": 4874900,
+  "prompt_eval_count": 10912,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 370876000,
+  "eval_count": 386,
+  "eval_duration": 11771530000
+ },
+ "cached_at_utc": "2026-09-19T02:18:19.505195+00:00"
+}

@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-143",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica de los componentes IMRyD. La coherencia organizacional se califica en 3 debido a que hay saltos entre las descripciones de los tratamientos y los resultados. La contextualización es 0 porque el resumen comienza directamente con la metodología y no explica por qué es importante el análisis de los parámetros fisicoquímicos. La consistencia metodológica se califica en 3 debido a que los resultados se mencionan sin una explicación clara de cómo se obtuvieron. El método detallado se califica en 1 porque se mencionan las fuentes de información y los tratamientos. Los resultados son concretos y se mencionan porcentajes y comparaciones. La conclusión responde al objetivo al mencionar que el factor influyente en los parámetros fisicoquímicos se relaciona con el clima y el potencial de compostaje."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica de los componentes IMRyD. La coherencia organizacional se califica en 3 debido a que hay saltos entre las descripciones de los tratamientos y los resultados. La contextualización es 0 porque el resumen comienza directamente con la metodología y no explica por qué es importante el análisis de los parámetros fisicoquímicos. La consistencia metodológica se califica en 3 debido a que los resultados se mencionan sin una explicación clara de cómo se obtuvieron. El método detallado se califica en 1 porque se mencionan las fuentes de información y los tratamientos. Los resultados son concretos y se mencionan porcentajes y comparaciones. La conclusión responde al objetivo al mencionar que el factor influyente en los parámetros fisicoquímicos se relaciona con el clima y el potencial de compostaje.\"\n}",
+ "usage": {
+  "input_tokens": 10912,
+  "output_tokens": 362,
+  "total_duration_s": 11.1025685
+ },
+ "latency_s": 11.136213064193726,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:45:06.374574+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:45:06.3656866Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica de los componentes IMRyD. La coherencia organizacional se califica en 3 debido a que hay saltos entre las descripciones de los tratamientos y los resultados. La contextualización es 0 porque el resumen comienza directamente con la metodología y no explica por qué es importante el análisis de los parámetros fisicoquímicos. La consistencia metodológica se califica en 3 debido a que los resultados se mencionan sin una explicación clara de cómo se obtuvieron. El método detallado se califica en 1 porque se mencionan las fuentes de información y los tratamientos. Los resultados son concretos y se mencionan porcentajes y comparaciones. La conclusión responde al objetivo al mencionar que el factor influyente en los parámetros fisicoquímicos se relaciona con el clima y el potencial de compostaje.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 11102568500,
+  "load_duration": 4197000,
+  "prompt_eval_count": 10912,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 381529000,
+  "eval_count": 362,
+  "eval_duration": 10654009000
+ },
+ "cached_at_utc": "2026-09-19T01:45:06.374587+00:00"
+}

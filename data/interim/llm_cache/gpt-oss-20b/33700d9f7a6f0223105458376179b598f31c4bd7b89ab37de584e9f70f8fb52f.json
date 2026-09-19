@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-082",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Conclusión no explícita; se interpreta la última frase como cierre informal."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Conclusión no explícita; se interpreta la última frase como cierre informal.\"}",
+ "usage": {
+  "input_tokens": 10047,
+  "output_tokens": 1360,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.326228380203247,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:55:01.238011+00:00",
+ "raw": {
+  "id": "chatcmpl-beb6c4cc-5fcc-42fc-91c6-3119dd68b642",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Conclusión no explícita; se interpreta la última frase como cierre informal.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields per schema. Must parse summary and assign values.\n\nFields: \nD1_imryd_objetivo\nD1_imryd_metodologia\nD1_imryd_resultados\nD1_imryd_conclusiones\nD1_orden_logico\nD2_coherencia\nD3_contextualizacion\nD3_metodo_detallado\nD3_resultados_concretos\nD3_conclusion_responde\nD4_consistencia\nno_evaluable\nobservaciones\n\nWe must set all fields. No_evaluable probably 0 (since it's a summary). Observaciones: we can add notes about uncertain decisions.\n\nNow determine each field.\n\nFirst, we need to decide if each component present:\n\nD1_imryd_objetivo: The summary states \"El objetivo del estudio fue analizar el compromiso organizacional en el personal de enfermería del Hospital II-I de Ilave, El Collao – 2025.\" That is explicit. So 1.\n\nD1_metodologia: \"La metodología fue cuantitativa, descriptiva, no experimental-transversal e hipotético deductiva. La técnica y el instrumento fueron la encuesta y un cuestionario, respectivamente. La muestra estudiada correspondió a 41 enfermeras (os) del Hospital II-I de Ilave.\" This contains method info, design, sample, instrument. So 1.\n\nD1_resultados: It contains results: multiple percentages. So 1.\n\nD1_conclusiones: Do we have a closing statement? The summary ends with \"lo que significa que existe cierto sentido de deber y lealtad hacia el hospital y hacia el equipo, aunque no totalmente consolidado.\" There is no explicit \"Conclusiones:\" but the summary as a whole may not include a distinct conclusion section. But D1_conclusiones requires a closure that goes beyond repeating result, interpreting or implication, answer objective. The summary seems to just present results but no final conclusion. It doesn't explicitly say \"En conclusión...\" or \"Se concluye que...\". So I'd assign 0.\n\nD1_orden_logico: The order appears: objective, methodology, results, (no conclusion). The order is correct: objective first, methodology, results. So 1.\n\nNow D2_coherencia: Evaluate flow. Let's read: \"El objetivo del estudio fue analizar el compromiso organizacional en el personal de enfermería del Hospital II-I de Ilave, El Collao – 2025. La metodología fue cuantitativa, descriptiva, no experimental-transversal e hipotético deductiva. La técnica y el instrumento fueron la encuesta y un cuestionario, respectivamente. La muestra estudiada correspondió a 41 enfermeras (os) del Hospital II-I de Ilave. En resultados, se encontró que; primero, el compromiso organizacional en el personal de enfermería es regular, ... segundo, el nivel de compromiso afectivo ... tercero, el nivel de compromiso de continuidad ... por último, el nivel de compromiso normativo ...\".\n\nThe flow: Objective, methodology, sample, results with multiple sublevels. The paragraph is fairly coherent. No major jumps. Some repeated words: \"enfermeras (os)\" but that's just repeated. No abrupt jumps. I'd rate maybe 5 or 4. Let's think: 5 requires \"no asperezas\". 4 says \"algún salto breve; una repetición; adjetivación superflua\". There are some adjetivaciones like \"regular\", \"bueno\", \"regular\", \"regular\" but that's part of results. Repetición: \"enfermeras (os)\" repeated, but that's not a problem. No major jumps. I think 5.\n\nBut maybe we should be conservative: maybe 5. Let's set 5.\n\nD3_contextualizacion: The summary starts with objective directly. No context about why important, where, to whom, etc. So 0.\n\nD3_metodo_detallado: The methodology has \"cuantitativa, descriptiva, no experimental-transversal e hipotético deductiva. La técnica y el instrumento fueron la encuesta y un cuestionario, respectivamente. La muestra estudiada correspondió a 41 enfermeras (os)\". That is design, sample size, instrument. That's at least two precisions: design + sample + instrument. So 1.\n\nD3_resultados_concretos: There are percentages for each level, with counts. So concrete. So 1.\n\nD3_conclusion_responde: Since no conclusion present, 0.\n\nD4_consistencia: We need coherence between methods and results and conclusions. There's no conclusion so maybe it's not evaluable? D4 says: If the summary does not declare any methodology, can't evaluate. But we do have methodology, but we can still evaluate consistency between method and results. However, D4 is a scale 1-5; we can evaluate if there are contradictions. There's no conclusion contradictions. So we can assign some score. The method is descriptive cross-sectional. Results are percentages. No contradictions. So we can give 5.\n\nBut check: D4 \"If the summary does not declare any methodology, no evaluation.\" But we declared. So evaluate. There are no contradictory statements. So 5.\n\nHowever, the results are all percentages; method is fine. So 5.\n\nno_evaluable: 0.\n\nObservaciones: We can note that the conclusion is missing, maybe. Also note that there is no explicit conclusion but the final sentence functions as a conclusion? Might mention. Also mention that the summary might have repeated 'enfermeras (os)' but that is not problematic. Also mention that we considered the final sentence as not a formal conclusion. That could be in observations.\n\nNow produce JSON.\n\nCheck schema: all fields present, types correct.\n\nWe'll output compact JSON: no spaces. But that's fine. Use compact: e.g. {\"D1_imryd_objetivo\":1,...}\n\nLet's write JSON.\n\n"
+    }
+   }
+  ],
+  "created": 1789775700,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_639a5351c8",
+  "usage": {
+   "completion_tokens": 1360,
+   "prompt_tokens": 10047,
+   "total_tokens": 11407,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1220,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.217571898,
+   "prompt_time": 0.064291331,
+   "completion_time": 1.426603439,
+   "total_time": 1.49089477
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vf3q5aec2aaq3qs0dp693a",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:55:01.238033+00:00"
+}

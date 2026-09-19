@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-043",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Metodología XP, no pruebas estadísticas reportadas."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Metodología XP, no pruebas estadísticas reportadas.\"}",
+ "usage": {
+  "input_tokens": 9996,
+  "output_tokens": 2304
+ },
+ "latency_s": 3.779510498046875,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:00:30.751651+00:00",
+ "raw": {
+  "id": "chatcmpl-b8a507de-805d-4271-9784-acf14000eb09",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Metodología XP, no pruebas estadísticas reportadas.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Sistema Integrado Basado en Tecnologías Open Source Hibernate, Spring y Jsf 2.0 Aplicando Patrones Data Access Object y Business Object Para la Gestión de la Información de Coopain Cabana – Puno\"\n\nResumen:\n\n\"El presente trabajo de investigación tuvo como objetivo principal mejorar la gestión de la información en la Cooperativa Agroindustrial (COOPAIN) Cabana - Puno. El Sistema Integrado Basado en Tecnologías Open Source aplicando Patrones Data Access Object y Business Object fue desarrollado para la Cooperativa referida, donde la gestión de la información conlleva manejar una considerable cantidad de información en sus diferentes áreas. La demora, inexactitud, redundancia y falta de información digitalizada precisa evidencias para contar con el apoyo de tecnologías de información, constituyendo una vía muy importante para el crecimiento empresarial, aumento de la productividad, reducción de costos, tiempo y mejora constante en la gestión de la Información. Para el desarrollo de la investigación se utilizó la metodología Programación Extrema XP. La selección de la muestra, no probabilística se obtuvo por la técnica de muestreo por conveniencia. Se concluyó que el Sistema mejora la Gestión de la Información ya que en su mayoría los usuarios califican como Excelente, con una ponderación de 23 en base a 25; lo que comprueba que el Sistema Integrado basado en Tecnologías Open Source mejora en un 92% en los procesos de gestión de información, permitiendo realizar los diferentes procesos con mayor control, reducción de costos y tiempo con un alto grado de productividad, en consecuencia se recomienda el uso de tecnologías Open Source ya que se ahorra en costos tales como licencia de sistema operativo entre otras ventajas y la aplicación de Patrones tales como Data Access Object y Business Object ya que facilitan la implementación de sistemas robustos que están sujetas a cambios futuros y reutilización de código\"\n\nWe need to evaluate each dimension.\n\nFirst, D1_imryd_objetivo: The summary explicitly states \"El presente trabajo de investigación tuvo como objetivo principal mejorar la gestión de la información en la Cooperativa Agroindustrial (COOPAIN) Cabana - Puno.\" So objective present. So D1_imryd_objetivo = 1.\n\nD1_imryd_metodologia: The summary says \"Para el desarrollo de la investigación se utilizó la metodología Programación Extrema XP. La selección de la muestra, no probabilística se obtuvo por la técnica de muestreo por conveniencia.\" So methodology present. So D1_imryd_metodologia = 1.\n\nD1_imryd_resultados: The summary says \"Se concluyó que el Sistema mejora la Gestión de la Información ya que en su mayoría los usuarios califican como Excelente, con una ponderación de 23 en base a 25; lo que comprueba que el Sistema Integrado basado en Tecnologías Open Source mejora en un 92% en los procesos de gestión de información, permitiendo realizar los diferentes procesos con mayor control, reducción de costos y tiempo con un alto grado de productividad\". This is a result: they report a rating 23/25, 92% improvement. So yes, results present. So D1_imryd_resultados = 1.\n\nD1_imryd_conclusiones: The summary says \"en consecuencia se recomienda el uso de tecnologías Open Source ya que se ahorra en costos tales como licencia de sistema operativo entre otras ventajas y la aplicación de Patrones tales como Data Access Object y Business Object ya que facilitan la implementación de sistemas robustos que están sujetas a cambios futuros y reutilización de código\". This is a recommendation, which is a conclusion. It also states that the system improves. So yes, conclusion present. So D1_imryd_conclusiones = 1.\n\nD1_orden_logico: The components present: objective, methodology, results, conclusion. Are they in order? The summary starts with objective, then describes system, then methodology, then results, then conclusion. The order: objective -> system description (not a component) -> methodology -> results -> conclusion. That is objective, methodology, results, conclusion. So yes, order is correct. So D1_orden_logico = 1.\n\nNow D2_coherencia: We need to evaluate flow. Let's read the summary: It starts with objective, then describes system, then mentions problems, then methodology, then sample selection, then results, then recommendation. The flow: objective -> system description -> problem statement -> methodology -> sample selection -> results -> recommendation. The transitions: \"El presente trabajo de investigación tuvo como objetivo principal...\" then \"El Sistema Integrado Basado en Tecnologías Open Source...\" then \"La demora, inexactitud, redundancia y falta de información digitalizada...\" then \"Para el desarrollo de la investigación se utilizó la metodología Programación Extrema XP.\" Then \"La selección de la muestra, no probabilística se obtuvo por la técnica de muestreo por conveniencia.\" Then \"Se concluyó que el Sistema mejora la Gestión de la Información...\" Then \"en consecuencia se recomienda el uso de tecnologías Open Source...\" So overall, the flow is fairly coherent. There is a slight jump from system description to problem statement, but it's still logical. No major contradictions. So I'd rate 4 maybe. Let's consider the scale: 5 is impeccable, 4 is good with minor aspereza. 3 is understandable but some jumps. 2 is need to reread. 1 is incoherent. I think it's 4. So D2_coherencia = 4.\n\nNow D3_contextualizacion: This field requires that the summary situates the problem: why it matters, where it occurs, to whom it affects, against what norm or framework. The summary starts with objective: \"mejorar la gestión de la información en la Cooperativa Agroindustrial (COOPAIN) Cabana - Puno.\" It does not explicitly state why it's important, but it mentions \"La demora, inexactitud, redundancia y falta de información digitalizada precisa evidencias para contar con el apoyo de tecnologías de información, constituyendo una vía muy importante para el crecimiento empresarial, aumento de la productividad, reducción de costos, tiempo y mejora constante en la gestión de la Información.\" That is a contextualization: it explains the problem and why it's important. So yes, D3_contextualizacion = 1.\n\nD3_metodo_detallado: We need at least two precisions about procedure: design, type of study, sample size, sampling technique, instrument, statistical test, corpus, number of observations, selection criteria. The summary says \"Para el desarrollo de la investigación se utilizó la metodología Programación Extrema XP. La selección de la muestra, no probabilística se obtuvo por la técnica de muestreo por conveniencia.\" So we have methodology: XP, sample selection: convenience sampling. That's two precisions: methodology and sampling technique. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: We need specific content: figures, magnitudes, categories, relationships. The summary says \"los usuarios califican como Excelente, con una ponderación de 23 en base a 25; lo que comprueba que el Sistema Integrado basado en Tecnologías Open Source mejora en un 92% en los procesos de gestión de información\". So yes, there are concrete numbers: 23/25, 92%. So D3_resultados_concretos = 1.\n\nD3_conclusion_responde: The conclusion should answer the objective. The objective: improve management of information. The conclusion: \"se recomienda el uso de tecnologías Open Source ... facilitan la implementación de sistemas robustos ...\". The conclusion is about recommending usage, which is a response to the objective: the system improves management, so recommend using it. So yes, conclusion responds to objective. So D3_conclusion_responde = 1.\n\nD4_consistencia: We need to evaluate consistency between what the summary says it did and what it presents. The summary says methodology: XP, convenience sampling. Results: rating 23/25, 92% improvement. Conclusion: recommendation. Are there contradictions? The summary does not claim statistical significance or tests. It just reports rating. There's no mention of statistical tests. The methodology is XP, which is a software development methodology, not a research methodology. But the summary uses it as methodology for the research. That might be a mismatch: XP is a software development methodology, not a research methodology. But the summary says \"Para el desarrollo de la investigación se utilizó la metodología Programación Extrema XP.\" That is a bit odd but not necessarily contradictory. There's no mention of statistical tests, but they present percentages. They didn't mention any test. But they didn't claim significance. So no contradictions. The conclusion is consistent with results. So D4_consistencia = 5? Let's check the scale: 5 is no contradictions. 4 is minor imprecision. 3 is visible discordance. 2 is multiple discordances. 1 is open contradiction. There's no contradiction. So D4_consistencia = 5.\n\nNow no_evaluable: The text is a summary, not a non-summary. So no_evaluable = 0.\n\nObservaciones: We can add any notes. Maybe note that methodology is XP, which is a software dev methodology, not typical research methodology. But it's okay. Also note that the summary includes a recommendation. We can mention that the summary includes a recommendation. But we can keep it short. Let's add: \"Metodología XP, no pruebas estadísticas reportadas.\" That might be helpful.\n\nNow produce JSON with all fields. Ensure all required fields present. Use compact JSON. Let's produce:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Metodología XP, no pruebas estadísticas reportadas.\"\n}\n\nCheck schema: all fields present. Observaciones type string. Good. Ensure no null values. All integers. Good."
+    }
+   }
+  ],
+  "created": 1789700430,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_80501ff3a1",
+  "usage": {
+   "completion_tokens": 2304,
+   "prompt_tokens": 9996,
+   "total_tokens": 12300,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2168,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.291985266,
+   "prompt_time": 0.682945636,
+   "completion_time": 2.498304765,
+   "total_time": 3.181250401
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7ak9sefsr8kpf6n3b3vyk",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:00:30.751750+00:00"
+}

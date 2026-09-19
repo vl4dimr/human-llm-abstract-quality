@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-001",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Conclusión simplemente repite resultado; no aporta interpretación adicional. Coherencia alta; resultados agrupados en una oración larga."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Conclusión simplemente repite resultado; no aporta interpretación adicional. Coherencia alta; resultados agrupados en una oración larga.\"}",
+ "usage": {
+  "input_tokens": 10075,
+  "output_tokens": 1987
+ },
+ "latency_s": 3.29463791847229,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:14:51.395969+00:00",
+ "raw": {
+  "id": "chatcmpl-da79d41e-7060-41ab-a62b-4a318d57f854",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Conclusión simplemente repite resultado; no aporta interpretación adicional. Coherencia alta; resultados agrupados en una oración larga.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. We need to produce JSON with required fields. Must ensure all fields are present. Must use compact JSON (no pretty). Must ensure schema fields are all there. Let's analyze the summary.\n\nTitle: Relación de la calidad de vida en pacientes mastectomizadas con la funcionalidad atendidas en el Instituto Regional de Enfermedades Neoplásicas, Arequipa 2023\n\nSummary:\n\nObjetivo: Analizar la relación de la calidad de vida en pacientes mastectomizadas con la funcionalidad atendidas en el Instituto Regional de Enfermedades Neoplásicas, Arequipa 2023.\nMétodo: Trabajo de investigación de diseño no experimental, de tipo descriptivo, de corte trasversal, con una muestra de 72 pacientes por mastectomía,\nResultado: Existe relación de la calidad de vida en pacientes mastectomizadas con la funcionalidad atendidas en el Instituto Regional de Enfermedades Neoplásicas, Arequipa 2023, son: un 63,89% son mayores a 50 años de edad, un 50% es casada, ... (lots of percentages), todas las variables son significativas con una p<0,05, el nivel de funcionalidad en pacientes mastectomizadas, el 69,44% presenta una capacidad funcional moderada, 25% presenta es severa, 5,56% es leve.\nConclusión: En el Instituto Regional de Enfermedades Neoplásicas, se establece que existe relación de la calidad de vida en pacientes mastectomizadas con la funcionalidad.\n\nNow, we need to annotate each dimension.\n\nFirstly, D1_imryd_objetivo: is there a statement that answers \"what was proposed\"? The summary explicitly says \"Objetivo: Analizar la relación de la calidad de vida...\" So yes. Value 1.\n\nD1_imryd_metodologia: does summary provide at least one concrete procedural detail? It says \"Trabajo de investigación de diseño no experimental, de tipo descriptivo, de corte trasversal, con una muestra de 72 pacientes por mastectomía.\" That is design, type, cross-sectional, sample size. That is at least one precision. So value 1.\n\nD1_imryd_resultados: We need to evaluate if results communicate findings. The summary states: \"Resultado: Existe relación de la calidad de vida en pacientes mastectomizadas con la funcionalidad atendidas...\" Then gives percentages and significance. So yes, it's a result. So value 1.\n\nD1_imryd_conclusiones: \"Conclusión: En el Instituto Regional de Enfermedades Neoplásicas, se establece que existe relación de la calidad de vida en pacientes mastectomizadas con la funcionalidad.\" This repeats the result, not much beyond that. According to rule: must be more than a repetition. It's basically restating the result; no new interpretation or implication. The conclusion just states again that relationship exists. That is not a closure beyond repeating. So D1_imryd_conclusiones = 0. Because not enough closure.\n\nD1_orden_logico: Evaluate whether present components in logical sequence. We have objective, methodology, result, conclusion. They appear in that order. So 1. Note: there are no missing components except conclusion is present but not informative. But the rule says if only 0 or 1 components present, 0. Here we have 4 components present. So order 1.\n\nD2_coherencia: We need to rate 1-5. Let's analyze flow. The summary is somewhat repetitive but coherent. Starts with objective, then method, then result (with percentages and p<0.05). Then conclusion restating. The text flows logically: objective -> method -> results -> conclusion. There's no abrupt jumps. But the results section lists many percentages but all in one sentence. The flow is still coherent. There's no contradictory statements. There may be a slight overloading of info but still coherent. I'd assign maybe 5? However, the guidelines say 5: \"Progresión impecable. Cada oración prepara la siguiente. Se lee de un tirón\". The text has long sentences, but still cohesive. There's no transitions but it's a structured summary. I'd lean 5. Let's examine: The objective sets purpose. Method describes design. Result lists relationship and percentages. Conclusion restates. The only issue: The conclusion is trivial. But that doesn't affect coherence. So I'd assign 5. But if there's an issue of adverbial adjetivization? Not present. So 5.\n\nD3_contextualizacion: The summary does not explain why this study matters or context. It only states objective. So 0.\n\nD3_metodo_detallado: The summary provides design type, sample size 72 patients. That is at least 2 precisions? We have: design: non-experimental, descriptive, cross-sectional; sample size 72. That is 2 precisions: design + n. So 1.\n\nD3_resultados_concretos: The results include percentages and p<0.05 significance. They give concrete numbers. So 1.\n\nD3_conclusion_responde: Does the conclusion answer the objective? Objective: analyze relationship. Conclusion: says there exists relationship. So yes, it responds. So 1.\n\nD4_consistencia: This is consistency between what they say they did and what they present. Evaluate if there is any discordance. They say \"diseño no experimental, descriptivo, transveral, muestra 72\" and results show percentages and p<0.05 significance. That is consistent. No contradictory statements. They didn't claim causality. They just state relationship. They mention \"todas las variables son significativas con una p<0,05.\" That is consistent. So D4_consistencia = 5? Let's check scoring: 5 = fully coherent, no contradictions. Yes. So 5.\n\nNow no_evaluable: 0 because it's a valid summary. Observaciones: we should add any observations. We note that conclusion is repetitive and lacking depth, but we didn't penalize because it's 0 in D1_conclusiones. We might mention \"Conclusión poco elaborada\". So let's include a brief note: \"Conclusión simplemente repite resultado; no aporta interpretación adicional\". That is observation. Also note that D2 coherence high, but we might note that the summary uses a single long sentence for result; but we rated 5. Maybe add \"Estructura clara y ordenada, aunque resultados agrupados en una oración larga\". We can mention that.\n\nAlso note that we didn't assign 0 to D2, we gave 5. We can mention in observations that coherence high.\n\nLet's produce JSON.\n\nNeed to include all fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nAll values as ints or null. We'll provide ints. Observaciones string. Should we escape quotes? In JSON, we need to escape double quotes inside string. We'll keep simple. Let's craft JSON.\n\nWe will output compact JSON: no spaces or line breaks maybe. But okay to have some minimal spacing? They said \"compact JSON formatting\" but likely they mean no pretty printing. We can put all fields in one line. Provide values.\n\nObservations: \"Conclusión simplemente repite resultado; no aporta interpretación adicional. Coherencia alta; resultados agrupados en una oración larga.\" Need to escape double quotes? There's no double quotes inside string. So fine.\n\nLet's produce:\n\n{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Conclusión simplemente repite resultado; no aporta interpretación adicional. Coherencia alta; resultados agrupados en una oración larga.\"}\n\nCheck schema: D1_conclusiones 0 or 1 or null; we used 0. Good. D2_coherencia 1-5; 5 ok. D3_conclusion_responde 0/1; 1 ok. D4_consistencia 1-5; 5 ok. Observaciones type string ok. All required fields present.\n\nThus final."
+    }
+   }
+  ],
+  "created": 1789701291,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_565badff47",
+  "usage": {
+   "completion_tokens": 1987,
+   "prompt_tokens": 10075,
+   "total_tokens": 12062,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1837,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.243811501,
+   "prompt_time": 0.697530942,
+   "completion_time": 2.087760606,
+   "total_time": 2.785291548
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s84w7pex7rjjb8dp165g0d",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:14:51.395993+00:00"
+}

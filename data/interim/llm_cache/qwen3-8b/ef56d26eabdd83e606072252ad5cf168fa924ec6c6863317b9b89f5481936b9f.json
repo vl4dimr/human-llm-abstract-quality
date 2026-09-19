@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-017",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica de los componentes IMRyD. La coherencia organizacional se valora en 4 debido a que el texto fluye bien, aunque existen algunas repeticiones y frases que podrían mejorarse. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin situar el problema. La completitud de componentes es 1 en cada campo, ya que se presentan los componentes necesarios con suficiente detalle. La consistencia metodológica se valora en 4 debido a que el resumen describe una metodología clara y coherente, aunque podría mejorar en la precisión de algunos términos."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica de los componentes IMRyD. La coherencia organizacional se valora en 4 debido a que el texto fluye bien, aunque existen algunas repeticiones y frases que podrían mejorarse. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin situar el problema. La completitud de componentes es 1 en cada campo, ya que se presentan los componentes necesarios con suficiente detalle. La consistencia metodológica se valora en 4 debido a que el resumen describe una metodología clara y coherente, aunque podría mejorar en la precisión de algunos términos.\"\n}",
+ "usage": {
+  "input_tokens": 10857,
+  "output_tokens": 303,
+  "total_duration_s": 9.639778
+ },
+ "latency_s": 9.642995834350586,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:19:22.126828+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:19:22.1238594Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica de los componentes IMRyD. La coherencia organizacional se valora en 4 debido a que el texto fluye bien, aunque existen algunas repeticiones y frases que podrían mejorarse. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin situar el problema. La completitud de componentes es 1 en cada campo, ya que se presentan los componentes necesarios con suficiente detalle. La consistencia metodológica se valora en 4 debido a que el resumen describe una metodología clara y coherente, aunque podría mejorar en la precisión de algunos términos.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9639778000,
+  "load_duration": 6388400,
+  "prompt_eval_count": 10857,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 324188000,
+  "eval_count": 303,
+  "eval_duration": 9213540000
+ },
+ "cached_at_utc": "2026-09-19T02:19:22.126849+00:00"
+}

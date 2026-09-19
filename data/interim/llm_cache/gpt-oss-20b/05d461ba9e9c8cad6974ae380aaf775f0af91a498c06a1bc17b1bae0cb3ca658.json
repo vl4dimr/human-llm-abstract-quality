@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-050",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "D3_contextualizacion 0 due to lack of explicit problem context; otherwise consistent."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"D3_contextualizacion 0 due to lack of explicit problem context; otherwise consistent.\"}",
+ "usage": {
+  "input_tokens": 10009,
+  "output_tokens": 1709
+ },
+ "latency_s": 2.852963447570801,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:20:27.746318+00:00",
+ "raw": {
+  "id": "chatcmpl-766f5083-e2ab-4df0-8aac-68fc59e81632",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"D3_contextualizacion 0 due to lack of explicit problem context; otherwise consistent.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must produce JSON according to schema. All required fields must be present. Provide integer 0,1 or null; no extra. Observaciones string.\n\nWe need to annotate.\n\nWe must examine the summary.\n\nLet's parse.\n\nSummary: \"El aprendizaje significativo y el desarrollo de competencias matemáticas se consolidan en un contexto vivencial y académico, fomentando la participación activa de los estudiantes. La investigación tuvo como propósito determinar la eficacia del uso de los materiales concretos manipulables en el aprendizaje de la geometría en los estudiantes de la Institución Educativa Secundaria Cojata – Huancané, año 2 023. El enfoque de la investigación que se asumió es cuantitativo, de tipo experimental, con diseño cuasi experimental, con dos grupos homogéneos, uno de control y otro experimental. La población estuvo conformada por 228 estudiantes y la muestra por 47 de ellos matriculados en el primer grado, la cual se determinó mediante el muestreo no probabilístico, es decir, de forma intencional. Los instrumentos utilizados para la recolección de los datos fueron el pre y post test y para comprobar la hipótesis se utilizó la prueba estadística t de student. Los resultados alcanzados muestran que la media del grupo control fue 𝑥 = 13,37 puntos y el promedio obtenido del grupo experimental resultó 𝑥 = 16, 08 puntos, la cual es mayor al anterior; además la 𝑇𝑐 = -3,928 es menor que la 𝑇𝑡 = 2,014 y cae en la región de rechazo, entonces se rechaza la hipótesis nula y se acepta la hipótesis alterna. Se concluye, que los materiales concretos manipulables contribuyen considerablemente en la mejora de los aprendizajes de la geometría porque vincula, relaciona y socializa entre la teoría y la práctica afianzando la creatividad, simulación y el trabajo cooperativo.\"\n\nWe need to annotate.\n\nWe need fields:\n\nD1_imryd_objetivo: 1 if objective present. There is phrase: \"La investigación tuvo como propósito determinar la eficacia del uso de los materiales concretos manipulables en el aprendizaje de la geometría en los estudiantes...\". That's explicit objective. So 1.\n\nD1_imryd_metodologia: 1 if indicates how knowledge was obtained. Yes: \"El enfoque de la investigación ... cuantitativo, de tipo experimental, con diseño cuasi experimental, con dos grupos homogéneos, uno de control y otro experimental... La población ... La muestra ... Los instrumentos utilizados para la recolección de los datos fueron el pre y post test... prueba t de Student.\" So 1.\n\nD1_imryd_resultados: 1 if includes findings. Yes: \"Los resultados alcanzados muestran que la media del grupo control fue ... la media del grupo experimental ... la 𝑇𝑐 ... 𝑇𝑡 ... cae en la región de rechazo...\" So 1.\n\nD1_imryd_conclusiones: 1 if closure that goes beyond repeating results. The sentence: \"Se concluye, que los materiales concretos manipulables contribuyen considerablemente en la mejora de los aprendizajes de la geometría porque vincula, relaciona y socializa entre la teoría y la práctica afianzando la creatividad, simulación y el trabajo cooperativo.\" That is a conclusion that interprets results. So 1.\n\nD1_orden_logico: 1 if components present appear in order: objective, methodology, results, conclusion. The summary: first objective, then methodology, then results, then conclusion. So yes 1.\n\nD2_coherencia: 1-5 scale. Evaluate flow. Let's examine. The summary reads like a fairly standard research abstract. It flows: introduction, objective, methods, results, conclusion. There is no major jump. Some minor abruptness? But overall coherent. I'd score maybe 4 or 5. But let's analyze: The introduction \"El aprendizaje significativo...\" is a general introduction, then objective, then method, then results, then conclusion. The introduction seems generic but flows. Might be considered 5 (impeccable progression). There is no abrupt skip. So 5.\n\nD3_contextualizacion: 1 if summary situates problem: why important, where occurs, to whom, etc. The abstract starts with \"El aprendizaje significativo y el desarrollo de competencias matemáticas se consolidan en un contexto vivencial y académico, fomentando la participación activa de los estudiantes.\" That gives context: learning in a vivential academic context. But does it situate problem? The research is about measuring efficacy of manipulable materials for geometry learning. The summary does not explicitly state why this problem matters or what the problem is. There's no mention of existing gap. So D3_contextualizacion likely 0. The objective statement is enough; but no contextualization. So 0.\n\nD3_metodo_detallado: 1 if at least two precise procedural details: design, sample, instrument, etc. The abstract mentions: \"El enfoque de la investigación que se asumió es cuantitativo, de tipo experimental, con diseño cuasi experimental, con dos grupos homogéneos, uno de control y otro experimental. La población estuvo conformada por 228 estudiantes y la muestra por 47 de ellos ... muestreo no probabilístico, es decir, de forma intencional. Los instrumentos utilizados ... pre y post test ... prueba estadística t de student.\" That's more than two details: design, sample, instrument, test. So 1.\n\nD3_resultados_concretos: 1 if results give concrete content: numbers, categories, etc. Yes: gives means and t statistics. So 1.\n\nD3_conclusion_responde: 1 if conclusion addresses the objective. Yes: conclusion states materials contribute to improvement in geometry learning. Objective was to determine efficacy. So conclusion addresses it. So 1.\n\nD4_consistencia: 1-5 scale for consistency between what summary says it did and what it presents. We need to see if there's contradictions. The summary says design quasi-experimental, pre-post test, t test. Results show t-statistic etc. Conclusion says materials contribute to improvement. No contradictions. There's no statement that they used parametric test but didn't meet normality etc. No contradictions. So D4 likely 5. No contradictions.\n\nno_evaluable: 0 because it's a summary. Observaciones: include any notes. Observations may be: D3_contextualizacion 0 due to lack of problem context. No other notes.\n\nCheck if any field may be null: all required fields must be present. Use integer 0 or 1. Observaciones string.\n\nThus produce JSON:\n\n{\n\"D1_imryd_objetivo\":1,\n\"D1_imryd_metodologia\":1,\n\"D1_imryd_resultados\":1,\n\"D1_imryd_conclusiones\":1,\n\"D1_orden_logico\":1,\n\"D2_coherencia\":5,\n\"D3_contextualizacion\":0,\n\"D3_metodo_detallado\":1,\n\"D3_resultados_concretos\":1,\n\"D3_conclusion_responde\":1,\n\"D4_consistencia\":5,\n\"no_evaluable\":0,\n\"observaciones\":\"D3_contextualizacion 0 due to lack of explicit problem context; otherwise consistent.\"\n}\n\nMake sure JSON is compact. Use no whitespace? \"Compact\" means minimal formatting but not necessary to remove spaces. Provide standard JSON. The schema expects integers or null. All fields present.\n\nOk."
+    }
+   }
+  ],
+  "created": 1789701627,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_d6de37e6be",
+  "usage": {
+   "completion_tokens": 1709,
+   "prompt_tokens": 10009,
+   "total_tokens": 11718,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1566,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.283382615,
+   "prompt_time": 0.548595698,
+   "completion_time": 1.733692145,
+   "total_time": 2.2822878429999998
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8f54te8eab1nfe9kw9q0e",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:20:27.746467+00:00"
+}

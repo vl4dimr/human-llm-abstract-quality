@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-133",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 10029,
+  "output_tokens": 1719,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.392915725708008,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:11:33.616065+00:00",
+ "raw": {
+  "id": "chatcmpl-42eb4bb1-330b-4c7f-8761-49c56589b137",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Factores de riesgo relacionados a la prevalencia de anticuerpo (IgG) contra Fasciola hepatica en escolares de educacion primaria del distrito de Asillo-Azangaro\"\n\nSummary: (I'll rewrite for clarity)\n\n\"La fasciolosis es un problema de salud pública a nivel mundial por su alta prevalencia en la infección humana, y en poblaciones que se dedican a la crianza de ganado ovino, porcino y vacuno, como ocurre en el distrito de Asillo –Azángaro departamento de Puno; en tal sentido se ha planteado la investigación que tiene como objetivo determinar la prevalencia de anticuerpos (IgG) humanas contra Fasciola hepática en escolares de educación primaria del distrito de Asillo – Azángaro. La metodología que se aplicó para determinar anticuerpo (IgG) fue la técnica de Elisa y los factores de riesgo se realizó mediante encuesta directa utilizando la estadística descriptiva, se expresó en forma porcentual, con sus intervalos de confianza al 95%, las variables se analizaron mediante la prueba chi cuadrado y proceso de datos mediante el paquete estadístico SPSS V. 10.0 (p<0.05). Los resultados obtenidos fueron que la prevalencia de anticuerpos (IgG) contra F. hepática es de 34.5% tamizados por el método de Elisa, y los factores que predisponen a la fasciolosis en escolares del distrito de Asillo son antecedente epidemiológico: consumo de agua de pozo en un 31% (p=0.038), un 27.7% presenta ictericia, 13.8% vómitos, fiebre 29.9%; y respecto a la crianza de animales:  cerdo, ovejunos y canes en un 34.5%. Se concluye que existe prevalencia alta de anticuerpos (IgG) contra F. hepática y los factores que predisponen son los antecedentes epidemiológicos y la crianza de animales.\"\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 1 if objective present. Yes: \"tiene como objetivo determinar la prevalencia de anticuerpos (IgG) humanas contra Fasciola hepática en escolares de educación primaria del distrito de Asillo – Azángaro.\" So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. Yes: \"La metodología que se aplicó para determinar anticuerpo (IgG) fue la técnica de Elisa y los factores de riesgo se realizó mediante encuesta directa utilizando la estadística descriptiva, se expresó en forma porcentual, con sus intervalos de confianza al 95%, las variables se analizaron mediante la prueba chi cuadrado y proceso de datos mediante el paquete estadístico SPSS V. 10.0 (p<0.05).\" So 1.\n\n- D1_imryd_resultados: 1 if results present. Yes: \"Los resultados obtenidos fueron que la prevalencia de anticuerpos (IgG) contra F. hepática es de 34.5% tamizados por el método de Elisa, y los factores que predisponen a la fasciolosis en escolares del distrito de Asillo son antecedente epidemiológico: consumo de agua de pozo en un 31% (p=0.038), un 27.7% presenta ictericia, 13.8% vómitos, fiebre 29.9%; y respecto a la crianza de animales: cerdo, ovejunos y canes en un 34.5%.\" So 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. Yes: \"Se concluye que existe prevalencia alta de anticuerpos (IgG) contra F. hepática y los factores que predisponen son los antecedentes epidemiológicos y la crianza de animales.\" So 1.\n\n- D1_orden_logico: 1 if components present in logical order. The order: objective, methodology, results, conclusion. Yes. So 1.\n\n- D2_coherencia: 1-5. Evaluate flow. Let's analyze. The summary starts with background, then objective, then methodology, then results, then conclusion. The flow seems coherent. There is some repetition: \"La fasciolosis es un problema de salud pública...\" then objective. Then methodology. Then results. Then conclusion. The transitions are okay. There's no abrupt jumps. So I'd rate 5. But check for any issues: The summary includes background, objective, methodology, results, conclusion. The background is before objective, but that's fine. The flow is logical. So D2_coherencia = 5.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where it occurs, to whom it affects, etc. The summary starts with background: \"La fasciolosis es un problema de salud pública a nivel mundial por su alta prevalencia en la infección humana, y en poblaciones que se dedican a la crianza de ganado ovino, porcino y vacuno, como ocurre en el distrito de Asillo –Azángaro departamento de Puno\". That situates the problem: global health issue, local context. So 1.\n\n- D3_metodo_detallado: 1 if at least two precisions about procedure. We have: \"técnica de Elisa\" (instrument), \"encuesta directa\" (data collection), \"estadística descriptiva\", \"intervalos de confianza al 95%\", \"prueba chi cuadrado\", \"SPSS V.10.0\". That's more than two. So 1.\n\n- D3_resultados_concretos: 1 if results provide specific content: yes: prevalence 34.5%, percentages for risk factors, p-values. So 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to objective. Objective: determine prevalence of IgG in schoolchildren. Conclusion: \"Se concluye que existe prevalencia alta de anticuerpos (IgG) contra F. hepática y los factores que predisponen son los antecedentes epidemiológicos y la crianza de animales.\" That responds to objective. So 1.\n\n- D4_consistencia: 1-5. Consistency between what is said was done and what is presented. Let's check: Methodology: technique of Elisa, survey, stats. Results: prevalence 34.5% from Elisa, risk factors percentages. Conclusion: high prevalence and risk factors. No contradictions. So consistency high. I'd rate 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes? We can add a note: \"No issues.\" But we can leave empty string. The schema requires string. We can put empty string \"\".\n\nThus JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"\"\n}\n\nCheck schema: all required fields present. All values are integers or null. Observaciones string. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789701093,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_9340e7d14d",
+  "usage": {
+   "completion_tokens": 1719,
+   "prompt_tokens": 10029,
+   "total_tokens": 11748,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1593,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.238964005,
+   "prompt_time": 0.070751653,
+   "completion_time": 1.7927051170000001,
+   "total_time": 1.86345677
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7yvzkew7rejy4kyxweqth",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:11:33.616170+00:00"
+}

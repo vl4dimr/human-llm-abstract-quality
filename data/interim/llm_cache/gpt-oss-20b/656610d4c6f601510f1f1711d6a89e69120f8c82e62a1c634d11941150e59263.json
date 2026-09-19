@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-115",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": null,
+  "no_evaluable": 1,
+  "observaciones": "Resumen solo presenta objetivos sin metodología, resultados ni conclusión. Por ello la consistencia metodológica es no evaluable."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":0,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"Resumen solo presenta objetivos sin metodología, resultados ni conclusión. Por ello la consistencia metodológica es no evaluable.\"}",
+ "usage": {
+  "input_tokens": 9878,
+  "output_tokens": 1244,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.134631633758545,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:59:07.422570+00:00",
+ "raw": {
+  "id": "chatcmpl-02e031a7-50d7-4e70-9cb0-b522413fde01",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":0,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"Resumen solo presenta objetivos sin metodología, resultados ni conclusión. Por ello la consistencia metodológica es no evaluable.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary.\n\nWe have fields:\n\nD1_imryd_objetivo: 1 if can answer \"what was proposed\" reading summary.\n\nLet's parse summary:\n\n\"El aporte que ha hecho ...\". Then: \"La razón por la que se hace este proyecto es por dos razones: Valor teórico y práctico.\" Then: \"Por su valor teórico, ...\". Then: \"Por su valor práctico y social, ...\". Then: \"Objetivo principal es resaltar la actividad evangelística a través de la radio ...\". \"Y clarificar la influencia social de la radio ...\". \"Por último, determinar la ganancia de almas...\".\n\nThus objective clearly stated. So D1_imryd_objetivo = 1.\n\nD1_imryd_metodologia: Need to indicate how knowledge was obtained. Is there a description of methodology? Summary does not mention methodology: no design, sample, instrument. It only talks about project reasons and objectives. So D1_imryd_metodologia = 0.\n\nD1_imryd_resultados: Must have what was found. Summary has no results; it speaks about \"el resultado del proyecto mostrará en resultados de qué manera y cuánto puede rendir el evangelismo\". But no actual findings. So D1_imryd_resultados = 0.\n\nD1_imryd_conclusiones: Must have a closure beyond repeating results, interpretation, implication. There is none. So D1_imryd_conclusiones = 0.\n\nD1_orden_logico: For components present (objective only). Since there are 0 or 1 component present? Here only objective present. Rule says: If 0 or 1 components present, D1_orden_logico = 0 automatically. So D1_orden_logico = 0.\n\nD2_coherencia: Flow of text. Let's assess coherence. Summary flows: introduction about radio, then reasons for project, then objectives. It's somewhat coherent but maybe some jumps. I'd rate 3? Let's analyze: 1: Progresion impecable. 2: Fluye bien, con alguna aspereza menor. 3: Se entiende, pero cuesta. 4: Hay que releer para reconstruir hilo. 5: Incoherente. The summary: first part is general about radio, then reasons, then objectives. There's a bit of repetition but overall flows logically. I'd give 4 maybe? But let's consider: \"La radio es uno...\". Then \"El aporte ...\". Then \"Han sido utilizado ...\". Then \"La razón por la que se hace este proyecto es por dos razones: Valor teórico y práctico.\" Then details. Then objectives. That's fairly coherent. I'd say 4.\n\nD3_contextualizacion: need to situate problem: why important, where occurs, etc. Summary starts with general about radio, but not specifically about why the project matters for the district. It says \"Por su valor teórico y práctico...\". That provides some context but not detailed. The summary basically says \"Valor teórico, porque ...\". Might be considered context? The requirement: situate problem: why important, where occurs, to whom, contrast with norm. This summary does not provide explicit context beyond stating value. It's basically objectives. So D3_contextualizacion = 0.\n\nD3_metodo_detallado: Need at least two precisions about procedure. None. So 0.\n\nD3_resultados_concretos: need specific results. None. So 0.\n\nD3_conclusion_responde: if conclusion present and responds to objective. No conclusion. 0.\n\nD4_consistencia: consistency between claimed methodology and presented results. Since no methodology and no results, D4_consistencia = no_evaluable? The protocol says: If no methodology, D4 not evaluable. Mark no_evaluable = 1. Then D4_consistencia remains null? The schema: D4_consistencia can be integer 1-5 or null. In no_evaluable case we set no_evaluable=1 and leave D4_consistencia null? The schema requires D4_consistencia field present. We can set it to null. That is allowed per enum [1,2,3,4,5,null]. So D4_consistencia = null.\n\nno_evaluable: 1.\n\nobservaciones: Provide any notes. We'll mention no methodology, no results, so D4 no evaluable. Also maybe note that summary has only objectives, no method or results. Provide explanation.\n\nAlso check that all required fields present. Yes.\n\nReturn compact JSON.\n\nLet's craft JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":0,\n \"D1_imryd_resultados\":0,\n \"D1_imryd_conclusiones\":0,\n \"D1_orden_logico\":0,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":0,\n \"D3_resultados_concretos\":0,\n \"D3_conclusion_responde\":0,\n \"D4_consistencia\":null,\n \"no_evaluable\":1,\n \"observaciones\":\"Resumen solo presenta objetivos sin metodología, resultados ni conclusión. Por ello la consistencia metodológica es no evaluable.\"\n}\n\nCheck JSON validity. All fields present. Good."
+    }
+   }
+  ],
+  "created": 1789775947,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e594c51153",
+  "usage": {
+   "completion_tokens": 1244,
+   "prompt_tokens": 9878,
+   "total_tokens": 11122,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1098,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.196013503,
+   "prompt_time": 0.056479308,
+   "completion_time": 1.260950381,
+   "total_time": 1.317429689
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vfb7rcefhv9e3g5ev9q9ga",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:59:07.422586+00:00"
+}

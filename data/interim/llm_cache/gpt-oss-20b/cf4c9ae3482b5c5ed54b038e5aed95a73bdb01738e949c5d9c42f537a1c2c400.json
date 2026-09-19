@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-015",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Repetitive phrasing of correlation results but overall flow is coherent."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Repetitive phrasing of correlation results but overall flow is coherent.\"}",
+ "usage": {
+  "input_tokens": 10075,
+  "output_tokens": 1044
+ },
+ "latency_s": 2.4651293754577637,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:47:22.694260+00:00",
+ "raw": {
+  "id": "chatcmpl-7b59095a-8a1f-49b0-98d2-b33c91c173e0",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Repetitive phrasing of correlation results but overall flow is coherent.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields per schema. Evaluate summary.\n\nLet's analyze each field:\n\nD1_imryd_objetivo: 1 if can state what was proposed. Summary says: \"El objetivo principal ... determinar el nivel de relación entre el bullying y la convivencia escolar ...\". So yes, 1.\n\nD1_imryd_metodologia: 1 if indicates how obtained knowledge. It says: \"Se utilizó un diseño no experimental de tipo descriptivo correlacional. La población ... se usó como muestras a 32 estudiantes ... se usó dos cuestionarios ...\". So yes 1.\n\nD1_imryd_resultados: 1 if communicates what found, not how. It states: \"se concluye que si existe relación ... donde se observa que la correlación de Pearson es de 0,357; y ... p-valor 0.045\". That is a result. Then also other specific correlations. So yes 1.\n\nD1_imryd_conclusiones: 1 if there is a closure beyond repeating result. Summary: \"se concluye que si existe relación ...\", then repeats specific correlations and says rejects null, accepts alternative. That is a conclusion: it responds to objective, interprets significance. So yes 1.\n\nD1_orden_logico: 1 if components present appear in correct sequence. The summary starts with objective, then methodology, then results, then conclusions. Yes correct sequence. So 1.\n\nD2_coherencia: scale 1-5. We need to judge flow. Let's read text. The summary is a single paragraph. It seems fairly cohesive but maybe a bit heavy in details. Flow: objective, then method, then results, then specific correlation results, concluding acceptance. It's fairly coherent; some repetition but not too abrupt. I'd give 4 maybe. Let's think: 5: impeccable flow; 4: well with minor aspereza. There is a bit of repetition of \"se observa que la correlación de Pearson es de ...\" repeated across multiple conclusions. But not huge. I'd give 4.\n\nD3_contextualizacion: 1 if situates problem: why it matters, where, etc. The summary does not discuss why the problem matters or its importance; starts directly by objective. So 0.\n\nD3_metodo_detallado: 1 if at least two precise details. It has: design type, population, sample size, instruments (two questionnaires). That's at least four precisions. So 1.\n\nD3_resultados_concretos: 1 if results have specific content: yes: correlation coefficients, significance values. So 1.\n\nD3_conclusion_responde: 1 if conclusion responds to stated objective. Objective was determine level of relationship; conclusion says there is relationship, correlation values etc. So 1.\n\nD4_consistencia: scale 1-5. We need to check consistency between what is declared and what is presented. Let's look: The summary says: design non-experimental descriptivo correlacional, sample 32 students. It then presents correlations for overall relationship (0.357, p 0.045), and also correlations with specific subdomains (development personal, interpersonal, ethical). The overall conclusion: \"en tal sentido rechazamos la hipótesis nula y se acepta la hipótesis alterna.\" So does methodology align? They used correlational design and questionnaires; results are correlation coefficients. That is consistent. The conclusion about rejecting null is supported by p-values (<0.05). The other subdomain correlations have p-values 0.057, 0.277, 0.272, so they are not significant; yet they still say \"existe relación ... indica nivel de correlación baja ... p valor ...\". They didn't explicitly say significance for those except stating significance values; but the conclusion overall only refers to overall relationship. So no contradiction. The consistency is fine. So I'd give 5.\n\nNo_evaluable: 0 (since it is a valid summary).\n\nObservaciones: can note any remarks like \"Repetitive phrasing of correlation results\". Provide string.\n\nAll fields must be present. Provide integer or null. We are not using null. Let's output JSON.\n\nCheck schema: all required fields must exist. Provide values as integers. Let's craft JSON.\n\nMake compact: no whitespace? It says \"compact JSON formatting\". We'll just produce minified JSON. Ensure all keys present.\n\nReturn only JSON."
+    }
+   }
+  ],
+  "created": 1789775242,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e2cb7a84ec",
+  "usage": {
+   "completion_tokens": 1044,
+   "prompt_tokens": 10075,
+   "total_tokens": 11119,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 906,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.149991794,
+   "prompt_time": 0.507771126,
+   "completion_time": 1.146256932,
+   "total_time": 1.654028058
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2venq81eg9s16twbd7qg8rg",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:47:22.694274+00:00"
+}

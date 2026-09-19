@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-083",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 9994,
+  "output_tokens": 803,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 1.4637947082519531,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:25:53.846718+00:00",
+ "raw": {
+  "id": "chatcmpl-9bd937d8-38c2-4261-9c64-8972c12c01ed",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must produce JSON according to schema. Determine values.\n\nWe need to evaluate:\n\n- D1_imryd_objetivo: 1? The summary says \"Objetivo: Evaluar el estado nutricional de estudiantes de Nutrición Humana...\" It's explicit. So 1.\n\n- D1_imryd_metodologia: 1, yes.\n\n- D1_imryd_resultados: 1, yes.\n\n- D1_imryd_conclusiones: 1. Conclusión: \"Se evidencio que la mayoría...\". It answers the objective? It says majority have overweight and obesity. Objective: evaluate the nutritional status. Conclusion states that most are overweight/obesity. Yes, it answers.\n\n- D1_orden_logico: components present in order: Objetivo -> Metodología -> Resultados -> Conclusión. Yes. 1.\n\n- D2_coherencia: evaluate flow. Let's read: Title, then objective, methodology, results, conclusion. It's pretty coherent. No abrupt jumps. Maybe mild but still coherent. I'd give 5. But need to consider if there is any break? The methodology has a long sentence with percentages, but flows. Conclusion just states main. I'd say 5.\n\n- D3_contextualizacion: 0? Does the summary situate problem? It says \"Estado nutricional en estudiantes de la carrera de Nutrición Humana de una Universidad Privada 2019\". The objective mentions evaluation. It doesn't explain why it's important, why the study matters, etc. It doesn't mention significance or context. So 0.\n\n- D3_metodo_detallado: We need at least two precisions. There is population 155, sex percentages, age range 18-35, measures: IMC, %GC, evaluation site, etc. That's >2. So 1.\n\n- D3_resultados_concretos: 1, because results give percentages of overweight, obesity, etc.\n\n- D3_conclusion_responde: 1, conclusion answers objective? It says majority overweight, obesity, high % GC. That addresses evaluation. Yes.\n\n- D4_consistencia: Need to check consistency between methodology and results. They mention measuring IMC and %GC. Results present percentages. That matches. No contradictions. No sign of 'significativo' misuse. No conflict. So consistency rating 5. Since no contradictions.\n\n- no_evaluable: 0, because it's a valid summary.\n\n- observaciones: maybe add note: None? We can leave empty string.\n\nAll fields required. Use null? No, we assign values. Use 0-5.\n\nThus produce JSON:\n\n{\n\"D1_imryd_objetivo\":1,\n\"D1_imryd_metodologia\":1,\n\"D1_imryd_resultados\":1,\n\"D1_imryd_conclusiones\":1,\n\"D1_orden_logico\":1,\n\"D2_coherencia\":5,\n\"D3_contextualizacion\":0,\n\"D3_metodo_detallado\":1,\n\"D3_resultados_concretos\":1,\n\"D3_conclusion_responde\":1,\n\"D4_consistencia\":5,\n\"no_evaluable\":0,\n\"observaciones\":\"\"\n}\n\nCheck schema: all fields present. Observations string. Good.\n\nReturn JSON in compact format."
+    }
+   }
+  ],
+  "created": 1789701953,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_3cdd24b83b",
+  "usage": {
+   "completion_tokens": 803,
+   "prompt_tokens": 9994,
+   "total_tokens": 10797,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 677,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.193460205,
+   "prompt_time": 0.05652188,
+   "completion_time": 0.928167822,
+   "total_time": 0.984689702
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8s4z2erwbh7c7f3rxcsts",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:25:53.846801+00:00"
+}

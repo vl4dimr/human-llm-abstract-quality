@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-132",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen presenta objetivos, metodología y resultados con datos concretos, pero carece de una conclusión explícita que responda al objetivo o ofrezca implicaciones; flujo coherente pero algo cargado de información."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta objetivos, metodología y resultados con datos concretos, pero carece de una conclusión explícita que responda al objetivo o ofrezca implicaciones; flujo coherente pero algo cargado de información.\"}",
+ "usage": {
+  "input_tokens": 10184,
+  "output_tokens": 1007,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 1.90976881980896,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:42:33.237913+00:00",
+ "raw": {
+  "id": "chatcmpl-c306ee36-67c6-46ac-94db-59d21a88b421",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta objetivos, metodología y resultados con datos concretos, pero carece de una conclusión explícita que responda al objetivo o ofrezca implicaciones; flujo coherente pero algo cargado de información.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate according to protocol. Need fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nFirst determine if summary is a summary; yes, it's a summary of a thesis.\n\nNow evaluate each field.\n\nD1_imryd_objetivo: Yes, objectives listed a, b, c. So 1.\n\nD1_imryd_metodologia: Method described: measuring biomass, erosion, nutrient difference, yield measurement, design DBCA, treatments etc. So 1.\n\nD1_imryd_resultados: Results described: biomasa, erosion amounts, nutrient efficiency, yield. So 1.\n\nD1_imryd_conclusiones: Are there conclusions? It lists results but does not explicitly provide a concluding statement answering the objectives or providing implications. It doesn't have a distinct conclusion paragraph. The summary ends with results. There's no \"conclusión\" or \"en consecuencia\". So D1_conclusiones = 0.\n\nD1_orden_logico: Are components present in logical order? Sequence: objectives, methodology, results. That matches introduction -> methodology -> results. No conclusion but order still logical: objectives -> methodology -> results. The presence of 3 components. So D1_orden_logico = 1.\n\nD2_coherencia: Evaluate flow. Let's read: It starts with background, objective list, methodology, design, results with multiple parts a,b,c. The flow seems coherent, though somewhat long. No major jumps. I'd rate maybe 4. No abrupt transitions, no contradictions. It's somewhat long, but still flows. I'd give 4. Check if any abrupt: It goes from erosion to nutrient efficiency to yield, all under results. The sentence structure is fine. I think 4. Maybe 5? There's a mention of \"El altiplano puneño viene sufriendo la pérdida de suelo, principalmente por erosión hídrica ocasionando la pérdida de nutrientes del suelo a causa del mal manejo de sistemas de cultivo\". That's background. Then \"por lo que el presente trabajo de investigación tiene como objetivos:\" list. Then \"Metodología:\" etc. Then results. I think 5 could be possible but it's somewhat descriptive. I'll choose 4.\n\nD3_contextualizacion: Does summary situate problem? It says background: altitude region experiencing soil loss, erosion. That is contextualization: explains importance, where occurs, why matters. So 1.\n\nD3_metodo_detallado: Need at least two precisions: design (DBCA), number of treatments and blocks (4 treatments, 4 blocks, 16 units), treatment definitions, measurement methods, sample sizes? We have DBCA, 4 treatments, 4 blocks, 16 units. So yes, at least 2 precisions. 1.\n\nD3_resultados_concretos: There are concrete figures: biomasa, erosion amounts, nutrient percentages, yield. So 1.\n\nD3_conclusion_responde: Since no conclusion, this is 0.\n\nD4_consistencia: Need to evaluate consistency between what method declared and what presented. Method: DBCA, 4 treatments, 4 blocks, 16 units. Results: give specific numbers for each treatment. That seems consistent. No contradictions. So D4_consistencia = 5? Let's check scale 1-5. 5 is \"Enfoque, diseño, resultados y conclusiones encajan sin fisuras\". There's no conclusion, but it's about consistency. I think 5 is acceptable. There's no inconsistency: results support design. So 5.\n\nno_evaluable: 0 (summary valid).\n\nobservaciones: Include notes about missing conclusion and maybe mention flow. Also note that D4 is 5.\n\nMake sure JSON compact.\n\nLet's produce JSON."
+    }
+   }
+  ],
+  "created": 1789774952,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_37c9245f64",
+  "usage": {
+   "completion_tokens": 1007,
+   "prompt_tokens": 10184,
+   "total_tokens": 11191,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 840,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.191128489,
+   "prompt_time": 0.073744641,
+   "completion_time": 1.022597603,
+   "total_time": 1.096342244
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vecx31eq0vpg9a506z29hv",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:42:33.237929+00:00"
+}

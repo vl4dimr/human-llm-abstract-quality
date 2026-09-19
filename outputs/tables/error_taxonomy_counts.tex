@@ -1,0 +1,45 @@
+\begin{table}
+\caption{Preliminary failure-mode taxonomy: number of LLM–human disagreements by model, variable and rule-based type.}
+\label{tab:error-taxonomy}
+\begin{tabular}{llrrrrrrrr}
+\toprule
+model & variable & assessability\_mismatch & ordinal\_shift\_down\_mild & ordinal\_shift\_up\_mild & ordinal\_shift\_up\_severe & over\_labeling\_keyword\_present & over\_labeling\_no\_keyword & under\_labeling & under\_labeling\_long\_abstract \\
+\midrule
+gpt-oss-20b & D1\_imryd\_conclusiones & 0 & 0 & 0 & 0 & 1 & 9 & 6 & 0 \\
+gpt-oss-20b & D1\_imryd\_metodologia & 0 & 0 & 0 & 0 & 0 & 1 & 0 & 0 \\
+gpt-oss-20b & D1\_imryd\_resultados & 0 & 0 & 0 & 0 & 1 & 3 & 1 & 0 \\
+gpt-oss-20b & D1\_orden\_logico & 0 & 0 & 0 & 0 & 0 & 3 & 6 & 0 \\
+gpt-oss-20b & D2\_coherencia & 0 & 0 & 60 & 44 & 0 & 0 & 0 & 0 \\
+gpt-oss-20b & D3\_conclusion\_responde & 0 & 0 & 0 & 0 & 1 & 8 & 6 & 1 \\
+gpt-oss-20b & D3\_contextualizacion & 0 & 0 & 0 & 0 & 1 & 1 & 63 & 0 \\
+gpt-oss-20b & D3\_metodo\_detallado & 0 & 0 & 0 & 0 & 8 & 2 & 0 & 0 \\
+gpt-oss-20b & D3\_resultados\_concretos & 0 & 0 & 0 & 0 & 2 & 5 & 3 & 0 \\
+gpt-oss-20b & D4\_consistencia & 0 & 3 & 8 & 88 & 0 & 0 & 0 & 0 \\
+gpt-oss-20b & no\_evaluable & 3 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+mistral-7b & D1\_imryd\_conclusiones & 0 & 0 & 0 & 0 & 2 & 23 & 0 & 1 \\
+mistral-7b & D1\_imryd\_metodologia & 0 & 0 & 0 & 0 & 0 & 1 & 5 & 2 \\
+mistral-7b & D1\_imryd\_objetivo & 0 & 0 & 0 & 0 & 0 & 1 & 4 & 0 \\
+mistral-7b & D1\_imryd\_resultados & 0 & 0 & 0 & 0 & 2 & 1 & 6 & 2 \\
+mistral-7b & D1\_orden\_logico & 0 & 0 & 0 & 0 & 0 & 3 & 18 & 2 \\
+mistral-7b & D2\_coherencia & 0 & 2 & 47 & 13 & 0 & 0 & 0 & 0 \\
+mistral-7b & D3\_conclusion\_responde & 0 & 0 & 0 & 0 & 7 & 25 & 0 & 1 \\
+mistral-7b & D3\_contextualizacion & 0 & 0 & 0 & 0 & 0 & 0 & 119 & 5 \\
+mistral-7b & D3\_metodo\_detallado & 0 & 0 & 0 & 0 & 5 & 2 & 5 & 2 \\
+mistral-7b & D3\_resultados\_concretos & 0 & 0 & 0 & 0 & 9 & 11 & 5 & 2 \\
+mistral-7b & D4\_consistencia & 0 & 0 & 22 & 77 & 0 & 0 & 0 & 0 \\
+mistral-7b & no\_evaluable & 12 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+qwen3-8b & D1\_imryd\_conclusiones & 0 & 0 & 0 & 0 & 0 & 25 & 1 & 0 \\
+qwen3-8b & D1\_imryd\_metodologia & 0 & 0 & 0 & 0 & 1 & 2 & 0 & 0 \\
+qwen3-8b & D1\_imryd\_objetivo & 0 & 0 & 0 & 0 & 0 & 1 & 1 & 0 \\
+qwen3-8b & D1\_imryd\_resultados & 0 & 0 & 0 & 0 & 3 & 0 & 1 & 0 \\
+qwen3-8b & D1\_orden\_logico & 0 & 0 & 0 & 0 & 0 & 4 & 9 & 0 \\
+qwen3-8b & D2\_coherencia & 0 & 5 & 58 & 8 & 0 & 0 & 0 & 0 \\
+qwen3-8b & D3\_conclusion\_responde & 0 & 0 & 0 & 0 & 4 & 27 & 0 & 0 \\
+qwen3-8b & D3\_contextualizacion & 0 & 0 & 0 & 0 & 0 & 0 & 136 & 5 \\
+qwen3-8b & D3\_metodo\_detallado & 0 & 0 & 0 & 0 & 9 & 5 & 1 & 0 \\
+qwen3-8b & D3\_resultados\_concretos & 0 & 0 & 0 & 0 & 9 & 14 & 2 & 0 \\
+qwen3-8b & D4\_consistencia & 0 & 6 & 61 & 14 & 0 & 0 & 0 & 0 \\
+qwen3-8b & no\_evaluable & 12 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}

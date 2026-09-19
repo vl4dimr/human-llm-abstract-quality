@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-088",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "The objective and methodology are combined in the first sentence, but overall flow is coherent."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"The objective and methodology are combined in the first sentence, but overall flow is coherent.\"}",
+ "usage": {
+  "input_tokens": 9946,
+  "output_tokens": 1472,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.519774913787842,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:55:40.459039+00:00",
+ "raw": {
+  "id": "chatcmpl-d4ddbd93-fd8b-4710-9928-ea98e9dd8ea1",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"The objective and methodology are combined in the first sentence, but overall flow is coherent.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones. All required.\n\nWe must analyze the summary to fill.\n\nLet's parse.\n\nResumen: \"La investigación se realizó con el objetivo de determinar la efectividad de la sesión educativa en el conocimiento sobre primeros auxilios en accidentes más frecuentes en los comuneros de Lluco, Coata-2016, fue de tipo pre-experimental con diseño pre test y post test con un solo grupo; la población estuvo constituida por 188 comuneros, la muestra de estudio estuvo conformada por 75 comuneros, la técnica que se utilizó fue la encuesta , el instrumento fue el cuestionario que se aplicó en dos momentos antes y después de la sesión educativa, validado a través de juicio de expertos, para la confiabilidad del instrumento se utilizó el método de Alfa de Cronbanch obteniéndose 80% de confiabilidad, los resultados del estudio demuestran que antes de la sesión educativa el 17% de comuneros tenían conocimiento deficiente y el 64% regular, después de realizar la sesión educativa el 97 % obtuvieron conocimiento bueno y el 3% regular. Por tanto la sesión educativa es efectiva para mejorar el conocimiento, desde un nivel deficiente a bueno entonces se confirma la hipótesis planteada, corroborada con el análisis estadístico al obtener la prueba Zc = -16.80 < Zt = -1.96 para un nivel de confianza del 95% y un nivel de significancia de α=0.05\"\n\nLet's evaluate each dimension.\n\nD1_imryd_objetivo: The summary explicitly states objective: \"con el objetivo de determinar la efectividad de la sesión educativa en el conocimiento sobre primeros auxilios en accidentes más frecuentes en los comuneros de Lluco, Coata-2016\". So yes: 1.\n\nD1_imryd_metodologia: It states design: pre-experimental pre test/post test with single group, population 188, sample 75, technique used was survey, instrument questionnaire applied at two moments, validated, reliability method. So yes, 1.\n\nD1_imryd_resultados: The summary states results: before session 17% deficient, 64% regular; after 97% good and 3% regular. That's concrete. So yes: 1.\n\nD1_imryd_conclusiones: It says \"Por tanto la sesión educativa es efectiva para mejorar el conocimiento, desde un nivel deficiente a bueno entonces se confirma la hipótesis planteada, corroborada con el análisis estadístico ...\". That is a conclusion that interprets results: yes, 1. It is not just repeating results. So 1.\n\nD1_orden_logico: The order: The summary starts with objective, then design, methods, results, conclusion. That's correct sequence. So 1.\n\nD2_coherencia: Let's examine coherence. The summary flows logically. It begins objective, design, population, sample, technique, instrument, reliability, results before and after, conclusion. No major jumps. Might be 5. But check for minor issues: \"La investigación se realizó con el objetivo ... fue de tipo pre- experimental con diseño pre test y post test con un solo grupo;\" That sentence mixes objective and method. But overall coherent. No contradictory. I'd give 5. But maybe 4 due to a slight abruptness: \"la técnica que se utilizó fue la encuesta , el instrumento fue el cuestionario que se aplicó en dos momentos antes y después de la sesión educativa, validado a través de juicio de expertos, para la confiabilidad del instrumento se utilizó el método de Alfa de Cronbanch obteniéndose 80% de confiabilidad\". That is long but still coherent. I'd give 5.\n\nD3_contextualizacion: The summary does not provide context of why this study is important. It jumps to objective. So D3_contextualizacion: 0.\n\nD3_metodo_detallado: At least two precise details: design (pre test/post test, single group), sample size 75, population 188, technique (survey), instrument (questionnaire). That is more than two. So 1.\n\nD3_resultados_concretos: Results with percentages. 1.\n\nD3_conclusion_responde: Conclusion responds to objective: yes, 1.\n\nD4_consistencia: Evaluate consistency: It says \"La investigación se realizó con el objetivo de determinar la efectividad ... fue de tipo pre- experimental ... resultados demuestran ... la sesión educativa es efectiva ... confirma la hipótesis ... corroborada con la prueba Zc = -16.80 ...\". The results show improvement from 17% deficient to 97% good. The conclusion says session is effective. That matches results. The hypothesis that the session is effective is confirmed. So consistency 5. But check for possible mismatch: They present a statistical test: Zc = -16.80 < Zt = -1.96. That indicates significance. That supports conclusion. No contradiction. So 5.\n\nno_evaluable: This is a valid summary, so 0.\n\nobservaciones: We need to record any observations. Maybe note the mixture of objective and methodology in first sentence, but not necessary. We could note that the summary includes objective and method in same sentence but still coherent.\n\nReturn JSON with these values.\n\nMake sure to use compact JSON.\n\nLet's craft JSON:\n\n{\n\"D1_imryd_objetivo\":1,\n\"D1_imryd_metodologia\":1,\n\"D1_imryd_resultados\":1,\n\"D1_imryd_conclusiones\":1,\n\"D1_orden_logico\":1,\n\"D2_coherencia\":5,\n\"D3_contextualizacion\":0,\n\"D3_metodo_detallado\":1,\n\"D3_resultados_concretos\":1,\n\"D3_conclusion_responde\":1,\n\"D4_consistencia\":5,\n\"no_evaluable\":0,\n\"observaciones\":\"The objective and methodology are combined in the first sentence, but overall flow is coherent.\"\n}\n\nCheck field types: all integers or null allowed. Observations string.\n\nReturn."
+    }
+   }
+  ],
+  "created": 1789775740,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_9b8528b477",
+  "usage": {
+   "completion_tokens": 1472,
+   "prompt_tokens": 9946,
+   "total_tokens": 11418,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1330,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.238660136,
+   "prompt_time": 0.057853964,
+   "completion_time": 1.522223721,
+   "total_time": 1.580077685
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vf4xb8e8jteqcbpj299vgc",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:55:40.459075+00:00"
+}

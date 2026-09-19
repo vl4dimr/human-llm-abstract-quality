@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-094",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": null,
+  "no_evaluable": 1,
+  "observaciones": "Resumen no presenta metodología, resultados ni conclusión, por lo que no se puede evaluar la consistencia. El documento describe la función docente y sus procesos sin plantear un problema de investigación ni un marco metodológico."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":0,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"Resumen no presenta metodología, resultados ni conclusión, por lo que no se puede evaluar la consistencia. El documento describe la función docente y sus procesos sin plantear un problema de investigación ni un marco metodológico.\"}",
+ "usage": {
+  "input_tokens": 9768,
+  "output_tokens": 1393,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.4684255123138428,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:27:04.057829+00:00",
+ "raw": {
+  "id": "chatcmpl-812b3e4a-c9e7-464b-9bea-d5177679178d",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":0,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"Resumen no presenta metodología, resultados ni conclusión, por lo que no se puede evaluar la consistencia. El documento describe la función docente y sus procesos sin plantear un problema de investigación ni un marco metodológico.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We have to annotate. The summary is given. We need to fill all fields per schema. Need to evaluate each field.\n\nLet's read summary:\n\nTitle: \"Informe de suficiencia profesional del área de Arte de una Institución Educativa Secundaria Estatal del distrito de Juli-Puno\"\n\nResumen: \n\"La función docente se caracteriza por ser una labor de carácter profesional que implica la realización directa de los procesos sistemáticos de enseñanza-aprendizaje. Estos procesos abarcan el diagnóstico, la planificación, la ejecución y la evaluación, así como otras actividades educativas. El objetivo principal de esta función es contribuir de manera efectiva en la formación integral de los estudiantes, atendiendo todas las dimensiones de su desarrollo humano. Para lograrlo, el docente debe desempeñarse con ética profesional, honestidad, justicia, responsabilidad y respeto hacia los derechos de las personas, así como mantener un compromiso social como agente fundamental de la educación.\"\n\nWe need to determine each field:\n\nD1_imryd_objetivo: Does the summary provide what was proposed to investigate? The objective: \"El objetivo principal de esta función es contribuir de manera efectiva en la formación integral de los estudiantes, atendiendo todas las dimensiones de su desarrollo humano.\" That's an objective. Yes, it's explicit. So value 1.\n\nD1_imryd_metodologia: Does it describe how the knowledge was obtained? No mention of methods, design, sample, etc. It's about the teacher role, processes. It's not a research study. There's no methodology. So 0.\n\nD1_imryd_resultados: Does it communicate what was found? It doesn't present findings. So 0.\n\nD1_imryd_conclusiones: Is there a closing that interprets or responds to objective? No conclusion beyond description. So 0.\n\nD1_orden_logico: There are 5 components: objective, method, results, conclusions. Since we have objective but not method/results/conclusion. With 0 or 1 component present, order = 0. As rule: If 0 or 1 components present, D1_orden_logico = 0 automatically. So 0.\n\nD2_coherencia: Evaluate flow of text. The summary is coherent. It flows from definition of teacher function, processes, objective, how to achieve, ethical aspects. It's cohesive, logical. Should assign high coherence. Probably 5? Let's analyze: There is a single paragraph, no abrupt jumps. There's a good progression: function description -> processes -> objective -> how to achieve -> ethics. It's well structured, no contradictions. So 5.\n\nD3_contextualizacion: Does the summary situate the problem? It provides context: \"función docente ... en la formación integral de los estudiantes\" It's about teacher role, not research problem. It sets context: the role of teachers. It says \"La función docente ...\". But is that contextualization? According to definition, context: why important, where occurs, to whom it affects, against a norm. It gives that teacher function contributes to students' integral formation. It sets context but not explicitly problem. We might consider that it's situating: yes it indicates the importance of teaching function. I think it's present, so 1.\n\nHowever, D3_contextualizacion is defined as: summary situates problem: why important, where occurs, to whom affects, against norm. The summary says the function is part of professional labor, but doesn't talk about a problem or a gap. It's not a research problem. It's more a description. So maybe 0? But it's context: \"La función docente se caracteriza por ser una labor de carácter profesional...\" That is context. But context is about the problem? The summary is not presenting a problem but a description of a professional role. The protocol says \"sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco se contrasta.\" The summary does not mention a problem, nor a normative framework. So maybe 0.\n\nGiven the example B earlier, they set D3_contextualizacion = 0 because summary started directly with objective; no context. This summary also starts with a definition of function, but not a problem. Might be considered context? Let's lean 0.\n\nD3_metodo_detallado: No methodology. 0.\n\nD3_resultados_concretos: No results. 0.\n\nD3_conclusion_responde: No conclusion. 0.\n\nD4_consistencia: Since no methodology, D4 is not evaluable. The protocol says: If the summary does not declare any methodology, D4 cannot be evaluated. Mark no_evaluable = 1 and leave D4 empty. So D4_consistencia should be null or omitted? In schema, D4_consistencia is required, but can be null. We should set to null. And no_evaluable = 1.\n\nObservations: Should note that it's not a research summary; lacks methodology, results, conclusion; maybe mention that it's a descriptive report.\n\nWe need to produce JSON object with all required fields. Ensure valid JSON. Use compact.\n\nLet's write:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":0,\n \"D1_imryd_resultados\":0,\n \"D1_imryd_conclusiones\":0,\n \"D1_orden_logico\":0,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":0,\n \"D3_resultados_concretos\":0,\n \"D3_conclusion_responde\":0,\n \"D4_consistencia\":null,\n \"no_evaluable\":1,\n \"observaciones\":\"Resumen no presenta metodología, resultados ni conclusión, por lo que no se puede evaluar la consistencia. El documento describe la función docente y sus procesos sin plantear un problema de investigación ni un marco metodológico.\"\n}\n\nCheck all fields present. Observations string. D4_consistencia null. Good. Ensure no extra fields. Good."
+    }
+   }
+  ],
+  "created": 1789702023,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_8b41efc9a3",
+  "usage": {
+   "completion_tokens": 1393,
+   "prompt_tokens": 9768,
+   "total_tokens": 11161,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1227,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.202775941,
+   "prompt_time": 0.04568201,
+   "completion_time": 1.5928073440000001,
+   "total_time": 1.6384893539999998
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8v8wkeberdvzc2tmy4q2h",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:27:04.057911+00:00"
+}

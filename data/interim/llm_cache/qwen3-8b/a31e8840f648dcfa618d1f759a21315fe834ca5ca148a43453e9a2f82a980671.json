@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-014",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta los cuatro componentes canónicos en orden. La coherencia es 3 debido a que el texto tiene una progresión general, pero hay saltos de tema y repeticiones. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar los hábitos de lectura. El método detallado es 1 porque se menciona el diseño descriptivo y el instrumento utilizado (cuestionario). Los resultados son concretos porque se menciona el 40% de los estudiantes que leen a menudo. La conclusión responde al objetivo porque afirma que los hábitos de lectura son buenos. La consistencia metodológica es 3 porque la conclusión afirma que los hábitos son buenos, pero los resultados no proporcionan evidencia suficiente para apoyar esa afirmación."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta los cuatro componentes canónicos en orden. La coherencia es 3 debido a que el texto tiene una progresión general, pero hay saltos de tema y repeticiones. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar los hábitos de lectura. El método detallado es 1 porque se menciona el diseño descriptivo y el instrumento utilizado (cuestionario). Los resultados son concretos porque se menciona el 40% de los estudiantes que leen a menudo. La conclusión responde al objetivo porque afirma que los hábitos de lectura son buenos. La consistencia metodológica es 3 porque la conclusión afirma que los hábitos son buenos, pero los resultados no proporcionan evidencia suficiente para apoyar esa afirmación.\"\n}",
+ "usage": {
+  "input_tokens": 10769,
+  "output_tokens": 348,
+  "total_duration_s": 10.4634102
+ },
+ "latency_s": 10.491517305374146,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:27:02.733836+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:27:02.7245316Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta los cuatro componentes canónicos en orden. La coherencia es 3 debido a que el texto tiene una progresión general, pero hay saltos de tema y repeticiones. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin explicar por qué es importante estudiar los hábitos de lectura. El método detallado es 1 porque se menciona el diseño descriptivo y el instrumento utilizado (cuestionario). Los resultados son concretos porque se menciona el 40% de los estudiantes que leen a menudo. La conclusión responde al objetivo porque afirma que los hábitos de lectura son buenos. La consistencia metodológica es 3 porque la conclusión afirma que los hábitos son buenos, pero los resultados no proporcionan evidencia suficiente para apoyar esa afirmación.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10463410200,
+  "load_duration": 4341200,
+  "prompt_eval_count": 10769,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 247273000,
+  "eval_count": 348,
+  "eval_duration": 10155606000
+ },
+ "cached_at_utc": "2026-09-19T01:27:02.733848+00:00"
+}

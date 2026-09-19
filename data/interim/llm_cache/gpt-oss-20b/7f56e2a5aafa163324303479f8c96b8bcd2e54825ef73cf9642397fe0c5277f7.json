@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-036",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Se incluye una breve observación inicial antes de declarar el objetivo; el resumen no ofrece contextualización explícita sobre la importancia o repercusión de la relación estudiada."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Se incluye una breve observación inicial antes de declarar el objetivo; el resumen no ofrece contextualización explícita sobre la importancia o repercusión de la relación estudiada.\"}",
+ "usage": {
+  "input_tokens": 10016,
+  "output_tokens": 1865
+ },
+ "latency_s": 3.2164382934570312,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:18:46.048086+00:00",
+ "raw": {
+  "id": "chatcmpl-cc104cc8-9582-403f-b491-8247f4b6a5e6",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Se incluye una breve observación inicial antes de declarar el objetivo; el resumen no ofrece contextualización explícita sobre la importancia o repercusión de la relación estudiada.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. Need to fill all required fields.\n\nLet's parse:\n\nSummary:\n\n\"Durante desarrollo de la práctica preprofesional del semestre 2021 - II, se observó que los estudiantes mostraban más atención a las notificaciones que recibían en sus celulares, además se observó que los estudiantes interactuaban mediante las plataformas de las redes sociales estando en el mismo salón, a raíz de este comportamiento, el objetivo de la investigación fue establecer la relación que existe entre la adicción a redes sociales y hábitos de estudio en estudiantes de cuarto y quinto grado de la Institución Educativa Secundaria Pedro Vilcapaza Alarcón de Azángaro en el año 2022. El estudio corresponde al enfoque cuantitativo, diseño no experimental de corte transversal y de tipo correlacional, la muestra se obtuvo por muestreo no probabilístico que estuvo conformado por 330 estudiantes, como técnicas de investigación se utilizó la encuesta para ambas variables, los instrumentos aplicados fueron el cuestionario de adicción a redes sociales propuesto por Escurra y Salas y el inventario de hábitos de estudio CASM-85 de Vicuña Peri. Los datos de las dos variables se sometieron a la prueba estadística no paramétrica Rho de Spearman, con el 95% de confiabilidad y una significancia de p < 0,05. Como resultado se obtuvo el coeficiente de correlación rs = 0,298 y p = 0,000 además el 32% de estudiantes se conectan entre tres a seis veces por día, en conclusión, existe una correlación positiva débil entre adicción a redes sociales y hábitos de estudio. Dicho de otra forma, los estudiantes utilizan las redes sociales pero el nivel de adicción es bajo por tanto no interfiere en los hábitos de estudio de los estudiantes.\"\n\nNow apply each dimension:\n\nDimension 1 — Adherencia a IMRyD:\n\nD1_imryd_objetivo: objective present? Yes: \"el objetivo de la investigación fue establecer la relación que existe entre la adicción a redes sociales y hábitos de estudio...\" So 1.\n\nD1_imryd_metodologia: method described? Yes: \"El estudio corresponde al enfoque cuantitativo, diseño no experimental de corte transversal y de tipo correlacional, la muestra se obtuvo por muestreo no probabilístico que estuvo conformado por 330 estudiantes, ... se utilizó la encuesta ... los instrumentos... Los datos ... se sometieron a la prueba estadística no paramétrica Rho de Spearman\". That is at least one precise indication. So 1.\n\nD1_imryd_resultados: results: \"Como resultado se obtuvo el coeficiente de correlación rs = 0,298 y p = 0,000 además el 32% de estudiantes se conectan entre tres a seis veces por día\". Contains numbers. So 1.\n\nD1_imryd_conclusiones: \"en conclusión, existe una correlación positiva débil entre adicción a redes sociales y hábitos de estudio. Dicho de otra forma, ... no interfiere...\". This is more than repetition, gives interpretation: conclusion that correlation weak, and that does not interfere. So 1.\n\nD1_orden_logico: components present in order objective -> method -> results -> conclusion. The summary starts with observation, but the objective is stated after some preface. Sequence: introduction of observations, objective, method, results, conclusion. That is acceptable; objective before method, method before results, results before conclusion. So 1.\n\nDimension 2 — Coherencia organizacional: need to rate 1 to 5.\n\nLet's assess flow. The summary starts with context/observations, then objective, then method, then results, then conclusion. Transition may be abrupt at start: \"Durante desarrollo de la práctica preprofesional... a raíz de este comportamiento, el objetivo de la investigación fue establecer la relación...\" That seems okay. No major jumps. Maybe some adjetivization? Not much. Probably 5? Let's think: They have a narrative that flows; but there is a long sentence with many clauses: but still coherent. No contradictory or abrupt. I think 5.\n\nHowever, they mention \"como resultado se obtuvo el coeficiente de correlación rs = 0,298 y p = 0,000 además el 32% de estudiantes se conectan...\" That sentence is long but still coherent. There's no repetition or contradictory statements. So I'd assign 5.\n\nBut we should double-check: \"Dicho de otra forma, los estudiantes utilizan las redes sociales pero el nivel de adicción es bajo por tanto no interfiere en los hábitos de estudio de los estudiantes.\" This is a conclusion. It's consistent. So 5.\n\nDimension 3 — Completitud de componentes:\n\nD3_contextualizacion: Does summary situate problem? It starts with observation in practice, then objective. It does not explain why this matters or what it could affect. It mentions that students were observed to pay more attention to notifications and interact with platforms while in class. But doesn't state why it's important or who it affects. It's more like observational description. There's no explicit importance. So 0.\n\nD3_metodo_detallado: At least two precisions: design (no experimental, transversal, correlational), sample size 330, sampling method non-prob, instruments used: questionnaire, inventory, test used Spearman. That's multiple precisions (design, n, sampling, instrument, test). So 1.\n\nD3_resultados_concretos: Contains rs = 0,298, p = 0,000 and 32% of students connect 3-6 times per day. That's concrete. So 1.\n\nD3_conclusion_responde: conclusion states correlation, and that does not interfere with study habits. This addresses objective: yes. So 1.\n\nDimension 4 — Consistencia metodológica:\n\nNeed to evaluate coherence between what summary says was done and what presented. We have a quantitative correlational study. Results present correlation coefficient and p-value. That matches. The conclusion states correlation weak positive. No contradiction. So consistency high. D4_consistencia likely 5. But let's check if any issues: They mention Spearman correlation. They also mention \"p = 0,000\" which is contradictory: earlier they say \"con una significancia de p < 0,05\" then \"p = 0,000\" but that's fine; p<0.05. The conclusion says correlation is weak. But rs=0.298, which is indeed a weak correlation. So consistent.\n\nThus D4_consistencia = 5.\n\nNo_evaluable: 0 because it's a proper summary.\n\nObservaciones: Provide any notes. We might note that objective appears after some context, but that's fine. Also mention that no explicit context. But we can add observation about lack of contextualization.\n\nWe need all fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nAll values are integers or null. Provide as JSON. Let's fill.\n\nD1_imryd_objetivo: 1\nD1_imryd_metodologia: 1\nD1_imryd_resultados: 1\nD1_imryd_conclusiones: 1\nD1_orden_logico: 1\nD2_coherencia: 5\nD3_contextualizacion: 0\nD3_metodo_detallado: 1\nD3_resultados_concretos: 1\nD3_conclusion_responde: 1\nD4_consistencia: 5\nno_evaluable: 0\nobservaciones: maybe \"Resumen incluye observación inicial antes de objetivo; carece de contextualización explícita sobre importancia del estudio.\"\n\nLet's produce JSON compact.\n\nCheck schema: all fields required. Provide string for observaciones. Ensure integers. Use null if not applicable, but all have values. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789701525,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_5979a0e1b7",
+  "usage": {
+   "completion_tokens": 1865,
+   "prompt_tokens": 10016,
+   "total_tokens": 11881,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1706,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.20460314,
+   "prompt_time": 0.500664836,
+   "completion_time": 1.889416805,
+   "total_time": 2.390081641
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8c1tbed7rwyfadjnb1apf",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:18:46.048165+00:00"
+}

@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-077",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen narrativo sin encabezados; cumple función de cada componente; buena coherencia estructural."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen narrativo sin encabezados; cumple función de cada componente; buena coherencia estructural.\"}",
+ "usage": {
+  "input_tokens": 9992,
+  "output_tokens": 1087,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 1.7332422733306885,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:25:19.269622+00:00",
+ "raw": {
+  "id": "chatcmpl-723ae82e-45a2-4891-a79c-f66781f820d9",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen narrativo sin encabezados; cumple función de cada componente; buena coherencia estructural.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate according to protocol. Fields:\n\n- D1_imryd_objetivo\n- D1_imryd_metodologia\n- D1_imryd_resultados\n- D1_imryd_conclusiones\n- D1_orden_logico\n- D2_coherencia\n- D3_contextualizacion\n- D3_metodo_detallado\n- D3_resultados_concretos\n- D3_conclusion_responde\n- D4_consistencia\n- no_evaluable\n- observaciones\n\nWe must fill all with integer or null. Determine each.\n\nFirst read summary: It starts \"La presente investigación tiene como propósito comprender...\" That is objective present. D1_imryd_objetivo = 1.\n\nMethodology: \"La metodología utilizada es de carácter cualitativo, desde la perspectiva fenomenológica, utilizando la entrevista como técnica de recolección de información para cuyo análisis se elaboró redes hermenéuticas. El procesamiento y análisis de datos se realizaron a través del software Atlas ti. El método que se ha diseñado es de tipo analítico-interpretativo que se asocia.\" There are details: design, sampling, sample size, software, technique. So D1_metodologia = 1. Also D3_metodo_detallado: need at least two precisions. We have: design qualitative phenomenological, technique interview, software Atlas ti, sample size 26 (intended). That is at least 2, so D3_metodo_detallado=1.\n\nResults: \"Los resultados señalan que las opiniones de la mayoría de los participantes son aceptables...\" The results mention acceptance of benefits, plus infrastructure benefits. They include numeric: incentive 37 nuevos soles per day. That is a concrete result. So D1_resultados = 1. D3_resultados_concretos: Yes, includes numeric. So = 1.\n\nConclusion: \"Finalmente, las expectativas que tienen sobre los beneficios son esperanzadoras porque se espera que el programa siga ejecutando más obras y que genere más empleo temporal.\" This is a conclusion that is not just restating results. It's interpreting. So D1_conclusiones = 1. D3_conclusion_responde: does conclusion respond to objective? Objective: understand social representations of participants about benefits. Conclusion says expectations are hopeful. It's a response to what participants think about benefits: yes, it's consistent. So D3_conclusion_responde = 1.\n\nOrder: objective, method, results, conclusion. Sequence: starts with objective, then methodology, then results, then conclusion. No other components. So D1_orden_logico = 1.\n\nCoherence (D2_coherencia): Need 1-5. Evaluate flow: The summary flows logically: objective, methodology, sample, results, conclusion. Some repetition? It repeats \"Las actitudes\" and \"expectativas\". No abrupt jumps. I would rate 4 or 5. Check for transitions: uses \"por otro lado\" maybe a slight shift. I'd give 4. Might be 5 if it's smooth. There's no glaring incoherence. I lean 5? The text is coherent, but a little wordy, but no contradictions. I'd give 5.\n\nContextualization (D3_contextualizacion): Does summary situate problem? It mentions district of Ocuviri and Pusi, and program Trabaja Perú. It also describes that it's a program. It explains what the program offers. So yes, it situates: problem: lack of employment, benefits. So D3_contextualizacion = 1.\n\nConsistency (D4_consistencia): Check for contradictions. They say: \"Los resultados señalan que las opiniones de la mayoría de los participantes son aceptables...\" and \"Las actitudes son favorables\" etc. Conclusion: expects more. No contradictions. They mention \"El método que se ha diseñado es de tipo analítico-interpretativo que se asocia.\" That's consistent. No mention of any conflicting results. So D4_consistencia = 5.\n\nno_evaluable: Since it's a summary, and contains methodology, so not null. So no_evaluable = 0.\n\nobservaciones: Provide any notes. Could mention that summary is narrative but functional, no headers. Also mention maybe \"The summary uses 'por otro lado' to transition\" but that's fine. Let's provide a short note: \"Resumen narrativo, sin encabezados; buena coherencia; se cumple función de cada componente.\" We'll keep it brief.\n\nReturn JSON with all fields. Ensure null values if missing but all are filled. All values integers. Provide compact JSON."
+    }
+   }
+  ],
+  "created": 1789701919,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_d6de37e6be",
+  "usage": {
+   "completion_tokens": 1087,
+   "prompt_tokens": 9992,
+   "total_tokens": 11079,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 943,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.284646923,
+   "prompt_time": 0.056837353,
+   "completion_time": 1.109294073,
+   "total_time": 1.166131426
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8r2xne8h8bc5qd9mkqtap",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:25:19.269643+00:00"
+}

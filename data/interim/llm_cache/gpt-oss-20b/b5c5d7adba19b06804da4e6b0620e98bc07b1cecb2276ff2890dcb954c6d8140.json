@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-090",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Repetitive but coherent; no contextualization of problem."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Repetitive but coherent; no contextualization of problem.\"}",
+ "usage": {
+  "input_tokens": 9987,
+  "output_tokens": 1546,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.8170511722564697,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:06:14.384397+00:00",
+ "raw": {
+  "id": "chatcmpl-dd656bb6-31d9-4c25-876e-095745073b2d",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Repetitive but coherent; no contextualization of problem.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"El síndrome de burnout y su relación con el desempeño laboral en los trabajadores de la clínica Good Hope, año 2021\"\n\nResumen:\n\n\"La presente investigación tuvo como objetivo determinar la relación que existe entre el síndrome de burnout con el desempeño laboral en los trabajadores de la clínica Good Hope, año 2022. El tipo de investigación fue de enfoque cuantitativo, descriptivo, correlacional, porque las variables fueron susceptibles de cuantificación; además, se buscaron los resultados mediante las mediciones estadísticas. El propósito de las investigaciones de enfoques cuantitativos y correlacional es evaluar la relación que existe entre dos variables, además, el análisis descriptivo se realizó para conocer el comportamiento de los datos, respecto al síndrome burnout y desempeño laboral. El diseño de la investigación fue no experimental, correlacional, los estudios no experimentales se realizan sin la manipulación deliberada de las variables, en las cuales solo se observan los fenómenos en su ambiente natural para después analizarlos. El objeto fue establecer relaciones conjuntas entre las variables que caracterizan el fenómeno de estudio, y de corte transversal con relación al tiempo, ya que se recolectó información aplicando el instrumento en un momento único, la muestra con la que se trabajó fue de 300 trabajadores, así mismo, se tuvo instrumentos de recolección tanto para el síndrome de burnout como para desempeño laboral, bajo un muestreo a conveniencia del autor. Se concluyó que existe correlación entre la variable síndrome de burnout y el desempeño laboral, la cual se muestra con una asociación aceptable, directa y significativa (Rho = 0.461), la que indica que mientras la institución mantenga niveles aceptables de burnout, el desempeño laboral será satisfactorio, pues al indicarse una relación significa que ambas variables tienen una variabilidad de acuerdo a cómo se comporten.\"\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 1 if objective present. Yes: \"tuvo como objetivo determinar la relación que existe entre el síndrome de burnout con el desempeño laboral\". So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. Yes: \"El tipo de investigación fue de enfoque cuantitativo, descriptivo, correlacional... El diseño de la investigación fue no experimental, correlacional... la muestra con la que se trabajó fue de 300 trabajadores... instrumentos de recolección... muestreo a conveniencia.\" So 1.\n\n- D1_imryd_resultados: 1 if results present. Yes: \"Se concluyó que existe correlación... (Rho = 0.461)\". So 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. Yes: \"Se concluyó que existe correlación... la que indica que mientras la institución mantenga niveles aceptables de burnout, el desempeño laboral será satisfactorio\". So 1.\n\n- D1_orden_logico: 1 if components present in logical order. The order: objective, methodology, results, conclusion. Yes. So 1.\n\n- D2_coherencia: scale 1-5. Evaluate flow. Let's read: The summary is somewhat repetitive but flows. It starts with objective, then methodology, then design, then sample, then conclusion. There's some repetition: \"El tipo de investigación fue de enfoque cuantitativo, descriptivo, correlacional, porque las variables fueron susceptibles de cuantificación; además, se buscaron los resultados mediante las mediciones estadísticas.\" Then \"El propósito de las investigaciones de enfoques cuantitativos y correlacional es evaluar la relación que existe entre dos variables, además, el análisis descriptivo se realizó para conocer el comportamiento de los datos, respecto al síndrome burnout y desempeño laboral.\" That is somewhat redundant but still coherent. There's no major jump. I'd rate 4 maybe. Let's think: 5 would be impeccable, 4 is good with minor aspereza. There's some repetition but not major. So D2_coherencia = 4.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where, to whom, etc. The summary does not mention why it's important, or context beyond the clinic. It just states objective. So 0.\n\n- D3_metodo_detallado: 1 if at least two precisions. We have: \"tipo de investigación: enfoque cuantitativo, descriptivo, correlacional\", \"diseño: no experimental, correlacional\", \"muestra: 300 trabajadores\", \"instrumentos de recolección\", \"muestreo a conveniencia\". That's more than two. So 1.\n\n- D3_resultados_concretos: 1 if results provide specific content: yes, Rho = 0.461. So 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to objective. Yes, conclusion states correlation between burnout and performance. So 1.\n\n- D4_consistencia: scale 1-5. Consistency between what is said and what is presented. Let's check: They say \"El tipo de investigación fue de enfoque cuantitativo, descriptivo, correlacional... El propósito de las investigaciones de enfoques cuantitativos y correlacional es evaluar la relación que existe entre dos variables... El diseño de la investigación fue no experimental, correlacional... la muestra con la que se trabajó fue de 300 trabajadores... se tuvo instrumentos de recolección... bajo un muestreo a conveniencia.\" Then results: correlation Rho=0.461. Conclusion: correlation indicates that if burnout levels acceptable, performance satisfactory. That is consistent. No contradictions. So D4_consistencia = 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes. We can note that the summary is somewhat repetitive but coherent. Also mention that no contextualization. So we can write: \"Repetitive but coherent; lacks contextualization.\" But we need to keep it concise. Let's write: \"Repetitive but coherent; no contextualization of problem.\" That is fine.\n\nNow produce JSON with all fields. Ensure all required fields present. Use compact JSON. Let's produce.\n\nCheck schema: all fields must be present. They are:\n\nD1_imryd_objetivo\nD1_imryd_metodologia\nD1_imryd_resultados\nD1_imryd_conclusiones\nD1_orden_logico\nD2_coherencia\nD3_contextualizacion\nD3_metodo_detallado\nD3_resultados_concretos\nD3_conclusion_responde\nD4_consistencia\nno_evaluable\nobservaciones\n\nAll are present. Provide integer values or null. All are integers. Observaciones string.\n\nLet's produce JSON."
+    }
+   }
+  ],
+  "created": 1789700773,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4a35f7bd1b",
+  "usage": {
+   "completion_tokens": 1546,
+   "prompt_tokens": 9987,
+   "total_tokens": 11533,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1409,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.192262626,
+   "prompt_time": 0.061516577,
+   "completion_time": 1.60573737,
+   "total_time": 1.6672539469999998
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7n48verh8fwnenwrj5pva",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:06:14.384517+00:00"
+}

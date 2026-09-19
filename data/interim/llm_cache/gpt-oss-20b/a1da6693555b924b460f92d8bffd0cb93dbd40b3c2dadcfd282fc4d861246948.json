@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-061",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen presenta redundancia en la conclusión, pero mantiene coherencia lógica. Se menciona una muestra “probabilística aleatoria simple por conveniencia”, una contradicción terminológica que no afecta la consistencia entre metodología y resultados."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta redundancia en la conclusión, pero mantiene coherencia lógica. Se menciona una muestra “probabilística aleatoria simple por conveniencia”, una contradicción terminológica que no afecta la consistencia entre metodología y resultados.\"}",
+ "usage": {
+  "input_tokens": 9984,
+  "output_tokens": 1392
+ },
+ "latency_s": 2.477097988128662,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:02:44.679086+00:00",
+ "raw": {
+  "id": "chatcmpl-f20aa14b-24bf-4048-8ed5-88e822059f71",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta redundancia en la conclusión, pero mantiene coherencia lógica. Se menciona una muestra “probabilística aleatoria simple por conveniencia”, una contradicción terminológica que no afecta la consistencia entre metodología y resultados.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate according to protocol. Let's parse the summary.\n\nTitle: \"La dinámica familiar en el comportamiento de los estudiantes de la Institución Educativa Secundaria Glorioso San Carlos de Puno - 2021\"\n\nResumen:\n\n\"La investigación denominada la dinámica familiar en el comportamiento de los estudiantes de la Institución Educativa Secundaria Glorioso San Carlos de Puno – 2021; tuvo como objetivo general determinar la relación entre la dinámica familiar con el comportamiento de los estudiantes de la Institución Educativa Secundaria. La hipótesis plateada fue que existe relación significativa entre la dinámica familiar con el comportamiento de los estudiantes de la Institución Educativa Secundaria. El estudio corresponde al tipo de investigación básica teórica y el alcance correlacional, el método es hipotético deductivo bajo el enfoque cuantitativo, el diseño de estudio es no experimental de corte transversal. Utilizando una muestra probabilística aleatorio simple por conveniencia representado por 221 estudiantes del tercero, cuarto y quinto año de secundaria, la información se recolecto mediante un cuestionario. Concluyendo que existe relación significativa entre la dinámica familiar y el comportamiento de los estudiantes de la I.E.S. Glorioso Nacional San Carlos de Puno. Revelando resultados significativos que tienen importantes implicaciones para comprender la interacción entre el entorno familiar y las conductas estudiantiles, el valor de chi-cuadrado obtenido 0.012 con 6 grados de libertad y un nivel de significancia bilateral de 0,016, lo que evidencia estadísticamente y refuerza la validez de la hipótesis alterna. Se respalda que la dinámica familiar tiene relación sustancial en el comportamiento de los estudiantes, la cual está relacionada con la estructura de la familia, la comunicación y el cumplimiento de la función educadora los cuales determinan la práctica de un comportamiento asertivo.\"\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 1 if objective present. Yes: \"tuvo como objetivo general determinar la relación entre la dinámica familiar con el comportamiento de los estudiantes\". So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. Yes: \"el método es hipotético deductivo bajo el enfoque cuantitativo, el diseño de estudio es no experimental de corte transversal. Utilizando una muestra probabilística aleatorio simple por conveniencia representado por 221 estudiantes ... la información se recolecto mediante un cuestionario.\" So 1.\n\n- D1_imryd_resultados: 1 if results present. Yes: \"Concluyendo que existe relación significativa ... Revelando resultados significativos ... el valor de chi-cuadrado obtenido 0.012 con 6 grados de libertad y un nivel de significancia bilateral de 0,016\". So 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. Yes: \"Concluyendo que existe relación significativa ... Se respalda que la dinámica familiar tiene relación sustancial ...\". So 1.\n\n- D1_orden_logico: 1 if components present in logical order. Sequence: objective, methodology, results, conclusion. Yes. So 1.\n\n- D2_coherencia: scale 1-5. Evaluate flow. Let's read: The summary is somewhat repetitive, but overall flows: objective, hypothesis, method, sample, results, conclusion. There is some repetition: \"Concluyendo que existe relación significativa...\" appears twice. Also \"Revelando resultados significativos...\" and \"Se respalda que la dinámica familiar tiene relación sustancial\". The flow is okay but some redundancy. I'd rate maybe 4. Because it's coherent, but some repetition and maybe abrupt shift from results to conclusion. I'd choose 4.\n\n- D3_contextualizacion: 1 if summary situates problem: why important, where, who affected. The summary starts with objective but does not explain why it's important. It doesn't mention context beyond the school. It doesn't explain why dynamic family matters. So 0.\n\n- D3_metodo_detallado: 1 if at least two precisions. We have: \"el método es hipotético deductivo bajo el enfoque cuantitativo\" (1), \"el diseño de estudio es no experimental de corte transversal\" (2), \"muestra probabilística aleatorio simple por conveniencia representado por 221 estudiantes\" (3), \"información se recolecto mediante un cuestionario\" (4). So definitely 1.\n\n- D3_resultados_concretos: 1 if results provide specific content: chi-square value 0.012, df 6, significance 0.016. That's concrete. So 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to objective. Yes: conclusion states relationship significance. So 1.\n\n- D4_consistencia: scale 1-5. Consistency between what is said and what is presented. Let's check: They say hypothesis: relationship significant. They present chi-square 0.012, df 6, p=0.016. That indicates significance. They conclude relationship significant. That matches. No contradictions. So consistency high. I'd rate 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes. We can note that the summary repeats conclusion twice, but still coherent. Also mention that the hypothesis is stated but not used in results? Actually they mention hypothesis but results support it. So no issue. We can note that the summary is somewhat repetitive but still coherent. Also mention that the sample is convenience but they say probabilistic simple by convenience? That's contradictory but not a major issue. But we can note that the sample description is contradictory: \"muestra probabilística aleatorio simple por conveniencia\" - that is contradictory but not a major consistency issue. We can note that.\n\nLet's produce JSON with all fields.\n\nCheck schema: all required fields present. Observations string.\n\nLet's produce compact JSON."
+    }
+   }
+  ],
+  "created": 1789700564,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_8b41efc9a3",
+  "usage": {
+   "completion_tokens": 1392,
+   "prompt_tokens": 9984,
+   "total_tokens": 11376,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1221,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.210360336,
+   "prompt_time": 0.49810331,
+   "completion_time": 1.493269943,
+   "total_time": 1.991373253
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7eqbbev6vk9vap2wj5cpe",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:02:44.679103+00:00"
+}

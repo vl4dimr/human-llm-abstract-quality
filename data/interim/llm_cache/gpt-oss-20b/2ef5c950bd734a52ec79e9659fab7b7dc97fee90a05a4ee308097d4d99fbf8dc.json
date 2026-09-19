@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-107",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 9946,
+  "output_tokens": 1817,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.377669334411621,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:39:51.597828+00:00",
+ "raw": {
+  "id": "chatcmpl-4f372de4-d6d6-4705-b121-4fc8960d7c42",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate according to protocol. We must produce JSON with fields as specified. Must fill all fields.\n\nWe need to evaluate each dimension.\n\nLet's analyze summary:\n\nTitle: \"Compromiso organizacional, satisfacción laboral y deserción laboral en los profesionales de Educación de las Asociaciones Educativas Adventistas del Perú, 2019\"\n\nResumo:\n\n- Objective: \"El estudio tuvo como objetivo determinar en qué medida el compromiso organizacional predice la satisfacción laboral y la deserción laboral de los profesionales de educación de las Asociaciones Educativas Adventistas del Perú.\" => objective present.\n\n- Methodology: \"El tipo de investigación es cuantitativa con un diseño no experimental-correlacional de corte transversal, se aplicó un estudio de regresión lineal simple para estimar el coeficiente de determinación (R2) entre las variables. La muestra estuvo conformada por 301 docentes que se obtuvo por conveniencia del investigador. Los instrumentos utilizados fueron: Cuestionario sobre compromiso organizacional, escala de satisfacción docente y cuestionario para medir la deserción laboral, que presentan validez de constructo y confiabilidad por consistencia interna.\" => includes design, sample size, method, instruments.\n\n- Results: \"Los resultados determinaron que existe correlación directa y alta entre el compromiso organizacional, la satisfacción laboral (Rho= 0,73) y la deserción laboral (Rho= -0,6) con un p-val < 0,05. Asimismo, el compromiso organizacional predice un 11% (R2) la satisfacción laboral con un coeficiente de regresión de 1,53 y el compromiso organizacional predice un 16% (R2) la deserción laboral con un coeficiente de regresión de 0.6, se concluye que el compromiso organizacional muestra una predicción baja tanto para satisfacción laboral y la deserción laboral.\" => results include correlation coefficients with values, R2 percentages, regression coefficients.\n\n- Conclusion: \"se concluye que el compromiso organizacional muestra una predicción baja tanto para satisfacción laboral y la deserción laboral.\" => conclusion. It repeats some of results but gives interpretation: \"predicción baja\".\n\nCheck D1 fields:\n\nD1_imryd_objetivo = 1 (objective present)\n\nD1_imryd_metodologia = 1 (method present; we have design, sample, instruments)\n\nD1_imryd_resultados = 1 (results present with actual data)\n\nD1_imryd_conclusiones = 1 (conclusion present, though maybe somewhat limited but still a conclusion)\n\nD1_orden_logico = 1 (objective → method → results → conclusion in correct order.)\n\nNow D2_coherencia: need to rate 1-5. Let's examine coherence flow.\n\nText: objective first. Then method, then results, then conclusion. It's a concise, logical flow. No major jumps. Might have some repeated phrasing, but seems coherent. I would rate 5? Let's evaluate typical descriptors: 5 = flawless progression. 4 = good with minor roughness. 3 = understandable but some difficulty. 2 = need re-reading. 1 = incoherent.\n\nThe summary is well-structured. I think 5 is appropriate. But check for any minor issues: It starts with objective, then method, results, conclusion. It's consistent. No abrupt changes, no missing transitions. I'd assign 5. But check that \"se concluye que el compromiso organizacional muestra una predicción baja tanto para satisfacción laboral y la deserción laboral.\" That conclusion is basically restating results but with a judgement. It's fine.\n\nThus D2_coherencia = 5.\n\nD3_contextualizacion: Does the summary situate the problem? It says \"en los profesionales de Educación de las Asociaciones Educativas Adventistas del Perú.\" The title and introduction mention that. But does it explain why it's important? It does not mention why the study is relevant or the problem's importance. It's more about the objective. According to D3_contextualizacion, value 1 when the summary situates the problem: why it matters, where occurs, to whom it affects, contrast with a norm or framework. The text does not provide that. It's just objective. So D3_contextualizacion = 0.\n\nD3_metodo_detallado: Need at least two precisions: design, sample, instrument, technique. We have design (non-experimental correlational cross-sectional), sample size (301), instruments (three specific scales). That is more than two. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: Provided correlation coefficients with values (Rho=0.73, Rho=-0.6), p-values, R2 percentages, regression coefficients. So yes, D3_resultados_concretos = 1.\n\nD3_conclusion_responde: The conclusion says \"se concluye que el compromiso organizacional muestra una predicción baja tanto para satisfacción laboral y la deserción laboral.\" This addresses the objective (predicting satisfaction and desertion). It is a conclusion that responds to the objective. So D3_conclusion_responde = 1.\n\nD4_consistencia: Consistency between methodology and results/conclusion. Check for contradictions. Method: regression line, R2, correlation. Results: correlation coefficients, R2, regression coefficients. Conclusion: says \"predicción baja\". The results say \"predice un 11% (R2) la satisfacción laboral\" and \"predice un 16% (R2) la deserción laboral\". Those percentages are low, but is that considered \"baja\"? Possibly yes. Conclusion says \"predicción baja\" which matches the low R2 percentages. There is no contradiction. Also no claims of causation beyond correlation, but they say \"predice\" but that's acceptable in correlational study? It's borderline: they use regression to \"predict\" but the design is correlational, no causal inference. The conclusion may be considered slightly overreaching: \"predicción baja\" is more descriptive. Not a causal claim. It's acceptable.\n\nLet's check D4_consistencia categories: 5 perfect; 4 minor inaccuracy; 3 a visible discord that doesn't invalidate; 2 multiple discordances; 1 contradiction that invalidates conclusion. There is no major contradiction. So D4_consistencia = 5? Wait, is there a potential mismatch: They used correlation and regression to predict, but they didn't provide p-values for regression coefficients; they provided correlation coefficients with significance but not for regression coefficients. That might be considered incomplete but not contradictory. The conclusion is consistent with results. There's no contradictory statement. So I would assign D4_consistencia = 5.\n\nBut check the \"predicción baja\" is a judgement that is consistent with the R2 values (11% and 16% are indeed low). So consistent.\n\nThus D4_consistencia = 5.\n\nNow no_evaluable = 0 (we can evaluate all fields; summary is a proper summary; no issues like non-summary.)\n\nObservaciones: any notes? Could note that conclusion is brief but fine. No special cases. Might mention that conclusion uses \"predicción baja\" though R2 values given earlier. Not necessary.\n\nBut we should provide some observation for potential issues? The instructions say use observations for doubts, cases limit, etc. There's no doubt. We could leave observations empty string \"\".\n\nNow produce JSON with all fields. All are required. All present.\n\nDouble-check: fields:\n\n- D1_imryd_conclusiones\n- D1_imryd_metodologia\n- D1_imryd_objetivo\n- D1_imryd_resultados\n- D1_orden_logico\n- D2_coherencia\n- D3_conclusion_responde\n- D3_contextualizacion\n- D3_metodo_detallado\n- D3_resultados_concretos\n- D4_consistencia\n- no_evaluable\n- observaciones\n\nAll values numeric (0,1) or 5 or null. Provide as integers. Observaciones string.\n\nSet no_evaluable: 0.\n\nObservaciones: empty string.\n\nLet's confirm no missing.\n\nNow produce JSON.\n\n"
+    }
+   }
+  ],
+  "created": 1789774791,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_2b688e7cc3",
+  "usage": {
+   "completion_tokens": 1817,
+   "prompt_tokens": 9946,
+   "total_tokens": 11763,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1691,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.148673927,
+   "prompt_time": 0.057941746,
+   "completion_time": 1.908126802,
+   "total_time": 1.966068548
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2ve7ydze40vrxr7sefs4cbb",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:39:51.597840+00:00"
+}

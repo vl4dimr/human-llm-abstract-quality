@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-024",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "El resumen repite el título al inicio, pero la secuencia objetivo‑metodología‑resultados‑conclusión sigue un flujo lógico. No hay contradicciones metodológicas, aunque no se especifica tamaño de muestra ni instrumento."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen repite el título al inicio, pero la secuencia objetivo‑metodología‑resultados‑conclusión sigue un flujo lógico. No hay contradicciones metodológicas, aunque no se especifica tamaño de muestra ni instrumento.\"}",
+ "usage": {
+  "input_tokens": 10102,
+  "output_tokens": 2356,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 3.1932735443115234,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:17:30.059359+00:00",
+ "raw": {
+  "id": "chatcmpl-1a97a8f5-e903-4462-b090-82a61a2d5989",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen repite el título al inicio, pero la secuencia objetivo‑metodología‑resultados‑conclusión sigue un flujo lógico. No hay contradicciones metodológicas, aunque no se especifica tamaño de muestra ni instrumento.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. We need to produce JSON with required fields. Must ensure all fields are present. The fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia (1-5), D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia (1-5), no_evaluable (0/1), observaciones.\n\nWe need to decide each value.\n\nWe analyze the summary. Let's examine each dimension:\n\n1. Adherencia IMRyD:\n\n- D1_imryd_objetivo: Does the summary contain objective? Yes: \"Teniendo como objetivo general: 'Evaluar la ejecución presupuestaria y su repercusión en el cumplimiento de metas presupuestarias ...'\". So yes: 1.\n\n- D1_imryd_metodologia: Does summary describe methodology? Contains: \"Se utilizó el diseño no experimental. El tipo de investigación utilizada es cuantitativa, ... nivel de investigación ... explicativo y descriptivo, se aplicó el método deductivo.\" So yes: 1.\n\n- D1_imryd_resultados: Does summary present results? Yes: \"Se concluyó que “El Presupuesto de Ingresos ... 88.76% ... 99.77% ... 79.28% ... 85.89% ...\". So yes: 1.\n\n- D1_imryd_conclusiones: Does it contain a conclusion that interprets results? The summary ends with a statement about results. The last sentence: \"con un indicador de eficacia de 0.96, mostrando para ambos periodos una calificación según indicadores de Regular, no logrando cumplir satisfactoriamente lo programado respecto al PIM.\" This seems to be conclusion: summarizing the findings. So yes: 1. There's no explicit \"conclusion\" heading, but functionally it's conclusion.\n\n- D1_orden_logico: Are components in logical order? Sequence: objective, methodology, results, conclusion. The summary is: first objective statement, then methodology, then results and conclusion combined. There's no separate conclusion but last sentence is conclusion. It seems in correct order. So 1.\n\n- D2_coherencia: Evaluate flow. Let's assess: The summary has some issues: repeated title; some punctuation; but overall flow: objective, methodology, results, conclusion. There may be slight repetition, but likely coherence rating 4 maybe 3? Let's analyze: Sentence 1: objective. Sentence 2: design. Sentence 3: results. Sentence 3 includes many numbers, but then ends with conclusion-like statement. Flow seems okay but a bit abrupt at the end: \"con un indicador de eficacia de 0.96, mostrando para ambos periodos una calificación según indicadores de Regular, no logrando cumplir satisfactoriamente lo programado respecto al PIM.\" That conclusion directly follows results. That's fine. Some adjectives like \"el actual proyecto\", \"tiene como objetivo general\". Some repetition. But overall flow is coherent. I'd give 4.\n\n- D3_contextualizacion: Does summary situate the problem? It begins with objective referencing municipal context. However it doesn't give background context beyond title. But it says \"Evaluar la ejecución presupuestaria ... en la Municipalidad Distrital de Capaso, Provincia del Collao, 2020 y 2021\". That is context: the location and timeframe. However the definition of contextualización: \"sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco.\" Here we have \"Municipalidad Distrital de Capaso, Provincia del Collao\". It doesn't explain why it matters or who it affects beyond that it's a municipal budget. It says \"para el ejercicio fiscal 2020 ...\". It doesn't explain the significance. The summary maybe lacks explicit reason for importance. But it gives the location. The field expects \"sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma\". The summary does mention \"Presupuesto de Ingresos asignado según monto PIM\". PIM likely refers to some normative framework. So it does mention the normative. So perhaps we can consider 1. But the protocol says: \"Vale 1 cuando el resumen sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco se contrasta.\" The summary says \"Evaluar la ejecución presupuestaria y su repercusión en el cumplimiento de metas presupuestarias ...\". That indicates why it matters. It says \"se concluyó que...\". It also indicates the budget numbers. So I think contextualization is present. So 1.\n\n- D3_metodo_detallado: Must have at least two precise methodological details. We have: design no experimental, quantitative, explanatory descriptive, deductive. Are these considered precisions? We have design (non-experimental), type of research (quantitative), level (explanatory descriptive), method (deductive). But do we have n? No mention of sample size. No instrument name. But we have \"diseño no experimental\" and \"tipo de investigación cuantitativa\", \"nivel explicativo y descriptivo\", \"método deductivo\". According to protocol, a precision is design, type of study, sample size, sampling technique, instrument named, statistical test, corpus, number of observations, selection criterion. Here we have design, type of study, level of study, method. That might count as at least two. But maybe they need two separate details like \"diseño no experimental\" and \"nivel explicativo y descriptivo\" might count. But do they consider \"nivel\" as a precision? The table says \"tipo de estudio, tamaño de muestra, técnica de muestreo, instrumento nombrado, prueba estadística, corpus analizado, número de observaciones, criterio de selección.\" It didn't list level. But maybe \"tipo de estudio\" counts: \"cuantitativo\" is type of study. But it's not \"tipo de estudio\" but \"tipo de investigación\". It says \"tipo de investigación utilizada es cuantitativa\". That might be considered \"tipo de estudio\". So we have two: design (non-experimental) and type (quantitative). So I think yes, 1. But let's examine if \"método deductivo\" counts? Not sure. But we at least have two: design and type. So D3_metodo_detallado = 1.\n\n- D3_resultados_concretos: Must have specific results: figures, magnitudes, categories, relationships. The summary gives percentages (88.76%, 99.77%, 79.28%, 85.89%) and values in Soles and percentages. So yes: 1.\n\n- D3_conclusion_responde: Does conclusion answer the objective? The conclusion: \"con un indicador de eficacia de 0.96, mostrando para ambos periodos una calificación según indicadores de Regular, no logrando cumplir satisfactoriamente lo programado respecto al PIM.\" The objective was to evaluate execution and its repercussion on compliance with budgetary goals. The conclusion states that compliance is not satisfactory, with metrics. So yes, it responds. So 1.\n\n- D4_consistencia: Need to evaluate coherence between declared methodology and results. Let's see: The methodology: non-experimental design, quantitative, explanatory descriptive, deductive. Results: They present numbers from budget. No statistical tests reported. The methodology mentions \"aplicó el método deductivo\" but no mention of sampling or instrument. There's no mention of data collection method or sampling. The results are basically descriptive statistics of budget execution. That is consistent with descriptive quantitative approach. There's no claim of inferential results or causality. The conclusion does not claim causal relationships, just descriptive. So no contradictions. So consistency is good. We need to assign a score from 1 to 5. It seems consistent. Let's assign 5. However we must check if there is any inconsistency: They claim \"el método deductivo\" but that might not be necessary. No contradictions. So 5.\n\n- no_evaluable: This is 0 because it is a summary; methodology declared. So 0.\n\n- observaciones: Any notes. We can note something about the summary having repetition of title at the beginning. Maybe note that the summary is a bit repetitive but overall fine. Also mention that the objective and conclusion are integrated.\n\nNow D2_coherencia: I will set 4. Let's think: The summary has repetition: \"El actual proyecto de investigación tiene como título\" and then \"El objetivo general:\" repeated title again. But overall flow: objective, methodology, results, conclusion. No major abrupt jumps. So 4.\n\nNow let's produce JSON: All fields must be present. Use compact JSON (no spaces). Provide only JSON object. Ensure no trailing commas. Use null for any missing but we have all.\n\nLet's produce:\n\n{\n\"D1_imryd_objetivo\":1,\n\"D1_imryd_metodologia\":1,\n\"D1_imryd_resultados\":1,\n\"D1_imryd_conclusiones\":1,\n\"D1_orden_logico\":1,\n\"D2_coherencia\":4,\n\"D3_contextualizacion\":1,\n\"D3_metodo_detallado\":1,\n\"D3_resultados_concretos\":1,\n\"D3_conclusion_responde\":1,\n\"D4_consistencia\":5,\n\"no_evaluable\":0,\n\"observaciones\":\"El resumen repite el título al inicio, pero la secuencia objetivo‑metodología‑resultados‑conclusión sigue un flujo lógico. No hay contradicciones metodológicas, aunque no se especifica tamaño de muestra ni instrumento.\"\n}\n\nCheck types: All integer or null. Observations string. All fields present.\n\nWe should double-check D3_metodo_detallado: Did we have two precisions? We had design and type of research. That might be counted. According to protocol, \"una precisión: diseño, tipo de estudio, tamaño de muestra, técnica de muestreo, instrumento nombrado, prueba estadística, corpus analizado, número de observaciones, criterio de selección.\" We have \"diseño no experimental\" (design) and \"tipo de investigación cuantitativa\" (type of study). That's two. So 1.\n\nThus final JSON."
+    }
+   }
+  ],
+  "created": 1789701449,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e23fc997ca",
+  "usage": {
+   "completion_tokens": 2356,
+   "prompt_tokens": 10102,
+   "total_tokens": 12458,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2183,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.308912878,
+   "prompt_time": 0.069550436,
+   "completion_time": 2.55909899,
+   "total_time": 2.628649426
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s89q92ekdvydabfdb6cg33",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:17:30.059383+00:00"
+}

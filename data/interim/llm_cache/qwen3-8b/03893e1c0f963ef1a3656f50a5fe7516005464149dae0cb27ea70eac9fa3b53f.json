@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-086",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 2,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una metodología mixta con encuestas, entrevistas, acceso a registros documentales, observación y búsqueda en internet, lo cual cumple con el criterio de metodología detallada. Sin embargo, no se reportan resultados concretos ni conclusiones que respondan al objetivo. La coherencia organizacional es media debido a la falta de fluidez entre las secciones. La consistencia metodológica es media debido a la falta de resultados concretos que respalden las conclusiones."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 2,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una metodología mixta con encuestas, entrevistas, acceso a registros documentales, observación y búsqueda en internet, lo cual cumple con el criterio de metodología detallada. Sin embargo, no se reportan resultados concretos ni conclusiones que respondan al objetivo. La coherencia organizacional es media debido a la falta de fluidez entre las secciones. La consistencia metodológica es media debido a la falta de resultados concretos que respalden las conclusiones.\"\n}",
+ "usage": {
+  "input_tokens": 10721,
+  "output_tokens": 264,
+  "total_duration_s": 8.9861906
+ },
+ "latency_s": 8.994103908538818,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:00:59.541220+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:00:59.5339235Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 2,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una metodología mixta con encuestas, entrevistas, acceso a registros documentales, observación y búsqueda en internet, lo cual cumple con el criterio de metodología detallada. Sin embargo, no se reportan resultados concretos ni conclusiones que respondan al objetivo. La coherencia organizacional es media debido a la falta de fluidez entre las secciones. La consistencia metodológica es media debido a la falta de resultados concretos que respalden las conclusiones.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8986190600,
+  "load_duration": 3334500,
+  "prompt_eval_count": 10721,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 279909000,
+  "eval_count": 264,
+  "eval_duration": 8607205000
+ },
+ "cached_at_utc": "2026-09-19T02:00:59.541230+00:00"
+}

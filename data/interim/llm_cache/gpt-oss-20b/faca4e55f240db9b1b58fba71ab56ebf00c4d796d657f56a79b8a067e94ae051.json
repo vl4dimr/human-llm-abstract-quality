@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-088",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta objetivo, metodología, resultados y conclusiones claramente, siguiendo el orden IMRyD. Se considera que falta contextualización porque no explica la importancia o el motivo de estudiar primeros auxilios en comuneros, solo presenta la población. La coherencia se calificó como impecable (5) debido a la fluidez lineal; aunque la enumeración de datos en la misma oración puede generar una ligera abrupta, se mantuvo la máxima puntuación. La consistencia metodológica es 5, sin contradicciones entre lo declarado y lo presentado. No se identificaron casos límite que requirieran observaciones adicionales."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen presenta objetivo, metodología, resultados y conclusiones claramente, siguiendo el orden IMRyD. Se considera que falta contextualización porque no explica la importancia o el motivo de estudiar primeros auxilios en comuneros, solo presenta la población. La coherencia se calificó como impecable (5) debido a la fluidez lineal; aunque la enumeración de datos en la misma oración puede generar una ligera abrupta, se mantuvo la máxima puntuación. La consistencia metodológica es 5, sin contradicciones entre lo declarado y lo presentado. No se identificaron casos límite que requirieran observaciones adicionales.\"}",
+ "usage": {
+  "input_tokens": 9946,
+  "output_tokens": 2411,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 3.1674251556396484,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:26:26.894114+00:00",
+ "raw": {
+  "id": "chatcmpl-04189c12-ec2d-464c-a697-b086b4a67eae",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen presenta objetivo, metodología, resultados y conclusiones claramente, siguiendo el orden IMRyD. Se considera que falta contextualización porque no explica la importancia o el motivo de estudiar primeros auxilios en comuneros, solo presenta la población. La coherencia se calificó como impecable (5) debido a la fluidez lineal; aunque la enumeración de datos en la misma oración puede generar una ligera abrupta, se mantuvo la máxima puntuación. La consistencia metodológica es 5, sin contradicciones entre lo declarado y lo presentado. No se identificaron casos límite que requirieran observaciones adicionales.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. We need to produce JSON with required fields. Must ensure all fields are present. Observations string. Must check each dimension.\n\nLet's analyze the summary.\n\nTitle: \"Efectividad de la sesión educativa en el conocimiento sobre primeros auxilios en accidentes más frecuentes en comuneros de Lluco, Coata - 2016\"\n\nResumen: text. Let's parse.\n\nSummary content:\n\n\"La investigación se realizó con el objetivo de determinar la efectividad de la sesión  educativa en el conocimiento sobre primeros auxilios en accidentes más frecuentes en  los comuneros de Lluco, Coata-2016, fue de tipo pre- experimental con diseño pre test y  post test con un solo grupo; la población estuvo constituida por 188 comuneros, la  muestra de estudio estuvo conformada por 75 comuneros, la técnica que se utilizó fue la  encuesta , el instrumento fue el cuestionario que se aplicó en dos momentos antes y  después de la sesión educativa, validado a través de juicio de expertos, para la  confiabilidad del instrumento se utilizó el método de Alfa de Cronbanch obteniéndose  80% de confiabilidad, los resultados del estudio demuestran que antes de la sesión  educativa el 17% de comuneros tenían conocimiento deficiente y el 64% regular,  después de realizar la sesión educativa el 97 % obtuvieron conocimiento bueno y el 3%  regular. Por tanto la sesión educativa es efectiva para mejorar el conocimiento, desde un  nivel deficiente a bueno entonces se confirma la hipótesis planteada, corroborada con el  análisis estadístico al obtener la prueba Zc = -16.80 < Zt = -1.96 para un nivel de  confianza del 95% y un nivel de significancia de α=0.05\"\n\nLet's break down the dimensions:\n\n**Dim1: Adherencia a IMRyD** fields: objective, methodology, results, conclusions, order.\n\nWe need to check each:\n\n- **Objective**: The summary explicitly states: \"con el objetivo de determinar la efectividad de la sesión educativa en el conocimiento sobre primeros auxilios en accidentes más frecuentes en los comuneros de Lluco, Coata-2016\". So objective present: 1.\n\n- **Methodology**: \"Fue de tipo pre-experimental con diseño pre test y post test con un solo grupo; la población estuvo constituida por 188 comuneros, la muestra de estudio estuvo conformada por 75 comuneros, la técnica que se utilizó fue la encuesta, el instrumento fue el cuestionario que se aplicó en dos momentos antes y después de la sesión educativa, validado a través de juicio de expertos, para la confiabilidad del instrumento se utilizó el método de Alfa de Cronbach obteniéndose 80% de confiabilidad.\" That contains details. So methodology 1.\n\n- **Results**: \"Los resultados del estudio demuestran que antes de la sesión educativa el 17% de comuneros tenían conocimiento deficiente y el 64% regular, después de realizar la sesión educativa el 97 % obtuvieron conocimiento bueno y el 3% regular.\" So results 1.\n\n- **Conclusions**: \"Por tanto la sesión educativa es efectiva para mejorar el conocimiento, desde un nivel deficiente a bueno entonces se confirma la hipótesis planteada, corroborada con el análisis estadístico...\" So conclusion 1.\n\n- **Order**: The components appear in sequence: objective first, then methodology, then results, then conclusion. So order 1.\n\nThus D1 fields all 1.\n\n**Dim2: Coherencia organizacional** 1-5. We must assess the flow. Let's read again.\n\nText: \"La investigación se realizó con el objetivo de determinar ... ; fue de tipo pre- experimental con diseño pre test y post test con un solo grupo; la población estuvo constituida por 188 comuneros, la muestra de estudio estuvo conformada por 75 comuneros, la técnica que se utilizó fue la encuesta, el instrumento fue el cuestionario que se aplicó en dos momentos antes y después de la sesión educativa, validado a través de juicio de expertos, para la confiabilidad del instrumento se utilizó el método de Alfa de Cronbanch obteniéndose 80% de confiabilidad, los resultados del estudio demuestran que antes de la sesión educativa el 17% de comuneros tenían conocimiento deficiente y el 64% regular, después de realizar la sesión educativa el 97 % obtuvieron conocimiento bueno y el 3% regular. Por tanto la sesión educativa es efectiva para mejorar el conocimiento, desde un nivel deficiente a bueno entonces se confirma la hipótesis planteada, corroborada con el análisis estadístico al obtener la prueba Zc = -16.80 < Zt = -1.96 para un nivel de confianza del 95% y un nivel de significancia de α=0.05\"\n\nThe flow: objective statement then methodology details, then results, then conclusion. The paragraph seems fairly linear, but there could be some abruptness. It includes a lot of detail. There is no clear separation but the content flows. Are there jumps? Not really. The \"por tanto la sesión educativa es efectiva...\" is after results. So I'd rate high coherence. I'd give 5? Let's consider guidelines: 5: progression impeccable, transitions natural, one term per concept, no repetitions. 4: good but minor awkwardness. The summary is dense but still flows. I think 5 is plausible. But check if any abrupt transitions: They say \"la investigación se realizó con el objetivo de...\" then \"fue de tipo pre-experimental...\". That's a bit abrupt but acceptable. They mention \"la población estuvo constituida por 188 comuneros, la muestra de estudio estuvo conformada por 75 comuneros, la técnica que se utilizó fue la encuesta\". It's a list of details. This is fine. They don't use adverbial phrase \"sin embargo\" etc. So I'd assign 5. But maybe 4 due to some minor abruptness: \"fue de tipo pre-experimental con diseño pre test y post test con un solo grupo; la población...\" The semicolon may mark a jump, but still within methodology. So I'd go with 5.\n\n**Dim3: Completeness of components**\n\n- `D3_contextualizacion`: Does the summary situate the problem: why it's important, where occurs, to whom, etc? It says: \"en los comuneros de Lluco, Coata\". It gives population 188 and sample 75. But doesn't explain why it's important, or why this study is relevant. It just states objective. So probably 0. Because it does not provide context. So 0.\n\n- `D3_metodo_detallado`: Must give at least two precise details about procedure. It provides: \"tipo pre- experimental con diseño pre test y post test con un solo grupo\" (design), \"población 188\", \"muestra 75\", \"técnica encuesta\", \"instrumento cuestionario aplicado en dos momentos\", \"validado a través de juicio de expertos\", \"confiabilidad Alfa de Cronbach 80%\". That is more than two details. So 1.\n\n- `D3_resultados_concretos`: Must provide specific content: percentages, categories, etc. It provides: 17% deficiente, 64% regular, 97% bueno, 3% regular. That's concrete. So 1.\n\n- `D3_conclusion_responde`: Does conclusion answer objective? The conclusion: \"la sesión educativa es efectiva para mejorar el conocimiento, desde un nivel deficiente a bueno entonces se confirma la hipótesis planteada\". The objective: determine efectividad. So conclusion addresses that: yes. So 1.\n\n**Dim4: Consistencia metodológica**\n\nWe need to evaluate coherence between what is claimed to have been done and the results and conclusion.\n\nThe methodology: pre-experimental design pre and post test with a single group. Results: pre 17% deficiente, 64% regular; post 97% bueno, 3% regular. They say \"la prueba Zc = -16.80 < Zt = -1.96\" indicates significance. They say the hypothesis confirmed. The conclusion states that session is effective. That's consistent. There's no contradictory claim. So consistency 5.\n\nBut we check if there is a mismatch: The results mention percentages but they don't give the test statistic values for each group; but they give the z test result for significance. That's fine. The conclusion is consistent with results. So 5.\n\nNow check `no_evaluable`: It's a valid summary. So 0.\n\nObservations: we can add any notes. The only potential ambiguous area might be if the methodology detail about \"pre- experimental with design pre test y post test\" is considered sufficient? It's a design description. The field says at least one procedural detail. So yes. For D3 context, we decided 0. Provide observation maybe explaining the decision.\n\nAlso mention that the conclusion uses \"confirm the hypothesis\" but the hypothesis was to determine effectiveness; that is consistent.\n\nAlso note that the \"coherencia organizacional\" rating 5: we could explain that flow is linear, but the summary uses semicolons and heavy content but still coherent.\n\nAdd observations summarizing.\n\nNow produce JSON.\n\nNeed fields:\n\nD1_imryd_objetivo\nD1_imryd_metodologia\nD1_imryd_resultados\nD1_imryd_conclusiones\nD1_orden_logico\nD2_coherencia\nD3_contextualizacion\nD3_metodo_detallado\nD3_resultados_concretos\nD3_conclusion_responde\nD4_consistencia\nno_evaluable\nobservaciones\n\nAll present.\n\nMake sure to set values 0/1 ints. Provide observations string.\n\nLet's write.\n\nObservations: \"El resumen presenta objetivo, metodología, resultados y conclusiones claramente, siguiendo orden IMRyD. Se consideró que falta contextualización porque no explica la importancia o el motivo de estudiar primeros auxilios en comuneros, solo presenta la población. Coherencia considerada impecable (5) debido a flujo lineal; aunque la enumeración de datos en la misma oración puede generar ligera abrupta, se calificó 5. Consistencia metodológica 5, sin contradicciones. No se hallaron casos límite.\" Provide this.\n\nLet's produce JSON.\n\n"
+    }
+   }
+  ],
+  "created": 1789701986,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_1074f9ce08",
+  "usage": {
+   "completion_tokens": 2411,
+   "prompt_tokens": 9946,
+   "total_tokens": 12357,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2161,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.216496516,
+   "prompt_time": 0.053569854,
+   "completion_time": 2.618138611,
+   "total_time": 2.671708465
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8t3jcetb8zjxp8ztn92vc",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:26:26.894290+00:00"
+}

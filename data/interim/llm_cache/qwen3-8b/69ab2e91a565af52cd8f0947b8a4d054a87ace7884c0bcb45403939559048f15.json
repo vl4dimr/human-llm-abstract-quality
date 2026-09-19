@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-015",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 2,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica (objetivo → metodología → resultados → conclusiones) y cumple con los componentes IMRyD. La coherencia organizacional es 3 debido a que la discusión de los resultados y conclusiones se presenta de manera clara, pero no se menciona por qué es importante estudiar la relación entre el bullying y la convivencia escolar. La completitud de componentes es 1, ya que se proporciona información contextualizada sobre la población y muestra, y los resultados son concretos. La consistencia metodológica es 2 porque las conclusiones se basan en la correlación de Pearson y el p-valor, pero no se menciona si estos resultados son significativos o si se cumplen los criterios de significancia estadística."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 2,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica (objetivo → metodología → resultados → conclusiones) y cumple con los componentes IMRyD. La coherencia organizacional es 3 debido a que la discusión de los resultados y conclusiones se presenta de manera clara, pero no se menciona por qué es importante estudiar la relación entre el bullying y la convivencia escolar. La completitud de componentes es 1, ya que se proporciona información contextualizada sobre la población y muestra, y los resultados son concretos. La consistencia metodológica es 2 porque las conclusiones se basan en la correlación de Pearson y el p-valor, pero no se menciona si estos resultados son significativos o si se cumplen los criterios de significancia estadística.\"\n}",
+ "usage": {
+  "input_tokens": 10979,
+  "output_tokens": 326,
+  "total_duration_s": 11.2913347
+ },
+ "latency_s": 11.31486177444458,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:49:56.306230+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:49:56.2966766Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 2,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica (objetivo → metodología → resultados → conclusiones) y cumple con los componentes IMRyD. La coherencia organizacional es 3 debido a que la discusión de los resultados y conclusiones se presenta de manera clara, pero no se menciona por qué es importante estudiar la relación entre el bullying y la convivencia escolar. La completitud de componentes es 1, ya que se proporciona información contextualizada sobre la población y muestra, y los resultados son concretos. La consistencia metodológica es 2 porque las conclusiones se basan en la correlación de Pearson y el p-valor, pero no se menciona si estos resultados son significativos o si se cumplen los criterios de significancia estadística.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 11291334700,
+  "load_duration": 7546100,
+  "prompt_eval_count": 10979,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 443058000,
+  "eval_count": 326,
+  "eval_duration": 10742678000
+ },
+ "cached_at_utc": "2026-09-19T01:49:56.306240+00:00"
+}

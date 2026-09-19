@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-138",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen describe claramente el objetivo de la investigación, que es proponer un sistema sostenible de drenaje pluvial urbano para los centros poblados de Salcedo y Jayllihuaya. La metodología incluye la obtención de datos meteorológicos de SENAMHI y PEBLT, el análisis de datos usando un periodo de retorno de 50 años, y la sectorización en diez partes con codificación en letras. Los resultados incluyen una intensidad de 50.17 mm/hr y una duración de tormenta de 180 minutos. Las conclusiones responden al objetivo al proponer un diseño de tuberías y zanjas de infiltración. La coherencia organizacional es de 3 porque hay un salto al hablar de la contaminación de las aguas pluviales y la necesidad de un sistema de drenaje sin mencionar claramente la relación entre estos elementos. La completitud de componentes es alta, ya que se incluyen contexto, metodología detallada, resultados concretos y conclusiones que responden al objetivo. La consistencia metodológica es de 3 porque el resumen describe una metodología clara y coherente, pero puede haber una falta de conexión entre algunos elementos."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen describe claramente el objetivo de la investigación, que es proponer un sistema sostenible de drenaje pluvial urbano para los centros poblados de Salcedo y Jayllihuaya. La metodología incluye la obtención de datos meteorológicos de SENAMHI y PEBLT, el análisis de datos usando un periodo de retorno de 50 años, y la sectorización en diez partes con codificación en letras. Los resultados incluyen una intensidad de 50.17 mm/hr y una duración de tormenta de 180 minutos. Las conclusiones responden al objetivo al proponer un diseño de tuberías y zanjas de infiltración. La coherencia organizacional es de 3 porque hay un salto al hablar de la contaminación de las aguas pluviales y la necesidad de un sistema de drenaje sin mencionar claramente la relación entre estos elementos. La completitud de componentes es alta, ya que se incluyen contexto, metodología detallada, resultados concretos y conclusiones que responden al objetivo. La consistencia metodológica es de 3 porque el resumen describe una metodología clara y coherente, pero puede haber una falta de conexión entre algunos elementos.\"\n}",
+ "usage": {
+  "input_tokens": 10931,
+  "output_tokens": 432,
+  "total_duration_s": 21.5435748
+ },
+ "latency_s": 21.565564155578613,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:11:09.872657+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:11:09.8697602Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen describe claramente el objetivo de la investigación, que es proponer un sistema sostenible de drenaje pluvial urbano para los centros poblados de Salcedo y Jayllihuaya. La metodología incluye la obtención de datos meteorológicos de SENAMHI y PEBLT, el análisis de datos usando un periodo de retorno de 50 años, y la sectorización en diez partes con codificación en letras. Los resultados incluyen una intensidad de 50.17 mm/hr y una duración de tormenta de 180 minutos. Las conclusiones responden al objetivo al proponer un diseño de tuberías y zanjas de infiltración. La coherencia organizacional es de 3 porque hay un salto al hablar de la contaminación de las aguas pluviales y la necesidad de un sistema de drenaje sin mencionar claramente la relación entre estos elementos. La completitud de componentes es alta, ya que se incluyen contexto, metodología detallada, resultados concretos y conclusiones que responden al objetivo. La consistencia metodológica es de 3 porque el resumen describe una metodología clara y coherente, pero puede haber una falta de conexión entre algunos elementos.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 21543574800,
+  "load_duration": 15990300,
+  "prompt_eval_count": 10931,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 421420000,
+  "eval_count": 432,
+  "eval_duration": 20977602000
+ },
+ "cached_at_utc": "2026-09-19T02:11:09.872684+00:00"
+}

@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-059",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 1,
+  "no_evaluable": 0,
+  "observaciones": "Conclusión contradice resultados: se indica no relación entre variables, pero se reporta relación en dimensión social."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":1,\"no_evaluable\":0,\"observaciones\":\"Conclusión contradice resultados: se indica no relación entre variables, pero se reporta relación en dimensión social.\"}",
+ "usage": {
+  "input_tokens": 9859,
+  "output_tokens": 1666,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.261063575744629,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:02:32.334176+00:00",
+ "raw": {
+  "id": "chatcmpl-6c157aec-3d96-4a31-b199-4b023c5e360f",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":1,\"no_evaluable\":0,\"observaciones\":\"Conclusión contradice resultados: se indica no relación entre variables, pero se reporta relación en dimensión social.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's analyze the summary.\n\nTitle: \"Nivel de autoestima y conductas sexuales de riesgo en los estudiantes de 4to y 5to grado de secundaria de la Institución Educativa San Martín de Porras, Cayaltí - Chiclayo, 2016\"\n\nResumen:\n\n\"El objetivo de la investigación fue determinar la relación entre el nivel de autoestima y las conductas sexuales de riesgo en los estudiantes de 4to y 5to grado de secundaria de una institución educativa. El estudio fue correlacional y de corte transversal. La muestra fue probabilístico y estuvo conformada por 164 estudiantes. Los instrumentos empleados en la recolección de datos fueron: el cuestionario de autoestima de Coopersmith (1967) y de conductas Sexuales de Rivera y Zavaleta (2015). Los resultados se obtuvieron a través del estadístico Chi-cuadrado donde se evidencia que no existe relación entre el nivel de autoestima y la conducta sexual de riesgo con un p-valor de 0,119. Sin embargo, se encontró relación entre la dimensión social y las conductas sexuales de riesgos con un p-valor de 0.013. En las conclusiones, se evidenció que no existe relación entre ambas variables.\"\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 1 if objective present. Yes: \"El objetivo de la investigación fue determinar la relación entre el nivel de autoestima y las conductas sexuales de riesgo...\" So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. Yes: \"El estudio fue correlacional y de corte transversal. La muestra fue probabilístico y estuvo conformada por 164 estudiantes. Los instrumentos empleados...\" So 1.\n\n- D1_imryd_resultados: 1 if results present. Yes: \"Los resultados se obtuvieron a través del estadístico Chi-cuadrado donde se evidencia que no existe relación... Sin embargo, se encontró relación entre la dimensión social y las conductas sexuales de riesgos con un p-valor de 0.013.\" So 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. Yes: \"En las conclusiones, se evidenció que no existe relación entre ambas variables.\" So 1.\n\n- D1_orden_logico: 1 if components present in logical order. The order: objective, methodology, results, conclusions. Yes. So 1.\n\n- D2_coherencia: scale 1-5. We need to evaluate flow. Let's read: The summary flows: objective, methodology, results, conclusions. The text is coherent. There's no abrupt jumps. The only potential issue: The results mention two findings: no relation overall, but relation in dimension social. Then conclusion says no relation between both variables. That is contradictory? The conclusion says no relation between both variables, but results show a relation in dimension social. That is a contradiction. But D2_coherencia is about flow, not consistency. The flow is fine. So maybe 5. But we might consider that the conclusion contradicts results, but that is D4 consistency. For D2, we evaluate flow: The summary is coherent, no abrupt jumps. So 5.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where, to whom, etc. The summary does not mention why it's important, or context beyond the institution. It just states the objective. So 0.\n\n- D3_metodo_detallado: 1 if at least two precisions about procedure. We have: \"El estudio fue correlacional y de corte transversal.\" That's one. \"La muestra fue probabilístico y estuvo conformada por 164 estudiantes.\" That's second. \"Los instrumentos empleados en la recolección de datos fueron: el cuestionario de autoestima de Coopersmith (1967) y de conductas Sexuales de Rivera y Zavaleta (2015).\" That's third. So yes, 1.\n\n- D3_resultados_concretos: 1 if results provide specific content: yes, p-values, mention of no relation, relation in dimension social. So 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to objective. The objective: determine relationship between self-esteem and risky sexual behaviors. The conclusion: no relation between both variables. That addresses the objective. So 1.\n\n- D4_consistencia: scale 1-5. We need to evaluate consistency between what summary says it did and what it presents. The summary says it's correlational, cross-sectional, sample 164, instruments. Results: no relation overall, but relation in dimension social. Conclusion: no relation between both variables. That is contradictory: conclusion says no relation, but results show relation in dimension social. That is a contradiction. According to D4, we need to see if conclusion exceeds what data support. The conclusion says no relation between both variables, but results show a relation in dimension social. That is a contradiction. According to the catalog, \"Afirmar diferencias tras reportar p > 0,05\" is a 1. But here it's not exactly that. It's a contradiction: conclusion says no relation overall, but results show relation in dimension social. That is a contradiction. According to D4, we should assign a low score. Let's see the guidelines: D4_consistencia: 5: fully coherent; 4: one minor imprecision; 3: one visible discordance; 2: several discordances or conclusion exceeds data; 1: open contradiction invalidating conclusion. Here we have a contradiction: conclusion says no relation overall, but results show relation in dimension social. That is a contradiction. So we should assign 1? But is it open contradiction? The conclusion says no relation between both variables. The results show a relation in dimension social. That is contradictory. So yes, D4_consistencia = 1.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: we can add notes: \"Contradiction between conclusion and results: conclusion states no relation overall, but results show relation in dimension social.\" Also note that D4_consistencia low.\n\nWe need to output JSON with all fields. Ensure values are integers or null. All required fields present.\n\nLet's produce JSON:\n\n{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 5,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 1,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"Conclusión contradice resultados: se indica no relación entre variables, pero se reporta relación en dimensión social.\"\n}\n\nCheck schema: all fields present. D2_coherencia 5 is allowed. D4_consistencia 1 allowed. Observaciones string. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789700552,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e594c51153",
+  "usage": {
+   "completion_tokens": 1666,
+   "prompt_tokens": 9859,
+   "total_tokens": 11525,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1519,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.193366076,
+   "prompt_time": 0.048750476,
+   "completion_time": 1.7321768419999999,
+   "total_time": 1.780927318
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7ebgve0e8qh21p0n1wt73",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:02:32.334210+00:00"
+}

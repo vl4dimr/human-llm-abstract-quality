@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-016",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, aunque podría mejorar en la transición entre los resultados y la conclusión. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante el análisis de la arbitrariedad en los mandatos de prisión preventiva. La metodología es detallada, mencionando el método analítico-sintético e inductivo-deductivo. Los resultados son concretos, indicando que los jueces no motivaron adecuadamente las resoluciones y aplicaron la prisión preventiva como regla general. La conclusión responde al objetivo, señalando que la institución se desnaturalizó. La consistencia metodológica es 3 porque la conclusión menciona que la medida cautelar se aplica como regla general, lo cual no está completamente respaldado por los resultados."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, aunque podría mejorar en la transición entre los resultados y la conclusión. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante el análisis de la arbitrariedad en los mandatos de prisión preventiva. La metodología es detallada, mencionando el método analítico-sintético e inductivo-deductivo. Los resultados son concretos, indicando que los jueces no motivaron adecuadamente las resoluciones y aplicaron la prisión preventiva como regla general. La conclusión responde al objetivo, señalando que la institución se desnaturalizó. La consistencia metodológica es 3 porque la conclusión menciona que la medida cautelar se aplica como regla general, lo cual no está completamente respaldado por los resultados.\"\n}",
+ "usage": {
+  "input_tokens": 10850,
+  "output_tokens": 354,
+  "total_duration_s": 10.7033465
+ },
+ "latency_s": 10.726173400878906,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:27:23.724583+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:27:23.7162954Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD correctamente. La coherencia es buena, aunque podría mejorar en la transición entre los resultados y la conclusión. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es importante el análisis de la arbitrariedad en los mandatos de prisión preventiva. La metodología es detallada, mencionando el método analítico-sintético e inductivo-deductivo. Los resultados son concretos, indicando que los jueces no motivaron adecuadamente las resoluciones y aplicaron la prisión preventiva como regla general. La conclusión responde al objetivo, señalando que la institución se desnaturalizó. La consistencia metodológica es 3 porque la conclusión menciona que la medida cautelar se aplica como regla general, lo cual no está completamente respaldado por los resultados.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10703346500,
+  "load_duration": 4444100,
+  "prompt_eval_count": 10850,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 284594000,
+  "eval_count": 354,
+  "eval_duration": 10352910000
+ },
+ "cached_at_utc": "2026-09-19T01:27:23.724597+00:00"
+}

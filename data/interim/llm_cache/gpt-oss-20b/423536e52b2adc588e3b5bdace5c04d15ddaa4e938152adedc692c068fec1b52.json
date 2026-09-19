@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-093",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Repetición ligera de resultados en discusión, pero no afecta la coherencia general."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Repetición ligera de resultados en discusión, pero no afecta la coherencia general.\"}",
+ "usage": {
+  "input_tokens": 9975,
+  "output_tokens": 1941,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 3.4348385334014893,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:56:13.965854+00:00",
+ "raw": {
+  "id": "chatcmpl-ebc63ca1-157b-41c5-bfe8-c40acc4bb24b",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Repetición ligera de resultados en discusión, pero no afecta la coherencia general.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones. All required.\n\nWe must evaluate according to the protocol.\n\nLet's analyze the summary:\n\nTitle: Factores sociodemográficos, conocimiento y cumplimiento sobre inmunizaciones en madres peruanas de menores de cinco años\n\nSummary content:\n\n\"La vacunación a lo largo de los años ha salvado millones de vidas, por ello es una prioridad a nivel mundial. Sin embargo, el bajo conocimiento de las madres o el incumplimiento en la vacunación de sus hijos, hacen que el índice mortalidad y morbilidad en la población infantil haya aumentado en los últimos años. Objetivo: determinar la relación entre factores sociodemográficos, nivel de conocimiento y cumplimiento sobre inmunizaciones en madres de menores de cinco años. Metodos: tipo de investigación de enfoque cuantitativo, de diseño no experimental, de corte transversal, y tipo correlacional. El muestreo fue no probabilístico por conveniencia. La muestra estuvo conformada por 500 madres con menores de cinco años de los centros de salud de los departamentos de Lima y Ancash . Resultado: la identificación de una relación significativa y positiva (X2 = 0.830, p = 0.040) entre el nivel de conocimiento y el cumplimiento del esquema de vacunación. Discusión: El 44.2% de las madres tienen un nivel de conocimiento regular sobre el esquema de vacunación, y el 52.8% de las madres presentó un cumplimiento inoportuno del esquema de vacunación. Se observó, además, que el número de hijos, lugar de procedencia y grado de instrucción se relacionó significativamente con el nivel conocimiento sobre el esquema de vacunación. Y sólo el lugar de procedencia tuvo una relación significativa con el cumplimiento del esquema de vacunación. Conclusión: cuanto mayor nivel de conocimientos sobre el esquema de vacunación mayor sería el cumplimiento del esquema de vacunación.\"\n\nWe need to evaluate each field:\n\nD1_imryd_objetivo: objective present? Yes: \"Objetivo: determinar la relación entre factores sociodemográficos, nivel de conocimiento y cumplimiento sobre inmunizaciones en madres de menores de cinco años.\" So 1.\n\nD1_imryd_metodologia: Has methodology? Yes: \"Metodos: tipo de investigación de enfoque cuantitativo, de diseño no experimental, de corte transversal, y tipo correlacional. El muestreo fue no probabilístico por conveniencia. La muestra estuvo conformada por 500 madres con menores de cinco años...\" So 1.\n\nD1_imryd_resultados: They report \"Resultado: la identificación de una relación significativa y positiva (X2 = 0.830, p = 0.040) entre el nivel de conocimiento y el cumplimiento del esquema de vacunación.\" So yes 1.\n\nD1_imryd_conclusiones: They have conclusion: \"Conexión: cuanto mayor nivel de conocimientos sobre el esquema de vacunación mayor sería el cumplimiento del esquema de vacunación.\" That's an interpretation? It's basically restating the relationship. It's not much beyond the result, but does it go beyond? It says \"cuanto mayor ... mayor sería el cumplimiento\". This is an interpretation of the result. It also provides an implication: that increasing knowledge leads to better compliance. It's not just restating results. It could be considered a conclusion that answers objective: yes, it responds to objective. So 1.\n\nD1_orden_logico: order is: background, objective, methods, result, discussion, conclusion. That is the usual order: objective, methods, result, discussion, conclusion. Yes, that is correct. So 1.\n\nD2_coherencia: Evaluate flow. Let's read.\n\nParagraph 1: background. Then objective. Then methods. Then result. Then discussion. Then conclusion.\n\nDoes it flow well? There is a shift from results to discussion: \"Discusión: El 44.2%...\". Then mention significance again. The discussion is basically re-quoting results, but with percentages. It's consistent. The conclusion restates. The flow is coherent; there might be some repetition but not major. I think 4 or 5? Let's check guidelines: 5 for impeccable progression, 4 for good with slight aspereza. Here, there's minimal repetition. The only thing is the discussion repeating percentages and results but that's normal. I would say 4.\n\nBut maybe 5: The only minor issue is the \"Discusión\" heading but not a problem. Let's decide 4.\n\nD3_contextualizacion: Does it situate the problem? They start with background: \"La vacunación... ha salvado millones de vidas...\". They mention low knowledge and noncompliance leading to increased mortality/morbidity. That situates the problem and importance. So yes. 1.\n\nD3_metodo_detallado: Provide at least two precisions. They mention: \"tipo de investigación de enfoque cuantitativo, de diseño no experimental, de corte transversal, y tipo correlacional.\" They mention sampling: non probabilistic convenience, 500 mothers. So design, type, n, sampling. That's multiple precisions. So 1.\n\nD3_resultados_concretos: They provide X2 = 0.830, p = 0.040. Also percentages: 44.2% knowledge regular, 52.8% compliance. That's concrete. So 1.\n\nD3_conclusion_responde: Does conclusion answer objective? Yes: it says higher knowledge leads to higher compliance. That addresses the relationship. So 1.\n\nD4_consistencia: Need to evaluate coherence between what the summary says it did and what it presents. They say \"tipo de investigación... diseño no experimental, correlacional\". They report a chi-square result for relation between knowledge and compliance. That matches. They also mention relationships with number of children, place of origin, instruction level with knowledge. But they didn't report test results for those, just mention significance. Might be fine. They also mention only place of origin significant with compliance. No explicit results. But overall, they don't contradict. No major contradictions. But they didn't provide statistics for those relationships; but that may be considered incomplete, but D4 is about consistency, not completeness. They didn't say something contradictory: For example they didn't say \"there were no differences\" but they did say significant relationships. That matches. So consistency high. Let's evaluate: 5 maybe. Check guidelines: 5 if no contradictions, 4 if minor terminological issue. They use \"X2 = 0.830, p = 0.040\" for a correlation. They might have used X^2 for association; that's fine. They mention \"X2 = 0.830\" maybe weird: X2 value is 0.83? Usually chi-square > 1. But it's still a result. No contradiction. So I think 5.\n\nno_evaluable: It's evaluable, so 0.\n\nobservaciones: Should include any notes. Might mention that the discussion repeats results. Might note that the conclusion is minimal but acceptable. So: \"Repetición ligera de resultados en discusión, pero no afecta la coherencia general.\" Also maybe note that \"X2 = 0.830\" is unusual but still counts.\n\nWe also need to ensure JSON is compact. Let's construct.\n\nAlso verify schema: all required keys present. Use integer values 0 or 1 except D2_coherencia and D4_consistencia which can be 1-5. Provide integer. Provide no nulls.\n\nLet's craft:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Repetición ligera de resultados en discusión, pero no afecta la coherencia general.\"\n}\n\nCheck: D4_consistencia is 5 within 1-5. D2_coherencia is 4. All good.\n\nReturn only JSON."
+    }
+   }
+  ],
+  "created": 1789775773,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_5979a0e1b7",
+  "usage": {
+   "completion_tokens": 1941,
+   "prompt_tokens": 9975,
+   "total_tokens": 11916,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1799,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.202568602,
+   "prompt_time": 0.060685378,
+   "completion_time": 2.075668781,
+   "total_time": 2.136354159
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vf5xj1ec6rw355hw8gt6c0",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:56:13.965878+00:00"
+}

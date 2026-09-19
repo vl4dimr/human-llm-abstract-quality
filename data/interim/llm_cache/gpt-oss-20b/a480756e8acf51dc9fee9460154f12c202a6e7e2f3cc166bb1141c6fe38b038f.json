@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-039",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta los cuatro componentes de forma adecuada y en orden lógico, pero no contextualiza explícitamente la relevancia del problema ni a quién afecta. No hay contradicciones metodológicas y la conclusión responde al objetivo."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen presenta los cuatro componentes de forma adecuada y en orden lógico, pero no contextualiza explícitamente la relevancia del problema ni a quién afecta. No hay contradicciones metodológicas y la conclusión responde al objetivo.\"}",
+ "usage": {
+  "input_tokens": 10041,
+  "output_tokens": 1566
+ },
+ "latency_s": 3.1706812381744385,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:19:05.666173+00:00",
+ "raw": {
+  "id": "chatcmpl-d774315a-058e-4a45-8ba9-920531ecf474",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen presenta los cuatro componentes de forma adecuada y en orden lógico, pero no contextualiza explícitamente la relevancia del problema ni a quién afecta. No hay contradicciones metodológicas y la conclusión responde al objetivo.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate according to protocol. Provide fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nCheck each:\n\nTitle: Aprendizaje organizacional en el servicio de tutoría.\n\nResumen: It includes problem, objective, hypothesis, methodology, results, conclusion, correlation coefficient.\n\nWe must identify each component.\n\n### D1_imryd_objetivo: 1\nThere is explicit objective: \"Determinar el tipo y grado de correlación existente...\" yes.\n\n### D1_imryd_metodologia: 1\nMethodology: \"tipo descriptivo y diseño correlacional. Las técnicas e instrumentos: la encuesta con cuestionario ... análisis documental.\" Yes.\n\n### D1_imryd_resultados: 1\nResults: \"la mayoría de los profesores no tienen adecuado aprendizaje... no aplican... existe correlación ... r=0.64\" So yes.\n\n### D1_imryd_conclusiones: 1\nConclusion: \"se concluye que la mayoría de los profesores no tienen adecuado aprendizaje ... no aplican ... existe correlación\" Yes conclusion present and interprets.\n\n### D1_orden_logico: 1\nCheck order: Problem statement -> objective -> hypothesis -> methodology -> results -> conclusion. That's correct sequence. Yes.\n\n### D2_coherencia: rating 1-5. Need to analyze flow. Let's read: \"El problema que aborda el presente trabajo de investigación trata sobre: Aprendizaje Organizacional en el Servicio de Tutoría ... la ciudad de Puno, se sintetiza en la siguiente interrogante: ¿De qué manera el aprendizaje organizacional se relaciona con el servicio de tutoría en la gestión pedagógica en el Instituto Superior Público \"José Antonio Encinas\" de Puno?. La investigación se orienta por el siguiente objetivo general: Determinar el tipo y grado de correlación existente entre el aprendizaje organizacional y el servicio de tutoría en la gestión pedagógica ... la respuesta tentativa que se ensaya en el proyecto de tesis es la siguiente hipótesis: cuanto es mayor el grado de aprendizaje organizacional que tienen los profesores sobre Tutoría y Orientación Educativa mayor será el grado de aplicación por parte de los profesores durante el desarrollo de las actividades educativas correspondientes al segundo semestre del año académico 2009. El tipo de investigación ... Las técnicas e instrumentos ... Después de analizar e interpretar los resultados se concluye ... Palabras Clave...\"\n\nThe flow seems coherent: problem -> question -> objective -> hypothesis -> design -> instruments -> results -> conclusion. Some slight jumps but overall good. Might have a mild skip: they jump from hypothesis to methodology; it's fine. Might be no major jump. So D2_coherencia = 5 (impeccable). But check: \"La investigación se orienta por el siguiente objetivo general\" after the question, then \"la respuesta tentativa...\" That is fine.\n\nHowever maybe the use of \"Respuesta tentativa\" and \"hipótesis\" as separate but not too problematic. Could be considered fine. I think 5.\n\n### D3_contextualizacion: 0 or 1. This asks if summary situates the problem: why important, where occurs, to whom, what framework. Let's see: They mention \"El problema que aborda el presente trabajo de investigación trata sobre: Aprendizaje Organizacional en el Servicio de Tutoría... en la ciudad de Puno\" So they mention location but do not explain why important, or to whom. They don't give context like importance, scope. The sentence \"El problema que aborda el presente trabajo de investigación trata sobre\" basically states the problem but no why. So D3_contextualizacion = 0.\n\n### D3_metodo_detallado: At least two precisions. We have: design (descriptivo correlacional), type of instruments (encuesta con cuestionario, análisis documental). So we have at least design and instrument. So yes 1.\n\n### D3_resultados_concretos: They report r=0.64. That is concrete. So 1.\n\n### D3_conclusion_responde: Conclusion must respond to objective. Conclusion: \"la mayoría de los profesores no tienen adecuado aprendizaje ... no aplican ... existe correlación ... r=0.64\". The objective was \"Determinar el tipo y grado de correlación existente entre el aprendizaje organizacional y el servicio de tutoría\". Conclusion confirms correlation and provides coefficient, so yes it responds. So 1.\n\n### D4_consistencia: Score 1-5. We need consistency between what was claimed and results. Check: They claimed: \"la mayoría de los profesores no tienen adecuado aprendizaje ... no aplican ... existe correlación ... r=0.64\". They claim correlation, they provide coefficient. But the coefficient suggests positive correlation. Did they mention direction? They didn't specify direction in conclusion? They said \"existe correlación, esta afirmación se sustenta en el coeficiente de correlación que se obtiene que es de r = 0.64.\" That indicates correlation but they didn't say \"positiva\" but r=0.64 implies positive. The conclusion doesn't contradict. No contradictions. The only potential issue: they say \"la mayoría de los profesores no tienen adecuado aprendizaje ... esta misma cantidad de profesores tampoco aplican ... entre las dos variables existe correlación.\" That is consistent: both low learning and low application? Wait: They say majority have inadequate learning, majority also don't apply. That might suggest a negative correlation? But coefficient r=0.64 indicates positive correlation between learning and application. If learning is low, application is low, so positive correlation. That's consistent. So D4_consistencia likely 5? But check if any contradictions: They claim \"existe correlación\" but earlier they said \"la mayoría no tienen adecuado aprendizaje ... la misma cantidad de profesores tampoco aplican\". That could be a positive correlation: low learning leads to low application. So no contradiction. So D4_consistencia = 5.\n\nHowever consider that they didn't provide the sample size, but not required for consistency. So 5.\n\n### no_evaluable: 0 because it is a valid summary.\n\n### observaciones: add any remarks. Might mention context not fully provided, but okay. Provide something like: \"No se indica la importancia del problema ni a quién afecta\". Provide small note. Also mention \"No se indican unidades de medida de la encuesta\" but not relevant.\n\nLet's produce JSON.\n\nCheck required fields all present. Ensure null values are not used. All fields present.\n\nNow produce final JSON."
+    }
+   }
+  ],
+  "created": 1789701545,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_34cb00738d",
+  "usage": {
+   "completion_tokens": 1566,
+   "prompt_tokens": 10041,
+   "total_tokens": 11607,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1398,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.283646708,
+   "prompt_time": 0.546934344,
+   "completion_time": 1.719803035,
+   "total_time": 2.266737379
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8cn0me1fb2gdedk0yvxzy",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:19:05.666208+00:00"
+}

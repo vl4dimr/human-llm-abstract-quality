@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-021",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen presenta objetivo, metodología, resultados y conclusión en orden lógico. Flujo coherente (4/5). Falta contextualización explícita del problema y su importancia."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta objetivo, metodología, resultados y conclusión en orden lógico. Flujo coherente (4/5). Falta contextualización explícita del problema y su importancia.\"}",
+ "usage": {
+  "input_tokens": 10264,
+  "output_tokens": 1737
+ },
+ "latency_s": 2.9107608795166016,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T02:57:45.987985+00:00",
+ "raw": {
+  "id": "chatcmpl-509492e1-f869-4b76-a974-9beecdd34daf",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta objetivo, metodología, resultados y conclusión en orden lógico. Flujo coherente (4/5). Falta contextualización explícita del problema y su importancia.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. Provide JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Desarrollo folicular tras la aplicación de la PGF2α en vacas Brown Swiss sometidas a un protocolo de pre sincronización por dos vías de administración\"\n\nSummary: Provided.\n\nWe need to evaluate each field.\n\nFields:\n\n- D1_imryd_objetivo: 0 or 1. The objective is present: \"El objetivo del presente trabajo es evaluar la respuesta de la hormona prostaglandina (PGF2α) en dos vías de administración intramuscular y sub mucosa vulvar en el desarrollo del folículo preovulatorio (FPO), diámetro y consistencia del cuerno uterino, tasa de preñez\". So yes, objective present. So 1.\n\n- D1_imryd_metodologia: 0 or 1. Need to indicate how they obtained knowledge. The summary includes details: protocols, number of cows, hormone doses, days, evaluation ecográfica, etc. So yes, methodology present. 1.\n\n- D1_imryd_resultados: 0 or 1. They report results: FPO diameters, p-values, etc. So yes. 1.\n\n- D1_imryd_conclusiones: 0 or 1. They conclude: \"Se concluye la administración de la hormona PGF2α por la vía sub mucosa vulvar afecta en el desarrollo del FPO y en los órganos de los anexos reproductivos, con diferencia % mínima en la tasa de preñez.\" So yes. 1.\n\n- D1_orden_logico: 0 or 1. Need to check if components present appear in logical order: objective, methodology, results, conclusion. The summary starts with objective, then methodology details, then results, then conclusion. So yes. 1.\n\n- D2_coherencia: 1-5. Need to evaluate flow. Let's read: The summary is somewhat dense but flows: objective, then methodology, then results, then conclusion. There are some abrupt transitions but overall coherent. I'd rate 4 maybe. Let's analyze: The summary is a single paragraph, but it has clear sections: objective, methodology, results, conclusion. The flow is logical. There is some repetition of \"vía de administración sub mucosa vulvar\" etc. But no major jumps. I'd give 4. 5 would be perfect, but maybe 4.\n\n- D3_contextualizacion: 0 or 1. Need to see if the summary situates the problem: why it matters, where it occurs, to whom it affects, against what norm. The summary mentions \"21 vacas Brown Swiss lactantes del Centro Poblado Collacachi (Cutimbo), perteneciente al Distrito y Provincia de Puno, ubicado en el altiplano peruano\". It doesn't explicitly state why this is important, but it gives context: location, species, etc. But does it explain why it's important? It doesn't say \"para mejorar la producción lechera\" or \"para aumentar la tasa de preñez\". It just states the study. The contextualization field requires: \"sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco se contrasta.\" The summary does not explicitly state why it's important. It just says \"El objetivo del presente trabajo es evaluar la respuesta...\" It doesn't say why. So I'd set 0.\n\n- D3_metodo_detallado: 0 or 1. Need at least two precisions: design, type of study, sample size, sampling technique, instrument, statistical test, corpus, number of observations, selection criteria. The summary includes: \"21 vacas Brown Swiss lactantes\", \"protocolos sucesivos de Presynch® y Ovsynch®\", \"vía intra muscular (IM) 0.5 mg Cloprostenol Sódico equivalente a 2 ml. y vía sub mucosa vulvar (SMV) 0.375 mg Cloprostenol Sódico equivalente a 1.5 ml; día 0, 2 ml IM y 1.5 SMV, día 11, 2 ml IM y 1.5 SMV, día 29, 2 ml IM y 1.5 SMV, día 32 se realizó la evaluación ecográfica de ovarios y cuernos uterinos antes de las 16 horas de realizar la IATF\". So we have design (protocols), sample size (21), instrument (ecografía), statistical test (p-values). So at least two precisions. So 1.\n\n- D3_resultados_concretos: 0 or 1. They provide concrete results: FPO diameters with means and SD, p-values, diameters of cuerno uterino, percentages for consistency, percentages for preñez, p-values. So yes. 1.\n\n- D3_conclusion_responde: 0 or 1. The conclusion: \"Se concluye la administración de la hormona PGF2α por la vía sub mucosa vulvar afecta en el desarrollo del FPO y en los órganos de los anexos reproductivos, con diferencia % mínima en la tasa de preñez.\" This addresses the objective: evaluate response of PGF2α on FPO, etc. So yes. 1.\n\n- D4_consistencia: 1-5. Need to evaluate consistency between what summary says it did and what it presents. Let's check: They say they used two routes, measured FPO diameters, cuerno uterino diameters, consistency, preñez. They present results accordingly. They conclude that sub mucosa vulvar route affects FPO and reproductive organs, with minimal difference in preñez. They present p-values: FPO difference significant (p=0.024), cuerno uterino difference significant (p=0.038), preñez difference not significant (p=0.466). They conclude that sub mucosa vulvar route affects FPO and reproductive organs, with minimal difference in preñez. That is consistent: they say sub mucosa vulvar route affects FPO and reproductive organs (which is supported by significant differences). They also say minimal difference in preñez (which is supported by non-significant difference). So consistency is good. No contradictions. So D4_consistencia = 5.\n\n- no_evaluable: 0 or 1. The text is a summary, not a non-summary. So 0.\n\n- observaciones: string. We can add any notes. Maybe note that contextualization is missing. Also note that the summary is a single paragraph but coherent. Provide a brief observation.\n\nLet's produce JSON with all fields.\n\nCheck schema: all required fields present. Use compact JSON.\n\nLet's produce:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Resumen presenta objetivo, metodología, resultados y conclusión en orden lógico. Flujo coherente (4/5). Falta contextualización explícita del problema y su importancia.\"\n}\n\nCheck that all fields are integers or null. Observations string. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789700265,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_84bb35977d",
+  "usage": {
+   "completion_tokens": 1737,
+   "prompt_tokens": 10264,
+   "total_tokens": 12001,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1578,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.216329294,
+   "prompt_time": 0.521448273,
+   "completion_time": 1.8619850599999999,
+   "total_time": 2.383433333
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s75k86egkr517zr8yvcmse",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T02:57:45.988081+00:00"
+}

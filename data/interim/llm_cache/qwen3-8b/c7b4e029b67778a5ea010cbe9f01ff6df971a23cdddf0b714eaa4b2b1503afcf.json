@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-063",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta los cuatro componentes canónicos en orden. La coherencia es buena, pero podría mejorar con una mejor conexión entre las partes. La contextualización es cero porque el resumen empieza directamente por el objetivo sin explicar por qué importa el tema. El método detallado incluye la revisión organizada y semiorganizada, lo que cuenta como precisión. Los resultados son concretos, mencionando el impacto de los espacios planificados. La conclusión responde al objetivo al mencionar la mejora de la calidad educativa. La consistencia metodológica es 3 porque la conclusión menciona una mejora fundamental sin mencionar si los datos respaldan esa afirmación."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta los cuatro componentes canónicos en orden. La coherencia es buena, pero podría mejorar con una mejor conexión entre las partes. La contextualización es cero porque el resumen empieza directamente por el objetivo sin explicar por qué importa el tema. El método detallado incluye la revisión organizada y semiorganizada, lo que cuenta como precisión. Los resultados son concretos, mencionando el impacto de los espacios planificados. La conclusión responde al objetivo al mencionar la mejora de la calidad educativa. La consistencia metodológica es 3 porque la conclusión menciona una mejora fundamental sin mencionar si los datos respaldan esa afirmación.\"\n}",
+ "usage": {
+  "input_tokens": 10879,
+  "output_tokens": 311,
+  "total_duration_s": 9.8255555
+ },
+ "latency_s": 9.835546970367432,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:57:20.481376+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:57:20.4733844Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta los cuatro componentes canónicos en orden. La coherencia es buena, pero podría mejorar con una mejor conexión entre las partes. La contextualización es cero porque el resumen empieza directamente por el objetivo sin explicar por qué importa el tema. El método detallado incluye la revisión organizada y semiorganizada, lo que cuenta como precisión. Los resultados son concretos, mencionando el impacto de los espacios planificados. La conclusión responde al objetivo al mencionar la mejora de la calidad educativa. La consistencia metodológica es 3 porque la conclusión menciona una mejora fundamental sin mencionar si los datos respaldan esa afirmación.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9825555500,
+  "load_duration": 8355800,
+  "prompt_eval_count": 10879,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 346981000,
+  "eval_count": 311,
+  "eval_duration": 9358475000
+ },
+ "cached_at_utc": "2026-09-19T01:57:20.481403+00:00"
+}

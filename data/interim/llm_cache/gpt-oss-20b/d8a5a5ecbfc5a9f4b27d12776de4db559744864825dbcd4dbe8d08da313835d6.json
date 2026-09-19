@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-115",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": null,
+  "no_evaluable": 1,
+  "observaciones": "Resumen solo presenta objetivos; falta metodología, resultados y conclusiones. Contextualización mínima y flujo algo fragmentado."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":0,\"D2_coherencia\":3,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"Resumen solo presenta objetivos; falta metodología, resultados y conclusiones. Contextualización mínima y flujo algo fragmentado.\"}",
+ "usage": {
+  "input_tokens": 9878,
+  "output_tokens": 1501,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.5754404067993164,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:09:05.895034+00:00",
+ "raw": {
+  "id": "chatcmpl-aace30f4-357a-4031-8ed5-4cafe5d54677",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":0,\"D2_coherencia\":3,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"Resumen solo presenta objetivos; falta metodología, resultados y conclusiones. Contextualización mínima y flujo algo fragmentado.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nWe need to evaluate each field.\n\nFirst, read the summary:\n\n\"La radio es uno de los medios de comunicación más antiguos y eficaces que hasta el día de hoy sigue vigente. El aporte que ha hecho desde sus inicios ha sido asombrosos e innumerables para la sociedad. Han sido utilizado para realizar diversos tipos de programas radiales: música, noticias, etc.  La razón por la que se hace este proyecto es por dos razones: Valor teórico y práctico. Por su valor teórico, porque proporcionará información respecto al avance del evangelismo en el distrito misionero de El Tambo Bambamarca. Por su valor práctico y social, porque con este estudio se beneficiará a Edén Radio y al distrito misionero El Tambo Bambamarca, ya que el resultado del proyecto mostrará en resultados de qué manera y cuánto puede rendir el evangelismo a través de la radio. Objetivo principal es resaltar la actividad evangelística a través de la radio en el distrito de El Tambo Bambamarca. Y clarificar la influencia social de la radio en el distrito El Tambo Bambamarca. Por último, determinar la ganancia de almas a través de la radio en el mismo distrito.\"\n\nWe need to identify components.\n\nObjective: The summary states \"Objetivo principal es resaltar la actividad evangelística a través de la radio en el distrito de El Tambo Bambamarca. Y clarificar la influencia social de la radio en el distrito El Tambo Bambamarca. Por último, determinar la ganancia de almas a través de la radio en el mismo distrito.\" So objective is present. So D1_imryd_objetivo = 1.\n\nMethodology: The summary does not describe how the study will be conducted. It says \"el resultado del proyecto mostrará en resultados de qué manera y cuánto puede rendir el evangelismo a través de la radio.\" But no details about design, sample, instruments. So D1_imryd_metodologia = 0.\n\nResults: The summary does not present results. It says \"el resultado del proyecto mostrará en resultados de qué manera y cuánto puede rendir el evangelismo a través de la radio.\" But no actual results. So D1_imryd_resultados = 0.\n\nConclusions: The summary does not provide a conclusion. It just states objectives. So D1_imryd_conclusiones = 0.\n\nOrder: Since only objective present, and no other components, D1_orden_logico: rule says if 0 or 1 components present, order = 0. So D1_orden_logico = 0.\n\nD2_coherencia: Evaluate flow. The summary is somewhat disjointed. It starts with general statements about radio, then reasons for project, then objectives. There's some repetition. Flow is not great. Let's rate. The descriptors: 5 perfect, 4 good, 3 okay, 2 poor, 1 incoherent. This summary: It has some jumps: from general to reasons to objectives. There's repetition of \"El Tambo Bambamarca\" etc. I'd rate 3 maybe. But let's analyze: The summary is somewhat coherent but not smooth. I'd give 3.\n\nD3_contextualizacion: Does it situate the problem? It says \"El aporte que ha hecho ...\". It mentions \"avanz del evangelismo en el distrito misionero de El Tambo Bambamarca.\" It does not explain why it's important, but it does mention the context: the district. But does it explain why it matters? It says \"valor teórico y práctico\" but not why. The field requires: \"sitúa el problema: por qué importa, dónde ocurre, a quién afecta, contra qué norma o marco se contrasta.\" The summary does not explain why it's important, but it does mention the district. I'd say it's not fully contextualized. So D3_contextualizacion = 0.\n\nD3_metodo_detallado: No methodology details. So 0.\n\nD3_resultados_concretos: No results. So 0.\n\nD3_conclusion_responde: No conclusion. So 0.\n\nD4_consistencia: Since no methodology, D4_consistencia is \"no_evaluable\" = 1. According to rule: If no methodology, D4 cannot be evaluated. So D4_consistencia = null? Wait the schema says D4_consistencia can be 1-5 or null. But also there's no_evaluable field. The rule: \"If the summary does not declare any methodology, the D4 cannot be evaluated: mark no_evaluable = 1 and leave D4 blank.\" So D4_consistencia should be null. And no_evaluable = 1.\n\nObservaciones: We should note any relevant observations. For example: \"No metodología ni resultados ni conclusiones presentes; solo objetivos.\" Also mention that the summary is narrative, not structured. Also mention that the summary lacks contextualization. Also mention that the summary is not coherent enough. Provide a brief note.\n\nLet's produce JSON.\n\nCheck schema: required fields: all fields must be present. So we must include all fields. For D4_consistencia we set null. For no_evaluable we set 1. Observaciones string.\n\nLet's produce compact JSON.\n\nCheck that all values are integers or null. Observaciones string.\n\nLet's produce:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":0,\n \"D1_imryd_resultados\":0,\n \"D1_imryd_conclusiones\":0,\n \"D1_orden_logico\":0,\n \"D2_coherencia\":3,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":0,\n \"D3_resultados_concretos\":0,\n \"D3_conclusion_responde\":0,\n \"D4_consistencia\":null,\n \"no_evaluable\":1,\n \"observaciones\":\"Resumen solo presenta objetivos; falta metodología, resultados y conclusiones. Contextualización mínima y flujo algo fragmentado.\"\n}\n\nCheck that no_evaluable is integer 1. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789700945,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_9340e7d14d",
+  "usage": {
+   "completion_tokens": 1501,
+   "prompt_tokens": 9878,
+   "total_tokens": 11379,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1353,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.240601724,
+   "prompt_time": 0.062949335,
+   "completion_time": 1.5545520499999999,
+   "total_time": 1.617501385
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7tbz3eer9b7hp63dcsad6",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:09:05.895133+00:00"
+}

@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-129",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Background sets context; no major issues."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Background sets context; no major issues.\"}",
+ "usage": {
+  "input_tokens": 10198,
+  "output_tokens": 2403
+ },
+ "latency_s": 3.8026978969573975,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:42:14.830648+00:00",
+ "raw": {
+  "id": "chatcmpl-33ba1ec1-2287-4ed4-9f28-c34bf7c5465f",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Background sets context; no major issues.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. We need to produce JSON with required fields. Must use compact JSON (no pretty printing). Must parse. Ensure all fields present.\n\nLet's annotate step by step.\n\nFirst, identify components.\n\nTitle: irrelevant.\n\nSummary:\n\nText:\n\n\"En la región Puno, muchas gestantes con antecedentes de cesárea son innecesariamente intervenidas quirúrgicamente, ya que no existen un consenso claro para predecir exitosamente el tipo de parto al que serán sometidas, exponiéndolos a complicaciones maternas fetales y en su atención hospitalaria. Objetivo: Determinar la eficacia del score FLAMM Y GROBMAN como predictor del éxito de parto vaginal en gestantes con antecedentes de cesárea previa en el Hospital III ESSALUD Juliaca 2021 – 2022. Metodología: Tipo analítico; descriptivo, transversal, se revisó 86 Historias clínicas seleccionados por muestreo no probabilístico; el estadístico se analizó en el programa R(V.4.1.1), la eficacia se calculó  con la sensibilidad; especificidad, VPP, VPN y área bajo la curva ROC. Resultados: El score de FLAMM demostró mayor sensibilidad (93.8%), especificidad (76.4%),  VPP (98.7%), VPN (20.6%) y un ROC (0.613) con respecto al score de GROBMAN, ambas con  capacidad predictiva  aceptable; hubo asociación  significativa (p<0.05) del antecedente de parto previo(OR=4.36), dilatación (OR=88.6) y el borramiento cervical (OR=42.5) en la culminación de un parto vaginal exitoso, las  complicaciones maternas  fueron el desgarro perineal (64.3%), la hemorragia postparto (17.9%) e hipotonía uterina (10.7%); mientras en la cesárea, resalto el seroma de la herida, endometritis y hemorragia postparto. Las complicaciones del neonato, fueron el síndrome de adaptación (50%), hipoglicemia (18%) e hiperbilirrubinemia (14%); mientras los nacidos por cesárea fueron la taquipnea transitoria (27.6%), el síndrome de adaptación (25.9%) hiperbilirrubinemia (24.1%), y mortalidad (3.4%). Conclusiones: Los Score de FLAMM y GROBMAN, tienen alta capacidad predictiva para parto vaginal, donde el Score de FLAMM tiene mayor eficacia predictiva, sensibilidad, especificidad, demostrando que la culminación en otra cesárea trae mayores complicaciones maternofetales que el parto vaginal.\"\n\nOk.\n\nNow, apply dimensions.\n\n### D1_imryd_objetivo\nCheck: There's \"Objetivo: Determinar la eficacia del score FLAMM Y GROBMAN...\" So explicit. So D1_imryd_objetivo=1.\n\n### D1_imryd_metodologia\nMetodologia: \"Tipo analítico; descriptivo, transversal, se revisó 86 Historias clínicas seleccionados por muestreo no probabilístico; el estadístico se analizó en el programa R(V.4.1.1), la eficacia se calculó  con la sensibilidad; especificidad, VPP, VPN y área bajo la curva ROC.\" This includes design, sample size, sampling method, software. So yes. D1_imryd_metodologia=1.\n\n### D1_imryd_resultados\nResults: Provide many values. So yes. D1_imryd_resultados=1.\n\n### D1_imryd_conclusiones\nConclusion: \"Los Score de FLAMM y GROBMAN, tienen alta capacidad predictiva para parto vaginal, donde el Score de FLAMM tiene mayor eficacia predictiva, sensibilidad, especificidad, demostrando que la culminación en otra cesárea trae mayores complicaciones maternofetales que el parto vaginal.\" This is a closing interpretation, yes. So D1_imryd_conclusiones=1.\n\n### D1_orden_logico\nCheck order: The summary starts with context/background. Then \"Objetivo:\", then \"Metodología:\", then \"Resultados:\", then \"Conclusiones:\" at end. That is correct order. So D1_orden_logico=1.\n\n### D2_coherencia\n\nNeed to rate from 1-5. Let's evaluate flow.\n\nText: Starts with background, then objective, then methodology, then results (which are quite dense, including many complications for mothers and neonates, with percentages). Then conclusion summarizing main findings. Flow: Background -> objective -> methodology -> results -> conclusion. The text is fairly cohesive but somewhat long, but still logically organized. Some repetitive phrases: \"mientras\" used multiple times to contrast maternal and neonatal complications. That's fine. The transitions are clear: \"Resultados: ...; Conclusiones: ...\". I think rating 4 or 5. Let's analyze typical descriptors:\n\n- 5: Impeccable progression, each sentence prepares next, single term per concept, no repetitions.\n\n- 4: Flows well, some minor roughness, maybe a repetition or slight awkwardness.\n\n- 3: Understandable but some difficulty.\n\nHere, we have some repetition of \"mientras\" and some long sentences but still coherent. I would give 4.\n\nSo D2_coherencia=4.\n\n### D3_contextualizacion\n\nNeed to see if the summary situates the problem: why it's important, where it occurs, to whom, against what norm or framework.\n\nText: Background: \"En la región Puno, muchas gestantes con antecedentes de cesárea son innecesariamente intervenidas quirúrgicamente, ya que no existen un consenso claro para predecir exitosamente el tipo de parto al que serán sometidas, exponiéndolos a complicaciones maternas fetales y en su atención hospitalaria.\" This describes the problem: many unnecessary interventions; need for consensus; risk of complications. This situates the problem. So yes, D3_contextualizacion=1.\n\n### D3_metodo_detallado\n\nNeed at least two precise details. The methodology includes design (analytic, descriptive, transversal), sample size (86), sampling method (no probabilistic), software R(v4.1.1), etc. That's more than two. So D3_metodo_detallado=1.\n\n### D3_resultados_concretos\n\nWe have specific percentages for sensitivity, specificity, VPP, VPN, ROC, OR values, complications percentages. So yes. D3_resultados_concretos=1.\n\n### D3_conclusion_responde\n\nConclusion must answer the stated objective. Objective: Determine efficacy of score FLAMM and GROBMAN as predictor of vaginal birth success. Conclusion says: \"Los Score de FLAMM y GROBMAN tienen alta capacidad predictiva para parto vaginal, donde el Score de FLAMM tiene mayor eficacia predictiva, sensibilidad, especificidad, demostrando que la culminación en otra cesárea trae mayores complicaciones maternofetales que el parto vaginal.\" This does respond to objective (efficacy of scores). So D3_conclusion_responde=1.\n\n### D4_consistencia\n\nNeed consistency between methodology declared and results presented. Check for contradictions. Let's read.\n\nMethodology: analytic descriptive transversal; sample 86; R; sensitivity etc. Results: Provide sensitivity, specificity, VPP, VPN, ROC for FLAMM. Provide association p<0.05 for antecedent of prior birth, dilation, cervical effacement. Also complications percentages. The conclusion says FLAMM higher efficacy. That seems consistent. No contradictions like claiming differences but not showing them. There's no mention of statistical tests beyond p<0.05. They didn't report actual p-values, but they say \"p<0.05\" which is fine. No contradictory statements.\n\nHowever, check for potential mismatch: They claim \"la eficacia se calculó con la sensibilidad; especificidad, VPP, VPN y área bajo la curva ROC.\" That is consistent. The results present those values. So consistency is good. No major inconsistency. So D4_consistencia=5.\n\nBut note: The summary uses \"la eficacia se calculó con la sensibilidad; especificidad, VPP, VPN y área bajo la curva ROC.\" It's a bit ambiguous: \"la eficacia se calculó con la sensibilidad; especificidad, VPP, VPN y área bajo la curva ROC.\" But that's fine.\n\nThus D4_consistencia=5.\n\n### no_evaluable\n\nThis field indicates if the text is not a summary or lacks methodology. It's a summary. So no_evaluable=0.\n\n### observaciones\n\nWe might add remarks if any doubt. Maybe mention that the background is adequate, but there is some redundancy. But we can keep empty string? The schema allows string. It expects string. We can provide a note: \"Background sets context; some repetition but coherent.\" But it's optional. Provide a short observation.\n\nWe should include a string, maybe empty string \"\", but might be safer to provide a brief. I think include observation: \"Background provides context, no major issues.\" Provide as string. Acceptable.\n\nNow produce JSON.\n\nMake sure fields order maybe not important, but include all required.\n\nLet's list all fields:\n\n- D1_imryd_objetivo\n- D1_imryd_metodologia\n- D1_imryd_resultados\n- D1_imryd_conclusiones\n- D1_orden_logico\n- D2_coherencia\n- D3_contextualizacion\n- D3_metodo_detallado\n- D3_resultados_concretos\n- D3_conclusion_responde\n- D4_consistencia\n- no_evaluable\n- observaciones\n\nAll integer values or null. Provide null only if unspecified. We have all defined.\n\nObservations: \"Background sets context; no major issues.\" That is a string.\n\nLet's craft JSON.\n\nCompact format: no line breaks? It can contain newlines but not needed. But typical JSON may have newline but that's fine. They said \"Use compact JSON formatting\". So all in one line.\n\nReturn only JSON object.\n\nLet's produce:\n\n{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Background sets context; no major issues.\"}\n\nCheck all fields present.\n\nLet's ensure schema: required list includes all. Good.\n\nReturn."
+    }
+   }
+  ],
+  "created": 1789774934,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_228717f27c",
+  "usage": {
+   "completion_tokens": 2403,
+   "prompt_tokens": 10198,
+   "total_tokens": 12601,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2270,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.148715657,
+   "prompt_time": 0.583655603,
+   "completion_time": 2.4460440070000002,
+   "total_time": 3.02969961
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vec98ne3vr13xhrje4tt1v",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:42:14.830675+00:00"
+}

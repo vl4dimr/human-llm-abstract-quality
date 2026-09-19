@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-124",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "Resumen presenta objetivo, metodología (población de 24 hoteles, revisión y análisis de ventas online) y conclusiones que responden al objetivo, pero carece de datos numéricos concretos; se observa cierta falta de detalle metodológico y resultados cuantitativos."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":4,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta objetivo, metodología (población de 24 hoteles, revisión y análisis de ventas online) y conclusiones que responden al objetivo, pero carece de datos numéricos concretos; se observa cierta falta de detalle metodológico y resultados cuantitativos.\"}",
+ "usage": {
+  "input_tokens": 10640,
+  "output_tokens": 1780,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.7918241024017334,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:41:39.956625+00:00",
+ "raw": {
+  "id": "chatcmpl-1679601a-cc96-425a-ae0b-12e771e333b1",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":4,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta objetivo, metodología (población de 24 hoteles, revisión y análisis de ventas online) y conclusiones que responden al objetivo, pero carece de datos numéricos concretos; se observa cierta falta de detalle metodológico y resultados cuantitativos.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. We need to produce JSON with required fields. Need to evaluate each field.\n\nLet's analyze the summary.\n\nFirst, check if it's a summary or something else: It appears to be a summary of a thesis. So no \"no_evaluable\". So no_evaluable = 0. Observations to include if any uncertain decisions.\n\nWe need to determine each field:\n\nD1_imryd_objetivo: Does the summary include the objective? It says: \"el objetivo general es el de “identificar los atributos del sistema online como ventaja competitiva, analizar las ventas online en hoteles tres estrellas de la ciudad de Puno, asimismo proponer alternativas de ventas online que funcionen como ventaja competitiva”.\" So yes, objective is present. So value = 1.\n\nD1_imryd_metodologia: Does the summary describe methodology? It says: \"capítulo tercero obedece a la descripción de las técnicas y métodos a los que se recurrió en la presente investigación, de la misma manera en este importante capitulo encontramos la población y muestra, esta última se encuentra constituida por veinticuatro establecimientos hoteleros de tres estrellas de la ciudad de Puno. Así también en este capítulo se consideran las características del área de investigación, el que está representado por la ciudad de Puno\". Also earlier: \"El primer capítulo hace referencia al propósito e intención de la investigación... el objetivo general...\". But the methodology is described as \"técnicas y métodos\" but not specified details: population and sample of 24 establishments. So we have at least a concrete procedure: \"población y muestra\" - that's a precision. But the protocol says for D1_imryd_metodologia, need at least one concrete procedural indication: e.g., \"se utilizó una encuesta\". The text says: \"capítulo tercero ... se recurrió a ...\". It says \"técnicas y métodos\". It mentions \"población y muestra\" but doesn't specify what technique: e.g., survey? Not explicitly. But there is mention of \"la revisión y análisis de las ventas online de los hoteles de tres estrellas\". That could be a method: \"revisión y análisis\" of online sales. That qualifies as a procedure: \"se ha aplicado, la revisión y análisis de las ventas online\". So that counts. So we set D1_imryd_metodologia = 1.\n\nD1_imryd_resultados: Does the summary communicate findings? The results are described in the part: \"Finalmente como resultado de la investigación se llegó a las siguientes conclusiones centrales:\" and then bullet list of advantages etc. But the \"resultados\" are not numeric. But result is qualitative: \"El uso sistema online ... constituye una ventaja competitiva\". That is a result. So yes, D1_imryd_resultados = 1.\n\nD1_imryd_conclusiones: Does it have a conclusion? Yes, bullet list: \"El uso sistema online ... constituye una ventaja competitiva... los directivos ...\". Also \"Son múltiples los atributos ...\". That is conclusion. It's more like \"conclusiones\" but not summarizing all findings into a single closure? There are multiple bullet points, but they answer the objective: \"identificar los atributos ...\". They also mention that \"cada uno ...\". So yes, D1_imryd_conclusiones = 1.\n\nD1_orden_logico: Are the present components in order? The summary starts with objective, then mentions methodology (capítulo tercero), then results (capítulo cuarto), then conclusions. That is correct order. So D1_orden_logico = 1.\n\nD2_coherencia: Evaluate flow. Let's examine.\n\nText: It starts with title, then summary. It is somewhat long and may have some disconnections. It mentions objective, then theoretical aspects, then methodology, then results, then conclusions. It has some repeated phrases, but overall it seems coherent. Let's assign D2_coherencia maybe 4.\n\nCheck for issues: There are repeated \"la ciudad de Puno\", but that's okay. Some redundancy but not too bad. There is a bullet list with conclusions. The text is a bit repetitive and includes some jargon like \"microboogging\" spelled incorrectly. But overall, flow is okay. So 4.\n\nD3_contextualizacion: Does the summary sit the problem? It says: \"se necesita conocer a detalle la función que cumple el sistema online ... uno de los principales problemas ... escasa capacidad de potenciar el uso\". Also mentions that the city is important center. So yes, it contextualizes the problem: why it's important. So D3_contextualizacion = 1.\n\nD3_metodo_detallado: Need at least two precisions. The summary includes: \"población y muestra\" (24 establishments) - that is one precision. Also mention \"técnicas y métodos\", but not specifying. Also \"revisión y análisis de las ventas online\" could be a precision. So we have at least two: 24 establishments (n) + \"revisión y análisis\". That qualifies. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: Need specific content: categories, figures, magnitudes. Here results are qualitative: \"El uso sistema online ... constituye una ventaja competitiva\". No numeric values. So D3_resultados_concretos = 0.\n\nD3_conclusion_responde: Does the conclusion answer the objective? The objective: \"identificar los atributos del sistema online como ventaja competitiva, analizar las ventas online ... proponer alternativas\". The conclusion bullet points mention attributes as advantage, and mention improvements. That seems to answer the objective. So D3_conclusion_responde = 1.\n\nD4_consistencia: Evaluate consistency. We need to check if method and results align and conclusion consistent. The methodology: \"técnicas y métodos\", \"población y muestra 24\", \"revisión y análisis de ventas online\". The results: they say \"El uso sistema online ... constituye una ventaja competitiva\". There's no numeric support. But they didn't report specific metrics; they just claim advantage. This may be inconsistent: They didn't present data that supports advantage. But D4 requires that the conclusion not exceed data. They concluded that it constitutes advantage. The results didn't show numeric evidence. They only describe that \"El uso sistema online ... constituye una ventaja competitiva\". It's a claim. It's a bit of a conclusion itself. It's somewhat consistent because they used qualitative results. It's not a major contradiction. They didn't say something like \"p<0.05\" or claim significance with no data. So D4_consistency probably 4? Let's think.\n\nWe evaluate: They present method: review and analysis of online sales. They claim that this system is advantage. They didn't provide data but still concluded advantage. In qualitative research, that's okay. There's no contradictory statement. So D4_consistency = 4 maybe? According to categories: 5 if fully consistent; 4 if consistent with a minor terminological imprecision. The only potential imprecision: \"microboogging\" misspelling, but that's not a major. So we set 4.\n\nBut wait: Are there any contradictions? No. They didn't say \"no difference\" or \"contradiction\". So 4 is fine.\n\nNow no_evaluable = 0.\n\nObservations: Provide any notes? Might note the missing numeric results. Also note the ambiguous method details. But it's fine. Observations field can be empty string. But we need to provide string. We can put an observation summarizing that there is lack of numeric data in results, and method details limited.\n\nLet's craft JSON.\n\nCheck schema: all fields required.\n\nReturn compact JSON.\n\nLet's produce final JSON."
+    }
+   }
+  ],
+  "created": 1789774899,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_4a35f7bd1b",
+  "usage": {
+   "completion_tokens": 1780,
+   "prompt_tokens": 10640,
+   "total_tokens": 12420,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1600,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.19522615,
+   "prompt_time": 0.111831887,
+   "completion_time": 1.807807934,
+   "total_time": 1.919639821
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2veb875e1rbwvsa2pk49dnh",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:41:39.956638+00:00"
+}

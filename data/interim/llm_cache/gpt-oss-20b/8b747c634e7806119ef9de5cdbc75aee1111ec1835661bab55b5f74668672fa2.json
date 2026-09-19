@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-013",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen es párrafo único, sin encabezados, con flujo coherente."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen es párrafo único, sin encabezados, con flujo coherente.\"}",
+ "usage": {
+  "input_tokens": 10098,
+  "output_tokens": 1447,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.517123222351074,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:16:22.409301+00:00",
+ "raw": {
+  "id": "chatcmpl-54e42af3-20c0-4904-abac-aadb175c5034",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen es párrafo único, sin encabezados, con flujo coherente.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate the provided summary according to protocol. We need to produce JSON with required fields. Must use compact JSON (no pretty printing). Must parse. We need to evaluate each dimension.\n\nFirst, identify components:\n\nTitle: \"Calidad del macizo rocoso en incremento de la capacidad de soporte de Split set corrugado y cartuchos de cemento respecto a Split set convencional en By Pass 815NE de la Unidad Minera Las Águilas - CIEMSA\"\n\nSummary: lengthy, in Spanish, includes objective, method, results, conclusions.\n\nWe need to evaluate:\n\nD1_imryd_objetivo: 1 if objective present.\n\nSentence: \"El trabajo de investigación en la Unidad Minera Las Águilas – CIEMSA tiene como objetivo, determinar la capacidad de anclaje del Split set corrugado con cartuchos de cemento respecto al Split set convencional para una determinada calidad del macizo rocoso basados en la clasificación de Bieniawski 1989\". This is explicit objective, though it includes a comma after objetivo, but still okay. So D1_imryd_objetivo = 1.\n\nD1_imryd_metodologia: presence of methodology: \"la investigación es descriptiva, explicativa y aplicativa.\" Also details of rock classification, number of stations, loads, etc. So yes, 1.\n\nD1_imryd_resultados: yes: they give loads and capacities. So 1.\n\nD1_imryd_conclusiones: they have concluding statement: \"como resultado de las pruebas realizadas el Split set corrugado tiene mayor capacidad de anclaje respecto a Split set convencional, considerando estos resultados es recomendable hacer uso de Split set corrugado y se puede adicionar cartuchos de cemento.\" That is conclusion that responds to objective. Yes, 1.\n\nD1_orden_logico: Sequence: Objective → Methodology (some description of rock quality, etc.) → Results (load data) → Conclusion. Does it follow logical order? The summary starts with objective, then methodology, then results, then conclusion. There's no major misordering. So D1_orden_logico = 1.\n\nD2_coherencia: Evaluate flow. Let's examine the summary: It's a paragraph. The first part states objective, then mentions \"la investigación es descriptiva, explicativa y aplicativa.\" Then goes to rock quality data (RMR values). Then details loads. Then concludes. The flow seems coherent. The description of rock quality seems like background but maybe some jump. But overall, it's fairly coherent. I'd assign 4 or 5? Let's think. They start objective, then methodology: description of research type, rock classification and station values. That's background. Then they give load data. Then conclusion. The transitions are somewhat abrupt: after objective, they jump to method type; then to rock quality; then loads; no explicit transitions but it's still readable. No contradictions, no large jumps. So maybe D2_coherencia = 4.\n\nD3_contextualizacion: Does the summary situate the problem? It states the location: Unidad Minera Las Águilas – CIEMSA, by Pass 815NE. It mentions rock quality classification and values. So yes, contextualization present: 1.\n\nD3_metodo_detallado: need at least two precisions. They mention type of research: descriptiva, explicativa y aplicativa. They mention rock quality classification: RMR values, 13 stations, etc. They mention loads for pernos Split Set conventional and corrugado with and without cement. They mention capacity per foot. So multiple precisions. So yes, 1.\n\nD3_resultados_concretos: they give numeric results: loads in t, capacities in t/pie. They provide comparative results: higher capacity for corrugado. So yes, 1.\n\nD3_conclusion_responde: conclusion responds to objective: yes, it states that corrugado has higher capacity and recommends usage. So 1.\n\nD4_consistencia: consistency between what summarized as methodology and results. Check for contradictions. They say research is descriptive, explicativa, and aplicativa. They give results of loads. There's no contradictory statement. Conclusion is that corrugado better. No mention of statistical significance or tests. No contradictory results. So consistency likely good: 5.\n\nBut need to check if any methodological claim that conflicts. They claim \"la investigación es descriptiva, explicativa y aplicativa.\" That's fine. They present data, no tests, just descriptive numbers. They conclude. No contradictions. So D4_consistencia = 5.\n\nno_evaluable: 0 (it's a proper summary).\n\nObservaciones: any notes? Could note that the summary is a single paragraph, but no need. Could mention no explicit headings. It's fine. But maybe note the abrupt shift from objective to method to results, but still coherent.\n\nWe must provide JSON with all fields, in order as per schema? Schema's required fields list order: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nMake sure no null values. All values 0 or 1 or 5 etc. Observaciones: can be empty string or some note. We'll add a note: \"Summary is a single paragraph, no headings, but clear and coherent.\" Provide string.\n\nNow produce JSON:\n\n{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen es párrafo único, sin encabezados, con flujo coherente.\"}\n\nCheck that JSON is compact. That seems fine. Let's output."
+    }
+   }
+  ],
+  "created": 1789701382,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_e2cb7a84ec",
+  "usage": {
+   "completion_tokens": 1447,
+   "prompt_tokens": 10098,
+   "total_tokens": 11545,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1307,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.14870787,
+   "prompt_time": 0.069852022,
+   "completion_time": 1.512615565,
+   "total_time": 1.582467587
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s87pcde0zaakp1j15bq3c2",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:16:22.409323+00:00"
+}

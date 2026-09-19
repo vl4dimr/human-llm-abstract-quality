@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-127",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD y presenta todos los componentes necesarios. La coherencia es buena, aunque podría mejorar en la transición entre las etapas. La metodología está detallada con la Taxonomía II de NANDA I, Taxonomía NOC y NIC. Los resultados son concretos con una puntuación de cambio NOC. La conclusión responde al objetivo."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD y presenta todos los componentes necesarios. La coherencia es buena, aunque podría mejorar en la transición entre las etapas. La metodología está detallada con la Taxonomía II de NANDA I, Taxonomía NOC y NIC. Los resultados son concretos con una puntuación de cambio NOC. La conclusión responde al objetivo.\"\n}",
+ "usage": {
+  "input_tokens": 10932,
+  "output_tokens": 242,
+  "total_duration_s": 8.0033561
+ },
+ "latency_s": 8.01794981956482,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:36:26.110079+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:36:26.1004768Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD y presenta todos los componentes necesarios. La coherencia es buena, aunque podría mejorar en la transición entre las etapas. La metodología está detallada con la Taxonomía II de NANDA I, Taxonomía NOC y NIC. Los resultados son concretos con una puntuación de cambio NOC. La conclusión responde al objetivo.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8003356100,
+  "load_duration": 8721500,
+  "prompt_eval_count": 10932,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 375340000,
+  "eval_count": 242,
+  "eval_duration": 7513156000
+ },
+ "cached_at_utc": "2026-09-19T02:36:26.110088+00:00"
+}

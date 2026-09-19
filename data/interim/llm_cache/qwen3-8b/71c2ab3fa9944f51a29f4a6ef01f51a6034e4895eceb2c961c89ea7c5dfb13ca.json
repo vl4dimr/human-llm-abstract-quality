@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-098",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD. La coherencia es 4 debido a que el texto fluye bien, pero hay una frase que menciona la prueba de chi cuadrada con un valor de significancia, lo cual se considera una señal de coherencia. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin situar el problema. La consistencia es 3 porque la conclusión afirma una relación significativa entre el control de inventarios y la rentabilidad financiera, lo cual está respaldado por la prueba de chi cuadrada, pero la frase final puede ser considerada una afirmación que excede lo que los datos sostienen."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD. La coherencia es 4 debido a que el texto fluye bien, pero hay una frase que menciona la prueba de chi cuadrada con un valor de significancia, lo cual se considera una señal de coherencia. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin situar el problema. La consistencia es 3 porque la conclusión afirma una relación significativa entre el control de inventarios y la rentabilidad financiera, lo cual está respaldado por la prueba de chi cuadrada, pero la frase final puede ser considerada una afirmación que excede lo que los datos sostienen.\"\n}",
+ "usage": {
+  "input_tokens": 10819,
+  "output_tokens": 304,
+  "total_duration_s": 9.5252043
+ },
+ "latency_s": 9.535796403884888,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:02:47.058931+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:02:47.056791Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD. La coherencia es 4 debido a que el texto fluye bien, pero hay una frase que menciona la prueba de chi cuadrada con un valor de significancia, lo cual se considera una señal de coherencia. La contextualización es 0 porque el resumen comienza directamente con el objetivo sin situar el problema. La consistencia es 3 porque la conclusión afirma una relación significativa entre el control de inventarios y la rentabilidad financiera, lo cual está respaldado por la prueba de chi cuadrada, pero la frase final puede ser considerada una afirmación que excede lo que los datos sostienen.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 9525204300,
+  "load_duration": 7758000,
+  "prompt_eval_count": 10819,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 335542000,
+  "eval_count": 304,
+  "eval_duration": 9075728000
+ },
+ "cached_at_utc": "2026-09-19T02:02:47.058950+00:00"
+}

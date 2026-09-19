@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-152",
+ "model_name": "mistral-7b",
+ "provider": "ollama",
+ "model": "mistral:latest",
+ "model_reported": "mistral:latest",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resultado de la comparación no es significativo a p = 0.291, pero se reporta como diferencia significativa porque la prueba t es más liberal que t.alpha/2. Debido a que se trata de una prueba no paramétrica, también se evalúa la correlación."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 1,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resultado de la comparación no es significativo a p = 0.291, pero se reporta como diferencia significativa porque la prueba t es más liberal que t.alpha/2. Debido a que se trata de una prueba no paramétrica, también se evalúa la correlación.\"\n}",
+ "usage": {
+  "input_tokens": 12767,
+  "output_tokens": 263,
+  "total_duration_s": 7.6144135
+ },
+ "latency_s": 7.642097473144531,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:24:00.916262+00:00",
+ "raw": {
+  "model": "mistral:latest",
+  "created_at": "2026-09-19T01:24:00.9083514Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 1,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resultado de la comparación no es significativo a p = 0.291, pero se reporta como diferencia significativa porque la prueba t es más liberal que t.alpha/2. Debido a que se trata de una prueba no paramétrica, también se evalúa la correlación.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7614413500,
+  "load_duration": 4061000,
+  "prompt_eval_count": 12767,
+  "prompt_eval_cached_count": 12155,
+  "prompt_eval_duration": 461700000,
+  "eval_count": 263,
+  "eval_duration": 7055613000
+ },
+ "cached_at_utc": "2026-09-19T01:24:00.916286+00:00"
+}

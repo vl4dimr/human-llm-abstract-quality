@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-015",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen presenta buena coherencia y orden lógico; se repite la conclusión en varias frases, pero no hay contradicciones ni falta de consistencia metodológica."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta buena coherencia y orden lógico; se repite la conclusión en varias frases, pero no hay contradicciones ni falta de consistencia metodológica.\"}",
+ "usage": {
+  "input_tokens": 10075,
+  "output_tokens": 1409
+ },
+ "latency_s": 2.554347515106201,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T02:56:35.623729+00:00",
+ "raw": {
+  "id": "chatcmpl-9838e595-940d-4805-a9b7-68e48e187952",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen presenta buena coherencia y orden lógico; se repite la conclusión en varias frases, pero no hay contradicciones ni falta de consistencia metodológica.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"El bullying y la convivencia escolar en estudiantes del 5to grado de primaria de la Institución Educativa Privada “Bilingüe Peruano Español”, Juliaca - 2018\"\n\nResumen:\n\n\"El objetivo principal de la presente investigación fue determinar el nivel de relación entre el bullying y la convivencia escolar en estudiantes del 5to grado de primaria de la Institución Educativa Privada “Bilingüe Peruano Español”, Juliaca - 2018. Se utilizó un diseño no experimental de tipo descriptivo correlacional. La población está conformada por 120 estudiantes del nivel primario de la Institución Educativa Bilingüe Peruano Español, se usó como muestras a 32 estudiantes del 5to año de primaria de la Institución Educativa Bilingüe Peruano Español, para la recolección de datos se usó dos cuestionarios denominados cuestionario de Bullying y convivencia escolar de 25 y 17 items respectivamente. Se concluye que si existe relación entre el bullying y la convivencia escolar donde se observa que la correlación de Pearson es de 0,357; y esto indica un nivel de correlación baja, de la misma manera se observa el nivel de significancia del p – valor de 0.045, también se llegó a las siguientes conclusiones específicas: Existe relación entre el bullying y el desarrollo personal donde se observa que la correlación de Pearson es de 0,340; y esto indica un nivel de correlación baja, de la misma manera se observa el nivel de significancia del p – valor de 0.057, existe relación entre el bullying y las relaciones interpersonales donde se observa que la correlación de Pearson es de 0,198; y esto indica un nivel de correlación muy baja, de la misma manera se observa el nivel de significancia del p – valor de 0.277 y por último existe relación entre el bullying y el desarrollo ético donde se observa que la correlación de Pearson es de 0,200; y esto indica un nivel de correlación baja, de la misma manera se observa el nivel de significancia del p – valor de 0.272; en tal sentido rechazamos la hipótesis nula y se acepta la hipótesis alterna.\"\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 1 if objective present. Yes: \"El objetivo principal de la presente investigación fue determinar el nivel de relación entre el bullying y la convivencia escolar...\" So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. Yes: \"Se utilizó un diseño no experimental de tipo descriptivo correlacional. La población está conformada por 120 estudiantes... se usó como muestras a 32 estudiantes... se usó dos cuestionarios...\" So 1.\n\n- D1_imryd_resultados: 1 if results present. Yes: \"Se concluye que si existe relación... correlación de Pearson 0,357; p=0.045\" etc. So 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. Yes: \"Se concluye que si existe relación...\" and also \"en tal sentido rechazamos la hipótesis nula y se acepta la hipótesis alterna.\" So 1.\n\n- D1_orden_logico: 1 if components present in logical order. The order: objective, methodology, results, conclusions. Yes. So 1.\n\n- D2_coherencia: 1-5. We need to evaluate flow. Let's read: The summary starts with objective, then methodology, then results, then conclusions. The text is somewhat repetitive but flows. There's some repetition: \"Se concluye que si existe relación...\" then \"también se llegó a las siguientes conclusiones específicas: Existe relación entre el bullying y el desarrollo personal...\" etc. The flow is okay but maybe a bit repetitive. I'd rate 4. Because it's coherent, but some redundancy. So D2_coherencia = 4.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where, to whom, etc. The summary does not provide context beyond stating the objective. It doesn't explain why it's important, or the broader context. So 0.\n\n- D3_metodo_detallado: 1 if at least two precisions. We have design type, population size, sample size, instruments. That's at least two. So 1.\n\n- D3_resultados_concretos: 1 if results provide specific content: yes, correlation coefficients, p-values. So 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to objective. The conclusion states that there is a relationship between bullying and school coexistence, with correlation 0.357, p=0.045. That addresses the objective of determining the level of relationship. So 1.\n\n- D4_consistencia: 1-5. Consistency between what is said and what is presented. The summary says \"Se concluye que si existe relación...\" and then gives correlation and p-values. That is consistent. No contradictions. So 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes. We can note that the summary is repetitive but coherent. Also mention that the conclusion includes multiple specific conclusions but they all support the main conclusion. We can add a short note.\n\nLet's produce JSON with all fields. Ensure values are integers or null. All required fields present.\n\nCheck schema: required fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nAll present.\n\nLet's produce compact JSON."
+    }
+   }
+  ],
+  "created": 1789700195,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_66891002f6",
+  "usage": {
+   "completion_tokens": 1409,
+   "prompt_tokens": 10075,
+   "total_tokens": 11484,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1255,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.191027224,
+   "prompt_time": 0.579388552,
+   "completion_time": 1.473888113,
+   "total_time": 2.053276665
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s73ewwe5d91ecnffjsnwy9",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T02:56:35.623840+00:00"
+}

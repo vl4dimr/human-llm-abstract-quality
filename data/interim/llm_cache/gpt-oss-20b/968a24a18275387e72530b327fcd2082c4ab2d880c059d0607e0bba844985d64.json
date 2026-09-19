@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-150",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Falta contextualización del problema"
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Falta contextualización del problema\"}",
+ "usage": {
+  "input_tokens": 9955,
+  "output_tokens": 2419,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.97467303276062,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:44:42.859296+00:00",
+ "raw": {
+  "id": "chatcmpl-65ab0c99-29e0-43c2-bc30-94f4af41b8df",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Falta contextualización del problema\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate according to protocol. We must produce JSON with fields as specified. Need to evaluate each field.\n\nWe analyze the summary:\n\nTitle: Autoestima y relaciones interpersonales en estudiantes... It's just title.\n\nSummary text: \n\"La presente investigación se desarrolló con el propósito de determinar la relación entre autoestima y relaciones interpersonales en estudiantes del tercero al quinto semestre de la Facultad de Enfermería de la Universidad Nacional del Altiplano – Puno 2018, el estudio fue de tipo descriptivo con diseño correlacional, la muestra estuvo constituida por 98 estudiantes, la técnica utilizada fue la encuesta, y los instrumentos: uno que mide el nivel de autoestima a través de la escala de Rosenberg y el otro que mide las relaciones interpersonales, para el análisis de datos se utilizó la estadística inferencial y se comprobó la relación de las variables mediante la prueba Chi Cuadrada, los resultados muestran que existe relación entre autoestima y relaciones interpersonales, lo cual se comprueba mediante la prueba estadística de la Ji-Cuadrada X2c (13.14) > X2t (9.488). En cuanto a los resultados del nivel de autoestima 51,02% presentan autoestima alta, el 30,61% autoestima media y 18.37% autoestima baja; respecto a los resultados de las relaciones interpersonales el 56,12% presentan nivel alto, el 37.76% nivel medio y el 6,12% presentan nivel bajo. Se concluye que los estudiantes que presentaron autoestima de nivel alto muestran relaciones interpersonales favorables, y aquellos estudiantes que presentaron autoestima de nivel medio y bajo muestran relaciones interpersonales adecuados.\"\n\nWe need to annotate each dimension.\n\nDimension 1: Adherencia a IMRyD.\n\nWe need fields:\n\n- D1_imryd_objetivo: 1 if we can answer what they aim to investigate. The summary states: \"propósito de determinar la relación entre autoestima y relaciones interpersonales en estudiantes\". Yes, objective present. So 1.\n\n- D1_imryd_metodologia: 1 if we can say how they obtained knowledge. They describe: \"estudio de tipo descriptivo con diseño correlacional, muestra 98 estudiantes, técnica encuesta, instrumentos: escala de Rosenberg y otras, análisis de datos con estadística inferencial, prueba chi cuadrada.\" This is method details. So 1.\n\n- D1_imryd_resultados: 1 if they communicate what they found, not method. They say: \"los resultados muestran que existe relación entre autoestima y relaciones interpersonales... prueba Chi Cuadrada... X2c (13.14) > X2t (9.488). En cuanto a los resultados del nivel de autoestima 51,02% alta, 30,61% media, 18,37% baja; y para relaciones interpersonales 56,12% alta, 37,76% media, 6,12% baja.\" This is clear results. So 1.\n\n- D1_imryd_conclusiones: 1 if they close beyond repeating results; interpret, implication, answer to objective, recommendation. They conclude: \"Se concluye que los estudiantes que presentaron autoestima de nivel alto muestran relaciones interpersonales favorables, y aquellos estudiantes que presentaron autoestima de nivel medio y bajo muestran relaciones interpersonales adecuados.\" They interpret. They didn't recommend anything but conclusion is there. So 1.\n\n- D1_orden_logico: 1 if components present appear in logical sequence: objective, method, results, conclusion. The summary: starts with objective, then method, then results, then conclusion. Yes. So 1.\n\nNow D2_coherencia: scale 1-5. We need to judge coherence flow.\n\nText: \"La presente investigación se desarrolló con el propósito de determinar la relación entre autoestima y relaciones interpersonales en estudiantes del tercero al quinto semestre de la Facultad de Enfermería de la Universidad Nacional del Altiplano – Puno 2018, el estudio fue de tipo descriptivo con diseño correlacional, la muestra estuvo constituida por 98 estudiantes, la técnica utilizada fue la encuesta, y los instrumentos: uno que mide el nivel de autoestima a través de la escala de Rosenberg y el otro que mide las relaciones interpersonales, para el análisis de datos se utilizó la estadística inferencial y se comprobó la relación de las variables mediante la prueba Chi Cuadrada, los resultados muestran que existe relación entre autoestima y relaciones interpersonales, lo cual se comprueba mediante la prueba estadística de la Ji-Cuadrada X2c (13.14) > X2t (9.488). En cuanto a los resultados del nivel de autoestima 51,02% presentan autoestima alta, el 30,61% autoestima media y 18.37% autoestima baja; respecto a los resultados de las relaciones interpersonales el 56,12% presentan nivel alto, el 37.76% nivel medio y el 6,12% presentan nivel bajo. Se concluye que los estudiantes que presentaron autoestima de nivel alto muestran relaciones interpersonales favorables, y aquellos estudiantes que presentaron autoestima de nivel medio y bajo muestran relaciones interpersonales adecuados.\"\n\nFlow: It's a bit long, but generally flows: objective, method, results, conclusion. There is no major jumps. Some punctuation issues: \"la técnica utilizada fue la encuesta, y los instrumentos: uno que mide...\" That's fine. The conclusion repeats the results but interprets. The coherence seems good, maybe a 5 or 4. The text has no abrupt jumps or terminological drift. There's one potential minor: they refer to \"relaciones interpersonales\" and \"relaciones interpersonales\" but consistent. There's no repetition of terms or contradictory statements. So I'd give D2_coherencia = 5. Because it flows smoothly, no issues.\n\nNow D3 fields:\n\n- D3_contextualizacion: 1 if summary situates problem: why important, where, who affected, against which norm. Does the summary include context? It says: \"determine la relación entre autoestima y relaciones interpersonales en estudiantes del tercero al quinto semestre de la Facultad de Enfermería...\" It doesn't say why it matters, but maybe implicit: it mentions the context (facultad). There's no explanation of why it's important. So D3_contextualizacion = 0.\n\n- D3_metodo_detallado: 1 if at least two precise details about procedure: design, sample size, technique of sampling, instrument, test etc. They provide: design: descriptivo con diseño correlacional; sample: 98 estudiantes; technique: encuesta; instruments: escala de Rosenberg and instrument for relationships; analysis: chi cuadrada. So yes, at least two. So 1.\n\n- D3_resultados_concretos: 1 if results provide concrete content: specific numbers, categories, relationships with direction. They report percentages and chi-square values: yes. So 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to objective. The objective: determine relationship between self-esteem and interpersonal relationships. Conclusion: states that students with high self-esteem have favorable interpersonal relationships, those with medium/lower have adequate. This addresses the objective: relationship between self-esteem level and interpersonal relationships. So yes, 1.\n\nNow D4_consistencia: scale 1-5 measuring consistency between what summary says it did and what presented. We must assess if there's any inconsistency.\n\nThey state method: descriptive correlational, sample 98, survey, instruments etc. They report results: relationship exists (Chi-square significant), percentages. Conclusion: high self-esteem leads to favorable relationships, medium/lower leads to adequate. Does this conflict with results? The results say there is relationship. They don't provide direction of relationship in chi-square (just significance). But conclusion says high self-esteem leads to favorable, medium/lower leads to adequate. That seems consistent: high self-esteem -> favorable; medium/below -> adequate. There's no contradictory claim like \"no relationship\" or \"contradicts data\". So consistency high.\n\nHowever, we need to see if they mention \"adecuado\" which might be ambiguous but still consistent. They didn't provide test for direction; but they interpret. But consistency wise, no contradiction. So D4_consistencia = 5.\n\nBut check if there's any mis-match: They say \"el nivel de autoestima 51,02% presentan autoestima alta, 30,61% media y 18,37% baja\". Similarly relationships: 56,12% high, 37,76% medium, 6,12% low. Conclusion: \"los estudiantes que presentaron autoestima de nivel alto muestran relaciones interpersonales favorables, y aquellos estudiantes que presentaron autoestima de nivel medio y bajo muestran relaciones interpersonales adecuados.\" This interpretation is plausible. There's no contradictory claim like \"no hay relación\" or \"la relación es inversa\". So consistency is good.\n\nSo D4_consistencia = 5.\n\nNow no_evaluable: Since it's a summary with methodology, no_evaluable = 0.\n\nObservaciones: We might add some comments: maybe note that no contextualization present; also maybe mention slight lack of explanation of importance but not required.\n\nWe should produce JSON with required fields. The schema requires all fields, type integer or null. All must be present.\n\nLet's assign:\n\nD1_imryd_objetivo: 1\nD1_imryd_metodologia: 1\nD1_imryd_resultados: 1\nD1_imryd_conclusiones: 1\nD1_orden_logico: 1\nD2_coherencia: 5\nD3_contextualizacion: 0\nD3_metodo_detallado: 1\nD3_resultados_concretos: 1\nD3_conclusion_responde: 1\nD4_consistencia: 5\nno_evaluable: 0\nobservaciones: maybe empty string or explanation. Let's include something like: \"Resumen no contextualiza el problema.\" but we may keep empty.\n\nBut they want a string. Let's add: \"Falta contextualización del problema\". That is acceptable.\n\nCheck JSON formatting: all keys exactly as in schema: D1_imryd_conclusiones etc.\n\nLet's craft JSON:\n\n{\n  \"D1_imryd_objetivo\":1,\n  \"D1_imryd_metodologia\":1,\n  \"D1_imryd_resultados\":1,\n  \"D1_imryd_conclusiones\":1,\n  \"D1_orden_logico\":1,\n  \"D2_coherencia\":5,\n  \"D3_contextualizacion\":0,\n  \"D3_metodo_detallado\":1,\n  \"D3_resultados_concretos\":1,\n  \"D3_conclusion_responde\":1,\n  \"D4_consistencia\":5,\n  \"no_evaluable\":0,\n  \"observaciones\":\"Falta contextualización del problema\"\n}\n\nCheck types: integers, no null. All good.\n\nReturn only this JSON."
+    }
+   }
+  ],
+  "created": 1789775082,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_37c9245f64",
+  "usage": {
+   "completion_tokens": 2419,
+   "prompt_tokens": 9955,
+   "total_tokens": 12374,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 2288,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.193566044,
+   "prompt_time": 0.057946049,
+   "completion_time": 2.45719429,
+   "total_time": 2.5151403390000002
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vegt9ce419azrgzdpzrf15",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:44:42.859309+00:00"
+}

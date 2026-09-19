@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-078",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Objetivo implícito; falta contextualización y conclusión; método con mínimas precisiones; resultados concretos."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Objetivo implícito; falta contextualización y conclusión; método con mínimas precisiones; resultados concretos.\"}",
+ "usage": {
+  "input_tokens": 9859,
+  "output_tokens": 1541,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.17476487159729,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:25:24.946066+00:00",
+ "raw": {
+  "id": "chatcmpl-713c98a2-23ad-4a30-9ed2-e3ea0d256e3f",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":0,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Objetivo implícito; falta contextualización y conclusión; método con mínimas precisiones; resultados concretos.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate according to protocol. Fields required: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nLet's parse the summary.\n\nTitle: Desarrollo de un sistema web para optimizar el proceso de pedidos en la Empresa Nora Delivery Puno 2024\n\nResumo: \n- First paragraph: \"En esta investigación se implementó un sistema web de gestión de pedidos, compatible con dispositivos móviles, para optimizar el proceso de ventas en la empresa NORA DELIVERY. El sistema, desarrollado con software de código abierto, permite el acceso desde cualquier dispositivo móvil con conexión a internet, cumpliendo así con los objetivos planteados en este estudio.\"\nThis indicates objective: \"optimizar el proceso de ventas en la empresa NORA DELIVERY\" but the objective is not explicitly stated as objective sentence but implied: \"para optimizar el proceso de ventas\". But D1_imryd_objetivo requires that can answer \"¿qué se propuso averiguar?\" In this case, they are implementing a system, but the objective might be \"optimizar el proceso de ventas\". It's more a development rather than a research question. In the context of research, the objective is \"optimizar el proceso de ventas\". This is a clear statement: \"para optimizar el proceso de ventas en la empresa NORA DELIVERY.\" That qualifies as an objective. So D1_imryd_objetivo = 1.\n\n- D1_imryd_metodologia: \"Se utilizó software libre para desarrollar un sistema con soporte para dispositivos móviles... solución tecnológica se implementó utilizando PHP y MySQL\" Also \"El proceso de captura de pedidos fue optimizado mediante el uso de tecnología ...\". So there is a method: software development approach, programming languages, database. We have at least two precisions: programming language (PHP), database (MySQL). That qualifies as 1. So D1_imryd_metodologia = 1.\n\n- D1_imryd_resultados: \"El proceso de captura de pedidos fue optimizado ... donde aproximadamente el 70% manifestó estar satisfecho con el nuevo sistema implementado.\" That's a result: 70% satisfied. So D1_imryd_resultados = 1.\n\n- D1_imryd_conclusiones: There's no explicit conclusion section. The summary ends after results: no further interpretation beyond the results. The summary does not say \"concluye que\". So D1_imryd_conclusiones = 0.\n\n- D1_orden_logico: The components present: objective (first sentence), methodology (next sentences), results (final part). The order is objective → methodology → results. Conclusión absent. That's logical order among those present. So D1_orden_logico = 1.\n\n- D2_coherencia: We must evaluate coherence 1-5. Let's check flow: It starts with objective statement, then details about implementation, then results. It flows logically. No abrupt jumps. Some repetitive mention of software libre but okay. I would give 4 maybe 5. Let's think: The sentences are: 1) objective statement; 2) description of system and implementation; 3) description of modules; 4) optimization of process; 5) results. The flow is good. No contradictions. I'd give 5. But we need to decide. The protocol says: 5: Progresión impecable. 4: Fluye bien, con alguna aspereza menor que no estorba. I'd rate 5? It seems pretty coherent. So D2_coherencia = 5.\n\n- D3_contextualizacion: This field requires situating the problem: why it matters, where, to whom. The summary: \"para optimizar el proceso de ventas en la empresa NORA DELIVERY\" but no context about significance. It does not explain why it's important, not a broader context. It doesn't mention the impact beyond the company. So I think D3_contextualizacion = 0.\n\n- D3_metodo_detallado: We need at least two precisions: design, type of study, sample, instrument, test, etc. For a software development study: we have \"software libre\", \"PHP\", \"MySQL\". That's 2: programming language and database. That qualifies. So D3_metodo_detallado = 1.\n\n- D3_resultados_concretos: We have \"70% manifestó estar satisfecho\". That's a concrete result. So D3_resultados_concretos = 1.\n\n- D3_conclusion_responde: No conclusion present. So D3_conclusion_responde = 0.\n\n- D4_consistencia: Consistency between what is declared and presented. We have objective, method, results. There is no conflict. The conclusion not present. But D4 measures coherence between what summary says it did and what it presents. The summary says it was implemented with PHP and MySQL, uses software libre. Then says results from surveys. All consistent. So D4_consistencia = 5? Let's see scale: 5: fully coherent. 4: one minor terminological imprecision. 3: one visible discord. 2: several discord. 1: open contradiction. There is no contradiction. So 5.\n\n- no_evaluable: The summary appears to be a summary. It is not a license etc. So no_evaluable = 0.\n\n- observaciones: We can note that the summary lacks explicit conclusion, and that the contextualization is missing. Provide brief note: \"Objetivo implícito; falta contextualización y conclusión\". Also maybe mention that the method details are minimal but sufficient. Observations string.\n\nMake sure all fields included. The JSON must be compact.\n\nNow produce JSON.\n\nCheck types: integers or null. Provide integers.\n\nAll fields present: D1_imryd_objetivo=1, D1_imryd_metodologia=1, D1_imryd_resultados=1, D1_imryd_conclusiones=0, D1_orden_logico=1, D2_coherencia=5, D3_contextualizacion=0, D3_metodo_detallado=1, D3_resultados_concretos=1, D3_conclusion_responde=0, D4_consistencia=5, no_evaluable=0, observaciones=\"Objetivo implícito; falta contextualización y conclusión; método con mínimas precisiones; resultados concretos.\"\n\nEnsure no extra spaces. Provide JSON."
+    }
+   }
+  ],
+  "created": 1789701924,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_ef00694abe",
+  "usage": {
+   "completion_tokens": 1541,
+   "prompt_tokens": 9859,
+   "total_tokens": 11400,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1393,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.239741363,
+   "prompt_time": 0.073702678,
+   "completion_time": 1.59726073,
+   "total_time": 1.670963408
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8r813e06r43rq411zk98k",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:25:24.946160+00:00"
+}

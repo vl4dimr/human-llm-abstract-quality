@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-012",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica con los componentes IMRyD. La coherencia es buena, aunque hay algunas repeticiones y salto de tema al mencionar el índice de higiene oral. La contextualización es cero porque el resumen comienza directamente con el objetivo. La metodología está detallada con el tipo de estudio, número de pacientes y herramientas utilizadas. Los resultados son concretos con porcentajes y mejoras notables. La conclusión responde al objetivo y a los resultados obtenidos. La consistencia metodológica es 3, ya que la mejora en el índice de higiene oral se menciona, pero no se explica cómo se relaciona con los resultados obtenidos."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica con los componentes IMRyD. La coherencia es buena, aunque hay algunas repeticiones y salto de tema al mencionar el índice de higiene oral. La contextualización es cero porque el resumen comienza directamente con el objetivo. La metodología está detallada con el tipo de estudio, número de pacientes y herramientas utilizadas. Los resultados son concretos con porcentajes y mejoras notables. La conclusión responde al objetivo y a los resultados obtenidos. La consistencia metodológica es 3, ya que la mejora en el índice de higiene oral se menciona, pero no se explica cómo se relaciona con los resultados obtenidos.\"\n}",
+ "usage": {
+  "input_tokens": 10917,
+  "output_tokens": 315,
+  "total_duration_s": 10.4666674
+ },
+ "latency_s": 10.489109754562378,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:49:23.308918+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:49:23.3001806Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica con los componentes IMRyD. La coherencia es buena, aunque hay algunas repeticiones y salto de tema al mencionar el índice de higiene oral. La contextualización es cero porque el resumen comienza directamente con el objetivo. La metodología está detallada con el tipo de estudio, número de pacientes y herramientas utilizadas. Los resultados son concretos con porcentajes y mejoras notables. La conclusión responde al objetivo y a los resultados obtenidos. La consistencia metodológica es 3, ya que la mejora en el índice de higiene oral se menciona, pero no se explica cómo se relaciona con los resultados obtenidos.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 10466667400,
+  "load_duration": 12762600,
+  "prompt_eval_count": 10917,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 352765000,
+  "eval_count": 315,
+  "eval_duration": 9986901000
+ },
+ "cached_at_utc": "2026-09-19T01:49:23.308933+00:00"
+}

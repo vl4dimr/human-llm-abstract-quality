@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-049",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "El resumen carece de contextualización (no indica la importancia del problema ni su alcance). La conclusión es breve y no incluye recomendaciones ni valoración de la significación estadística, aunque presenta la capacidad explicativa del modelo."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen carece de contextualización (no indica la importancia del problema ni su alcance). La conclusión es breve y no incluye recomendaciones ni valoración de la significación estadística, aunque presenta la capacidad explicativa del modelo.\"}",
+ "usage": {
+  "input_tokens": 9971,
+  "output_tokens": 1915
+ },
+ "latency_s": 3.543914318084717,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:51:10.232148+00:00",
+ "raw": {
+  "id": "chatcmpl-014b4f62-a5a7-4d67-b558-575c7bddfb58",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"El resumen carece de contextualización (no indica la importancia del problema ni su alcance). La conclusión es breve y no incluye recomendaciones ni valoración de la significación estadística, aunque presenta la capacidad explicativa del modelo.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones. All required.\n\nWe need to annotate the provided summary according to the protocol. Let's analyze.\n\nSummary in Spanish: \"Esta investigación tiene la finalidad de determinar las variables que inducen al abandono del tratamiento de tuberculosis - Red de Salud Puno, mediante un Modelo Logístico. Para cumplir con el objetivo se planteó como diseño de investigación el diseño descriptivo y como tipo de investigación, correlacional y explicativo, la población estuvo conformada por todos los pacientes de la Red de Salud Puno con diagnóstico de tuberculosis en el año 2017, que son en total de 60, pacientes del programa de prevención de la TBC, como muestra se tomó 34 pacientes que no abandonaron y 26 pacientes que abandonaron el tratamiento de tuberculosis. La técnica estadística utilizada para el análisis fue la Regresión Logística, usando para ello el programa estadístico SPSS 24.0. Los resultados fueron: las variables que inducen al abandono del tratamiento de tuberculosis - Red de Salud Puno, 2017 son: Dejó el tratamiento por las molestias causadas por las pastillas, Molestias durante el tratamiento, Calidad de servicio al paciente, Apoyo que reciben de parte del centro de salud. El Modelo Logístico es el siguiente: Y ̂= 2,013 – 2,940X6 + 0,415X17 + 1,310X23 – 1,870X24. Dónde: X6: Dejó el tratamiento por las molestias causadas por las pastillas, X17: molestias durante el tratamiento, X23: calidad de servicio al paciente, X24: apoyo que recibe. El cual explica en un 91.7%. Su fiabilidad.\"\n\nNow evaluate dimensions.\n\nD1_imryd_objetivo: Does the summary state what is being studied? \"Esta investigación tiene la finalidad de determinar las variables que inducen al abandono del tratamiento de tuberculosis\". Yes. So objective 1.\n\nD1_imryd_metodologia: Must indicate how knowledge was obtained, at least a procedural concrete. Here: design descriptive, type correlational and explanatory, population all patients, sample 34 vs 26, used logistic regression, program SPSS. That's more than enough. So 1.\n\nD1_imryd_resultados: Provide findings. It says the variables that induce abandonment: list of variables; model logistic with coefficients; explains 91.7%. That is a result. So 1.\n\nD1_imryd_conclusiones: Must contain closure interpreting or implying beyond just results. The summary ends: \"El cual explica en un 91.7%. Su fiabilidad.\" That seems like a conclusion? But it is more like a statement of explanation, not necessarily a conclusion that responds to objective. It says the logistic model explains 91.7%. This can be considered a conclusion. However, is there a conclusion that interprets or indicates significance? It's basically stating the model's explanatory power. That could be considered a conclusion. According to D1_conclusiones definition: \"Vale 1 cuando hay un cierre que va más allá de repetir el resultado: interpretación, implicación, respuesta explícita al objetivo, recomendación\". They have given the model explaining 91.7%, but no direct implication or recommendation. But maybe the mention \"El cual explica en un 91.7%.\" could be seen as concluding that the variables significantly induce abandonment. It's an interpretation of the result: that these variables explain 91.7% of the variance. I'd say yes, qualifies as a conclusion.\n\nThus D1_conclusiones = 1.\n\nD1_orden_logico: Are the components present in order: objective -> methodology -> results -> conclusion. Yes. Sequence: objective first, then methodology, then results, then conclusion. So 1.\n\nD2_coherencia: Need to rate 1-5. Evaluate flow. Summary is fairly cohesive. The transition: after objective, methodology, then results, then model. It flows logically, but some abrupt transitions? It starts objective, then design, then sample, then method, then results, then model. That's fine. Possibly some mild abruptness when listing variables as results, then model formula. But overall good. I'd rate 4: \"Fluye bien, con alguna aspereza menor\". Let's do 4.\n\nD3_contextualizacion: Does the summary situate the problem? It says \"para determinar las variables que inducen al abandono del tratamiento de tuberculosis - Red de Salud Puno, mediante un Modelo Logístico.\" It doesn't explain why it's important or the context, just the objective. It doesn't say why the problem matters. So 0.\n\nD3_metodo_detallado: Need at least two precisions. The summary includes design descriptive, type correlational and explanatory, population all patients, sample 34 vs 26, program SPSS, logistic regression. That's more than two. So 1.\n\nD3_resultados_concretos: Provide specific content. The results list variables: four variables, logistic equation, and 91.7% explanation. That's concrete. So 1.\n\nD3_conclusion_responde: Does the conclusion respond to the objective? The conclusion is \"El cual explica en un 91.7%. Su fiabilidad.\" That indicates that the variables explain 91.7% of the abandonment. That responds to the objective of determining variables that induce abandonment. So 1.\n\nD4_consistencia: Consistency between what was said and what was presented. Need to assess coherence. Did they present methodology and results that match conclusion? They present logistic regression model, which matches the conclusion. No contradictions. But maybe there is a potential issue: They state \"El cual explica en un 91.7%. Su fiabilidad.\" but they didn't provide statistical tests for significance of each variable (e.g., p-values). But that might be considered a minor detail. According to D4, they penalize use of \"significativo\" without test, or claiming significance without test. Here they didn't use \"significativo\". They just said \"el cual explica en 91.7%\". That is fine. There's no contradictory statement. So D4 = 5. However check \"El cual explica en un 91.7%. Su fiabilidad.\" This suggests the model's explanatory power. There's no explicit test but it's a result. They didn't mention any p-values. But consistency wise, the methodology of logistic regression is consistent with the results (coefficient model). The conclusion is consistent: they claim explanatory power. No conflict. So I'd give 5.\n\nno_evaluable: 0 (it's evaluable).\n\nobservaciones: Need to add any remarks: Maybe mention that the conclusion is limited as not providing significance tests or recommendations. Also mention that the summary lacks contextualization. So we can include that. Provide a string.\n\nWe must ensure each field present, no extra.\n\nReturn JSON compact. Let's build.\n\n{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 5,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen carece de contextualización (no indica la importancia del problema ni su alcance). La conclusión es breve y no incluye recomendaciones ni valoración de la significación estadística, aunque presenta la capacidad explicativa del modelo.\"\n}\n\nCheck schema: all fields present; each integer or null; no null needed. Observations is string. All good.\n\nNow ensure it's compact: no line breaks or spaces? It's okay. Provide JSON object."
+    }
+   }
+  ],
+  "created": 1789775469,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_851252edc2",
+  "usage": {
+   "completion_tokens": 1915,
+   "prompt_tokens": 9971,
+   "total_tokens": 11886,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1746,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.217102273,
+   "prompt_time": 0.508250237,
+   "completion_time": 1.991725616,
+   "total_time": 2.499975853
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vewmfje6hamm0nv1kg86ma",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:51:10.232179+00:00"
+}

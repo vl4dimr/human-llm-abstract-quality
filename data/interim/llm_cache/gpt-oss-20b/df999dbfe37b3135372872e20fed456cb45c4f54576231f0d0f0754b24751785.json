@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-063",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 9966,
+  "output_tokens": 1009,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 1.6009862422943115,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:52:56.059947+00:00",
+ "raw": {
+  "id": "chatcmpl-bc944dc8-1c20-41df-b9bc-2b7b8a813890",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields per schema. Must read the summary, annotate per protocol.\n\nGiven the summary: we need to evaluate D1 fields:\n\n- D1_imryd_objetivo: Does summary include explicit objective? Text says: \"Esta investigación tiene como objetivo optimizar la infraestructura...\" Then repeated: \"El objetivo es planificar una ingeniería escolar que actúe...\" So yes, objective present. So 1.\n\n- D1_imryd_metodologia: Does it indicate how? It mentions \"se realizó un examen del entorno rápido para evaluar...\" and \"se recopiló información mediante revisiones organizadas y semiorganizadas coordinadas con estudiantes e instructores.\" That seems like methodology description. It's present but minimal. According to D1_metodologia requires \"una indicación procedimental concreta\" like \"se aplicó una encuesta\". Here: \"se realizó un examen del entorno rápido\" might count as a procedure, but it's vague. But it's a method: \"examen del entorno\". According to rule, \"Una indicación procedimental concreta. 'Se aplicó una encuesta' basta.\" So I think yes. So 1.\n\n- D1_imryd_resultados: Does it state findings? It says \"Las consecuencias de este examen pusieron de manifiesto la importancia de los espacios...\" and \"mostraron que un clima muy planificado puede contribuir...\" That is a result: that climate helps. So 1.\n\n- D1_imryd_conclusiones: Does it give closing interpretation beyond results? It ends: \"lo cual es fundamental para alcanzar los objetivos educativos establecidos.\" That's somewhat a statement, but it's like implication that improved environment will help. That seems to be conclusion. But is it explicit? It might not be a separate concluding paragraph but final sentence. It might be considered a conclusion, yes. So 1.\n\n- D1_orden_logico: Check order: objective appears first, then methodology, then results, then conclusion. The summary starts with objective, then methodology, then results, then conclusion. Yes, order is correct. So 1.\n\n- D2_coherencia: Flow: The summary reads: objective, context, then methodology, then results, conclusion. Flow is okay but some repetition of objectives. \"El objetivo es planificar...\" repeated. Some sentences may feel repetitive but still coherent. I would rate maybe 4. It mentions \"El objetivo es planificar...\" again. Some transitions but overall understandable. I'd go 4.\n\n- D3_contextualizacion: Does summary situate the problem? It states: \"Actualmente, los espacios arquitectónicos de la institución sólo satisfacen la capacidad de alojar a la población de estudiantes sin satisfacer completamente sus necesidades.\" That is contextualizing the problem. So yes 1.\n\n- D3_metodo_detallado: Need at least two precise details. It says \"se realizó un examen del entorno rápido\" (one). \"se recopiló información mediante revisiones organizadas y semiorganizadas coordinadas con estudiantes e instructores.\" That's second. So 1.\n\n- D3_resultados_concretos: Provides \"las consecuencias de este examen pusieron de manifiesto la importancia de los espacios...\" but no specific numbers, categories, or stats. Not concrete. So 0.\n\n- D3_conclusion_responde: Does conclusion answer objective? Objective: optimize infrastructure to act as sensorial-reactive. Conclusion: \"lo cual es fundamental para alcanzar los objetivos educativos establecidos.\" It doesn't directly tie to objective but implies. But the conclusion seems to be that improving environment will help. It somewhat responds. I think it responds. So 1.\n\n- D4_consistencia: Consistency between method and results. Method: exam of environment and collecting info. Results: importance of spaces. Conclusion: helps. Consistency appears okay, no contradictions. There's no mention of statistical significance. So 5? But must check if any discordances: no mention of contradictory. So 5.\n\n- no_evaluable: 0.\n\n- observaciones: maybe add notes about lack of quantitative details, but not needed. We can put empty string or some note. Observations field required, can be empty string.\n\nReturn JSON with all fields. Ensure values are ints or null. Use null if not applicable but we have all.\n\nNow produce compact JSON."
+    }
+   }
+  ],
+  "created": 1789775575,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_84bb35977d",
+  "usage": {
+   "completion_tokens": 1009,
+   "prompt_tokens": 9966,
+   "total_tokens": 10975,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 883,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.216120382,
+   "prompt_time": 0.065732098,
+   "completion_time": 1.051925758,
+   "total_time": 1.1176578560000001
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vezx93ed2t5eanttaskeez",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:52:56.059977+00:00"
+}

@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-158",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 9981,
+  "output_tokens": 970,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 1.596362590789795,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:45:32.907351+00:00",
+ "raw": {
+  "id": "chatcmpl-89c4fd61-f4de-4c7e-9064-6eb7dc33d607",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must produce JSON according to schema. All required fields must be present. Provide integer 0,1 or null if not applicable.\n\nWe need to annotate each field.\n\nLet's parse summary:\n\nTitle: ... but not needed.\n\nResumen: Spanish.\n\nComponents:\n\nObjective: \"El objetivo general de esta investigación fue determinar la relación entre la calidad de atención de enfermería y la satisfacción de los pacientes...\" => objective present, 1.\n\nMethodology: \"Metodología: Se realizó un estudio de enfoque cuantitativo, con diseño no experimental, transversal y de nivel descriptivo-correlacional. La muestra fue de tipo censo, ... Para la recolección de datos se utilizaron los cuestionarios validados ... \" => methodology present with many precisions. So 1.\n\nResults: \"Los resultados descriptivos identificaron que el nivel de calidad de atención de enfermería predominante fue 'Regular' (55.17%), mientras que el nivel de satisfacción fue mayoritariamente 'Satisfecho' (68.97%). El análisis inferencial, mediante la prueba Rho de Spearman, demostró una correlación positiva, muy alta y estadísticamente significativa entre ambas variables.\" => results present, with concrete numbers. So 1.\n\nConclusions: \"Se concluye que la calidad de atención de enfermería está directa y significativamente relacionada con la satisfacción del paciente. El nivel 'Regular' de la calidad es un factor determinante del nivel 'Satisfecho', evidenciando la necesidad de implementar planes de mejora...\" => conclusion present, responds to objective, gives implication. So 1.\n\nOrder logic: objective, methodology, results, conclusion, in that order. The summary: objective first, then methodology, results, conclusion. Yes. So 1.\n\nD2 coherence: We need to score 1-5.\n\nLet's evaluate. Text flows well: introduction (importance of quality). objective. methodology. results. conclusion. Transition from objective to methodology is okay. From results to conclusion, the conclusion repeats results and adds implication. Some redundancy but fine. Coherence seems good, maybe 4 or 5.\n\nLet's read again: \"La calidad de la atención de enfermería es fundamental en la experiencia hospitalaria del paciente. El objetivo general de esta investigación...\" That is introduction. Then methodology: \"Metodología: Se realizó...\" That is clear. Results: \"Los resultados descriptivos identificaron...\" That flows. Conclusion: \"Se concluye que la calidad...\". That flows.\n\nAny abrupt jumps? No.\n\nThus D2_coherencia = 5.\n\nNow D3 contextualizacion: need to see if the summary situates problem: why it's important, where occurs, to whom it applies, compare to standard. It starts: \"La calidad de la atención de enfermería es fundamental en la experiencia hospitalaria del paciente.\" That's a statement of importance. Then objective. Does it mention location? \"pacientes del servicio de medicina del Hospital Regional Manuel Núñez Butrón - Puno, 2025\" yes. So contextualization present. So 1.\n\nD3 metodo_detallado: Must provide at least two precise details. It has: design type, sample, instruments used, test used. So 1.\n\nD3 resultados_concretos: results include percentages 55.17% and 68.97% and correlation high and significant. That's concrete. So 1.\n\nD3_conclusion_responde: conclusion answers objective: yes. So 1.\n\nD4_consistencia: coherence between methodology and results and conclusion. Need to check for contradictions. They say correlation positive, very high, significant. In conclusion they say \"calidad ... está directa y significativamente relacionada con la satisfacción.\" That's consistent. No contradictions. So D4_consistencia = 5.\n\nno_evaluable: 0? The text is a summary, has methodology. So evaluable, not no_evaluable. So 0.\n\nobservaciones: any remarks. Could note nothing. We'll give empty string or \"\".\n\nAll required fields present.\n\nLet's produce JSON. Ensure all fields appear.\n\nCheck that values are integers or null.\n\nLet's produce.\n\n"
+    }
+   }
+  ],
+  "created": 1789775132,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_9b8528b477",
+  "usage": {
+   "completion_tokens": 970,
+   "prompt_tokens": 9981,
+   "total_tokens": 10951,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 844,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.240561248,
+   "prompt_time": 0.071388231,
+   "completion_time": 1.024184624,
+   "total_time": 1.095572855
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vejcgce7qrfxj72sq1ey1t",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:45:32.907368+00:00"
+}

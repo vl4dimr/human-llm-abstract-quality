@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-144",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Resumen sin encabezados, pero cumple con todas las dimensiones."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin encabezados, pero cumple con todas las dimensiones.\"}",
+ "usage": {
+  "input_tokens": 9906,
+  "output_tokens": 1271,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 1.9418277740478516,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:12:42.926706+00:00",
+ "raw": {
+  "id": "chatcmpl-3fad5604-88ad-4250-8a07-c663e19e58e0",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Resumen sin encabezados, pero cumple con todas las dimensiones.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's analyze the summary.\n\nTitle: \"Sistema para detección y reconocimiento facial utilizando técnicas híbridas en imágenes y secuencias de video Puno 2013\"\n\nResumen: (in Spanish)\n\n\"Reconocer la identidad de un individuo de forma automática es aún, una tarea que no logra alcanzar una tasa de éxito del 100%, por lo que el presente trabajo buscó mejorar la tasa de reconocimiento; dando énfasis a los métodos de extracción y clasificación de características. En este sentido, se propuso mejorar el ratio para el reconocimiento de rostros mediante la representación de las imágenes, utilizando la transformada Wavelets de Gabor sobre las imágenes en escala de grises obtenida luego de normalizar las imágenes originales, posteriormente a la nueva representación obtenida se le aplica la técnica de Análisis de Componentes Principales (PCA) para obtener y constituir luego el vector de características de las imágenes de rostros. A continuación se aplica un clasificador basado en Maquinas de Soporte Vectorial (SVM). El método fue probado sobre una base de datos de imágenes de rostros constituida entre los bancos de rostros FERET, ORL e imágenes obtenidas por los responsables de la investigación. Se concluye que la combinación de las técnicas Transformada Wavelet de Gabor y Análisis de Componentes Principales en el proceso de extracción de características y la clasificación de imágenes basada en Maquinas de Soporte Vectorial, logran una tasa de reconocimiento superior al 95%.\"\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 1 if objective present. The summary says: \"el presente trabajo buscó mejorar la tasa de reconocimiento\". That is objective. So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. The summary describes methodology: representation using Gabor wavelets, PCA, SVM, tested on database. So 1.\n\n- D1_imryd_resultados: 1 if results present. It says \"logran una tasa de reconocimiento superior al 95%.\" So yes. 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. It says \"Se concluye que la combinación ... logran una tasa de reconocimiento superior al 95%.\" That is a conclusion. So 1.\n\n- D1_orden_logico: 1 if components present in logical order. The summary: objective, methodology, results, conclusion. The order: first objective, then methodology, then results, then conclusion. So 1.\n\n- D2_coherencia: scale 1-5. We need to evaluate flow. The summary is fairly coherent. It flows from objective to methodology to results to conclusion. Some repetition? It is fairly coherent. I'd give 5 maybe. But check for any abrupt jumps. The summary is a single paragraph, but it flows logically. I'd give 5.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where, etc. The summary says \"Reconocer la identidad de un individuo de forma automática es aún, una tarea que no logra alcanzar una tasa de éxito del 100%\". That gives context: the problem is recognition accuracy. So yes. 1.\n\n- D3_metodo_detallado: 1 if at least two precisions about procedure. The summary gives: representation using Gabor wavelets, PCA, SVM, tested on database FERET, ORL. That's more than two. So 1.\n\n- D3_resultados_concretos: 1 if results provide specific content: \"tasa de reconocimiento superior al 95%.\" That's a concrete result. So 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to objective. The objective was to improve recognition rate. The conclusion says they achieved >95% recognition. So yes. 1.\n\n- D4_consistencia: scale 1-5. We need to check consistency between methodology and results. The methodology: Gabor wavelets, PCA, SVM, tested on database. Results: >95% recognition. That seems consistent. No contradictions. So 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes. We can add a note: \"No encabezados, but coherent.\" But we can leave empty string or a note. The schema requires string. We can provide an empty string or a note. Provide a note: \"Resumen sin encabezados, pero cumple con todas las dimensiones.\" Provide that.\n\nCheck that all required fields present. Yes.\n\nNow produce JSON compact. Ensure no trailing spaces. Provide as single line.\n\nLet's produce:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Resumen sin encabezados, pero cumple con todas las dimensiones.\"\n}\n\nCheck JSON validity: all keys are strings, values are numbers or string. Good.\n\nReturn only JSON."
+    }
+   }
+  ],
+  "created": 1789701162,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_a4315eb300",
+  "usage": {
+   "completion_tokens": 1271,
+   "prompt_tokens": 9906,
+   "total_tokens": 11177,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1134,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.243136309,
+   "prompt_time": 0.053321626,
+   "completion_time": 1.3659704559999999,
+   "total_time": 1.4192920820000001
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s81038egjaqn5fd01e20vj",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:12:42.926838+00:00"
+}

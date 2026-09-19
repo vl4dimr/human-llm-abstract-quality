@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-013",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "No se reportaron pruebas estadísticas, pero no afecta la consistencia."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No se reportaron pruebas estadísticas, pero no afecta la consistencia.\"}",
+ "usage": {
+  "input_tokens": 10098,
+  "output_tokens": 1513,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 2.4365742206573486,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:47:10.404604+00:00",
+ "raw": {
+  "id": "chatcmpl-bebc302a-8ad9-4085-a401-50478766c4c2",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No se reportaron pruebas estadísticas, pero no afecta la consistencia.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields per schema. Evaluate.\n\nFirst, determine if the summary is evaluable: yes.\n\nNow, evaluate each field:\n\nWe have to analyze the summary.\n\nSummary: \"El trabajo de investigación en la Unidad Minera Las Águilas – CIEMSA tiene como objetivo, determinar la capacidad de anclaje del Split set corrugado con cartuchos de cemento respecto al Split set convencional para una determinada calidad del macizo rocoso basados en la clasificación de Bieniawski 1989, la investigación es descriptiva, explicativa y aplicativa.\"\n\nThat is objective: yes, 1.\n\nNext methodology: It says the study is descriptive, explanatory and applicative; it also gives details of the rock classification, 10-13 stations, loads on bolts, etc. We need to determine if methodology is present: yes, there is a description: \"La investigación es descriptiva, explicativa y aplicativa\" and details of loads and test conditions. It contains design (descriptive study), but does it have specific methodology: It gives the approach: measuring load on different bolt types at different stations. It doesn't mention design specifics like sample selection or instruments beyond describing load measurement. But we need at least one concreteness: \"La carga promedio que soportaron los pernos ...\" That qualifies. So D1_metodologia = 1.\n\nResults: It reports numeric results: loads, capacities. So D1_resultados = 1.\n\nConclusions: The final part says: \"como resultado de las pruebas realizadas el Split set corrugado tiene mayor capacidad de anclaje respecto a Split set convencional, considerando estos resultados es recomendable hacer uso de Split set corrugado y se puede adicionar cartuchos de cemento.\" That is a conclusion: yes, it interprets and recommends usage. So D1_conclusiones = 1.\n\nOrder: The sequence: objective, then methodology, then results, then conclusion. The summary begins with objective, then methodology description, then results, then conclusion. So order logical = 1.\n\nD2 coherencia: We need to assess flow. The summary starts with objective. Then it gives descriptive details: rock quality, loads, etc. Flow is coherent: It goes from objective to methods (though not explicit headings), then results, then conclusion. There is some repetition of objective phrase. There is some redundancy in description of rock quality, but overall coherent. I'd rate 4 maybe? Let's evaluate scale: 5 - impeccable progression. 4 - good with minor aspereza. 3 - some jumps. 2 - need to reread. 1 - incoherent. The summary seems fairly coherent; small issues: repeated mention of rock quality after methodology description? Actually after objective they immediately describe rock quality, then loads. Flow: objective → rock quality description (background) → loads and capacities → conclusion. That seems fine. So I'd give 4. Because minor repetition but not significant.\n\nD3_contextualizacion: Does summary provide context? It begins with objective and then provides details about rock quality, classification, location. That situates the problem: \"La calidad del macizo rocoso en By Pass 815 NE es de RMR 35 – 46.75\" It describes the context. So D3_contextualizacion = 1.\n\nD3_metodo_detallado: Need at least two precise details about procedure: design, sample size, instrument, etc. We have design: descriptive, explanatory, applicative. Sample: \"trece estaciones geomecánicas\" (13 stations). That counts as size? The sample size of stations: 13. They mention loads at different bolt types; measurement of load. So yes at least two precisions: design (descriptive) and n=13 stations, load measurement. So D3_metodo_detallado = 1.\n\nD3_resultados_concretos: The results are numeric: loads (5.7t, 7.0t, 7.5t, 8.2t) and capacities (1.1, 1.4, 1.5, 1.6 t/pie). That is concrete. So D3_resultados_concretos = 1.\n\nD3_conclusion_responde: The conclusion says the corrugado has higher capacity and recommends using it, which addresses the objective (to determine capacity differences). So yes. So D3_conclusion_responde = 1.\n\nD4_consistencia: Evaluate coherence between methodology and results and conclusions. Are there contradictions? The study says it's descriptive, explanatory, applicative, but it uses a descriptive study across 13 stations measuring load. That is coherent. Conclusion uses \"considering these results it is recommended...\" That's consistent. No contradictory statements. So D4_consistencia = 5.\n\nno_evaluable: 0 since it's a valid summary.\n\nobservaciones: Any special notes? Maybe note that it's a mixed descriptive study but no statistical tests. No conflict. Could add note: \"No se reportan pruebas estadísticas, pero no se requiere para la evaluación de consistencia.\" But optional.\n\nWe'll set \"observaciones\": \"N/A\" or empty string. Schema says type string. We'll put \"\" or maybe \"N/A\". Use \"No se reportaron pruebas estadísticas, pero no afecta la consistencia.\" Let's put that.\n\nNow produce JSON object with required fields.\n\nCheck required: all fields listed: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nMake sure all fields present.\n\nNow produce JSON compact.\n\nLet's produce:\n\n{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No se reportaron pruebas estadísticas, pero no afecta la consistencia.\"}\n\nCheck that \"no_evaluable\" must be 0 or 1. We have 0. Good.\n\nEverything valid. Ensure no trailing spaces. That should be fine."
+    }
+   }
+  ],
+  "created": 1789775230,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_228717f27c",
+  "usage": {
+   "completion_tokens": 1513,
+   "prompt_tokens": 10098,
+   "total_tokens": 11611,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1374,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.149459295,
+   "prompt_time": 0.072930918,
+   "completion_time": 1.564636944,
+   "total_time": 1.637567862
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2venb9befft9st79ajxa8yt",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:47:10.404619+00:00"
+}

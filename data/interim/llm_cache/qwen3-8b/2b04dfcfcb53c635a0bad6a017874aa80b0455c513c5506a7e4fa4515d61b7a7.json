@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-024",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen sigue la secuencia IMRyD y presenta cada componente con claridad. La coherencia es buena, aunque hay un pequeño salto al mencionar los indicadores de eficacia. La contextualización es nula ya que el resumen comienza directamente con el objetivo. La metodología está detallada con el diseño no experimental, tipo de investigación y nivel de investigación. Los resultados son concretos con porcentajes y valores específicos. La conclusión responde al objetivo y presenta una evaluación de los resultados."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD y presenta cada componente con claridad. La coherencia es buena, aunque hay un pequeño salto al mencionar los indicadores de eficacia. La contextualización es nula ya que el resumen comienza directamente con el objetivo. La metodología está detallada con el diseño no experimental, tipo de investigación y nivel de investigación. Los resultados son concretos con porcentajes y valores específicos. La conclusión responde al objetivo y presenta una evaluación de los resultados.\"\n}",
+ "usage": {
+  "input_tokens": 11060,
+  "output_tokens": 270,
+  "total_duration_s": 8.8103128
+ },
+ "latency_s": 8.832708597183228,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:20:27.220471+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:20:27.2115532Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen sigue la secuencia IMRyD y presenta cada componente con claridad. La coherencia es buena, aunque hay un pequeño salto al mencionar los indicadores de eficacia. La contextualización es nula ya que el resumen comienza directamente con el objetivo. La metodología está detallada con el diseño no experimental, tipo de investigación y nivel de investigación. Los resultados son concretos con porcentajes y valores específicos. La conclusión responde al objetivo y presenta una evaluación de los resultados.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 8810312800,
+  "load_duration": 6154700,
+  "prompt_eval_count": 11060,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 456529000,
+  "eval_count": 270,
+  "eval_duration": 8242892000
+ },
+ "cached_at_utc": "2026-09-19T02:20:27.220494+00:00"
+}

@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-030",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen presenta una secuencia lógica de los componentes IMRyD. La coherencia es buena, pero hay un pequeño descuento por la presencia de términos redundantes y algunas repeticiones. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es relevante el estudio. El método detallado se evalúa como 1 debido a que se mencionan el número de árboles, el tipo de ensayo, y el lugar donde se realizaron los ensayos. Los resultados son concretos, ya que se reportan valores específicos como densidad, contenido de humedad, módulo de elasticidad y esfuerzo admisible. La conclusión responde al objetivo, ya que se evalúa si la madera pino puede ser usada como material estructural. La consistencia metodológica es 3 porque, aunque se mencionan los resultados y la metodología, la conclusión se basa en una evaluación de la armadura sometida a resistencia mecánica, lo cual no se alinea completamente con los resultados presentados."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica de los componentes IMRyD. La coherencia es buena, pero hay un pequeño descuento por la presencia de términos redundantes y algunas repeticiones. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es relevante el estudio. El método detallado se evalúa como 1 debido a que se mencionan el número de árboles, el tipo de ensayo, y el lugar donde se realizaron los ensayos. Los resultados son concretos, ya que se reportan valores específicos como densidad, contenido de humedad, módulo de elasticidad y esfuerzo admisible. La conclusión responde al objetivo, ya que se evalúa si la madera pino puede ser usada como material estructural. La consistencia metodológica es 3 porque, aunque se mencionan los resultados y la metodología, la conclusión se basa en una evaluación de la armadura sometida a resistencia mecánica, lo cual no se alinea completamente con los resultados presentados.\"\n}",
+ "usage": {
+  "input_tokens": 10996,
+  "output_tokens": 401,
+  "total_duration_s": 12.4756453
+ },
+ "latency_s": 12.501340866088867,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T02:21:28.906912+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T02:21:28.9059114Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen presenta una secuencia lógica de los componentes IMRyD. La coherencia es buena, pero hay un pequeño descuento por la presencia de términos redundantes y algunas repeticiones. La contextualización es cero porque el resumen comienza directamente con el objetivo sin explicar por qué es relevante el estudio. El método detallado se evalúa como 1 debido a que se mencionan el número de árboles, el tipo de ensayo, y el lugar donde se realizaron los ensayos. Los resultados son concretos, ya que se reportan valores específicos como densidad, contenido de humedad, módulo de elasticidad y esfuerzo admisible. La conclusión responde al objetivo, ya que se evalúa si la madera pino puede ser usada como material estructural. La consistencia metodológica es 3 porque, aunque se mencionan los resultados y la metodología, la conclusión se basa en una evaluación de la armadura sometida a resistencia mecánica, lo cual no se alinea completamente con los resultados presentados.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 12475645300,
+  "load_duration": 4300500,
+  "prompt_eval_count": 10996,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 402107000,
+  "eval_count": 401,
+  "eval_duration": 11994553000
+ },
+ "cached_at_utc": "2026-09-19T02:21:28.906927+00:00"
+}

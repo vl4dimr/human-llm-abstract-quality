@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-054",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 9978,
+  "output_tokens": 1536
+ },
+ "latency_s": 2.764272689819336,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:01:58.784753+00:00",
+ "raw": {
+  "id": "chatcmpl-40f67fd2-4ef9-4a2b-a1d5-0f529d3c181b",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":1,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Funcionalidad familiar y calidad de vida en usuarias asistidas por la Defensa Pública y Acceso a la Justicia de Arequipa, 2023\"\n\nResumen: (Spanish)\n\n\"La disfuncionalidad familiar afecta negativamente la salud física, mental y social restando la calidad de vida de cada miembro en la dinámica familiar; la investigación tuvo como objetivo determinar la relación entre funcionalidad familiar y calidad de vida de las usuarias asistidas por la Defensa Pública y Acceso a la Justicia de Arequipa, 2023; contó con un enfoque cuantitativo de tipo correlacional; el diseño fue no experimental de corte transversal; la muestra fue no probabilística de 100 usuarias; el instrumento de recolección y análisis de datos fue mediante el cuestionario APGAR y Escala GENCAT, el análisis estadístico para determinar la asociación de las variables fue mediante Rho de Sperman (r), el análisis y la descripción estadística de datos de realizó con SPSS. Los resultados demostraron una relación significativa entre las variables de funcionalidad familiar y calidad de vida donde r = 0,692 infiriendo que una buena funcionalidad familiar influye en la calidad de vida de las usuarias, así mismo que existe correlación significativa entre adaptación y calidad de vida siendo r = 0,689 participación y calidad de vida siendo r = 0,701 de la relación entre recursos y calidad de vida siendo r = 0,699. Finalmente, se concluye que existe una relación positiva y significativa entre funcionalidad familiar y calidad de vida de las usuarias asistidas por la Defensa Pública y Acceso a la Justicia de Arequipa, infiriendo que es importante promover el funcionamiento familiar y la calidad de vida como factores protectores para el desarrollo humano y social.\"\n\nWe need to fill fields:\n\n- D1_imryd_objetivo: 1 if objective present. Yes: \"la investigación tuvo como objetivo determinar la relación entre funcionalidad familiar y calidad de vida de las usuarias asistidas por la Defensa Pública y Acceso a la Justicia de Arequipa, 2023\". So 1.\n\n- D1_imryd_metodologia: 1 if methodology present. Yes: \"contó con un enfoque cuantitativo de tipo correlacional; el diseño fue no experimental de corte transversal; la muestra fue no probabilística de 100 usuarias; el instrumento de recolección y análisis de datos fue mediante el cuestionario APGAR y Escala GENCAT, el análisis estadístico para determinar la asociación de las variables fue mediante Rho de Sperman (r), el análisis y la descripción estadística de datos de realizó con SPSS.\" So 1.\n\n- D1_imryd_resultados: 1 if results present. Yes: \"Los resultados demostraron una relación significativa entre las variables de funcionalidad familiar y calidad de vida donde r = 0,692 ...\". So 1.\n\n- D1_imryd_conclusiones: 1 if conclusion present. Yes: \"Finalmente, se concluye que existe una relación positiva y significativa entre funcionalidad familiar y calidad de vida ... infiriendo que es importante promover el funcionamiento familiar y la calidad de vida como factores protectores para el desarrollo humano y social.\" So 1.\n\n- D1_orden_logico: 1 if components present in logical order. The order: objective, methodology, results, conclusion. Yes. So 1.\n\n- D2_coherencia: 1-5. We need to evaluate coherence. Let's read: The summary flows: first context, then objective, then methodology, then results, then conclusion. The first sentence: \"La disfuncionalidad familiar afecta negativamente la salud física, mental y social restando la calidad de vida de cada miembro en la dinámica familiar;\" sets context. Then objective. Then methodology. Then results. Then conclusion. The flow seems coherent. There is no abrupt jump. Some repetition? The conclusion repeats the result. But overall coherence is good. I'd rate 5. But check for any issues: The summary is fairly long but still coherent. No contradictory statements. So D2_coherencia = 5.\n\n- D3_contextualizacion: 1 if summary situates the problem: why it matters, where it occurs, to whom it affects, etc. The first sentence provides context: \"La disfuncionalidad familiar afecta negativamente la salud física, mental y social restando la calidad de vida de cada miembro en la dinámica familiar\". That situates the problem. So 1.\n\n- D3_metodo_detallado: 1 if at least two precisions about procedure. We have: \"enfoque cuantitativo de tipo correlacional; diseño no experimental de corte transversal; muestra no probabilística de 100 usuarias; instrumento APGAR y Escala GENCAT; análisis estadístico Rho de Spearman; análisis y descripción estadística con SPSS.\" That's more than two. So 1.\n\n- D3_resultados_concretos: 1 if results provide specific content: yes, r values: 0,692; 0,689; 0,701; 0,699. So 1.\n\n- D3_conclusion_responde: 1 if conclusion responds to objective. Yes: conclusion states relationship between functionality and quality of life, which is the objective. So 1.\n\n- D4_consistencia: 1-5. We need to evaluate consistency between what summary says it did and what it presents. The summary says it's correlational, no experimental design, sample 100, instruments APGAR and GENCAT, Spearman correlation. The results present r values. The conclusion states positive relationship. No contradictions. So consistency is high. I'd rate 5.\n\n- no_evaluable: 0 because it's a valid summary.\n\n- observaciones: any notes? We can add a note: \"No issues found.\" But we can leave empty string. The schema requires string. We can put empty string \"\".\n\nThus JSON:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":5,\n \"D3_contextualizacion\":1,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"\"\n}\n\nCheck schema: all required fields present. All values are integers or null. Observaciones string. Good.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789700518,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_8e23cedc90",
+  "usage": {
+   "completion_tokens": 1536,
+   "prompt_tokens": 9978,
+   "total_tokens": 11514,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1410,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.149881247,
+   "prompt_time": 0.59051494,
+   "completion_time": 1.627193587,
+   "total_time": 2.217708527
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7da9qe65rb4keqprgt302",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:01:58.784856+00:00"
+}

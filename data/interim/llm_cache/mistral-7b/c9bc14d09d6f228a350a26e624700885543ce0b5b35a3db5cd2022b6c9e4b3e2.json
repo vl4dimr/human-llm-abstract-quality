@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-056",
+ "model_name": "mistral-7b",
+ "provider": "ollama",
+ "model": "mistral:latest",
+ "model_reported": "mistral:latest",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 0,
+  "D2_coherencia": 3,
+  "D3_contextualizacion": 1,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": 3,
+  "no_evaluable": 0,
+  "observaciones": "El resumen no muestra claramente la metodología y los resultados de la investigación, solo la importancia de la Escuela Sabática y su historia."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 1,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen no muestra claramente la metodología y los resultados de la investigación, solo la importancia de la Escuela Sabática y su historia.\"\n}",
+ "usage": {
+  "input_tokens": 12410,
+  "output_tokens": 226,
+  "total_duration_s": 6.2800071
+ },
+ "latency_s": 6.310582876205444,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:13:50.623943+00:00",
+ "raw": {
+  "model": "mistral:latest",
+  "created_at": "2026-09-19T01:13:50.6155591Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 0,\n  \"D1_imryd_resultados\": 0,\n  \"D1_imryd_conclusiones\": 0,\n  \"D1_orden_logico\": 0,\n  \"D2_coherencia\": 3,\n  \"D3_contextualizacion\": 1,\n  \"D3_metodo_detallado\": 0,\n  \"D3_resultados_concretos\": 0,\n  \"D3_conclusion_responde\": 0,\n  \"D4_consistencia\": 3,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen no muestra claramente la metodología y los resultados de la investigación, solo la importancia de la Escuela Sabática y su historia.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 6280007100,
+  "load_duration": 5777600,
+  "prompt_eval_count": 12410,
+  "prompt_eval_cached_count": 12155,
+  "prompt_eval_duration": 188134000,
+  "eval_count": 226,
+  "eval_duration": 5999930000
+ },
+ "cached_at_utc": "2026-09-19T01:13:50.623961+00:00"
+}

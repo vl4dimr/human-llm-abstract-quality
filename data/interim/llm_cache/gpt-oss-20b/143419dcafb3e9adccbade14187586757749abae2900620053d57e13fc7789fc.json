@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-130",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r3",
+ "temperature": null,
+ "seed": 44,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 10161,
+  "output_tokens": 1042
+ },
+ "latency_s": 2.397176742553711,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T00:00:44.692249+00:00",
+ "raw": {
+  "id": "chatcmpl-6ccf62c5-7847-4d2c-865a-fba485afc3d7",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to produce JSON with the fields per schema. Must parse the summary.\n\nWe have summary: Let's annotate each field.\n\nD1_imryd_objetivo: 1. It states objective explicitly.\n\nD1_imryd_metodologia: 1. Methods described with design, sample, etc.\n\nD1_imryd_resultados: 1. It reports correlations, results. So 1.\n\nD1_imryd_conclusiones: 1. Concludes significance.\n\nD1_orden_logico: 1. Sequence: objetivo, métodos, resultado, conclusiones. Yes.\n\nD2_coherencia: Need to evaluate flow. The summary starts with \"Objetivo: Determinar la relación...\". Then methods: \"Materiales y métodos: Estudio...\". Then \"Resultado:\" (they use singular but fine). Then \"Conclusión:\". Flow is clear. Slightly dense but no abrupt transitions. I'd rate 4 or 5. Let's evaluate: 5 is \"Progresión impecable. Cada oración prepara la siguiente. Se lee de un tirón\". The summary has headings, so it's segmented. The transitions are heading-based. It is well-structured. I think 5 is plausible. But check for any repetition or missing logic. The result section lists correlations; the conclusion summarises. Good. No big jumps. So 5.\n\nD3_contextualizacion: 0? Let's examine. The objective states \"Determinar la relación entre conocimientos nutricionales, patrón dietario, actividad física, estado de ánimo, satisfacción corporal y satisfacción con la vida en adultos colombianos vegetarianos y no vegetarianos.\" This says who and what, but does it contextualize problem importance? It does not state why it's important or background. It says \"determinar la relación\" but not why. It doesn't provide context of why important. So 0.\n\nD3_metodo_detallado: 1. They provide design, sample size, sampling method, data collection instrument, software, analysis methods. That's at least two precisions: design, sample size, sampling, instrument, software, analysis. So 1.\n\nD3_resultados_concretos: 1. They provide specific correlation values, p-values, ρ. Yes. So 1.\n\nD3_conclusion_responde: 1. Conclusion addresses objective? The objective was to determine relationships; conclusion suggests importance of education nutrition, integrated approach. It does respond to objective? It says \"resultados sugieren...\" It's an answer to relationship findings. Yes, it addresses objective. So 1.\n\nD4_consistencia: 1? We need to see if methodology and results and conclusions consistent. The study is observational correlational; results are correlations, all negative or low. No contradictions. Conclusion says \"importance of education ... to promote healthy habits\". That is consistent with correlations found. There's no contradictory statements. So consistency rating: 5? Wait scale 1-5: 5 is best. Should be 5. So D4_consistencia = 5.\n\nBut we must consider \"Afirmar que la correlación es baja, but conclusion says importance of education, that's consistent. No contradictions. So 5.\n\nno_evaluable: 0 because it is a summary. It's evaluable.\n\nobservaciones: We can mention any caveats. But no.\n\nBut we must check D2_coherencia again: The summary has headings but within each heading content is dense. There's no repeated content. The only potential issue: \"Resultado:\" not \"Resultados:\" but fine. The flow is good. I'd give 5. Ok.\n\nNow produce JSON:\n\n{\n  \"D1_imryd_objetivo\":1,\n  \"D1_imryd_metodologia\":1,\n  \"D1_imryd_resultados\":1,\n  \"D1_imryd_conclusiones\":1,\n  \"D1_orden_logico\":1,\n  \"D2_coherencia\":5,\n  \"D3_contextualizacion\":0,\n  \"D3_metodo_detallado\":1,\n  \"D3_resultados_concretos\":1,\n  \"D3_conclusion_responde\":1,\n  \"D4_consistencia\":5,\n  \"no_evaluable\":0,\n  \"observaciones\":\"\"\n}\n\nNeed to ensure fields are integers or null. All integers ok.\n\nDouble-check D4_consistencia: 5 within enum 1-5. Good.\n\nOk. Provide JSON."
+    }
+   }
+  ],
+  "created": 1789776044,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_63473661d7",
+  "usage": {
+   "completion_tokens": 1042,
+   "prompt_tokens": 10161,
+   "total_tokens": 11203,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 916,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.148438299,
+   "prompt_time": 0.574029186,
+   "completion_time": 1.065707348,
+   "total_time": 1.6397365339999999
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vfe6fseqm8dgabsb8ww0zy",
+   "seed": 44
+  }
+ },
+ "cached_at_utc": "2026-09-19T00:00:44.692274+00:00"
+}

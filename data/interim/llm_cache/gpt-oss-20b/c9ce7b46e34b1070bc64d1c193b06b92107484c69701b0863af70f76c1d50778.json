@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-103",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "No contextualización; no se reporta significancia estadística."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No contextualización; no se reporta significancia estadística.\"}",
+ "usage": {
+  "input_tokens": 9899,
+  "output_tokens": 1500
+ },
+ "latency_s": 2.9884603023529053,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:07:43.675203+00:00",
+ "raw": {
+  "id": "chatcmpl-d09fa0a9-8b12-4e9f-a976-4ea48c585554",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"No contextualización; no se reporta significancia estadística.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the summary according to the protocol. We must produce JSON with fields as per schema. Let's parse the summary.\n\nTitle: \"Creencias y miedo al COVID-19 asociados a las habilidades preventivas de los pobladores del Centro poblado Virgen del Carmen La Era, Ñaña 2021\"\n\nResumen:\n\n\"El estudio tuvo como objetivo determinar la asociación de las creencias y el miedo con las habilidades preventivas frente al COVID-19 en los pobladores del C.P Virgen del Carmen La Era. El estudio fue analítico transversal y se llevó a cabo en una muestra de 370 pobladores. Para la recolección de datos se emplearon los instrumentos creencias sobre el COVID-19, “Fear COVID-19” y habilidades preventivas frente al COVID-19 validadas en población peruana y con una confiabilidad superior a 0,9. Los resultados revelaron que el 56,6% de la población fueron del sexo masculino y tenían una edad promedio de 30,7 ± 12,1 años. Por otro lado, el 84,3% de los pobladores tuvieron habilidades preventivas frente al COVID-19 adecuadas, el 65,4% no tenía creencias erróneas sobre el COVID-19 y el 82,4% no presentó miedo al COVID-19. Al análisis multivariado de las variables se encontró que no poseer creencias erróneas sobre el COVID-19 se asocia con habilidades preventivas adecuadas frente al COVID-19.\"\n\nWe need to evaluate each dimension.\n\nD1_imryd_objetivo: The summary states \"El estudio tuvo como objetivo determinar la asociación de las creencias y el miedo con las habilidades preventivas frente al COVID-19 en los pobladores del C.P Virgen del Carmen La Era.\" That's explicit objective. So 1.\n\nD1_imryd_metodologia: \"El estudio fue analítico transversal y se llevó a cabo en una muestra de 370 pobladores. Para la recolección de datos se emplearon los instrumentos creencias sobre el COVID-19, “Fear COVID-19” y habilidades preventivas frente al COVID-19 validadas en población peruana y con una confiabilidad superior a 0,9.\" That includes design, sample size, instruments. So 1.\n\nD1_imryd_resultados: \"Los resultados revelaron que el 56,6% de la población fueron del sexo masculino y tenían una edad promedio de 30,7 ± 12,1 años. Por otro lado, el 84,3% de los pobladores tuvieron habilidades preventivas frente al COVID-19 adecuadas, el 65,4% no tenía creencias erróneas sobre el COVID-19 y el 82,4% no presentó miedo al COVID-19.\" These are results: percentages, demographics. So 1.\n\nD1_imryd_conclusiones: \"Al análisis multivariado de las variables se encontró que no poseer creencias erróneas sobre el COVID-19 se asocia con habilidades preventivas adecuadas frente al COVID-19.\" This is a conclusion that interprets results and responds to objective. So 1.\n\nD1_orden_logico: The components appear in order: objective, methodology, results, conclusion. So 1.\n\nD2_coherencia: We need to evaluate flow. The summary flows logically: objective, methodology, results, conclusion. No abrupt jumps. Some repetition? The results mention demographics and then percentages. It's coherent. I'd rate 5. But check for any issues: The summary is fairly straightforward. No adverbial adjectives? There's \"analítico transversal\" but that's fine. No contradictions. So 5.\n\nD3_contextualizacion: Does the summary situate the problem? It says \"El estudio tuvo como objetivo determinar la asociación de las creencias y el miedo con las habilidades preventivas frente al COVID-19 en los pobladores del C.P Virgen del Carmen La Era.\" It doesn't explain why it's important, why the population matters, or what gap. It just states objective. So 0.\n\nD3_metodo_detallado: We need at least two precisions. We have: design (analítico transversal), sample size (370), instruments (creencias, Fear COVID-19, habilidades preventivas validadas, reliability >0.9). That's more than two. So 1.\n\nD3_resultados_concretos: We have percentages: 56.6% male, age mean, 84.3% adequate skills, 65.4% no erroneous beliefs, 82.4% no fear. These are concrete. So 1.\n\nD3_conclusion_responde: The conclusion states that not having erroneous beliefs is associated with adequate preventive skills. That addresses the objective: association between beliefs/miedo and skills. So yes, 1.\n\nD4_consistencia: We need to check consistency between methodology and results. The methodology: analytic transversal, sample 370, instruments. Results: percentages. Conclusion: association. No contradictions. No mention of statistical tests, but not required. The conclusion states association found. The results mention percentages but not p-values. But the conclusion says \"se encontró que no poseer creencias erróneas... se asocia con habilidades preventivas adecuadas\". That is consistent with results: 65.4% no erroneous beliefs, 84.3% adequate skills. The conclusion implies a statistical association, but no p-values. That might be a mild issue: no statistical evidence. But D4 is about consistency, not about statistical significance. The conclusion is consistent with results. So 5.\n\nBut check if any contradictory statements: No. So D4_consistencia = 5.\n\nno_evaluable: It's a valid summary. So 0.\n\nobservaciones: We can add a note: \"No contextualization present; no statistical significance reported.\" But we can keep it empty or add. The schema requires string. We can provide an empty string or a note. It's safer to provide a brief note. Let's provide: \"No contextualization; no statistical significance reported.\" That is fine.\n\nNow produce JSON with all fields.\n\nCheck schema: required fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nAll present.\n\nNow produce compact JSON."
+    }
+   }
+  ],
+  "created": 1789700863,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_66f3850a1a",
+  "usage": {
+   "completion_tokens": 1500,
+   "prompt_tokens": 9899,
+   "total_tokens": 11399,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1363,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.217827509,
+   "prompt_time": 0.498824363,
+   "completion_time": 1.5488626220000001,
+   "total_time": 2.047686985
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s7qv94eyfs5384ffnb6p2k",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:07:43.675219+00:00"
+}

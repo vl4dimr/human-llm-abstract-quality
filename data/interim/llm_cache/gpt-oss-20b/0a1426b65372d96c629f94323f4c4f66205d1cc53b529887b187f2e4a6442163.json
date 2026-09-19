@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-160",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "no_evaluable": 0,
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "observaciones": ""
+ },
+ "text": "{\"no_evaluable\":0,\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 9900,
+  "output_tokens": 1640
+ },
+ "latency_s": 3.1273880004882812,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:45:46.233401+00:00",
+ "raw": {
+  "id": "chatcmpl-0cb8a22d-6e6c-4df1-a18f-ee124c8abd64",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"no_evaluable\":0,\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate according to protocol. Need to fill all required fields. Let's parse the summary.\n\nSummary text:\n\n\"La investigación adquirida trata sobre: Calidad de atención y satisfacción de los usuarios del establecimiento de salud la Revolución, San Miguel – San Román, 2022, cuyo planteamiento de objetivo es: Determinar la relación que existe entre la calidad de atención y la satisfacción de los usuarios del establecimiento de salud la Revolución, teniendo como hipótesis: existe relación significativa entre la calidad de atención y la satisfacción de los usuarios del establecimiento de salud la Revolución. La investigación se estructura desde un enfoque cuantitativo, con un método hipotético deductivo, de alcance descriptivo correlacional – transversal, de tipo básica, con un diseño no experimental, obteniendo una muestra probabilística de 249, empleándose como instrumento el cuestionario, toda la información obtenida fue procesado mediante el software SPSS versión 25. Llegando como resultados hallados demuestran que se obtuvo un coeficiente correlacional positiva moderada de Rho de Spearman, 0.618**, lo que demuestra que la calidad de atención guarda relación con la satisfacción, aun nivel de error 0,05 y resultado de significancia es de 0,002 por lo que, se rechaza la hipótesis nula, por tanto, se acepta la hipótesis alterna.\"\n\nWe need to evaluate each field.\n\nD1_imryd_objetivo: Must be 1 if objective present. Objective: \"Determinar la relación que existe entre la calidad de atención y la satisfacción de los usuarios del establecimiento de salud la Revolución\" So yes, objective present. So 1.\n\nD1_imryd_metodologia: Must be 1 if at least one procedural indication. They have \"enfoque cuantitativo, método hipotético deductivo, alcance descriptivo correlacional – transversal, tipo básica, diseño no experimental, muestra probabilística de 249, instrumentado con cuestionario, SPSS\". This is definitely present. So 1.\n\nD1_imryd_resultados: Must indicate what was found, not method. They state: \"se obtuvo un coeficiente correlacional positiva moderada de Rho de Spearman, 0.618**, lo que demuestra que la calidad de atención guarda relación con la satisfacción, ... resultado de significancia 0,002.\" That's a result: the correlation coefficient, significance. So 1.\n\nD1_imryd_conclusiones: Must be a conclusion that goes beyond results. They say: \"se rechaza la hipótesis nula, por tanto, se acepta la hipótesis alterna.\" This is a conclusion, referencing the objective: yes, conclusion. So 1.\n\nD1_orden_logico: Check order of components present: objective, methodology, results, conclusion. The summary: starts with objective, then methodology, then results, then conclusion. Order seems correct. So 1.\n\nD2_coherencia: Scale 1-5. We must evaluate coherence flow. Let's analyze paragraph: The summary is somewhat disjointed but has flow: introduction objective, then methods, results, conclusion. Some phrase \"toda la información obtenida fue procesado mediante el software SPSS versión 25.\" That's fine. No major jumps. Might be 4. Let's read: \"La investigación adquirida trata sobre: ... cuyo planteamiento de objetivo es: ... La investigación se estructura desde ... con un método hipotético deductivo, de alcance descriptivo correlacional – transversal, de tipo básica, con un diseño no experimental, obteniendo una muestra probabilística de 249, empleándose como instrumento el cuestionario, toda la información obtenida fue procesado mediante el software SPSS versión 25.\" So method description is a long sentence but coherent. Then results: \"Llegando como resultados hallados demuestran que se obtuvo un coeficiente correlacional positiva moderada...\" Then conclusion. Flow seems good. I would rate 4 or 5. There's no big contradiction. So 5 maybe. Let's see if any abruptness: They mention \"toda la información ... fue procesado\" then jump to results. That's okay. So 5. We'll set 5.\n\nD3_contextualizacion: Must situate the problem. They mention \"La investigación adquirida trata sobre: Calidad de atención y satisfacción de los usuarios del establecimiento de salud la Revolución, San Miguel – San Román, 2022\". This is the context: location, time. They don't explain why it's important. But contextualization requires problem importance, why relevant, etc. The summary begins with \"La investigación adquirida trata sobre:\" but no explanation of why important. So maybe 0. I think 0.\n\nD3_metodo_detallado: Must give at least two precisions. They provide: \"enfoque cuantitativo, método hipotético deductivo, alcance descriptivo correlacional – transversal, tipo básica, diseño no experimental, muestra probabilística de 249, instrumento cuestionario, SPSS\". That's many precisions: at least two, yes. So 1.\n\nD3_resultados_concretos: Must provide specific content: numbers, categories etc. They give coefficient 0.618** and significance 0.002. That's concrete. So 1.\n\nD3_conclusion_responde: Must be conclusion that responds to objective. They say \"se rechaza la hipótesis nula, por tanto, se acepta la hipótesis alterna.\" That does respond: it indicates relationship found. So 1.\n\nD4_consistencia: Must evaluate consistency between what was declared and what presented. No major contradictions. They declare correlational study, results show correlation, conclusion accepts alternative. No contradictory statements. No mention of significance incorrectly. So consistency is high. I'd give 5.\n\nBut we must consider the \"puntuación de D4\". The scale 1-5. No contradictions. So 5.\n\nno_evaluable: 0 because it's a valid summary.\n\nobservaciones: We might add observations if needed. Not required to add anything, but can provide empty string. The schema expects string; we can leave empty string.\n\nCheck fields required: All 13 fields. We'll set them.\n\nNow produce JSON with compact formatting (no whitespace). Ensure property order matches required? Not necessary. We'll output object.\n\nLet's create:\n\n{\n\"no_evaluable\":0,\n\"D1_imryd_objetivo\":1,\n\"D1_imryd_metodologia\":1,\n\"D1_imryd_resultados\":1,\n\"D1_imryd_conclusiones\":1,\n\"D1_orden_logico\":1,\n\"D2_coherencia\":5,\n\"D3_contextualizacion\":0,\n\"D3_metodo_detallado\":1,\n\"D3_resultados_concretos\":1,\n\"D3_conclusion_responde\":1,\n\"D4_consistencia\":5,\n\"observaciones\":\"\"\n}\n\nWe must ensure all fields are present. Let's check: We have all: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones. Yes.\n\nReturn JSON."
+    }
+   }
+  ],
+  "created": 1789775145,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_9340e7d14d",
+  "usage": {
+   "completion_tokens": 1640,
+   "prompt_tokens": 9900,
+   "total_tokens": 11540,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1514,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.240775127,
+   "prompt_time": 0.530386467,
+   "completion_time": 1.68762232,
+   "total_time": 2.218008787
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vejrcbe3vb42qfd17ywb92",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:45:46.233428+00:00"
+}

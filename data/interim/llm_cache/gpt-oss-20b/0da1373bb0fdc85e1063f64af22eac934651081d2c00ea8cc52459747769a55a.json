@@ -1,0 +1,85 @@
+{
+ "doc_id": "GT-003",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r1",
+ "temperature": 0,
+ "seed": 42,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 0,
+  "D1_imryd_resultados": 0,
+  "D1_imryd_conclusiones": 0,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 0,
+  "D3_resultados_concretos": 0,
+  "D3_conclusion_responde": 0,
+  "D4_consistencia": null,
+  "no_evaluable": 1,
+  "observaciones": "El resumen indica el objetivo y menciona la metodología de investigación de forma genérica, sin detalles concretos. No se presentan resultados ni conclusiones, y la contextualización del problema es insuficiente. Debido a la ausencia de información metodológica concreta, la dimensión de consistencia metodológica no es evaluable."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"El resumen indica el objetivo y menciona la metodología de investigación de forma genérica, sin detalles concretos. No se presentan resultados ni conclusiones, y la contextualización del problema es insuficiente. Debido a la ausencia de información metodológica concreta, la dimensión de consistencia metodológica no es evaluable.\"}",
+ "usage": {
+  "input_tokens": 9761,
+  "output_tokens": 1334
+ },
+ "latency_s": 2.396223306655884,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T02:55:14.240736+00:00",
+ "raw": {
+  "id": "chatcmpl-557cb230-be6b-48fa-8788-ad77433ac7ec",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":0,\"D1_imryd_resultados\":0,\"D1_imryd_conclusiones\":0,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":0,\"D3_resultados_concretos\":0,\"D3_conclusion_responde\":0,\"D4_consistencia\":null,\"no_evaluable\":1,\"observaciones\":\"El resumen indica el objetivo y menciona la metodología de investigación de forma genérica, sin detalles concretos. No se presentan resultados ni conclusiones, y la contextualización del problema es insuficiente. Debido a la ausencia de información metodológica concreta, la dimensión de consistencia metodológica no es evaluable.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We need to annotate the given summary according to the protocol. We must produce JSON with fields: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nWe need to evaluate each field.\n\nLet's analyze the summary:\n\nTitle: \"Análisis y modelamiento de la cinematica directa aplicado al robot kuka kr150 por matlab\"\n\nResumen:\n\n\"El presente proyecto nos permitirá desarrollar el análisis y modelamiento de la cinemática directa del robot Kuka KR150 empleando el software Matlab.  La primera parte del desarrollo del proyecto describe en forma general la identificación del problema, la justificación del problema, identificamos los objetivos generales y específicos, así como también la metodología de investigación. En la segunda parte describiremos los fundamentos teóricos de la robótica en especial el análisis de la cinemática directa del robot KUKA. Finalmente se desarrolla la expresión del análisis del modelamiento de la cinemática directa del Robot KUKA KR150.\"\n\nWe need to evaluate each dimension.\n\nFirst, D1_imryd_objetivo: Does the summary state the objective? It says: \"El presente proyecto nos permitirá desarrollar el análisis y modelamiento de la cinemática directa del robot Kuka KR150 empleando el software Matlab.\" That is an objective: to develop analysis and modeling. So yes, objective present. So D1_imryd_objetivo = 1.\n\nD1_imryd_metodologia: Does it describe how? It says: \"La primera parte del desarrollo del proyecto describe en forma general la identificación del problema, la justificación del problema, identificamos los objetivos generales y específicos, así como también la metodología de investigación.\" It says \"metodología de investigación\" but does not specify details. It says \"metodología de investigación\" but no specifics. So minimal: \"metodología de investigación\" is a vague phrase. According to protocol, D1_imryd_metodologia requires at least one concrete procedural indication. \"metodología de investigación\" is not concrete. So D1_imryd_metodologia = 0.\n\nD1_imryd_resultados: Does it report results? It says \"Finalmente se desarrolla la expresión del análisis del modelamiento de la cinemática directa del Robot KUKA KR150.\" That is not a result, it's a description of what will be developed. No results. So D1_imryd_resultados = 0.\n\nD1_imryd_conclusiones: Does it provide a conclusion? No. So D1_imryd_conclusiones = 0.\n\nD1_orden_logico: We have components present: objective, methodology (present but vague), results (none), conclusion (none). According to rule: if 0 or 1 components present, order = 0. Here we have 2 components present (objective and methodology). So we evaluate order: Are they in logical sequence? Yes: objective first, methodology second. So D1_orden_logico = 1.\n\nD2_coherencia: Evaluate flow. The summary: first sentence objective, second sentence describes first part of project: identification of problem, justification, objectives, methodology. Third sentence: second part describes theoretical foundations. Fourth: final part develops expression. The flow is somewhat logical but maybe a bit abrupt. Let's rate: 4? Let's analyze: The summary is short, but it flows: objective, then description of parts. There's no abrupt jumps. So I'd give 4. But we need to consider that the methodology is not detailed, but that doesn't affect flow. So D2_coherencia = 4.\n\nD3_contextualizacion: Does it situate the problem? It says \"identificación del problema, la justificación del problema\" but does not specify why it's important, where it occurs, etc. It just says \"identificación del problema\" but no context. So D3_contextualizacion = 0.\n\nD3_metodo_detallado: Does it give at least two precisions? It says \"metodología de investigación\" but no details. So 0.\n\nD3_resultados_concretos: No results. So 0.\n\nD3_conclusion_responde: No conclusion. So 0.\n\nD4_consistencia: Since no methodology declared, D4_consistencia is not evaluable. According to rule: if no methodology, mark no_evaluable = 1 and leave D4_consistencia empty? The schema requires D4_consistencia field present, but can be null? The schema says D4_consistencia enum [1,2,3,4,5,null]. So we can set null. And no_evaluable = 1. So D4_consistencia = null.\n\nno_evaluable: 1 because no methodology declared, so D4 cannot be evaluated. But also the summary is not a full summary? It's a project summary. But it's a summary. So we set no_evaluable = 1.\n\nObservaciones: We can note that methodology is vague, no results, no conclusion, no contextualization. Provide explanation.\n\nLet's produce JSON.\n\nCheck schema: required fields: all fields must be present. So we must include all fields. For D4_consistencia we set null. For no_evaluable we set 1. Observaciones string.\n\nLet's produce compact JSON."
+    }
+   }
+  ],
+  "created": 1789700114,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_228717f27c",
+  "usage": {
+   "completion_tokens": 1334,
+   "prompt_tokens": 9761,
+   "total_tokens": 11095,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1147,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": null,
+   "queue_time": 0.148971407,
+   "prompt_time": 0.49888626,
+   "completion_time": 1.423771678,
+   "total_time": 1.922657938
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s70zhrer1b6nkf71910xzt",
+   "seed": 42
+  }
+ },
+ "cached_at_utc": "2026-09-18T02:55:14.240837+00:00"
+}

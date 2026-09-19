@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-061",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": "Chi-cuadrado valor parece muy bajo (0.012 con 6 grados de libertad), posible error tipográfico, pero no afecta la coherencia global."
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Chi-cuadrado valor parece muy bajo (0.012 con 6 grados de libertad), posible error tipográfico, pero no afecta la coherencia global.\"}",
+ "usage": {
+  "input_tokens": 9984,
+  "output_tokens": 2103,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 3.1341214179992676,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T03:21:36.216542+00:00",
+ "raw": {
+  "id": "chatcmpl-3b0e92b4-b204-491a-9e12-6a56d8625f96",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":4,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"Chi-cuadrado valor parece muy bajo (0.012 con 6 grados de libertad), posible error tipográfico, pero no afecta la coherencia global.\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must annotate according to protocol. Fields:\n\n- D1_imryd_objetivo\n- D1_imryd_metodologia\n- D1_imryd_resultados\n- D1_imryd_conclusiones\n- D1_orden_logico\n- D2_coherencia\n- D3_contextualizacion\n- D3_metodo_detallado\n- D3_resultados_concretos\n- D3_conclusion_responde\n- D4_consistencia\n- no_evaluable\n- observaciones\n\nWe must fill with integer 0 or 1 or 2-5 etc, or null if not evaluable? But no_evaluable is 0 or 1. It must be integer. Observations is string.\n\nLet's analyze the summary.\n\nTitle: dynamic.\n\nSummary:\n\n\"La investigación denominada la dinámica familiar en el comportamiento de los estudiantes de la Institución Educativa Secundaria Glorioso San Carlos de Puno – 2021; tuvo como objetivo general determinar la relación entre la dinámica familiar con el comportamiento de los estudiantes de la Institución Educativa Secundaria. La hipótesis plateada fue que existe relación significativa entre la dinámica familiar con el comportamiento de los estudiantes de la Institución Educativa Secundaria. El estudio corresponde al tipo de investigación básica teórica y el alcance correlacional, el método es hipotético deductivo bajo el enfoque cuantitativo, el diseño de estudio es no experimental de corte transversal. Utilizando una muestra probabilística aleatorio simple por conveniencia representado por 221 estudiantes del tercero, cuarto y quinto año de secundaria, la información se recolecto mediante un cuestionario. Concluyendo que existe relación significativa entre la dinámica familiar y el comportamiento de los estudiantes de la I.E.S. Glorioso Nacional San Carlos de Puno. Revelando resultados significativos que tienen importantes implicaciones para comprender la interacción entre el entorno familiar y las conductas estudiantiles, el valor de chi-cuadrado obtenido 0.012 con 6 grados de libertad y un nivel de significancia bilateral de 0,016, lo que evidencia estadísticamente y refuerza la validez de la hipótesis alterna. Se respalda que la dinámica familiar tiene relación sustancial en el comportamiento de los estudiantes, la cual está relacionada con la estructura de la familia, la comunicación y el cumplimiento de la función educadora los cuales determinan la práctica de un comportamiento asertivo.\"\n\nNow, we need to evaluate each.\n\nFirst, D1_imryd_objetivo: The summary states \"tuvo como objetivo general determinar la relación entre la dinámica familiar con el comportamiento de los estudiantes ...\". Yes, explicit. So D1_imryd_objetivo=1.\n\nD1_imryd_metodologia: It states \"el método es hipotético deductivo bajo el enfoque cuantitativo, el diseño de estudio es no experimental de corte transversal. Utilizando una muestra probabilística aleatorio simple por conveniencia representado por 221 estudiantes... la información se recolecto mediante un cuestionario.\" So we have at least two precise details: design (non-experimental, transversal) and sample size and instrument. That meets the D3_metodo_detallado requirement but for D1_metodologia we just need at least a procedural concrete indication. So yes D1_metodologia=1.\n\nD1_imryd_resultados: The summary states \"Concluyendo que existe relación significativa ... Revelando resultados significativos ... el valor de chi-cuadrado obtenido 0.012 con 6 grados de libertad y un nivel de significancia bilateral de 0,016\". So there is a result: significance and chi-squared value. So yes D1_resultados=1.\n\nD1_imryd_conclusiones: The summary says \"Concluyendo que existe relación significativa ...\" but is that a conclusion? It says \"Concluyendo que existe relación significativa ...\". That is a conclusion that responds to the objective: \"existe relación significativa...\". So yes D1_conclusiones=1.\n\nD1_orden_logico: Sequence: objective first, then methodology, then results, then conclusion. Let's check order: The text begins with objective, then hypothesis, then study type, method, design, sample, instrument, then result and conclusion. So yes, objective -> methodology -> results -> conclusion. So D1_orden_logico=1.\n\nD2_coherencia: Evaluate coherence. The summary is somewhat repetitive but flows logically. There is some adverbial like \"Concluyendo\" then \"Revelando\". There may be slight jumps but overall coherent. Let's assign 4 maybe? Let's analyze: The summary starts with objective, hypothesis, study type, method, design, sample, instrument, then conclusion and results. The transitions: \"Utilizando una muestra...\" \"Concluyendo que existe relación\" \"Revelando resultados significativos ...\". There is a bit of abruptness: after conclusion they mention results. But still understandable. I'd give D2_coherencia=4. Might be 5 but I'm cautious about minor abruptness.\n\nD3_contextualizacion: This field requires the summary to situate the problem: why it's important, where, to whom, against what norm. The summary starts directly with objective. There's no context or background. So D3_contextualizacion=0.\n\nD3_metodo_detallado: Must have at least two precisions. The summary has: design: no experimental, transversal. Sample: 221 students, probabilistic simple random by convenience? Actually \"muestra probabilística aleatorio simple por conveniencia\" is a contradiction but still a detail. Also instrument: questionnaire. Also sample size. So yes at least two precisions. So D3_metodo_detallado=1.\n\nD3_resultados_concretos: Must contain specific content: numbers, magnitude, categories, relation with direction. The summary includes chi-squared 0.012, degrees of freedom 6, significance 0.016. Those are numbers. So yes D3_resultados_concretos=1.\n\nD3_conclusion_responde: Conclusion must respond to the objective. The objective was \"determinar la relación entre la dinámica familiar y el comportamiento de los estudiantes.\" The conclusion says \"Existe relación significativa ...\" which addresses that objective. So D3_conclusion_responde=1.\n\nD4_consistencia: Check consistency between what is said in methodology and results. The summary says hypothesis: exists significant relation. The result indicates chi-squared 0.012 with 6 degrees of freedom and p=0.016. However chi-squared 0.012 is extremely low, but maybe they meant chi-square 12? The value is 0.012, which would be trivial. But still significance p=0.016 indicates significance. The result says significance. The conclusion states relation significant. So they align. There might be a small issue: They said \"el valor de chi-cuadrado obtenido 0.012 con 6 grados de libertad\". Usually chi-square would be > 6 with df 6, but 0.012 is too low. That might be a typo but still indicates significance. The conclusion matches. So no contradiction. Also no claim of causality beyond correlation. So D4_consistencia=5? But we need to check if any discrepancy. There's a potential discrepancy: The hypothesis says \"existe relación significativa\". The result says chi-square 0.012 with p 0.016. That's consistent. There's no mismatch. So I'd set D4_consistencia=5.\n\nno_evaluable: This is 0 because it's a valid summary. no_evaluable=0.\n\nObservaciones: include any remarks or uncertainties. For instance, we note the unusual chi-square value but we didn't penalize. We might mention \"Chi-cuadrado valor parece bajo, posible error tipográfico\". But we can add to observations. Provide a brief comment.\n\nNow produce JSON with fields in required order: The schema lists required order: D1_imryd_objetivo, D1_imryd_metodologia, D1_imryd_resultados, D1_imryd_conclusiones, D1_orden_logico, D2_coherencia, D3_contextualizacion, D3_metodo_detallado, D3_resultados_concretos, D3_conclusion_responde, D4_consistencia, no_evaluable, observaciones.\n\nLet's produce JSON accordingly.\n\nCheck types: integers or null. Observaciones is string. Provide integer values.\n\nWe must ensure the JSON is compact: no newlines? But typical answer can be JSON on one line but okay.\n\nLet's produce:\n\n{\n \"D1_imryd_objetivo\":1,\n \"D1_imryd_metodologia\":1,\n \"D1_imryd_resultados\":1,\n \"D1_imryd_conclusiones\":1,\n \"D1_orden_logico\":1,\n \"D2_coherencia\":4,\n \"D3_contextualizacion\":0,\n \"D3_metodo_detallado\":1,\n \"D3_resultados_concretos\":1,\n \"D3_conclusion_responde\":1,\n \"D4_consistencia\":5,\n \"no_evaluable\":0,\n \"observaciones\":\"Chi-cuadrado valor parece muy bajo (0.012 con 6 grados de libertad), posible error tipográfico, pero no afecta la coherencia global.\"\n}\n\nCheck no extra spaces or line breaks? We'll keep as minimal as possible. Provide final JSON."
+    }
+   }
+  ],
+  "created": 1789701696,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_639a5351c8",
+  "usage": {
+   "completion_tokens": 2103,
+   "prompt_tokens": 9984,
+   "total_tokens": 12087,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 1946,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.216753031,
+   "prompt_time": 0.091649451,
+   "completion_time": 2.208007052,
+   "total_time": 2.299656503
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2s8h82peh8awkggsjfpd03k",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T03:21:36.216562+00:00"
+}

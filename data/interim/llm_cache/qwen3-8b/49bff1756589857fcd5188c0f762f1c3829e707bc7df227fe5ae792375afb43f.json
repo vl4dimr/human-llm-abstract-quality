@@ -1,0 +1,54 @@
+{
+ "doc_id": "GT-025",
+ "model_name": "qwen3-8b",
+ "provider": "ollama",
+ "model": "qwen3:8b",
+ "model_reported": "qwen3:8b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 4,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 4,
+  "no_evaluable": 0,
+  "observaciones": "El resumen cumple con la estructura IMRyD y presenta una coherencia buena, aunque se podría mejorar en la contextualización al explicar por qué es importante la aplicación en la región Puno. La consistencia metodológica es buena, aunque se podría mejorar en la descripción del controlador PID."
+ },
+ "text": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen cumple con la estructura IMRyD y presenta una coherencia buena, aunque se podría mejorar en la contextualización al explicar por qué es importante la aplicación en la región Puno. La consistencia metodológica es buena, aunque se podría mejorar en la descripción del controlador PID.\"\n}",
+ "usage": {
+  "input_tokens": 10919,
+  "output_tokens": 220,
+  "total_duration_s": 7.7304047
+ },
+ "latency_s": 7.744778633117676,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-19T01:51:32.956396+00:00",
+ "raw": {
+  "model": "qwen3:8b",
+  "created_at": "2026-09-19T01:51:32.9452995Z",
+  "message": {
+   "role": "assistant",
+   "content": "{\n  \"D1_imryd_objetivo\": 1,\n  \"D1_imryd_metodologia\": 1,\n  \"D1_imryd_resultados\": 1,\n  \"D1_imryd_conclusiones\": 1,\n  \"D1_orden_logico\": 1,\n  \"D2_coherencia\": 4,\n  \"D3_contextualizacion\": 0,\n  \"D3_metodo_detallado\": 1,\n  \"D3_resultados_concretos\": 1,\n  \"D3_conclusion_responde\": 1,\n  \"D4_consistencia\": 4,\n  \"no_evaluable\": 0,\n  \"observaciones\": \"El resumen cumple con la estructura IMRyD y presenta una coherencia buena, aunque se podría mejorar en la contextualización al explicar por qué es importante la aplicación en la región Puno. La consistencia metodológica es buena, aunque se podría mejorar en la descripción del controlador PID.\"\n}"
+  },
+  "done": true,
+  "done_reason": "stop",
+  "total_duration": 7730404700,
+  "load_duration": 11518800,
+  "prompt_eval_count": 10919,
+  "prompt_eval_cached_count": 10420,
+  "prompt_eval_duration": 384196000,
+  "eval_count": 220,
+  "eval_duration": 7219350000
+ },
+ "cached_at_utc": "2026-09-19T01:51:32.956420+00:00"
+}

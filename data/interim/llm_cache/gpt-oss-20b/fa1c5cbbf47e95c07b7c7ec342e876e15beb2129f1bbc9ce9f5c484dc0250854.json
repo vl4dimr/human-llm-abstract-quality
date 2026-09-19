@@ -1,0 +1,92 @@
+{
+ "doc_id": "GT-153",
+ "model_name": "gpt-oss-20b",
+ "provider": "openai_compatible",
+ "model": "openai/gpt-oss-20b",
+ "model_reported": "openai/gpt-oss-20b",
+ "run": "r2",
+ "temperature": null,
+ "seed": 43,
+ "attempts": 1,
+ "parse_ok": true,
+ "output": {
+  "D1_imryd_objetivo": 1,
+  "D1_imryd_metodologia": 1,
+  "D1_imryd_resultados": 1,
+  "D1_imryd_conclusiones": 1,
+  "D1_orden_logico": 1,
+  "D2_coherencia": 5,
+  "D3_contextualizacion": 0,
+  "D3_metodo_detallado": 1,
+  "D3_resultados_concretos": 1,
+  "D3_conclusion_responde": 1,
+  "D4_consistencia": 5,
+  "no_evaluable": 0,
+  "observaciones": ""
+ },
+ "text": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+ "usage": {
+  "input_tokens": 9945,
+  "output_tokens": 978,
+  "cache_read_tokens": 9472
+ },
+ "latency_s": 1.6570751667022705,
+ "prompt_fingerprint": "53c7ce151f935769",
+ "called_at_utc": "2026-09-18T23:45:02.342201+00:00",
+ "raw": {
+  "id": "chatcmpl-b62444ec-9182-4616-ac02-d139dd280bec",
+  "choices": [
+   {
+    "finish_reason": "stop",
+    "index": 0,
+    "logprobs": null,
+    "message": {
+     "content": "{\"D1_imryd_objetivo\":1,\"D1_imryd_metodologia\":1,\"D1_imryd_resultados\":1,\"D1_imryd_conclusiones\":1,\"D1_orden_logico\":1,\"D2_coherencia\":5,\"D3_contextualizacion\":0,\"D3_metodo_detallado\":1,\"D3_resultados_concretos\":1,\"D3_conclusion_responde\":1,\"D4_consistencia\":5,\"no_evaluable\":0,\"observaciones\":\"\"}",
+     "refusal": null,
+     "role": "assistant",
+     "annotations": null,
+     "audio": null,
+     "function_call": null,
+     "tool_calls": null,
+     "reasoning": "We must produce JSON according to schema. All required fields must be present. Provide integer 0,1 or null per field. We need to annotate. Let's analyze the summary.\n\nSummary text: \"Objetivo: Evaluar el impacto de la intervención educativa nutricional sobre el conocimiento, índice de alimentación saludable y perfil bioquímico en las familias de la comunidad de Sinchicuy.\" That's objective.\n\nMaterials and methods: \"Estudio de enfoque cuantitativo, diseño pre experimental y corte longitudinal. ... muestreo no probabilístico por conveniencia y estuvo conformada por 61 familias...\" That's methodology.\n\nResults: \"La intervención educativa nutricional causó un efecto significativo en el nivel de conocimiento e índice de alimentación saludable (p=0.001) ... nivel de hemoglobina ... incremento (p=0.04) ... Finalmente, para la hemoglobina y glucosa de los adultos mayores no se evidenció mejoras...\" That's results.\n\nConclusions: \"Los programas de intervención educativa nutricional son fundamentales para cambiar los conocimientos, actitudes y comportamientos en las familias de comunidades rurales. Sobre todo, si se aplican estrategias...\" That's conclusions.\n\nNow evaluate each field:\n\nD1_imryd_objetivo: 1 (present, explicit).\n\nD1_imryd_metodologia: 1 (methodology present, design, sampling, sample size).\n\nD1_imryd_resultados: 1 (has results: significant effects, p-values).\n\nD1_imryd_conclusiones: 1 (conclusion, generalization).\n\nD1_orden_logico: 1 (objective → methods → results → conclusions in order; yes).\n\nD2_coherencia: Let's evaluate coherence. The summary flows: objective, materials/methods, results, conclusions. It is a standard structure. No obvious jumps. There's mention of location, but still coherent. No contradictions. Maybe slight: it states \"hemoglobina en los niños\" and then \"hemoglobina y glucosa de los adultos mayores no se evidenció mejoras\" - okay. Flow is fine. I'd rate 5.\n\nD3_contextualizacion: This field is about situating problem: why important, where occurs, to whom. The summary does not explicitly mention the importance of the issue; it starts with objective. There's no statement about significance of knowledge etc. So D3_contextualizacion = 0.\n\nD3_metodo_detallado: Need at least two precisions: design, sample, sampling method, sample size. We have design: pre experimental, longitudinal; sample size 61 families (253 persons); sampling method non-probability by convenience; location; that's more than two. So D3_metodo_detallado=1.\n\nD3_resultados_concretos: Contains concrete results: effect significant in knowledge and index (p=0.001), hemoglobin increase (p=0.04), no improvements in adult parameters. So yes, results concretos: 1.\n\nD3_conclusion_responde: Conclusion addresses impact of intervention on knowledge, attitudes, behavior. This is indeed the objective of evaluating impact. Conclusion: \"Los programas son fundamentales para cambiar los conocimientos, actitudes y comportamientos en las familias de comunidades rurales.\" That addresses objective. So 1.\n\nD4_consistencia: Consistency between what the summary says it did and what it presents. It claims \"intervención educativa nutricional causó efecto significativo...\" and reports p-values. No contradictions. No mention of statistical tests? Actually they mention p-values but no test names. But that is acceptable. No contradictions. So D4_consistencia = 5.\n\nBut check: In D4, \"Consistencia metodológica\" includes coherence between method declared and results presented. They declare pre experimental design, but results show significance. It's acceptable. No mention of test, but that's fine. So 5.\n\nNo_evaluable: 0 (it's a valid summary).\n\nObservaciones: maybe mention any doubt. Could note that there is no explicit statement of significance beyond p-values, but that's not needed. No observations required. Provide empty string.\n\nThus produce JSON. Ensure all fields present.\n\nLet's produce compact JSON with integers."
+    }
+   }
+  ],
+  "created": 1789775101,
+  "model": "openai/gpt-oss-20b",
+  "object": "chat.completion",
+  "metadata": null,
+  "moderation": null,
+  "service_tier": "on_demand",
+  "system_fingerprint": "fp_9b8528b477",
+  "usage": {
+   "completion_tokens": 978,
+   "prompt_tokens": 9945,
+   "total_tokens": 10923,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 853,
+    "rejected_prediction_tokens": null,
+    "text_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cache_write_tokens": null,
+    "cached_tokens": 9472,
+    "image_tokens": null,
+    "text_tokens": null
+   },
+   "queue_time": 0.238961699,
+   "prompt_time": 0.096268324,
+   "completion_time": 1.058360041,
+   "total_time": 1.154628365
+  },
+  "usage_breakdown": null,
+  "x_groq": {
+   "id": "req_01m2vehekce909fb56j15v43h1",
+   "seed": 43
+  }
+ },
+ "cached_at_utc": "2026-09-18T23:45:02.342223+00:00"
+}
