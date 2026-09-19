@@ -315,3 +315,11 @@ invierte, pero solo debe activarse con permiso explícito.
   `03_agreement.py` **sin `--quick`** (2000 remuestreos) para las cifras finales.
 - Rellenar `release.citation` y el DOI de Zenodo antes del depósito.
 - Decidir si se corrige la descripción del corpus: 8 tesis doctorales de 300.
+
+## Licencia
+
+El código está bajo **MIT** (`LICENSE`). Las anotaciones, las justificaciones de los
+anotadores, los metadatos por documento y el manual de codificación están bajo
+**CC BY 4.0** (`LICENSE-DATA`). Los textos y títulos de las tesis no se redistribuyen
+ni se licencian aquí: se cosecharon por OAI-PMH de repositorios institucionales
+públicos y su copyright pertenece a sus autores e instituciones.

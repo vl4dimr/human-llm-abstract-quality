@@ -1,0 +1,19 @@
+DATA LICENCE
+
+The annotation data in `outputs/dataset_release/` — the labels assigned by the
+human annotators and by the language models, the annotators' free-text
+justifications, the document-level metadata and the data dictionary — is
+released under the Creative Commons Attribution 4.0 International licence
+(CC BY 4.0): https://creativecommons.org/licenses/by/4.0/
+
+The coding protocol in `outputs/dataset_release/codebook/` is released under
+the same CC BY 4.0 licence.
+
+NOT COVERED BY THIS RELEASE
+
+The texts and titles of the theses themselves are not included in this
+repository and are not licensed by it. They were harvested via OAI-PMH from
+four public institutional repositories and their copyright belongs to the
+respective authors and institutions. `outputs/dataset_release/documents.csv`
+carries the persistent handle of every record so that the original text can be
+retrieved from its source repository.
